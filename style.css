@@ -1083,6 +1083,37 @@ table { border-spacing: 0; }
   background: var(--indigo);
   color: #fff;
 }
+.chat-j-chip.top10-chip {
+  border-color: #16a34a;
+  background: #f0fdf4;
+  font-weight: 600;
+}
+.chat-j-chip.top10-chip:hover { background: #dcfce7; border-color: #15803d; }
+.chat-j-chip.top10-chip.selected { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+
+/* Top 10 list in chat bubble */
+.top10-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.top10-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  padding: 3px 0;
+}
+.top10-rank  { font-weight: 700; color: var(--text-3); min-width: 28px; font-size: 12px; }
+.top10-flag  { font-size: 16px; }
+.top10-name  { flex: 1; }
+.top10-score { font-weight: 700; color: var(--indigo); min-width: 52px; text-align: right; }
+.top10-alerts { font-size: 11px; color: #b45309; background: #fef3c7; padding: 1px 6px; border-radius: 10px; }
 
 /* Run analysis button inside chat */
 .chat-run-row {

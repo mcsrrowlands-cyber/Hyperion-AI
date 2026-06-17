@@ -136,13 +136,13 @@ const COMMON_SUGGESTIONS = [
 // ---------------------------------------------------------------------------
 
 const state = {
-  profile:         null,
-  technology:      null,
-  scope:           'all',
-  selected:        new Set(),  // ISO codes for compare/inspect
-  currentStep:     1,
-  budget:          null,       // { code, label, min, max }
-  selectedRegions: new Set(),  // region keys e.g. 'nordic', 'dach'
+  profile:     null,
+  technology:  null,
+  scope:       'all',
+  selected:    new Set(),  // ISO codes for compare/inspect
+  currentStep: 1,
+  budget:      null,       // { code, label, min, max }
+  top10:       [],         // top 10 jurisdictions from auto-analysis
 };
 
 // ---------------------------------------------------------------------------
@@ -345,20 +345,6 @@ document.getElementById('budget-grid').querySelectorAll('.budget-btn').forEach(b
   });
 });
 
-// Region multi-select
-document.getElementById('region-grid').querySelectorAll('.region-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const r = btn.dataset.region;
-    if (state.selectedRegions.has(r)) {
-      state.selectedRegions.delete(r);
-      btn.classList.remove('selected');
-    } else {
-      state.selectedRegions.add(r);
-      btn.classList.add('selected');
-    }
-    syncNextButton();
-  });
-});
 
 // ---------------------------------------------------------------------------
 // Wizard back / next
@@ -392,83 +378,127 @@ function postBotHtml(html) {
 // Scope chat — init (called by showStep(4))
 // ---------------------------------------------------------------------------
 
-function initScopeChat() {
+async function initScopeChat() {
   // Reset
   chatHistory.length = 0;
   document.getElementById('chat-messages').innerHTML    = '';
   document.getElementById('chat-suggestions').innerHTML = '';
   state.scope = 'all';
   state.selected.clear();
+  state.top10 = [];
 
   buildContextBanner();
-
-  // Scope-phase system prompt — no results yet
   chatSystemPrompt = buildScopeSystemPrompt();
 
-  // Enable input immediately for pre-analysis questions
-  const $inp = document.getElementById('chat-input');
-  $inp.disabled    = false;
-  $inp.placeholder = 'Choose a scope option above, or type a question…';
-  document.getElementById('chat-send').disabled = true; // still needs text
+  // Disable input while scoring runs
+  const $inp  = document.getElementById('chat-input');
+  const $send = document.getElementById('chat-send');
+  $inp.disabled    = true;
+  $inp.placeholder = 'Hyperion is analysing all 30 jurisdictions…';
+  $send.disabled   = true;
 
-  // Opening bot message
-  const profileLabel = PROFILES[state.profile]      || state.profile  || '';
-  const techLabel    = TECH_LABELS[state.technology] || state.technology || '';
+  const profileLabel = PROFILES[state.profile]      || state.profile      || '';
+  const techLabel    = TECH_LABELS[state.technology] || state.technology   || '';
 
-  postBotHtml(`
-    <p>Context confirmed — <strong>${escHtml(profileLabel)}</strong>, targeting <strong>${escHtml(techLabel)}</strong>.</p>
-    <p>How would you like to structure this analysis?</p>
-    <div class="scope-options">
-      <button class="scope-opt-btn" data-scope="all">
-        <span class="scope-opt-icon">📊</span>
-        <span class="scope-opt-body">
-          <strong class="scope-opt-title">Rank all 30 jurisdictions</strong>
-          <span class="scope-opt-desc">Full European RAG ranking against your profile and technology</span>
-        </span>
-      </button>
-      <button class="scope-opt-btn" data-scope="compare">
-        <span class="scope-opt-icon">⚖️</span>
-        <span class="scope-opt-body">
-          <strong class="scope-opt-title">Compare selected jurisdictions</strong>
-          <span class="scope-opt-desc">Side-by-side across all 8 scoring categories</span>
-        </span>
-      </button>
-      <button class="scope-opt-btn" data-scope="inspect">
-        <span class="scope-opt-icon">🔍</span>
-        <span class="scope-opt-body">
-          <strong class="scope-opt-title">Single jurisdiction deep-dive</strong>
-          <span class="scope-opt-desc">Full RAG matrix, alerts, and financial metrics for one market</span>
-        </span>
-      </button>
+  const loadingDiv = postBotHtml(`
+    <p>Running Hyperion scoring engine for <strong>${escHtml(profileLabel)}</strong> profile, <strong>${escHtml(techLabel)}</strong> technology…</p>
+    <div style="display:flex;align-items:center;gap:8px;padding:6px 0;opacity:0.7;font-size:13px">
+      <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
+      <span>Scoring all 30 European jurisdictions</span>
     </div>
   `);
 
-  document.querySelectorAll('.scope-opt-btn').forEach(btn => {
-    btn.addEventListener('click', () => handleScopeSelection(btn.dataset.scope), { once: true });
-  });
+  try {
+    const result = await agent.query({
+      profile:           state.profile,
+      technology:        state.technology,
+      filterIsoCodes:    null,
+      includeFinancials: false,
+    });
+
+    state.top10 = (result.rankedSummary || []).slice(0, 10);
+
+    // Render full 30-jurisdiction ranking in the results panel immediately
+    $resultsPanel.classList.remove('hidden');
+    renderRanked(result);
+
+    // Update system prompt with full results context
+    chatSystemPrompt = buildSystemPrompt(result);
+
+    loadingDiv.remove();
+
+    // Build top 10 list HTML
+    const top10Html = state.top10.map((r, i) => `
+      <div class="top10-row">
+        <span class="top10-rank">#${i + 1}</span>
+        ${ragBadge(r.rag)}
+        <span class="top10-flag">${flag(r.isoCode)}</span>
+        <strong class="top10-name">${escHtml(r.name)}</strong>
+        <span class="top10-score">${r.composite.toFixed(0)}/100</span>
+        ${r.alerts?.length ? `<span class="top10-alerts">⚠ ${r.alerts.length} alert${r.alerts.length > 1 ? 's' : ''}</span>` : ''}
+      </div>
+    `).join('');
+
+    postBotHtml(`
+      <p>Based on your <strong>${escHtml(profileLabel)}</strong> profile and <strong>${escHtml(techLabel)}</strong> technology, here are the <strong>10 most favourable European jurisdictions</strong>:</p>
+      <div class="top10-list">${top10Html}</div>
+      <p style="margin-top:12px">What would you like to do next?</p>
+      <div class="scope-options">
+        <button class="scope-opt-btn" data-scope="compare">
+          <span class="scope-opt-icon">⚖️</span>
+          <span class="scope-opt-body">
+            <strong class="scope-opt-title">Compare top markets</strong>
+            <span class="scope-opt-desc">Side-by-side across all 8 scoring categories</span>
+          </span>
+        </button>
+        <button class="scope-opt-btn" data-scope="inspect">
+          <span class="scope-opt-icon">🔍</span>
+          <span class="scope-opt-body">
+            <strong class="scope-opt-title">Deep-dive into a market</strong>
+            <span class="scope-opt-desc">Full RAG matrix, alerts, and financial metrics</span>
+          </span>
+        </button>
+        <button class="scope-opt-btn" data-scope="all">
+          <span class="scope-opt-icon">📊</span>
+          <span class="scope-opt-body">
+            <strong class="scope-opt-title">View full 30-jurisdiction ranking</strong>
+            <span class="scope-opt-desc">Scroll to the complete ranked dashboard below</span>
+          </span>
+        </button>
+      </div>
+    `);
+
+    document.querySelectorAll('.scope-opt-btn').forEach(btn => {
+      btn.addEventListener('click', () => handleScopeSelection(btn.dataset.scope), { once: true });
+    });
+
+    // Enable chat
+    $inp.disabled    = false;
+    $inp.placeholder = 'Ask about any jurisdiction, permitting timelines, risk scores…';
+    buildSuggestions(state.technology);
+
+  } catch (err) {
+    loadingDiv.remove();
+    postBotHtml(`<p style="color:var(--red)">Analysis failed: ${escHtml(err.message)}</p>`);
+    $inp.disabled    = false;
+    $inp.placeholder = 'Type a question…';
+  }
 }
 
 function buildScopeSystemPrompt() {
-  const profile = PROFILES[state.profile]      || state.profile  || '';
-  const tech    = TECH_LABELS[state.technology] || state.technology || '';
+  const profile = PROFILES[state.profile]      || state.profile      || '';
+  const tech    = TECH_LABELS[state.technology] || state.technology   || '';
   const budget  = state.budget?.label           || 'Not specified';
-  const regions = [...state.selectedRegions].map(r => REGION_GROUPS[r]?.label ?? r).join(', ')
-               || 'All European markets';
 
   return `You are Hyperion AI, a European energy CapEx jurisdiction intelligence system.
 
-The investor is choosing their analysis scope:
+Investor context:
 - Investment Profile: ${profile}
 - Technology: ${tech}
 - Budget: ${budget}
-- Target Markets: ${regions}
+- Coverage: All 30 European jurisdictions (top 10 being identified by scoring engine)
 
-The three available modes are:
-1. Rank all 30 jurisdictions — comprehensive European RAG scan
-2. Compare selected jurisdictions — side-by-side across 8 scoring categories
-3. Single jurisdiction deep-dive — full RAG matrix and financial metrics
-
-Help the investor decide which mode suits them, or answer any questions about the jurisdictions or approach. All outputs are indicative only — not legal or financial advice.`;
+All outputs are indicative only — not legal or financial advice.`;
 }
 
 // ---------------------------------------------------------------------------
@@ -490,21 +520,21 @@ function handleScopeSelection(scope) {
   chatHistory.push({ role: 'user', content: label });
 
   if (scope === 'all') {
-    const reply = 'I\'ll rank all 30 European jurisdictions across 8 scoring dimensions. GREEN = proceed, AMBER = conditional, RED = avoid.';
-    postBotHtml(`
-      <p>${escHtml(reply)}</p>
-      <button class="chat-run-btn" id="chat-run-btn">▶&nbsp; Run Analysis</button>
-    `);
-    chatHistory.push({ role: 'assistant', content: reply });
-    document.getElementById('chat-run-btn').addEventListener('click', triggerAnalysis, { once: true });
+    // Full ranking already rendered — just scroll to it
+    setTimeout(() => $resultsPanel.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
 
   } else if (scope === 'compare') {
-    const reply = 'Select the jurisdictions to compare side-by-side (2–8):';
+    const top10Isos = new Set(state.top10.map(r => r.isoCode));
+    const ordered = [
+      ...state.top10.map(r => ALL_JURISDICTIONS.find(j => j.iso === r.isoCode)).filter(Boolean),
+      ...ALL_JURISDICTIONS.filter(j => !top10Isos.has(j.iso)),
+    ];
+    const reply = 'Select jurisdictions to compare side-by-side (2–8). Your top 10 are highlighted:';
     postBotHtml(`
       <p>${escHtml(reply)}</p>
       <div class="chat-j-chips" id="chat-j-chips">
-        ${ALL_JURISDICTIONS.map(j =>
-          `<button class="chat-j-chip" data-iso="${j.iso}">${flag(j.iso)} ${escHtml(j.name)}</button>`
+        ${ordered.map(j =>
+          `<button class="chat-j-chip${top10Isos.has(j.iso) ? ' top10-chip' : ''}" data-iso="${j.iso}">${flag(j.iso)} ${escHtml(j.name)}</button>`
         ).join('')}
       </div>
       <div class="chat-run-row">
@@ -516,12 +546,17 @@ function handleScopeSelection(scope) {
     wireCompareChips();
 
   } else {
-    const reply = 'Select the jurisdiction for the deep-dive:';
+    const top10Isos = new Set(state.top10.map(r => r.isoCode));
+    const ordered = [
+      ...state.top10.map(r => ALL_JURISDICTIONS.find(j => j.iso === r.isoCode)).filter(Boolean),
+      ...ALL_JURISDICTIONS.filter(j => !top10Isos.has(j.iso)),
+    ];
+    const reply = 'Select a jurisdiction for the deep-dive. Your top 10 are highlighted:';
     postBotHtml(`
       <p>${escHtml(reply)}</p>
       <div class="chat-j-chips" id="chat-j-chips">
-        ${ALL_JURISDICTIONS.map(j =>
-          `<button class="chat-j-chip" data-iso="${j.iso}">${flag(j.iso)} ${escHtml(j.name)}</button>`
+        ${ordered.map(j =>
+          `<button class="chat-j-chip${top10Isos.has(j.iso) ? ' top10-chip' : ''}" data-iso="${j.iso}">${flag(j.iso)} ${escHtml(j.name)}</button>`
         ).join('')}
       </div>
     `);
@@ -609,8 +644,6 @@ async function triggerAnalysis() {
       let filterCodes = null;
       if (state.scope === 'compare') {
         filterCodes = [...state.selected];
-      } else if (state.selectedRegions.size > 0) {
-        filterCodes = [...state.selectedRegions].flatMap(r => REGION_GROUPS[r]?.isos ?? []);
       }
       lastResult = await agent.query({
         profile:           state.profile,
@@ -667,9 +700,6 @@ function buildSystemPrompt(queryResult) {
   const profile  = PROFILES[state.profile]      || state.profile  || 'Not set';
   const tech     = TECH_LABELS[state.technology] || state.technology || 'Not set';
   const budget   = state.budget?.label           || 'Not specified';
-  const regions  = [...state.selectedRegions].map(r => REGION_GROUPS[r]?.label ?? r).join(', ')
-                || 'All European markets';
-
   let topResults = [];
   if (queryResult?.rankedSummary) {
     topResults = queryResult.rankedSummary.slice(0, 20).map(r => ({
@@ -688,7 +718,7 @@ INVESTOR CONTEXT:
 - Investment Profile: ${profile}
 - Technology: ${tech}
 - Budget Envelope: ${budget}
-- Target Markets: ${regions}
+- Coverage: All 30 European jurisdictions
 
 JURISDICTION SCORES (ranked for this profile and technology):
 ${JSON.stringify(topResults, null, 2)}
@@ -712,9 +742,9 @@ Respond as a precise, data-driven energy CapEx analyst. Be specific, cite scores
 function buildContextBanner() {
   const pills = [
     state.profile    ? { low_risk_core: '🏛️ Low Risk Core', value_add: '📈 Value-Add', esg_impact: '🌱 ESG Impact' }[state.profile] : null,
-    state.technology ? TECH_LABELS[state.technology]  : null,
-    state.budget     ? state.budget.label             : null,
-    ...[...state.selectedRegions].map(r => `${REGION_GROUPS[r]?.emoji ?? ''} ${REGION_GROUPS[r]?.label ?? r}`),
+    state.technology ? TECH_LABELS[state.technology] : null,
+    state.budget     ? state.budget.label            : null,
+    '30 Jurisdictions',
   ].filter(Boolean);
   document.getElementById('ctx-pills').innerHTML =
     pills.map(p => `<span class="summary-pill">${escHtml(p)}</span>`).join('');
@@ -743,10 +773,8 @@ function buildSuggestions(technology) {
 function buildAutoMessage() {
   const tech    = TECH_LABELS[state.technology] || state.technology || 'renewable energy';
   const budget  = state.budget?.label           || 'an unspecified budget';
-  const regions = [...state.selectedRegions].map(r => REGION_GROUPS[r]?.label ?? r).join(' and ')
-               || 'all European markets';
   const profile = PROFILES[state.profile]       || state.profile   || 'an unspecified profile';
-  return `I am assessing ${tech} infrastructure with a budget of ${budget} across ${regions}. My investment profile is "${profile}". Please provide an executive summary of the key opportunities and material risks across my target markets, ranked by composite score, and flag any STOP-level concerns.`;
+  return `I am assessing ${tech} infrastructure with a budget of ${budget} across all European markets. My investment profile is "${profile}". Please provide an executive summary of the key opportunities and material risks across the top 10 jurisdictions, ranked by composite score, and flag any STOP-level concerns.`;
 }
 
 // ---------------------------------------------------------------------------
