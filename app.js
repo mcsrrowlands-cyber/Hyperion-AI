@@ -292,7 +292,7 @@ function showStep(n) {
   });
 
   $backBtn.style.visibility = n === 1 ? 'hidden' : 'visible';
-  $nextBtn.classList.toggle('hidden', n === 4);
+  $nextBtn.classList.toggle('hidden', n === 4 || n === 1);
 
   if (n === 4) {
     initScopeChat();
