@@ -885,6 +885,49 @@ function showServerBanner() {
 checkServer();
 
 // ---------------------------------------------------------------------------
+// About Me — editable bubble with localStorage persistence
+// ---------------------------------------------------------------------------
+
+const ABOUT_STORAGE_KEY = 'hyperion_about_content';
+const $aboutContent     = document.getElementById('about-bubble-content');
+const $aboutEditBtn     = document.getElementById('about-edit-btn');
+const $aboutSaveBtn     = document.getElementById('about-save-btn');
+const $aboutResetBtn    = document.getElementById('about-reset-btn');
+const aboutDefault      = $aboutContent.innerHTML;
+
+// Load saved content if available
+const savedAbout = localStorage.getItem(ABOUT_STORAGE_KEY);
+if (savedAbout) $aboutContent.innerHTML = savedAbout;
+
+$aboutEditBtn.addEventListener('click', () => {
+  $aboutContent.contentEditable = 'true';
+  $aboutContent.classList.add('about-editing');
+  $aboutContent.focus();
+  $aboutEditBtn.classList.add('hidden');
+  $aboutSaveBtn.classList.remove('hidden');
+  $aboutResetBtn.classList.remove('hidden');
+});
+
+$aboutSaveBtn.addEventListener('click', () => {
+  $aboutContent.contentEditable = 'false';
+  $aboutContent.classList.remove('about-editing');
+  localStorage.setItem(ABOUT_STORAGE_KEY, $aboutContent.innerHTML);
+  $aboutSaveBtn.classList.add('hidden');
+  $aboutResetBtn.classList.add('hidden');
+  $aboutEditBtn.classList.remove('hidden');
+});
+
+$aboutResetBtn.addEventListener('click', () => {
+  $aboutContent.innerHTML = aboutDefault;
+  $aboutContent.contentEditable = 'false';
+  $aboutContent.classList.remove('about-editing');
+  localStorage.removeItem(ABOUT_STORAGE_KEY);
+  $aboutSaveBtn.classList.add('hidden');
+  $aboutResetBtn.classList.add('hidden');
+  $aboutEditBtn.classList.remove('hidden');
+});
+
+// ---------------------------------------------------------------------------
 // Chat — send a message
 // ---------------------------------------------------------------------------
 

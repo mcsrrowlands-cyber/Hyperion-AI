@@ -210,6 +210,24 @@ table { border-spacing: 0; }
 }
 .about-bubble p { margin: 0 0 12px; }
 .about-bubble p:last-child { margin-bottom: 0; }
+.about-bubble-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.about-bubble-header .about-bubble-title { margin-bottom: 0; }
+.about-edit-btn, .about-save-btn, .about-reset-btn {
+  font-size: 12px; padding: 3px 10px; border-radius: 5px; cursor: pointer;
+  border: 1px solid var(--border); background: #fff; color: var(--text-2);
+  transition: background 0.12s;
+}
+.about-save-btn { border-color: #16a34a; color: #16a34a; }
+.about-save-btn:hover { background: #f0fdf4; }
+.about-reset-btn { border-color: #dc2626; color: #dc2626; }
+.about-reset-btn:hover { background: #fef2f2; }
+.about-edit-btn:hover { background: #f1f5f9; }
+.about-editing {
+  outline: 2px solid #00606e;
+  border-radius: 6px;
+  padding: 8px;
+  min-height: 40px;
+}
 .about-bubble-title {
   font-size: 13px;
   font-weight: 700;
