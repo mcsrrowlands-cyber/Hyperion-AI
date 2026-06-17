@@ -1,0 +1,429 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Ireland",
+    "local_name": "Éire / Ireland",
+    "iso_code": "IE",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "RESS and ORESS auction clearing prices change per round. Verify with SEAI/DCCAE. Corporate tax rate is transitioning to 15% for large companies under Pillar 2 from 2024 — confirm current regime for your entity. MAP Act (2021) MAC process for offshore is operational but still early-stage."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Electricity Regulation Act 1999 (as amended)", "relevance": "Primary electricity market regulation; CRU (Commission for Regulation of Utilities) as regulator; RESS legal basis" },
+      { "instrument": "Climate Action and Low Carbon Development (Amendment) Act 2021", "relevance": "Legally binding net-zero by 2050 and 51% GHG reduction by 2030. Drives renewable targets: 80% electricity from renewables by 2030." },
+      { "instrument": "Renewable Electricity Support Scheme (RESS) — SI No. 233 of 2021", "relevance": "RESS statutory instrument; two-way CfD competitive auction scheme for onshore and offshore wind and solar" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Planning and Development Act 2000 (as amended)", "relevance": "Primary planning legislation; An Bord Pleanála (ABP) as national planning authority for strategic infrastructure" },
+      { "instrument": "Maritime Area Planning Act 2021 (MAP Act)", "relevance": "New regime for offshore development: Maritime Area Consent (MAC) process replacing foreshore licence system; MAC required before planning application" },
+      { "instrument": "Planning and Development (Maritime and Valuation) (Amendment) Act 2022", "relevance": "Further amendments to MAP Act implementation; Coimisiún Pleanála as successor body to An Bord Pleanála" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Taxes Consolidation Act 1997 (TCA97)", "relevance": "Primary tax code; 12.5% trading rate; Section 285 ACAs (Accelerated Capital Allowances); Section 486C for Qualifying Energy Efficient Equipment" },
+      { "instrument": "Finance (No. 2) Act 2023", "relevance": "Implementation of Pillar 2 15% minimum tax for large companies (revenues >€750m) from 1 January 2024" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG 2022/C 80/01", "relevance": "EC framework for RESS compatibility" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption for sub-threshold aids" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Investment Screening Act 2024 (Scéim Grinnfhiosrúcháin Infheistíochta)", "relevance": "Ireland introduced FDI screening legislation in 2024 implementing EU FDI Regulation obligations. Energy sector included." },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation mechanism" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Ireland's planning system underwent major reform. An Bord Pleanála (ABP) is being restructured as 'An Coimisiún Pleanála' with new governance. Strategic Infrastructure Development (SID) track applies to large renewable projects. Judicial review (JR) risk is high — Irish High Court is accessible and environmental NGOs are active.",
+    "solar_utility": {
+      "primary_authority": "An Coimisiún Pleanála (formerly ABP) for strategic developments; Local Planning Authority (LPA) for sub-threshold",
+      "primary_process": "Strategic Infrastructure Development (SID) for >100MW or designated strategic category; standard planning permission for sub-threshold",
+      "legal_basis": "Planning and Development Act 2000 ss. 37A-37J (SID); SI No. 600 of 2001 (planning regulations)",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 36,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Judicial Review (JR) — Irish High Court (Commercial Division) → Court of Appeal → Supreme Court (on leave)",
+      "notes": "Ireland has good Atlantic solar resource in the south and west (1,000–1,200 kWh/kWp) — lower than southern Europe but viable. Solar growth has been rapid since 2020."
+    },
+    "onshore_wind": {
+      "primary_authority": "An Coimisiún Pleanála for SID track; LPA for sub-threshold",
+      "primary_process": "Strategic Infrastructure Development (SID); Environmental Impact Assessment (EIA); public participation; oral hearing before ABP/Coimisiún Inspector",
+      "legal_basis": "Planning and Development Act 2000 s. 37A; Wind Energy Development Guidelines (2006 — under review)",
+      "wind_guidelines_status": "Wind Energy Development Guidelines (2006) have been under review since 2013. Updated draft guidelines issued 2019 (draft) — yet to be finalised as of 2026. This regulatory uncertainty has been a significant drag on the sector.",
+      "timeline_p50_months": 36,
+      "timeline_min_months": 24,
+      "timeline_max_months": 72,
+      "appeal_risk": "very_high",
+      "notes": "Ireland has exceptional Atlantic wind resource (onshore capacity factors 30–40%+ in west coast areas). However, JR culture, ABP/Coimisiún governance issues (2022 significant errors requiring board restructuring), and unresolved wind guidelines have created significant permitting uncertainty. Improving post-governance reform but risk remains elevated."
+    },
+    "offshore_wind": {
+      "primary_authority": "MARA (Maritime Area Regulatory Authority) for MAC (Maritime Area Consent); An Coimisiún Pleanála for planning consent; CRU for grid connection",
+      "primary_process": "MAC (Maritime Area Consent) from MARA — first step before planning. Planning application to An Coimisiún Pleanála. Grid connection to EirGrid. ORESS tender for support.",
+      "legal_basis": "Maritime Area Planning Act 2021 (MAP Act); Planning and Development Act 2000; Electricity Regulation Act 1999",
+      "celtic_sea_potential": "Ireland has world-class offshore wind resource, particularly in the Celtic Sea (south/southwest coast). Potential for 30+ GW fixed bottom and floating offshore. Government target: 7GW offshore by 2030 under Climate Action Plan.",
+      "mac_process_status": "MARA established and MAC process operational from 2023. First MAC licences being processed — early-stage but promising framework.",
+      "timeline_p50_months": 84,
+      "timeline_min_months": 60,
+      "timeline_max_months": 144,
+      "appeal_risk": "high",
+      "notes": "Irish offshore wind is pre-commercial at scale but represents one of Europe's most significant long-term opportunities. Celtic Sea capacity factors of 48%+ for fixed/floating. MAP Act framework is the structural reform enabling commercial development. First commercial offshore projects targeted for commissioning 2028-2030."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operator": "EirGrid (Republic of Ireland TSO; also SONI for Northern Ireland under all-island SEM)",
+    "distribution_operator": "ESB Networks (subsidiary of ESB — Electricity Supply Board)",
+    "regulatory_authority": "CRU — Commission for Regulation of Utilities (formerly CER)",
+    "legal_basis": "Electricity Regulation Act 1999; Grid25 expansion programme; National Development Plan 2021-2030",
+    "single_electricity_market": {
+      "description": "I-SEM (Integrated Single Electricity Market) — all-island day-ahead, intraday, and balancing market operating across Republic of Ireland and Northern Ireland",
+      "legal_basis": "Electricity (Single Wholesale Market) Act 2014; I-SEM rules",
+      "reference_price": "I-SEM day-ahead price is the reference price for RESS and ORESS settlement"
+    },
+    "grid_constraints": "Ireland's peripheral location means limited interconnection with Great Britain (Moyle interconnector, 500MW; East-West interconnector, 500MW to Wales). Limited export capacity creates potential curtailment risk as renewable penetration grows beyond current levels.",
+    "grid_25_programme": "Grid25 (EirGrid) and subsequent programmes expanding transmission capacity to accommodate renewable growth targets. Major investments planned to 2030.",
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 36, "range": "24–60" },
+      "distribution_connected": { "p50": 24, "range": "18–42" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 50000,
+      "range_high": 250000,
+      "notes": "Grid charges (use of system charges — DUoS/TUoS) are regulated by CRU. Connection cost reflects distance to grid and required reinforcement."
+    },
+    "curtailment_risk": "medium-high",
+    "curtailment_note": "Ireland experiences significant wind curtailment during high wind/low demand periods — curtailment rate has been 10-15%+ in some years. This must be modelled in LCOE and DSCR calculations."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The RESS (Renewable Electricity Support Scheme) and ORESS (Offshore Renewable Energy Support Scheme) are TWO-WAY CfD mechanisms. The generator receives a settlement payment when the I-SEM reference price falls below the RESS reference price. When the I-SEM price exceeds the RESS reference price, the generator PAYS BACK the excess. Both upside and downside are determined relative to the RESS reference price — equivalent to the UK CfD. Do NOT model as a one-way premium.",
+    "primary_mechanism": "RESS (Renewable Electricity Support Scheme) — Two-Way CfD",
+    "offshore_mechanism": "ORESS (Offshore Renewable Energy Support Scheme) — Two-Way CfD",
+    "mechanism_type": "two_way_cfd",
+    "administrator": "SEAI (Sustainable Energy Authority of Ireland) for auction design; CRU for settlement oversight",
+    "legal_basis": "Electricity Regulation Act 1999 (as amended); SI No. 233 of 2021 (RESS Regulations)",
+    "mechanism_description": {
+      "summary": "Generator competes in RESS auction and wins at cleared reference price (settlement reference price). Generator sells electricity on I-SEM. When I-SEM reference price < RESS reference price: generator receives difference (top-up). When I-SEM reference price > RESS reference price: generator PAYS BACK excess. Two-way CfD.",
+      "upside_treatment": "CAPPED via clawback — excess above settlement reference price paid back. Equivalent to UK CfD.",
+      "downside_treatment": "PROTECTED — revenue floor at settlement reference price",
+      "reference_price": "I-SEM day-ahead market reference price",
+      "contract_term_years": 15,
+      "inflation_indexation": "RESS reference prices are indexed to CPI — partially protecting against inflation erosion of real value"
+    },
+    "auction_rounds": {
+      "ress_1": { "date": "2020", "capacity_mw_awarded": 700 },
+      "ress_2": { "date": "2021-2022" },
+      "ress_3": { "date": "2022-2023" },
+      "clearing_prices_eur_mwh_approx": {
+        "_staleness_warning": "Verify with SEAI/DCCAE. Prices have risen due to cost inflation.",
+        "onshore_wind": { "low": 65.00, "high": 90.00 },
+        "solar_pv": { "low": 55.00, "high": 80.00 }
+      },
+      "oress_1": {
+        "description": "First dedicated offshore auction (ORESS 1) under development. Fixed offshore and floating.",
+        "status": "Implementation in progress — verify current ORESS programme status with DECC."
+      }
+    },
+    "community_benefit_requirement": "RESS scheme includes mandatory community benefit fund contribution — generators must contribute to local community benefit funds. Amount and process specified in RESS Terms and Conditions."
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Irish ACAs (Accelerated Capital Allowances) under Section 285 TCA97 and the Energy Efficiency allowances under Section 486C provide 100% first-year deduction for qualifying assets. At 12.5% CT rate: the absolute shield is lower than UK (25%) but the immediate front-loading is valuable for project economics.",
+    "corporation_tax": {
+      "trading_rate_pct": 12.5,
+      "passive_income_rate_pct": 25,
+      "legal_basis": "TCA97 s. 21A (12.5% rate for trading income)",
+      "pillar_2_note": {
+        "description": "Qualified Domestic Minimum Top-up Tax (QDMTT) introduced from 1 January 2024 for large multinationals (global revenues >€750m). Effective minimum rate of 15% for in-scope companies.",
+        "legal_basis": "Finance (No. 2) Act 2023; Pillar Two Rules (BEPS 2.0 Global Anti-Base Erosion — GloBE)",
+        "impact": "For large MNC investors in Irish renewable projects: effective CT rate is 15% (not 12.5%). For smaller/domestic investors: 12.5% trading rate continues."
+      }
+    },
+    "accelerated_capital_allowances": {
+      "aca": {
+        "description": "Accelerated Capital Allowances (ACAs) under Section 285 TCA97 — 100% first-year deduction for qualifying energy-efficient equipment (plant and machinery)",
+        "rate_pct": 100,
+        "qualifying_assets": "Plant and machinery listed on the ACA qualifying products list (updated annually by SEAI). Wind turbines, solar panels, and associated electrical equipment are typically qualifying.",
+        "legal_basis": "TCA97 s. 285 (as amended); Finance Act 2018 extended provisions",
+        "staleness_warning": "Qualifying products list updated annually. Verify with SEAI ACA list.",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 12.5% CT and 10% WACC: NPV of tax shield under ACA (100% year 1) ≈ 12.1% of qualifying CapEx. Under standard 8-year plant depreciation (12.5% p.a.): NPV ≈ 9.3%. Timing benefit ≈ 2.8ppts. Absolute shield is lower than UK (Full Expensing at 25% CT provides ~23.8% vs Ireland's ~12.1%) but the timing benefit is proportionally similar."
+        }
+      }
+    },
+    "standard_capital_allowances": {
+      "plant_and_machinery": "12.5% per annum (8-year life) — standard rate under TCA97 s. 284",
+      "industrial_buildings": "4% per annum (25-year life)"
+    },
+    "vat": {
+      "standard_rate_pct": 23,
+      "reduced_rate_pct": 13.5,
+      "applies_to_commercial_renewables": true,
+      "legal_basis": "Value-Added Tax Consolidation Act 2010",
+      "input_vat_recovery": "Available for VAT-registered businesses"
+    },
+    "stamp_duty": {
+      "rate_on_non_residential_property_pct": 7.5,
+      "rate_on_shares_pct": 1,
+      "legal_basis": "Stamp Duties Consolidation Act 1999",
+      "note": "Share deal structures preferred (1% stamp duty vs. 7.5% on property asset deals)"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "Irish common law (English law heritage); Sale of Goods Act 1893 (as amended); no bespoke PPA statute. Irish courts apply common law contract principles — similar to UK.",
+    "market_liquidity": "Medium and growing rapidly",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Major data centre operators (Google, Meta, Amazon AWS, Microsoft — Ireland is Europe's data centre hub); Pharmaceutical companies (Pfizer, Eli Lilly Ireland, Roche); Financial services",
+    "data_centre_demand": {
+      "note": "Ireland hosts approximately 25% of European data centre capacity. ESB forecasts data centres could consume up to 70% of Irish electricity by 2030 without policy intervention. This creates extraordinary corporate PPA demand from investment-grade tech offtakers.",
+      "impact": "Strong pipeline of long-term PPAs with investment-grade buyers. Best corporate PPA market in Europe for renewable generators by offtaker quality."
+    },
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement (English law basis)", "Bespoke bilateral under Irish common law", "Virtual/financial PPA referencing I-SEM price"],
+    "ress_interaction": "RESS contract holders sell on I-SEM and may be subject to clawback above reference price. Corporate PPA structures for RESS assets typically use financial/virtual arrangements rather than physical delivery.",
+    "go_system": {
+      "description": "ROCs (Renewable Energy Guarantees of Origin) — Irish equivalent to UK REGOs and EU GOs",
+      "regulator": "SEAI",
+      "notes": "Standard EU Guarantee of Origin framework; traded alongside electricity supply"
+    },
+    "cross_border_enforceability": "Very High — Irish courts apply common law; enforcement of judgments under EU Regulation (Brussels I Recast) and bilateral treaty with UK"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 85,
+    "credit_ratings": {
+      "moodys": "A1",
+      "sp": "AA",
+      "fitch": "AA-"
+    },
+    "political_stability": "High",
+    "government_structure": "Parliamentary republic (Éire/Ireland); coalition governments normal. Ireland's economy has been transformed by FDI (tech and pharma MNCs). Strong EU integration.",
+    "regulatory_track_record": "Good — REFIT scheme (predecessor to RESS) operated without retroactive modification. RESS introduced as forward-looking improvement.",
+    "retroactive_policy_incidents": [],
+    "expropriation_risk": "Very Low",
+    "currency_risk": "None — EUR domestic",
+    "ct_rate_risk": {
+      "note": "Ireland's 12.5% CT rate has been the subject of ongoing EU/OECD pressure. Global Pillar 2 minimum tax (15% for large MNCs) is now implemented. Risk of further CT rate harmonisation has largely crystallised — 12.5% remains for trading income from non-large-MNC entities.",
+      "severity": "Low — Pillar 2 change already implemented; further changes less likely"
+    },
+    "score_rationale": "Ireland scores 85 — A1/AA rated; no retroactive renewable energy incidents; stable coalition government; EU founding EMS member. Slight discount for Pillar 2 CT rate transition affecting large MNC investors."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 58,
+    "component_scores": {
+      "grid_connection_drag": { "score": 60, "assessment": "MEDIUM-HIGH — limited UK interconnection; curtailment rate 10-15%+; EirGrid expansion underway; I-SEM market structure is efficient but physical grid is constrained" },
+      "permitting_drag_solar": { "score": 35, "assessment": "LOW-MEDIUM — planning permission process is manageable; JR risk lower than for wind" },
+      "permitting_drag_wind_onshore": { "score": 70, "assessment": "HIGH — unresolved wind guidelines (under review since 2013); JR culture; ABP/Coimisiún governance issues 2022; excellent resource but permitting has been difficult" },
+      "permitting_drag_offshore": { "score": 60, "assessment": "MEDIUM-HIGH — MAP Act MAC process is new (2023) and untested at scale; JR risk remains; Coimisiún planning stage adds complexity. Improving rapidly." },
+      "bureaucratic_friction": { "score": 50, "assessment": "MEDIUM — Irish administration is generally efficient; oral hearing process at ABP/Coimisiún adds time; MARA is new agency with evolving processes" },
+      "judicial_appeal_risk": { "score": 70, "assessment": "HIGH — Irish High Court is accessible; JR is used frequently and successfully by environmental NGOs (An Taisce historically litigious); 2022 ABP governance issues increased JR risk. Common law JR doctrine similar to UK." }
+    },
+    "primary_bottleneck": "Onshore wind: unresolved wind guidelines and JR culture. Offshore: MAC process is new. Grid: curtailment and limited UK interconnection.",
+    "score_rationale": "Composite 58 — excellent data centre PPA demand and RESS support offset by onshore wind JR risk and grid curtailment. Offshore improving rapidly."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Investment Screening Act 2024; EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "reviewing_authority": "Department of Enterprise, Trade and Employment (DETE)",
+    "practical_risk": "Low",
+    "notes": "Ireland's FDI screening legislation is recent (2024). Energy is included as a sensitive sector. Ireland has historically been extremely welcoming of FDI (particularly US tech and pharma) — prohibition risk for OECD energy investors is very low. Process still bedding in."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG 2022/C 80/01",
+    "ress_clearance": "RESS competitive auction mechanism cleared by EC under CEEAG. Two-way CfD with competitive bidding satisfies proportionality.",
+    "oress_clearance": "ORESS cleared under CEEAG for offshore wind support",
+    "retrospective_clawback_risk": "Low — RESS competitive auction framework is cleared; no EC recovery history",
+    "notification_status": "RESS and ORESS cleared. Future auction rounds may require notification updates."
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Wind curtailment (10-15%+ in some years) must be applied as a capacity factor haircut in LCOE and DSCR models. ACA 100% first-year deduction significantly improves Year 1 cash flow — important for DSCR in debt service years.",
+    "_rule_3a_note": "TWO-WAY CfD: model RESS reference price as BOTH floor AND ceiling. Clawback applies in high-price environments.",
+    "illustrative_onshore_wind_ress": {
+      "ress_reference_price_eur_mwh_approx": 78.00,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct_west_coast": 40,
+      "curtailment_haircut_pct": 12,
+      "adjusted_capacity_factor_pct": 35,
+      "typical_capex_eur_per_mw": 1500000,
+      "opex_eur_per_mw_per_year": 45000,
+      "aca_100pct_year_1": true,
+      "ct_rate_pct": 12.5
+    },
+    "illustrative_solar_ress": {
+      "ress_reference_price_eur_mwh_approx": 68.00,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 12,
+      "typical_capex_eur_per_mw_dc": 600000
+    }
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "GREEN", "rationale": "Planning process manageable; low JR risk vs. wind; strong solar growth trajectory" },
+    "permitting_wind_onshore": { "rag": "RED", "rationale": "Unresolved wind guidelines (13+ years under review); JR culture in Irish planning; Coimisiún governance reform underway. Despite exceptional wind resource, permitting is the primary blocker." },
+    "permitting_offshore": { "rag": "AMBER", "rationale": "MAP Act MAC process is the structural reform enabling offshore development. New framework is promising but untested at scale. JR risk persists." },
+    "grid_connection": { "rag": "AMBER", "rationale": "Limited UK interconnection; wind curtailment 10-15%; EirGrid expansion programme is in progress but physical grid constrains near-term capacity" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "RESS two-way CfD with 15-year contracts; indexed to CPI; government committed to auction programme; ORESS for offshore in development" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "12.5% CT (trading rate) is the lowest in this knowledge base for non-large-MNCs. ACA 100% first-year deduction maximises Year 1 tax shield. Pillar 2 applies to large MNCs (15% effective rate) — still competitive." },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "Irish common law; best corporate PPA offtake market in Europe (investment-grade data centres account for 25% European capacity); strong SEAI GO framework" },
+    "political_risk": { "rag": "GREEN", "rationale": "A1/AA rated; no retroactive renewable energy incidents; stable EU member; strong renewable policy commitment in Climate Action Plan" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Solar and tax are GREEN; onshore wind permitting is RED-level; grid curtailment is AMBER. Composite AMBER with strong technology-specific variation." },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "Ireland is one of Europe's most FDI-welcoming countries; new screening act is proportionate; energy sector covered but prohibition risk negligible for OECD investors" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "RESS and ORESS cleared under CEEAG; competitive auction is compliant; no EC recovery risk" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Ireland presents a compelling combination of exceptional Atlantic wind resource (offshore capacity factors 48%+), the best corporate PPA market in Europe (data centres), a 12.5% CT rate (lowest in this knowledge base), and a strong RESS two-way CfD framework. The primary drags are onshore wind permitting (unresolved guidelines, JR culture) and wind curtailment. Solar is viable and permitting is clean. Offshore is the strategic opportunity — MAP Act reforms are structurally important and the Celtic Sea is a world-class offshore wind resource. Investors focused on offshore wind or solar with data centre PPA offtake will find Ireland highly attractive once MAC/planning consents are secured."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 36,
+    "1_permitting_window_scope": "Onshore wind via SID track (An Coimisiún Pleanála)",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 50,000–250,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 50,000–250,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "24–60",
+    "3_primary_support_mechanism": "RESS (Renewable Electricity Support Scheme) — two-way CfD. ORESS for offshore.",
+    "3_mechanism_type_code": "two_way_cfd",
+    "4_effective_corporation_tax_rate_pct": 12.5,
+    "4_key_incentive": "ACA (Accelerated Capital Allowances) — 100% first-year deduction for qualifying energy-efficient equipment under TCA97 s.285. 12.5% CT is the lowest in this knowledge base.",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Irish common law; I-SEM reference price; SEAI GO framework; data centre offtaker market (investment-grade, deepest in Europe)",
+    "6_political_risk_score": 85,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 58,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR ~78/MWh approx. (onshore wind RESS reference price — indicative; verify with SEAI)",
+    "8_revenue_floor_eur": "EUR ~78/MWh (no conversion — domestic currency)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "two_way_cfd",
+    "8_revenue_floor_staleness_warning": "RESS reference prices change per auction round. Curtailment haircut (10-15%) must be applied to capacity factor before LCOE calculation. Verify with SEAI auction results."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Ireland is not an IPCEI participant. National hydrogen strategy published 2023 — targets offshore wind-powered electrolysis. SEAI and IDA Ireland supporting hydrogen project development. Significant offshore wind resource could support large-scale green hydrogen export."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "two_way_cfd",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Renewable Electricity Support Scheme (RESS) — two-way CfD auction administered by SEAI under Electricity Regulation Act 1999 and SI 600/2021.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "no_policy",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": null,
+      "notes": "No nuclear energy policy in Ireland. The Electricity Regulation Act 1999 (s.18) contains a provision effectively prohibiting nuclear generation. Periodic political discussion has not resulted in policy change."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "No LNG terminal. Shannon LNG project (New Fortress Energy) has planning permission but faces regulatory and political opposition. Policy debate ongoing."
+    },
+    "data_centre": {
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "high",
+      "renewable_ppa_market_depth": "medium",
+      "source": "national_tso",
+      "notes": "EirGrid has flagged data centres as consuming 21% of national electricity. Grid constraint is a material risk. Planning permission via local authority. Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "I-SEM Capacity Market (Reliability Option) — administered by SEM Committee under the Integrated Single Electricity Market. CCGT and peaker plants are eligible. Source: SEMC/EirGrid.",
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": true,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Ireland operates the I-SEM capacity market with Reliability Option contracts. Gas-fired plants are key capacity providers. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Irish bioenergy support under RESS framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Ireland targets coal phase-out by 2025 (Moneypoint station).",
+      "source": null,
+      "notes": "Ireland's last coal station (Moneypoint) is targeting conversion or closure by 2025. No coal support mechanism. EU Taxonomy-excluded."
+    }
+  }
+}

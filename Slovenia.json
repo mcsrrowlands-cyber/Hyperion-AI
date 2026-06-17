@@ -1,0 +1,394 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Slovenia",
+    "local_name": "Republika Slovenija",
+    "iso_code": "SI",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency since 1 January 2007",
+    "currency_eur_rate_source": "Slovenia adopted the Euro on 1 January 2007 (first former Yugoslav republic to join the Eurozone).",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Slovenian RES policy is administered by the Agency for Energy (Agencija za energijo — AGEN-RS at agencija-energija.si) and the market operator Borzen d.o.o. (borzen.si). The TSO is ELES d.o.o. (eles.si). Verify current tender parameters at Borzen and current legislation at pisrs.si (Pravno-informacijski sistem — legal information system of the Republic of Slovenia)."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Energy Act (Energetski zakon — EZ-1) 2014, as amended; Energy Act-2 (EZ-2) proposed/enacted", "relevance": "Framework energy legislation; TSO (ELES) and DSO obligations; market framework; grid connection rights. NOTE: Slovenia was in the process of adopting an updated Energy Act (EZ-2) to implement revised EU energy directives — verify current primary legislation at pisrs.si." },
+      { "instrument": "Act on Promotion of Renewable Energy Sources (Zakon o spodbujanju rabe obnovljivih virov energije — ZSROVE) 2021, as amended", "relevance": "Primary RES support legislation; competitive tender (dražba) mechanism; Borzen as market operator; AGEN-RS regulatory oversight" },
+      { "instrument": "Resolution on the National Energy and Climate Programme (Resolucija o nacionalnem energetskem in podnebnem programu — ReNEPP) 2023–2030", "relevance": "RES target: 30–33% renewable energy by 2030; solar and wind as primary development technologies; nuclear (JEK 2 — new nuclear unit at Krško) under discussion" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Spatial Management Act (Zakon o urejanju prostora — ZUreP-3) 2022", "relevance": "Spatial planning; municipal and national spatial plans; RES zone designation" },
+      { "instrument": "Construction Act (Gradbeni zakon — GZ-1) 2017, as amended; GZ-1 (amended 2022)", "relevance": "Building permits (gradbeno dovoljenje); commissioning certificates; permitting procedural rules" },
+      { "instrument": "Environmental Protection Act (Zakon o varstvu okolja — ZVO-2) 2022", "relevance": "EIA procedures; environmental permits; public participation" },
+      { "instrument": "Nature Conservation Act (Zakon o ohranjanju narave — ZON) 1999, as amended", "relevance": "Natura 2000 (approximately 36% of Slovenian territory — significant constraint); protected species; EIA for projects in/near protected areas" },
+      { "instrument": "Decree on RES development zones (Uredba o določitvi razvojnih območij za obnovljive vire energije) — 2023/2024", "relevance": "Slovenia has been designating 'RES development zones' where permitting is streamlined for solar and wind — a significant recent policy development; verify current zone map at AGEN-RS" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Corporate Income Tax Act (Zakon o davku od dohodkov pravnih oseb — ZDDPO-2) 2006, as amended", "relevance": "19% CIT rate. Investment relief (investicijska olajšava) for qualifying CapEx. No special RES-specific accelerated depreciation beyond general rules." },
+      { "instrument": "Value Added Tax Act (Zakon o davku na dodano vrednost — ZDDV-1) 2006, as amended", "relevance": "22% standard VAT rate; input VAT recovery available" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Slovenian RES support assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Act on Critical Infrastructure Protection (Zakon o kritični infrastrukturi) and relevant sector laws", "relevance": "Slovenia does not have a comprehensive standalone FDI screening law equivalent to Germany's AWG or Slovakia's 2022 Act. Some energy infrastructure protections apply through sector legislation and EU Regulation 2019/452." },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation mechanism; Slovenia participates" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Slovenian permitting is undergoing positive reform. The designation of RES development zones (2023/2024) is intended to significantly streamline permitting for solar and wind projects within designated areas. Outside designated zones, the full EIA + spatial plan process applies. Natura 2000 coverage (~36% of territory) is a material constraint for highland/forest wind sites.",
+    "solar_utility": {
+      "primary_authority": "Agencija za okolje (ARSO — Slovenian Environment Agency) for EIA/AA; municipality for spatial plan and building permit; AGEN-RS for energy permit; ELES/DSO for grid connection",
+      "primary_process": "Spatial plan compliance check → EIA screening (ARSO) → Full EIA if required → Building permit (gradbeno dovoljenje) → Energy production permit (AGEN-RS) → Grid connection (ELES/Elektro) → Commissioning",
+      "legal_basis": "ZUreP-3; GZ-1; ZVO-2; ZSROVE; AGEN-RS regulations",
+      "timeline_p50_months": {
+        "within_res_zone": 18,
+        "outside_res_zone": 30
+      },
+      "res_zone_note": "Projects within designated RES development zones benefit from streamlined permitting (reduced EIA requirements; pre-cleared spatial planning). Locate zone map at AGEN-RS (agencija-energija.si) or Ministry of Infrastructure.",
+      "timeline_min_months": 12,
+      "timeline_max_months": 48,
+      "appeal_risk": "medium",
+      "solar_resource": "Southern Slovenia (Primorska region, Kras plateau, Goriška Brda, Pannonian plain of Prekmurje) achieves 1,300–1,500 kWh/kWp p.a. — good resource by Central European standards; northern Slovenia (Gorenjska) lower.",
+      "notes": "Slovenia is actively promoting utility solar. The pre-designated RES zone approach is a genuine positive for development velocity. Ground-mounted solar on Pannonian plain (Prekmurje, Pomurje) is the primary utility-scale opportunity."
+    },
+    "onshore_wind": {
+      "primary_authority": "ARSO (EIA/AA); municipality + Ministry of Infrastructure for spatial plan; GZ-1 building permit; AGEN-RS energy permit; ELES grid connection",
+      "primary_process": "National/local spatial plan for wind energy areas → EIA/AA → Building permit → Energy permit → Grid connection → Commissioning",
+      "legal_basis": "ZUreP-3; GZ-1; ZVO-2; ZON; ZSROVE",
+      "timeline_p50_months": 60,
+      "timeline_min_months": 36,
+      "timeline_max_months": 84,
+      "appeal_risk": "medium-high",
+      "installed_capacity_mw_approx": 6,
+      "wind_challenge": "Slovenia has very limited onshore wind development (~6 MW installed) despite reasonable ridge-top resource. The combination of mountainous terrain (Dinaric Alps, Julian Alps — Alpine zone covers ~50% of territory), extensive Natura 2000 constraints, and historically slow spatial planning processes has restricted development. Coastal Karst region and Pannonian hills (Goričko, eastern Haloze) are the most viable wind areas. RES development zones and political momentum (post-2022 energy crisis) are creating new opportunities.",
+      "rag_assessment": "AMBER — limited but not blocked; RES zone designation is a genuine positive signal"
+    },
+    "offshore_wind": {
+      "effective_status": "Very limited — Slovenia has a short Adriatic coastline (46.6 km) in the Gulf of Trieste",
+      "notes": "Slovenia's coastline is too short and the Adriatic at that point too shallow and congested for meaningful offshore wind development. Offshore is not a relevant technology for Slovenia."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Building permit; ELES/DSO grid connection; AGEN-RS energy storage registration",
+      "timeline_p50_months": 18,
+      "notes": "BESS market developing — useful for solar smoothing in the Pannonian plain and supporting grid stability. ELES is integrating storage in grid planning."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "ELES d.o.o. (Elektro-Slovenija)", "region": "Slovenian national TSO; state-owned; ENTSO-E member; operates 400kV/220kV/110kV transmission network" }
+    ],
+    "distribution_operators": "Five regional DSOs: Elektro Celje d.d.; Elektro Gorenjska d.d.; Elektro Ljubljana d.d.; Elektro Maribor d.d.; Elektro Primorska d.d. — all regulated by AGEN-RS",
+    "regulatory_authority": "Agencija za energijo (AGEN-RS)",
+    "legal_basis": "EZ-1 (Energy Act) §§35–55; ELES Grid Code; AGEN-RS regulations; RES priority grid access",
+    "interconnections": "Slovenia is well-interconnected: Italy (via 400kV lines through Okroglo/Krško), Austria (Tauern), Hungary, and Croatia. This central Alpine/Adriatic position is strategically advantageous for RES electricity export.",
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 30, "range": "24–48", "notes": "Growing solar pipeline in Prekmurje creating queue; ELES reinforcement investment underway" },
+      "distribution_connected": { "p50": 20, "range": "12–36" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 18000,
+      "range_high": 120000,
+      "notes": "Grid connection costs regulated by AGEN-RS; Prekmurje DSO (Elektro Maribor) facing growing queue from solar pipeline; reinforcement costs can be material for remote sites"
+    }
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Slovenian competitive tender premium (dražba) under ZSROVE is a ONE-WAY mechanism. Premium = max(0, reference price − market clearing price). When market price exceeds the reference price, the premium is zero — the generator retains full merchant upside with NO clawback.",
+    "primary_mechanism": "Dražba (auction) — competitive tender premium; Borzen d.o.o. as market operator",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Borzen d.o.o. (market operator); AGEN-RS (regulatory oversight)",
+    "legal_basis": "ZSROVE (Act on Promotion of RES) 2021, as amended; AGEN-RS regulations; Borzen operating rules",
+    "mechanism_description": {
+      "summary": "Generator wins competitive Borzen auction and receives a reference premium. Sells electricity on HUPX/day-ahead market (Slovenia uses HUPX Hungarian Power Exchange reference for Slovenian bidding zone SI). Premium = max(0, reference price − HUPX-SI average). One-way: no clawback when market price exceeds reference.",
+      "upside_treatment": "UNCAPPED — one-way mechanism; no clawback",
+      "downside_treatment": "PROTECTED — Borzen settlement body pays shortfall",
+      "contract_term_years": "Typically 15 years from commissioning",
+      "hupx_si_note": "Slovenia's electricity market is integrated with HUPX (Hungarian Power Exchange) for market coupling purposes. The reference price is based on the SI bidding zone (HUPX-SI) price, which tracks Italian, Austrian, and Central European price signals."
+    },
+    "auction": {
+      "administrator": "Borzen d.o.o.",
+      "tender_frequency": "Periodic rounds — Borzen publishes tender calls; verify at borzen.si",
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Reference prices change with each Borzen auction round. Verify at Borzen (borzen.si) and AGEN-RS before use.",
+        "solar_pv": { "eur_mwh_range_low": 50, "eur_mwh_range_high": 85, "notes": "RES zone projects may have lower prices as grid and planning risk is reduced" },
+        "onshore_wind": { "eur_mwh_range_low": 45, "eur_mwh_range_high": 75 }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: 19% CIT. Investment relief (investicijska olajšava) for qualifying CapEx — 40% of qualifying investment deducted from taxable base (not from tax itself — a base deduction). Apply NPV analysis to timing benefit.",
+    "corporation_tax_structure": {
+      "cit_rate_pct": 19.0,
+      "legal_basis": "ZDDPO-2 §60 — 19% rate; verify any rate changes at pisrs.si",
+      "investment_relief": {
+        "name": "Investicijska olajšava (Investment Relief)",
+        "description": "Companies investing in qualifying equipment, machinery, and intangibles (including RES assets) may deduct 40% of the qualifying investment amount from the taxable base (not from CIT directly). Available in the investment year; excess relief carried forward 5 years.",
+        "legal_basis": "ZDDPO-2 §55",
+        "_rule_3b_analysis": "NPV of timing benefit: For a EUR 50m solar project with EUR 40m qualifying investment: 40% investment relief = EUR 16m deduction from taxable base. CIT saving: EUR 16m × 19% = EUR 3.04m (compared to no relief). Timing benefit: saving arises in investment year vs. accumulated depreciation over project life. NPV of EUR 3.04m CIT saving in year 1 vs. distributed over 15 years at 7% WACC: acceleration benefit ≈ EUR 1.2m. Moderate but material benefit.",
+        "note": "Investment relief base deduction (40% of CapEx off taxable base) reduces taxable income — not a direct CIT credit. For a profitable company, effective benefit = 40% × qualifying investment × 19% CIT rate."
+      },
+      "accelerated_depreciation_note": "No special RES accelerated depreciation beyond standard rules. Solar PV assets: typically 12.5% declining balance (8-year effective life). ZDDPO-2 Annex sets depreciation rates.",
+      "dividend_withholding_tax_pct": 0,
+      "dividend_wht_note": "0% dividend WHT for qualifying EU parent companies under EU Parent-Subsidiary Directive (ZDDPO-2 §71, implementing EU Directive 2011/96/EU)"
+    },
+    "vat": {
+      "standard_rate_pct": 22,
+      "legal_basis": "ZDDV-1",
+      "input_vat_recovery": "Available for VAT-registered businesses; solar installations may have specific rules — verify with Slovenian tax adviser"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "Medium-High",
+    "legal_basis": "Code of Obligations (Obligacijski zakonik — OZ) 2001; contractual freedom; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Slovenian courts (Vrhovno sodišče — Supreme Court; Višje sodišče za Slovenijo — High Court; Commercial Court Koper and Ljubljana). Proceedings typically 1–3 years for commercial disputes. Slovenian Chamber of Commerce and Industry Arbitration Court (ICC Ljubljana) available; ICC international arbitration.",
+    "market_liquidity": "Developing — Slovenian manufacturing sector (automotive, pharmaceuticals, electronics) plus cross-border buyers from Italy and Austria",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Revoz d.d. (Renault subsidiary, Novo Mesto — automotive); KRKA d.d. (pharmaceuticals, Novo Mesto); Gorenje (Hisense subsidiary, appliances, Velenje); Petrol d.d. (energy company, Borzen market participant); Italian corporates via interconnection (Italy market integration)",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET framework (growing)", "Bespoke bilateral under OZ", "Virtual PPA referencing HUPX-SI"],
+    "italian_market_integration_note": "Slovenia's interconnection with Italy (400kV lines) and its position in the Italian/Central European price zone creates access to Italian corporate PPA buyers (a much larger market). This cross-border PPA opportunity is a genuine differentiator for Slovenian projects.",
+    "guarantees_of_origin": {
+      "regulator": "Borzen d.o.o. — issues GoOs (garancije o izvoru) for Slovenian RES generators",
+      "note": "Slovenian GoOs in EU AIB framework. Standard additional revenue stream."
+    }
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 80,
+    "credit_ratings": {
+      "moodys": "A2",
+      "sp": "AA-",
+      "fitch": "A",
+      "source_note": "Slovenia maintains solid investment-grade ratings; sovereign performance has improved following 2012–2013 banking crisis resolution. Verify at agency websites.",
+      "_staleness_warning": "Verify before use."
+    },
+    "political_stability": "Centre-left government (Gibanje Svoboda, PM Golob since June 2022); stable coalition; strong pro-EU, pro-NATO orientation. Coalition politics typical of Slovenian parliamentary democracy (DZ).",
+    "energy_policy_direction": "Current Golob government is significantly more RES-positive than predecessor (Janša government had slowed RES development). Strong push for solar deployment, wind zone designation, and green hydrogen. This is a material positive change in political environment for RES investors.",
+    "retroactive_policy_incidents": [
+      { "year": "None material", "description": "Slovenia has not retroactively modified contracted RES revenues. The regulatory framework has been generally stable for contracted projects.", "severity": "N/A" }
+    ],
+    "banking_crisis_2012_2013": {
+      "description": "Slovenia experienced a banking sector crisis in 2012–2013 requiring state recapitalisation of major banks (Nova Ljubljanska banka — NLB, etc.). Avoided EU bailout but required significant state intervention. Banking sector has since stabilised; NLB successfully IPO'd (2018) and is a functioning commercial bank.",
+      "investor_relevance": "Banking crisis resolved — not a current risk. NLB privatisation was completed; banking sector now well-capitalised. Historical context only."
+    },
+    "expropriation_risk": "Very Low — EU/NATO member; constitutional property protections; ECHR",
+    "currency_risk": "None — EUR domestic since 2007",
+    "score_rationale": "Deductions from 100: Banking crisis historical (-8), smaller economy (-5), limited natural RES resources (mountainous Alpine territory limits best-case wind/solar) (-5), coalition government transition risk (-2). Score 80 reflects solid governance with positive current policy trajectory."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 56,
+    "component_scores": {
+      "grid_connection_drag": { "score": 52, "assessment": "MEDIUM — ELES competent and professional; growing solar queue in Prekmurje; good interconnection with Italy/Austria for export routing; reinforcement investment underway" },
+      "permitting_drag_solar_res_zone": { "score": 35, "assessment": "LOW — within designated RES zones, streamlined process significantly reduces EIA burden; 18 months P50 is competitive" },
+      "permitting_drag_solar_standard": { "score": 58, "assessment": "MEDIUM — outside RES zones: full ZVO-2 EIA; spatial plan amendment; multiple authority involvement; Natura 2000 checks required" },
+      "permitting_drag_onshore_wind": { "score": 72, "assessment": "MEDIUM-HIGH — complex terrain; Natura 2000 in Alpine/Dinaric zones; long P50 (60 months); improving with RES zone designations but still challenging" },
+      "bureaucratic_friction": { "score": 50, "assessment": "MEDIUM — functional public administration; Slovenian language; ARSO (Environmental Agency) and Borzen are professional; some multi-authority coordination complexity; digital services growing" },
+      "judicial_appeal_risk": { "score": 55, "assessment": "MEDIUM — courts independent and functioning; proceedings 1–3 years; environmental challenge risk for wind projects in sensitive areas; ICC arbitration efficient alternative" }
+    },
+    "primary_bottleneck": "For solar: grid queue in Prekmurje; outside-RES-zone spatial plan process. For wind: Natura 2000 constraints and terrain; improving with RES zone designation.",
+    "res_zone_positive": "The designation of pre-cleared RES development zones is a genuine and significant improvement in Slovenia's permitting environment. Projects within zones benefit from reduced EIA requirements and pre-cleared spatial planning. Verify current zone boundaries at AGEN-RS.",
+    "score_rationale": "Score 56 reflects a mid-tier drag environment — improving due to RES zone policy, competent TSO, and positive political environment, offset by Natura 2000 constraints, growing solar grid queue, and some bureaucratic complexity."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "No comprehensive FDI screening law equivalent to Slovakia 2022 or Germany AWG; EU Regulation 2019/452 basic implementation; some sector-specific critical infrastructure protections",
+    "energy_sector_mandatory_notification": false,
+    "practical_risk": "Low — Slovenia is generally welcoming to EU/EEA investment; no material energy sector FDI restriction; participation in EU screening coordination mechanisms",
+    "legal_basis": "Sector-specific acts; EU Regulation 2019/452"
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "tender_state_aid_status": {
+      "instrument": "Borzen competitive tender (dražba) under ZSROVE",
+      "status": "Competitive tender mechanism designed for CEEAG compliance. Verify EC clearance at competition.ec.europa.eu.",
+      "retrospective_clawback_risk": { "assessment": "Very Low — no retroactive modification history; ZSROVE 2021 designed under modern CEEAG standards; Golob government strongly pro-RES" }
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Slovenia is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY premium — uncapped merchant upside.",
+    "_rule_3b_note": "19% CIT. Investment relief: 40% of qualifying CapEx deducted from taxable base in investment year. NPV benefit: EUR 1.2m approx on EUR 50m project at 7% WACC (acceleration vs. distributed depreciation).",
+    "illustrative_solar_utility_prekmurje": {
+      "reference_price_eur_mwh_approx": 65,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 13.5,
+      "typical_capex_eur_per_mw": 1450000,
+      "opex_eur_per_mw_per_year": 45000,
+      "cit_pct": 19.0,
+      "investment_relief_note": "40% of qualifying CapEx deducted from taxable base in investment year. EUR 50m project: EUR 20m qualifying × 40% = EUR 8m base reduction → EUR 1.52m CIT saving in investment year vs. being distributed over depreciation life. NPV benefit: approx EUR 0.8–1.2m."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
+    "permitting_window_solar_res_zone": { "rag": "GREEN", "rationale": "Within designated RES zones: 18 months P50; streamlined EIA; pre-cleared spatial planning; excellent policy momentum under Golob government; Pannonian plain (Prekmurje) has best irradiation" },
+    "permitting_window_solar_standard": { "rag": "AMBER", "rationale": "Outside RES zones: full ZVO-2 EIA + spatial plan process adds 30 months P50; multiple authorities; Natura 2000 checks required in some areas" },
+    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "~6 MW installed nationally but improving — RES zone designation for wind creating new opportunities; 60 months P50 is long but not a moratorium; Natura 2000 is primary constraint; Karst and Pannonian hills are viable" },
+    "grid_connection": { "rag": "AMBER", "rationale": "ELES competent; growing Prekmurje solar queue creates pressure; Italian interconnection is a strategic advantage for export; reinforcement investment underway" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "Borzen competitive tender operational and well-structured; one-way; Golob government strongly pro-RES; ZSROVE 2021 is a modern CEEAG-compliant framework" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way; no clawback; no retroactive RES modification history; Golob government is the most RES-supportive Slovenian government in history" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "19% CIT + 40% investment relief base deduction = effective reduction in early year tax base. 0% dividend WHT for EU parent companies. Competitive for mid-tier EU jurisdiction." },
+    "ppa_enforceability": { "rag": "HIGH", "rationale": "Code of Obligations provides reliable enforcement; ICC/SCC arbitration available; Italian market integration creates access to larger PPA buyer universe; KRKA/Revoz as domestic counterparties" },
+    "political_risk": { "rag": "GREEN", "rationale": "A2/AA- sovereign; EU/NATO member; no retroactive RES incidents; current Golob government is strongly pro-RES — best political environment for RES investment in Slovenia's post-independence history" },
+    "operational_drag": { "rag": "GREEN", "rationale": "Score 56 — mid-tier but improving; RES zone designation is a genuine positive; ELES professional; Italian interconnection strategic advantage; trajectory is positive" },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "No comprehensive FDI screening law; welcoming environment for EU investment; no material energy sector restriction" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "ZSROVE 2021 competitive tender CEEAG-compliant; no retroactive history; EC clearance process standard" },
+    "overall_stop_go": "GREEN",
+    "overall_rationale": "Slovenia presents a genuinely attractive mid-tier RES investment opportunity with GREEN overall status. The combination of a strongly pro-RES Golob government, the ZSROVE 2021 competitive tender (one-way, no clawback), designated RES development zones with streamlined permitting, 19% CIT with 40% investment relief, 0% dividend WHT for EU parents, and access to Italian electricity markets via interconnection creates a balanced and improving investment environment. Primary constraints are: Prekmurje grid queue (growing solar pipeline), Natura 2000 constraints for wind (36% of territory), and a smaller total RES project market than Germany, Poland, or Spain. Suitable for Low Risk Core Infrastructure and Value-Add profiles; particularly attractive for investors with Italian market presence who can leverage the interconnection for PPA structuring."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 18,
+    "1_permitting_window_scope": "Solar within designated RES development zones (Pannonian plain — Prekmurje/Pomurje). Outside RES zones: 30 months P50. Onshore wind: 60 months P50.",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 18,000–120,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 18,000–120,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "20–48",
+    "3_primary_support_mechanism": "Borzen competitive tender (dražba) under ZSROVE 2021; one-way premium; HUPX-SI market reference",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": "19% CIT; 0% dividend WHT for EU parent (Parent-Subsidiary Directive)",
+    "4_effective_tax_rate_note": "19% CIT. Investment relief: 40% of qualifying CapEx deducted from taxable BASE in investment year → timing benefit vs. standard depreciation. Effective combined benefit: EUR 1–1.5m NPV on EUR 50m project at 7% WACC.",
+    "4_key_incentive": "Investment Relief (investicijska olajšava — ZDDPO-2 §55): 40% of qualifying CapEx deducted from taxable base in investment year (with 5-year carry-forward for excess); 0% dividend WHT for EU parent under Parent-Subsidiary Directive",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Code of Obligations (OZ); ICC/SCC arbitration; Italian market integration via 400kV interconnection creates access to larger PPA buyer universe",
+    "6_political_risk_score": 80,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 56,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 45–85/MWh approx. (Borzen auction reference — indicative; verify at Borzen and AGEN-RS)",
+    "8_revenue_floor_eur": "EUR 45–85/MWh (EUR domestic)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Verify at Borzen (borzen.si) and AGEN-RS (agencija-energija.si). Reference prices change with each tender round. Staleness risk: HIGH."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Slovenia is not an IPCEI participant. National hydrogen strategy and action plan in development. EU cohesion and recovery funds available. Small market — hydrogen investment likely to be niche/industrial."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Tržna premija (market premium) under Zakon o spodbujanju rabe obnovljivih virov energije (ZSROVE), administered by Borzen.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Slovenia operates Krško NPP (50/50 with Croatia) which provides ~30% of Slovenian electricity. NEK 2 — a second large reactor at Krško — is under consideration as a Slovenia-led project. This is a large unit, not an SMR. No specific SMR programme. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "No LNG terminal. Small Adriatic coastline. Receives gas via pipeline."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Slovenia has gas-fired generation. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Slovenian bioenergy support under ZSROVE framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

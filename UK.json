@@ -1,0 +1,546 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "United Kingdom",
+    "iso_code": "GB",
+    "currency_native": "GBP",
+    "currency_eur_rate": 1.175,
+    "currency_eur_rate_date": "2026-06-15",
+    "currency_eur_rate_source": "NOTE: Verify against live FX before use. Reference rate only.",
+    "region": "Europe",
+    "eu_member": false,
+    "eu_state_aid_applicable": false,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "Strike prices and auction results are time-sensitive. Verify AR6/AR7 results via DESNZ before relying on figures below."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Energy Act 2013", "relevance": "CfD primary legislative basis; established LCCC" },
+      { "instrument": "Energy Act 2023", "relevance": "NESO establishment; REMA review; offshore wind acceleration" },
+      { "instrument": "Electricity Act 1989", "relevance": "Licensing; grid connection rights; distribution duties" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Planning Act 2008", "relevance": "Nationally Significant Infrastructure Projects (NSIPs); DCO process" },
+      { "instrument": "Town and Country Planning Act 1990", "relevance": "Sub-threshold projects via Local Planning Authorities" },
+      { "instrument": "Infrastructure Planning (Environmental Impact Assessment) Regulations 2017 (SI 2017/572)", "relevance": "EIA requirements for NSIPs" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Finance Act 2023", "relevance": "Full Expensing made permanent from 1 April 2023" },
+      { "instrument": "Capital Allowances Act 2001 (as amended)", "relevance": "Annual Investment Allowance; writing-down allowances" },
+      { "instrument": "Corporation Tax Act 2010", "relevance": "25% main rate from 1 April 2023" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "Subsidy Control Act 2022", "relevance": "UK domestic subsidy regime post-Brexit, replacing EU State Aid rules" },
+      { "instrument": "Contracts for Difference (Allocation) Regulations 2014 (SI 2014/2011)", "relevance": "CfD allocation process; legal basis for strike price contracts" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "National Security and Investment Act 2021", "relevance": "Mandatory FDI notification for acquisitions in energy sector" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "P50 timelines run from application submission to consent grant, excluding pre-application and construction phases.",
+    "solar_utility": {
+      "threshold_mw_national_process": 50,
+      "sub_threshold_authority": "Local Planning Authority (LPA)",
+      "above_threshold_authority": "Planning Inspectorate (PINS)",
+      "above_threshold_process": "Development Consent Order (DCO)",
+      "legal_basis": "Planning Act 2008 (s.14 — NSIP definition); SI 2017/572",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 18,
+      "timeline_max_months": 48,
+      "pre_application_months_typical": 12,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "High Court (judicial review of DCO decision); Inspector-level objections via examination",
+      "notes": "Solar farms above 50MW are NSIPs requiring DCO. Sub-50MW projects go to LPA — variable timelines. England farmland rules relaxed in 2023 NPPF update (para. 158)."
+    },
+    "onshore_wind": {
+      "threshold_mw_national_process": 50,
+      "sub_threshold_authority": "Local Planning Authority (LPA) in England; Electricity Works Consents Unit (EWCU) in Scotland",
+      "above_threshold_authority": "Planning Inspectorate (England); EWCU (Scotland); PEDW (Wales)",
+      "above_threshold_process": "DCO (England); Section 36 consent (Scotland/Wales)",
+      "legal_basis": "Planning Act 2008 (England); Electricity Act 1989 s.36 (Scotland/Wales); NPPF 2023 para. 160 (England policy)",
+      "timeline_p50_months": 30,
+      "timeline_min_months": 18,
+      "timeline_max_months": 60,
+      "england_restriction_status": "Restrictions on onshore wind in England eased December 2023 via NPPF update. Community benefit requirement retained.",
+      "scotland_status": "Supportive planning framework; faster consent timelines typical",
+      "wales_status": "TAN 8 spatial zones; supportive framework",
+      "appeal_risk": "high",
+      "notes": "England's effective moratorium on onshore wind via s.35 TCPA rules was lifted in December 2023 NPPF revision. Material uncertainty remains around community objection and LPA interpretation. Scotland significantly more permissive."
+    },
+    "offshore_wind": {
+      "threshold_mw_national_process": 100,
+      "sub_threshold_authority": "Marine Management Organisation (MMO)",
+      "above_threshold_authority": "Planning Inspectorate (PINS) + Marine Management Organisation (MMO)",
+      "above_threshold_process": "DCO + Marine Licence",
+      "legal_basis": "Planning Act 2008; Marine and Coastal Access Act 2009; Electricity Act 1989",
+      "timeline_p50_months": 48,
+      "timeline_min_months": 36,
+      "timeline_max_months": 84,
+      "pre_application_months_typical": 24,
+      "appeal_risk": "medium",
+      "notes": "End-to-end timeline including pre-application and construction consent can exceed 10 years for major projects. Offshore Delivery Group (ODG) reforms target acceleration. Habitats Regulations assessment (HRA) frequently a bottleneck."
+    },
+    "battery_storage_utility": {
+      "threshold_mw_national_process": 350,
+      "above_threshold_process": "DCO",
+      "legal_basis": "Energy Act 2023 increased BESS NSIP threshold from 50MW to 350MW (effective 2023)",
+      "timeline_p50_months": 12,
+      "timeline_min_months": 6,
+      "timeline_max_months": 24,
+      "notes": "Threshold increase to 350MW in 2023 significantly streamlined standalone BESS consenting in England. Most projects now via LPA."
+    }
+  },
+
+  "grid_connection": {
+    "operator": "National Energy System Operator (NESO)",
+    "operator_established": "2024-04-01",
+    "legal_basis": "Energy Act 2023 (NESO); Electricity Act 1989 (connection duties)",
+    "transmission_operator": "National Grid Electricity Transmission (NGET) — separate from NESO",
+    "distribution_operators": "UK Power Networks, Western Power Distribution (now National Grid ESP), Electricity North West, others",
+    "reform": {
+      "name": "Connections Action Plan",
+      "published": "2023-12",
+      "model": "First Ready, First Connected (replaces queue-based model)",
+      "status": "Implementation ongoing as of 2026",
+      "source": "Ofgem / National Grid ESO, Connections Action Plan, December 2023"
+    },
+    "connection_wait_years_pre_reform_estimate": 10,
+    "connection_wait_years_post_reform_estimate": 5,
+    "wait_time_staleness_warning": true,
+    "wait_time_source": "NESO Connection queue data — verify current position at neso.energy",
+    "curtailment_risk": "medium-high",
+    "curtailment_notes": "Scotland-to-England constraint is significant. Constraint payments paid by consumers via TNUoS/BSUoS.",
+    "connection_cost_gbp_per_mw": {
+      "range_low": 50000,
+      "range_high": 300000,
+      "notes": "Highly location-dependent. Offshore projects require offshore cable and potentially onshore reinforcement."
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 58750,
+      "range_high": 352500,
+      "fx_rate_used": 1.175,
+      "fx_rate_date": "2026-06-15"
+    },
+    "operational_drag_assessment": "HIGH — grid connection queue remains primary CapEx bottleneck in the UK market"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The CfD is a TWO-WAY instrument. Strike price excess is clawed back. This is NOT a one-way FiT. Return assumptions must not treat it as a merchant floor.",
+    "primary_mechanism": "Two-Way Contract for Difference (CfD)",
+    "mechanism_type": "two_way_cfd",
+    "administrator": "Low Carbon Contracts Company (LCCC)",
+    "counterparty_risk": "LCCC is UK government-backed; counterparty risk treated as sovereign",
+    "legal_basis": "Energy Act 2013 (primary); Contracts for Difference (Allocation) Regulations 2014 (SI 2014/2011)",
+    "mechanism_description": {
+      "summary": "Generator receives CfD strike price. When market reference price exceeds strike price, generator pays difference back to LCCC. When market price is below strike price, LCCC pays difference to generator. Strike price is fixed in 2012 real terms and indexed to CPI.",
+      "upside_treatment": "CAPPED — excess merchant revenue above strike price is clawed back",
+      "downside_treatment": "PROTECTED — floor at strike price via top-up payment",
+      "merchant_exposure": "None during CfD term. Full merchant exposure post-contract term (typically 15 years).",
+      "contract_term_years": 15
+    },
+    "auction": {
+      "current_round": "AR6",
+      "round_date": "2024-09",
+      "next_round_expected": "AR7 — expected 2025 (verify with DESNZ)",
+      "frequency": "annual",
+      "budget_source": "Levy Control Framework — consumer-funded via supplier obligations",
+      "strike_prices_2012_real_gbp_mwh": {
+        "_staleness_warning": "These are AR6 results (September 2024). Verify against DESNZ official results publication before use.",
+        "_source": "Department for Energy Security and Net Zero (DESNZ), AR6 Results, September 2024",
+        "offshore_wind_fixed_bottom": {
+          "gbp_mwh_2012_real": 82.50,
+          "eur_mwh_approx": 96.94,
+          "fx_rate_used": 1.175,
+          "fx_rate_date": "2026-06-15",
+          "note": "2012 real prices indexed annually by CPI. Nominal value will be higher."
+        },
+        "offshore_wind_floating": {
+          "gbp_mwh_2012_real": 176.00,
+          "eur_mwh_approx": 206.80,
+          "fx_rate_used": 1.175,
+          "fx_rate_date": "2026-06-15",
+          "note": "Early-stage technology; strike price reflects higher cost base."
+        },
+        "onshore_wind": {
+          "gbp_mwh_2012_real": 52.29,
+          "eur_mwh_approx": 61.44,
+          "fx_rate_used": 1.175,
+          "fx_rate_date": "2026-06-15"
+        },
+        "solar_pv_utility": {
+          "gbp_mwh_2012_real": 47.29,
+          "eur_mwh_approx": 55.57,
+          "fx_rate_used": 1.175,
+          "fx_rate_date": "2026-06-15"
+        }
+      }
+    },
+    "legacy_mechanisms": {
+      "feed_in_tariff": {
+        "available_for_new_projects": false,
+        "scheme_closed": "2019-03-31",
+        "legacy_contracts_only": true,
+        "type": "one_way_fit",
+        "note": "Legacy FiT contracts are one-way (no clawback). Do not conflate with current CfD mechanism."
+      },
+      "renewables_obligation_certificate": {
+        "available_for_new_projects": false,
+        "scheme_closed_to_new_entrants": "2017-04-01",
+        "legacy_contracts_only": true
+      }
+    },
+    "merchant_route": {
+      "available": true,
+      "ppa_market_liquidity": "deep",
+      "note": "Merchant/PPA route available as alternative to CfD. See ppa_market section."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Full Expensing is a CapEx TIMING benefit affecting NPV of the tax shield — not a permanent reduction to effective tax rate. Treat accordingly in all financial modelling.",
+    "corporation_tax_rate_pct": 25,
+    "corporation_tax_effective_date": "2023-04-01",
+    "legal_basis": "Corporation Tax Act 2010; Finance Act 2023",
+    "capex_incentives": {
+      "full_expensing": {
+        "type": "first_year_allowance",
+        "rate_pct": 100,
+        "qualifying_assets": "New and unused qualifying plant and machinery (main pool)",
+        "effective_date": "2023-04-01",
+        "permanent": true,
+        "legal_basis": "Finance Act 2023, Chapter 3 (inserted as s.45F CAA 2001); made permanent in Autumn Statement 2023",
+        "special_rate_pool": {
+          "rate_pct": 50,
+          "applies_to": "Special rate assets (long-life assets, integral features)"
+        },
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 25% CIT and 10% WACC discount rate: NPV of tax shield under Full Expensing ≈ 23.8% of qualifying CapEx (year-1 deduction). Under 25% WDA declining balance: NPV of tax shield ≈ 17.5% of qualifying CapEx. Timing benefit (NPV delta) ≈ 6.3ppts per £1 of qualifying CapEx.",
+          "note": "This is a timing benefit only. The gross tax deduction over the asset's life is identical under both methods. Full Expensing accelerates the cash flow."
+        }
+      },
+      "annual_investment_allowance": {
+        "limit_gbp": 1000000,
+        "permanent": true,
+        "legal_basis": "Capital Allowances Act 2001 (as amended by Finance Act 2023)",
+        "note": "AIA provides 100% deduction up to £1m per annum. Useful for sub-threshold projects."
+      }
+    },
+    "writing_down_allowance_fallback": {
+      "main_pool_rate_pct": 25,
+      "special_rate_pool_pct": 6,
+      "method": "declining_balance"
+    },
+    "vat": {
+      "standard_rate_pct": 20,
+      "applies_to_commercial_renewable_generation": true,
+      "residential_installation_rate_pct": 0,
+      "note": "Commercial energy generation assets subject to 20% VAT. VAT recoverable by VAT-registered entities."
+    },
+    "business_rates": {
+      "applies_to_renewable_energy_installations": true,
+      "assessment_basis": "Rateable value set by Valuation Office Agency (VOA)",
+      "note": "Renewable energy installations are subject to non-domestic rates. Scotland has separate Rating (Empty Properties) regime. Material cost for operational phase modelling.",
+      "current_multiplier_approx": 0.499
+    },
+    "energy_profits_levy": {
+      "rate_pct": 38,
+      "applies_to_renewables": false,
+      "scope": "Upstream oil and gas ring-fence profits only",
+      "legal_basis": "Energy (Oil and Gas) Profits Levy Act 2022",
+      "investment_allowance_note": "29% investment allowance available within EPL ring-fence — irrelevant to renewable generation assets"
+    },
+    "stamp_duty_land_tax": {
+      "applies_to_asset_acquisitions": "Yes if land element exceeds £150,000",
+      "rate_commercial_pct": "2% on £150k–£250k; 5% above £250k",
+      "note": "Relevant to site acquisition cost modelling."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "English contract law — no dedicated PPA statute required. Contracts governed by common law of contract, Sale of Goods Act 1979, Contracts (Rights of Third Parties) Act 1999.",
+    "jurisdiction_enforcement": "English courts widely recognised globally; NY Convention signatory; commercial arbitration well-developed (LCIA, ICC-UK).",
+    "market_liquidity": "Deep",
+    "active_corporate_buyers": true,
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement", "Bespoke bilateral under ISDA schedule", "Sleeved PPA via licensed supplier"],
+    "sleeving_note": "Sleeved PPAs route power via a licensed supplier — commonly used for corporate buyers without supply licences.",
+    "credit_risk_note": "Counterparty credit risk is not state-backstopped. Minimum investment-grade offtaker (BBB-/Baa3) recommended. Letter of credit or parent guarantee structures standard for sub-investment-grade offtakers.",
+    "cross_border_enforceability": "High",
+    "additionality_note": "UK additionality claims typically supported by REGOs (Renewable Energy Guarantees of Origin). REGO reform ongoing."
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 87,
+    "credit_ratings": {
+      "moodys": "Aa3",
+      "sp": "AA-",
+      "fitch": "AA-",
+      "source_note": "Verify current ratings — agency outlooks change. Moodys downgraded from Aa2 in 2020."
+    },
+    "political_stability": "High",
+    "regulatory_track_record": "Strong — no retroactive clawback of renewable energy contracts to date",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2015–2016",
+        "description": "Early closure of RO/FiT banding and ROC grace period restrictions",
+        "impact": "Prospective only — no clawback of existing contracts",
+        "severity": "Low"
+      }
+    ],
+    "expropriation_risk": "Very Low",
+    "currency_risk": "Low-Medium",
+    "currency_risk_note": "GBP is a free-floating major currency. Brexit introduced structural FX volatility vs EUR. Revenue from CfD is in GBP; EUR-denominated debt exposes to FX mismatch risk.",
+    "political_notes": "Post-Brexit policy divergence from EU creates some regulatory uncertainty. Labour government (from July 2024) has set ambitious clean energy targets (100% clean power by 2030) — supportive policy environment but execution risk on grid infrastructure.",
+    "score_rationale": "Deductions from 100: sovereign credit below AAA (-4), GBP FX volatility (-3), Brexit residual policy uncertainty (-3), 2015 RO restriction precedent (-3)."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
+    "operational_drag_score_out_of_100": 68,
+    "component_scores": {
+      "grid_connection_drag": { "score": 80, "assessment": "HIGH — queue backlog is a primary CapEx risk; reform ongoing but not yet resolved" },
+      "permitting_drag_onshore": { "score": 60, "assessment": "MEDIUM-HIGH — DCO process is lengthy; England onshore wind still uncertain" },
+      "permitting_drag_offshore": { "score": 70, "assessment": "HIGH — HRA and EIA complexity; 7–10 year end-to-end typical" },
+      "permitting_drag_solar": { "score": 50, "assessment": "MEDIUM — sub-50MW via LPA is faster; above 50MW DCO adds 2+ years" },
+      "bureaucratic_friction": { "score": 55, "assessment": "MEDIUM — well-organised regulatory regime but multiple consenting bodies" },
+      "judicial_appeal_risk": { "score": 65, "assessment": "MEDIUM-HIGH — judicial review available; active NGO/community challenge culture" }
+    },
+    "primary_bottleneck": "Grid connection queue — connections can be 5–10 years from application to energisation",
+    "secondary_bottleneck": "Habitats Regulations Assessment (HRA) delays in offshore and onshore DCO process",
+    "score_rationale": "Grid drag is dominant factor. Permitting is structured but slow. Judicial review exposure is real for large projects."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "National Security and Investment Act 2021 (NSI Act)",
+    "energy_sector_mandatory_notification": true,
+    "mandatory_notification_trigger": "Acquisition of material influence (15%+ shareholding) or control over qualifying energy assets",
+    "qualifying_assets_include": "Electricity generation >1MW; electricity transmission or distribution; upstream oil and gas",
+    "legal_basis": "National Security and Investment Act 2021",
+    "clearance_timeline_working_days": {
+      "initial_review": 30,
+      "detailed_assessment_if_called_in": 45,
+      "additional_extension_possible": true
+    },
+    "practical_risk": "Low-Medium",
+    "notes": "Mandatory notification is a pre-completion obligation. Failure to notify renders acquisition void. Low risk of prohibition for mainstream OECD-domiciled investors in renewable energy."
+  },
+
+  "eu_state_aid": {
+    "applicable": false,
+    "reason": "UK is not an EU member state post-Brexit. EU State Aid rules (Articles 107–109 TFEU) do not apply.",
+    "uk_domestic_regime": {
+      "applicable": true,
+      "instrument": "Subsidy Control Act 2022",
+      "legal_basis": "Subsidy Control Act 2022 (in force 4 January 2023)",
+      "principles": "Seven subsidy control principles broadly mirror EU proportionality test. Subsidies must not exceed what is necessary; must not distort competition in ways contrary to public interest.",
+      "cfd_compliance": "CfD scheme reviewed and operated under Subsidy Control Act 2022 principles. No formal EC notification required.",
+      "retrospective_clawback_risk": "Low — UK scheme has operated without challenge since 2022 Act commencement"
+    },
+    "trade_and_cooperation_agreement_note": "UK-EU TCA (in force 30 April 2021) contains non-regression provisions on subsidy control. CfD structure has not attracted TCA challenge to date."
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: These inputs are for use in IRR, NPV, CapEx payback, DSCR, and LCOE modelling. Do not rely solely on qualitative descriptors.",
+    "_rule_3c_note": "All figures shown first in native currency (GBP), EUR equivalent shown with FX rate and date.",
+    "illustrative_offshore_wind_cfd": {
+      "strike_price_gbp_mwh_2012_real": 82.50,
+      "strike_price_eur_mwh_approx": 96.94,
+      "fx_rate": 1.175,
+      "fx_rate_date": "2026-06-15",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 42,
+      "typical_capex_gbp_per_mw": 2500000,
+      "typical_capex_eur_per_mw": 2937500,
+      "opex_gbp_per_mw_per_year": 75000,
+      "corporation_tax_rate_pct": 25,
+      "full_expensing_available": true,
+      "note": "Illustrative inputs only. Actual project figures will vary materially by site, technology vintage, and supply chain."
+    },
+    "illustrative_solar_pv_cfd": {
+      "strike_price_gbp_mwh_2012_real": 47.29,
+      "strike_price_eur_mwh_approx": 55.57,
+      "fx_rate": 1.175,
+      "fx_rate_date": "2026-06-15",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 12,
+      "typical_capex_gbp_per_mw": 700000,
+      "typical_capex_eur_per_mw": 822500,
+      "note": "UK solar capacity factors are lower than southern Europe. Site-specific irradiation data required."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix is mandatory and must appear before narrative. Stop/Go signal for jurisdiction screening.",
+    "permitting_window": { "rag": "AMBER", "rationale": "DCO process for >50MW is 18–48 months; England onshore wind policy uncertainty persists" },
+    "grid_connection": { "rag": "RED", "rationale": "5–10 year connection queues are a primary investment risk; reform ongoing but unresolved" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "Annual CfD rounds active; AR6 cleared; government committed to auction programme" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "Full Expensing provides strong first-year tax shield; 25% CIT is competitive in European context" },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "English law contracts highly bankable; deep corporate PPA market" },
+    "political_risk": { "rag": "GREEN", "rationale": "Stable sovereign (Aa3/AA-); no retroactive renewables clawback history" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Grid queue is RED-level concern captured above; permitting complexity adds AMBER drag" },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "NSI Act mandatory notification adds process overhead; low prohibition risk for OECD investors" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Not applicable — UK operates under Subsidy Control Act 2022; no EC clearance required" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Strong policy support and legal framework offset by a severe grid connection bottleneck. UK is viable for long-dated capital with patience on connection timeline; not suited to short-cycle development mandates."
+  },
+
+  "comparison_table": {
+    "_rule_5b_note": "Rule 5B: Standardised comparison categories. These must be reproduced identically across all jurisdiction JSONs to enable side-by-side output.",
+    "1_permitting_window_months_p50": 24,
+    "1_permitting_window_scope": "Solar >50MW via DCO",
+    "2_grid_connection_cost_native": "GBP 50,000–300,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 58,750–352,500 per MW",
+    "2_grid_connection_cost_fx_date": "2026-06-15",
+    "2_grid_connection_timeline_months": "60–120",
+    "3_primary_support_mechanism": "Two-Way CfD",
+    "3_mechanism_type_code": "two_way_cfd",
+    "4_effective_corporation_tax_rate_pct": 25,
+    "4_key_incentive": "Full Expensing (100% first-year allowance, Finance Act 2023)",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "English common law of contract; no bespoke statute required",
+    "6_political_risk_score": 87,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 68,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "GBP 82.50/MWh (offshore wind fixed, 2012 real, AR6)",
+    "8_revenue_floor_eur": "EUR 96.94/MWh",
+    "8_revenue_floor_fx_date": "2026-06-15",
+    "8_revenue_floor_mechanism": "two_way_cfd"
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "UK Capacity Market (T-4/T-1 auctions); Balancing Mechanism; Dynamic Containment. Source: National Grid ESO.",
+      "revenue_floor_description": null,
+      "source": "national_tso",
+      "notes": "UK BESS regime is among Europe's most developed. Capacity Market T-1 auctions (1-year ahead) have cleared BESS at significant volumes. Dynamic Containment (DC), Dynamic Moderation (DM), and Dynamic Regulation (DR) ancillary services provide additional revenue. BESS NSIP threshold raised to 350MW by Energy Act 2023. Verify current CM auction derated capacity factors at NESO."
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "hydrogen_contract",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Net Zero Hydrogen Fund (NZHF); Hydrogen Allocation Rounds (HAR1 concluded 2023 — 11 projects awarded). Source: DESNZ/iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "UK is not an EU member and not an IPCEI participant. HAR1 awarded hydrogen production contracts (UK equivalent of H2 CfD) in 2023. HAR2 in progress. Low Carbon Hydrogen Standard defines carbon intensity threshold. IETF (Industrial Energy Transformation Fund) supports industrial hydrogen uptake. Verify current HAR round parameters via DESNZ before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "two_way_cfd",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Two-Way Contract for Difference (CfD) under Energy Act 2013 — same mechanism as ground-mounted solar. Eligible in CfD allocation rounds (AR).",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "active",
+      "permitting_p50_months": 144,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "two_way_cfd",
+      "primary_support_mechanism": "Regulated Asset Base (RAB) model under Nuclear Energy (Financing) Act 2022; CfD available for operational phase.",
+      "revenue_floor_description": null,
+      "active_smr_programmes": ["Rolls-Royce SMR (GDA Stage 2 in progress)"],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_nuclear",
+      "notes": "UK has the most advanced SMR programme in Europe. Rolls-Royce SMR (470 MWe) in Generic Design Assessment (GDA) Stage 2 with ONR/Environment Agency. Nuclear Energy (Financing) Act 2022 provides RAB funding model for new nuclear. Great British Nuclear (GBN) established 2023 to coordinate programme. Source: IEA nuclear."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 52,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "UK has three major LNG import terminals. South Hook (Milford Haven) and Grain (Isle of Grain) are Europe's largest by capacity. Third Party Access under Gas Act 1986/2000."
+    },
+    "data_centre": {
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "medium",
+      "renewable_ppa_market_depth": "high",
+      "source": "national_tso",
+      "notes": "Planning permission via local authority (<=500MW) or NSIP (>500MW EIA threshold). High corporate PPA liquidity (Amazon, Microsoft, Google active). Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "UK Capacity Market (Electricity Market Reform) — T-4 and T-1 auctions. CCGT and peakers eligible. Source: NESO/DESNZ.",
+      "eu_taxonomy_transition_eligible": null,
+      "capacity_market_available": true,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "UK operates a formal Capacity Market under Electricity Market Reform. CCGT plants are eligible capacity market participants. EU Taxonomy Delegated Act does not apply to the UK (non-EU member). GBP-denominated capacity agreements; verify current clearing prices at NESO. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "biowaste_auction_cfd",
+      "primary_support_mechanism": "Contracts for Difference (CfD) available for energy-from-waste with CHP (combined heat and power) under AR5/AR6. Source: DESNZ.",
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "UK biowaste-to-energy plants with CHP can compete in CfD allocation rounds. EU RED III does not formally apply post-Brexit, but UK Renewable Transport Fuel Obligation and Biomass Sustainability Criteria apply analogously. Feedstock sustainability criteria under UK Biomass Strategy 2023."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Last coal power station (Ratcliffe-on-Soar) closed September 2024. New coal build is effectively prohibited.",
+      "source": null,
+      "notes": "UK coal power sector ended in 2024. No support mechanism available. New coal build would face insuperable planning and policy barriers. EU Taxonomy does not apply (non-EU) but UK Green Taxonomy equivalently excludes coal."
+    }
+  },
+
+  "_field_guide_for_other_jurisdictions": {
+    "_purpose": "Copy this file and replace the values below for each new country. NULL = field applies but data not yet populated. Fields marked JURISDICTION-SPECIFIC must be researched for each country.",
+    "fields_to_update": {
+      "jurisdiction.*": "ISO code, currency, FX rate (always update FX rate and date), EU membership, last_updated",
+      "regulatory_framework.*": "JURISDICTION-SPECIFIC — replace all instruments with correct national legislation",
+      "permitting.*": "JURISDICTION-SPECIFIC — thresholds, authorities, DCO equivalents, and timelines vary by country",
+      "grid_connection.*": "JURISDICTION-SPECIFIC — operator, queue status, costs, and reform status",
+      "support_mechanisms.*": "JURISDICTION-SPECIFIC — identify mechanism type (two_way_cfd / one_way_fit / auction_premium / merchant). Rule 3A requires explicit mechanism distinction.",
+      "tax.*": "JURISDICTION-SPECIFIC — CIT rate, depreciation rules, and incentive schemes. Rule 3B requires NPV timing benefit analysis for all accelerated depreciation.",
+      "ppa_market.*": "JURISDICTION-SPECIFIC — legal enforceability rating and market depth",
+      "sovereign_risk.*": "Update credit ratings (Moodys/S&P/Fitch), political stability, and retroactive incidents",
+      "operational_drag.*": "Rescore all component scores for the new jurisdiction",
+      "fdi_restrictions.*": "JURISDICTION-SPECIFIC — EU FDI Screening Regulation 2019/452 applies to EU members; national implementations vary",
+      "eu_state_aid.*": "EU members: set applicable=true; verify GBER exemption or formal EC notification; flag TCTF applicability. Non-EU: set applicable=false.",
+      "financial_model_inputs.*": "Populate with jurisdiction-specific strike prices and CapEx benchmarks",
+      "rag_matrix.*": "Rescore all RAG fields — do not copy UK RAG scores to other jurisdictions",
+      "comparison_table.*": "Populate all 8 Rule 5B categories with jurisdiction-specific data"
+    }
+  }
+}

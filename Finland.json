@@ -1,0 +1,502 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Finland",
+    "local_name": "Suomi / Finland",
+    "iso_code": "FI",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "currency_eur_rate_source": "No conversion required. All figures are native EUR.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Finnish competitive bidding results are published by the Energy Authority (Energiavirasto) after each tender round. Verify current tender results at energiavirasto.fi. Finland's support scheme parameters are set under Government Decrees which may be updated."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Act on Production Aid for Electricity from Renewable Energy Sources — 1396/2010, as amended", "relevance": "Primary RES support law; establishes premium tariff (preemiumtuki) via competitive bidding; defines reference price and one-way premium mechanism; Energy Authority administers" },
+      { "instrument": "Government Decree 1096/2021 on Competitive Bidding of Renewable Energy Production Subsidies", "relevance": "Current competitive bidding framework implementing Act 1396/2010; sets tender procedures, eligibility, and premium tariff structure" },
+      { "instrument": "Electricity Market Act (Sähkömarkkinalaki 588/2013), as amended", "relevance": "Framework law for Finnish electricity markets; grid connection rights; Fingrid and DSO obligations; priority dispatch for RES" },
+      { "instrument": "Climate and Energy Strategy 2022 (Valtioneuvoston selonteko kansallisesta energia- ja ilmastostrategiasta)", "relevance": "Finland's target: 100% renewable electricity by 2035 (net annual balance); primary policy driver for auction programme sizing and offshore wind development" },
+      { "instrument": "Act on the Environmental Impact Assessment Procedure (252/2017 — YVAL)", "relevance": "EIA law for RES projects above threshold sizes; administered by Centres for Economic Development, Transport and the Environment (ELY Centres)" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Land Use and Building Act (Maankäyttö- ja rakennuslaki MRL 132/1999)", "relevance": "Primary spatial planning and construction law; wind farms require municipal master plan (yleiskaava) or detailed plan (asemakaava); building permit (rakennuslupa) required" },
+      { "instrument": "Nature Conservation Act (Luonnonsuojelulaki 9/2023, replacing Act 1096/1996)", "relevance": "Nature conservation areas; species protection; Natura 2000 habitat assessment requirements" },
+      { "instrument": "Water Act (Vesilaki 587/2011)", "relevance": "Relevant for offshore wind and waterway crossings; water use permit (lupa) required for offshore installations" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Corporate Income Tax Act (Laki elinkeinotulon verottamisesta EVL 360/1968)", "relevance": "20% CIT rate; declining balance depreciation for machinery at 25% p.a." },
+      { "instrument": "Act on Assessment of Income from Business Activities (Laki elinkeinotulon verottamisesta) §34", "relevance": "25% declining balance depreciation for machinery and equipment (koneet ja laitteet) — applies to RES plant" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Finnish RES support scheme assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES aid" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Act on the Monitoring of Foreign Corporate Acquisitions (172/2012), as amended", "relevance": "Finnish FDI screening; Ministry of Economic Affairs and Employment reviews acquisitions in critical sectors including energy; applies to non-EU/EEA acquirers in critical infrastructure" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation mechanism; Finland must notify EC and other member states of covered FDI proceedings" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Finnish RES permitting is more streamlined than Germany or Czech Republic but requires municipal spatial plan cooperation for wind. Finland's vast land area means remote sites are available but create logistical challenges. P50 timelines run from formal application. Pre-application (including EIA scoping, wind resource assessment, municipal discussions) adds 12–24 months for wind.",
+    "solar_utility": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Municipal authority (kunta) for spatial planning and building permit; ELY Centre for EIA coordination if above EIA threshold",
+      "primary_process": "Municipal plan amendment (yleiskaava) or building permit directly (for smaller projects in suitable zones) → EIA if above threshold → Building Permit (rakennuslupa) → Grid Connection",
+      "legal_basis": "MRL 132/1999; Act 252/2017 (EIA); EVL depreciation rules",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "pre_application_months_typical": 6,
+      "appeal_risk": "low-medium",
+      "appeal_mechanism": "Administrative Courts (hallinto-oikeudet); Supreme Administrative Court (Korkein hallinto-oikeus, KHO)",
+      "notes": "Finnish solar irradiation is modest by EU standards (850–1,050 kWh/kWp) — lower than central/southern Europe. Solar projects in Finland are primarily driven by green power procurement rather than subsidy optimisation. Permitting is relatively straightforward."
+    },
+    "onshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Municipal authority (kunta) for yleiskaava and building permit; ELY Centre for EIA coordination; Regional State Administrative Agency (AVI) for water permits near shoreline",
+      "primary_process": "EIA (mandatory for wind farms typically >10 turbines or >45 MW, but triggered at lower thresholds in some regions) → Municipal master plan amendment (yleiskaava) → Building Permit → Grid Connection",
+      "legal_basis": "MRL 132/1999; Act 252/2017 (YVAL/EIA); Nature Conservation Act 9/2023",
+      "timeline_p50_months": 36,
+      "timeline_min_months": 24,
+      "timeline_max_months": 60,
+      "pre_application_months_typical": 18,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Administrative Courts; KHO (Supreme Administrative Court)",
+      "setback_rules": "No binding national minimum setback; governed by municipal plans; typically 1,000–2,000m from dwellings in plans depending on turbine size",
+      "regional_notes": {
+        "lapland": "Vast available land area; excellent wind resource; remote logistics add CapEx; reindeer herding rights (poronomistajat) must be considered and compensated; Sámi indigenous rights consultations required in northernmost areas",
+        "ostrobothnia": "Primary wind development region; flat coastal terrain; good resource; grid infrastructure more developed",
+        "coastal_south_west": "Good resource; proximity to demand centres; more contested planning environment"
+      },
+      "notes": "Finland has one of the best onshore wind resources in the EU — Lapland and coastal Ostrobothnia deliver capacity factors of 35–42%, among the highest in Europe for onshore wind. Municipal cooperation is typically more positive than in central Europe. The primary challenges are remote logistics, reindeer/Sámi consultation requirements in Lapland, and migratory bird surveys."
+    },
+    "offshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Ministry of Economic Affairs and Employment (TEM) for offshore zone planning; AVI (Regional State Administrative Agencies) for water use permits; ELY Centre for EIA",
+      "primary_process": "Offshore zone designation under national maritime spatial plan → Water use permit (AVI) → EIA → Building Permit → Grid Connection",
+      "legal_basis": "Water Act 587/2011; MRL 132/1999; Act 252/2017; Maritime Spatial Planning Act (530/2016)",
+      "model": "Zone-based approach via Finland's national maritime spatial plan; Finnish Defence Forces veto power over offshore wind in some areas is a material constraint",
+      "timeline_p50_months": 96,
+      "timeline_min_months": 72,
+      "timeline_max_months": 144,
+      "capacity_targets": "Finland has significant offshore wind ambitions under its 2035 renewable electricity target; several GW of projects in development in the Gulf of Bothnia and Baltic Sea",
+      "defence_constraint": {
+        "description": "Finnish Defence Forces (Puolustusvoimat) have veto rights over offshore wind development in areas affecting military radar and operational zones. This is a material constraint affecting several potential offshore wind zones in the Gulf of Finland and Gulf of Bothnia.",
+        "resolution": "Negotiation with Defence Forces required early in project development; some projects have been blocked; others have been accommodated with radar mitigation agreements"
+      },
+      "notes": "Finland's offshore wind market is growing rapidly with multiple large projects in development. The Finnish Defence Forces constraint is unique and material. Baltic Sea water depths are generally shallow (favourable for fixed-bottom offshore wind). Grid connection to the national system is a key development cost."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Building permit under MRL 132/1999; EIA if above threshold; Fingrid/DSO connection agreement",
+      "legal_basis": "MRL 132/1999; Electricity Market Act 588/2013 (storage provisions)",
+      "timeline_p50_months": 15,
+      "timeline_min_months": 9,
+      "timeline_max_months": 24,
+      "notes": "Finland's frequency regulation market (FCR — Frequency Containment Reserve; FRR — Frequency Restoration Reserve) is well-developed through Nord Pool and Fingrid's balancing markets. Standalone BESS revenue primarily from FCR-D and intraday arbitrage. Finland is interconnected with Nordic markets through Fingrid-Statnett connections."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "Fingrid Oyj", "region": "Finnish national transmission system (majority state-owned)" }
+    ],
+    "distribution_operators": "Caruna Espoo Oy; Caruna Oy (largest DSO); Elenia Oy; Elenia Lämpö; Helen Sähköverkko (Helsinki); Lappeenrannan Energia; approx. 80 DSOs total",
+    "regulatory_authority": "Energy Authority (Energiavirasto) — regulatory authority for electricity markets, grid tariffs, and RES competitive bidding",
+    "legal_basis": "Electricity Market Act 588/2013 §§3–5 (grid connection rights); Government Decree on System Services; Fingrid Grid Connection Regulations",
+    "priority_access": {
+      "applicable": true,
+      "mechanism": "Priority dispatch for RES under Electricity Market Act 588/2013 and EU Electricity Directive 2019/944 (transposed)",
+      "description": "RES generators have priority dispatch rights. Curtailment compensation under Fingrid grid code."
+    },
+    "nordic_integration": {
+      "description": "Finland is fully integrated into the Nordic electricity market (Nord Pool) and connected to Sweden, Norway, Estonia (Estlink 1 and 2), and Russia (disconnected 2022). The Nordic market provides substantial demand depth for Finnish RES production.",
+      "price_area": "Finland is a separate price area (FI) within Nord Pool — prices can diverge from the Nordic system price when internal transmission constraints bind",
+      "russia_disconnection_note": "Finland disconnected from the Russian power system in May 2022 (simultaneously with the Baltic states). This has improved Finnish energy security and reduced dependence on Russian imports."
+    },
+    "northern_lapland_grid": {
+      "description": "Remote Lapland wind projects face significant grid reinforcement requirements. New 400kV lines to export Lapland wind generation south require multi-year development.",
+      "practical_impact": "Lapland projects must either secure grid connection capacity or co-invest in transmission reinforcement. Connection timelines in remote northern areas can exceed 5 years."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 30, "range": "18–54", "notes": "Lapland and remote sites toward higher end of range" },
+      "distribution_connected": { "p50": 15, "range": "9–24" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 20000,
+      "range_high": 120000,
+      "notes": "Costs vary significantly by location. Remote Lapland sites require longer transmission lines — costs substantially higher. Fingrid and DSO connection costs regulated by Energy Authority."
+    },
+    "operational_drag_assessment": "LOW-MEDIUM — Fingrid is a well-run TSO with strong investment programme; Nordic market integration is a structural advantage; Lapland remote site constraints are the primary drag vector"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Finnish premium tariff (preemiumtuki) under Act 1396/2010 and Government Decree 1096/2021 is a ONE-WAY mechanism. The premium = max(0, reference price (target price) − annual average Nord Pool FI area price). When the market price exceeds the reference price, the premium is ZERO — generators retain full merchant upside with NO clawback. This is structurally equivalent to the German EEG Marktprämie. Return assumptions must reflect uncapped upside above the reference price.",
+    "primary_mechanism": "Preemiumtuki (Premium Tariff) — competitive bidding under Act 1396/2010",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Energiavirasto (Energy Authority) — competitive bidding administration and premium payment",
+    "legal_basis": "Act 1396/2010 on Production Aid for Electricity from Renewable Energy Sources; Government Decree 1096/2021 on Competitive Bidding",
+    "mechanism_description": {
+      "summary": "Generator participates in competitive bidding (tarjouskilpailu) and wins a reference price (tavoitehinta). Generator sells electricity on the Nord Pool FI area spot market. Energy Authority pays premium = max(0, reference price − annual average Nord Pool FI price). When market price exceeds reference price, premium is zero and generator retains full merchant revenue. No clawback.",
+      "upside_treatment": "UNCAPPED — when annual average Nord Pool FI price exceeds reference price, premium is zero and generator keeps all market revenue. No clawback.",
+      "downside_treatment": "PROTECTED — when annual average market price falls below reference price, Energy Authority pays the shortfall",
+      "merchant_exposure_during_term": "Partial — annual average price comparison means intra-year and hour-of-delivery price risk. Hourly spot prices can deviate significantly from the annual average.",
+      "contract_term_years": 12,
+      "nordic_market_note": "Finnish generators sell into the Nord Pool FI area price. Nordic system price and FI area price can diverge when transmission constraints bind. Basis risk between Nord Pool system price and FI area price must be modelled."
+    },
+    "auction": {
+      "administrator": "Energiavirasto (Energy Authority)",
+      "frequency": "Competitive bidding rounds as needed; typically 1–2 per year",
+      "technology_eligibility": [
+        "Onshore wind (tuulivoima)",
+        "Offshore wind (merituulivoima)",
+        "Solar PV (aurinkovoima)",
+        "Biogas",
+        "Wave energy"
+      ],
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Finnish competitive bidding reference prices change with each round. Figures below are indicative 2022–2024 ranges. Verify current tender results at Energy Authority (energiavirasto.fi) before use.",
+        "_source": "Energiavirasto (energiavirasto.fi) — competitive bidding result publications",
+        "onshore_wind": {
+          "eur_mwh_range_low": 30.00,
+          "eur_mwh_range_high": 50.00,
+          "notes": "Finnish onshore wind has exceptionally low reference prices reflecting high capacity factors and competitive development costs. Several recent tenders saw near-zero or very low clearing prices as projects are viable on merchant terms. Finland's market may be approaching zero-subsidy for onshore wind."
+        },
+        "offshore_wind": {
+          "eur_mwh_range_low": 50.00,
+          "eur_mwh_range_high": 80.00,
+          "notes": "Offshore wind reference prices higher than onshore due to capital intensity. Limited auction history for offshore — range is indicative."
+        }
+      },
+      "zero_subsidy_note": "Finnish onshore wind has been approaching or reaching zero-subsidy territory in recent tender rounds, with some projects foregoing premium tariff support entirely to pursue merchant/PPA revenue. This reflects the exceptional wind resource and competitive development environment."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Finnish 25% declining balance depreciation for machinery (EVL §34) is a CapEx TIMING benefit — not a permanent reduction. NPV of the timing benefit must be shown separately.",
+    "corporation_tax_structure": {
+      "rate_pct": 20.0,
+      "legal_basis": "Act on Assessment of Income from Business Activities (EVL 360/1968) §22; stable at 20% since 2014",
+      "dividend_withholding_tax_pct": 20.0,
+      "eu_parent_subsidiary_exemption": "0% WHT for qualifying EU parent companies (holding ≥10% for 12 months) under EU Parent-Subsidiary Directive",
+      "notes": "20% CIT is stable and competitive. Finland has maintained a consistent and predictable tax framework — no sudden rate changes."
+    },
+    "combined_effective_tax_rate_range_pct": {
+      "standard": 20.0,
+      "notes": "Finland has no regional trade tax equivalent. Municipal tax (kunnallisverotus) applies only to individuals, not corporations. Effective CIT rate is close to the 20% statutory rate."
+    },
+    "capex_incentives": {
+      "declining_balance_depreciation": {
+        "type": "declining_balance_depreciation",
+        "rate_pct_machinery": 25.0,
+        "qualifying_assets": "Machinery and equipment (koneet ja laitteet) — includes wind turbines, solar PV panels, inverters, transformers, BESS",
+        "legal_basis": "EVL 360/1968 §34 (machinery and equipment); §§27–33 (buildings and structures at lower rates)",
+        "permanent": true,
+        "mechanism": "25% declining balance on tax written-down value of qualifying machinery each year. Higher than many EU peers — meaningful front-loading of depreciation benefit.",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 20% CIT and 10% WACC: 25% declining balance depreciation for wind turbine (20-year life): NPV of tax shield ≈ 18.5% of qualifying CapEx. Under standard straight-line (5% p.a. over 20 years): NPV ≈ 14.1%. Timing benefit (NPV delta) ≈ 4.4ppts per €1 of qualifying CapEx.",
+          "note": "Finnish declining balance depreciation at 25% is more generous than German straight-line but less aggressive front-loading than Germany's optional 25% degressive AfA under Wachstumschancengesetz 2024."
+        }
+      }
+    },
+    "standard_depreciation_buildings": {
+      "rate_pct": 7.0,
+      "method": "declining balance",
+      "legal_basis": "EVL §34 (buildings and structures — 7% declining balance)"
+    },
+    "vat": {
+      "standard_rate_pct": 24,
+      "reduced_rate_pct": 10,
+      "applies_to_commercial_renewables": true,
+      "input_vat_recovery": "Available for VAT-registered businesses",
+      "legal_basis": "Value Added Tax Act (Arvonlisäverolaki 1501/1993)"
+    },
+    "real_estate_transfer_tax": {
+      "rate_pct_real_property": 4.0,
+      "rate_pct_shares": 1.6,
+      "legal_basis": "Act on Transfer Tax (Varainsiirtoverolaki 931/1996)",
+      "notes": "4% on real property transfers; 1.6% on share transfers. Share deal structure reduces transfer tax cost for large land acquisitions. Long-term lease agreements (maanvuokrasopimus) for wind/solar land common — lease grants do not trigger transfer tax."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "Finnish law of obligations (Velvoiteoikeus); Act on Contracts 228/1929 (Laki varallisuusoikeudellisista oikeustoimista); Commercial Code; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Finnish courts are efficient and highly reliable. Helsinki District Court commercial proceedings: typically 1–2 years. Finland Arbitration Institute (FAI — formerly Helsinki Chamber of Commerce Arbitration) is well-regarded.",
+    "market_liquidity": "High — Finland has one of the most active corporate PPA markets in Europe, particularly for onshore wind",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Pulp/paper (UPM, Stora Enso, Metsä Group), chemicals (Kemira), technology (Nokia), retail (Kesko, S-Group), data centres (Google, Microsoft, Amazon Web Services with Finnish data centres), steel (SSAB)",
+    "typical_contract_term_years": { "min": 5, "max": 20 },
+    "standard_frameworks": ["EFET Master Agreement (widely adopted)", "Nordic Power PPA standard template (developed by industry associations)", "Bespoke bilateral under Finnish law"],
+    "market_note": "Finland is one of Europe's most mature corporate PPA markets. Many recent Finnish onshore wind projects have been fully or partially contracted under corporate PPAs rather than using the premium tariff support scheme. The deep base of energy-intensive Finnish industrial corporates creates strong structural demand for long-term renewable power contracts.",
+    "premium_tariff_interaction": "Projects receiving premium tariff sell on Nord Pool at market price; premium covers the shortfall when market is below reference price. Physical corporate PPAs can be structured alongside premium tariff receipt — virtual (financial) PPA referencing Nord Pool FI price is the more common structure for premium tariff recipients.",
+    "guarantees_of_origin": {
+      "regulator": "Energiavirasto (Energy Authority) — issues Alkuperätakuut (Guarantees of Origin)",
+      "note": "Finnish RES projects can issue Guarantees of Origin. Premium tariff-supported projects may issue GoOs — verify eligibility under current Energiavirasto framework. GoOs are a standard additional revenue stream in Finland's active green power market."
+    },
+    "credit_risk_note": "Finnish corporate market has a deep base of investment-grade industrial buyers. Counterparty credit risk is generally manageable with standard creditworthiness assessment.",
+    "cross_border_enforceability": "Very High — Finnish courts highly respected; NY Convention signatory; EU enforcement regime applies; FAI arbitration well-regarded internationally"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 88,
+    "credit_ratings": {
+      "moodys": "Aa1",
+      "sp": "AA+",
+      "fitch": "AA+",
+      "source_note": "Finland maintains strong investment-grade ratings. NATO member since April 2023. Verify current ratings at agency websites.",
+      "_staleness_warning": "Ratings subject to review — verify before use."
+    },
+    "political_stability": "High — stable parliamentary democracy; coalition governments are the norm but policy continuity is strong",
+    "government_structure": "Parliamentary republic; unicameral Parliament (Eduskunta/Riksdag); Constitutional Law Committee provides parliamentary constitutional review",
+    "regulatory_track_record": "Excellent — Act 1396/2010 framework has operated consistently; no retroactive modifications to contracted RES revenues; predictable regulatory evolution",
+    "retroactive_policy_incidents": [
+      {
+        "year": "None material",
+        "description": "Finland has not imposed retroactive modifications to contracted RES revenues. Support scheme reforms (introduction of competitive bidding, shortening of support periods) have been prospective only.",
+        "severity": "N/A — no material retroactive incident"
+      }
+    ],
+    "expropriation_risk": "Very Low — EU and NATO member; strong property rights under Finnish Constitution and ECHR",
+    "currency_risk": "None — EUR is domestic currency",
+    "security_context": "Finland joined NATO in April 2023. The Russia-Finland border (1,340km) and the 2022 disconnection from the Russian power system are geopolitically relevant. NATO membership has materially reduced Finland's security risk profile relative to the pre-2022 position.",
+    "political_notes": "Finland is one of the most stable regulatory environments in Europe. The combination of strong sovereign ratings (Aa1/AA+), NATO membership, no retroactive RES incidents, and a 2035 100% renewable electricity target creates an exceptional investment backdrop. Coalition government adjustments occasionally affect support scheme design but have never modified existing contracts.",
+    "score_rationale": "Deductions from 100: modest fiscal pressures (deficit management post-COVID) (-4), northern geographic location creating logistical complexity (-3), Defence Forces offshore wind veto power (-3), Lapland reindeer/Sámi consultation requirements (-2). Score 88 reflects one of Europe's strongest sovereign and regulatory risk profiles for RES investment."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
+    "operational_drag_score_out_of_100": 48,
+    "component_scores": {
+      "grid_connection_drag": { "score": 38, "assessment": "LOW-MEDIUM — Fingrid is a well-run TSO; Nordic market integration is a structural advantage; Lapland remote sites require reinforcement investment; overall grid environment is among the better in the EU" },
+      "permitting_drag_onshore_wind": { "score": 50, "assessment": "MEDIUM — municipal cooperation generally positive; EIA and municipal plan requirements create 2–4 year realistic P50; better than Germany/Czech but not frictionless; Lapland consultation requirements add time" },
+      "permitting_drag_solar": { "score": 30, "assessment": "LOW — relatively straightforward; solar not the primary RES technology in Finland; modest permitting requirements" },
+      "permitting_drag_offshore": { "score": 72, "assessment": "MEDIUM-HIGH — Defence Forces constraint is unique and material; water use permit (AVI) adds complexity; growing offshore pipeline but no consented projects yet as of 2025" },
+      "bureaucratic_friction": { "score": 35, "assessment": "LOW — Finnish public administration is efficient and digitally advanced; ELY Centres and Energy Authority are well-resourced; corruption risk is negligible" },
+      "judicial_appeal_risk": { "score": 42, "assessment": "LOW-MEDIUM — Finnish administrative court system is fair and efficient; organised opposition exists (bird protection, reindeer herding rights) but challenge volume is lower than central European peers" }
+    },
+    "primary_bottleneck": "Lapland remote logistics and grid reinforcement requirements for the highest-resource wind sites",
+    "secondary_bottleneck": "Defence Forces offshore wind veto for specific zones; reindeer/Sámi consultation requirements in northernmost Lapland",
+    "offshore_note": "Offshore wind is an emerging market with specific Finnish Defence Forces constraint — factor into offshore project site selection from earliest stage.",
+    "score_rationale": "Finland scores among the lowest operational drag in the EU for onshore wind and solar. Grid is well-run, administration is efficient, and there are no fundamental political barriers to development (unlike Germany/Czech). Score 48 reflects genuine development-friendliness with specific constraints for Lapland remote sites and offshore Defence Forces issues."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Act on the Monitoring of Foreign Corporate Acquisitions (172/2012 as amended); EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "critical_infrastructure_threshold_pct": 10,
+    "reviewing_ministry": "Ministry of Economic Affairs and Employment (TEM — Työ- ja elinkeinoministeriö)",
+    "legal_basis": "Act 172/2012; EU Regulation 2019/452",
+    "energy_as_critical_infrastructure": "Yes — power generation and grid infrastructure designated critical; heightened scrutiny for energy projects near Russian border",
+    "clearance_timeline": {
+      "initial_screening_working_days": 25,
+      "formal_review_if_opened_calendar_days": 90,
+      "extension_possible": true
+    },
+    "eu_investors_note": "EU/EEA investors generally face lower scrutiny under Finnish FDI screening, though notification thresholds apply in critical infrastructure sectors",
+    "nato_context": "Finland's NATO membership (since April 2023) has reinforced security screening rigour for non-NATO acquirers. Projects near the Russian border face heightened Defence Forces assessment.",
+    "practical_risk": "Low for EU/NATO-member investors; medium for non-EU OECD investors; high for Russian-affiliated and state-connected non-western investors",
+    "notes": "Finnish FDI environment is open and investor-friendly for Western/OECD investors. NATO membership has reinforced the security perimeter logic of screening, particularly for the eastern border region. Clean energy projects from EU/OECD investors face low prohibition risk."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01",
+    "secondary_framework": "GBER — Commission Regulation (EU) 651/2014 as amended",
+    "premium_tariff_state_aid_status": {
+      "instrument": "Act 1396/2010 premium tariff via competitive bidding",
+      "status": "Finnish competitive bidding scheme notified to and cleared by the European Commission. Competitive bidding mechanism satisfies CEEAG proportionality requirements. Verify current clearance status at EC State Aid register (competition.ec.europa.eu).",
+      "zero_subsidy_note": "Several recent Finnish onshore wind tenders have been at or near zero reference prices. Projects receiving no premium (or effectively zero premium) may not constitute notifiable State Aid — clarify with legal advisers."
+    },
+    "retrospective_clawback_risk": {
+      "assessment": "Very Low",
+      "notes": "Finnish premium tariff framework cleared under CEEAG. No history of retroactive support modifications. EC State Aid recovery risk is very low for cleared-framework projects."
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Finland is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY mechanism: premium floors at zero — generators retain full Nord Pool FI market upside above reference price. Model uncapped upside scenario as a key scenario given approaching zero-subsidy levels.",
+    "illustrative_onshore_wind_premium": {
+      "reference_price_eur_mwh_approx": 40.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 12,
+      "p50_capacity_factor_pct": 38,
+      "typical_capex_eur_per_mw": 1300000,
+      "opex_eur_per_mw_per_year": 42000,
+      "effective_tax_rate_pct": 20,
+      "note": "38% capacity factor reflects Lapland and good coastal Ostrobothnia sites. Very low reference price reflects Finland approaching zero-subsidy for onshore wind — many projects viable on merchant/PPA basis. Support premium may be minimal or zero in practice. Shorter 12-year contract term vs. 20-year in most EU peers.",
+      "zero_subsidy_scenario": "Model a zero-support merchant scenario as primary case given current market trajectory. Premium tariff provides downside backstop only."
+    },
+    "illustrative_solar_pv": {
+      "mechanism_note": "Solar PV in Finland is primarily merchant or corporate PPA-driven — not typically dependent on premium tariff support given modest resource and project economics",
+      "p50_capacity_factor_pct_dc": 11,
+      "typical_capex_eur_per_mw_dc": 600000,
+      "opex_eur_per_mw_per_year": 14000,
+      "note": "Finnish solar irradiation is modest (850–1,050 kWh/kWp p.a.) — significantly below southern Europe. Solar projects primarily serve industrial self-consumption or near-zero-marginal-cost green power procurement. Economics are tighter than wind."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory — Stop/Go signal before detailed narrative.",
+    "permitting_window_solar": { "rag": "GREEN", "rationale": "Straightforward; low resource drives limited development pressure; municipal planning is cooperative; EIA not usually triggered at small utility scale" },
+    "permitting_window_onshore_wind": { "rag": "GREEN", "rationale": "Municipal cooperation positive; EIA and plan requirements create 2–4 year P50 but without the political hostility of Germany/Czech; Lapland consultation requirements add time but are manageable; overall one of the better EU wind permitting environments" },
+    "permitting_window_offshore": { "rag": "AMBER", "rationale": "Defence Forces veto constraint is unique and material; water use permit adds complexity; pipeline is large but no projects consented; Defence Forces engagement essential from site selection stage" },
+    "grid_connection": { "rag": "GREEN", "rationale": "Fingrid TSO is well-run and well-invested; Nordic market integration is a structural advantage; Lapland remote sites require reinforcement investment but manageable for well-capitalised developers" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "Act 1396/2010 / Government Decree 1096/2021 provides stable 12-year one-way premium; low/zero reference prices reflect healthy market — many projects viable without subsidy; Energy Authority is efficient administrator" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way premium retains full merchant upside; very low reference prices mean premium is increasingly irrelevant backstop; approaching zero-subsidy market is a confidence signal" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "20% CIT stable since 2014; 25% declining balance depreciation for machinery; no trade tax; transfer tax mitigable with share deal or lease structures" },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "One of Europe's most active corporate PPA markets; deep industrial offtaker base (pulp/paper, chemicals, tech); Finnish courts efficient; FAI arbitration well-regarded; EFET standard widely used" },
+    "political_risk": { "rag": "GREEN", "rationale": "Aa1/AA+ sovereign; NATO member; no retroactive support modifications; 100% renewable by 2035 target drives sustained policy commitment; one of Europe's most stable regulatory environments" },
+    "operational_drag": { "rag": "GREEN", "rationale": "Score 48 — among lowest drag in EU; efficient administration; cooperative municipalities; the primary drag is geographic (remote Lapland logistics and grid)" },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "Open to EU/OECD investors; NATO membership reinforces security screening logic but does not impede clean energy investment; low prohibition risk" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Premium tariff EC-cleared; competitive bidding satisfies CEEAG proportionality; zero-subsidy trajectory may reduce State Aid relevance further" },
+    "overall_stop_go": "GREEN",
+    "overall_rationale": "Finland is one of the most compelling RES investment destinations in Europe. The combination of exceptional onshore wind resource (35–42% capacity factors in Lapland, 30–38% in Ostrobothnia), an active and deep corporate PPA market, approaching zero-subsidy status, a stable 20% CIT rate with 25% declining balance depreciation, and one of the best political risk profiles in the EU (Aa1/AA+, no retroactive incidents) makes Finland a standout jurisdiction. Suitable for all investor risk profiles including Low Risk Core Infrastructure. Lapland remote logistics and Defence Forces offshore constraints are the primary site-selection considerations."
+  },
+
+  "comparison_table": {
+    "_rule_5b_note": "Rule 5B: Standardised comparison categories — identical across all jurisdiction JSONs.",
+    "1_permitting_window_months_p50": 36,
+    "1_permitting_window_scope": "Onshore wind (P50 — including Lapland and coastal Ostrobothnia sites)",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 20,000–120,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 20,000–120,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "18–54 (transmission-connected; higher end for remote Lapland sites)",
+    "3_primary_support_mechanism": "Preemiumtuki (Premium Tariff) — Act 1396/2010 / Government Decree 1096/2021 competitive bidding",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": 20,
+    "4_effective_tax_rate_note": "20% CIT (EVL 360/1968 §22). Stable since 2014. No trade tax equivalent.",
+    "4_key_incentive": "25% declining balance depreciation for machinery (EVL §34) — includes wind turbines, solar PV, BESS; one of the more generous standard depreciation rates in the EU",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Act on Contracts 228/1929; Finnish law of obligations; FAI (Finland Arbitration Institute); EFET Master Agreement widely adopted; active Nordic PPA market",
+    "6_political_risk_score": 88,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 48,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 40/MWh approx. (onshore wind, indicative recent competitive bidding reference price — approaching zero in recent rounds)",
+    "8_revenue_floor_eur": "EUR 40/MWh (no conversion required — domestic currency)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Finnish premium tariff reference prices change with each competitive bidding round. Recent rounds near zero. Verify at Energiavirasto (energiavirasto.fi) official results before use. Merchant/PPA-only scenario may be primary modelling case."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Finland participates in IPCEI Hy2Tech (2022). National hydrogen roadmap supports green hydrogen for industry decarbonisation. Business Finland administers R&D support.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Finland is an IPCEI Hy2Tech participant. High renewable electricity (hydro + wind) provides low-cost electrolysis feedstock. Industrial demand from pulp/paper and steel sectors. Verify current national subsidy programme before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Competitive bidding round premium (tuotantotuki) under Laki uusiutuvilla energialähteillä tuotetun sähkön tuotantotuesta (1396/2010, as amended).",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "active",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Finland has an established nuclear programme (Olkiluoto 1, 2, 3; Loviisa 1, 2). OL3 EPR achieved commercial operation 2023. SMR technology is being explored but no formal programme. Strong nuclear culture and regulatory competence (STUK). Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 5,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Finland developed FSRU capacity rapidly post-2022. Manga LNG Tornio terminal also serves Sweden."
+    },
+    "data_centre": {
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "low",
+      "renewable_ppa_market_depth": "high",
+      "source": "national_tso",
+      "notes": "Low electricity prices, cool climate (low cooling costs). Growing hyperscale market. Microsoft, Google present. Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Finland has gas-fired generation capacity. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. Energy-only market. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Strong biomass/bioenergy industry (forest sector). Verify current Finnish bioenergy support under competitive bidding framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Finland legislated a ban on coal use in energy production by 2029 (Coal Ban Act 2019).",
+      "source": null,
+      "notes": "Coal Ban Act (2019) prohibits coal energy production from 2029. New coal investment illegal post-2029. EU Taxonomy-excluded."
+    }
+  }
+}

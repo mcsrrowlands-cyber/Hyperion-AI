@@ -1,0 +1,421 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Estonia",
+    "local_name": "Eesti",
+    "iso_code": "EE",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency since 1 January 2011",
+    "currency_eur_rate_source": "Estonia adopted the Euro on 1 January 2011.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Estonian RES tender results are published by the Competition Authority (Konkurentsiamet). Verify at konkurentsiamet.ee. The Baltic ENTSO-E synchronization (February 2025) materially changed the grid environment — verify current grid status and ancillary services markets with Elering (elering.ee)."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Electricity Market Act (Elektrituruseadus — ElTS) 2003, as amended", "relevance": "Framework electricity market law; grid connection rights; Elering (TSO) obligations; RES support framework reference" },
+      { "instrument": "Renewable Energy Act (Taastuvenergia seadus — TaastES) 2023 or amendments to ElTS", "relevance": "Current RES competitive tendering framework; premium tariff (toetushind) mechanism; Competition Authority administration. NOTE: Estonian RES legislation has been amended multiple times — verify current primary legislation at riigiteataja.ee" },
+      { "instrument": "Climate Act (Kliimamuutustega kohanemise arengukava) and National Energy and Climate Plan 2030", "relevance": "100% renewable electricity target; ambition to become an energy exporter post-Baltic synchronization" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Building Code (Ehitusseadustik — EhS) 2015", "relevance": "Building permits (ehitusluba); construction standards; applies to RES project construction" },
+      { "instrument": "Planning Act (Planeerimisseadus — PlanS) 2015", "relevance": "Spatial planning; comprehensive plans (üldplaneering); detailed plans (detailplaneering) for RES projects" },
+      { "instrument": "Environmental Impact Assessment and Environmental Management System Act (KeHJS) 2005, as amended", "relevance": "EIA for wind projects above threshold; strategic environmental assessment" },
+      { "instrument": "Nature Conservation Act (Looduskaitseseadus — LKS) 2004, as amended", "relevance": "Natura 2000; protected species; constraints for wind in ecologically sensitive coastal areas" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Income Tax Act (Tulumaksuseadus — TuMS) 2000, as amended", "relevance": "UNIQUE: Estonian CIT is NOT levied on retained profits — only on distributed profits (dividends). 20% rate applied to distributed profits. Corporate entities pay no CIT on reinvested/retained earnings.", "unique_cit_note": "Estonia's 'distributed profit taxation' model is the defining tax characteristic of this jurisdiction — see tax section for full analysis." },
+      { "instrument": "Value Added Tax Act (Käibemaksuseadus — KMS) 2003", "relevance": "22% standard VAT rate (increased from 20% to 22% from January 2024)" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Estonian RES support assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES measures" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Foreign Investments Act and general contract law", "relevance": "Estonia has no comprehensive FDI screening law as of mid-2025 — one of the most open FDI environments in the EU" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452 — basic implementation", "relevance": "Basic EU-level cooperation mechanism; Estonia has implemented notification requirements" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Estonian permitting is among the more streamlined in the EU for RES. Municipal cooperation is generally positive. The planning process involves county-level comprehensive plans and detailed plans. P50 timelines from formal application. Pre-application (EIA scoping, wind resource assessment, species surveys) adds 12–18 months.",
+    "solar_utility": {
+      "primary_authority": "Local municipality for detailed plan; Environmental Board (Keskkonnaamet) for EIA; Building authority (kohalik omavalitsus) for building permit",
+      "primary_process": "Detailed Plan (detailplaneering) or Comprehensive Plan amendment → EIA (if required) → Building Permit (ehitusluba) → Elering grid connection",
+      "legal_basis": "PlanS; EhS; KeHJS",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "appeal_risk": "low-medium",
+      "appeal_mechanism": "Administrative Courts (halduskohtud); Circuit Court (ringkonnakohus); Supreme Court (Riigikohus)",
+      "notes": "Estonian solar irradiation is modest (950–1,050 kWh/kWp p.a.) — solar not the primary Estonian RES technology. Development primarily merchant or corporate PPA-driven. Permitting is relatively straightforward."
+    },
+    "onshore_wind": {
+      "primary_authority": "County Government (maavanem, now County Governor) for comprehensive plan amendments; Keskkonnaamet for EIA/AA; local municipality for detailed plan",
+      "primary_process": "Comprehensive Plan amendment (üldplaneering) → EIA + Appropriate Assessment → Detailed Plan → Building Permit → Grid Connection (Elering/DSO)",
+      "legal_basis": "PlanS; EhS; KeHJS; LKS",
+      "timeline_p50_months": 36,
+      "timeline_min_months": 24,
+      "timeline_max_months": 54,
+      "pre_application_months_typical": 18,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Administrative courts; Circuit Court; Riigikohus",
+      "setback_rules": "No binding national minimum setback — governed by comprehensive plans; typically 500–1,000m from residential buildings in practice",
+      "notes": "Estonia has excellent onshore wind resource — coastal and near-coastal areas (western Estonia, islands Saaremaa and Hiiumaa) have capacity factors of 35–42%. Municipal cooperation is generally positive. Species protection (migratory birds, bats) is the primary EIA constraint. Estonian wind development community is sophisticated and well-connected to Nordic investors."
+    },
+    "offshore_wind": {
+      "primary_authority": "Ministry of Climate; Keskkonnaamet; Maritime Administration; Defence Forces",
+      "primary_process": "Zone designation → EIA/AA → Building permit → Grid connection",
+      "legal_basis": "Planning Act; EhS; KeHJS; Maritime Law",
+      "timeline_p50_months": 84,
+      "capacity_targets": "Significant offshore wind ambition post-Baltic synchronization — Estonian government has set GW-scale offshore targets for Baltic Sea",
+      "defence_constraint": "Estonian Defence Forces have clearance requirements for offshore wind near military installations — similar to Finnish situation. Early engagement with defence authorities essential.",
+      "notes": "Post-ENTSO-E synchronization, Estonian offshore wind can export electricity directly to European markets via Finland interconnectors and submarine cables. Large-scale offshore development (Gulf of Finland, Baltic) is a key policy priority."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Building permit; Elering grid connection; Competition Authority notification for market participants",
+      "legal_basis": "ElTS; EhS",
+      "timeline_p50_months": 15,
+      "notes": "BESS market growing rapidly post-Baltic synchronization. Frequency regulation (FCR-D) market now operates under ENTSO-E CE standards rather than BRELL — changed market design creates new BESS revenue opportunities."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "Elering AS", "region": "Estonian national transmission system (state-owned)" }
+    ],
+    "distribution_operators": "Elektrilevi OÜ (Eesti Energia subsidiary — largest DSO, ~95% of connections); Enefit Connect; Imatra Elekter",
+    "regulatory_authority": "Konkurentsiamet (Competition Authority) — Estonian energy market regulator",
+    "legal_basis": "ElTS §§18–25 (grid connection rights); Elering Grid Code; Priority dispatch for RES under ElTS",
+    "baltic_synchronization": {
+      "event": "ENTSO-E Continental European Synchronous Area connection achieved on 8 February 2025",
+      "description": "Estonia (together with Latvia and Lithuania) disconnected from the Russian BRELL synchronous power ring and connected to the Continental European (ENTSO-E CE) synchronous area. This was accomplished via the LitPol Link 2 interconnection with Poland and NordBalt with Sweden (for Sweden/Lithuania connection).",
+      "significance_for_res_investment": [
+        "Estonian RES generators now trade electricity in the ENTSO-E market with access to continental European price formation",
+        "Cross-border balancing and ancillary services now under ENTSO-E CE standards — larger FCR/aFRR markets",
+        "Eliminated Russian dependency for frequency regulation — material geopolitical risk reduction",
+        "Offshore wind export potential now directly connected to European grid"
+      ],
+      "legal_basis": "Baltic synchronization project — multiple EU PCI projects; Elering Grid Code updated to reflect CE operational standards"
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 24, "range": "18–42", "notes": "Offshore projects in development pipeline will require significant reinforcement investment" },
+      "distribution_connected": { "p50": 15, "range": "9–24" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 18000,
+      "range_high": 100000,
+      "notes": "Competitive connection costs regulated by Konkurentsiamet. Saaremaa/Hiiumaa island projects require submarine cable connections — cost substantially higher."
+    },
+    "operational_drag_assessment": "LOW — Elering is an excellent TSO; Baltic synchronization has materially improved grid environment; connection costs competitive"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Estonian premium tariff (toetushind) under competitive tendering is a ONE-WAY mechanism. Premium = max(0, reference price − market price). When market price exceeds the reference price, premium is zero — generators retain full merchant upside with NO clawback. Estonia is approaching zero-subsidy territory for onshore wind — many projects are viable merchant or PPA-only.",
+    "primary_mechanism": "Toetushind (Premium Tariff) — competitive tender",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Konkurentsiamet (Competition Authority)",
+    "legal_basis": "Electricity Market Act (ElTS) as amended; Competition Authority tender rules",
+    "mechanism_description": {
+      "summary": "Generator wins competitive tender and receives a reference premium tariff (toetushind). Sells electricity on Nord Pool EE area spot market. Premium = max(0, reference price − annual average Nord Pool EE price). If market price exceeds reference price, premium is zero and generator retains all market revenue.",
+      "upside_treatment": "UNCAPPED — one-way mechanism; no clawback above reference price",
+      "downside_treatment": "PROTECTED — Competition Authority pays the shortfall",
+      "contract_term_years": "Typically 12–15 years — verify current terms in Konkurentsiamet tender documents",
+      "zero_subsidy_note": "Estonian onshore wind is increasingly viable without subsidy. Several projects have been developed merchant or with corporate PPAs, foregoing premium tariff support. This reflects the combination of excellent wind resource, competitive development costs, and maturing corporate PPA market."
+    },
+    "auction": {
+      "administrator": "Konkurentsiamet",
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Estonian premium tariff reference prices change with each tender round. Recent rounds for onshore wind have been at very low levels. Verify at Konkurentsiamet (konkurentsiamet.ee).",
+        "onshore_wind": { "eur_mwh_range_low": 25, "eur_mwh_range_high": 50, "notes": "Very low reference prices reflecting excellent resource and competitive development costs. Some rounds at near-zero." },
+        "solar_pv": { "eur_mwh_range_low": 35, "eur_mwh_range_high": 60 }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Estonia's distributed profit CIT model is UNIQUE — there is no CIT on retained earnings. This fundamentally changes CapEx timing analysis. The 'timing benefit' of accelerated depreciation is irrelevant if no CIT is paid until profits are distributed. Model as: CIT payable only when dividends are paid out of the project company; until then, 0% tax on retained profit. Depreciation is still relevant for distributable profit calculation.",
+    "corporation_tax_structure": {
+      "unique_system": "DISTRIBUTED PROFIT TAXATION — Estonia does NOT levy CIT on retained/reinvested profits. CIT of 20% is only applied when profits are distributed as dividends.",
+      "rate_pct": 20.0,
+      "rate_applies_to": "Distributed profits (dividends) only — NOT to retained earnings",
+      "legal_basis": "Income Tax Act (TuMS) §50 — taxation of distributed profits; §49 — fringe benefits; the TuMS applies CIT only at the point of distribution",
+      "effective_rate_on_retained_profits": 0.0,
+      "effective_rate_on_distributions": 20.0,
+      "gross_up_note": "The 20% rate is applied to the grossed-up dividend: effective burden = distributed amount × 20/80 = 25% of net dividend. I.e., to distribute EUR 80 net, company must pay EUR 20 tax (= 20% of gross EUR 100). Some analyses state the effective rate on distributions is 25% of net.",
+      "dividend_withholding_tax_pct": 7.0,
+      "dividend_wht_note": "7% WHT on dividends paid to natural persons (from 2025); 0% for qualifying corporate recipients under EU Parent-Subsidiary Directive",
+      "eu_parent_subsidiary_exemption": "0% WHT for qualifying EU parent companies",
+      "capex_reinvestment_advantage": "Projects that reinvest all operating cash flows (DSCR surplus into project reserve accounts, capex programmes, or retained) pay ZERO CIT until dividend distribution. This is a material structural advantage for capital-intensive RES projects with long payback periods."
+    },
+    "investment_account_incentive": {
+      "description": "Estonian resident companies may use an 'investment account' (investeerimiskonto) mechanism — certain retained earnings are explicitly designated for qualifying investment and deferred from deemed distribution",
+      "legal_basis": "TuMS investment account provisions",
+      "note": "Investment account rules are primarily targeted at individuals; corporate entities benefit from the underlying distributed profit model directly."
+    },
+    "combined_effective_tax_rate_range_pct": {
+      "on_retained_profits": 0.0,
+      "on_distributions": "20% of gross (= 25% of net distribution)",
+      "practical_modelling_note": "For IRR/NPV modelling: assume 0% CIT during project operational period if profits are reinvested; model CIT as a terminal distribution tax when investor exits or dividends are repatriated. This approach may significantly improve project-level IRR metrics vs. jurisdictions with annual CIT."
+    },
+    "vat": {
+      "standard_rate_pct": 22,
+      "notes": "Increased from 20% to 22% from 1 January 2024 under Tax Act amendments (to fund defence spending)",
+      "input_vat_recovery": "Available for VAT-registered businesses",
+      "legal_basis": "VAT Act (KMS)"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "Law of Obligations Act (Võlaõigusseadus — VÕS) 2001; contractual freedom; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Estonian courts are efficient and reliable. Commercial proceedings: typically 1–2 years. Tallinn Chamber of Commerce Arbitration (Tallinna Kaubandus-Tööstuskoja Arbitraažikohus) and ICC arbitration available.",
+    "market_liquidity": "Growing — active Baltic corporate PPA market, particularly for wind",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Finnish/Nordic industrial companies with Estonian operations; Estonian manufacturing sector; data centres (Microsoft, others with Baltic data centres); Eesti Energia (utility); international corporates",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement (growing adoption)", "Bespoke bilateral under Estonian VÕS", "Virtual/financial PPA referencing Nord Pool EE price"],
+    "nordic_integration_note": "Post-Baltic synchronization, Estonian generators now participate in the same Nord Pool CE-connected area as Finland and Sweden. This expands the potential corporate buyer universe to Nordic and continental European companies.",
+    "guarantees_of_origin": {
+      "regulator": "Elering AS — issues Päritolutunnistused (Guarantees of Origin)",
+      "note": "Estonian GoOs are recognised in the European GoO system (AIB framework). Standard additional revenue stream for RES generators."
+    },
+    "credit_risk_note": "Baltic corporate credit market is developing. Nordic companies with Estonian operations provide good creditworthiness. State utility Eesti Energia (Enefit) is the most creditworthy domestic counterparty.",
+    "cross_border_enforceability": "High — EU enforcement regime; NY Convention signatory; reliable courts"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 82,
+    "credit_ratings": {
+      "moodys": "A1",
+      "sp": "AA-",
+      "fitch": "A+",
+      "source_note": "Estonia maintains strong investment-grade ratings. Verify at agency websites.",
+      "_staleness_warning": "Ratings subject to review — verify before use. Estonia's defence spending increase (NATO commitment) and resulting fiscal position are a ratings consideration."
+    },
+    "political_stability": "High — stable parliamentary democracy (Riigikogu); strong pro-Western, pro-EU, pro-NATO orientation; digital governance is world-leading; consistent energy policy",
+    "government_structure": "Parliamentary republic; unicameral Parliament (Riigikogu); Chancellor of Justice (Õiguskantsler) provides constitutional oversight",
+    "regulatory_track_record": "Excellent — no retroactive RES modifications; consistent policy development; Competition Authority is an effective and transparent regulator",
+    "retroactive_policy_incidents": [
+      { "year": "None material", "description": "Estonia has not modified contracted RES revenues retroactively.", "severity": "N/A" }
+    ],
+    "expropriation_risk": "Very Low — EU/NATO member; strong rule of law; property rights under Estonian Constitution and ECHR",
+    "currency_risk": "None — EUR domestic",
+    "geopolitical_context": {
+      "russia_border": "Estonia shares a 294km border with Russia. NATO membership since 2004 provides collective defence guarantees. Baltic synchronization (February 2025) has eliminated the critical electricity dependency on Russian frequency regulation.",
+      "nato_defence_spending": "Estonia consistently meets NATO 2% GDP defence target and has been increasing to 3%+ — reflecting high commitment to security. This is a stabilising factor for investor confidence.",
+      "baltic_resilience": "Post-synchronization, Estonia is no longer electrically dependent on Russia in any form. This is a material geopolitical risk reduction for energy investors."
+    },
+    "score_rationale": "Deductions from 100: Russian border geopolitical proximity (-8), smaller economy relative risk (-5), defence spending fiscal pressure (-5). Score 82 reflects excellent governance, strong EU/NATO integration, and dramatically improved grid security post-synchronization."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 45,
+    "component_scores": {
+      "grid_connection_drag": { "score": 30, "assessment": "LOW — Elering is excellent; Baltic synchronization improves cross-border trading; island (Saaremaa/Hiiumaa) submarine connections add cost but are manageable" },
+      "permitting_drag_onshore_wind": { "score": 50, "assessment": "MEDIUM — EIA and comprehensive plan process create 2–4 year P50; species protection surveys required; better than Germany/Czech; municipal cooperation generally positive" },
+      "permitting_drag_solar": { "score": 30, "assessment": "LOW — relatively straightforward; building permit process manageable; modest resource limits development pressure" },
+      "permitting_drag_offshore": { "score": 65, "assessment": "MEDIUM-HIGH — defence clearances required; EIA for Baltic Sea; growing pipeline but no offshore projects commissioned yet" },
+      "bureaucratic_friction": { "score": 25, "assessment": "VERY LOW — Estonia has the world's most digitally advanced public administration (e-Estonia); permits, registrations, and government services extensively digital; near-zero corruption" },
+      "judicial_appeal_risk": { "score": 40, "assessment": "LOW-MEDIUM — Estonian courts are reliable; administrative challenge risk is lower than central European peers; species protection is primary challenge vector" }
+    },
+    "primary_bottleneck": "Species protection surveys (birds, bats) for onshore wind sites; offshore Defence Forces clearances",
+    "e_estonia_note": "Estonia's digital governance is world-leading — virtually all business and government processes can be completed online. This dramatically reduces bureaucratic friction compared to paper-based EU peers.",
+    "score_rationale": "Score 45 is among the lowest operational drag in the EU. Digital governance, cooperative municipalities, and a well-run TSO combine to create one of Europe's better development environments."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "No comprehensive FDI screening law as of mid-2025; EU Regulation 2019/452 basic implementation",
+    "energy_sector_mandatory_notification": false,
+    "practical_risk": "Very Low — Estonia is historically one of the most open FDI environments in Europe",
+    "notes": "Estonia has no comprehensive FDI screening regime equivalent to Germany's AWG or Austria's InvKG. Very open investment environment. EU Regulation 2019/452 basic cooperation applies. Defence-sensitive sectors near Russian border may attract attention for non-NATO investors."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01",
+    "premium_tariff_state_aid_status": {
+      "instrument": "Competitive tender premium tariff under ElTS",
+      "status": "Competitive tender mechanism satisfies CEEAG proportionality. Verify EC clearance at competition.ec.europa.eu.",
+      "zero_subsidy_note": "Projects at zero reference price may not constitute notifiable State Aid — clarify with legal advisers."
+    },
+    "retrospective_clawback_risk": { "assessment": "Very Low — no retroactive incident history; cleared competitive tender framework" }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Estonia is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY premium — uncapped merchant upside. Model zero-support merchant scenario as primary case for onshore wind given near-zero reference price trajectory.",
+    "_rule_3b_special": "UNIQUE: Estonian CIT is 0% on retained profits — no annual CIT deduction in operational period. CIT only arises at dividend distribution. Model CIT as terminal distribution tax, not annual P&L deduction. This materially increases project-level IRR metrics.",
+    "illustrative_onshore_wind": {
+      "reference_price_eur_mwh_approx": 38,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 12,
+      "p50_capacity_factor_pct": 38,
+      "typical_capex_eur_per_mw": 1300000,
+      "opex_eur_per_mw_per_year": 42000,
+      "cit_modelling_note": "Model 0% CIT on operating cash flows. CIT payable only at dividend distribution — use terminal distribution tax in financial model, not annual CIT deduction. This increases DSCR and IRR materially vs. standard 20% CIT jurisdiction.",
+      "zero_subsidy_scenario": "Model merchant scenario as primary case — many Estonian wind projects viable without premium tariff given 38%+ capacity factors and near-zero reference prices."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
+    "permitting_window_solar": { "rag": "GREEN", "rationale": "Straightforward; limited development pressure given modest resource; digital governance minimises bureaucratic friction" },
+    "permitting_window_onshore_wind": { "rag": "GREEN", "rationale": "EIA and plan process create 2–4 year P50 but without German/Czech-style political hostility; municipal cooperation positive; species surveys manageable; Saaremaa/Hiiumaa have world-class resource" },
+    "permitting_window_offshore": { "rag": "AMBER", "rationale": "Defence clearances required; EIA complex; growing pipeline but no precedent projects; developing framework" },
+    "grid_connection": { "rag": "GREEN", "rationale": "Elering excellent; Baltic synchronization materially improved environment; cost-competitive; digital connection processes" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "Competitive tender provides one-way backstop; near-zero reference prices for wind signal market maturity; merchant/PPA route well-established" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way; uncapped upside; near-zero reference means premium is largely irrelevant backstop for well-sited wind" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "0% CIT on retained profits is a unique and highly material advantage — significantly improves project-level DSCR and IRR vs. standard EU jurisdictions; 0% dividend WHT for EU parent" },
+    "ppa_enforceability": { "rag": "HIGH", "rationale": "VÕS provides reliable framework; courts efficient; growing Baltic PPA market; Nordic integration post-synchronization expands buyer universe" },
+    "political_risk": { "rag": "GREEN", "rationale": "A1/AA- sovereign; NATO member; e-Estonia world-leading governance; Baltic synchronization eliminated Russian grid dependency; no retroactive RES incidents" },
+    "operational_drag": { "rag": "GREEN", "rationale": "Score 45 — among lowest drag in EU; e-Estonia digital governance eliminates bureaucratic friction; cooperative municipalities; excellent TSO" },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "No comprehensive FDI screening law; most open investment environment in EU for commercial investments" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Competitive tender EC-cleared; near-zero subsidy trend may eliminate State Aid relevance entirely" },
+    "overall_stop_go": "GREEN",
+    "overall_rationale": "Estonia is an outstanding RES investment destination that combines a unique 0% CIT on retained profits (only 20% on distributions), world-class onshore wind resources (35–42% capacity factors on Saaremaa/Hiiumaa and coastal western Estonia), world-leading digital governance (near-zero bureaucratic friction), a maturing corporate PPA market with Nordic integration, and the security of Baltic ENTSO-E synchronization achieved in February 2025. The jurisdiction is approaching zero-subsidy for onshore wind. Suitable for all investor risk profiles including Low Risk Core Infrastructure."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 36,
+    "1_permitting_window_scope": "Onshore wind (coastal/island sites — Saaremaa, Hiiumaa, western mainland)",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 18,000–100,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 18,000–100,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "15–42",
+    "3_primary_support_mechanism": "Toetushind (Premium Tariff) — competitive tender via Konkurentsiamet; approaching zero-subsidy for onshore wind",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": "0% on retained profits; 20% on distributions (gross) / 25% of net dividend",
+    "4_effective_tax_rate_note": "UNIQUE Estonian system: 0% CIT on retained earnings. 20% rate applies only to distributed profits (dividends). Model 0% CIT during project operational period for retained profit scenarios. EU Parent-Subsidiary Directive: 0% dividend WHT for EU parent.",
+    "4_key_incentive": "0% CIT on retained profits is the primary and unique incentive — material improvement to project-level DSCR and IRR vs. standard EU CIT regimes",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Law of Obligations Act (VÕS); Tallinn Chamber Arbitration; EFET framework; Nord Pool market integration post-Baltic synchronization",
+    "6_political_risk_score": 82,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 45,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 38/MWh approx. (onshore wind, indicative recent tender reference price — approaching zero)",
+    "8_revenue_floor_eur": "EUR 38/MWh (EUR domestic)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Verify at Konkurentsiamet (konkurentsiamet.ee). Recent rounds near zero. Merchant/PPA scenario is primary modelling case for onshore wind."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Estonia is not an IPCEI participant. National hydrogen strategy in development. EU Just Transition and cohesion funds available. Baltic hydrogen corridor potential (interconnected with Finland/Latvia via Paldiski FSRU gas infrastructure)."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Market premium (turupreemia) under Elektrituruseadus (Electricity Market Act) administered by Elering.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Fermi Energia (private company) is exploring SMR deployment in Estonia. Government conducted feasibility study 2023. No policy decision made. Desynchronisation from Russian grid (BRELL) creates energy security motivation for nuclear discussion. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 3,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Paldiski FSRU commissioned December 2023. Shared Baltic infrastructure with Finland and Lithuania."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Estonia is transitioning away from oil shale. Gas-fired generation is part of transition. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Estonian bioenergy support under Elektrituruseadus framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

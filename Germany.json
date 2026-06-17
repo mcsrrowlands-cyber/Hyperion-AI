@@ -1,0 +1,617 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Germany",
+    "local_name": "Deutschland",
+    "iso_code": "DE",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "currency_eur_rate_source": "No conversion required. All figures are native EUR.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "EEG auction clearing prices (anzulegender Wert) are published quarterly by Bundesnetzagentur. Verify against current BNetzA publications before relying on figures below."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Erneuerbare-Energien-Gesetz 2023 (EEG 2023)", "relevance": "Primary legislation for renewable energy support; Marktprämie mechanism; auction framework; §2 overriding public interest provision" },
+      { "instrument": "Windenergie-auf-See-Gesetz (WindSeeG) 2017, as amended 2022/2023", "relevance": "Offshore wind licensing, BSH site investigation, BNetzA auction integration" },
+      { "instrument": "Energiewirtschaftsgesetz (EnWG)", "relevance": "Grid connection rights (§17–§18); Einspeisevorrang (priority access for renewables); network regulation" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Bundes-Immissionsschutzgesetz (BImSchG)", "relevance": "Primary permitting law for onshore wind farms; 4. BImSchV defines permit threshold" },
+      { "instrument": "Windenergieflächenbedarfsgesetz (WindBG) 2022", "relevance": "Requires each Bundesland to designate 2% of land area for wind energy by 2032; overrides local plan restrictions" },
+      { "instrument": "Baugesetzbuch (BauGB)", "relevance": "Spatial planning framework; §35 BauGB governs privileged use in open countryside (solar, wind)" },
+      { "instrument": "Umweltverträglichkeitsprüfungsgesetz (UVPG)", "relevance": "Environmental impact assessment (UVP) requirements — triggered for wind farms >6 turbines or >20MW in some Länder" },
+      { "instrument": "Bundesnaturschutzgesetz (BNatSchG)", "relevance": "Species protection law (Artenschutz); bat/bird collision assessment required for wind" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Körperschaftsteuergesetz (KStG)", "relevance": "15% corporation tax rate" },
+      { "instrument": "Solidaritätszuschlaggesetz (SolZG)", "relevance": "5.5% surcharge on Körperschaftsteuer = 0.825% effective addition" },
+      { "instrument": "Gewerbesteuergesetz (GewStG)", "relevance": "Trade tax; base rate 3.5% × municipal Hebesatz multiplier (typically 250–500%)" },
+      { "instrument": "Einkommensteuergesetz (EStG) §7 Abs. 2 (as amended by Wachstumschancengesetz 2024)", "relevance": "Degressive AfA (declining balance depreciation) reinstated at max 25% for assets acquired 1 April 2024 to 31 December 2028" },
+      { "instrument": "Wachstumschancengesetz (Growth Opportunities Act), in force March 2024", "relevance": "Reintroduced degressive AfA; primary CapEx timing incentive for renewable plant and equipment" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "EU State Aid Rules — CEEAG (Climate, Energy and Environmental Aid Guidelines) 2022/C 80/01", "relevance": "Primary framework for assessing EEG compatibility; replaced EEAG from January 2022" },
+      { "instrument": "General Block Exemption Regulation (GBER) — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for certain renewable energy aid without prior EC notification" },
+      { "instrument": "EU Emergency Regulation 2022/1854", "relevance": "Temporary revenue cap (now expired); set precedent for retroactive-adjacent windfall clawback" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Außenwirtschaftsgesetz (AWG) + Außenwirtschaftsverordnung (AWV) §55/§55a", "relevance": "BMWK right of review for non-EU/non-EFTA acquisitions; energy is 'critical infrastructure'" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "Mandatory cooperation with European Commission on FDI in critical sectors" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "P50 timelines run from formal application submission to permit grant. Pre-application (including EIA scoping, species surveys, grid pre-application) adds 12–36 months before the clock starts. Germany's permitting bottleneck is the primary operational drag in this jurisdiction.",
+    "solar_utility": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Gemeinde (municipality) for Bebauungsplan (B-Plan); Landratsamt (district authority) for building permit",
+      "above_threshold_authority": "No federal NSIP equivalent — all projects routed through Länder/local planning",
+      "primary_process": "Bebauungsplan (B-Plan) or §35 BauGB privileged use classification",
+      "legal_basis": "Baugesetzbuch (BauGB) §§30, 35; EEG 2023 §37 (expanded eligible area categories)",
+      "expanded_eligible_areas_eeg_2023": [
+        "Agricultural land (Agri-PV / dual use)",
+        "Grassland (Grünland)",
+        "200m corridor alongside Bundesautobahnen and Schienenwege (motorways and railways)",
+        "Contaminated/converted land (Konversionsflächen)",
+        "Noise and odour zones adjacent to designated areas"
+      ],
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 36,
+      "pre_application_months_typical": 12,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Verwaltungsgericht (VG) → Oberverwaltungsgericht/VGH → Bundesverwaltungsgericht (BVerwG)",
+      "notes": "EEG 2023 significantly expanded areas eligible for ground-mounted solar without needing to override local plans. B-Plan procedure is the primary route and is relatively streamlined compared to onshore wind. Community acceptance is generally favourable."
+    },
+    "onshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Immissionsschutzbehörde (varies by Bundesland — e.g., Regierungspräsidium in Bavaria/Baden-Württemberg; LANUV in NRW)",
+      "primary_process": "BImSchG Genehmigung (§4 BImSchG; 4. BImSchV — Vierte Bundesimmissionsschutzverordnung)",
+      "legal_basis": "Bundes-Immissionsschutzgesetz (BImSchG); WindBG 2022; §2 EEG 2023 (overriding public interest designation)",
+      "section_2_eeg_effect": "§2 EEG 2023 designates wind and solar in the 'overriding public interest and public safety'. Intended to tip species protection and landscape assessments in favour of projects.",
+      "timeline_p50_months": 48,
+      "timeline_min_months": 30,
+      "timeline_max_months": 84,
+      "pre_application_months_typical": 24,
+      "appeal_risk": "high",
+      "appeal_mechanism": "VG → OVG/VGH → BVerwG; injunctions (einstweiliger Rechtsschutz) can halt construction pending judgment",
+      "setback_rules_by_land": {
+        "bavaria": {
+          "rule": "10H-Abstandsregel (10× hub height from residential buildings)",
+          "effective_setback_metres_approx": 2000,
+          "legal_basis": "Bayerische Bauordnung (BayBO); Art. 82 BayBO",
+          "practical_impact": "Effectively prohibits most onshore wind development in Bavaria — less than 0.1% of Bavaria's land area is compliant",
+          "reform_status": "10H partially relaxed from November 2022: 1000m minimum applies in designated Vorranggebiete (priority zones); overall rule largely persists"
+        },
+        "national_minimum": {
+          "rule": "No binding federal setback enacted. Federal 1000m proposal was rejected in Bundestag in 2020.",
+          "variation": "Setback rules are Länder-specific; NRW, Niedersachsen, and Brandenburg are more permissive than Bavaria/Baden-Württemberg"
+        }
+      },
+      "species_protection_notes": "Artenschutzrechtliche Prüfung (ASP) required — bat and red kite (Rotmilan) surveys are primary bottlenecks. BNatSchG §44 prohibits killing/disturbance of protected species. BVerwG judgment of 27 November 2018 tightened species assessment standards.",
+      "notes": "Onshore wind permitting in Germany is the primary operational drag for this jurisdiction. Legal challenge culture is well-developed; opponents routinely seek injunctions. Bavaria's 10H rule functionally excludes Germany's largest state from development. WindBG 2022 and §2 EEG 2023 are structural reforms designed to improve timelines — impact is gradually materialising."
+    },
+    "offshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Bundesnetzagentur (BNetzA) for auction; Bundesamt für Seeschifffahrt und Hydrographie (BSH) for marine licensing",
+      "primary_process": "Centrally planned: BSH conducts Voruntersuchung (site pre-investigation); BNetzA runs competitive auction for developed sites",
+      "legal_basis": "Windenergie-auf-See-Gesetz (WindSeeG) 2017 as amended 2022/2023; Seeanlagenverordnung (SeeAnlV)",
+      "model": "State-led site preparation model (post-2022 reform) — sites pre-investigated and zoned by BSH before auction",
+      "timeline_p50_months": 96,
+      "timeline_min_months": 60,
+      "timeline_max_months": 144,
+      "capacity_targets": "National target: 30 GW offshore by 2030; 70 GW by 2045 (EEG 2023 / Koalitionsvertrag)",
+      "appeal_risk": "medium",
+      "notes": "Post-2022 WindSeeG reform moved to a centralized state-led model where BSH pre-investigates sites before auction. This reduces individual project permitting risk but creates long front-end public sector timelines. Military and shipping lane constraints are material in German North Sea and Baltic."
+    },
+    "battery_storage_utility": {
+      "primary_process": "BImSchG permit required for BESS above certain thresholds; B-Plan for smaller standalone units",
+      "legal_basis": "BImSchG; 4. BImSchV Anhang 1 (Nr. 1.8 — electrical energy storage above 200 MWh or >10MW discharge)",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 9,
+      "timeline_max_months": 36,
+      "notes": "BESS consenting is more straightforward than wind; key constraint is grid connection queue and transformer capacity. BESS does not attract EEG Marktprämie; revenue from frequency response (FCR/aFRR) and intraday arbitrage."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "Amprion", "region": "West/Central Germany" },
+      { "name": "TenneT TSO", "region": "North/South Germany (incl. offshore North Sea)" },
+      { "name": "50Hertz Transmission", "region": "North/East Germany (incl. offshore Baltic)" },
+      { "name": "TransnetBW", "region": "Baden-Württemberg" }
+    ],
+    "distribution_operators": "Approx. 900 DSOs — connection via DSO for sub-transmission projects",
+    "regulatory_authority": "Bundesnetzagentur (BNetzA)",
+    "legal_basis": "Energiewirtschaftsgesetz (EnWG) §§17–18 (connection rights); §§11–12 (congestion management); EEG 2023 §§8–14 (Einspeisevorrang)",
+    "priority_access": {
+      "applicable": true,
+      "mechanism": "Einspeisevorrang (priority feed-in right) under §11 EEG 2023",
+      "description": "Renewables have statutory right to be connected and dispatched ahead of conventional generation. TSO must accept renewable output except where curtailment (Einspeisemanagement) is required for grid stability."
+    },
+    "einspeisemanagement": {
+      "description": "Einspeisemanagement (§14 EEG 2023) allows TSO/DSO to remotely curtail renewable output where grid constraints prevent full dispatch",
+      "compensation": "80% of lost revenue is compensated via hardship clause (Härtefallregelung) for curtailment above 1% of annual generation",
+      "north_germany_risk": "High — north-south transmission bottleneck means significant curtailment of wind generation in Niedersachsen, Schleswig-Holstein, and Brandenburg"
+    },
+    "north_south_bottleneck": {
+      "description": "Structural constraint between north Germany (high wind generation) and south Germany (high demand, phase-out of nuclear in 2023)",
+      "major_infrastructure_projects": [
+        { "name": "SuedLink", "route": "Schleswig-Holstein to Bavaria/Baden-Württemberg", "capacity_gw": 4, "status": "Under construction; target completion 2027-2028" },
+        { "name": "SuedOstLink", "route": "Sachsen-Anhalt to Bavaria", "capacity_gw": 4, "status": "Under construction; target completion 2028" }
+      ],
+      "notes": "Until SuedLink/SuedOstLink are complete, north German generators face material curtailment risk and southern capacity is constrained. Projects in north Germany should model curtailment conservatively."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 36, "range": "24–72", "notes": "Priority access right exists but grid reinforcement timelines drive actual connection dates" },
+      "distribution_connected": { "p50": 18, "range": "12–36" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 40000,
+      "range_high": 250000,
+      "notes": "Costs regulated under EnWG. Connection costs borne by the project (Netzanschlusskostenbeitrag). Network reinforcement costs beyond the connection point are socialised via network tariffs. Offshore submarine cable costs can be substantially higher."
+    },
+    "operational_drag_assessment": "MEDIUM — priority access framework is better than UK, but north-south congestion and reinforcement timelines are real constraints for north German projects"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The German EEG Marktprämie is a ONE-WAY mechanism (sliding market premium). There is NO clawback of revenue above the reference value (anzulegender Wert). The premium is floored at zero — operators retain full merchant upside above reference price. This is fundamentally different from the UK's two-way CfD. Return assumptions must reflect uncapped upside.",
+    "primary_mechanism": "Gleitende Marktprämie (Sliding Market Premium)",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Bundesnetzagentur (BNetzA) for auctions; Netzbetreiber (grid operator) for premium disbursement",
+    "legal_basis": "EEG 2023 §§19–26 (Marktprämie); §§28–39k (technology-specific auction provisions); §§2–3 (definitions)",
+    "mechanism_description": {
+      "summary": "Generator sells electricity on the spot market (EPEX SPOT). Generator also receives a sliding market premium equal to max(0, anzulegender Wert − Marktwert Strom). The Marktwert Strom is the technology-specific monthly average market price. If market prices rise above the reference value, the premium is zero — the generator keeps all market upside. There is no clawback.",
+      "upside_treatment": "UNCAPPED — no clawback of merchant revenue above reference value (anzulegender Wert). Generator retains full spot market upside.",
+      "downside_treatment": "PROTECTED — when spot market falls below reference value, premium tops up to reference value level",
+      "merchant_exposure_during_term": "Partial — revenue is benchmarked monthly against Marktwert, not hourly spot price. Some intra-month basis risk.",
+      "contract_term_years": 20,
+      "direktvermarktung": "Generator must sell power via a licensed Direktvermarkter (direct marketer) on the exchange. Premium flows via Direktvermarkter."
+    },
+    "marktwert_cannibalization_risk": {
+      "description": "The Marktwert Strom (monthly technology-specific reference price) reflects the average price during hours when that technology generates. As solar/wind penetration increases, these hours see lower spot prices (merit-order effect / self-cannibalization), compressing the effective Marktwert vs. baseload reference price.",
+      "solar_specific": "Marktwert Solar is often 10–25% below baseload price due to midday price depression. Modellers must use technology-specific Marktwert, not baseload futures.",
+      "source": "BNetzA publishes monthly Marktwert data. EPEX SPOT / EEX historical data available."
+    },
+    "auction": {
+      "administrator": "Bundesnetzagentur (BNetzA)",
+      "frequency": "Quarterly for onshore wind and solar; annual for offshore wind",
+      "technology_auctions": [
+        "Onshore wind (Ausschreibung Windenergie an Land)",
+        "Solar PV — ground-mounted (Freiflächenausschreibung)",
+        "Solar PV — building-integrated (Dachanlagenausschreibung)",
+        "Offshore wind (separate WindSeeG auction)",
+        "Technology-neutral cross-technology (Innovationsausschreibung)"
+      ],
+      "anzulegender_wert_eur_mwh_approx": {
+        "_staleness_warning": "Clearing prices change quarterly. These are approximate 2024 ranges. Verify current clearing prices at BNetzA Ausschreibungsergebnisse before use.",
+        "_source": "Bundesnetzagentur, Ausschreibungsergebnisse 2024 — bundesnetzagentur.de",
+        "onshore_wind": {
+          "eur_mwh_range_low": 70.00,
+          "eur_mwh_range_high": 85.00,
+          "notes": "Nominal EUR — not inflation-adjusted. Indexed annually via §26 EEG 2023."
+        },
+        "solar_pv_ground_mounted": {
+          "eur_mwh_range_low": 52.00,
+          "eur_mwh_range_high": 66.00,
+          "notes": "Clearing prices have risen materially since 2021 due to supply chain cost inflation."
+        },
+        "offshore_wind": {
+          "eur_mwh_range_low": 0.00,
+          "eur_mwh_range_high": 95.00,
+          "notes": "Offshore wind saw zero-subsidy bids in 2022 (AR3 equivalent — pure merchant exposure accepted by bidders). Subsequent rounds have seen positive clearing prices as market conditions changed. Range reflects volatility."
+        }
+      },
+      "de_minimis_threshold_kw": {
+        "onshore_wind_exempt": 750,
+        "solar_exempt_residential": 1000,
+        "note": "Sub-threshold projects receive a fixed administrative tariff without needing to participate in auction (§21 EEG 2023 — Einspeisevergütung)"
+      }
+    },
+    "eeg_levy_abolition": {
+      "levy_abolished": true,
+      "date": "2022-07-01",
+      "legal_basis": "EEG 2022 Amendment (Osterpaket); EEG 2023 confirmation",
+      "notes": "The EEG-Umlage (levy on electricity consumers funding the premium) was set to zero from 1 July 2022 and formally abolished in EEG 2023. Premium funding now via federal budget (Bundeshaushalt)."
+    },
+    "temporary_windfall_clawback": {
+      "instrument": "EU Emergency Regulation (EU) 2022/1854; implemented via Strompreisbremsegesetz (StromPBG) / Energiepreisbremsengesetz",
+      "revenue_cap_eur_mwh": 130,
+      "applied_to": "Onshore wind, solar PV, run-of-river hydro",
+      "period": "2022-12-01 to 2023-06-30",
+      "status": "EXPIRED — no longer in force",
+      "retroactive_risk_note": "This mechanism was a one-time emergency measure activated during the 2022 energy crisis. It is not part of the structural EEG framework. However, it represents a precedent that emergency claw-back instruments exist at EU and national level and can be activated rapidly."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Degressive AfA under Wachstumschancengesetz 2024 is a CapEx TIMING benefit — not a permanent reduction to the effective tax rate. NPV of the tax shield must be calculated and shown separately from the headline depreciation rate.",
+    "corporation_tax_structure": {
+      "korperschaftsteuer_rate_pct": 15.0,
+      "solidaritatszuschlag_rate_pct_on_kst": 5.5,
+      "solidaritatszuschlag_effective_pct": 0.825,
+      "kst_plus_soli_combined_pct": 15.825,
+      "legal_basis": "Körperschaftsteuergesetz (KStG); Solidaritätszuschlaggesetz (SolZG)"
+    },
+    "trade_tax": {
+      "gewerbesteuer_base_rate_pct": 3.5,
+      "hebesatz_range_pct": { "min": 200, "typical_urban": 400, "max_observed": 500 },
+      "effective_gewerbesteuer_range_pct": { "min": 7.0, "typical": 14.0, "max_observed": 17.5 },
+      "legal_basis": "Gewerbesteuergesetz (GewStG)",
+      "crediting_against_income_tax": "Creditable against Einkommensteuer for individuals (§35 EStG) — NOT creditable for corporations",
+      "municipality_revenue_sharing_renewables": {
+        "applicable": true,
+        "mechanism": "§2a GewStG — 70% of Gewerbesteuer from wind/solar plants allocated to Standortgemeinde (host municipality)",
+        "planning_relevance": "Municipalities have financial incentive to host renewable projects — can smooth planning consent"
+      },
+      "notes": "GewSt varies by municipal Hebesatz. For CapEx modelling, use Hebesatz of the project's host municipality. Typical blended effective rate for corporate entities: 28–33% (KSt + Soli + GewSt combined)."
+    },
+    "combined_effective_tax_rate_range_pct": {
+      "low_hebesatz": 24.0,
+      "typical": 30.0,
+      "high_hebesatz": 33.5,
+      "notes": "Combined KSt (15%) + Soli (0.825%) + GewSt (7–17.5%). Project-specific rate depends on host municipality. Use 29–31% as planning rate for typical locations."
+    },
+    "capex_incentives": {
+      "degressive_afa": {
+        "type": "declining_balance_depreciation",
+        "rate_pct_max": 25.0,
+        "cap": "Maximum 2.5× the applicable straight-line rate",
+        "qualifying_assets": "Moveable plant and machinery — wind turbines, solar panels, inverters, transformers, BESS",
+        "qualifying_period": "Assets acquired or manufactured between 1 April 2024 and 31 December 2028",
+        "legal_basis": "§7 Abs. 2 EStG as amended by Wachstumschancengesetz (Growth Opportunities Act) 2024, in force 28 March 2024",
+        "permanent": false,
+        "sunset_date": "2028-12-31",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 30% combined effective tax rate and 10% WACC: NPV of tax shield under 25% degressive AfA for wind turbine (20-year life) ≈ 25.1% of qualifying CapEx. Under standard straight-line AfA (5% p.a. over 20 years): NPV of tax shield ≈ 16.8%. Timing benefit (NPV delta) ≈ 8.3ppts per €1 of qualifying CapEx.",
+          "note": "Timing benefit only. Total tax deduction over asset life is identical. Degressive AfA front-loads the cash flow benefit. Impact is particularly significant for high-discount-rate investors."
+        }
+      },
+      "solar_pv_small_systems_tax_exempt": {
+        "applicable_to_utility_scale": false,
+        "description": "PV systems ≤30kWp (single-family homes) exempt from income tax and VAT from 1 January 2023 (§3 Nr. 72 EStG; §12 Abs. 3 UStG). Not applicable to utility-scale projects.",
+        "legal_basis": "Jahressteuergesetz 2022 (JStG 2022)"
+      }
+    },
+    "writing_down_allowance_standard": {
+      "wind_turbines_useful_life_years": { "min": 16, "max": 20 },
+      "solar_pv_panels_useful_life_years": 20,
+      "method": "straight_line (lineare AfA) as default under §7 Abs. 1 EStG"
+    },
+    "vat": {
+      "standard_rate_pct": 19,
+      "reduced_rate_pct": 7,
+      "applies_to_commercial_renewables": true,
+      "input_vat_recovery": "Available for VAT-registered businesses generating taxable supplies",
+      "small_pv_zero_rate": "0% supply/installation VAT for PV systems ≤30kWp from 1 January 2023 — not applicable to utility-scale",
+      "legal_basis": "Umsatzsteuergesetz (UStG); §12 Abs. 3 UStG (zero-rate for small PV)"
+    },
+    "real_estate_transfer_tax": {
+      "grunderwerbsteuer_rate_pct_range": { "min": 3.5, "max": 6.5 },
+      "rate_set_by": "Bundesland — varies by state (Bavaria: 3.5%; North Rhine-Westphalia: 6.5%; Brandenburg: 6.5%)",
+      "legal_basis": "Grunderwerbsteuergesetz (GrEStG)",
+      "share_deal_note": "RETT can be avoided via share deal structures using <95% transfer to a new entity or RETT-blocker SPV structures — requires specialist German tax advice."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "Bürgerliches Gesetzbuch (BGB) — German Civil Code; §§433 et seq. (sale of goods); freedom of contract (Vertragsfreiheit) under §241 BGB. No bespoke PPA statute.",
+    "jurisdiction_enforcement": "German courts are reliable and well-regarded. Cologne/Düsseldorf arbitration common. ICC and DIS (Deutsche Institution für Schiedsgerichtsbarkeit) both active.",
+    "market_liquidity": "Medium-High and growing",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Automotive (BMW, Volkswagen), chemical (BASF, Bayer), tech (Google, Amazon, Microsoft DE), industrial",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement", "Bespoke bilateral under BGB", "Virtual / financial PPA (CfD-for-difference structure)"],
+    "direktvermarktung_interaction": {
+      "note": "EEG-supported projects must sell via Direktvermarktung. Corporate PPAs alongside EEG Marktprämie are structurally complex — typically structured as a virtual (financial) PPA or via physical delivery to a licensed supplier who then sells to the corporate. Seek specialist structuring advice.",
+      "virtual_ppa": "Contract for Difference between generator and corporate buyer referencing a market price index (e.g., EPEX DE/AT baseload). No physical delivery; manages price risk only."
+    },
+    "herkunftsnachweise": {
+      "description": "Herkunftsnachweise (HKN) — German Guarantees of Origin (equivalent to UK REGOs)",
+      "regulator": "Umweltbundesamt (UBA)",
+      "note": "HKN are required for corporate green power claims. EEG-supported projects are NOT eligible for HKN (as subsidy already compensates the green attribute). Only merchant/PPA projects can issue HKN."
+    },
+    "credit_risk_note": "Counterparty credit risk not state-backstopped. Minimum investment-grade offtaker recommended. German market has a deep pool of investment-grade industrial and tech corporates.",
+    "cross_border_enforceability": "High — German courts widely respected; NY Convention signatory; EU enforcement regime applies"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 89,
+    "credit_ratings": {
+      "moodys": "Aaa",
+      "sp": "AAA",
+      "fitch": "AAA",
+      "source_note": "Verify current ratings — agency outlooks change. Germany retained Aaa/AAA status through 2024-2025 budget disputes."
+    },
+    "political_stability": "High",
+    "government_structure": "Federal parliamentary republic — coalition governments are the norm; Bundesrat (upper house) provides additional constitutional check",
+    "regulatory_track_record": "Generally strong — EEG has provided continuous long-term support since 2000. Framework reformed frequently but forward-looking rather than retroactive.",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2012",
+        "description": "Rapid acceleration of EEG solar FiT degression schedule and introduction of annual capacity caps",
+        "impact": "Prospective only for new FiT rates — existing contracts protected. However, market disruption caused mass project failures and investor losses on development pipeline.",
+        "severity": "Medium — technically prospective but practically destabilising for investors who had underwritten near-term deal flow"
+      },
+      {
+        "year": "2022–2023",
+        "description": "EU Emergency Regulation (EU) 2022/1854 — revenue cap of €130/MWh applied to onshore wind and solar via Strompreisbremsegesetz",
+        "impact": "RETROACTIVE for the December 2022 – June 2023 period. Revenue above €130/MWh clawed back from generators.",
+        "severity": "Medium — significant but temporary; expired 30 June 2023; activated by acute EU-level energy emergency",
+        "precedent_note": "Sets a precedent that emergency EU-level clawback instruments exist and can be activated rapidly. Material to political risk assessment for high-return scenarios."
+      },
+      {
+        "year": "2011–2021",
+        "description": "Nuclear phase-out reversal and re-reversal. Vattenfall AB v. Germany ICSID arbitration (concluded 2021, settled €1.4bn)",
+        "impact": "Relevant to expropriation/policy reversal risk assessment for any investor relying on long-term policy commitments",
+        "severity": "Low for renewable energy investors directly"
+      }
+    ],
+    "expropriation_risk": "Very Low",
+    "currency_risk": "None — EUR is domestic currency",
+    "political_notes": "Germany is an EU founding member and the largest EU economy. Constitutional court (Bundesverfassungsgericht) provides strong rule-of-law protection. Coalition politics can slow legislation but rarely reverses committed support schemes mid-term.",
+    "score_rationale": "Deductions from 100: 2022-2023 windfall levy precedent (-5), 2012 solar FiT rapid revision precedent (-3), Bavaria 10H political risk to onshore wind as policy tool (-3)."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
+    "operational_drag_score_out_of_100": 65,
+    "component_scores": {
+      "grid_connection_drag": { "score": 45, "assessment": "MEDIUM — Einspeisevorrang priority access is a structural advantage vs UK; connection timelines shorter but north-south congestion is real" },
+      "permitting_drag_onshore_wind": { "score": 80, "assessment": "HIGH — BImSchG process plus species surveys plus legal challenge exposure means 3–7 year realistic timelines; Bavaria 10H rule is functionally prohibitive" },
+      "permitting_drag_solar": { "score": 40, "assessment": "LOW-MEDIUM — B-Plan route is relatively straightforward; EEG 2023 expanded eligible areas; community acceptance high" },
+      "permitting_drag_offshore": { "score": 70, "assessment": "HIGH — BSH pre-investigation and WindSeeG centralized model means very long front-end lead times for state processes" },
+      "bureaucratic_friction": { "score": 65, "assessment": "MEDIUM-HIGH — federal system with Länder-level permitting creates variation and complexity; strong administrative court system means robust but slow challenge mechanisms" },
+      "judicial_appeal_risk": { "score": 75, "assessment": "HIGH — well-developed administrative law; organised opposition (NABU, citizen groups) routinely challenges wind permits; injunctions available and commonly granted" }
+    },
+    "primary_bottleneck": "Onshore wind permitting and legal challenge risk — Bavaria 10H rule and Artenschutz (species protection) assessments are the primary barriers",
+    "secondary_bottleneck": "North-south grid congestion causing curtailment (Einspeisemanagement) for north German generators pending SuedLink/SuedOstLink completion",
+    "technology_specific_note": "Solar and BESS have materially lower operational drag than onshore wind. Investors in solar/BESS will experience a lower effective drag than the composite score suggests.",
+    "score_rationale": "Onshore wind drag is the dominant component. Solar drag is low. Grid drag is better than UK but still material for north Germany. Legal challenge culture pushes the composite score to 65."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Außenwirtschaftsgesetz (AWG) + Außenwirtschaftsverordnung (AWV) §55/§55a; EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "critical_infrastructure_threshold_pct": 10,
+    "cross_sector_threshold_pct": 25,
+    "reviewing_ministry": "Bundesministerium für Wirtschaft und Klimaschutz (BMWK)",
+    "legal_basis": "AWG §§4–5; AWV §55 (cross-sector review, 25% threshold); §55a (critical infrastructure, 10% threshold)",
+    "energy_as_critical_infrastructure": "Yes — power generation, transmission, and distribution are listed critical infrastructure under AWV Anlage (schedule)",
+    "clearance_timeline": {
+      "initial_screening_working_days": 25,
+      "formal_review_if_opened_calendar_days": 90,
+      "extension_possible": true,
+      "extension_max_calendar_days": 90
+    },
+    "eu_fdi_cooperation": "Germany must notify the EC and other EU member states of FDI proceedings in sectors covered by Regulation (EU) 2019/452. EC opinion is non-binding but must be addressed.",
+    "practical_risk": "Low-Medium",
+    "notes": "BMWK has exercised veto powers in recent years — notably in semiconductor and critical minerals sectors. Renewable energy projects from OECD-domiciled investors face low prohibition risk but mandatory notification compliance is required. Chinese and Russian-affiliated investors face significantly heightened scrutiny."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "Climate, Energy and Environmental Aid Guidelines (CEEAG) — Commission Notice 2022/C 80/01, in force 27 January 2022",
+    "secondary_framework": "General Block Exemption Regulation (GBER) — Commission Regulation (EU) 651/2014 as amended by Regulation (EU) 2023/1315",
+    "eeg_state_aid_history": [
+      { "instrument": "EEG 2014", "decision": "EC Decision SA.45461 (2017) — declared compatible with internal market subject to conditions" },
+      { "instrument": "EEG 2017", "decision": "EC Decision SA.45963 — compatibility clearance" },
+      { "instrument": "EEG 2023", "status": "Reviewed under CEEAG; competitive bidding (auction) mechanism satisfies proportionality test; EC clearance received" }
+    ],
+    "retrospective_clawback_risk": {
+      "assessment": "Low",
+      "notes": "EEG has received sequential EC clearance decisions. The competitive auction mechanism (Ausschreibung) satisfies CEEAG proportionality requirements. No material clawback risk for auction-winning projects under current cleared framework.",
+      "windfall_levy_note": "The 2022-2023 revenue cap (EU Reg 2022/1854) was an EC-coordinated emergency measure — not an EC recovery decision. Distinct from State Aid clawback."
+    },
+    "tctf_applicability": {
+      "applicable": false,
+      "notes": "The Temporary Crisis and Transition Framework (TCTF) was designed for new/expanded support measures during the 2022 energy crisis. Current EEG 2023 framework operates under CEEAG, not TCTF. TCTF is transitional and phasing out."
+    },
+    "gber_eligibility": {
+      "small_projects": "Sub-threshold EEG projects (de minimis, <€200k aid per project) may qualify for GBER block exemption without notification",
+      "larger_projects": "Must be cleared under CEEAG or via formal notification — achieved through the existing EEG framework clearance"
+    },
+    "notification_status": "EEG 2023 cleared — no additional notification required for standard auction-based projects under the cleared framework"
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: These inputs are for use in IRR, NPV, CapEx payback, DSCR, and LCOE modelling. Do not rely solely on qualitative descriptors.",
+    "_rule_3c_note": "Germany is a EUR-denominated jurisdiction. No FX conversion required. All figures are native EUR.",
+    "_rule_3a_note": "Return modelling must reflect the ONE-WAY mechanism: floor at anzulegender Wert but uncapped merchant upside. Do not model as a two-way CfD.",
+    "illustrative_onshore_wind_marktpramie": {
+      "anzulegender_wert_eur_mwh_approx": 77.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct": 28,
+      "marktwert_cannibalization_discount_pct": 5,
+      "typical_capex_eur_per_mw": 1500000,
+      "opex_eur_per_mw_per_year": 45000,
+      "combined_effective_tax_rate_pct": 30,
+      "degressive_afa_available": true,
+      "note": "Capacity factor is a national average. North German coastal sites can exceed 40%; south German sites may be <25%. Use site-specific P50 wind assessment."
+    },
+    "illustrative_solar_pv_marktpramie": {
+      "anzulegender_wert_eur_mwh_approx": 59.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct_dc": 11,
+      "marktwert_cannibalization_discount_pct": 15,
+      "typical_capex_eur_per_mw_dc": 600000,
+      "opex_eur_per_mw_per_year": 15000,
+      "note": "Solar Marktwert cannibalization is significant and growing. German irradiation (900–1100 kWh/kWp p.a.) is lower than southern Europe. Agri-PV structures add ~10-20% to CapEx but unlock farmland sites."
+    },
+    "illustrative_offshore_wind": {
+      "anzulegender_wert_eur_mwh_approx": 65.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct": 46,
+      "typical_capex_eur_per_mw": 4000000,
+      "opex_eur_per_mw_per_year": 120000,
+      "note": "Offshore capex is highly project-specific. Distance to shore and water depth are primary cost drivers. German North Sea projects tend to be further from shore than UK equivalents."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix is mandatory and must appear before narrative. Stop/Go signal for jurisdiction screening.",
+    "permitting_window_solar": { "rag": "GREEN", "rationale": "B-Plan route is streamlined; EEG 2023 expanded eligible areas; community acceptance generally positive" },
+    "permitting_window_onshore_wind": { "rag": "RED", "rationale": "Bavaria 10H rule blocks Germany's largest state; species protection (Artenschutz) surveys add 2+ years; legal challenge culture means 4–7 year realistic P50" },
+    "permitting_window_offshore": { "rag": "AMBER", "rationale": "Centralised BSH/BNetzA model reduces individual project risk but state-led timelines are long; capacity targets are ambitious and well-funded" },
+    "grid_connection": { "rag": "AMBER", "rationale": "Einspeisevorrang priority access is a structural positive; north-south congestion creates curtailment risk for north German projects pending SuedLink completion" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "EEG 2023 provides quarterly auctions, 20-year one-way premium contracts, and strong legal certainty; EEG has operated without interruption since 2000" },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "Combined CIT+GewSt rate of 28–33% is higher than many peers. Degressive AfA (Wachstumschancengesetz 2024) provides meaningful timing benefit until 2028 sunset; GewSt varies by municipality" },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "BGB contract law is well-developed; German courts are reliable; growing corporate buyer market; HKN framework provides green attribute certifications for merchant projects" },
+    "political_risk": { "rag": "GREEN", "rationale": "Aaa/AAA sovereign; EEG has operated continuously since 2000; no structural retroactive clawback of existing contracts" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Solar/BESS drag is low; onshore wind drag is severe (RED-level); offshore wind improving under centralised model" },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "AWV mandatory notification applies; 10% threshold for energy critical infrastructure; low prohibition risk for OECD investors but Chinese/Russian-affiliated investors face elevated scrutiny" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "EEG 2023 cleared under CEEAG; competitive auction mechanism satisfies proportionality; no material clawback risk for current framework projects" },
+    "windfall_levy_precedent": { "rag": "AMBER", "rationale": "Expired 2022-2023 revenue cap sets a precedent for EU-coordinated emergency clawback. Risk is scenario-specific to extreme energy price environments." },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Germany offers outstanding sovereign stability, a mature 20-year support framework, and a competitive EEG auction programme. Technology choice is critical: solar and BESS are straightforward; onshore wind in Bavaria is functionally off-limits; north German wind offers excellent resource but faces grid congestion and permitting complexity. Suitable for investors with 5+ year development timelines and technology selectivity."
+  },
+
+  "comparison_table": {
+    "_rule_5b_note": "Rule 5B: Standardised comparison categories. Reproduced identically across all jurisdiction JSONs.",
+    "1_permitting_window_months_p50": 48,
+    "1_permitting_window_scope": "Onshore wind via BImSchG (P50 — excludes Bavaria)",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 40,000–250,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 40,000–250,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "18–72 (transmission-connected)",
+    "3_primary_support_mechanism": "Gleitende Marktprämie (Sliding Market Premium — EEG 2023)",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": 30,
+    "4_effective_tax_rate_note": "Combined KSt (15%) + Soli (0.825%) + GewSt (~14% at typical Hebesatz 400%). Project-specific — verify host municipality Hebesatz.",
+    "4_key_incentive": "Degressive AfA 25% declining balance for assets acquired April 2024 – December 2028 (Wachstumschancengesetz 2024, §7 Abs. 2 EStG)",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "BGB (Bürgerliches Gesetzbuch) contract law; German civil courts; EFET framework widely adopted",
+    "6_political_risk_score": 89,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 65,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 77/MWh approx. (onshore wind, indicative 2024 auction clearing price)",
+    "8_revenue_floor_eur": "EUR 77/MWh (no conversion required — domestic currency)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Anzulegender Wert changes quarterly. Verify at BNetzA Ausschreibungsergebnisse before use."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "FCR/aFRR/mFRR ancillary services markets via BNetzA. No specific BESS subsidy. BImSchG permit required for systems >200MWh. Source: BNetzA/national_tso.",
+      "revenue_floor_description": null,
+      "source": "national_tso",
+      "notes": "Germany has no dedicated BESS subsidy. Revenue from ancillary services (Primärregelleistung FCR, Sekundärregelleistung aFRR, Minutenreserve mFRR) via 4-TSO Regelenergiemarkt platform. BImSchG permit required for storage >200MWh. Capacity market under political discussion."
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Germany participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). Nationale Wasserstoffstrategie (2023 update) targets 10 GW domestic electrolysis by 2030. H2-Global auction mechanism for import contracts. Contracts for Difference for domestic production (H2-Differenzverträge) under BMWK.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Germany is IPCEI Hy2Tech and Hy2Infra participant with Europe's largest national H2 investment programme. H2-Global import auction and domestic H2-Differenzvertrag CfD programme are primary support mechanisms. Verify current auction round parameters via BMWK/NOW before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Marktprämie (market premium / anzulegender Wert) under Erneuerbare-Energien-Gesetz (EEG 2023), administered via BNetzA ausschreibungen.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "phase_out",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": null,
+      "notes": "Germany completed its nuclear phase-out in April 2023 — the last three plants (Isar 2, Emsland, Neckarwestheim 2) were shut down on 15 April 2023 per Atomgesetz amendment. No SMR programme. Political debate on reversal exists at fringe level but no legislative change underway."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 30,
+      "permitting_p50_months": 24,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Germany built floating LNG terminals rapidly in 2023 in response to Russian gas supply disruption. Capacity is FSRU-based — higher operational risk than onshore terminals. Permanent onshore capacity at Brunsbüttel under development."
+    },
+    "data_centre": {
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "high",
+      "renewable_ppa_market_depth": "high",
+      "source": "national_tso",
+      "notes": "BImSchG or B-Plan route. Grid capacity is severely constrained in most regions — high risk for new large data-centre connections. Active corporate PPA market. Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": false,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Germany operates an energy-only market with no formal capacity market. CCGT and peaker plants are merchant-exposed. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. Capacity market debate ongoing but no formal scheme as of 2026. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "primary_support_mechanism": "EEG 2023 Marktprämie available for biomethane and waste-to-energy plants meeting fuel sustainability criteria (BiomasseV). Source: BNetzA/ec_state_aid.",
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Germany's EEG 2023 provides a Marktprämie for biomethane and biowaste-to-energy plants. Biomasseverordnung (BiomasseV) governs feedstock sustainability criteria. EU RED III compliance required. Verify current EEG auction parameters at BNetzA before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Coal Adjustment Act (KVBG, 2020) — hard coal phase-out by 2038, potentially accelerated to 2030 under coalition discussions.",
+      "source": null,
+      "notes": "Germany's coal phase-out is legislated (KVBG). New coal investment is policy-incompatible. No state support for new coal. EU Taxonomy-excluded. Significant stranded-asset risk."
+    }
+  }
+}

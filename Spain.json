@@ -1,0 +1,447 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Spain",
+    "local_name": "Reino de España",
+    "iso_code": "ES",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "REER auction clearing prices change with each auction round. IVPEE (7% production tax) has been subject to temporary suspension — verify current status with MITECO/CNMC before use. All regulatory parameters should be confirmed against current BOE publications."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Ley 24/2013 del Sector Eléctrico (Electricity Sector Act)", "relevance": "Consolidated primary electricity legislation; established REER framework; Articles 13–14 govern specific remuneration (retribución específica) for renewables" },
+      { "instrument": "Real Decreto 960/2020, de 3 de noviembre (REER Regulation)", "relevance": "Defines the Régimen Económico de Energías Renovables (REER); two-way CfD mechanism; auction process" },
+      { "instrument": "Ley 7/2021, de 20 de mayo, de cambio climático y transición energética", "relevance": "Climate and energy transition framework; renewable energy targets; permitting acceleration provisions" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Real Decreto-ley 23/2020, de 23 de junio", "relevance": "Emergency simplification of renewable energy permitting; grid access reform; streamlined DIA procedures" },
+      { "instrument": "Real Decreto 1183/2020, de 29 de diciembre", "relevance": "Grid access and connection reform — replaced node-based system; critical for project development pipeline" },
+      { "instrument": "Ley 21/2013 de evaluación ambiental", "relevance": "Environmental impact assessment (Declaración de Impacto Ambiental — DIA) procedural framework" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Ley 27/2014, de 27 de noviembre, del Impuesto sobre Sociedades", "relevance": "25% corporate tax (Impuesto sobre Sociedades — IS)" },
+      { "instrument": "Ley 15/2012, de 27 de diciembre, de medidas fiscales para la sostenibilidad energética", "relevance": "IVPEE — 7% tax on total value of electricity production. Subject to modification. Verify current status." }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Climate, Energy and Environmental Aid Guidelines 2022/C 80/01", "relevance": "EC framework for REER compatibility assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption for sub-threshold aids" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Real Decreto-ley 8/2020, de 17 de marzo (FDI screening)", "relevance": "Introduced screening for non-EU FDI in strategic sectors including energy; extended multiple times" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation mechanism" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Spain splits permitting jurisdiction at 50MW between national (MITECO) and regional (Comunidad Autónoma) levels. This creates 17 different regional regimes below the threshold — significant due diligence complexity.",
+    "solar_utility": {
+      "threshold_mw_national_process": 50,
+      "sub_threshold_authority": "Comunidad Autónoma (regional government) — regime varies by region",
+      "above_threshold_authority": "Ministerio para la Transición Ecológica y el Reto Demográfico (MITECO)",
+      "primary_process": "Autorización administrativa previa + Autorización de construcción + Declaración de Impacto Ambiental (DIA)",
+      "legal_basis": "Ley 21/2013 de evaluación ambiental; Ley 24/2013 Electricity Sector Act; Real Decreto 1955/2000",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 18,
+      "timeline_max_months": 48,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Contencioso-administrativo (administrative court): Audiencia Nacional (AN) → Tribunal Supremo (TS) for national projects; regional courts for sub-threshold",
+      "notes": "Spain has among the best solar resources in Europe (1,600–2,000 kWh/kWp p.a. in Andalucía, Extremadura, Castilla-La Mancha). Permitting for solar is faster than wind. Grid access saturation is the primary constraint (see grid_connection section)."
+    },
+    "onshore_wind": {
+      "threshold_mw_national_process": 50,
+      "sub_threshold_authority": "Comunidad Autónoma — significant variation between regions (Castilla y León and Castilla-La Mancha are most permissive)",
+      "above_threshold_authority": "MITECO",
+      "primary_process": "Autorización administrativa previa; DIA; Autorización de construcción",
+      "legal_basis": "Ley 21/2013; Ley 24/2013; regional energy plans (Planes de Fomento de las Energías Renovables)",
+      "timeline_p50_months": 36,
+      "timeline_min_months": 24,
+      "timeline_max_months": 72,
+      "appeal_risk": "medium-high",
+      "notes": "Regional variation is significant. Some Comunidades Autónomas (e.g., Galicia, Aragón, Navarra) have well-developed regional frameworks; others have lengthy backlog processes. No national setback rule equivalent to France's 500m."
+    },
+    "offshore_wind": {
+      "primary_authority": "MITECO (energy); Ministerio de Transportes, Movilidad y Agenda Urbana (maritime domain); MITECO for DIA",
+      "primary_process": "Concesión de uso del dominio público marítimo-terrestre; DIA; Autorización administrativa",
+      "legal_basis": "Ley 22/1988 de Costas; Ley 24/2013; Spain's Offshore Wind Roadmap (Hoja de Ruta de la Energía Eólica Marina) — published July 2021",
+      "offshore_wind_status": "Early stage — Spain has abundant Atlantic (Galicia, Cantábrico) and Mediterranean potential but NO commercial offshore wind farms operational as of 2026. Regulatory framework under development.",
+      "timeline_p50_months": 96,
+      "appeal_risk": "high",
+      "notes": "Spain's offshore wind framework is materially less developed than UK, Germany, or Netherlands. The 2021 Hoja de Ruta identified 1–3 GW potential but most activity remains at pre-development stage. Depth constraints in the Mediterranean limit fixed-bottom options; floating is the primary offshore technology pathway for Spain."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operator": "Red Eléctrica de España S.A.U. (REE) — now trading as Redeia",
+    "distribution_operators": "Endesa Distribución, Iberdrola Distribución, Naturgy, UFD, and others",
+    "regulatory_authority": "Comisión Nacional de Mercados y la Competencia (CNMC)",
+    "legal_basis": "Ley 24/2013; Real Decreto 1183/2020 (access and connection reform)",
+    "connection_reform_rd_1183_2020": {
+      "description": "Replaced queue-based grid access system with a 'nodo' (node) based model. Access permits (permisos de acceso) are now capacity-limited at each node. Connection permits (permisos de conexión) require prior access. Reform aimed to eliminate speculative applications.",
+      "status": "Reform has reduced speculative project pipeline substantially but significant access backlogs remain at constrained nodes — particularly in central Spain where solar resource is best."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 30, "range": "18–60" },
+      "distribution_connected": { "p50": 18, "range": "12–30" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 40000,
+      "range_high": 200000,
+      "notes": "Costs are network-specific. Access permit fees paid upfront. Connection costs depend on proximity to available node capacity."
+    },
+    "curtailment_risk": "low-medium",
+    "notes": "Spain's interconnection with France is historically limited (~3GW capacity), creating an island effect. SuedLink equivalent — the Bay of Biscay interconnector (Biscay Gulf interconnector, 2GW HVDC) is under development with planned commissioning ~2028. Solar curtailment has increased in recent years in the Spanish south as penetration grows."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The REER (Régimen Económico de Energías Renovables) is a TWO-WAY contract for difference (contrato por diferencia). When market price falls below the 'precio de liquidación' (settlement/clearing price), the generator receives the difference. When market price exceeds the clearing price, the generator PAYS BACK the excess to REE. This is equivalent to the UK CfD — uncapped downside protection AND upside clawback.",
+    "primary_mechanism": "REER — Régimen Económico de Energías Renovables (Two-Way CfD)",
+    "mechanism_type": "two_way_cfd",
+    "administrator": "MITECO (auctions / subastas); REE/Redeia (settlement); CNMC (monitoring)",
+    "legal_basis": "Ley 24/2013 Art. 14; Real Decreto 960/2020 (REER); Orden ministerial de subastas (auction-specific ministerial orders)",
+    "mechanism_description": {
+      "summary": "Generator sells electricity on OMIE (Operador del Mercado Ibérico de Energía) spot market. Generator also enters a CfD against the 'precio de liquidación' (settlement price, set at auction clearing). When market price < clearing price: generator receives difference. When market price > clearing price: generator PAYS BACK excess. Both upside and downside are capped/protected.",
+      "upside_treatment": "CAPPED via clawback — revenue above clearing price paid back to REE. Equivalent to UK CfD.",
+      "downside_treatment": "PROTECTED — revenue floor at clearing price via top-up payment",
+      "market_reference": "OMIE day-ahead and intraday market price (Precio del Mercado de la Electricidad — PME)",
+      "contract_term_years": "Set per auction round — typically 10–12 years. Verify against specific auction convocatoria.",
+      "merchant_post_term": "Full merchant exposure post-REER contract expiry"
+    },
+    "auction": {
+      "administrator": "MITECO via Resolución de convocatoria (auction call resolution)",
+      "frequency": "Irregular — government calls auctions by ministerial order as capacity targets require. No fixed annual schedule.",
+      "reer_subasta_1_2021": {
+        "date": "2021-01",
+        "capacity_awarded_mw": 3034,
+        "clearing_price_solar_eur_mwh_approx": 24.39,
+        "clearing_price_wind_eur_mwh_approx": 25.31,
+        "staleness_warning": "These historic prices reflect very competitive conditions in early 2021. Subsequent auctions cleared higher. Do NOT use as proxy for current achievable prices.",
+        "source": "MITECO, Resolución de 20 enero 2021 — resultados primera subasta REER"
+      },
+      "subsequent_auctions_note": "Multiple subsequent REER subastas have been held — clearing prices have risen materially. Verify current round results with MITECO/REE.",
+      "clearing_price_current_range_eur_mwh": {
+        "_staleness_warning": "Verify with MITECO current auction results before use",
+        "solar_range": { "low": 35.00, "high": 60.00 },
+        "wind_range": { "low": 40.00, "high": 65.00 }
+      }
+    },
+    "legacy_mechanisms": {
+      "retribucion_especifica": {
+        "description": "Specific remuneration (retribución específica) — the post-2013 regime for existing pre-REER installations. Revenue set by CNMC based on 'reasonable return' concept (rentabilidad razonable). NOT a market mechanism — revenue set administratively.",
+        "type": "administratively_set_regulated_return",
+        "legal_basis": "Ley 24/2013; Real Decreto 413/2014; Orden ETU/130/2017",
+        "retroactive_note": "This regime was RETROACTIVELY applied to existing FiT/premium installations in 2013-2014. It is the subject of the major ECT arbitration wave against Spain. See sovereign_risk for details."
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Spain does not currently have a Full Expensing or degressive AfA equivalent for utility-scale renewable energy generation assets. Standard IS amortisation applies. Tax incentive focus is on the IVPEE monitoring (current status may affect effective tax burden materially).",
+    "corporation_tax": {
+      "impuesto_sobre_sociedades_rate_pct": 25,
+      "legal_basis": "Ley 27/2014 del Impuesto sobre Sociedades",
+      "effective_date": "2016 (general reform)"
+    },
+    "amortizacion": {
+      "method": "Straight-line (amortización lineal) as default",
+      "tabla_amortizacion_legal": "Reglamento del Impuesto sobre Sociedades, Tabla de Coeficientes de Amortización — wind turbines typically 7–12% per annum; solar 5–10%",
+      "libertad_amortizacion": {
+        "available_for_renewables": "Limited. Libertad de amortización for qualifying R&D investments and in certain economically depressed zones (Zona Especial Canaria, ZEC). Not generally available for mainstream utility-scale renewable energy assets.",
+        "legal_basis": "Ley 27/2014 Arts. 12, 91–108"
+      },
+      "npv_benefit_analysis": {
+        "_rule_3b_compliance": true,
+        "description": "At 25% IS and 10% WACC: NPV of tax shield under standard straight-line amortización (10% p.a. over 10 years for wind turbines): ≈ 16.6% of qualifying CapEx. No significant front-loading available for mainstream projects — timing benefit is minimal vs UK/Germany peers.",
+        "note": "Spain's CapEx tax incentive stack is weaker than UK (Full Expensing), Germany (25% degressive AfA), and France (dégressif 2.25×). This is a relative competitive disadvantage for CapEx timing."
+      }
+    },
+    "ivpee": {
+      "description": "Impuesto sobre el Valor de la Producción de la Energía Eléctrica — 7% tax on total gross value of electricity production by all generators (including renewables)",
+      "rate_pct": 7,
+      "legal_basis": "Ley 15/2012, Art. 1",
+      "applies_to_renewables": true,
+      "temporary_suspension_history": "IVPEE has been temporarily suspended and partially modified multiple times during the 2021-2023 energy price crisis via Real Decreto-leyes. Verify current application status with AEAT/CNMC before modelling.",
+      "staleness_warning": true,
+      "modelling_note": "If IVPEE is currently in force at 7%, it represents a significant gross revenue deduction — equivalent to 7ppts off the effective tariff. Must be included in LCOE and IRR calculations."
+    },
+    "vat": {
+      "standard_rate_pct": 21,
+      "applies_to_commercial_renewables": true,
+      "legal_basis": "Ley 37/1992 del Impuesto sobre el Valor Añadido",
+      "input_vat_recovery": "Available for VAT-registered entities (sujetos pasivos del IVA)"
+    },
+    "itp_ajd": {
+      "description": "Impuesto sobre Transmisiones Patrimoniales y Actos Jurídicos Documentados — transfer tax on asset acquisitions and certain corporate transactions",
+      "rate_varies_by_ccaa": true,
+      "note": "Applicable to real estate acquisitions. Rate set by Comunidad Autónoma — typically 6–10% for real property."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "Medium-High",
+    "legal_basis": "Código Civil español (Civil Code) Art. 1091 et seq. (freedom of contract); Ley 3/2013 (CNMC). No bespoke PPA statute.",
+    "market_liquidity": "Medium-High and growing rapidly",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Tech (Google ES, Amazon AWS, Microsoft), Telecom (Telefónica), Industrial (Repsol, Inditex, ArcelorMittal ES), Automotive",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement", "Bespoke bilateral under Spanish Civil Code", "Virtual/financial PPA referencing OMIE price"],
+    "reer_interaction_note": "REER contract holders sell on OMIE and are subject to clawback above clearing price. A PPA layered on top of a REER creates complexity — the corporate offtaker is effectively receiving market-linked supply while the CfD contract runs in parallel. Virtual PPA structures are more common for REER-supported assets.",
+    "cross_border_enforceability": "High — Spanish courts generally reliable; ICC and CIMA (Centro Internacional de Mediación y Arbitraje) available; NY Convention signatory"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 62,
+    "credit_ratings": {
+      "moodys": "A3",
+      "sp": "A-",
+      "fitch": "A-",
+      "source_note": "Spain was downgraded significantly during the 2010-2012 Eurozone crisis. Ratings have recovered but remain below core EU (Germany/Netherlands/France). Verify current ratings."
+    },
+    "political_stability": "Medium",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2010",
+        "description": "Real Decreto-ley 14/2010 — cap on hours eligible for solar tariff and mandatory registration requirements. First retroactive-adjacent measure affecting existing solar operators.",
+        "severity": "Medium — affected existing installations; frustrated reasonable expectations"
+      },
+      {
+        "year": "2012",
+        "description": "Real Decreto-ley 1/2012 — moratorium on new renewable energy installations and suspension of FiT registration for new projects",
+        "severity": "Medium — prospective only but abruptly ended new support for a period"
+      },
+      {
+        "year": "2013–2014",
+        "description": "RETROACTIVE REFORM: Real Decreto-ley 9/2013 (July 2013) and Ley 24/2013 + Real Decreto 413/2014 — replaced existing FiT/premium (Real Decreto 661/2007; Real Decreto 1578/2008 for solar) with 'retribución específica' (specific remuneration). Revenue for ALL existing operating renewable installations reset to a 'reasonable return' of 7.5% pre-tax ROE on standardised 'reference installations'. RETROACTIVELY APPLIED to installations already in operation under prior contractual expectations.",
+        "impact": "Existing operators experienced material revenue reductions relative to prior RD 661/2007 commitments. Estimated investor losses: several billion EUR across the sector.",
+        "arbitration_wave": "Approximately 50+ ECT (Energy Charter Treaty) international arbitration claims filed by non-EU investors against Spain before ICSID, SCC, and other tribunals. Major awards: NextEra Energy v Spain (~€290m awarded); Masdar Solar v Spain (~€64.5m); many others. Spain has resisted enforcement of awards arguing ECT bars intra-EU arbitration (post-Komstroy CJEU ruling).",
+        "severity": "CRITICAL — this is the defining European example of retroactive renewable energy policy reversal. Due to this incident, Spain's political risk score is materially lower than its credit rating alone would suggest.",
+        "current_status": "Awards against Spain remain contested in national courts (USA, Netherlands, UK). Legal uncertainty ongoing. New REER regime operates on different legal footing."
+      },
+      {
+        "year": "2021–2023",
+        "description": "IVPEE suspension and modification; additional electricity market interventions during energy price crisis. Not retroactive but demonstrates willingness to intervene in market prices.",
+        "severity": "Low — temporary crisis measures with sunset provisions"
+      }
+    ],
+    "expropriation_risk": "Low",
+    "currency_risk": "None — EUR domestic",
+    "score_rationale": "Spain receives the lowest political risk score in this knowledge base (62/100) due to the 2013-2014 retroactive RD 413/2014 reform — the most severe retroactive renewable energy policy reversal in EU history. Partially offset by EU membership and current REER framework improvement. Credit rating (A3/A-) is materially below core EU peers."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 58,
+    "component_scores": {
+      "grid_connection_drag": { "score": 65, "assessment": "MEDIUM-HIGH — RD 1183/2020 reform improved but access backlogs persist at constrained nodes; limited France-Spain interconnection capacity" },
+      "permitting_drag_solar": { "score": 40, "assessment": "MEDIUM — faster than wind; exceptional resource in Andalucía/Extremadura/Castilla; regional variation is the main risk" },
+      "permitting_drag_wind": { "score": 60, "assessment": "MEDIUM — regional fragmentation creates complexity; national projects through MITECO are clearer but slower" },
+      "permitting_drag_offshore": { "score": 85, "assessment": "VERY HIGH — no commercial offshore operational; regulatory framework still developing; depth constraints in Mediterranean" },
+      "bureaucratic_friction": { "score": 50, "assessment": "MEDIUM — two-tier national/regional system creates complexity; coordination between MITECO and CCAA requires active management" },
+      "judicial_appeal_risk": { "score": 55, "assessment": "MEDIUM — contencioso-administrativo challenge rate is lower than France; Spanish administrative courts are reasonably efficient" }
+    },
+    "primary_bottleneck": "Grid access saturation at key nodes in high-resource areas (Castilla-La Mancha, Extremadura, Andalucía). RD 1183/2020 reform has improved the framework but physical grid capacity remains constrained.",
+    "score_rationale": "Composite lower than France/Germany — solar permitting is relatively efficient; grid constraint is real but improving; no offshore capacity yet."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Real Decreto-ley 8/2020 and subsequent extensions; EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "reviewing_authority": "Secretaría de Estado de Comercio (Ministry of Economy)",
+    "threshold_pct": "10% for non-EU investors in strategic sectors; energy generation included",
+    "clearance_timeline_working_days": 30,
+    "practical_risk": "Low-Medium",
+    "notes": "Spain introduced FDI screening as part of COVID-19 emergency measures (RDL 8/2020) and has maintained and expanded coverage. Energy sector is designated strategic. OECD-domiciled investors face low prohibition risk but mandatory notification compliance required."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG 2022/C 80/01",
+    "reer_clearance": "REER mechanism under RD 960/2020 reviewed under CEEAG. Competitive auction mechanism (subasta) satisfies CEEAG proportionality test.",
+    "retroactive_retribucion_especifica_state_aid": {
+      "note": "The 2013-2014 retribución específica system was subject to EC review. Spain argued the 'reasonable return' mechanism was compatible with State Aid rules. EC has not issued a formal recovery decision against Spain for renewable energy support.",
+      "ecj_note": "Multiple proceedings touching on intra-EU ECT arbitrability have reached the CJEU — distinct from State Aid track."
+    },
+    "retrospective_clawback_risk": "Low for new REER projects — competitive auction framework is cleared",
+    "notification_status": "Current REER framework cleared under CEEAG"
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Key inputs for IRR, NPV, CapEx payback, DSCR, LCOE. Spain's IVPEE (if currently applicable) must be deducted from gross revenue in all calculations.",
+    "_rule_3a_note": "TWO-WAY mechanism: model as revenue floor AND ceiling at clearing price. Do not model uncapped upside.",
+    "illustrative_solar_pv_reer": {
+      "clearing_price_eur_mwh_approx": 45.00,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years_approx": 12,
+      "p50_capacity_factor_pct_dc": 23,
+      "typical_capex_eur_per_mw_dc": 580000,
+      "opex_eur_per_mw_per_year": 10000,
+      "ivpee_note": "Include IVPEE deduction (currently 7% of gross revenue — verify current status) as a gross revenue charge before calculating DSCR and IRR"
+    },
+    "illustrative_onshore_wind_reer": {
+      "clearing_price_eur_mwh_approx": 50.00,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years_approx": 12,
+      "p50_capacity_factor_pct": 30,
+      "typical_capex_eur_per_mw": 1400000,
+      "opex_eur_per_mw_per_year": 40000
+    }
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "GREEN", "rationale": "Fastest permitting in this knowledge base for solar; exceptional resource; regional variation managed by diligent site selection" },
+    "permitting_wind": { "rag": "AMBER", "rationale": "National/regional split creates complexity; no systemic blockages but timelines vary significantly by CCAA" },
+    "permitting_offshore": { "rag": "RED", "rationale": "No commercial offshore market; regulatory framework immature; depth constraints limit fixed-bottom options" },
+    "grid_connection": { "rag": "AMBER", "rationale": "RD 1183/2020 reform improved framework; node saturation at best solar areas is a real constraint; France interconnection limited" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "REER two-way CfD framework active; government committed to auction programme under Ley 7/2021 climate targets" },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "IS 25% is standard; no meaningful accelerated depreciation for renewables; IVPEE (7%) is a significant gross revenue deduction — verify current status" },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "Spanish contract law is robust; active and growing corporate PPA market (Iberian OMIE liquid); major tech/industrial buyers active" },
+    "political_risk": { "rag": "RED", "rationale": "2013-2014 retroactive RD 413/2014 reform is the defining European precedent for retroactive renewable policy reversal. 50+ ECT arbitrations. New REER regime is on better legal footing but political risk premium required for Spain vs. core EU peers." },
+    "operational_drag": { "rag": "AMBER", "rationale": "Solar permitting and grid are AMBER-level; offshore is RED; onshore wind is AMBER. Composite manageable for solar-focused strategy." },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "RDL 8/2020 screening applies; 10% threshold for non-EU investors in energy; low prohibition risk for OECD investors; compliance required" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "REER competitive auction cleared under CEEAG; no EC recovery risk for new projects. Historical retribución específica issues are distinct from REER." },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Spain offers the best solar resource in Western Europe and a functional REER two-way CfD framework. The 2013-2014 retroactive policy precedent is the single most important risk factor and must be explicitly priced into any investment underwriting. For solar-focused mandates with appropriate political risk premium and REER contract (not pipeline-only) exposure, Spain is viable. Offshore wind is not investable at scale without a materially more developed regulatory framework. Onshore wind is viable but requires REER contract certainty before committing capital."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 36,
+    "1_permitting_window_scope": "Onshore wind via MITECO national process",
+    "1_permitting_window_solar_p50_months": 24,
+    "2_grid_connection_cost_native": "EUR 40,000–200,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 40,000–200,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "18–60",
+    "3_primary_support_mechanism": "REER — Régimen Económico de Energías Renovables (competitive subasta)",
+    "3_mechanism_type_code": "two_way_cfd",
+    "4_effective_corporation_tax_rate_pct": 25,
+    "4_key_incentive": "No significant accelerated depreciation for utility-scale renewables. Standard amortización lineal applies. IVPEE (7% gross revenue tax) is a KEY DOWNWARD ADJUSTMENT — verify current status.",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Código Civil; OMIE (MIBEL) as liquid reference price; EFET framework",
+    "6_political_risk_score": 62,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 58,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR ~45/MWh approx. (solar, indicative 2024 range — see staleness warning)",
+    "8_revenue_floor_eur": "EUR ~45/MWh (no conversion — domestic currency)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "two_way_cfd",
+    "8_revenue_floor_staleness_warning": "REER clearing prices are auction-specific. Verify with MITECO results before use. Early 2021 prices (~€24/MWh) are NOT representative of current market."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": "No standalone BESS support mechanism as of 2025. REER scheme covers co-located storage only. Merchant/ancillary services market. Source: REE/national_tso.",
+      "revenue_floor_description": null,
+      "source": "national_tso",
+      "notes": "Spain has no standalone battery storage subsidy. Co-located storage may qualify under REER auction if paired with renewable generation. Ancillary services via REE (Red Eléctrica de España). High curtailment and price cannibalisation risk in zones with high solar penetration."
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Spain participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). Hoja de Ruta del Hidrógeno (2020) targets 4 GW electrolysis by 2030. PERTE Hidrógeno Verde under NextGenerationEU. IDAE and MITECO administer H2 support.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Spain is IPCEI Hy2Tech and Hy2Infra participant with one of Europe's most ambitious hydrogen programmes. PERTE Hidrógeno Verde allocated EUR 1.55bn. Best solar resource in continental Europe creates competitive electrolysis economics. Verify current IDAE H2 auction round parameters before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "two_way_cfd",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "REER (Régimen Económico de Energías Renovables) — two-way CfD auction under RD 960/2020, administered by MITECO/CNMC.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "phase_out",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": null,
+      "notes": "Spain's nuclear phase-out is legislated — Ley 7/2021 de cambio climático y transición energética mandates closure of all nuclear plants between 2027 and 2035 (Almaraz, Ascó, Cofrentes, Vandellós, Trillo). No SMR programme. Czech-style reversal not politically feasible under current government."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 60,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Spain has the largest LNG regasification capacity in Europe. Six operational terminals. Operated by Enagas and joint ventures. Regasification is TPA-regulated."
+    },
+    "data_centre": {
+      "permitting_p50_months": 20,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "medium",
+      "renewable_ppa_market_depth": "high",
+      "source": "national_tso",
+      "notes": "Madrid is a major data centre hub. High solar PPA availability. Permitting through urban planning. Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": false,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Spain operates an energy-only market with no formal capacity market. CCGT plants are merchant-exposed. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. Spain's large LNG regasification capacity supports gas-to-power flexibility. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Spanish bioenergy support under REER framework (MITECO/CNMC) before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Spain closed all remaining coal plants in June 2020.",
+      "source": null,
+      "notes": "Spain has no operating coal-fired power stations since 2020. No support mechanism. EU Taxonomy-excluded."
+    }
+  }
+}

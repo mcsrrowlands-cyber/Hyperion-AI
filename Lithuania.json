@@ -1,0 +1,398 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Lithuania",
+    "local_name": "Lietuva",
+    "iso_code": "LT",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency since 1 January 2015",
+    "currency_eur_rate_source": "Lithuania adopted the Euro on 1 January 2015 (last Baltic state to do so).",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Lithuanian RES policy is administered by the Energy Regulatory Council (VERT — Valstybinė energetikos reguliavimo taryba). Verify tender parameters at vert.lt. Baltic ENTSO-E synchronization (February 2025) is the transformational event for the Lithuanian grid — verify current status at Litgrid (litgrid.eu). Lithuania's offshore Baltic wind development is a rapidly evolving policy area."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Republic of Lithuania Law on Electricity (Elektros energetikos įstatymas) 2000, as amended", "relevance": "Framework electricity market legislation; TSO (Litgrid) obligations; market rules; RES framework" },
+      { "instrument": "Republic of Lithuania Law on Renewable Energy (Atsinaujinančių išteklių energetikos įstatymas — AIE įstatymas) 2011, as amended", "relevance": "RES competitive tender framework; premium mechanism; VERT administration; offshore wind development zone framework" },
+      { "instrument": "National Energy Independence Strategy (Nacionalinė energetinės nepriklausomybės strategija) 2018, updated", "relevance": "Target 100% renewable electricity by 2030; GW-scale offshore wind targets in Baltic Sea (Lietuvos Respublikos išskirtinė ekonominė zona — EEZ)" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Law on Construction (Statybos įstatymas) 1996, as amended", "relevance": "Building permits (statybos leidimas); commissioning procedures" },
+      { "instrument": "Law on Territorial Planning (Teritorijų planavimo įstatymas) 1995, as amended", "relevance": "Spatial plans (bendrieji planai); special plans for infrastructure" },
+      { "instrument": "Law on Environmental Impact Assessment of the Proposed Economic Activities (Planuojamos ūkinės veiklos poveikio aplinkai vertinimo įstatymas — PAV)", "relevance": "EIA for wind projects; Appropriate Assessment for Natura 2000; screening thresholds" },
+      { "instrument": "Law on Protected Areas (Saugomų teritorijų įstatymas)", "relevance": "Nature protection restrictions; bird migration routes; Curonian Lagoon (UNESCO World Heritage)" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Law on Corporate Income Tax (Pelno mokesčio įstatymas — PMĮ) 2001, as amended", "relevance": "15% CIT standard rate. 5% reduced rate for small companies (net turnover ≤ EUR 300,000 and ≤ 10 employees). Investment project incentive (investicinis projektas) for qualifying CapEx." },
+      { "instrument": "Law on Value Added Tax (Pridėtinės vertės mokesčio įstatymas — PVMĮ) 2002", "relevance": "21% standard VAT rate; input VAT recovery available" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Lithuanian RES support assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Law on Investments (Investicijų įstatymas) 1999, as amended; National Security screening provisions", "relevance": "Lithuania has introduced national security screening for investments in critical infrastructure including energy. Defence Ministry notification required for certain strategic assets." },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation" }
+    ]
+  },
+
+  "permitting": {
+    "solar_utility": {
+      "primary_authority": "Environmental Protection Agency (Aplinkos apsaugos agentūra — AAA) for EIA; municipality for territorial plan; State Territorial Planning and Construction Inspectorate (Valstybinė teritorijų planavimo ir statybos inspekcija — VTPSI) for building permit",
+      "primary_process": "Territorial plan compatibility → EIA screening/full EIA → Building permit → Grid connection agreement with Litgrid/DSO → Commissioning",
+      "legal_basis": "Statybos įstatymas; Teritorijų planavimo įstatymas; PAV",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "appeal_risk": "low-medium",
+      "notes": "Lithuania has strong solar irradiation for a Baltic state (1,100–1,200 kWh/kWp p.a. in southern Lithuania — higher than Estonia/Latvia). Growing utility solar pipeline driven by METÁR equivalent tenders and corporate PPAs. Agricultural land restrictions less severe than Hungary."
+    },
+    "onshore_wind": {
+      "primary_authority": "AAA (EIA/AA); municipality (territorial plan); VTPSI (building permit); Litgrid (grid connection)",
+      "primary_process": "Special or local territorial plan → EIA + Appropriate Assessment → Building permit → Grid connection → Commissioning",
+      "legal_basis": "Statybos įstatymas; Teritorijų planavimo įstatymas; PAV; Saugomų teritorijų įstatymas",
+      "timeline_p50_months": 42,
+      "timeline_min_months": 30,
+      "timeline_max_months": 60,
+      "appeal_risk": "medium",
+      "notes": "Lithuania has good onshore wind resource — particularly in western Lithuania (Žemaitija) and coastal areas near Klaipėda (30–36% capacity factors). The permitting environment is improving and more wind-positive than Czechia or Hungary. Species protection (birds of prey, migratory species along coast) and visual impact are primary EIA challenges. Municipal cooperation has been improving as economic benefits of wind development have been demonstrated."
+    },
+    "offshore_wind": {
+      "primary_authority": "Ministry of Environment; AAA; Marine Spatial Planning Authority; Litgrid; Lithuanian Navy (defence clearance)",
+      "primary_process": "Marine spatial plan zone allocation → EIA/SEA → Development rights tender → Grid connection planning → Construction permit",
+      "legal_basis": "AIE įstatymas (offshore provisions); Marine Spatial Plan",
+      "timeline_p50_months": 96,
+      "capacity_targets": "Lithuania has GW-scale offshore Baltic ambitions; development zones being designated in the Lithuanian EEZ. Preliminary target of 1.4 GW+ by 2030 and significantly more post-2030.",
+      "litpol_link_note": "The LitPol Link 2 interconnection with Poland (operational; key ENTSO-E synchronization infrastructure) demonstrates Lithuania's position as the 'bridge' between the Baltic and Central European grids. This is strategically important for offshore wind export.",
+      "notes": "Lithuanian offshore is at an earlier stage than Danish/German equivalents but has genuine policy momentum. The Lithuanian EEZ in the Baltic Sea has good wind conditions. Onshore grid reinforcement to accommodate offshore export is underway."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Building permit; Litgrid/DSO grid connection; VERT registration",
+      "timeline_p50_months": 15,
+      "notes": "BESS market growing. Baltic synchronization FCR/aFRR market under ENTSO-E CE standards creates new revenue opportunities."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "Litgrid AB", "region": "Lithuanian national TSO; state-owned; operating the LitPol Link 2 (interconnection to Poland) and NordBalt (interconnection with Sweden via submarine cable) — strategic ENTSO-E synchronization infrastructure" }
+    ],
+    "distribution_operators": "ESO AB (Energijos skirstymo operatorius — Ignitis Group subsidiary; dominant DSO covering ~99% of Lithuania)",
+    "regulatory_authority": "Valstybinė energetikos reguliavimo taryba (VERT — Energy Regulatory Council)",
+    "legal_basis": "Electricity Market Law §§15–25 (grid connection rights); Litgrid Grid Code; VERT regulations",
+    "baltic_synchronization": {
+      "event": "ENTSO-E Continental European Synchronous Area connection achieved on 8 February 2025",
+      "description": "Lithuania was the 'anchor point' for Baltic synchronization. Litgrid operated the LitPol Link 2 interconnector with Poland and coordinated the synchronization switching procedure. Lithuania now operates in the CE synchronous area.",
+      "strategic_significance": "Lithuania has the strongest physical connection to the CE grid (LitPol Link 2). This positions Lithuania as the regional hub for Baltic electricity export/import. Particularly important for offshore wind electricity routing south to Polish and German demand.",
+      "legal_basis": "Baltic synchronization project — multiple EU PCI projects (Project of Common Interest); Litgrid Grid Code updated to CE standards"
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 24, "range": "18–42", "notes": "Litgrid reinforcing grid for offshore wind development pipeline" },
+      "distribution_connected": { "p50": 15, "range": "9–24" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 15000,
+      "range_high": 100000,
+      "notes": "Grid connection costs regulated by VERT. Competitive vs. Latvian peers. Strong CE interconnection reduces constraints."
+    }
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: Lithuanian competitive tender premium is a ONE-WAY mechanism. Premium = max(0, reference price − market clearing price). No clawback when market exceeds reference price.",
+    "primary_mechanism": "Competitive tender premium (konkursas) — VERT administers",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Valstybinė energetikos reguliavimo taryba (VERT)",
+    "legal_basis": "AIE įstatymas; Government Resolution on RES tender procedures; VERT tender rules",
+    "mechanism_description": {
+      "summary": "Generator wins VERT competitive tender and receives a reference premium. Sells electricity on Nord Pool LT area. Premium = max(0, reference price − Nord Pool LT quarterly average). One-way: no clawback if market exceeds reference.",
+      "upside_treatment": "UNCAPPED — one-way mechanism",
+      "downside_treatment": "PROTECTED — VERT/energy fund pays shortfall",
+      "contract_term_years": "Typically 12–15 years",
+      "zero_subsidy_note": "Certain onshore wind tenders in Lithuania have cleared at very low reference prices, approaching merchant viability for well-sited projects."
+    },
+    "auction": {
+      "administrator": "VERT",
+      "tender_frequency": "Periodic rounds — VERT publishes tender calls; verify at vert.lt",
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Reference prices change with each VERT tender round. Verify at VERT (vert.lt) before use.",
+        "onshore_wind": { "eur_mwh_range_low": 28, "eur_mwh_range_high": 55 },
+        "solar_pv": { "eur_mwh_range_low": 35, "eur_mwh_range_high": 65 },
+        "offshore_wind": { "eur_mwh_range_low": 55, "eur_mwh_range_high": 95, "notes": "Offshore tenders at early stage; prices indicative" }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: 15% CIT is not the distributed profit model (unlike Estonia and Latvia). CIT applies annually on taxable profit. Investment project incentive (investicinis projektas) provides CIT relief on qualifying CapEx — apply NPV analysis to timing benefit.",
+    "corporation_tax_structure": {
+      "cit_rate_standard_pct": 15.0,
+      "cit_note": "Lithuania uses a conventional annual CIT system (NOT the distributed profit model). CIT is levied on annual taxable profit. This distinguishes Lithuania from its Baltic neighbours Estonia and Latvia.",
+      "reduced_rate_small_companies_pct": 5.0,
+      "reduced_rate_threshold": "Net turnover ≤ EUR 300,000 AND ≤ 10 employees — typically not applicable to utility-scale RES project companies",
+      "legal_basis": "Pelno mokesčio įstatymas (PMĮ) §5 — 15% standard rate; §5(2) — 5% small company rate",
+      "investment_project_incentive": {
+        "name": "Investicinis projektas (Investment Project Incentive)",
+        "description": "Companies implementing qualifying investment projects (minimum investment threshold — verify at vert.lt/registry) may reduce CIT by up to 100% of CIT otherwise due in the year of qualifying CapEx, with a carry-forward period. Effectively allows full CIT offset against qualifying CapEx.",
+        "legal_basis": "PMĮ §17¹; Ministry of Finance regulations",
+        "_rule_3b_analysis": "NPV of timing benefit: For a EUR 50m onshore wind project, qualifying CapEx ≈ EUR 45m. CIT normally due on EBIT ≈ EUR 5m × 15% = EUR 750k/year. Investment project incentive may eliminate CIT liability entirely in early years (when CIT credit > CIT due). NPV of CIT savings at 7% WACC over 15 years ≈ EUR 4.5–6m. Substantial CapEx timing benefit."
+      },
+      "dividend_withholding_tax_pct": 0,
+      "eu_parent_subsidiary_exemption": "0% WHT for qualifying EU parent companies under Parent-Subsidiary Directive"
+    },
+    "vat": {
+      "standard_rate_pct": 21,
+      "legal_basis": "PVMĮ",
+      "input_vat_recovery": "Available for VAT-registered businesses"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "Medium-High",
+    "legal_basis": "Civil Code (Civilinis kodeksas — CK); contractual freedom; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Lithuanian courts (Lietuvos Aukščiausiasis Teismas — Supreme Court). Vilnius Commercial Court for complex disputes. Vilnius Court of Commercial Arbitration (VCCA) and ICC arbitration available. Proceedings typically 1–3 years.",
+    "market_liquidity": "Growing — Baltic corporate PPA market; strong industrial base (fertilizer, timber, food processing, logistics) + growing tech sector",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Achema (Lithuania's largest ammonia/fertilizer producer — significant electricity consumer); Orlen Lietuva (oil refinery); Baltic timber/wood processing; logistics companies; data centres; Ignitis (state utility)",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET framework (growing)", "Bespoke bilateral under CK", "Virtual PPA referencing Nord Pool LT"],
+    "achema_note": "Achema AB, the Lithuanian fertilizer producer, is one of the largest industrial electricity consumers in the Baltic region with a strategic interest in renewable energy PPAs (green hydrogen/ammonia potential). This represents a unique large-scale PPA counterparty not available in Estonia or Latvia.",
+    "guarantees_of_origin": {
+      "regulator": "Litgrid (GoO issuance); VERT (regulatory oversight) — Lithuanian GoOs in EU AIB framework",
+      "note": "Lithuanian GoOs recognised in AIB/RECS system. Additional revenue stream."
+    }
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 82,
+    "credit_ratings": {
+      "moodys": "A2",
+      "sp": "A",
+      "fitch": "A",
+      "source_note": "Lithuania has strong investment-grade ratings — strongest among Baltic states on some metrics. Verify at agency websites.",
+      "_staleness_warning": "Ratings subject to review — verify before use. Defence spending increase and fiscal position are rating considerations."
+    },
+    "political_stability": "Stable parliamentary democracy (Seimas); strong pro-Western, pro-EU, pro-NATO orientation; centre-right/centre-left coalition politics; consistent energy independence policy",
+    "energy_independence_policy": "Lithuania has an exceptionally strong policy commitment to energy independence — driven by historical Russian gas dependency (Klaipėda LNG terminal opened 2014 to diversify away from Gazprom; Baltic synchronization led by Lithuania). This creates durable political support for domestic RES development across political parties.",
+    "retroactive_policy_incidents": [
+      { "year": "None material", "description": "Lithuania has not retroactively modified contracted RES revenues. The policy focus on energy independence creates strong political incentives to maintain investor confidence.", "severity": "N/A" }
+    ],
+    "expropriation_risk": "Very Low — EU/NATO member; constitutional property protections; ECHR",
+    "currency_risk": "None — EUR domestic since 2015",
+    "geopolitical_context": {
+      "suwalki_gap": "Lithuania borders the Suwalki Gap (between Russia's Kaliningrad exclave and Belarus) — a strategically contested NATO geography. This has focused significant NATO reinforcement on Lithuania (Multinational NATO Brigade HQ at Rukla). Baltic synchronization eliminated electricity dependency on Russia/Belarus.",
+      "belarusian_nuclear_plant": "The Astravets (Astravyets) nuclear power plant in Belarus operates close to the Lithuanian border. Lithuania has refused to import Belarusian electricity on political grounds — the plant is a source of regional tension. Post-synchronization, Lithuanian electricity imports/exports route via Poland and Sweden, not Belarus.",
+      "nato_enhanced_forward_presence": "Germany leads NATO Enhanced Forward Presence battalion in Lithuania — material commitment of collective defence guarantees."
+    },
+    "score_rationale": "Deductions from 100: Suwalki Gap geopolitical exposure (-10), Belarusian border/Astravets nuclear proximity (-5), smaller economy (-3). Score 82 reflects excellent governance, strong investment-grade ratings, and the highest EU commitment to energy independence of any Baltic state."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 46,
+    "component_scores": {
+      "grid_connection_drag": { "score": 38, "assessment": "LOW — Litgrid is strong TSO; LitPol Link 2 provides excellent CE interconnection; CE market access post-synchronization improves cross-border trading" },
+      "permitting_drag_onshore_wind": { "score": 52, "assessment": "MEDIUM — 3–5 year P50 for western Lithuania wind; improving policy environment; no moratorium; species surveys primary bottleneck" },
+      "permitting_drag_solar": { "score": 38, "assessment": "LOW-MEDIUM — growing pipeline; southern Lithuania has better irradiation than Estonian/Latvian peers; process improving" },
+      "permitting_drag_offshore": { "score": 68, "assessment": "MEDIUM-HIGH — offshore pipeline at early stage; marine spatial planning developing; LitPol Link 2 is the export route advantage" },
+      "bureaucratic_friction": { "score": 42, "assessment": "LOW-MEDIUM — digitalising public administration; Lithuanian language requirement; VERT and Litgrid are responsive regulators; corruption risk low" },
+      "judicial_appeal_risk": { "score": 45, "assessment": "LOW-MEDIUM — courts independent and reliable; VCCA arbitration efficient for commercial disputes; standard administrative challenge risk for wind projects" }
+    },
+    "primary_bottleneck": "Onshore wind: species surveys and territorial plan amendments. Offshore: marine spatial planning is early-stage. Overall low-drag environment.",
+    "litpol_link_advantage": "Lithuania's direct interconnection to Poland via LitPol Link 2 is the strongest CE physical connection of any Baltic state. This is an operational advantage for electricity export routing that Estonia and Latvia depend on Lithuania for.",
+    "score_rationale": "Score 46 — among lowest operational drag of second-tier EU RES markets. Strong TSO, good interconnection, improving permitting environment, and digital governance improvements."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "National security screening for critical infrastructure including energy; defence-related clearances required near military areas",
+    "energy_sector_mandatory_notification": true,
+    "practical_risk": "Low-Medium — Lithuania is pro-FDI; energy sector investment strongly welcomed given energy independence policy; EU investors processed efficiently",
+    "legal_basis": "Lithuanian investment laws; national security legislation; EU Regulation 2019/452"
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "tender_state_aid_status": {
+      "instrument": "VERT competitive tender premium",
+      "status": "Competitive tender mechanism designed for CEEAG compliance. Verify EC clearance at competition.ec.europa.eu.",
+      "retrospective_clawback_risk": { "assessment": "Very Low — no retroactive incident history; competitive tender framework CEEAG-aligned" }
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Lithuania is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY premium — uncapped merchant upside.",
+    "_rule_3b_note": "15% CIT (conventional annual system — NOT distributed profit model like Estonia/Latvia). Investment project incentive can eliminate CIT liability in early years. NPV of incentive benefit material.",
+    "illustrative_onshore_wind": {
+      "reference_price_eur_mwh_approx": 40,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 12,
+      "p50_capacity_factor_pct": 33,
+      "typical_capex_eur_per_mw": 1350000,
+      "opex_eur_per_mw_per_year": 43000,
+      "cit_pct": 15.0,
+      "investment_incentive_note": "Investment project incentive may eliminate CIT for qualifying CapEx in early years — model as CIT credit against CIT liability, with full CIT payable once credit exhausted."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
+    "permitting_window_solar": { "rag": "GREEN", "rationale": "Growing pipeline; southern Lithuania has better irradiation than other Baltic states; improving regulatory process; 18 months P50" },
+    "permitting_window_onshore_wind": { "rag": "GREEN", "rationale": "Żemaitija and coastal areas have good resource; 3–5 year P50 is manageable; no moratorium; policy supportive; improving environment" },
+    "permitting_window_offshore": { "rag": "AMBER", "rationale": "Early-stage marine spatial planning; no commissioned offshore projects yet; LitPol Link 2 export route is the unique structural advantage" },
+    "grid_connection": { "rag": "GREEN", "rationale": "Litgrid is excellent; LitPol Link 2 provides strongest Baltic-CE physical connection; VERT regulatory oversight effective" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "VERT competitive tender operational; one-way mechanism; some tenders approaching zero-subsidy for onshore wind" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way; no clawback; no retroactive modification history" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "15% CIT (conventional system — lower than Western EU peers). Investment project incentive provides material CIT timing benefit in early operational years. 0% dividend WHT for EU parent." },
+    "ppa_enforceability": { "rag": "HIGH", "rationale": "Civil Code provides reliable framework; VCCA/ICC arbitration efficient; Achema is unique large-scale industrial PPA counterparty" },
+    "political_risk": { "rag": "GREEN", "rationale": "A2/A sovereign; NATO member; strongest energy independence policy of Baltic states; Baltic synchronization led by Lithuania; no retroactive RES incidents" },
+    "operational_drag": { "rag": "GREEN", "rationale": "Score 46 — among lowest operational drag in EU; Litgrid excellent; LitPol Link 2 strategic advantage; improving permitting" },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "Energy sector screening; EU investors generally processed efficiently; strong pro-FDI policy environment" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "CEEAG-compliant competitive tender; no retroactive risk history" },
+    "overall_stop_go": "GREEN",
+    "overall_rationale": "Lithuania is an outstanding RES investment destination combining a 15% CIT with an effective Investment Project Incentive, the Baltic region's strongest physical grid interconnection to Central Europe (LitPol Link 2), genuine offshore Baltic wind momentum, the most politically durable energy independence policy of any Baltic state, and Baltic ENTSO-E synchronization security. The unique Achema industrial PPA counterparty adds PPA market depth not available in Estonia or Latvia. Suitable for all investor risk profiles."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 42,
+    "1_permitting_window_scope": "Onshore wind (Žemaitija/coastal). Solar: 18 months P50. Offshore: 96 months P50 (early-stage).",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 15,000–100,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 15,000–100,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "15–42",
+    "3_primary_support_mechanism": "VERT competitive tender premium; Nord Pool LT market reference; one-way; approaching zero-subsidy for onshore wind",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": "15% CIT (annual conventional system); 5% for small companies (≤EUR 300k revenue, ≤10 employees)",
+    "4_effective_tax_rate_note": "Conventional annual CIT (not distributed profit model). Investment Project Incentive may eliminate CIT liability in qualifying investment years. NPV benefit material for large RES projects.",
+    "4_key_incentive": "Investment Project Incentive (investicinis projektas) — up to 100% CIT offset on qualifying CapEx (PMĮ §17¹); 0% dividend WHT for EU parent",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Civil Code (CK); VCCA/ICC arbitration; Achema as unique large-scale industrial counterparty; Nord Pool LT market",
+    "6_political_risk_score": 82,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 46,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 28–55/MWh approx. (onshore wind VERT tender reference — verify at VERT)",
+    "8_revenue_floor_eur": "EUR 28–55/MWh (EUR domestic)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Verify at VERT (vert.lt). Reference prices change with each tender round. Some tenders at near-zero for onshore wind. Staleness risk: HIGH."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Lithuania is not an IPCEI participant. National hydrogen strategy in development. Baltic desynchronisation from Russian grid (BRELL) creates energy security context for hydrogen. Klaipeda LNG terminal provides gas security infrastructure. EU cohesion funds available."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Market premium (rinkos priemoka) under Atsinaujinančių išteklių energetikos įstatymas administered by VERT.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Ignalina NPP (RBMK) decommissioned 2009. SMR exploration driven by energy security needs. Feasibility study for new nuclear commissioned by government. No final investment decision or formal programme. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 4,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Independence FSRU at Klaipeda. Strategic energy security asset — first Baltic LNG terminal. Also serves Latvia and Estonia via pipeline."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Lithuania has gas-fired generation. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Lithuanian bioenergy support under Atsinaujinančių išteklių energetikos įstatymas before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

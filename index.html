@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyperion AI Agent — European Energy CapEx Intelligence</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="Logo2.png" type="image/png">
+  <!-- Access token injected at deploy time via Vercel env var NEXT_PUBLIC_ACCESS_TOKEN -->
+  <meta name="hyperion-token" content="">
+  <script>window.HYPERION_ACCESS_TOKEN = document.querySelector('meta[name="hyperion-token"]')?.content ?? '';</script>
+</head>
+<body>
+
+  <!-- ================================================================
+       HEADER
+  ================================================================ -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-block">
+        <img src="Logo2.png" class="logo-img" alt="Hyperion">
+        <div>
+          <div class="logo-name">Hyperion AI Agent</div>
+          <div class="logo-sub">European Energy CapEx Intelligence</div>
+        </div>
+      </div>
+      <div class="header-badge">30 Jurisdictions &nbsp;·&nbsp; 8 Scoring Dimensions &nbsp;·&nbsp; 3 Investment Profiles</div>
+    </div>
+  </header>
+
+  <!-- ================================================================
+       MAIN
+  ================================================================ -->
+  <main class="main-content">
+
+    <!-- Query Panel (Wizard) -->
+    <section class="query-panel" id="query-panel">
+
+      <!-- Step indicator -->
+      <div class="wizard-steps" id="wizard-steps">
+        <div class="ws-item active" data-step="1">
+          <div class="ws-circle">1</div>
+          <span class="ws-label">Profile</span>
+        </div>
+        <div class="ws-connector" id="ws-conn-1"></div>
+        <div class="ws-item" data-step="2">
+          <div class="ws-circle">2</div>
+          <span class="ws-label">Technology</span>
+        </div>
+        <div class="ws-connector" id="ws-conn-2"></div>
+        <div class="ws-item" data-step="3">
+          <div class="ws-circle">3</div>
+          <span class="ws-label">Parameters</span>
+        </div>
+        <div class="ws-connector" id="ws-conn-3"></div>
+        <div class="ws-item" data-step="4">
+          <div class="ws-circle">4</div>
+          <span class="ws-label">Scope</span>
+        </div>
+      </div>
+
+      <!-- Pane 1: Investment Profile -->
+      <div class="wizard-pane" id="wizard-pane-1">
+        <div class="pane-title">Select your investment profile</div>
+        <p class="pane-sub">This determines how the Hyperion AI Agent will weight risk, return, and regulatory tolerance across all jurisdictions. Required before any analysis can proceed.</p>
+        <div class="profile-grid" id="profile-grid">
+          <button class="profile-card" data-profile="low_risk_core">
+            <div class="profile-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <span class="profile-name">Low Risk Core Infrastructure</span>
+            <span class="profile-desc">Sovereign stability and revenue certainty dominate. Merchant exposure heavily penalised even where theoretical IRR is high.</span>
+          </button>
+          <button class="profile-card" data-profile="value_add">
+            <div class="profile-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+                <polyline points="17 6 23 6 23 12"/>
+              </svg>
+            </div>
+            <span class="profile-name">Value-Add / Development</span>
+            <span class="profile-desc">Speed to market and return uplift prioritised. Higher permitting and construction risk tolerated in exchange for lower cost and higher potential returns.</span>
+          </button>
+          <button class="profile-card" data-profile="esg_impact">
+            <div class="profile-card-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 8C8 10 5.9 16.17 3.82 19.34L3 21c5.25-3 9.9-5.08 14-7 3-1.5 4-7 4-7s-2 1-4 1z"/>
+                <path d="M3 21s2-4 4-8"/>
+              </svg>
+            </div>
+            <span class="profile-name">ESG Impact</span>
+            <span class="profile-desc">Additionality, local content, and carbon-reduction alignment weighted alongside financial return. EU RED III compliance emphasised.</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pane 2: Technology -->
+      <div class="wizard-pane hidden" id="wizard-pane-2">
+        <div class="pane-title">Select technology type</div>
+        <p class="pane-sub">Permitting timelines, capacity factors, and support mechanisms vary materially by technology type. This calibrates all scoring parameters accordingly.</p>
+        <div class="tech-row" id="tech-row">
+          <div class="tech-category-label">Energy Creation</div>
+          <button class="tech-btn" data-tech="solar">☀️&nbsp; Solar PV</button>
+          <button class="tech-btn" data-tech="onshore_wind">💨&nbsp; Onshore Wind</button>
+          <button class="tech-btn" data-tech="offshore_wind">🌊&nbsp; Offshore Wind</button>
+          <button class="tech-btn" data-tech="floating_solar">🏞️&nbsp; Floating Solar</button>
+          <button class="tech-btn" data-tech="green_hydrogen">🌿&nbsp; Green Hydrogen</button>
+          <button class="tech-btn" data-tech="nuclear_smr">⚛️&nbsp; Nuclear SMR</button>
+          <button class="tech-btn" data-tech="natural_gas_lng">⚡&nbsp; Natural Gas &amp; LNG</button>
+          <button class="tech-btn" data-tech="biowaste_energy">♻️&nbsp; Biowaste to Energy</button>
+          <button class="tech-btn" data-tech="coal_energy">⛏️&nbsp; Coal Energy</button>
+          <div class="tech-category-label">Energy Infrastructure</div>
+          <button class="tech-btn" data-tech="bess">🔋&nbsp; Battery Storage (BESS)</button>
+          <button class="tech-btn" data-tech="lng_gas">🔥&nbsp; LNG &amp; Gas Infrastructure</button>
+          <button class="tech-btn" data-tech="data_centre">🖥️&nbsp; Data-Centre Power</button>
+        </div>
+      </div>
+
+      <!-- Pane 3: Budget & Target Markets -->
+      <div class="wizard-pane hidden" id="wizard-pane-3">
+        <div class="pane-title">Investment parameters</div>
+        <p class="pane-sub">Set your budget envelope and target markets. These shape the AI analyst's context and suggested questions.</p>
+
+        <div class="param-section">
+          <div class="param-label">Budget envelope</div>
+          <div class="budget-grid" id="budget-grid">
+            <button class="budget-btn" data-budget="small" data-budget-label="&lt; €25M" data-budget-min="0" data-budget-max="25">
+              <span class="budget-name">&lt; €25M</span>
+              <span class="budget-desc">Small-scale / pilot</span>
+            </button>
+            <button class="budget-btn" data-budget="utility" data-budget-label="€25M – €100M" data-budget-min="25" data-budget-max="100">
+              <span class="budget-name">€25M – €100M</span>
+              <span class="budget-desc">Utility scale</span>
+            </button>
+            <button class="budget-btn" data-budget="portfolio" data-budget-label="€100M – €500M" data-budget-min="100" data-budget-max="500">
+              <span class="budget-name">€100M – €500M</span>
+              <span class="budget-desc">Portfolio scale</span>
+            </button>
+            <button class="budget-btn" data-budget="fund" data-budget-label="€500M+" data-budget-min="500" data-budget-max="0">
+              <span class="budget-name">€500M+</span>
+              <span class="budget-desc">Infrastructure fund</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="param-section">
+          <div class="param-label" style="margin-top:24px">Target markets <span class="param-label-note">(select one or more)</span></div>
+          <div class="region-grid" id="region-grid">
+            <button class="region-btn" data-region="nordic" data-region-label="Nordic" data-isos="DK,FI,NO,SE">
+              <span class="region-emoji">❄️</span>
+              <span class="region-name">Nordic</span>
+              <span class="region-countries">DK · FI · NO · SE</span>
+            </button>
+            <button class="region-btn" data-region="british_isles" data-region-label="British Isles" data-isos="GB,IE">
+              <span class="region-emoji">🌬️</span>
+              <span class="region-name">British Isles</span>
+              <span class="region-countries">GB · IE</span>
+            </button>
+            <button class="region-btn" data-region="western_europe" data-region-label="Western Europe" data-isos="NL,BE,LU,FR">
+              <span class="region-emoji">🏛️</span>
+              <span class="region-name">Western Europe</span>
+              <span class="region-countries">NL · BE · LU · FR</span>
+            </button>
+            <button class="region-btn" data-region="dach" data-region-label="DACH" data-isos="DE,AT,CH">
+              <span class="region-emoji">⚙️</span>
+              <span class="region-name">DACH</span>
+              <span class="region-countries">DE · AT · CH</span>
+            </button>
+            <button class="region-btn" data-region="southern_europe" data-region-label="Southern Europe" data-isos="ES,PT,IT,GR,CY,MT">
+              <span class="region-emoji">☀️</span>
+              <span class="region-name">Southern Europe</span>
+              <span class="region-countries">ES · PT · IT · GR · CY · MT</span>
+            </button>
+            <button class="region-btn" data-region="eastern_europe" data-region-label="Eastern Europe" data-isos="PL,HU,SK,SI,RO,BG,HR,CZ">
+              <span class="region-emoji">📈</span>
+              <span class="region-name">Eastern Europe</span>
+              <span class="region-countries">PL · HU · SK · SI · RO · BG · HR · CZ</span>
+            </button>
+            <button class="region-btn" data-region="baltics" data-region-label="Baltics" data-isos="EE,LV,LT">
+              <span class="region-emoji">⚡</span>
+              <span class="region-name">Baltics</span>
+              <span class="region-countries">EE · LV · LT</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pane 4: Integrated scope chat -->
+      <div class="wizard-pane hidden" id="wizard-pane-4">
+        <div class="chat-context-banner">
+          <span class="ctx-title">Session context</span>
+          <div class="ctx-pills" id="ctx-pills"></div>
+          <button class="ctx-edit-btn" id="ctx-edit-btn">✎ Edit</button>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-suggestions" id="chat-suggestions"></div>
+        <div class="chat-input-row">
+          <textarea id="chat-input" class="chat-input" rows="2"
+            placeholder="Choose a scope option above, or type a question…"></textarea>
+          <button id="chat-send" class="chat-send-btn" disabled aria-label="Send">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Wizard navigation -->
+      <div class="wizard-nav">
+        <button class="wiz-back" id="back-btn">← Back</button>
+        <button class="wiz-next" id="next-btn" disabled>Next →</button>
+      </div>
+
+    </section>
+
+    <!-- Results Panel — hidden until query runs -->
+    <section class="results-panel hidden" id="results-panel">
+      <div id="results-content"></div>
+    </section>
+
+
+  </main>
+
+  <!-- ================================================================
+       FOOTER — Rule 6 disclaimer
+  ================================================================ -->
+  <footer class="site-footer">
+    <p class="disclaimer" id="disclaimer-text">
+      This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal, financial, or investment advice and should not be relied upon as such. Users should obtain independent qualified legal and financial counsel before committing capital to any jurisdiction. Past regulatory conditions are not indicative of future regulatory environments.
+    </p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

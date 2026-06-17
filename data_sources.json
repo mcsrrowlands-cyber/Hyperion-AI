@@ -1,0 +1,210 @@
+{
+  "_schema": "hyperion-data-sources-v1",
+  "_description": "Authoritative source registry for Hyperion AI jurisdiction data. Per Rule 2, every data point added to country JSON files must be traceable to a source listed here. Fields without a listed source must be set to null with confidence: 'low'.",
+  "_last_updated": "2026-06-16",
+
+  "sources": {
+    "entso_e": {
+      "name": "ENTSO-E Transparency Platform",
+      "url": "https://transparency.entsoe.eu",
+      "applies_to": [
+        "grid_connection_data", "bess_ancillary_services_markets",
+        "curtailment_statistics", "capacity_factors", "generation_mix"
+      ],
+      "update_frequency": "Real-time / monthly aggregates",
+      "notes": "Primary source for grid and storage data across EU TSOs. Use for BESS ancillary service market depth assessments."
+    },
+    "entso_e_tyndp": {
+      "name": "ENTSO-E Ten-Year Network Development Plan (TYNDP)",
+      "url": "https://tyndp.entsoe.eu",
+      "applies_to": ["grid_reinforcement_projects", "interconnection_capacity", "grid_connection_timelines"],
+      "update_frequency": "Biennial",
+      "notes": "Use for forward-looking grid development and connection timeline data."
+    },
+    "entso_g": {
+      "name": "ENTSO-G TYNDP / GIE LNG Map",
+      "url": "https://www.entsog.eu/tyndp",
+      "url_gie": "https://www.gie.eu/transparency/databases/lng-database/",
+      "applies_to": [
+        "lng_terminal_capacity", "gas_grid_connection", "regasification_capacity",
+        "pipeline_infrastructure", "third_party_access"
+      ],
+      "update_frequency": "TYNDP biennial; GIE LNG map quarterly",
+      "notes": "Primary source for all LNG and gas infrastructure data. GIE LNG Map provides LNG terminal inventory by country."
+    },
+    "ec_state_aid": {
+      "name": "European Commission State Aid Database (DG COMP)",
+      "url": "https://competition-cases.ec.europa.eu/search",
+      "applies_to": [
+        "state_aid_clearance_decisions", "retrospective_clawback_risk",
+        "ec_notification_status", "ipcei_clearance", "ceeag_compatibility"
+      ],
+      "update_frequency": "Ongoing — check per scheme and decision date",
+      "notes": "Primary source for EC clearance status of national support schemes. IPCEI Hy2Tech, Hy2Use, and Hy2Infra clearance decisions are searchable here."
+    },
+    "jrc_pvgis": {
+      "name": "JRC PVGIS (Photovoltaic Geographical Information System)",
+      "url": "https://re.jrc.ec.europa.eu/pvg_tools/en/",
+      "applies_to": [
+        "solar_capacity_factor", "floating_solar_irradiance",
+        "solar_resource_assessment", "annual_irradiance_kwh_kwp"
+      ],
+      "update_frequency": "PVGIS 5.2 — static dataset (ERA5, 2005–2020 baseline)",
+      "notes": "Authoritative source for solar irradiance across all EU+UK jurisdictions. Floating solar irradiance is comparable to ground-mounted at same location and coordinates."
+    },
+    "iea_hydrogen": {
+      "name": "IEA Hydrogen Projects Database",
+      "url": "https://www.iea.org/data-and-statistics/data-product/hydrogen-projects-database",
+      "applies_to": [
+        "green_hydrogen_projects", "electrolyser_capacity_by_country",
+        "hydrogen_support_mechanisms", "h2_production_targets"
+      ],
+      "update_frequency": "Annual",
+      "notes": "Most comprehensive publicly available database of hydrogen projects by country. Use for support mechanism identification and project pipeline data."
+    },
+    "iea_nuclear": {
+      "name": "IEA Nuclear Power and Secure Energy Transitions",
+      "url": "https://www.iea.org/reports/nuclear-power-and-secure-energy-transitions",
+      "applies_to": [
+        "nuclear_smr_policy_status", "nuclear_capacity_targets",
+        "nuclear_regulatory_status", "smr_programme_status"
+      ],
+      "update_frequency": "Annual / periodic reports",
+      "notes": "IEA tracks national nuclear policy positions and SMR programme status. Use alongside IEA country profiles."
+    },
+    "iea_country": {
+      "name": "IEA Country Profiles",
+      "url": "https://www.iea.org/countries",
+      "applies_to": [
+        "energy_mix", "policy_framework_overview", "nuclear_policy",
+        "hydrogen_national_targets", "renewables_targets", "lng_import_capacity"
+      ],
+      "update_frequency": "Annual",
+      "notes": "Country-level energy policy overviews. Used to establish nuclear policy status (active/phase-out/prohibited) and hydrogen strategy presence."
+    },
+    "national_tso": {
+      "name": "Respective National TSO Published Grid Development Plans",
+      "url": "varies_by_country",
+      "applies_to": [
+        "bess_grid_connection_timelines", "ancillary_services_market_rules",
+        "grid_connection_cost_estimates", "connection_queue_data"
+      ],
+      "update_frequency": "Annual / per regulatory period",
+      "notes": "Each national TSO publishes grid development plans and connection timelines. Key TSOs: RTE (FR), National Grid ESO (UK), TenneT/50Hertz/Amprion/TransnetBW (DE), REE (ES), Terna (IT), TenneT NL (NL)."
+    },
+    "eu_hydrogen_bank": {
+      "name": "European Hydrogen Bank — Auction Results",
+      "url": "https://www.eib.org/en/projects/sectors/energy/hydrogen/index.htm",
+      "applies_to": [
+        "green_hydrogen_auction_clearing_prices", "ipcei_eligibility",
+        "eu_hydrogen_bank_participation"
+      ],
+      "update_frequency": "Per auction round",
+      "notes": "EU Hydrogen Bank Pilot Auction (2023) clearing price: EUR 0.48/kg H2 (blended). Source: European Commission press release 08 May 2024. Subject to change in subsequent rounds."
+    }
+  },
+
+  "technology_data_confidence": {
+    "bess": {
+      "permitting_timelines": {
+        "source": "national_tso",
+        "confidence": "medium",
+        "note": "ENTSO-E provides ancillary services market data. National permitting timelines for BESS are not systematically published — derived from national TSO grid development plans and planning authority guidance where available. Confidence is medium for major markets (DE, FR, UK, ES), low for smaller markets."
+      },
+      "support_mechanisms": {
+        "source": "entso_e",
+        "confidence": "medium",
+        "note": "Ancillary services markets (FCR, aFRR, mFRR) are documented via ENTSO-E. National capacity market rules vary — verify against national TSO documentation before use."
+      },
+      "grid_connection": {
+        "source": "entso_e",
+        "confidence": "high",
+        "note": "ENTSO-E Transparency Platform publishes connection data by country. BESS grid connection follows the same rules as generation assets in most jurisdictions."
+      }
+    },
+    "green_hydrogen": {
+      "permitting_timelines": {
+        "source": null,
+        "confidence": "low",
+        "note": "No systematic cross-EU permitting timeline database exists for green hydrogen projects as of 2025. IEA Hydrogen Projects Database provides project-level data only. Figures where provided are approximations based on analogous industrial permitting. Flag as null where no project-level data available."
+      },
+      "support_mechanisms": {
+        "source": "iea_hydrogen",
+        "confidence": "medium",
+        "note": "EU Hydrogen Bank Pilot Auction (first round 2023, results published May 2024). National schemes vary significantly. IEA Hydrogen Projects Database is the most comprehensive cross-country source. Verify scheme parameters against EC State Aid database for notified national measures."
+      },
+      "ipcei_eligibility": {
+        "source": "ec_state_aid",
+        "confidence": "high",
+        "note": "IPCEI Hy2Tech (2022), Hy2Use (2022), and Hy2Infra (2024) clearance decisions are available in EC State Aid database. Participating member states are publicly listed. Non-participants have no IPCEI route."
+      }
+    },
+    "floating_solar": {
+      "permitting_timelines": {
+        "source": null,
+        "confidence": "low",
+        "note": "No systematic cross-EU floating solar permitting database exists. Timelines are approximated as ground-mounted solar P50 plus 6–12 months for water authority / environmental agency consent. This is an estimate — mark with confidence: 'low' and verify against national planning authority guidance."
+      },
+      "irradiance": {
+        "source": "jrc_pvgis",
+        "confidence": "high",
+        "note": "JRC PVGIS covers all EU+UK jurisdictions. Floating solar irradiance at the same latitude is comparable to ground-mounted (marginal albedo uplift from water surface, minor shading loss from tilt). Use PVGIS at project coordinates."
+      },
+      "support_mechanisms": {
+        "source": null,
+        "confidence": "low",
+        "note": "Floating solar typically participates in the same auction schemes as ground-mounted solar (same technology category in most EU frameworks). Country-specific eligibility varies — verify against national tender documentation. Some countries explicitly include or exclude reservoir-mounted PV."
+      }
+    },
+    "nuclear_smr": {
+      "permitting_timelines": {
+        "source": "iea_nuclear",
+        "confidence": "low",
+        "note": "IEA tracks national nuclear policy positions. SMR-specific licensing timelines are country-unique, subject to change, and no operational EU SMR has completed the full licensing pathway as of 2025. Figures for countries with no active programme are null. UK GDA and French ASN data are more reliable. Treat all figures as indicative."
+      },
+      "support_mechanisms": {
+        "source": "iea_nuclear",
+        "confidence": "low",
+        "note": "Nuclear support is highly country-specific. UK: Regulated Asset Base model (Nuclear Energy (Financing) Act 2022). France: State-backed EDF model. Romania: US DFC loan guarantees for NuScale/RoPower. Most EU countries have no SMR support framework. Null is the correct entry for most jurisdictions."
+      },
+      "policy_status": {
+        "source": "iea_country",
+        "confidence": "high",
+        "note": "Constitutional bans (Austria: Atomsperrgesetz 1978; Denmark) and legislative phase-outs (Germany: Atomgesetz, final shutdown April 2023; Spain: planned decommissioning 2027–2035) are well-documented in IEA country profiles. Active programmes (France, UK, Finland, Slovakia, Bulgaria, Romania, Czech Republic, Sweden) are also verifiable."
+      }
+    },
+    "lng_gas": {
+      "infrastructure": {
+        "source": "entso_g",
+        "confidence": "high",
+        "note": "ENTSO-G TYNDP and GIE LNG Map provide comprehensive LNG terminal inventory, regasification capacity (Bcm/year), and pipeline data by country. Primary authoritative source for infrastructure presence/absence."
+      },
+      "permitting_timelines": {
+        "source": "entso_g",
+        "confidence": "medium",
+        "note": "ENTSO-G project listings include planned LNG infrastructure with indicative timelines. National consenting timelines for new LNG terminals are less systematically documented. Environmental opposition and NIMBY risk can extend timelines materially."
+      },
+      "support_mechanisms": {
+        "source": null,
+        "confidence": "low",
+        "note": "LNG/gas infrastructure support is primarily market-based (tolling, capacity markets). EU Taxonomy Delegated Act (EU) 2022/1214 defines conditions under which gas qualifies as a transition activity under Article 10 (electricity generation from gas, up to 31 December 2030) or Article 10 (gas distribution infrastructure). No systematic cross-EU subsidy data. Null is appropriate for most countries."
+      },
+      "eu_taxonomy_risk": {
+        "source": "ec_state_aid",
+        "confidence": "medium",
+        "note": "EU Taxonomy Delegated Act (EU) 2022/1214 (in force from 1 January 2023) defines transition finance criteria for gas. New gas infrastructure must meet specific lifecycle emissions thresholds and sunset dates (2035 for generation, 2040 for networks). State aid for new LNG capacity faces EC scrutiny under CEEAG and Green Deal objectives."
+      }
+    }
+  },
+
+  "data_staleness_policy": {
+    "rule_2a_note": "Per Rule 2A: time-sensitive parameters must state source date and be flagged if potentially stale. The following parameters are considered time-sensitive and must be reverified before use:",
+    "time_sensitive_parameters": [
+      "EU Hydrogen Bank auction clearing prices — verify against latest EIB/EC auction round results",
+      "BESS ancillary services market prices (FCR, aFRR) — verify via ENTSO-E Transparency Platform",
+      "Nuclear SMR programme status — verify via IEA country profiles (updated annually)",
+      "LNG terminal regasification capacity — verify via GIE LNG Map (updated quarterly)",
+      "National BESS capacity market clearing prices — verify against national TSO publications"
+    ]
+  }
+}

@@ -1,0 +1,413 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Portugal",
+    "local_name": "República Portuguesa",
+    "iso_code": "PT",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "Portuguese solar auction clearing prices have reached near-zero in some rounds. Verify current DGEG leilão results before use. RFAI tax incentive conditions change with Orçamento do Estado (State Budget)."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Decreto-Lei n.º 76/2019, de 3 de junho (Regime Jurídico das Energias Renováveis)", "relevance": "Establishes the competitive tender (leilão) regime for renewable energy; prémio (premium) mechanism for auction winners; DGEG as regulator" },
+      { "instrument": "Lei n.º 52/2004, de 29 de outubro (Bases do Sistema Energético Nacional)", "relevance": "Framework energy legislation; basis for concession regime for electricity generation" },
+      { "instrument": "Decreto-Lei n.º 15/2022, de 14 de janeiro (Aceleração das energias renováveis)", "relevance": "Major acceleration decree: simplified licensing (licença única — single permit); ZVER (Zonas de Potencial de Energias Renováveis — renewable energy potential zones)" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Decreto-Lei n.º 15/2022 (Licença Única — single permit procedure)", "relevance": "Streamlined single permit process for renewable energy, replacing multi-step DIA/licenciamento chain for qualifying projects" },
+      { "instrument": "Decreto-Lei n.º 151-B/2013 (AIA — Avaliação de Impacte Ambiental)", "relevance": "Environmental impact assessment (AIA) procedure for projects above threshold" },
+      { "instrument": "Decreto-Lei n.º 169/2012 (Licenciamento industrial — REAI)", "relevance": "Industrial licensing framework relevant to generating plant" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Código do IRC (Imposto sobre o Rendimento das Pessoas Coletivas) — Decreto-Lei n.º 442-B/88", "relevance": "Corporate income tax: 21% standard rate + derrama municipal (up to 1.5%) + derrama estadual (3–9% on profits above €1.5m) = combined 21–31.5% range" },
+      { "instrument": "Código Fiscal do Investimento (CFI) — Decreto-Lei n.º 162/2014", "relevance": "RFAI (Regime Fiscal de Apoio ao Investimento) tax credit for qualifying investments in interior regions. SIFIDE — R&D tax credit framework." }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG 2022/C 80/01", "relevance": "EC framework for leilão/prémio mechanism compatibility" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Lei n.º 88/2017, de 21 de agosto (FDI monitoring framework)", "relevance": "AICEP (Portuguese Trade and Investment Agency) coordinates FDI; energy sector screening obligations" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation; Portugal notifies EC for qualifying acquisitions" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Portugal's DL 15/2022 introduced the 'licença única' (single permit) replacing the previous multi-step licensing chain (AIA → RECAPE → LAI → LA). This is a significant simplification. ZVER (renewable potential zones) provide expedited process for projects within designated areas.",
+    "solar_utility": {
+      "primary_authority": "DGEG (Direção-Geral de Energia e Geologia) for grid access; APA (Agência Portuguesa do Ambiente) for AIA; CCDR (Comissão de Coordenação e Desenvolvimento Regional) for local/regional planning",
+      "primary_process": "Licença única under DL 15/2022 for qualifying projects; AIA if above threshold; connection agreement with REN or E-REDES",
+      "legal_basis": "DL 15/2022; DL 151-B/2013 (AIA); DL 76/2019",
+      "zver_benefit": "Projects in ZVER (Zonas de Potencial de Energias Renováveis) benefit from simplified environmental assessment and faster licensing. Portugal's high solar resource areas in Alentejo and Algarve are designated ZVER.",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 36,
+      "appeal_risk": "medium",
+      "notes": "Portugal has exceptional solar resource (1,700–2,100+ kWh/kWp p.a. in Alentejo/Algarve — among Europe's best) and relatively straightforward permitting post-DL 15/2022. The combination creates strong solar investment fundamentals. Key constraint is grid connection saturation in high-resource areas."
+    },
+    "onshore_wind": {
+      "primary_authority": "DGEG; APA for AIA; ANAC (Autoridade Nacional de Aviação Civil) for aviation safety; ICNF (Instituto de Conservação da Natureza e das Florestas) for Natura 2000",
+      "primary_process": "Licença única; AIA; grid connection request to REN",
+      "legal_basis": "DL 15/2022; DL 151-B/2013; Lei das Aves (Directiva Aves) — species protection",
+      "timeline_p50_months": 30,
+      "timeline_min_months": 18,
+      "timeline_max_months": 60,
+      "appeal_risk": "medium",
+      "notes": "Portugal has exploited its onshore wind resource well — installed capacity is high relative to country size. Good Atlantic wind resource particularly in northern Portugal and interior plateaus."
+    },
+    "offshore_wind": {
+      "primary_authority": "DGEG; DGRM (Direção-Geral de Recursos Naturais, Segurança e Serviços Marítimos) for maritime licensing; APA for AIA",
+      "primary_process": "Concessão de produção offshore; AIA maritima; grid connection via submarine cable to REN",
+      "legal_basis": "DL 15/2022; Lei n.º 16/2023 (Alinhamento da lei com legislação europeia offshore); Decreto-Lei n.º 5/2008 (Mar)",
+      "floating_offshore": {
+        "relevance": "HIGH — Portugal's Atlantic coastline is deep. Fixed-bottom offshore is limited to northern shallower areas. Floating offshore is Portugal's primary offshore technology pathway.",
+        "windfloat_project": "WindFloat Atlantic pilot (25MW) was the world's first commercial semi-submersible floating wind farm — commissioned 2020 off Portugal. Demonstrates Portuguese capability.",
+        "commercial_scale_status": "Commercial-scale floating offshore: government has launched tender process. Portugal is well-positioned for global floating offshore technology leadership."
+      },
+      "timeline_p50_months": 96,
+      "appeal_risk": "medium"
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operator": "REN — Redes Energéticas Nacionais S.A. (state-controlled; publicly listed)",
+    "distribution_operator": "E-REDES (formerly EDP Distribuição — subsidiary of EDP)",
+    "regulatory_authority": "ERSE (Entidade Reguladora dos Serviços Energéticos)",
+    "legal_basis": "DL 172/2006 (Electricity Sector Act); DL 76/2019; ERSE tariff regulation",
+    "iberian_connection": "Iberian interconnection with Spain is limited (approximately 4GW capacity) — Portugal-Spain is a relative electricity island vs. rest of Europe. MIBEL (Mercado Ibérico de Electricidade) is the Iberian electricity market.",
+    "saturation_note": "High renewable penetration (Portugal has reached near-100% renewable generation on some days) has created grid saturation in central and southern Portugal where solar/wind resource is highest. REN grid reinforcement plans are underway.",
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 36, "range": "24–72" },
+      "distribution_connected": { "p50": 24, "range": "12–48" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 40000,
+      "range_high": 220000,
+      "notes": "CRAT (Custo de Reforço Associado ao Transporte) — transmission reinforcement cost contribution required from generators in some grid areas"
+    },
+    "curtailment_risk": "medium",
+    "notes": "Portugal's aggressive renewable build-out has made it one of Europe's cleanest grids but also one approaching technical limits on non-dispatchable generation. Curtailment of solar during midday hours is increasing."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: Portugal's prémio (premium) under DL 76/2019 is a ONE-WAY mechanism. The prémio is the auction-cleared supplement received by the generator when the market reference price (OMIE/MIBEL spot) falls below the leilão-cleared reference tariff. When market price exceeds the reference tariff, the prémio is zero — the generator retains full merchant upside. There is NO clawback. This is equivalent to Germany's Marktprämie and France's CR.",
+    "primary_mechanism": "Prémio (Market Premium) via Leilão (competitive tender)",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "DGEG (tender design); OMIE / REN (settlement); ERSE (regulatory oversight)",
+    "legal_basis": "DL 76/2019 — Regime Jurídico das Energias Renováveis; Portaria de abertura do leilão (specific tender opening order)",
+    "mechanism_description": {
+      "summary": "Generator wins leilão (auction) at cleared reference tariff. Generator sells electricity on OMIE (MIBEL) spot market. Prémio = max(0, tarifa de referência − preço de mercado). When market price exceeds reference tariff: prémio = zero. Generator retains all market upside. No clawback.",
+      "upside_treatment": "UNCAPPED — no clawback above tarifa de referência. Generator retains full MIBEL upside.",
+      "downside_treatment": "PROTECTED — floor at tarifa de referência",
+      "contract_term_years": 15,
+      "market_reference": "OMIE (Operador del Mercado Ibérico de Energía) daily spot price — Portugal zone (PT) of MIBEL"
+    },
+    "notable_auctions": {
+      "alcoutim_2019": {
+        "description": "April 2019 — World record solar auction clearing price: €14.8/MWh for Alcoutim project (150MW) won by EDP Renewables",
+        "staleness_note": "This extremely low 2019 price reflected specific market conditions (long-term, no inflation indexation). NOT representative of current auction dynamics. Cited as historical landmark only.",
+        "subsequent_auctions": "Post-2021 auctions have cleared at higher prices reflecting increased capital costs. Verify current leilão results with DGEG."
+      }
+    },
+    "clearing_prices_eur_mwh_approx": {
+      "_staleness_warning": "These are indicative 2024 ranges. Verify with DGEG leilão results before use.",
+      "_source": "DGEG, resultados dos leilões de energias renováveis — dgeg.gov.pt",
+      "solar_pv": { "low": 25.00, "high": 55.00, "notes": "Wide range reflecting different auction vintages and risk profiles. Post-2022 inflation has pushed clearing prices up from near-zero historic lows." },
+      "onshore_wind": { "low": 40.00, "high": 70.00 }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Portugal's reintegração (depreciation) regime; RFAI tax credit is a PERMANENT benefit (not just a timing benefit) for qualifying investments in interior regions — must be modelled as a permanent CapEx offset, not merely an accelerated timing benefit.",
+    "irc": {
+      "standard_rate_pct": 21,
+      "legal_basis": "Código do IRC Art. 87",
+      "derrama_municipal": { "rate_max_pct": 1.5, "legal_basis": "Lei das Finanças Locais Art. 18", "notes": "Set by municipality; varies 0–1.5%" },
+      "derrama_estadual": {
+        "rate_pct_on_profits_1_5m_to_7_5m": 3,
+        "rate_pct_on_profits_7_5m_to_35m": 5,
+        "rate_pct_on_profits_above_35m": 9,
+        "legal_basis": "Lei n.º 2/2014 de 16 de janeiro"
+      },
+      "combined_effective_rate_range_pct": {
+        "small_profits": 21,
+        "large_profitable_projects": "Up to 31.5% (21% + 1.5% derrama municipal + 9% top derrama estadual)"
+      }
+    },
+    "rfai": {
+      "description": "RFAI — Regime Fiscal de Apoio ao Investimento: tax credit for qualifying investments in inland Portugal (regiões elegíveis — broadly the interior of Portugal)",
+      "rate_up_to_eur_15m_pct": 25,
+      "rate_above_eur_15m_pct": 10,
+      "qualifying_investments": "Plant, machinery, and equipment for qualifying industrial/energy activities in eligible regions. Interior Portugal regions (Alentejo, Centro, Norte interior, Algarve) are typically eligible — Portugal's best solar regions often overlap with RFAI-eligible areas.",
+      "legal_basis": "Código Fiscal do Investimento Art. 22 et seq.; CFI — DL 162/2014",
+      "npv_benefit_analysis": {
+        "_rule_3b_compliance": true,
+        "description": "RFAI is a PERMANENT CapEx credit — not merely a timing benefit. At 25% RFAI credit rate on first €15m of qualifying CapEx: €3.75m credit per project (up to the limit). Applied against IRC liability over up to 10 years. NPV at 10% WACC: approximately 22% of first €15m qualifying CapEx.",
+        "note": "RFAI is potentially the most valuable CapEx incentive in this knowledge base for qualifying projects in eligible regions. Verify that the specific project location and activity qualify under current CFI provisions."
+      }
+    },
+    "depreciation": {
+      "method": "Reintegração e amortização — straight-line standard; declining balance available",
+      "wind_turbines_rate_pct": 12.5,
+      "solar_pv_rate_pct": 10,
+      "legal_basis": "Decreto Regulamentar n.º 25/2009, de 14 de setembro (depreciation table)"
+    },
+    "vat": {
+      "standard_rate_pct": 23,
+      "reduced_rate_intermediate_pct": 13,
+      "reduced_rate_pct": 6,
+      "applies_to_commercial_renewables": true,
+      "legal_basis": "Código do IVA (CIVA)",
+      "input_vat_recovery": "Available for sujeitos passivos de IVA (VAT-registered entities)"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "Medium-High",
+    "legal_basis": "Código Civil português — Art. 405 (freedom of contract). No bespoke PPA statute.",
+    "market_liquidity": "Medium — growing rapidly",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Tech (Amazon AWS PT, data centres in Portugal), Manufacturing (Autoeuropa/VW Portugal, Sonae, EDP Renewables self-supply), Tourism sector (growing awareness)",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "iberian_ppa_note": "Portugal and Spain are part of the MIBEL Iberian electricity market. PPAs referencing OMIE PT price are standard. Cross-border Iberian PPAs (buying Portuguese generation from Spain or vice versa) are legally feasible given MIBEL integration.",
+    "go_system": {
+      "description": "GdO — Garantias de Origem (Portuguese Guarantees of Origin)",
+      "regulator": "DGEG / REN (as GdO registry)",
+      "notes": "Standard EU GO framework; EDP and others active"
+    },
+    "cross_border_enforceability": "High — Portuguese courts are EU-standard; ICC arbitration available; Centre for Arbitration of the Lisbon Commercial Association (CAC) active"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 75,
+    "credit_ratings": {
+      "moodys": "A3",
+      "sp": "BBB+",
+      "fitch": "BBB+",
+      "source_note": "Portugal was downgraded to junk (BB+) during 2012 Eurozone crisis; ratings have recovered significantly. Verify current ratings and outlooks."
+    },
+    "political_stability": "Medium-High",
+    "government_structure": "Semi-presidential republic; stable parliamentary democracy. AD coalition government from 2024.",
+    "troika_period": "Portugal was subject to EU/IMF/ECB adjustment programme (Troika) 2011-2014 — sovereign support in exchange for fiscal austerity and sector reforms.",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2013–2014",
+        "description": "Austerity measures under the Memorandum of Understanding (MoU) with Troika included reductions to existing renewable energy support tariffs. Changes were applied to existing operational installations — retroactive in nature.",
+        "legal_instruments": "Various DL amending renewable tariff structures; CERSE (Complemento de Remuneração para a Sustentabilidade do Sistema Eléctrico) — a fee imposed on existing FiT recipients",
+        "international_arbitration": "Several ECT arbitration cases filed by foreign investors against Portugal; awards issued. Portugal argued state necessity/force majeure — partially accepted in some cases.",
+        "severity": "HIGH — genuine retroactive adjustment to existing FiT contracts. Less politically prominent than Spain's crisis but comparable in legal mechanism.",
+        "resolution": "Portugal has since restored credit ratings and honoured most remaining commitments. No repeat since 2014."
+      }
+    ],
+    "expropriation_risk": "Low",
+    "currency_risk": "None — EUR domestic",
+    "score_rationale": "Portugal scores 75 — lower than core EU due to A3/BBB+ ratings, Troika experience, and 2013-2014 retroactive FiT adjustments. Higher than Spain (62) because the retroactive adjustments were less systematic and driven by a clearly defined sovereign crisis rather than a deliberate policy reversal."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 55,
+    "component_scores": {
+      "grid_connection_drag": { "score": 60, "assessment": "MEDIUM-HIGH — high renewable penetration creates grid saturation in high-resource areas; limited Iberian interconnection to rest of Europe; CRAT reinforcement contributions required" },
+      "permitting_drag_solar": { "score": 35, "assessment": "LOW-MEDIUM — DL 15/2022 licença única is a meaningful simplification; ZVER designation expedites projects; APA process is manageable" },
+      "permitting_drag_wind": { "score": 45, "assessment": "MEDIUM — species protection (Directiva Aves, habitats) consultation; ANAC aviation concerns on ridgeline sites; DL 15/2022 improving timelines" },
+      "permitting_drag_offshore": { "score": 65, "assessment": "MEDIUM-HIGH — floating technology less mature in permitting framework; Atlantic conditions challenging; DGRM maritime process adds complexity" },
+      "bureaucratic_friction": { "score": 55, "assessment": "MEDIUM — Portuguese administration has improved but multi-authority coordination (DGEG, APA, CCDR, ICNF, REN) still creates friction; DL 15/2022 reforms are genuine improvements" },
+      "judicial_appeal_risk": { "score": 50, "assessment": "MEDIUM — Tribunais Administrativos accessible; environmental NGO challenge rate lower than France/Italy; Supremo Tribunal Administrativo is broadly efficient" }
+    },
+    "primary_bottleneck": "Grid connection saturation in the Alentejo/Algarve high-solar regions. Iberian electricity island effect limits export capacity.",
+    "score_rationale": "Composite 55 — solar and permitting drag are moderate; grid and RFAI location requirements create geographic concentration risk."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Portuguese investment oversight via AICEP; EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "reviewing_authority": "Banco de Portugal for financial investments; AICEP for FDI attraction; sectoral ministry for strategic assets",
+    "practical_risk": "Low",
+    "notes": "Portugal is generally welcoming of foreign investment in renewables (a stated policy priority). FDI screening is less formalised than some EU peers. EU FDI regulation applies. OECD investors face very low prohibition risk."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG 2022/C 80/01",
+    "leilao_clearance": "Prémio leilão mechanism cleared under CEEAG. Competitive tender satisfies proportionality.",
+    "rfai_note": "RFAI is a regional aid scheme approved under GBER/Regional Aid Guidelines — distinct from renewable energy aid. Compatibility pre-established.",
+    "retrospective_clawback_risk": "Low for new leilão projects — competitive mechanism is cleared. Historical Troika-era retroactive adjustments to legacy FiT are a historical risk, not current project risk.",
+    "notification_status": "Current leilão framework cleared; RFAI separately cleared as regional aid"
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: RFAI credit (25% on first €15m) must be modelled as a permanent CapEx offset — not merely a timing benefit. High solar capacity factors (21-24%) in Alentejo/Algarve significantly improve LCOE vs. Northern European peers.",
+    "_rule_3a_note": "ONE-WAY premium: floor at tarifa de referência, uncapped MIBEL upside. Portuguese solar cannibalization risk is growing as penetration increases — model Marktwert-equivalent discount.",
+    "illustrative_solar_pv_leilao": {
+      "tarifa_de_referencia_eur_mwh_approx": 38.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct_alentejo": 24,
+      "p50_capacity_factor_pct_norte": 18,
+      "typical_capex_eur_per_mw_dc": 560000,
+      "opex_eur_per_mw_per_year": 9000,
+      "rfai_credit_on_first_15m_eur": 0.25,
+      "cannibalization_discount_note": "Solar cannibalization (hours of high solar generation coincide with lowest MIBEL prices) is growing. Model Marktwert-equivalent at 15-20% below baseload reference in Iberian market."
+    }
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "GREEN", "rationale": "DL 15/2022 licença única; ZVER-designated high-resource areas; outstanding solar irradiation in Alentejo/Algarve. One of the best solar permitting frameworks in Southern Europe." },
+    "permitting_wind": { "rag": "AMBER", "rationale": "Species protection and ANAC consultations add time; DL 15/2022 improves process; mature onshore wind sector means experienced developers can navigate efficiently" },
+    "permitting_offshore": { "rag": "AMBER", "rationale": "Floating technology framework developing; WindFloat Atlantic demonstrated viability; Atlantic conditions and DGRM process create moderate delay risk" },
+    "grid_connection": { "rag": "AMBER", "rationale": "Grid saturation in high-resource areas; Iberian interconnection constraints; CRAT reinforcement contributions add cost; REN expansion plans in progress" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "Leilão prémio mechanism active; one-way premium with 15-year contracts; DGEG commitment to regular auction programme. Note: clearing prices historically volatile (near-zero in 2019 — verify current)." },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "RFAI 25% permanent credit for qualifying investments in interior Portugal is exceptional — potentially the best CapEx incentive in this knowledge base for eligible projects. IRC 21% standard rate is competitive." },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "Portuguese contract law robust; MIBEL integration with Spain creates liquid reference market; growing corporate PPA market" },
+    "political_risk": { "rag": "AMBER", "rationale": "A3/BBB+ rated; recovering from Troika period; 2013-2014 retroactive FiT adjustments are a genuine precedent though no repeat since. Improving trajectory under stable government." },
+    "operational_drag": { "rag": "AMBER", "rationale": "Solar and permitting are GREEN-level; grid and offshore are AMBER. Grid constraint in high-resource areas is the binding constraint." },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "Portugal is actively welcoming foreign investment in renewables; FDI screening is low-friction; OECD investors face no material prohibition risk" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Leilão mechanism cleared; RFAI approved as regional aid; no EC recovery risk for current framework" },
+    "overall_stop_go": "GREEN",
+    "overall_rationale": "Portugal offers a compelling combination of Europe's best solar irradiation (Alentejo/Algarve: 1,700–2,100+ kWh/kWp), an exceptional CapEx tax incentive (RFAI 25% credit for interior Portugal investments), a functional leilão prémio mechanism, and an improving political risk profile. The 2013-2014 retroactive FiT adjustment is a due diligence item but does not make Portugal a RED-level risk — unlike Spain. Grid saturation in prime solar areas is the primary constraint. Investors focused on utility-scale solar in designated zones, with RFAI optimization, will find Portugal one of the strongest risk-adjusted opportunities in this knowledge base."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 30,
+    "1_permitting_window_scope": "Onshore wind via licença única (DL 15/2022)",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 40,000–220,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 40,000–220,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "24–72",
+    "3_primary_support_mechanism": "Prémio via Leilão (competitive auction, DGEG) — one-way market premium",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": 21,
+    "4_key_incentive": "RFAI (Regime Fiscal de Apoio ao Investimento): 25% tax credit on first €15m qualifying CapEx in eligible interior Portugal regions. One of the strongest CapEx incentives in this knowledge base.",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Código Civil; OMIE PT price reference; MIBEL Iberian market integration",
+    "6_political_risk_score": 75,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 55,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR ~38/MWh approx. (solar, indicative leilão range — verify with DGEG results)",
+    "8_revenue_floor_eur": "EUR ~38/MWh (no conversion — domestic currency)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Leilão clearing prices vary significantly by round (range: near-zero to €55+). Verify DGEG results. Do not use 2019 Alcoutim near-zero price as proxy for current achievable levels."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Portugal participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). Estratégia Nacional para o Hidrogénio (EN-H2) targets 2–2.5 GW electrolysis by 2030. LNEG and REN administer hydrogen strategy. H2Sines project as flagship.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Portugal is IPCEI Hy2Tech and Hy2Infra participant. Among Europe's best solar/wind resources for low-cost electrolysis. Sines as export hub for green hydrogen to northern Europe (pipeline/NH3). Verify current DGEG/PRR (Recovery Plan) hydrogen auction rounds before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Regime de Remuneração Garantida (market premium / complemento remuneratório) via leilão administered by DGEG under DL 76/2019.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "no_policy",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": null,
+      "notes": "No nuclear energy policy in Portugal. Portugal has exceptional renewable resources (solar, wind, hydro) — no economic rationale for nuclear. No SMR discussion at policy level."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "No LNG import terminal currently. Sines LNG terminal historically operated but closed. New terminal discussions ongoing. Atlantic coastline is strategically positioned."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Portugal has CCGT capacity (EDP/REN grid). EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Portuguese bioenergy support under DGEG/DL 76/2019 framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

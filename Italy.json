@@ -1,0 +1,452 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Italy",
+    "local_name": "Repubblica Italiana",
+    "iso_code": "IT",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "GSE auction results (aste FER) change with each auction round. Verify current tariffe incentivanti against latest GSE decree publications (gse.it) before use. IRAP phase-out status should be confirmed."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Decreto Legislativo 8 novembre 2021, n. 199 (Decreto Rinnovabili)", "relevance": "Primary current RES framework implementing EU RED II; simplified authorisation procedures; new incentive structure; agrivoltaico" },
+      { "instrument": "Decreto Legislativo 29 dicembre 2003, n. 387", "relevance": "Original transposition of EU Directive 2001/77/EC; established Autorizzazione Unica (AU) framework" },
+      { "instrument": "Decreto ministeriale 4 luglio 2019 (FER 1 Decree)", "relevance": "Current competitive auction (aste FER1) for utility-scale onshore wind and solar; tariffa incentivante as two-way CfD against monthly PUN average" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Decreto Legislativo n. 199/2021 (simplified authorisation)", "relevance": "Procedura Abilitativa Semplificata (PAS) for certain installations; 'comunicazione' for smallest; MASE as competent authority for large projects" },
+      { "instrument": "Decreto-legge 31 maggio 2021, n. 77 (Decreto Semplificazioni)", "relevance": "Streamlined EIA procedures (Commissione VIA-VAS); compressed timelines; aimed at reducing authorisation backlogs" },
+      { "instrument": "Codice del Paesaggio (Legislative Decree 42/2004 — Codice dei beni culturali e del paesaggio)", "relevance": "Landscape and cultural heritage authority (Soprintendenza) consultation — frequent bottleneck especially in southern Italy" }
+    ],
+    "tax_legislation": [
+      { "instrument": "DPR 22 dicembre 1986, n. 917 (TUIR — Testo Unico delle Imposte sui Redditi)", "relevance": "Unified income tax code; IRES 24% standard rate for companies" },
+      { "instrument": "DL 446/1997 (IRAP — Imposta Regionale sulle Attività Produttive)", "relevance": "Regional production tax 3.9% on value added (net of labour costs). Being phased out for natural persons but remains for corporate entities — verify current legislative status." },
+      { "instrument": "Legge 29 dicembre 2022, n. 197 (Legge di Bilancio 2023) and predecessor Leggi di Bilancio", "relevance": "Annual budget laws introduce and sunset CapEx incentives (crediti d'imposta for beni strumentali). Verify current provisions each year." }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG 2022/C 80/01", "relevance": "EC framework for FER1/FER2 incentive scheme compatibility" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption for sub-threshold aids" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "DL 21/2012 (Golden Power) as amended by DL 21/2022", "relevance": "Italian FDI screening — expanded golden power scope to include energy production, transmission and storage; mandatory notification for non-EU acquisitions and for EU acquisitions in critical sectors" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation; Italy notifies EC for qualifying acquisitions" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Italy's permitting system is notoriously complex. Multiple overlapping authorities (Regione, Provincia, Comune, Soprintendenza, MASE, TERNA for grid) must be consulted. DL 199/2021 and DL 77/2021 introduced significant simplifications but implementation is inconsistent across regions.",
+    "solar_utility": {
+      "primary_authority": "MASE (Ministero dell'Ambiente e della Sicurezza Energetica) for >10MW and agrivoltaico above threshold; Regione for sub-threshold",
+      "primary_process": "Autorizzazione Unica (AU) for installations requiring full authorisation; PAS (Procedura Abilitativa Semplificata) for ≤200kW rooftop or qualifying ground-mount; Comunicazione for ≤50kW",
+      "legal_basis": "DLgs 387/2003 Art. 12; DLgs 199/2021 Arts. 4–9; DM 10 settembre 2010 (Linee guida autorizzative)",
+      "agrivoltaico": {
+        "available": true,
+        "legal_basis": "DLgs 199/2021 Art. 65; DM 6 agosto 2024 (Linee guida agrivoltaico)",
+        "conditions": "Minimum 70% agricultural land use maintained; specific irradiance and installation density limits; reversibility required",
+        "notes": "Italy's agrivoltaico framework is well-developed with specific dedicated DM guidelines. Growing pipeline, particularly in southern Italy."
+      },
+      "timeline_p50_months": 24,
+      "timeline_min_months": 12,
+      "timeline_max_months": 60,
+      "soprintendenza_risk": "HIGH in many southern regions and areas near archaeological/landscape constraints. Soprintendenza consultation can add 6–24 months and is a common litigation trigger.",
+      "appeal_risk": "medium-high",
+      "appeal_mechanism": "Tribunale Amministrativo Regionale (TAR) → Consiglio di Stato (CdS)"
+    },
+    "onshore_wind": {
+      "primary_authority": "MASE for projects requiring National EIA (VIA statale — typically >50MW); Regione for smaller",
+      "primary_process": "Autorizzazione Unica (AU); VIA (Valutazione di Impatto Ambientale); consultation with Soprintendenza, Aviazione Civile (ENAC), military authorities",
+      "legal_basis": "DLgs 387/2003; DLgs 199/2021; DLgs 152/2006 (Codice dell'Ambiente) for VIA",
+      "timeline_p50_months": 48,
+      "timeline_min_months": 30,
+      "timeline_max_months": 96,
+      "regional_variation": "Southern Italy (Puglia, Basilicata, Calabria, Sicilia) has the best wind resource AND the most permitting delays. Northern Italy has lower wind resource but potentially faster consenting.",
+      "setback_rules": "Set by Linee Guida statali and regional implementing plans. No single national setback — varies by region.",
+      "appeal_risk": "high",
+      "notes": "Wind turbine permit litigation in TAR (particularly TAR Puglia) is frequent and well-organised. Opposition from Soprintendenza for landscape impact is common. DL 77/2021 introduced acceleration measures but these have been only partially effective."
+    },
+    "offshore_wind": {
+      "primary_authority": "MASE + Capitaneria di Porto (Maritime Authority) + Ministero della Difesa + Ministero delle Infrastrutture",
+      "primary_process": "Concessione demanio marittimo (maritime concession); VIA; AU",
+      "legal_basis": "DLgs 387/2003; DM 10 settembre 2010; DLgs 199/2021 Chapter IV",
+      "timeline_p50_months": 96,
+      "timeline_min_months": 72,
+      "timeline_max_months": 180,
+      "offshore_status": "Italy has limited operational offshore wind. Significant pipeline in development (Puglia, Sicily, Sardinia). Deep Mediterranean makes fixed-bottom options limited — most projects are floating or are in shallow Adriatic.",
+      "floating_offshore_note": "Italy's Mediterranean coast is suited to floating offshore. Several floating projects in development but no commercial-scale operational as of 2026.",
+      "notes": "Offshore permitting in Italy is among Europe's most complex — involving multiple ministries (MASE, MIT, Difesa, Infrastruttore), maritime authorities, and the independent system of VIA nazionale. Project timelines of 10+ years from application are not unusual."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operator": "Terna S.p.A. (publicly listed; Cassa Depositi e Prestiti majority via CDP Reti)",
+    "distribution_operators": "Enel Distribuzione (largest), Edison Distribuzione, ACEA, others",
+    "regulatory_authority": "ARERA (Autorità di Regolazione per Energia Reti e Ambiente)",
+    "legal_basis": "DLgs 79/1999 (Bersani Decree); Delibere ARERA on grid tariffs (TICA — Testo Integrato Connessioni Attive)",
+    "north_south_constraint": {
+      "description": "Structural constraint between high-renewable-penetration south (Puglia, Sicilia, Sardegna) and industrial demand centres in north. Physical cable constraints between Sicily/Sardinia and the mainland.",
+      "saturation_note": "Transmission capacity from south Italy is frequently saturated. Projects in Puglia and Sicily regularly face connection queue delays and curtailment risk.",
+      "infrastructure_projects": [
+        { "name": "Tyrrhenian Link (Hyphen)", "route": "Sicily-Campania and Sardinia-Lazio HVDC cables", "capacity_gw": 1, "status": "Under development by Terna; expected commissioning 2027-2029" }
+      ]
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 36, "range": "24–72", "notes": "South Italy significantly longer due to network saturation" },
+      "distribution_connected": { "p50": 24, "range": "12–48" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 50000,
+      "range_high": 300000,
+      "notes": "Connection costs regulated by ARERA. South Italy can be significantly higher due to grid reinforcement requirements."
+    },
+    "curtailment_risk": "medium-high",
+    "curtailment_note": "Curtailment (distaccamento) is common in Puglia, Sicilia, and Sardegna — the highest renewable penetration regions. ARERA curtailment compensation mechanism exists but is partial."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Italian FER1 Decree incentive (tariffa incentivante) for utility-scale competitive auction winners is structured as a TWO-WAY contract for difference against the monthly average national spot price (PUN — Prezzo Unico Nazionale). When monthly PUN exceeds the tariff, the generator PAYS BACK the excess to GSE. When PUN is below tariff, GSE tops up. This is equivalent to the UK and Polish two-way CfD. Do not treat as a one-way premium.",
+    "primary_mechanism": "Tariffa incentivante (Incentive Tariff) via Aste FER competitive auctions",
+    "mechanism_type": "two_way_cfd",
+    "administrator": "GSE — Gestore dei Servizi Energetici S.p.A. (state-owned energy services manager)",
+    "legal_basis": "DLgs 387/2003; DM 4 luglio 2019 (FER 1 Decree); DLgs 199/2021",
+    "mechanism_description": {
+      "summary": "Generator wins auction clearing price (tariffa incentivante). Generator sells electricity on GME (Gestore dei Mercati Energetici) spot market. Incentive = tariffa incentivante − PUN mensile (monthly average PUN). If PUN > tariffa: generator pays back difference to GSE (clawback). If PUN < tariffa: GSE pays difference to generator (top-up).",
+      "upside_treatment": "CAPPED via clawback — excess above tariffa paid to GSE. Two-way CfD.",
+      "downside_treatment": "PROTECTED — floor at tariffa incentivante",
+      "reference_price": "PUN mensile — monthly average national single price (Prezzo Unico Nazionale) published by GME",
+      "contract_term_years": 20,
+      "small_installations_alternative": "Tariffe onnicomprensive (all-inclusive tariffs) for qualifying small installations — fixed FiT (one-way). Sub-threshold only — not applicable to utility-scale."
+    },
+    "auction": {
+      "administrator": "GSE (organises registration and contract); MASE (sets auction parameters via decrees)",
+      "fer1_decree": {
+        "date": "2019-07-04",
+        "technologies": ["Onshore wind ≥1MW", "Solar PV ≥1MW", "Offshore wind", "Hydro (small)"],
+        "tariffa_incentivante_range_eur_mwh": {
+          "_staleness_warning": "These are FER1 / subsequent decree indicative ranges. Verify current clearing prices at gse.it. FER2 decree parameters may apply to newer auctions.",
+          "_source": "GSE SpA, Aste FER results — gse.it",
+          "onshore_wind": { "low": 60.00, "high": 80.00 },
+          "solar_pv_ground_mounted": { "low": 45.00, "high": 65.00 },
+          "offshore_wind": { "low": 80.00, "high": 130.00, "notes": "High range reflects limited operational history and complex permitting costs" }
+        }
+      },
+      "fer2_note": "FER2 Decree is in development/implementation — covers innovative technologies, offshore, and agrivoltaico. Verify current FER2 parameters and implementation status."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Italy's Credito d'imposta per beni strumentali (investment tax credit) provides upfront tax credit — this IS a real CapEx benefit (not merely a timing difference). However, availability and rates change annually via Legge di Bilancio — verify current provisions each year.",
+    "ires": {
+      "rate_pct": 24,
+      "legal_basis": "TUIR Art. 75 et seq.; DPR 917/1986",
+      "note": "Standard IRES rate. Reduced rates for cooperative societies and some insurance entities — not applicable to standard renewable energy project vehicles."
+    },
+    "irap": {
+      "rate_pct": 3.9,
+      "legal_basis": "DLgs 446/1997",
+      "base": "Regional value added (net revenues minus intermediate costs and depreciation — EXCLUDING labour for most entities)",
+      "regional_variation": true,
+      "phaseout_note": "IRAP has been abolished for natural persons from 2022 (Legge di Bilancio 2022). For legal entities (corporations), IRAP remains — verify current legislative status as further reform is possible.",
+      "combined_effective_rate_pct_approx": 27.9,
+      "combined_rate_note": "IRES 24% + IRAP 3.9% = approximately 27.9% combined effective rate. IRAP is deductible from IRES base (partially)."
+    },
+    "capex_incentives": {
+      "credito_dimposta_beni_strumentali": {
+        "description": "Tax credit for investments in new instrumental assets (beni strumentali materiali). For qualifying tangible assets ('beni 4.0' under Piano Transizione 4.0), the credit is 20–40% of investment value, applied over 3 years.",
+        "legal_basis": "Art. 1, cc. 1051-1063, Legge 178/2020 (Legge di Bilancio 2021) and successor Leggi di Bilancio",
+        "rate_generic_new_assets_pct": 6,
+        "rate_40_plan_assets_pct": "Up to 20–40% for qualifying Industria 4.0 / Transizione 4.0 assets — verify whether renewable energy plant qualifies as '4.0' assets under current decree",
+        "application_period": "Typically applied over 3 tax years following investment",
+        "staleness_warning": "Credito d'imposta rates and eligibility change ANNUALLY via Legge di Bilancio. Specialist Italian tax advice required to confirm current availability.",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "Unlike a timing benefit (accelerated depreciation), the credito d'imposta for qualifying assets is a permanent tax credit applied against IRES liability. At 6% credit rate applied over 3 years: NPV at 10% WACC ≈ 5.4% of qualifying CapEx as a permanent benefit. This exceeds a pure timing benefit and improves project economics permanently.",
+          "note": "Subject to qualification criteria — verify whether specific renewable energy plant and machinery qualifies under current Industria/Transizione 4.0 schedule."
+        }
+      },
+      "standard_ammortamento": {
+        "method": "Straight-line (ammortamento ordinario) as default",
+        "wind_turbines_useful_life_years": 10,
+        "solar_pv_useful_life_years": 18,
+        "declining_balance": "Coefficients de massimo ammortamento apply — maximum 25% for machinery category. Declining balance available."
+      }
+    },
+    "vat": {
+      "standard_rate_pct": 22,
+      "reduced_rate_pct": 10,
+      "applies_to_commercial_renewables": true,
+      "legal_basis": "DPR 633/1972 (IVA)",
+      "input_vat_recovery": "Available for IVA-registered entities (soggetti passivi IVA)"
+    },
+    "imposta_di_registro": {
+      "applicable_to_real_property_transfer_pct": 9,
+      "applicable_to_company_share_transfer_pct": 0.5,
+      "note": "Share deal structures are common for renewable project acquisitions — lower transfer tax than asset deal."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "Medium-High",
+    "bankability_rating": "Medium-High",
+    "legal_basis": "Codice Civile italiano (Art. 1322 — freedom of contract; Arts. 1453 et seq. — breach and termination). No bespoke PPA statute.",
+    "market_liquidity": "Medium and growing",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Tech (Amazon AWS IT, Google IT), Automotive (Stellantis, Ferrari supply chain), Chemical (Versalis/Eni), Retail, telecom",
+    "typical_contract_term_years": { "min": 5, "max": 12 },
+    "standard_frameworks": ["EFET Master Agreement", "Bespoke bilateral under Italian Civil Code", "Virtual/financial PPA referencing GME PUN price"],
+    "gse_interaction_note": "Installations with active FER1 tariffa incentivante contracts sell to GME market. PPA layers are typically structured as financial/virtual arrangements referencing GME PUN rather than physical delivery.",
+    "go_system": {
+      "description": "GO — Garanzie di Origine (Italian Guarantees of Origin)",
+      "regulator": "GSE (as GO issuing body)",
+      "note": "Installations receiving GSE incentives may have restrictions on GO issuance — specialist advice needed on eligibility"
+    },
+    "cross_border_enforceability": "Medium-High — Italian courts can be slow; Milan arbitration (Camera Arbitrale di Milano) is the preferred forum; NY Convention signatory"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 72,
+    "credit_ratings": {
+      "moodys": "Baa3",
+      "sp": "BBB",
+      "fitch": "BBB",
+      "source_note": "Italy is at the lower end of investment grade. Moody's outlook has been stable/negative at various points — verify current outlook."
+    },
+    "political_stability": "Medium-Low",
+    "government_structure": "Parliamentary republic; coalition governments are the norm; historically high government turnover (60+ governments since 1946). President Sergio Mattarella provides institutional continuity.",
+    "regulatory_track_record": "Moderate. Multiple iterations of support scheme (Conto Energia I–V, Decreto FER1) reflect policy experimentation. Retroactive Robin Hood Tax creates precedent concern.",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2008–2015",
+        "description": "Robin Hood Tax (maggiorazione IRES 6.5–10.5ppts for energy companies with revenues >€3m). Applied to existing energy companies including renewable generators meeting the revenue threshold.",
+        "legal_basis": "DL 112/2008, Art. 81; subsequent amendments",
+        "resolution": "Corte Costituzionale judgment 10/2015 declared Robin Hood Tax unconstitutional as violating equality and ability-to-pay principles. Tax was abolished, but refunds were not granted for payments already made (prospective only effect of the ruling).",
+        "severity": "Medium — surcharge was ultimately reversed via constitutional process; refund denial limited recovery"
+      },
+      {
+        "year": "2012–2013",
+        "description": "Conto Energia V introduced additional levy (tassa fotovoltaico / component S) on the tariff paid to existing Conto Energia I-IV beneficiaries — effectively a retroactive reduction in FiT received. EC and domestic challenges followed.",
+        "severity": "Medium — Italian administrative courts ultimately provided partial relief; overall market disruption was significant"
+      }
+    ],
+    "expropriation_risk": "Low",
+    "currency_risk": "None — EUR domestic",
+    "score_rationale": "Italy's lower political risk score (72) reflects Baa3/BBB investment-grade credit rating, high political instability (frequent government changes), Robin Hood Tax constitutional episode, and Conto Energia retroactive component. Partially offset by EU membership, ECB backstop (TPI instrument), and generally functioning institutions."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 72,
+    "component_scores": {
+      "grid_connection_drag": { "score": 70, "assessment": "HIGH — south Italy grid saturation is severe; Tyrrhenian Link not yet operational; Terna queue in southern regions can exceed 5 years" },
+      "permitting_drag_solar": { "score": 55, "assessment": "MEDIUM — faster than wind but Soprintendenza landscape consultation is a common delay in south; DL 199/2021 simplifications partially effective" },
+      "permitting_drag_wind": { "score": 80, "assessment": "HIGH — multi-authority process; TAR litigation frequent; Soprintendenza intervention in landscape-sensitive areas; south has best resource but worst delay" },
+      "permitting_drag_offshore": { "score": 90, "assessment": "VERY HIGH — multiple ministries; maritime concession; military constraints; no commercial track record" },
+      "bureaucratic_friction": { "score": 75, "assessment": "HIGH — overlapping national/regional/municipal competences; frequent supplementary requests (richiesta di integrazione) that re-start review clocks" },
+      "judicial_appeal_risk": { "score": 70, "assessment": "HIGH — TAR/CdS system is active; wind energy opposition is organised; Soprintendenza refusals frequently challenged in both directions" }
+    },
+    "primary_bottleneck": "South Italy grid saturation (Puglia, Sicilia, Sardegna) plus multi-authority permitting complexity — both operating simultaneously in the highest-resource regions",
+    "score_rationale": "Italy's composite score (72) is the highest operational drag in this knowledge base outside of the UK's grid and France's offshore. North-south grid constraint is systemic; permitting complexity is structural."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Golden Power — DL 21/2012 as significantly expanded by DL 21/2022 (Decreto Ucraina)",
+    "energy_sector_mandatory_notification": true,
+    "scope": "Energy production, transmission, distribution, and storage — mandatory notification for acquisitions by non-EU investors and (since 2022) by EU investors in critical sectors",
+    "reviewing_authority": "Presidenza del Consiglio dei Ministri (PCM — Prime Minister's Office)",
+    "clearance_timeline_working_days": 45,
+    "extension_possible": true,
+    "practical_risk": "Medium",
+    "notes": "Italy's Golden Power is one of the broadest FDI screening regimes in the EU since the 2022 expansion. Both EU and non-EU acquisitions in energy are notifiable. Processing times can be variable — allow 90 days in project timelines. Chinese and state-backed investors face most scrutiny."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG 2022/C 80/01",
+    "fer1_clearance": "FER1 Decree (DM 4 luglio 2019) cleared by EC under EEAG 2014. Subsequent FER2 framework reviewed under CEEAG 2022.",
+    "robin_hood_tax_state_aid": "Robin Hood Tax was subject to State Aid analysis — EC found no recoverable aid element as it was a tax measure (not a subsidy). Constitutional court nullified it on different grounds.",
+    "retrospective_clawback_risk": "Low for new FER1/FER2 auction projects — competitive bidding satisfies CEEAG proportionality",
+    "notification_status": "FER1 cleared; FER2 framework under CEEAG review — verify EC clearance status"
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Italy's IRAP (3.9%) increases the effective tax burden vs. headline IRES alone. Include in tax modelling. North-south grid constraint materially affects curtailment-adjusted capacity factor for south Italian projects.",
+    "_rule_3a_note": "TWO-WAY CfD: model revenue as floored AND capped at tariffa incentivante vs. monthly PUN. High PUN environments (e.g., 2022-2023) triggered clawback for existing GSE contracts.",
+    "illustrative_solar_pv_fer1": {
+      "tariffa_incentivante_eur_mwh_approx": 57.00,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct_south_italy": 21,
+      "p50_capacity_factor_pct_north_italy": 15,
+      "typical_capex_eur_per_mw_dc": 620000,
+      "opex_eur_per_mw_per_year": 14000,
+      "curtailment_haircut_south_italy_pct": 8
+    },
+    "illustrative_onshore_wind_fer1": {
+      "tariffa_incentivante_eur_mwh_approx": 70.00,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct_south": 31,
+      "p50_capacity_factor_pct_north": 22,
+      "typical_capex_eur_per_mw": 1550000,
+      "opex_eur_per_mw_per_year": 48000,
+      "curtailment_haircut_south_pct": 12
+    }
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "AMBER", "rationale": "DLgs 199/2021 simplifications are meaningful but Soprintendenza and multi-authority consultation still creates delay, particularly in south" },
+    "permitting_wind": { "rag": "RED", "rationale": "TAR litigation, Soprintendenza interventions, and multi-authority complexity make onshore wind P50 timelines of 4–8 years realistic" },
+    "permitting_offshore": { "rag": "RED", "rationale": "Multiple ministries; no commercial track record; Mediterranean depth constraints; timelines of 10+ years typical" },
+    "grid_connection": { "rag": "RED", "rationale": "South Italy grid saturation is systemic — the highest-resource regions have the worst grid access. Tyrrhenian Link is the structural fix but is years away." },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "GSE aste FER framework is active; 20-year two-way CfD contracts provide long-term revenue certainty; government committed to renewable targets (PNIEC)" },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "IRES 24% + IRAP 3.9% combined is competitive; Credito d'imposta for beni strumentali is a meaningful incentive but changes annually — verify current availability" },
+    "ppa_enforceability": { "rag": "AMBER", "rationale": "Italian contract law is sound; market is growing; Italian courts can be slow — Milan arbitration preferred. PPA market is less deep than UK/Germany." },
+    "political_risk": { "rag": "AMBER", "rationale": "Baa3/BBB rating; frequent government changes; Robin Hood Tax and Conto Energia retroactive component are precedents; EU membership and ECB TPI are stabilisers" },
+    "operational_drag": { "rag": "RED", "rationale": "Highest composite operational drag score in EU coverage. South Italy grid and wind permitting are simultaneously RED-level. Solar and north Italy are better." },
+    "fdi_restrictions": { "rag": "RED", "rationale": "Golden Power (post-2022) is the broadest EU FDI screening regime — covers energy; both EU and non-EU investors must notify; processing times are variable and can delay deal execution" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "FER1/FER2 auction mechanism cleared under CEEAG; competitive bidding satisfies proportionality; no EC recovery risk for current framework" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Italy presents a genuine paradox: world-class solar irradiation (especially in the south) and excellent wind resource — combined with among Europe's worst permitting and grid connection infrastructure. North-south grid bottleneck is the primary structural barrier. Strategy must separate: (a) southern Italy solar/wind — excellent resource but RED-level grid and permitting drag; (b) northern Italy — moderate resource but better permitting. Investors capable of long-dated development capital (10+ years) and with the structuring capacity for complex Italian permitting can unlock significant value. Short-cycle capital should seek other jurisdictions."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 48,
+    "1_permitting_window_scope": "Onshore wind via AU national process",
+    "1_permitting_window_solar_p50_months": 24,
+    "2_grid_connection_cost_native": "EUR 50,000–300,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 50,000–300,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "24–72 (south Italy at upper end)",
+    "3_primary_support_mechanism": "Tariffa incentivante via Aste FER (GSE competitive auction)",
+    "3_mechanism_type_code": "two_way_cfd",
+    "4_effective_corporation_tax_rate_pct": 27.9,
+    "4_key_incentive": "Credito d'imposta per beni strumentali (investment tax credit — rate varies annually, verify current Legge di Bilancio provisions)",
+    "5_ppa_enforceability_rating": "Medium-High",
+    "5_ppa_legal_basis": "Codice Civile italiano; Milano arbitration preferred; EFET framework",
+    "6_political_risk_score": 72,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 72,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 57–70/MWh approx. (solar/wind indicative FER1 range — see staleness warning)",
+    "8_revenue_floor_eur": "EUR 57–70/MWh (no conversion — domestic currency)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "two_way_cfd",
+    "8_revenue_floor_staleness_warning": "Tariffa incentivante changes with each GSE aste round. Verify at gse.it before use."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "Capacity Market (MACSE) includes BESS. MSD (Mercato per il Servizio di Dispacciamento) ancillary services. Source: Terna/national_tso.",
+      "revenue_floor_description": null,
+      "source": "national_tso",
+      "notes": "Italy's MACSE capacity market explicitly includes battery storage. MSD ancillary services provide additional revenue stack. ARERA sets storage access rules. Verify current MACSE auction parameters at Terna/GME before use."
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Italy participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). Piano Nazionale di Ripresa e Resilienza (PNRR) allocates EUR 3.6bn for hydrogen. GSE administers H2 auctions. Hydrogen CfD (contratto per differenza idrogeno) mechanism under development.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Italy is IPCEI Hy2Tech and Hy2Infra participant. PNRR hydrogen allocation is among Europe's largest. Southern Italy (Mezzogiorno) positioned as green hydrogen production hub. Verify current GSE H2 auction round parameters before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "two_way_cfd",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Tariffa incentivante (two-way CfD / incentive tariff) under GSE aste per il fotovoltaico, pursuant to D.Lgs. 199/2021.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Italy abandoned nuclear after 1987 referendum (following Chernobyl) and a 2011 referendum reconfirmed the position. Government (Meloni) proposed nuclear reconsideration in 2024 via Delega al Governo in materia di energia nucleare. No active programme. Legislative framework does not yet permit new build. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 22,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Three LNG import terminals. Golar Tundra FSRU commissioned 2023. Regulated by ARERA."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "Italian Capacity Market (Mercato della Capacità — MACSE) — administered by Terna/ARERA. CCGT and peaker plants are eligible. Source: Terna/ARERA.",
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": true,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Italy operates the MACSE capacity market. Gas-fired plants are significant capacity market participants. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "feed_in_tariff",
+      "primary_support_mechanism": "DM Bioenergy 2022 (Decreto Bioenergy) — FiT for biowaste plants under 5MW; auction-based CfD for larger plants. Source: GSE.",
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Italy's Decreto Bioenergy 2022 provides feed-in tariffs for small biowaste plants (under 5MW) and auction-based CfD contracts for larger installations. EU RED III compliance and feedstock sustainability criteria apply. Verify current GSE bioenergy auction parameters before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "MACSE capacity market — coal-fired units can participate in transitional capacity contracts.",
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Italy committed to coal phase-out by 2025 (south Italy) and 2035 (islands).",
+      "source": null,
+      "notes": "Italy has a capacity market (MACSE) where coal-fired plants have historically participated transitionally. Phase-out commitment by 2025/2035. EU Taxonomy-excluded."
+    }
+  }
+}

@@ -1,0 +1,399 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Denmark",
+    "local_name": "Kongeriget Danmark",
+    "iso_code": "DK",
+    "currency_native": "DKK",
+    "currency_eur_rate": 0.134,
+    "currency_eur_rate_date": "2026-06-15",
+    "currency_eur_rate_source": "DKK is pegged to EUR via ERM II (±2.25% band). Rate is quasi-fixed at approximately DKK 7.46 per EUR. Indicative: DKK 1 = EUR 0.134. FX risk is minimal due to peg.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "Danish offshore wind tender terms and pristillæg (price supplement) parameters change per tender round. Verify current Energistyrelsen tender terms. DKK/EUR peg remains stable but should be confirmed."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Lov om fremme af vedvarende energi (VE-loven) — Lovbekendtgørelse nr. 1189 af 26. november 2019", "relevance": "Primary RES promotion law; pristillæg (price supplement) mechanism; tender procedures for offshore and onshore wind" },
+      { "instrument": "Lov om havvindmøller — Lov nr. 672 af 26. maj 2020 (Offshore Wind Act)", "relevance": "Offshore wind licensing and tender framework; Energistyrelsen (DEA) as competent authority" },
+      { "instrument": "Klimalov — Lov nr. 965 af 26. juni 2020 (Climate Act)", "relevance": "Legally binding 70% GHG reduction by 2030 vs. 1990; net-zero by 2050. Drives renewable deployment." }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Planloven (Planning Act) — Lovbekendtgørelse nr. 287 af 16. april 2018", "relevance": "Spatial planning; municipal/regional plan framework for onshore wind siting" },
+      { "instrument": "Miljøvurderingsloven (Environmental Assessment Act) — Lov nr. 425 af 18. maj 2016", "relevance": "EIA (VVM — vurdering af virkninger på miljøet) for wind farms and solar parks" },
+      { "instrument": "Havmiljøloven (Marine Environment Act) — Lovbekendtgørelse nr. 963 af 3. juli 2013", "relevance": "Offshore environmental assessment and licensing" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Selskabsskatteloven (CIT Act) — Lovbekendtgørelse nr. 251 af 22. februar 2021", "relevance": "Selskabsskat (corporate tax): 22% flat rate" },
+      { "instrument": "Afskrivningsloven (Depreciation Act) — Lovbekendtgørelse nr. 1146 af 22. september 2020", "relevance": "Accelerated depreciation (saldoafskrivning — declining balance) for machinery and equipment" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG 2022/C 80/01", "relevance": "EC framework for Danish tender mechanism compatibility" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption for sub-threshold aids" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Lov om screening af visse udenlandske direkte investeringer (FDI Screening Act) — Lov nr. 842 af 10. maj 2022", "relevance": "FDI screening; energy sector included; ERST (Danish Business Authority) as reviewing body" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation" }
+    ]
+  },
+
+  "permitting": {
+    "solar_utility": {
+      "primary_authority": "Kommunalbestyrelse (Municipal Council) for planning permission; Miljøstyrelsen (EPA) for EIA",
+      "primary_process": "Kommuneplantillæg (municipal plan supplement) + lokalplan (local plan); VVM (EIA) for large installations",
+      "legal_basis": "Planloven; Miljøvurderingsloven",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "appeal_risk": "low",
+      "notes": "Solar PV is growing rapidly in Denmark. Permitting is among the faster in Europe. Agricultural land restrictions are a consideration — 'solcellebekendtgørelse' (solar panel regulations) govern ground-mounted installations on agricultural land."
+    },
+    "onshore_wind": {
+      "primary_authority": "Kommunalbestyrelse for local plan; Energistyrelsen (Danish Energy Agency) for tender/pristillæg allocation",
+      "primary_process": "Kommuneplantillæg + lokalplan; VVM (EIA); possibly subject to pristillæg tender (if >400kW)",
+      "legal_basis": "Planloven; VE-loven; Bekendtgørelse om nettilslutning af vindmøller (grid connection)",
+      "vindmølle_bekendtgørelse": "Bekendtgørelse nr. 1590 af 10. december 2014 om vindmøller sets technical requirements and consultation procedures",
+      "timeline_p50_months": 30,
+      "timeline_min_months": 18,
+      "timeline_max_months": 60,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Planklagenævnet (Planning Appeals Board) → Danish courts",
+      "turbine_neighbor_scheme": "Naboretningsordningen (Neighbour Scheme) — turbines >600kW must offer neighbours within 4× rotor diameter an option to buy shares; Grøn Pulje (Green Pool) payments to host municipalities. Reduces local opposition.",
+      "notes": "Danish onshore wind permitting is mature and well-understood. Municipal plan requirement can create delays depending on municipal attitude. The Neighbour Scheme and Grøn Pulje create community alignment mechanisms that reduce opposition compared to France/Germany."
+    },
+    "offshore_wind": {
+      "primary_authority": "Energistyrelsen (DEA — Danish Energy Agency) for tender; Kystdirektoratet (Coastal Authority) for maritime permits; Forsvarsministeriet (Defence) for military clearance",
+      "primary_process": "Government-led tender (udbud) for designated havvindmølleparker (offshore wind zones); DEA coordinates pre-investigation; environmental impact assessment; construction permit",
+      "legal_basis": "Lov om havvindmøller; VE-loven; Havmiljøloven",
+      "government_led_model": "Denmark uses a state-led model: DEA identifies and investigates sites; competitive tender for production licence + possible pristillæg subsidy",
+      "notable_projects": [
+        { "name": "Thor (800MW)", "location": "North Sea", "status": "Under construction/development; contracted to RWE after competitive tender" },
+        { "name": "Bornholm Energy Island (Thorsminde — 3GW capacity)", "status": "Planning phase" },
+        { "name": "Triton Knoll equivalent Danish projects", "status": "Pipeline" }
+      ],
+      "timeline_p50_months": 72,
+      "timeline_min_months": 60,
+      "timeline_max_months": 96,
+      "appeal_risk": "low",
+      "notes": "Denmark pioneered offshore wind and has the most mature offshore regulatory framework in this knowledge base after the UK. Government pre-investigation significantly reduces individual project risk. DEA is experienced and efficient."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operator": "Energinet (state-owned; holds both TSO and gas system operator functions)",
+    "distribution_operators": "N1, Radius, TREFOR El-net, others",
+    "regulatory_authority": "Forsyningstilsynet (Utility Regulator — formerly DERA)",
+    "legal_basis": "Elforsyningsloven (Electricity Supply Act); Netadgang bekendtgørelse (Grid Access Regulation)",
+    "bidzone_structure": "DK1 (Jutland/Funen — synchronised with Central European grid via Germany) and DK2 (Zealand — synchronised with Nordic grid via Sweden). Prices differ significantly at times.",
+    "interconnectors": ["Viking Link (1.4GW HVDC to UK — operational from 2023/24)", "Cobra Cable (700MW HVDC to Netherlands)", "Kontek (600MW to Germany)", "Great Belt (1GW submarine AC between DK1 and DK2)"],
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 24, "range": "12–48" },
+      "distribution_connected": { "p50": 12, "range": "6–24" }
+    },
+    "connection_cost_dkk_per_mw": {
+      "range_low": 250000,
+      "range_high": 1500000
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 33500,
+      "range_high": 201000,
+      "fx_rate_used": 0.134,
+      "fx_rate_date": "2026-06-15"
+    },
+    "curtailment_risk": "low",
+    "notes": "Denmark has excellent interconnection (Viking Link to UK, Cobra to Netherlands, multiple Germany links). Curtailment is low. DK1 is part of Central European synchronous zone; DK2 is Nordic — different price dynamics."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Danish pristillæg (price supplement) for onshore wind and some offshore is a ONE-WAY mechanism. The pristillæg is a set supplement per MWh payable when market price is below a reference level — when market price exceeds this reference, pristillæg falls to zero. NO clawback. However, some offshore tenders (Thor) have been structured as merchant with no pristillæg — check tender-specific terms carefully. The mechanism type varies by tender.",
+    "primary_mechanism": "Pristillæg (Price Supplement) via tender — ONE-WAY mechanism (for supported projects)",
+    "mechanism_type": "one_way_price_supplement",
+    "administrator": "Energistyrelsen (Danish Energy Agency) for tender design; Energinet for settlement",
+    "legal_basis": "VE-loven §§ 35–50 (pristillæg); offshore tender procedures under Lov om havvindmøller",
+    "mechanism_description": {
+      "summary": "Generator sells on Nord Pool DK1 or DK2 spot market. Receives pristillæg (price supplement) = max(0, støtteloft − markedspris). When market price falls below støtteloft (subsidy ceiling/reference price): supplement tops up revenue. When market price exceeds støtteloft: supplement = 0. No clawback. One-way mechanism.",
+      "upside_treatment": "UNCAPPED — no clawback above støtteloft. Generator retains full market upside above reference price.",
+      "downside_treatment": "PROTECTED — floor at støtteloft",
+      "offshore_tender_variation": "Some offshore tenders (e.g., Thor 800MW — RWE) were structured as MERCHANT (zero pristillæg support). Generator bids without subsidy and is fully exposed to Nord Pool price. Return modelling for merchant tenders must assume full price exposure.",
+      "contract_term_years": "Typically 20 years for pristillæg-supported projects. Merchant projects: full asset life."
+    },
+    "tender_clearing_prices": {
+      "_staleness_warning": "Tender parameters change with each round. These are indicative. Verify with Energistyrelsen tender publications.",
+      "_source": "Energistyrelsen, udbudsresultater (tender results) — ens.dk",
+      "onshore_wind_pristillaeg_dkk_mwh_approx": { "low": 220, "high": 330, "eur_equiv_low": 29.5, "eur_equiv_high": 44.2, "fx": 0.134 },
+      "offshore_wind_supported_dkk_mwh_approx": { "low": 350, "high": 600, "eur_equiv_low": 46.9, "eur_equiv_high": 80.4, "fx": 0.134 },
+      "merchant_offshore_note": "Thor (800MW): awarded as merchant (zero pristillæg). Viking Wind: check current status."
+    },
+    "elcertifikat_note": "Denmark participated in the joint Sweden-Norway elcertifikat market. Danish installations earned certificates under the scheme. The scheme has wound down for new Danish installations — verify current certificate eligibility."
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Denmark's saldoafskrivning (declining balance) at 25% per annum provides a meaningful CapEx timing benefit. Analysis required at 22% selskabsskat.",
+    "selskabsskat": {
+      "rate_pct": 22,
+      "legal_basis": "Selskabsskatteloven § 17"
+    },
+    "depreciation": {
+      "method": "Saldoafskrivning (declining balance) — up to 25% per annum on machinery and equipment",
+      "rate_pct_max": 25,
+      "legal_basis": "Afskrivningsloven § 5",
+      "buildings_rate_pct": 4,
+      "npv_benefit_analysis": {
+        "_rule_3b_compliance": true,
+        "description": "At 22% selskabsskat and 10% WACC: NPV of tax shield under saldoafskrivning (25% declining balance) ≈ 16.4% of qualifying CapEx. Under straight-line (20-year life): NPV ≈ 12.0%. Timing benefit ≈ 4.4ppts."
+      }
+    },
+    "vat": {
+      "standard_rate_pct": 25,
+      "legal_basis": "Momsloven (VAT Act) — Lovbekendtgørelse nr. 1021 af 26. september 2019",
+      "input_vat_recovery": "Available for momsregistrerede virksomheder (VAT-registered businesses)"
+    },
+    "tinglysningsafgift": {
+      "description": "Tinglysningsafgift (registration tax) on mortgage charges and real property registration",
+      "rate_variable": "0.6%+ on mortgage value; fixed amount for property transfers",
+      "note": "Relevant for debt financing structures requiring charge registration"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "Aftaleloven (Contracts Act); Købeloven (Sales Act). Danish law is robust and well-regarded.",
+    "market_liquidity": "Medium-High",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Technology (data centres, Apple, Google, Microsoft in Nordic region), Industrial (Maersk, Vestas supply chain), Manufacturing",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "merchant_offshore_ppa": "Merchant offshore tenders (e.g., Thor) rely on corporate PPAs as the primary revenue mechanism. Strong liquidity from Danish industrial base and European buyers.",
+    "go_system": {
+      "description": "Danish Guarantees of Origin (certificering af vedvarende energi)",
+      "regulator": "Energinet",
+      "notes": "Well-functioning; interoperable with European GO standard"
+    },
+    "cross_border_enforceability": "High — Danish courts are efficient; Copenhagen arbitration available; Danish Institute of Arbitration (DIA) respected"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 93,
+    "credit_ratings": {
+      "moodys": "Aaa",
+      "sp": "AAA",
+      "fitch": "AAA"
+    },
+    "political_stability": "Very High",
+    "regulatory_track_record": "Excellent — Denmark is the birthplace of commercial offshore wind; Ørsted (formerly DONG Energy) was state-founded; no retroactive renewable energy policy reversals",
+    "retroactive_policy_incidents": [],
+    "expropriation_risk": "Very Low",
+    "currency_risk": "Very Low — DKK pegged to EUR via ERM II (±2.25% band; in practice within 0.5%). Peg has been maintained since 1982.",
+    "dkk_peg_resilience": "Danmarks Nationalbank has significant FX reserves; peg is constitutionally prioritised. EUR entry would require referendum — DKK peg is the stable alternative.",
+    "score_rationale": "Denmark receives the highest political risk score in this knowledge base (93/100). Aaa/AAA sovereign; no retroactive incidents; offshore wind pioneer with 40+ years of consistent policy; quasi-fixed currency. Near-zero political risk for energy investment."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 38,
+    "component_scores": {
+      "grid_connection_drag": { "score": 25, "assessment": "LOW — Energinet is well-managed; excellent interconnection (Viking Link, Cobra, Germany); DK1/DK2 bidzone structure is manageable" },
+      "permitting_drag_solar": { "score": 20, "assessment": "LOW — fast, efficient, low-conflict" },
+      "permitting_drag_wind_onshore": { "score": 40, "assessment": "MEDIUM — municipal plan requirement; Neighbour Scheme and Grøn Pulje provide community alignment; organised and mature process" },
+      "permitting_drag_offshore": { "score": 35, "assessment": "LOW-MEDIUM — DEA pre-investigation model; mature framework; defence consultation manageable; best-in-class by global offshore standards" },
+      "bureaucratic_friction": { "score": 25, "assessment": "LOW — Danish administration is efficient, transparent, and well-organised; Energistyrelsen has deep sectoral expertise" },
+      "judicial_appeal_risk": { "score": 30, "assessment": "LOW-MEDIUM — Planklagenævnet process; Danish courts are fast; community opposition less litigious than France/Germany" }
+    },
+    "primary_bottleneck": "For onshore: municipal plan adoption timing. For offshore: nothing material — DEA pre-investigation model is best-in-class.",
+    "score_rationale": "Denmark has the second-lowest operational drag in this knowledge base (38/100) after Sweden. Mature regulatory environment; efficient administration; proactive grid management; Neighbour Scheme reduces opposition."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Lov om screening af visse udenlandske direkte investeringer (FDI Act, May 2022); EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "reviewing_authority": "Erhvervsstyrelsen (ERST — Danish Business Authority)",
+    "clearance_timeline_working_days": 30,
+    "practical_risk": "Low",
+    "notes": "Denmark's FDI screening is proportionate and efficiently administered. Energy sector covered. OECD investors face low prohibition risk. Process is among the fastest in EU."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG 2022/C 80/01",
+    "pristillaeg_clearance": "Pristillæg tender mechanism cleared under CEEAG. Competitive tender satisfies proportionality.",
+    "merchant_tenders_note": "Merchant offshore tenders (zero pristillæg) involve no state aid — no EC notification required.",
+    "retrospective_clawback_risk": "Very Low",
+    "notification_status": "Pristillæg framework cleared. Merchant tenders not subject to State Aid."
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: DKK/EUR quasi-peg means FX risk is minimal — use EUR equivalent without material sensitivity adjustment. 22% selskabsskat with 25% saldoafskrivning provides modest timing benefit.",
+    "_rule_3a_note": "ONE-WAY pristillæg: model floor at støtteloft, uncapped upside. MERCHANT tenders: fully uncapped — model Nord Pool DK1/DK2 scenario range.",
+    "illustrative_onshore_wind_pristillaeg": {
+      "stoetteloft_dkk_mwh_approx": 270,
+      "stoetteloft_eur_mwh_approx": 36.2,
+      "fx_rate_used": 0.134,
+      "mechanism_type": "one_way_price_supplement",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct": 36,
+      "typical_capex_dkk_per_mw": 12000000,
+      "typical_capex_eur_per_mw": 1608000,
+      "opex_eur_per_mw_per_year": 45000
+    },
+    "illustrative_offshore_wind_merchant": {
+      "mechanism_type": "merchant",
+      "revenue_reference": "Nord Pool DK1/DK2 spot price — zone dependent",
+      "p50_capacity_factor_pct": 48,
+      "typical_capex_eur_per_mw": 3200000
+    }
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "GREEN", "rationale": "Fast, efficient, low-conflict. Agricultural land rules manageable." },
+    "permitting_wind_onshore": { "rag": "GREEN", "rationale": "Mature framework; Neighbour Scheme and Grøn Pulje reduce opposition; organised municipal process" },
+    "permitting_offshore": { "rag": "GREEN", "rationale": "DEA pre-investigation model is best-in-class; 40+ years of offshore experience; DEA is a highly capable authority" },
+    "grid_connection": { "rag": "GREEN", "rationale": "Excellent Energinet infrastructure; strong interconnection; DK1/DK2 price zones manageable; Viking Link to UK completed" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "Pristillæg for onshore and some offshore; but merchant offshore tenders (Thor type) require PPA-backed underwriting. Support is not universal for offshore." },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "22% selskabsskat is competitive; 25% declining balance depreciation provides timing benefit. No sector-specific levies like France's IFER." },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "Danish law is robust; efficient courts; active corporate PPA market especially for merchant offshore" },
+    "political_risk": { "rag": "GREEN", "rationale": "Highest political risk score in knowledge base. Aaa/AAA; DKK quasi-EUR; 40+ year offshore wind policy consistency; no retroactive incidents" },
+    "operational_drag": { "rag": "GREEN", "rationale": "Second-lowest operational drag in knowledge base. Efficient across all categories." },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "Proportionate, efficient FDI screening; energy covered; fast ERST process; low prohibition risk" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Pristillæg cleared; merchant tenders not subject to State Aid; no recovery risk" },
+    "overall_stop_go": "GREEN",
+    "overall_rationale": "Denmark is the strongest overall jurisdiction in this knowledge base by composite score. The combination of Aaa/AAA sovereign, 40+ years of offshore wind expertise, world-class DEA pre-investigation offshore model, efficient administration, DKK quasi-EUR currency, and 22% selskabsskat creates a compelling investment environment. The absence of pristillæg support for some offshore tenders means merchant/PPA underwriting is required for those projects. For investors capable of merchant offshore exposure with strong PPA execution, Denmark is the benchmark European jurisdiction for offshore wind CapEx."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 30,
+    "1_permitting_window_scope": "Onshore wind via municipal plan process",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "DKK 250,000–1,500,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 33,500–201,000 per MW",
+    "2_grid_connection_cost_fx_date": "2026-06-15",
+    "2_grid_connection_timeline_months": "12–48",
+    "3_primary_support_mechanism": "Pristillæg (price supplement) via tender — one-way. Some offshore tenders are merchant (zero pristillæg).",
+    "3_mechanism_type_code": "one_way_price_supplement",
+    "4_effective_corporation_tax_rate_pct": 22,
+    "4_key_incentive": "Saldoafskrivning (declining balance depreciation) at max 25% per annum under Afskrivningsloven §5",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Aftaleloven; Danish Institute of Arbitration; Nord Pool DK1/DK2 reference price",
+    "6_political_risk_score": 93,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 38,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "DKK ~270/MWh approx. (onshore wind pristillæg støtteloft — indicative). Merchant offshore: NONE.",
+    "8_revenue_floor_eur": "EUR ~36/MWh (onshore pristillæg). Merchant offshore tenders: NONE.",
+    "8_revenue_floor_fx_date": "2026-06-15",
+    "8_revenue_floor_mechanism": "one_way_price_supplement",
+    "8_revenue_floor_staleness_warning": "Pristillæg parameters change per tender round. Verify with Energistyrelsen. Merchant offshore tenders have no floor."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Denmark participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). National hydrogen strategy targets 4–6 GW electrolysis capacity by 2030. State-backed Power-to-X support via Energistyrelsen.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Denmark is an IPCEI Hy2Tech and Hy2Infra participant with one of Europe's most ambitious Power-to-X programmes. Offshore wind surplus creates favourable electrolysis economics. Verify current PtX auction round parameters before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_price_supplement",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Price supplement (pristillæg) under Vedvarende Energi-loven (VE-loven), administered by Energistyrelsen.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "prohibited",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": true,
+      "source": null,
+      "notes": "Nuclear power is prohibited in Denmark under the Act on Nuclear Power Plants (Lov om nukleare anlæg) passed in 1985. Parliamentary majority has consistently reaffirmed this position. No SMR programme possible under current legislative framework."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "No LNG import terminal. Significant domestic gas production (declining). North Sea gas producer."
+    },
+    "data_centre": {
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "low",
+      "renewable_ppa_market_depth": "high",
+      "source": "national_tso",
+      "notes": "High renewable penetration (wind). Copenhagen and Jutland data centre markets active. Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Denmark has declining gas generation. Energy-only market — no formal capacity market. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": 24,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "feed_in_tariff",
+      "primary_support_mechanism": "Biogasanlæg tilskud (biogas plant subsidy) under Danish Energy Agency framework. Source: DEA.",
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Denmark has an established biogas support framework under the Danish Energy Agency. Feedstock sustainability criteria apply per EU RED III. Verify current subsidy parameters with Energistyrelsen before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Denmark is targeting coal phase-out by 2030 under Danish Energy Agreement.",
+      "source": null,
+      "notes": "Denmark is phasing out coal in district heating and power. No coal support mechanism. EU Taxonomy-excluded."
+    }
+  }
+}

@@ -1,0 +1,454 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Poland",
+    "local_name": "Rzeczpospolita Polska",
+    "iso_code": "PL",
+    "currency_native": "PLN",
+    "currency_eur_rate": 0.235,
+    "currency_eur_rate_date": "2026-06-15",
+    "currency_eur_rate_source": "NOTE: PLN/EUR is volatile — verify against live FX before use. Indicative rate: PLN 1 = EUR 0.235 (approx. EUR 1 = PLN 4.25).",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "Polish OZE auction clearing prices (ceny aukcyjne) change with each auction round (held by URE). PLN/EUR FX rate is volatile. Wind turbine setback rules have recently reformed (March 2023) — verify current Ustawa wiatrakowa status. All figures require verification against current URE publications."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Ustawa z dnia 20 lutego 2015 r. o odnawialnych źródłach energii (OZE Act — Ustawa OZE)", "relevance": "Primary RES legislation; OZE auction framework (aukcje OZE); two-way CfD mechanism (kontrakty różnicowe); URE as regulator" },
+      { "instrument": "Ustawa z dnia 10 kwietnia 1997 r. Prawo energetyczne (Energy Law)", "relevance": "Grid connection framework; licensing; distribution network obligations; URE regulatory powers" },
+      { "instrument": "Ustawa z dnia 2 marca 2023 r. o zmianie ustawy o inwestycjach w zakresie elektrowni wiatrowych", "relevance": "Wind turbine setback reform — reduced setback from 10H to 700m minimum; critical for onshore wind market reopening" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Ustawa z dnia 20 maja 2016 r. o inwestycjach w zakresie elektrowni wiatrowych (Ustawa wiatrakowa / 10H Law)", "relevance": "Wind turbine siting rules; now amended to 700m minimum (March 2023). Land use plan (MPZP) requirement for all wind projects." },
+      { "instrument": "Ustawa z dnia 3 października 2008 r. o udostępnianiu informacji o środowisku... (OOŚ Act)", "relevance": "Environmental impact assessment (Ocena Oddziaływania na Środowisko — OOŚ) procedure" },
+      { "instrument": "Prawo budowlane (Construction Law, Act of 7 July 1994 as amended)", "relevance": "Building permit (pozwolenie na budowę) requirements; wind turbine categorisation" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Ustawa z dnia 15 lutego 1992 r. o podatku dochodowym od osób prawnych (CIT Act)", "relevance": "Corporate income tax — 19% standard rate; 9% for small taxpayers" },
+      { "instrument": "Ustawa z dnia 12 stycznia 1991 r. o podatkach i opłatach lokalnych (Local Taxes Act)", "relevance": "Podatek od nieruchomości (property tax) on wind turbines — scope and rate subject to legislative change history (2017 reversal)" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG 2022/C 80/01", "relevance": "EC framework for OZE auction scheme compatibility" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption for sub-threshold aids" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Ustawa z dnia 24 lipca 2015 r. o kontroli niektórych inwestycji (Investment Control Act)", "relevance": "Screening for acquisitions in strategic sectors; energy included; amended multiple times" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation; Poland notifies EC for qualifying transactions" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Poland's wind turbine permitting was effectively halted between 2016-2023 by the Ustawa wiatrakowa (10H law). The March 2023 reform reducing the setback to 700m has reopened the market — but implementation requires updated MPZP (local spatial plans), which take 1–3 years to adopt. Full market reopening is a 2024–2027 timeline event.",
+    "solar_utility": {
+      "primary_authority": "Starostwo powiatowe (county office) for building permit; Regionalna Dyrekcja Ochrony Środowiska (RDOŚ) for EIA",
+      "primary_process": "OOŚ (environmental impact assessment) if above threshold; pozwolenie na budowę (building permit); grid connection application to OSD (distribution network operator) or PSE (transmission)",
+      "legal_basis": "OOŚ Act; Prawo budowlane; Ustawa OZE",
+      "mpzp_requirement": "Ground-mounted solar requires MPZP (Miejscowy Plan Zagospodarowania Przestrzennego — local spatial plan) designation as admissible land use, or individual planning decision (decyzja WZ). MPZP adoption takes 1–3 years in many municipalities.",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 12,
+      "timeline_max_months": 48,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Samorządowe Kolegium Odwoławcze (SKO — Administrative Appeal Board) → Wojewódzki Sąd Administracyjny (WSA) → Naczelny Sąd Administracyjny (NSA)",
+      "notes": "Poland has large tracts of agricultural and post-industrial land suitable for solar. Permitting is manageable. Grid connection is the primary constraint (see grid_connection section). Strong solar growth trajectory post-2020."
+    },
+    "onshore_wind": {
+      "primary_authority": "RDOŚ (for OOŚ); Starostwo powiatowe (for pozwolenie na budowę); Gmina (for MPZP adoption)",
+      "primary_process": "MPZP adoption (mandatory under Ustawa wiatrakowa — cannot use individual decyzja WZ for wind turbines); OOŚ; pozwolenie na budowę",
+      "legal_basis": "Ustawa wiatrakowa (Ustawa z dnia 20 maja 2016 r. as amended by Ustawa z dnia 2 marca 2023 r.); Prawo budowlane; OOŚ Act",
+      "setback_rule": {
+        "current_minimum_metres": 700,
+        "previous_rule": "10H (10× hub height) — effectively 1,500–2,000m for modern turbines",
+        "reform_date": "2023-03-02",
+        "legal_basis": "Ustawa z dnia 2 marca 2023 r. o zmianie ustawy o inwestycjach w zakresie elektrowni wiatrowych (Dz.U. 2023 poz. 553)",
+        "implementation_challenge": "Reform requires each gmina to adopt a new MPZP designating wind-eligible areas at 700m setback. As of 2026, many gminy are still in the MPZP adoption process — the permitting gateway only opens as MPZP are adopted.",
+        "rural_areas_note": "Approximately 12–15% of Poland's land area is within 700m setback of residential buildings — significant capacity unlocked vs 10H but MPZP timing is the binding constraint"
+      },
+      "timeline_p50_months": 48,
+      "timeline_min_months": 36,
+      "timeline_max_months": 84,
+      "appeal_risk": "medium",
+      "notes": "Poland's onshore wind market is reopening after 7 years of effective dormancy under 10H. The 700m reform is substantial. Primary delays now are MPZP adoption timelines (gmina by gmina) and grid connection queue — not the permitting procedure itself once MPZP is in place."
+    },
+    "offshore_wind": {
+      "primary_authority": "Minister Klimatu i Środowiska (Minister of Climate and Environment) for offshore permits; URE for grid; Urząd Morski (Maritime Office) for sea area",
+      "primary_process": "Pozwolenie lokalizacyjne (location permit) + pozwolenie na budowę sztucznej wyspy/instalacji (construction permit for offshore structure); grid connection coordination",
+      "legal_basis": "Ustawa z dnia 17 grudnia 2020 r. o promowaniu wytwarzania energii elektrycznej w morskich farmach wiatrowych (Offshore Wind Act — ustawa offshore)",
+      "timeline_p50_months": 96,
+      "timeline_min_months": 72,
+      "timeline_max_months": 144,
+      "phase_1_projects": "Phase 1 (2022-2027): 5.9GW pre-qualified offshore projects with guaranteed contract for difference prices allocated by URE. Major developers: Orlen Neptun, Equinor/Polenergia (Bałtyk I/II/III), PKN Orlen/Northland (Baltic Power). Phase 1 uses administratively set contract prices, not competitive auction.",
+      "phase_2_onwards": "Phase 2 (from 2025 onwards): competitive OZE-M offshore auctions. Prices set competitively.",
+      "notes": "Poland's offshore wind market is one of Europe's most exciting emerging markets. Phase 1 projects have guaranteed support but complex supply chain and port infrastructure challenges. Baltic Sea is shallower than North Sea — fixed-bottom technology viable for most Polish zone. Polish industrial port capacity (Gdańsk, Gdynia) is being expanded."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operator": "PSE S.A. (Polskie Sieci Elektroenergetyczne — Polish Power Grid)",
+    "distribution_operators": "Enea Operator, Energa Operator, PGE Dystrybucja, Tauron Dystrybucja, innogy Polska",
+    "regulatory_authority": "URE — Urząd Regulacji Energetyki (Energy Regulatory Office)",
+    "legal_basis": "Prawo energetyczne (Energy Law); Instrukcja Ruchu i Eksploatacji Sieci Przesyłowej (IRiESP — Transmission Grid Code) published by PSE",
+    "connection_queue": {
+      "description": "Poland faces a severe grid connection queue for new renewable energy projects — estimates suggest thousands of MW of solar and wind projects are awaiting connection capacity at distribution level.",
+      "cause": "Rapid solar growth (from near-zero to >15GW installed 2019-2024) has saturated distribution grid in many areas. Transmission grid investment lagging.",
+      "wait_time_years_estimate": "2–7 years depending on voltage level and area",
+      "staleness_warning": true
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 48, "range": "24–96" },
+      "distribution_connected": { "p50": 30, "range": "18–72" }
+    },
+    "connection_cost_pln_per_mw": {
+      "range_low": 150000,
+      "range_high": 800000
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 35250,
+      "range_high": 188000,
+      "fx_rate_used": 0.235,
+      "fx_rate_date": "2026-06-15"
+    },
+    "curtailment_risk": "medium-high",
+    "notes": "Poland's coal-heavy grid requires significant transformation. High-voltage DC interconnectors (with Germany, Lithuania, Sweden via Baltic cable) are important but PSE capacity planning has not kept pace with renewable growth. Coal plant dispatch priority creates renewable curtailment in some periods."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: Poland's OZE auction mechanism (aukcje OZE) is a TWO-WAY contract for difference (kontrakt różnicowy). When the reference market price (TGE day-ahead) falls below the auction clearing price (cena aukcyjna), the generator receives the difference. When the reference market price EXCEEDS the clearing price, the generator PAYS BACK the excess to URE. This is equivalent to the UK CfD and Italy's FER1 — both upside capped and downside protected.",
+    "primary_mechanism": "OZE Aukcje (Renewable Energy Source Auctions) — Two-Way CfD",
+    "mechanism_type": "two_way_cfd",
+    "administrator": "URE — Urząd Regulacji Energetyki (Energy Regulatory Office)",
+    "legal_basis": "Ustawa OZE Arts. 72–98 (auction procedure); Arts. 93–102 (contract for difference settlement); Rozporządzenie Ministra Klimatu on auction parameters",
+    "mechanism_description": {
+      "summary": "Generator wins OZE auction at clearing price (cena aukcyjna) denominated in PLN/MWh. Generator sells electricity on TGE (Towarowa Giełda Energii — Polish Power Exchange) spot market. When TGE price < cena aukcyjna: generator receives difference from OZE settlement system. When TGE price > cena aukcyjna: generator PAYS BACK excess. Two-way CfD equivalent to UK model.",
+      "upside_treatment": "CAPPED via clawback — excess above cena aukcyjna paid back to OZE system (funded by consumer obligations on electricity suppliers).",
+      "downside_treatment": "PROTECTED — floor at cena aukcyjna",
+      "reference_price": "TGE day-ahead spot price (monthly average)",
+      "contract_term_years": 15,
+      "currency_of_support": "PLN — contracts denominated in PLN. EUR-denominated investors face FX risk on support revenue unless hedged.",
+      "fx_risk_note": "PLN-denominated CfD creates FX exposure for EUR investors. PLN is not in ERM II and has historically been volatile vs. EUR. Model with FX assumptions; verify hedging availability."
+    },
+    "auction": {
+      "administrator": "URE (organises and runs auctions per Ministerial Regulation)",
+      "frequency": "Annual — typically held in November/December for the following year",
+      "technology_baskets": ["Onshore wind", "Solar PV (various size categories)", "Offshore wind (Phase 2)", "Biogas/biomass"],
+      "clearing_prices_pln_mwh_approx": {
+        "_staleness_warning": "OZE clearing prices change annually. These are indicative 2024 ranges in PLN. Convert to EUR at prevailing rate. Verify with URE annual auction results.",
+        "_source": "URE, wyniki aukcji OZE — ure.gov.pl",
+        "onshore_wind_pln_mwh": { "low": 300, "high": 420, "eur_equivalent_approx_low": 70.5, "eur_equivalent_approx_high": 98.7, "fx_rate": 0.235 },
+        "solar_pv_pln_mwh": { "low": 230, "high": 350, "eur_equivalent_approx_low": 54.1, "eur_equivalent_approx_high": 82.3, "fx_rate": 0.235 }
+      }
+    },
+    "phase_1_offshore_contracts": {
+      "mechanism": "Administratively set contract prices under Ustawa offshore 2020 — NOT competitive auction. Price set by Minister Klimatu in rozporządzenie.",
+      "type": "two_way_cfd",
+      "note": "Phase 1 offshore contracts provide guaranteed price for 25 years (exceptional term vs. 15-year standard OZE). Prices significantly higher than onshore, reflecting project complexity."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Poland's CIT Act allows accelerated depreciation for certain assets. Wind turbine property tax reform (2023) significantly reduced the non-income tax burden on wind developers — model post-reform rates only for new projects.",
+    "cit": {
+      "standard_rate_pct": 19,
+      "small_taxpayer_rate_pct": 9,
+      "small_taxpayer_threshold_eur_approx": 2000000,
+      "legal_basis": "Ustawa CIT Art. 19"
+    },
+    "depreciation": {
+      "method": "Straight-line (metoda liniowa) or declining balance (metoda degresywna) available",
+      "declining_balance_max_coefficient": 2.0,
+      "wind_turbines_stawka_amortyzacyjna_pct": 7,
+      "wind_turbines_useful_life_years_approx": 14,
+      "solar_pv_stawka_pct": 10,
+      "legal_basis": "Ustawa CIT Art. 16h–16m; Załącznik 1 (depreciation rates table)",
+      "npv_benefit_analysis": {
+        "_rule_3b_compliance": true,
+        "description": "At 19% CIT and 10% WACC: NPV of tax shield under declining balance (2× coefficient on 7% linear rate = 14% year 1 DDB for wind): ≈ 14.3% of qualifying CapEx. Under standard linear 7% rate: NPV ≈ 11.8%. Timing benefit ≈ 2.5ppts. This is a modest incentive — CIT rate is lower than Western European peers which reduces the absolute shield value."
+      }
+    },
+    "property_tax_on_wind_turbines": {
+      "pre_2017_basis": "Only foundation (fundament) treated as budowla (structure) for property tax purposes",
+      "2017_amendment": "Act of 7 June 2018 (implementing earlier legislative interpretation from 2016) treated the ENTIRE wind turbine (including rotor, nacelle, tower) as 'budowla' — massively increasing property tax base",
+      "2023_reversal": {
+        "description": "Ustawa z dnia 13 lipca 2023 r. o zmianie ustawy o inwestycjach w zakresie elektrowni wiatrowych — restored wind turbine property tax base to FOUNDATION ONLY (fundament), dramatically reducing the annual tax burden",
+        "legal_basis": "Ustawa z dnia 13 lipca 2023 r. (Dz.U. 2023 poz. 1506)",
+        "rate": "Standard budowla rate: 2% of initial value per annum (set by gmina, up to statutory maximum)",
+        "impact": "For a 3MW wind turbine: pre-reform property tax was approx. PLN 90,000+/year (full turbine at 2% of ~PLN 4.5m initial value). Post-reform (foundation only at ~PLN 200,000 value): PLN 4,000/year. Orders of magnitude improvement."
+      },
+      "current_basis": "FOUNDATION ONLY for new projects. Verify legislative status — confirm 2023 amendment is in force and no further changes."
+    },
+    "vat": {
+      "standard_rate_pct": 23,
+      "reduced_rate_pct": 8,
+      "applies_to_commercial_renewables": true,
+      "legal_basis": "Ustawa z dnia 11 marca 2004 r. o podatku od towarów i usług (VAT Act)",
+      "input_vat_recovery": "Available for VAT-registered entities (podatnicy VAT)"
+    },
+    "pcc": {
+      "description": "Podatek od czynności cywilnoprawnych (PCC) — Civil Law Activities Tax: 2% on market value of real property transferred; 1% on company shares",
+      "note": "Relevant for site acquisitions and M&A structures."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "Medium-High",
+    "bankability_rating": "Medium",
+    "legal_basis": "Kodeks cywilny (Polish Civil Code) — Art. 353 et seq. (freedom of contract). No bespoke PPA statute.",
+    "market_liquidity": "Low-Medium and growing",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Multi-nationals with Polish operations (Amazon AWS PL, Google, ArcelorMittal Poland, PKN Orlen own renewables, industrial manufacturers)",
+    "typical_contract_term_years": { "min": 5, "max": 12 },
+    "standard_frameworks": ["EFET framework adapted for PL", "Bespoke bilateral under Kodeks cywilny", "Virtual PPA referencing TGE price"],
+    "oze_kontrakt_interaction_note": "OZE two-way CfD contracts require surplus market revenue (above cena aukcyjna) to be returned to URE. A PPA layered on top must be structured as a virtual/financial arrangement — physical delivery under OZE contract is to TGE market, not directly to corporate offtaker.",
+    "pln_currency_risk": "PLN-denominated OZE support and TGE spot market create FX risk for EUR-denominated investors AND for EUR-denominated corporate offtakers. PPA contracts may need FX provisions.",
+    "go_system": {
+      "description": "Gwarancje Pochodzenia (GP) — Polish Guarantees of Origin",
+      "regulator": "URE (as GP issuing authority per Ustawa OZE)",
+      "notes": "GP certificates available for renewable generators. Revenue from GP sales is modest (market-determined)."
+    },
+    "cross_border_enforceability": "Medium — Polish courts are functional; commercial arbitration at SAKIG (Sąd Arbitrażowy przy Krajowej Izbie Gospodarczej) or ICC; post-EU accession legal framework has strengthened"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 74,
+    "credit_ratings": {
+      "moodys": "A2",
+      "sp": "A-",
+      "fitch": "A-",
+      "source_note": "Poland's ratings improved significantly post-EU accession. Ratings were under pressure during 2015-2023 PiS government period due to rule of law concerns. Tusk government (from December 2023) has taken steps to restore EC rule of law approvals."
+    },
+    "political_stability": "Medium",
+    "government_change": "Coalition government under PM Donald Tusk (October 2023 Sejm election; sworn in December 2023) replaced PiS government of 8 years. Policy direction has shifted significantly.",
+    "rule_of_law_concerns": {
+      "background": "EC initiated infringement proceedings and froze RRF (Recovery and Resilience Fund) funds over judiciary independence concerns under PiS (2015-2023)",
+      "current_status": "Tusk government implementing judicial reform milestones. EC released initial frozen RRF tranches in 2024. Full rule of law restoration is ongoing — verify current EC/CJEU status.",
+      "investor_relevance": "Judicial independence concerns affect contract enforceability risk assessment and political risk premium for all sectors."
+    },
+    "retroactive_policy_incidents": [
+      {
+        "year": "2016",
+        "description": "Ustawa wiatrakowa (May 2016) — introduced 10H setback rule retroactively constraining projects in the development pipeline. Projects with environmental permits but not yet under construction lost their development value.",
+        "severity": "High for the onshore wind sector — effectively halted new onshore wind development for 7 years"
+      },
+      {
+        "year": "2017–2023",
+        "description": "Property tax reinterpretation treating entire wind turbine (not just foundation) as 'budowla' — effectively retroactively increased property tax burden for existing operational wind farms",
+        "severity": "High for existing wind fleet — reversed by 2023 amendment but operating companies experienced 5+ years of elevated property tax"
+      }
+    ],
+    "expropriation_risk": "Low",
+    "currency_risk": "Medium — PLN is not in ERM II and has historical volatility vs. EUR. Polish exports and EU fund inflows provide some stabilisation. EUR/PLN rate has been in 4.0–4.80 range over recent years.",
+    "score_rationale": "Poland's score (74) reflects improving trajectory under Tusk government but historical 10H and property tax retroactive measures are genuine negative precedents. PLN currency risk is a material consideration for EUR-base investors."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 65,
+    "component_scores": {
+      "grid_connection_drag": { "score": 75, "assessment": "HIGH — Poland faces a severe connection queue at distribution level; coal grid infrastructure requires transformation; PSE expansion plans are multi-year" },
+      "permitting_drag_solar": { "score": 45, "assessment": "MEDIUM — MPZP requirement is the primary constraint; OOŚ process is manageable; administration improving" },
+      "permitting_drag_wind": { "score": 60, "assessment": "MEDIUM — 700m reform opens the market but depends on gmina-by-gmina MPZP adoption. Expected 2024-2027 to reach full effect. Species protection (ptaki — birds) assessments required." },
+      "permitting_drag_offshore": { "score": 55, "assessment": "MEDIUM — Phase 1 projects have pre-allocated contracts; Phase 2 competitive. Port/supply chain infrastructure the binding constraint more than permitting." },
+      "bureaucratic_friction": { "score": 65, "assessment": "MEDIUM-HIGH — Polish administrative procedures involve multiple levels (gmina, starostwo, RDOŚ, URE). Processes are improving under Tusk government reforms but legacy complexity remains." },
+      "judicial_appeal_risk": { "score": 50, "assessment": "MEDIUM — Polish administrative courts (WSA/NSA) function; no particular pattern of organised renewable energy opposition litigation unlike France/Italy/Germany" }
+    },
+    "primary_bottleneck": "Grid connection queue at distribution level (for solar) and MPZP adoption timelines at gmina level (for onshore wind 700m reform implementation)",
+    "score_rationale": "Composite 65 reflects improving permitting landscape post-10H reform, but grid connection constraints are severe and will take years to resolve. PLN currency adds complexity vs. EUR-market peers."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Ustawa o kontroli niektórych inwestycji (Investment Control Act 2015, as amended 2020/2022); EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "scope": "Energy generation and distribution is included in the list of strategic sectors under the Act",
+    "reviewing_authority": "Prezes UOKiK (Office of Competition and Consumer Protection) for antitrust; sectoral ministry for strategic investment screening",
+    "practical_risk": "Low-Medium",
+    "notes": "Poland is an EU member with FDI screening for strategic sectors. Energy is covered. OECD investors face low prohibition risk but compliance required. Russia-affiliated investors effectively excluded from energy sector acquisitions post-2022."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG 2022/C 80/01",
+    "oze_clearance": "OZE auction mechanism cleared by EC under CEEAG. Competitive bidding (aukcje OZE) satisfies proportionality test.",
+    "phase_1_offshore_note": "Phase 1 offshore administratively set prices reviewed by EC — clearance required as non-competitive mechanism. EC reviewed under CEEAG and issued compatibility decision.",
+    "retrospective_clawback_risk": "Low for OZE auction projects — competitive mechanism is cleared. Phase 1 offshore administrative prices carry marginally higher clawback risk given non-competitive setting.",
+    "notification_status": "OZE auction framework cleared; Phase 1 offshore cleared under specific EC decision"
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: All Polish financial inputs should be modelled in PLN first, then converted to EUR at assumed FX rate with sensitivity analysis. PLN/EUR FX risk is material and must be reflected in IRR/NPV sensitivity tables.",
+    "_rule_3a_note": "TWO-WAY CfD: model revenue as floored AND capped at cena aukcyjna. PLN-denominated floor — model EUR equivalent with FX sensitivity.",
+    "illustrative_onshore_wind_oze": {
+      "cena_aukcyjna_pln_mwh_approx": 360,
+      "cena_aukcyjna_eur_mwh_approx": 84.6,
+      "fx_rate_used": 0.235,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 30,
+      "typical_capex_eur_per_mw": 1200000,
+      "typical_capex_pln_per_mw": 5106000,
+      "opex_eur_per_mw_per_year": 38000,
+      "property_tax_post_2023_reform_eur_per_mw_approx": 940
+    },
+    "illustrative_solar_pv_oze": {
+      "cena_aukcyjna_pln_mwh_approx": 280,
+      "cena_aukcyjna_eur_mwh_approx": 65.8,
+      "fx_rate_used": 0.235,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct_dc": 13,
+      "typical_capex_eur_per_mw_dc": 550000
+    }
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "AMBER", "rationale": "MPZP requirement adds time but process is manageable. Grid connection queue is the binding constraint for solar." },
+    "permitting_wind_onshore": { "rag": "AMBER", "rationale": "700m reform (March 2023) reopens the market — but MPZP adoption is gmina-by-gmina and will take 2024-2027 to reach full effect across the country. Improving trajectory." },
+    "permitting_offshore": { "rag": "AMBER", "rationale": "Phase 1 contracts pre-allocated. Phase 2 competitive from 2025. Port/supply chain infrastructure more limiting than regulatory process." },
+    "grid_connection": { "rag": "RED", "rationale": "Severe distribution grid connection queue. Solar growth has saturated distribution capacity. Multi-year resolution timeline." },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "Annual OZE auctions active; 15-year two-way CfD contracts provide long-term revenue certainty; URE process is established and well-functioning. Phase 1 offshore contracts are exceptional 25-year term." },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "CIT 19% is competitive. Property tax post-2023 reform restored to foundation-only basis — dramatic improvement for wind. PLN denomination of tax regime is manageable. No Full Expensing equivalent." },
+    "ppa_enforceability": { "rag": "AMBER", "rationale": "Polish contract law is sound; PPA market is growing; PLN/EUR FX adds complexity for corporate PPAs. Rule of law improvement under Tusk government reduces enforcement risk." },
+    "political_risk": { "rag": "AMBER", "rationale": "A2/A- rated; EU member; 10H and property tax retroactive precedents; rule of law concerns improving post-December 2023. Trajectory is positive but 7-year PiS legacy is a due diligence item." },
+    "operational_drag": { "rag": "AMBER", "rationale": "Grid is RED-level; permitting improving; MPZP timelines moderate. Offshore drag is moderate. Composite AMBER with improving trend." },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "Investment Control Act applies to energy; notification required; OECD investors face low prohibition risk. Poland is strategically welcoming Western investment in energy post-2022 security context." },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "OZE auction mechanism cleared under CEEAG. Competitive bidding is compliant." },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Poland represents one of the most compelling emerging energy CapEx opportunities in this knowledge base. The onshore wind market reopening (700m reform), exceptional solar resource utilisation trajectory, and ambitious offshore programme create significant deal flow. Key risks are grid connection saturation, PLN currency exposure, and the legacy of retroactive policy under PiS (10H, property tax) — which have now been reversed but create a due diligence requirement. Investors comfortable with PLN FX exposure, emerging-market-style regulatory complexity, and 3–5 year development timelines will find Poland highly attractive relative to more saturated Western European markets."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 48,
+    "1_permitting_window_scope": "Onshore wind (post-700m reform, dependent on MPZP adoption)",
+    "1_permitting_window_solar_p50_months": 24,
+    "2_grid_connection_cost_native": "PLN 150,000–800,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 35,250–188,000 per MW",
+    "2_grid_connection_cost_fx_date": "2026-06-15",
+    "2_grid_connection_timeline_months": "30–96",
+    "3_primary_support_mechanism": "OZE Aukcje — competitive auctions (URE); two-way CfD (kontrakt różnicowy)",
+    "3_mechanism_type_code": "two_way_cfd",
+    "4_effective_corporation_tax_rate_pct": 19,
+    "4_key_incentive": "Property tax reform (July 2023) restoring wind turbine tax to foundation-only basis — significant OPEX reduction. Standard CIT 19% with declining balance depreciation available.",
+    "5_ppa_enforceability_rating": "Medium-High",
+    "5_ppa_legal_basis": "Kodeks cywilny; TGE as reference price; PLN denomination creates FX risk for EUR-base investors",
+    "6_political_risk_score": 74,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 65,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "PLN ~360/MWh approx. (onshore wind, indicative 2024 range — verify with URE)",
+    "8_revenue_floor_eur": "EUR ~84.6/MWh approx. at PLN 4.25 = EUR 1 — FX-SENSITIVE",
+    "8_revenue_floor_fx_date": "2026-06-15",
+    "8_revenue_floor_mechanism": "two_way_cfd",
+    "8_revenue_floor_staleness_warning": "OZE clearing prices and PLN/EUR rate both change. Verify URE auction results AND current FX rate before use. PLN/EUR sensitivity analysis is mandatory."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Poland participates in IPCEI Hy2Tech (2022). Polish Hydrogen Strategy 2030 targets 2 GW electrolysis capacity. NFOŚiGW (National Fund for Environmental Protection) administers EU-funded H2 support.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Poland is an IPCEI Hy2Tech participant. Hydrogen strategy prioritises industrial decarbonisation (steel, chemicals) and transport. Grid decarbonisation path affects electrolysis carbon intensity credentials. Verify current subsidy programme before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "two_way_cfd",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "OZE (Odnawialne Źródła Energii) two-way CfD auction under Ustawa o odnawialnych źródłach energii (Dz.U. 2015 poz. 478 as amended), administered by URE.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "active",
+      "permitting_p50_months": 180,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": ["KGHM NuScale SMR (pre-FEED stage)"],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_nuclear",
+      "notes": "Poland has two parallel nuclear programmes: (1) large AP1000 units (Westinghouse — government programme, Choczewo site); (2) KGHM NuScale VOYGR SMR project (Legnica/Nowa Sól sites). Both at pre-construction stage. No operating nuclear in Poland. Source: IEA nuclear."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 6,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Świnoujście LNG terminal (Gaz-System). Expansion underway. Poland has prioritised LNG as strategic energy security asset."
+    },
+    "data_centre": {
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "medium",
+      "renewable_ppa_market_depth": "medium",
+      "source": "national_tso",
+      "notes": "Warsaw is the main CEE data centre hub. Grid investment ongoing. Corporate PPA market developing. Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "Polish Capacity Market — Rynek mocy (since 2021) under Ustawa o rynku mocy (Dz.U. 2018 poz. 9). CCGT and gas peaker plants are eligible. Source: URE/PSE.",
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": true,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Poland operates a formal Capacity Market (Rynek mocy) since 2021. Gas-fired plants are eligible capacity market participants and key to coal-replacement strategy. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Polish bioenergy support under OZE auction framework (URE) before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "Capacity Market (2021). Coal generators participate in multi-year contracts. Source: Polish Power Exchange (TGE).",
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "2049 target per Polish National Energy and Climate Plan (NECP); subject to EU pressure for earlier phase-out.",
+      "source": null,
+      "notes": "Poland has Europe's most coal-intensive power sector (~70% coal share). EU Taxonomy-excluded. High stranded-asset risk post-2035. CBAM exposure for coal-intensive industries."
+    }
+  }
+}

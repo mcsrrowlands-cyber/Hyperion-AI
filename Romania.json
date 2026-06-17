@@ -1,0 +1,526 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Romania",
+    "local_name": "România",
+    "iso_code": "RO",
+    "currency_native": "RON",
+    "currency_eur_rate": 4.97,
+    "currency_eur_rate_date": "Indicative — approximately mid-2025. VERIFY at ECB Reference Rate (ecb.europa.eu/stats/policy_and_exchange_rates) before use. Romania has maintained managed RON/EUR stability within approximately 4.90–5.00 band.",
+    "currency_eur_rate_source": "ECB Reference Rate indicative. Romania participates in EU but is NOT in the Eurozone — RON FX risk applies to all EUR-denominated investors.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Romanian CfD auction parameters are governed by Government Decisions that can be amended. ANRE (Autoritatea Națională de Reglementare în domeniul Energiei) and Ministry of Energy publications are primary sources. RON/EUR rate must be verified at ECB Reference Rate on analysis date."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Law 220/2008 on Renewable Energy Promotion (Legea nr. 220/2008), as amended", "relevance": "Legacy Green Certificate support framework; still applies to pre-2017 grandfathered RES projects; defines tradeable green certificate (GC) mechanism" },
+      { "instrument": "GEO 143/2021 — Emergency Ordinance establishing the CfD framework for RES", "relevance": "Introduced two-way Contract for Difference (CfD) support framework for new RES projects; administered by ANRE and CfD Settlement Body; replaced Green Certificate scheme for new projects" },
+      { "instrument": "Law 23/2023 — Parliamentary approval and amendment of GEO 143/2021", "relevance": "Provides legal permanence to the CfD framework; introduced modifications to auction process and eligibility criteria" },
+      { "instrument": "Law 123/2012 — Electricity and Natural Gas Law (Legea energiei electrice și a gazelor naturale)", "relevance": "Framework law for electricity markets; grid connection rights; ANRE regulatory authority powers; market operation rules" },
+      { "instrument": "National Energy Strategy 2022–2030 and NECP 2021–2030", "relevance": "Targets 30.7% renewable electricity by 2030 (revised upward under REPowerEU); drives auction programme sizing" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Law 50/1991 — Building Permits Law (Legea privind autorizarea executării lucrărilor de construcții), as amended", "relevance": "Construction authorisation framework for energy projects; building permit (Autorizație de Construire) required" },
+      { "instrument": "Law 292/2018 and Government Decision 1284/2007 — EIA legislation", "relevance": "Environmental Impact Assessment; mandatory for RES projects above threshold sizes" },
+      { "instrument": "Law 278/2013 — RES permitting reform provisions", "relevance": "Streamlined some permitting steps; primary impetus for permitting efficiency improvements" },
+      { "instrument": "Law 220/2008 §§8–12 — Connection and Concession Requirements", "relevance": "Grid connection licence framework; Concession Agreement requirements for larger projects" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Fiscal Code — Law 227/2015 (Codul fiscal), as amended", "relevance": "16% flat corporate income tax rate; standard depreciation rules; dividend withholding tax provisions" },
+      { "instrument": "Government Ordinance 16/2022 — Fiscal Code amendments", "relevance": "Introduced construction tax (impozit specific pe construcții) affecting energy asset holders; dividend WHT changes" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Romanian CfD support scheme assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions; relevant for smaller RES measures" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Law 127/2023 — FDI Screening (transposing EU Regulation 2019/452)", "relevance": "Romanian FDI screening mechanism; energy critical infrastructure designation; reviewed by Ministry of Economy / CSAT (Supreme Council of National Defence) for security-sensitive sectors" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation; Romania must notify EC and other member states of covered FDI proceedings" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Romanian permitting is one of the most complex and time-consuming in the EU for RES. Multi-step procedures involve Ministry of Energy (licences), ANRE (technical approvals), National Environmental Guard (EIA), and local/county councils (building permits). P50 timelines run from formal application. Pre-application adds 18–36 months. Corruption risk and administrative capacity constraints are material considerations.",
+    "solar_utility": {
+      "threshold_mw_national_process": 1,
+      "primary_authority": "Ministry of Energy for production licence; ANRE for technical approval; local/county councils for building permit; Ministry of Environment for EIA",
+      "primary_process": "Production Licence (Licență de producere) from ANRE → Electricity Permit (Autorizație de înființare) from ANRE → EIA (Acord de mediu) → Building Permit (Autorizație de Construire) → Connection Agreement with Transelectrica/DSO → Operating Licence",
+      "legal_basis": "Law 123/2012; Law 50/1991; Law 292/2018 (EIA); GEO 143/2021 (support eligibility)",
+      "timeline_p50_months": 36,
+      "timeline_min_months": 24,
+      "timeline_max_months": 60,
+      "pre_application_months_typical": 18,
+      "appeal_risk": "medium-high",
+      "appeal_mechanism": "Administrative Courts (Tribunale administrative); Courts of Appeal; High Court of Cassation and Justice (ICCJ)",
+      "notes": "Romania has very strong solar (1,200–1,450 kWh/kWp p.a. in Dobrogea, Oltenia, Muntenia) and excellent wind (Dobrogea has best onshore wind in EU alongside Denmark). However, permitting complexity and grid connection backlogs have historically prevented Romania from fully exploiting its resource. Reform attempts (Law 278/2013, GEO 143/2021) have partially streamlined but fundamental multi-agency complexity remains."
+    },
+    "onshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "ANRE (licences); Ministry of Environment (EIA); local/county councils (building permits)",
+      "primary_process": "Production Licence → Environmental Permit (Acord de mediu / EIA) → Urban Planning Certificate (Certificat de urbanism) → Building Permit → Grid Connection Agreement → Operating Licence",
+      "legal_basis": "Law 123/2012; Law 50/1991; Law 292/2018; GEO 57/2019 (administrative code for local permits)",
+      "timeline_p50_months": 48,
+      "timeline_min_months": 36,
+      "timeline_max_months": 84,
+      "pre_application_months_typical": 24,
+      "appeal_risk": "high",
+      "appeal_mechanism": "Administrative courts; Courts of Appeal; ICCJ",
+      "setback_rules": "No binding national setback law; typically governed by urban planning certificates; effective setbacks vary by county",
+      "notes": "Dobrogea (southeastern Romania) has exceptional wind resources — capacity factors of 35–42% are achievable. However, the grid connection backlog in Dobrogea is severe. The region's 110kV and 400kV network is heavily congested with existing and queued wind capacity. New projects in Dobrogea face multi-year connection waits or must await major reinforcement works."
+    },
+    "offshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Ministry of Energy; Ministry of Environment; National Agency for Maritime and Ports (APDM)",
+      "primary_process": "Offshore zone designation pending; licence application to Ministry of Energy; EIA; seabed use agreement; grid connection",
+      "legal_basis": "Law 123/2012; Law 17/1990 (exclusive economic zone); GEO 143/2021 §§30–35 (offshore provisions)",
+      "model": "Emerging — no offshore wind project has been commissioned in Romania as of 2025; regulatory framework still developing",
+      "timeline_p50_months": 120,
+      "timeline_min_months": 96,
+      "timeline_max_months": 180,
+      "capacity_targets": "Romania has 3 GW offshore wind target under NECP; Black Sea offshore wind identified as strategic priority under REPowerEU",
+      "notes": "Black Sea offshore wind offers very strong resource potential. The regulatory framework is nascent — primary developers (DEME, CWP) are in early-stage activity. Grid connection to the national system from the Black Sea coast will require significant investment. No projects expected to achieve financial close before 2030."
+    },
+    "battery_storage_utility": {
+      "primary_process": "ANRE technical permit; building permit under Law 50/1991; environmental permit if above thresholds",
+      "legal_basis": "Law 123/2012 (storage activity licensing); Law 292/2018 (EIA)",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 18,
+      "timeline_max_months": 42,
+      "notes": "BESS market in Romania is emerging. Grid stability needs in Dobrogea create demand for co-located BESS. Standalone BESS not directly CfD-supported; revenue from ancillary services (frequency regulation, balancing) via ANRE-regulated markets."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "Transelectrica S.A.", "region": "Romanian national transmission system (majority state-owned)" }
+    ],
+    "distribution_operators": "E.ON Energie România (NE Romania); Enel Distribuție Muntenia/Banat/Dobrogea (southern/eastern — rebranding ongoing after Enel exit to PPC acquisition); Electrica SA (multiple regions); CEZ Distribuție (Oltenia)",
+    "regulatory_authority": "ANRE (Autoritatea Națională de Reglementare în domeniul Energiei)",
+    "legal_basis": "Law 123/2012 §§30–38 (grid connection rights); ANRE Regulation on RES Grid Connection (ANRE Order 59/2013, as amended)",
+    "priority_access": {
+      "applicable": true,
+      "mechanism": "Priority dispatch for RES under Law 123/2012 and EU Electricity Directive 2019/944 (transposed)",
+      "description": "RES generators have priority dispatch. Curtailment compensation framework exists but enforcement has been inconsistent."
+    },
+    "dobrogea_congestion": {
+      "description": "Dobrogea (southeastern Romania) is the primary wind and solar development region but faces severe grid congestion. Transelectrica's 400kV ring network in Dobrogea is close to maximum capacity. The Cernavodă nuclear plant and Dobrogea wind cluster compete for transmission capacity.",
+      "major_reinforcement": "Transelectrica's SMART RES project and Cernavodă–Stâlpu 400kV line reinforcement are planned infrastructure investments but with uncertain timelines. EU cohesion and recovery funds (PNRR) allocated to grid modernisation.",
+      "practical_impact": "New wind and solar projects in Dobrogea face grid connection queue waits of 5–8+ years under current conditions without specific capacity reservation. Projects outside Dobrogea (Oltenia, Moldova regions) face shorter queues but lower resource quality."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 60, "range": "36–96+", "notes": "Dobrogea transmission-connected projects face the longest queues. Other regions materially shorter." },
+      "distribution_connected": { "p50": 30, "range": "18–54" }
+    },
+    "connection_cost_ron_per_mw": {
+      "range_low_ron": 150000,
+      "range_high_ron": 1500000,
+      "range_low_eur_indicative": 30181,
+      "range_high_eur_indicative": 301812,
+      "fx_note": "RON/EUR conversion at indicative 1 EUR = 4.97 RON. Verify at ECB Reference Rate on analysis date.",
+      "notes": "Connection costs vary substantially by region and capacity. Dobrogea transmission-connected projects requiring grid reinforcement contributions can be substantially higher."
+    },
+    "operational_drag_assessment": "VERY HIGH — Dobrogea grid congestion is a structural development barrier; queue management by Transelectrica is improving but resolution requires major capital investment in transmission infrastructure"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Romanian CfD under GEO 143/2021 and Law 23/2023 is a TWO-WAY mechanism. When market price EXCEEDS the strike price (prețul de exercițiu), the generator must RETURN the difference to the CfD Settlement Body. Revenue is CAPPED at the strike price. There is NO uncapped merchant upside. This is structurally equivalent to the UK two-way CfD. Return modelling must reflect a capped revenue profile.",
+    "primary_mechanism": "Contract pentru Diferență (CfD) — Contract for Difference",
+    "mechanism_type": "two_way_cfd",
+    "administrator": "ANRE (oversight and auction); CfD Settlement Body (Organism de Decontare CfD) — entity to be established/confirmed under Law 23/2023 implementing provisions",
+    "legal_basis": "GEO 143/2021; Law 23/2023; ANRE auction regulations (Regulament de Desfășurare a Licitațiilor CfD)",
+    "mechanism_description": {
+      "summary": "Generator participates in competitive CfD auction and receives a strike price (prețul de exercițiu). Generator sells electricity on the OPCOM day-ahead market. When market price falls below the strike price, the Settlement Body pays the difference to the generator. When market price EXCEEDS the strike price, the generator returns the difference to the Settlement Body. Revenue is effectively capped at the strike price.",
+      "upside_treatment": "CAPPED — when market price exceeds strike price, excess is returned to the CfD Settlement Body. No merchant upside above the strike price.",
+      "downside_treatment": "PROTECTED — when market price falls below strike price, Settlement Body pays the shortfall",
+      "merchant_exposure_during_term": "None under the CfD — full two-way price protection during contract term",
+      "contract_term_years": 15,
+      "settlement_body_note": "The CfD Settlement Body under GEO 143/2021 / Law 23/2023 was in the process of being formally established as of 2024–2025. Investors should verify the institutional status and creditworthiness of the counterparty before CfD execution.",
+      "two_way_clawback_legal_basis": "GEO 143/2021 §§12–15; Law 23/2023 — generator obligation to return excess when market price exceeds strike price"
+    },
+    "legacy_green_certificate_scheme": {
+      "legal_basis": "Law 220/2008 on Renewable Energy Promotion, as amended",
+      "mechanism_type": "tradeable_green_certificate",
+      "status": "Legacy — applies to projects commissioned before approximately 2017 under Law 220/2008. New projects use CfD under GEO 143/2021.",
+      "retroactive_risk_note": "Law 220/2008 was subject to significant retroactive modification. Law 134/2012 and GD 1/2013 reduced the number of Green Certificates awarded per MWh retroactively for already-commissioned projects. This represents a high-severity retroactive intervention — see Sovereign Risk section."
+    },
+    "auction": {
+      "administrator": "ANRE (Autoritatea Națională de Reglementare în domeniul Energiei)",
+      "status": "First CfD auctions launched 2024; institutional framework still being established as of 2024–2025",
+      "technology_auctions": [
+        "Onshore wind (Energie eoliană terestră)",
+        "Solar PV (Energie solară fotovoltaică)",
+        "Offshore wind (Energie eoliană offshore — nascent)",
+        "Hydropower (Energie hidroelectrică)"
+      ],
+      "strike_price_ron_mwh_approx": {
+        "_staleness_warning": "Romanian CfD auction clearing prices are from nascent auction programme. Very limited historical data available. Figures below are indicative estimates only — verify at ANRE official publications (anre.ro) and Ministry of Energy.",
+        "_source": "ANRE publications; Ministry of Energy of Romania official data",
+        "onshore_wind": {
+          "ron_mwh_range_low": 280,
+          "ron_mwh_range_high": 400,
+          "eur_mwh_indicative_low": 56.34,
+          "eur_mwh_indicative_high": 80.48,
+          "fx_note": "RON/EUR conversion at indicative 1 EUR = 4.97 RON — verify at ECB Reference Rate on analysis date",
+          "notes": "Strike prices indicative — first Romanian CfD auctions were in early stages as of 2024-2025. Limited comparable data. Dobrogea sites offer capacity factors of 35–42%."
+        },
+        "solar_pv_ground_mounted": {
+          "ron_mwh_range_low": 250,
+          "ron_mwh_range_high": 350,
+          "eur_mwh_indicative_low": 50.30,
+          "eur_mwh_indicative_high": 70.42,
+          "fx_note": "RON/EUR conversion at indicative 1 EUR = 4.97 RON",
+          "notes": "Romanian solar irradiation (1,200–1,450 kWh/kWp in Dobrogea/Muntenia) is competitive. Strike price range indicative."
+        }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Standard Romanian depreciation provides modest timing benefits. No specific enhanced CapEx incentive equivalent to Germany's degressive AfA or Austria's IFB. NPV of standard depreciation timing benefit should still be calculated for completeness.",
+    "corporation_tax_structure": {
+      "rate_pct": 16.0,
+      "legal_basis": "Fiscal Code Law 227/2015 §17 (flat 16% CIT rate); one of the lowest statutory CIT rates in the EU",
+      "microenterprise_tax_alternative": "Companies with turnover below EUR 500,000 may elect 1–3% microenterprise tax on revenue (impozit pe veniturile microîntreprinderilor) — generally not applicable to utility-scale RES projects",
+      "dividend_withholding_tax_pct": 8.0,
+      "eu_parent_subsidiary_exemption": "0% WHT on qualifying EU parent-subsidiary dividend payments (Directive transposed under Fiscal Code)",
+      "construction_tax": {
+        "description": "Impozit specific pe construcții — construction tax reinstated by Government Ordinance 16/2022",
+        "rate_pct": 1.0,
+        "applicable_to": "Value of constructions as per accounting records; applies to energy generation assets (turbines on masts, substation buildings, etc.)",
+        "legal_basis": "GEO 16/2022; Law 370/2022 approving the ordinance",
+        "note": "The construction tax adds approximately 1% p.a. on the accounting value of qualifying construction assets — a recurring cost not present in most EU peers. Potentially material for capital-intensive offshore wind projects."
+      }
+    },
+    "combined_effective_tax_rate_range_pct": {
+      "standard_cit": 16.0,
+      "effective_with_construction_tax": "16% CIT + 1% construction tax on asset value (recurring) — effective burden depends on asset base and depreciation",
+      "notes": "16% CIT is competitive within EU. Construction tax is an additional burden specific to Romania. No regional trade tax equivalent."
+    },
+    "capex_incentives": {
+      "standard_only": {
+        "description": "Romania does not offer a specific enhanced CapEx depreciation incentive equivalent to Germany's degressive AfA or Austria's IFB for RES projects.",
+        "standard_depreciation_available": true,
+        "note": "Some investment aid incentives available under Law 332/2001 (now largely superseded by EU GBER/CEEAG framework grants); verify availability for specific project with Romanian tax adviser"
+      }
+    },
+    "standard_depreciation": {
+      "wind_turbines_useful_life_years": 20,
+      "solar_pv_panels_useful_life_years": 20,
+      "method": "straight-line or accelerated methods available under Fiscal Code Law 227/2015 §§28–31; accelerated method available for certain categories with Year 1 deduction of 50% for machinery",
+      "accelerated_option": {
+        "available": true,
+        "year_1_deduction_pct_of_cost": 50,
+        "qualifying_assets": "Qualifying moveable assets (utilaje, mașini, instalații) — includes RES generation equipment if properly classified",
+        "legal_basis": "Fiscal Code Law 227/2015 §28(3)",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 16% CIT and 10% WACC: Accelerated depreciation (50% Year 1 for qualifying assets, remaining 50% straight-line over remaining life) vs. standard straight-line (5% p.a. over 20 years): NPV of tax shield under accelerated ≈ 14.1% of qualifying CapEx. Under standard straight-line over 20 years: ≈ 11.1%. Timing benefit (NPV delta) ≈ 3ppts per RON 1 of qualifying CapEx.",
+          "note": "Lower CIT rate (16%) means smaller absolute timing benefit vs. higher-rate jurisdictions. Total lifetime deductions are identical."
+        }
+      }
+    },
+    "vat": {
+      "standard_rate_pct": 19,
+      "reduced_rate_pct": 9,
+      "applies_to_commercial_renewables": true,
+      "input_vat_recovery": "Available for VAT-registered businesses",
+      "legal_basis": "Fiscal Code Law 227/2015 Title VII (VAT provisions)"
+    },
+    "real_estate_transfer_tax": {
+      "notes": "Romania applies notarial transfer fees (honorarii notariale) on property transfers — not a standalone transfer tax. Fees are modest (typically 0.5–1% of transaction value). Share deal structures common for larger energy assets to avoid property-related fees and re-permit costs."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "Medium",
+    "bankability_rating": "Medium-Low",
+    "legal_basis": "Romanian Civil Code — Law 287/2009 (Codul civil); contractual freedom; no bespoke PPA statute; OPCOM (Romanian Energy Market Operator) physical bilateral contract framework",
+    "jurisdiction_enforcement": "Romanian courts are slower and less predictable than western European peers. Commercial disputes: 3–6 years in first instance. Bucharest Arbitration Court (CACI) and ICC arbitration are available — strongly recommended for higher-value transactions.",
+    "market_liquidity": "Limited but growing — corporate PPA market less developed than western European peers",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Romanian industrial companies, energy-intensive manufacturers, OMV Petrom (energy), Arcelor Mittal (steel), international corporations with Romanian manufacturing operations",
+    "typical_contract_term_years": { "min": 3, "max": 10 },
+    "standard_frameworks": ["Bespoke bilateral under Romanian Civil Code", "OPCOM bilateral physical framework", "Virtual/financial PPA structure"],
+    "cfd_interaction_note": "CfD-supported projects sell on OPCOM day-ahead market and are counterparted with the CfD Settlement Body (two-way mechanism). Corporate PPAs alongside CfD support are structurally complex. Virtual (financial) PPAs referencing OPCOM market price are the typical structure for CfD-supported projects seeking additional corporate offtake.",
+    "guarantees_of_origin": {
+      "regulator": "ANRE — issues Garantii de Origine (GO) / Guarantees of Origin",
+      "note": "Romanian RES projects can issue GoOs through ANRE. GoO issuance for CfD-supported projects — verify eligibility under current ANRE framework."
+    },
+    "credit_risk_note": "Romanian corporate credit market is less deep than western European peers. Investment-grade offtaker or strong parent guarantee is strongly recommended for debt financing. State-connected offtakers (Romgaz, Hidroelectrica) are the most creditworthy Romanian counterparties.",
+    "cross_border_enforceability": "Medium — Romanian courts are functional; NY Convention signatory; EU enforcement regime applies; practical enforcement timeline is a material concern"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 58,
+    "credit_ratings": {
+      "moodys": "Baa3",
+      "sp": "BBB-",
+      "fitch": "BBB-",
+      "source_note": "Romania is at the lowest investment-grade rung. S&P and Fitch have flagged fiscal deficit concerns. Verify current ratings — negative outlook actions are possible.",
+      "_staleness_warning": "Romanian ratings subject to ongoing fiscal review — verify at agency websites before relying on this data. Romania's fiscal deficit has been a persistent concern."
+    },
+    "political_stability": "Medium-Low — frequent government changes; coalition instability; 2024 presidential election controversy (annulled first round) created significant political uncertainty",
+    "government_structure": "Semi-presidential republic; bicameral Parliament (Senat + Camera Deputaților); Constitutional Court (CCR) provides institutional backstop",
+    "regulatory_track_record": "Poor by EU standards — multiple retroactive modifications to RES support; regulatory framework has been repeatedly changed without adequate transition periods",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2013–2017",
+        "description": "Romania retroactively reduced the number of Green Certificates (GC) per MWh awarded under Law 220/2008 for already-commissioned RES projects. Law 23/2012 and subsequent Government Decision 1/2013 suspended GC trading and reduced GC quotas retroactively. Projects commissioned under guaranteed GC support lost significant anticipated revenue.",
+        "impact": "Material financial losses to wind and solar investors; extensive ICSID and UNCITRAL arbitration proceedings against Romania; major chilling effect on Romanian RES investment for 5+ years",
+        "severity": "HIGH — among the most severe retroactive RES support modifications in the EU; multiple arbitral awards against Romania"
+      },
+      {
+        "year": "2022–2023",
+        "description": "Romania introduced price cap and windfall tax on energy producers during the 2022 energy crisis (GEO 27/2022 and subsequent measures) — capping electricity prices and imposing contribution on revenues above threshold.",
+        "impact": "Reduced producer revenues; affected project cash flows and dividend distributions",
+        "severity": "Medium — time-limited emergency measures; consistent with EU-level responses across multiple jurisdictions; but adds to the precedent record"
+      }
+    ],
+    "expropriation_risk": "Low — EU member state; property rights protected under ECHR and Romanian Constitution; bilateral investment treaties (BITs) provide additional investor protection",
+    "currency_risk": "MEDIUM — RON is domestic currency; NOT in Eurozone; 10-year RON/EUR range approximately 4.4–5.1; EUR-denominated investors and lenders face FX risk on revenue and debt service. Romania has Euro adoption ambition but no confirmed timeline.",
+    "political_notes": "Romania's political environment has been volatile — multiple government changes in short periods, the 2024 presidential election annulment, and ongoing fiscal pressures create meaningful policy risk. The retroactive GC modifications remain the most significant legacy risk factor. The new CfD framework under GEO 143/2021 / Law 23/2023 has the potential to provide greater stability, but institutional track record under the new framework is not yet established.",
+    "score_rationale": "Deductions from 100: retroactive GC modifications 2013–2017 (-22), RON FX risk for EUR investors (-6), Baa3/BBB- sovereign at lowest investment grade (-5), political instability (-5), 2022–2023 windfall measures (-4). Score of 58 reflects the weakest political risk profile among notable absence jurisdictions."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
+    "operational_drag_score_out_of_100": 78,
+    "component_scores": {
+      "grid_connection_drag": { "score": 90, "assessment": "VERY HIGH — Dobrogea grid congestion is a structural barrier; 5–8+ year connection queues for transmission-connected projects in the primary resource region; Transelectrica reinforcement programme underfunded relative to pipeline" },
+      "permitting_drag_onshore_wind": { "score": 72, "assessment": "HIGH — multi-agency process; Ministry of Energy, ANRE, environmental authorities, and local councils all involved; 4–7 year realistic P50; corruption risk in local permitting creates uncertainty" },
+      "permitting_drag_solar": { "score": 65, "assessment": "MEDIUM-HIGH — similar multi-agency process to wind but faster in practice; strong solar resource drives developer interest; Dobrogea grid constraint is the real barrier" },
+      "permitting_drag_offshore": { "score": 95, "assessment": "EXTREME — framework nascent; no projects consented; Black Sea offshore regulatory process has no completed precedent" },
+      "bureaucratic_friction": { "score": 80, "assessment": "HIGH — Romanian public administration capacity is limited; multi-ministry coordination poorly structured; corruption risk in local planning approvals is a material consideration (Romania's GRECO/anti-corruption commitments are ongoing)" },
+      "judicial_appeal_risk": { "score": 60, "assessment": "MEDIUM — administrative courts functional but slow; organised opposition less prolific than Germany; court challenge volume lower but unpredictability higher" }
+    },
+    "primary_bottleneck": "Grid connection — Dobrogea congestion is the single most material development barrier for Romania's best wind and solar resource",
+    "secondary_bottleneck": "Multi-agency permitting complexity and administrative capacity constraints; corruption risk in local planning",
+    "dobrogea_note": "Dobrogea hosts Romania's best onshore wind resource (35–42% capacity factor) and strong solar. The grid bottleneck means developers must either queue for existing capacity or co-invest in grid reinforcement. Projects in less congested regions (Oltenia, Moldova) face shorter queues but lower resource quality.",
+    "score_rationale": "Grid connection drag of 90 is the dominant driver — among the worst in the EU for wind in the primary resource region. Administrative complexity and bureaucratic friction add material drag. Combined score 78 reflects a high-drag jurisdiction where returns must be commensurate with process risk."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Law 127/2023 (Romanian FDI screening implementing EU Regulation 2019/452); EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "critical_infrastructure_threshold_pct": 10,
+    "reviewing_ministry": "Ministry of Economy + CSAT (Consiliul Suprem de Apărare a Țării — Supreme Council of National Defence) for security-sensitive sectors",
+    "legal_basis": "Law 127/2023; EU Regulation 2019/452",
+    "energy_as_critical_infrastructure": "Yes — power generation and grid infrastructure designated critical under Law 127/2023",
+    "clearance_timeline": {
+      "initial_screening_working_days": 30,
+      "formal_review_if_opened_calendar_days": 90,
+      "extension_possible": true
+    },
+    "practical_risk": "Low-Medium for EU/OECD investors; elevated for non-EU/OECD and state-connected acquirers given Romania's security-sensitive energy sector posture (NATO member with Black Sea exposure)",
+    "notes": "Romania is a NATO member with active security concerns in its eastern region. FDI screening of Chinese and Russian-affiliated investors in energy is stringent. OECD investors face standard process with low prohibition risk."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01",
+    "secondary_framework": "GBER — Commission Regulation (EU) 651/2014 as amended",
+    "cfd_state_aid_status": {
+      "instrument": "GEO 143/2021 / Law 23/2023 CfD framework",
+      "status": "Romanian CfD scheme under notification and/or clearance process with European Commission as of 2024–2025. Competitive auction mechanism is designed to satisfy CEEAG proportionality requirements. VERIFY current EC clearance status at EC State Aid register (competition.ec.europa.eu) before assuming support is fully cleared.",
+      "_staleness_warning": "The Romanian CfD framework was in active development. EC clearance status must be verified before project commitment."
+    },
+    "legacy_gc_scheme": {
+      "instrument": "Law 220/2008 Green Certificate scheme",
+      "note": "Legacy GC scheme was cleared by the EC. The retroactive GC modifications (2013–2017) were domestic measures — NOT EC State Aid recovery orders. The precedent risk is domestic political retroactivity, not EC State Aid recovery action."
+    },
+    "retrospective_clawback_risk": {
+      "assessment": "Low from EC State Aid perspective for cleared framework projects",
+      "notes": "EC State Aid recovery risk and Romanian domestic retroactivity risk are distinct vectors. The major investor losses from the GC modifications were caused by domestic policy changes, not EC recovery proceedings. For the new CfD framework, formal EC clearance is the key prerequisite — verify clearance status."
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "RON is the domestic currency. All RON figures converted to EUR at indicative rate of 1 EUR = 4.97 RON. Verify at ECB Reference Rate on analysis date. FX risk must be explicitly modelled.",
+    "_rule_3a_note": "TWO-WAY CfD: revenue capped at strike price. Model revenue as min(market price, strike price) + max(0, strike price - market price). Do NOT model uncapped merchant upside.",
+    "illustrative_onshore_wind_cfd": {
+      "strike_price_ron_mwh_approx": 340,
+      "strike_price_eur_mwh_indicative": 68.41,
+      "fx_note": "RON 340 / 4.97 = EUR 68.41 indicative. Verify at ECB Reference Rate on analysis date.",
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 38,
+      "typical_capex_eur_per_mw": 1250000,
+      "opex_eur_per_mw_per_year": 38000,
+      "effective_tax_rate_pct": 16,
+      "note": "38% capacity factor reflects Dobrogea premium wind sites. Lower-resource locations outside Dobrogea typically 28–33%. Strike price is indicative from nascent CfD programme — very limited auction history. Dobrogea grid connection is the critical path risk."
+    },
+    "illustrative_solar_pv_cfd": {
+      "strike_price_ron_mwh_approx": 295,
+      "strike_price_eur_mwh_indicative": 59.36,
+      "fx_note": "RON 295 / 4.97 = EUR 59.36 indicative. Verify ECB rate.",
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct_dc": 18,
+      "typical_capex_eur_per_mw_dc": 520000,
+      "opex_eur_per_mw_per_year": 11000,
+      "note": "Romanian solar is among the best in eastern EU. Dobrogea/Muntenia resource drives competitive economics even at moderate strike prices."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory — Stop/Go signal before detailed narrative.",
+    "permitting_window_solar": { "rag": "AMBER", "rationale": "Multi-agency process creates 24–60 month realistic P50; bureaucratic friction is real but manageable with experienced Romanian development team; grid connection is binding constraint" },
+    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "High complexity; 4–7 year realistic P50; corruption risk in local planning requires careful management; Dobrogea resource is exceptional but grid access is the primary constraint" },
+    "permitting_window_offshore": { "rag": "RED", "rationale": "Black Sea framework nascent; no projects consented; 10–15 year development horizon; not viable for near-term capital deployment" },
+    "grid_connection": { "rag": "RED", "rationale": "Dobrogea grid congestion is a structural development barrier; 5–8+ year connection queues for primary resource region; Transelectrica reinforcement programme behind demand; existential constraint for Dobrogea projects" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "GEO 143/2021 / Law 23/2023 CfD framework is a significant improvement over the discredited GC scheme; first auctions 2024; institutional framework still being established; EC clearance verification required" },
+    "mechanism_type_risk": { "rag": "AMBER", "rationale": "Two-way CfD caps revenue; Settlement Body creditworthiness and institutional establishment must be verified; 15-year term shorter than EU peers" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "16% CIT is one of the lowest in the EU; accelerated depreciation available; construction tax (1% p.a. on asset value) is a unique recurring cost — model explicitly" },
+    "ppa_enforceability": { "rag": "AMBER", "rationale": "Romanian Civil Code provides valid framework; courts are slower and less predictable than western Europe; ICC/CACI arbitration strongly recommended; limited investment-grade corporate offtaker pool" },
+    "political_risk": { "rag": "RED", "rationale": "Retroactive GC modifications 2013–2017 are among the most severe in EU; political instability (multiple government changes, 2024 presidential election annulment); Baa3/BBB- at lowest investment grade; RON FX risk" },
+    "operational_drag": { "rag": "RED", "rationale": "Grid connection is extreme RED; permitting complexity is HIGH; bureaucratic friction and corruption risk add material delay risk" },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "Screening applies but manageable for OECD investors; NATO member security posture makes Chinese/Russian investors high-risk; OECD investors face low prohibition risk" },
+    "eu_state_aid_risk": { "rag": "AMBER", "rationale": "EC clearance of new CfD framework must be verified; retroactive GC modifications were domestic actions not EC-driven — but demonstrate that domestic retroactivity risk is real and severe" },
+    "retroactive_policy_risk": { "rag": "RED", "rationale": "2013–2017 retroactive GC modification is one of the most material retroactive interventions in EU energy history; must be disclosed to all investors; new CfD framework has not yet established track record" },
+    "currency_risk": { "rag": "AMBER", "rationale": "RON not in Eurozone; managed stability but EUR investors face FX exposure; hedging cost is a real project cost; Romania's Euro adoption timeline is indefinite" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Romania offers exceptional wind (Dobrogea 35–42% capacity factor) and solar resources, the lowest CIT rate among notable absence jurisdictions (16%), and a new CfD framework that — if properly established — addresses the structural weaknesses of the discredited Green Certificate scheme. The combination of RED-rated grid connection (Dobrogea congestion), RED political risk (retroactive GC precedent), and RON FX exposure means Romania is only suitable for 'Value-Add / Development' risk profiles prepared to take long-dated grid connection risk, or for investors with specific grid capacity reservations. Not suitable for 'Low Risk Core Infrastructure' profiles."
+  },
+
+  "comparison_table": {
+    "_rule_5b_note": "Rule 5B: Standardised comparison categories — identical across all jurisdiction JSONs.",
+    "1_permitting_window_months_p50": 48,
+    "1_permitting_window_scope": "Onshore wind (P50 — Dobrogea; grid connection not included)",
+    "1_permitting_window_solar_p50_months": 36,
+    "2_grid_connection_cost_native": "RON 150,000–1,500,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 30,181–301,812 per MW (indicative at 1 EUR = 4.97 RON)",
+    "2_grid_connection_cost_fx_date": "Indicative mid-2025 RON/EUR rate — verify at ECB Reference Rate on analysis date",
+    "2_grid_connection_timeline_months": "36–96+ (Dobrogea transmission-connected)",
+    "3_primary_support_mechanism": "Contract pentru Diferență (CfD) — GEO 143/2021 / Law 23/2023 competitive auction",
+    "3_mechanism_type_code": "two_way_cfd",
+    "4_effective_corporation_tax_rate_pct": 16,
+    "4_effective_tax_rate_note": "16% flat CIT (Fiscal Code Law 227/2015 §17). Plus 1% construction tax p.a. on qualifying asset values (GEO 16/2022). No regional trade tax.",
+    "4_key_incentive": "Accelerated depreciation: 50% Year 1 deduction for qualifying moveable assets (Fiscal Code §28(3)); low 16% base CIT rate",
+    "5_ppa_enforceability_rating": "Medium",
+    "5_ppa_legal_basis": "Romanian Civil Code (Law 287/2009); ICC/CACI arbitration recommended; OPCOM bilateral physical framework",
+    "6_political_risk_score": 58,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 78,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "RON 340/MWh approx. (onshore wind, indicative CfD strike price — very limited auction history)",
+    "8_revenue_floor_eur": "EUR 68.41/MWh indicative (at 1 EUR = 4.97 RON — verify at ECB Reference Rate)",
+    "8_revenue_floor_fx_date": "Indicative mid-2025 RON/EUR rate — must be verified on analysis date",
+    "8_revenue_floor_mechanism": "two_way_cfd",
+    "8_revenue_floor_staleness_warning": "Romanian CfD programme is nascent with very limited auction history. Strike prices highly indicative. Verify at ANRE / Ministry of Energy official publications before use."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Romania participates in IPCEI Hy2Tech (2022). National hydrogen strategy adopted 2023. PNRR (Recovery and Resilience Plan) allocates EU funds for hydrogen. ANRE administers energy regulation.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Romania is an IPCEI Hy2Tech participant. Growing renewable capacity (wind/solar) supports electrolysis. Black Sea gas (Neptun Deep) could support blue hydrogen production. Regulatory framework still developing. Verify current PNRR hydrogen programme before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 45,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "two_way_cfd",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Contract for Difference (CfD) / contract de diferenta under Legea nr. 23/2023 privind sprijinul statului pentru producerea de energie electrică din surse regenerabile, administered by ANRE.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "active",
+      "permitting_p50_months": 180,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "government_contract",
+      "primary_support_mechanism": "US DFC loan guarantees for RoPower/NuScale project at Doicesti site.",
+      "revenue_floor_description": null,
+      "active_smr_programmes": ["RoPower NuScale SMR (Doicesti)"],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_nuclear",
+      "notes": "Romania operates Cernavodă NPP (CANDU reactor, Units 1 & 2). Units 3 & 4 planned (large CANDU). RoPower/NuScale SMR project at Doicesti site — US DFC support agreement signed 2023. NuScale VOYGR design is primary SMR candidate. Source: IEA nuclear."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "No LNG terminal. Black Sea coastline. Significant domestic gas production (Neptun Deep offshore gas field development by OMV/Petrom). LNG export potential if domestic production grows."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Romania has significant gas-fired generation and domestic gas production (Neptun Deep). EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Retroactive policy precedent (Green Certificate scheme) means additional diligence required on support mechanism stability. Verify current Romanian bioenergy support at ANRE before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "2032 coal phase-out commitment under Just Transition Fund agreements.",
+      "source": null,
+      "notes": "Romania has coal capacity in Oltenia region. Just Transition Fund support for coal region transition — not for new coal build. EU Taxonomy-excluded."
+    }
+  }
+}

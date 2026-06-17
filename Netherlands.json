@@ -1,0 +1,442 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Netherlands",
+    "local_name": "Koninkrijk der Nederlanden",
+    "iso_code": "NL",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "SDE++ basisbedragen (base amounts) change each spring and autumn application round. Verify current basisbedragen against RVO.nl before use. Nitrogen (stikstof) policy evolves rapidly — verify current PAS/AERIUS status."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Wet milieubeheer (Environmental Management Act)", "relevance": "Primary environmental framework; SDE++ production subsidy legal basis" },
+      { "instrument": "Elektriciteitswet 1998 (Electricity Act)", "relevance": "Grid access; market operation; RNB (regional network operators) duties" },
+      { "instrument": "Klimaatwet 2019 (Climate Act)", "relevance": "Statutory 95% GHG reduction by 2050; 49% by 2030 vs 1990. Legally binding framework driving renewable targets." },
+      { "instrument": "Wet windenergie op zee (Wind Energy at Sea Act — Woz)", "relevance": "Offshore wind licensing; kavels (zones) system; mandatory environmental pre-investigation by RWS" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Wet ruimtelijke ordening (Spatial Planning Act) / Omgevingswet (Environment and Planning Act, in force 2024)", "relevance": "New consolidated planning framework replacing former WRO and multiple sector laws from 1 January 2024" },
+      { "instrument": "Wet Natuurbescherming (Nature Protection Act)", "relevance": "Natura 2000 and species protection (habitats/birds directives implementation); stikstof (nitrogen) deposition assessments" },
+      { "instrument": "Crisis- en herstelwet (Crisis and Recovery Act — Chw)", "relevance": "Accelerated procedures for qualifying infrastructure projects; frequently invoked for renewable energy" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Wet Inkomstenbelasting 2001 (Income Tax Act 2001) — EIA provisions", "relevance": "Energie-investeringsaftrek (EIA): additional deduction of 45.5% (current rate — verify annually) on qualifying energy-efficient investments" },
+      { "instrument": "Wet op de vennootschapsbelasting 1969 (Corporate Tax Act)", "relevance": "Vpb (vennootschapsbelasting): 19% on first €200,000; 25.8% above €200,000" },
+      { "instrument": "Wet inkomstenbelasting 2001 — MIA/VAMIL provisions", "relevance": "MIA (Milieu-investeringsaftrek): additional 36% deduction on qualifying environmental investments; VAMIL (Vrije afschrijving milieu-investeringen): free depreciation timing for qualifying environmental assets" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG 2022/C 80/01", "relevance": "EC framework for SDE++ compatibility" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption for sub-threshold aids" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Wet veiligheidstoets investeringen, fusies en overnames (Vifo Act) — in force 1 June 2023", "relevance": "Investment screening for acquisitions in sensitive sectors including energy production and supply; both EU and non-EU investors" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "The Netherlands has implemented the Omgevingswet (Environment and Planning Act) from 1 January 2024, consolidating 26 acts into a single framework. This is the most significant Dutch planning reform in decades. Practical implementation is still bedding in — legal advice on Omgevingswet procedures is essential.",
+    "_stikstof_note": "The nitrogen (stikstof) crisis — arising from the Raad van State ruling of 29 May 2019 invalidating the PAS (Programma Aanpak Stikstof) — has been a major permitting blocker for ALL sectors in the Netherlands including renewable energy. Projects near Natura 2000 areas require individual nitrogen deposition assessment (AERIUS calculator). This constraint persists — verify current PAS successor policy status.",
+    "solar_utility": {
+      "primary_authority": "Gemeente (municipality) under Omgevingswet; Rijkscoördinatieregeling (RCR) for projects with national interest designation",
+      "primary_process": "Omgevingsvergunning (Environment Permit) under Omgevingswet from 2024",
+      "legal_basis": "Omgevingswet (from 1 January 2024); formerly Wet ruimtelijke ordening + Wabo",
+      "stikstof_risk": "Medium — solar projects typically have low operational nitrogen deposition but construction phase may trigger assessment near Natura 2000 areas",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 36,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Bestuursrechter (administrative court): Rechtbank → Raad van State (ABRvS) for national interest cases",
+      "notes": "Dutch solar permitting is among the faster in this knowledge base. Key issue is land availability — Netherlands is one of Europe's most densely populated countries. Agri-solar (agrozonnepanelen) is emerging."
+    },
+    "onshore_wind": {
+      "primary_authority": "Province (Provincie) under Omgevingswet for most projects; RCR coordination for projects affecting national interests",
+      "primary_process": "Omgevingsvergunning; MER (Milieu-effectrapportage — EIA) required for wind farms",
+      "legal_basis": "Omgevingswet; Besluit milieueffectrapportage (MER); Wet Natuurbescherming (Natura 2000/stikstof)",
+      "stikstof_risk": "HIGH — wind turbines produce continuous nitrogen deposition (NOx from construction and maintenance vehicles, ammonia displaced by turbine wash); Natura 2000 receptor sites are numerous in Netherlands",
+      "timeline_p50_months": 42,
+      "timeline_min_months": 24,
+      "timeline_max_months": 84,
+      "stikstof_delay_note": "Stikstof (nitrogen) crisis has been a primary permitting blocker for Dutch onshore wind since 2019. Projects near Natura 2000 receptor areas have faced permit refusals pending government nitrogen policy resolution. Government has introduced 'ADC-toets' (alternatives, decisive public interest, compensatory measures) pathway but it is complex and uncertain.",
+      "appeal_risk": "high",
+      "notes": "Dutch onshore wind has exceptional resource (offshore North Sea proximity) and well-established industrial supply chain. Permitting is the primary constraint — particularly nitrogen deposition assessments. Government has set targets for provincial (provinciale) onshore wind expansion. Progress is uneven."
+    },
+    "offshore_wind": {
+      "primary_authority": "Rijkswaterstaat (RWS) for site investigation; Ministerie van EZK (Economische Zaken en Klimaat — now EZK) / Bureau Energieprojecten for environmental consenting; Woz tender procedure",
+      "primary_process": "Centrally planned: government (RWS) conducts site pre-investigation (Kavelbesluiten); Woz tender procedure for production licence (kavels); SDE++ subsidy may or may not accompany tender",
+      "legal_basis": "Wet windenergie op zee (Woz); Elektriciteitswet 1998; Besluit windenergie op zee",
+      "government_led_model": "Netherlands uses a state-led offshore model where the government pre-investigates kavels (zones) and runs competitive tenders. This substantially reduces individual developer permitting risk — core permitting is done centrally.",
+      "timeline_p50_months": 48,
+      "timeline_min_months": 36,
+      "timeline_max_months": 72,
+      "zero_subsidy_bidding": {
+        "applicable": true,
+        "examples": ["Hollandse Kust Noord — won by Vattenfall (2018) at zero subsidy", "Hollandse Kust West — won at zero subsidy (2019)"],
+        "notes": "Netherlands led Europe in zero-subsidy offshore wind tenders. These projects are fully merchant for the contract term — no SDE++ support. Return modelling for zero-subsidy kavels must assume full merchant price exposure."
+      },
+      "new_kavels": "IJmuiden Ver alpha/beta/gamma/delta (4× ~760MW kavels, ~50km offshore); Doordewind; and future North Sea Energy Programme areas. Large-scale development pipeline.",
+      "notes": "Dutch offshore wind is one of Europe's most mature and competitive markets. Government pre-investigation and tendering significantly de-risks the permitting process. Zero-subsidy bids demonstrate merchant viability. New tenders include sustainability requirements and community benefit elements."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operator": "TenneT TSO B.V. (Netherlands portion; also operates in Germany)",
+    "distribution_operators": "Enexis, Stedin, Liander (Alliander), Rendo, Coteq, others",
+    "regulatory_authority": "Autoriteit Consument & Markt (ACM)",
+    "legal_basis": "Elektriciteitswet 1998; Netcode elektriciteit (Network Code Electricity)",
+    "netcongestie": {
+      "description": "Net congestion (netcongestie) has become a critical issue in the Netherlands since 2022. Multiple regional grid areas are at capacity for new connections (volle netten) — new connection requests are placed on waiting lists that can span years.",
+      "affected_areas": "Net congestion is reported in all major grid areas including parts of Noord-Holland, Zuid-Holland, Flevoland, and Brabant. The situation is dynamic — verify with TenneT/ACM current congestion map.",
+      "legal_basis_for_congestion_management": "Elektriciteitswet Art. 16c; TenneT/RNB congestion management protocols",
+      "government_response": "MAR (Maatregelen Netcongestie) — government action plan for grid congestion. Grid expansion programmes accelerated but physical delivery timelines are 5–10 years for transmission reinforcement.",
+      "staleness_warning": true
+    },
+    "offshore_connection": "Offshore wind connections are coordinated by TenneT under the Hollandse Kust offshore transmission system (OWIS — Offshore Wind Integration System). TenneT is responsible for offshore grid infrastructure for kavels.",
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 36, "range": "18–84", "note": "Net congestion significantly extends timelines in constrained areas. Some areas effectively closed to new connections." },
+      "distribution_connected": { "p50": 24, "range": "12–60" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 30000,
+      "range_high": 180000,
+      "notes": "Costs regulated by ACM. Net congestion can force expensive reinforcement contributions."
+    },
+    "curtailment_risk": "medium",
+    "operational_drag_assessment": "AMBER-RED — net congestion is an acute and rapidly worsening constraint. For new projects, assume longer-than-historical connection timelines until grid reinforcement resolves."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Dutch SDE++ (Stimulering Duurzame Energieproductie en Klimaattransitie) is a ONE-WAY production subsidy — a sliding premium that tops up market revenue to the basisbedrag (base amount). When market prices exceed the basisbedrag, the SDE++ subsidy is zero but there is NO clawback. Producers retain full market upside above the basisbedrag. This is equivalent to Germany's Marktprämie and France's Complément de rémunération — NOT a two-way CfD.",
+    "primary_mechanism": "SDE++ — Stimulering Duurzame Energieproductie en Klimaattransitie",
+    "mechanism_type": "one_way_production_subsidy",
+    "administrator": "RVO (Rijksdienst voor Ondernemend Nederland — Netherlands Enterprise Agency)",
+    "legal_basis": "Wet milieubeheer Arts. 15.13 et seq.; Regeling SDE++; Besluit SDE++ (annually updated)",
+    "mechanism_description": {
+      "summary": "Producer generates renewable electricity and sells on APX/EPEX SPOT NL day-ahead market. Producer receives SDE++ subsidy = max(0, basisbedrag − correlatieprijs). Correlatieprijs is the monthly average electricity market price. When market price > basisbedrag: subsidy = zero, producer keeps all market upside — NO CLAWBACK. When market < basisbedrag: subsidy tops up to basisbedrag.",
+      "upside_treatment": "UNCAPPED — no clawback above basisbedrag. Producer retains full spot market upside above subsidy level.",
+      "downside_treatment": "PROTECTED — floor at basisbedrag",
+      "production_cap": "SDE++ subsidy is paid per MWh up to a maximum annual full-load hours (vollasturen) limit specific to the technology and category. Production above this cap receives no subsidy (full merchant).",
+      "contract_term_years": 15
+    },
+    "application_rounds": {
+      "frequency": "Two rounds per year (Spring — 'voorjaar' and Autumn — 'najaar')",
+      "process": "First-come, first-served within each technology category (not competitive auction — no auction clearing price). Applicant applies at their desired tariff up to the maximum basisbedrag for their technology category.",
+      "note": "Unlike UK/Germany/France/Spain/Italy competitive auctions, SDE++ is NOT a competitive tender. Applicants receive the basisbedrag if they apply within budget. The basisbedrag caps the maximum support level — applicants may apply for lower amounts but this does not create competitive advantage."
+    },
+    "basisbedrag_eur_mwh_approx": {
+      "_staleness_warning": "SDE++ basisbedragen are updated biannually (spring and autumn rounds). Verify current basisbedragen at RVO.nl. These are indicative only.",
+      "_source": "RVO.nl — SDE++ beschikkingen en basisbedragen",
+      "onshore_wind": { "low": 55.00, "high": 75.00, "notes": "Varies by category (small/large) and resource quality" },
+      "solar_pv_ground_mounted": { "low": 40.00, "high": 60.00 },
+      "offshore_wind": { "low": 0.00, "high": 80.00, "notes": "Zero-subsidy kavels apply outside SDE++. SDE++ available for some offshore kavels; others are merchant." }
+    },
+    "saldering_note": "Saldering (net metering for small consumers) is being phased out from 2025-2031 under government plans — not directly relevant to utility-scale generation but affects roof-top solar economics"
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: The Dutch EIA (Energie-investeringsaftrek) and MIA (Milieu-investeringsaftrek) provide an ADDITIONAL DEDUCTION on top of normal depreciation. The EIA provides a permanent CapEx benefit (deduction of ~45.5% of qualifying investment value on top of normal depreciation) — this is both a timing benefit and a partial permanent benefit depending on asset life and discount rate.",
+    "vpb": {
+      "rate_low_bracket_pct": 19,
+      "low_bracket_limit_eur": 200000,
+      "rate_high_bracket_pct": 25.8,
+      "legal_basis": "Wet op de vennootschapsbelasting 1969"
+    },
+    "eia": {
+      "description": "Energie-investeringsaftrek (Energy Investment Allowance) — additional deduction on top of normal depreciation for qualifying energy-efficient investments",
+      "rate_pct": 45.5,
+      "basis": "Applied to the investment amount on top of normal depreciation (so total deduction = normal depreciation + 45.5% additional). Not a credit — a deduction.",
+      "legal_basis": "Art. 3.42 Wet inkomstenbelasting 2001; annually updated Energielijst (list of qualifying assets)",
+      "qualifying_period": "Qualifying assets listed on Energielijst (published annually by RVO). Wind turbines and solar PV are typically on the Energielijst — verify current list.",
+      "staleness_warning": "EIA rate and Energielijst content are reviewed annually. Verify current rate (recent years have seen rate adjustments) and confirm qualifying asset list.",
+      "npv_benefit_analysis": {
+        "_rule_3b_compliance": true,
+        "description": "At 25.8% Vpb and 10% WACC: EIA additional deduction of 45.5% on qualifying CapEx provides a permanent additional tax shield of 45.5% × 25.8% = 11.7% of qualifying CapEx in the first year of deduction. This is a SIGNIFICANT permanent benefit relative to UK/Germany peers.",
+        "note": "EIA is applied in the year of investment — highly front-loaded. The additional 45.5% deduction combined with normal depreciation provides one of the best CapEx tax incentive stacks in this knowledge base for qualifying investments."
+      }
+    },
+    "mia_vamil": {
+      "mia_rate_pct": 36,
+      "mia_description": "Milieu-investeringsaftrek — additional 36% deduction for qualifying environmental investments",
+      "vamil_description": "Vrije afschrijving milieu-investeringen — free timing of depreciation for qualifying environmental investments (timing benefit)",
+      "legal_basis": "Art. 3.42a (MIA) and Art. 3.31 (VAMIL) Wet inkomstenbelasting 2001",
+      "interaction_with_eia": "MIA and EIA cannot be combined for the same investment. Taxpayer selects the most beneficial scheme. For most renewable energy investments, EIA (45.5%) will be more valuable than MIA (36%).",
+      "staleness_warning": "MIA/VAMIL milieu-lijst updated annually. Verify qualifying assets at RVO.nl."
+    },
+    "standard_depreciation": {
+      "method": "Straight-line (lineaire afschrijving) standard; declining balance (degressief) available at higher rates for specific assets",
+      "wind_turbines_useful_life_years": 15,
+      "solar_pv_useful_life_years": 25,
+      "restriction_note": "Goodwill may only be depreciated over 10 years; for buildings, maximum 3% per year on buildings held for own use (wet Hillen / Art. 3.30a Wet IB 2001 restriction). Not applicable to plant/machinery."
+    },
+    "vat": {
+      "standard_rate_pct": 21,
+      "reduced_rate_pct": 9,
+      "applies_to_commercial_renewables": true,
+      "legal_basis": "Wet op de omzetbelasting 1968",
+      "input_vat_recovery": "Available for VAT-registered entities (btw-ondernemer)"
+    },
+    "overdrachtsbelasting": {
+      "property_transfer_tax_pct": 10.4,
+      "applies_to_share_deals": false,
+      "note": "10.4% RETT on real property transfers. Share deals typically do not trigger RETT — preferred M&A structure."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "Burgerlijk Wetboek (BW) — Dutch Civil Code; Book 6 (contract law); freedom of contract (Art. 6:248 BW). No bespoke PPA statute.",
+    "market_liquidity": "High — Netherlands is one of Europe's most active PPA markets",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Technology (Microsoft NL, Amazon, Google), Energy-intensive industry (AkzoNobel, ASML, Shell Renewables), Chemicals (BASF NL)",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement (NL law version)", "Bespoke bilateral under BW", "Virtual/financial PPA referencing APX/EPEX NL price"],
+    "zero_subsidy_offshore_ppa": "For zero-subsidy offshore wind kavels (Hollandse Kust Noord, West), corporate PPAs are the primary revenue mechanism — well-established market with strong liquidity from Dutch and international corporates.",
+    "go_system": {
+      "description": "Garanties van Oorsprong (GvO) — Dutch Guarantees of Origin",
+      "regulator": "CertiQ (subsidiary of TenneT, managing the GvO register)",
+      "notes": "Installations receiving SDE++ may still issue GvO — both revenue streams coexist. GvO market is liquid; well-established for corporate green claims."
+    },
+    "cross_border_enforceability": "High — Dutch courts are efficient and internationally respected; Netherlands Arbitration Institute (NAI) is well-regarded; ICC also available; NY Convention signatory"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 91,
+    "credit_ratings": {
+      "moodys": "Aaa",
+      "sp": "AAA",
+      "fitch": "AAA"
+    },
+    "political_stability": "High",
+    "government_structure": "Constitutional monarchy; proportional representation leads to coalition governments. Centre-right VVD/NSC coalition (post-Nov 2023 elections); BBB (farmer/citizen movement) as a political force reflects rural tensions over nitrogen policy.",
+    "regulatory_track_record": "Strong — SDE++ has operated since 2011 (SDE) without retroactive adjustment. No clawback of existing SDE+/++ contracts.",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2019",
+        "description": "Raad van State ruling (29 May 2019) invalidated the PAS (Programma Aanpak Stikstof) — the government's nitrogen deposition policy. Not a retroactive renewable energy policy change, but the ruling indirectly halted/delayed many renewable energy projects pending new nitrogen permits.",
+        "severity": "Medium — indirect; no clawback of existing RES contracts; but significant development pipeline disruption"
+      }
+    ],
+    "expropriation_risk": "Very Low",
+    "currency_risk": "None — EUR domestic",
+    "score_rationale": "Netherlands is one of the highest political risk scores in this knowledge base (91/100). Aaa/AAA sovereign; stable institutions; no retroactive renewable energy incidents. Slight discount for nitrogen/PAS complexity creating ongoing regulatory uncertainty for development pipeline."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 62,
+    "component_scores": {
+      "grid_connection_drag": { "score": 72, "assessment": "HIGH — net congestion (netcongestie) is acute and rapidly worsening; some areas effectively closed to new connections; transmission expansion 5–10 year timeline" },
+      "permitting_drag_solar": { "score": 35, "assessment": "LOW-MEDIUM — Omgevingswet framework; land scarcity is primary constraint not process length; stikstof risk moderate for solar" },
+      "permitting_drag_wind": { "score": 65, "assessment": "MEDIUM-HIGH — stikstof crisis has been a systemic blocker; provincial coordination required; organised opposition in rural areas (BBB movement)" },
+      "permitting_drag_offshore": { "score": 30, "assessment": "LOW — government pre-investigation model (kavels) substantially de-risks offshore permitting for winning developers; best-in-class offshore consenting framework" },
+      "bureaucratic_friction": { "score": 45, "assessment": "MEDIUM — Omgevingswet reform aims to simplify; Dutch administration is generally efficient; water board (waterschap) consultation is a unique Dutch requirement" },
+      "judicial_appeal_risk": { "score": 55, "assessment": "MEDIUM — Raad van State (ABRvS) is efficient by EU standards; well-organised environmental NGOs (Milieudefensie); nitrogen cases complex" }
+    },
+    "primary_bottleneck": "Net congestion (grid) is the acute constraint for new onshore projects. Stikstof is the permitting constraint. Offshore is well-managed.",
+    "technology_specific_note": "Offshore wind has materially lower operational drag than onshore. For offshore kavel winners, effective drag is ~30/100. For onshore solar/wind, grid and nitrogen constraints push drag to 65-72."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Vifo Act (Wet veiligheidstoets investeringen, fusies en overnames) — in force 1 June 2023; EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "scope": "Electricity production ≥250MW; transmission and distribution; LNG; nuclear. Lower thresholds for sensitive technology.",
+    "reviewing_authority": "Bureau Toetsing Investeringen (BTI) under Ministry of Economic Affairs and Climate",
+    "clearance_timeline_working_days": { "initial": 8, "formal_investigation": 90 },
+    "practical_risk": "Low-Medium",
+    "notes": "Vifo Act brought Netherlands in line with broader EU FDI screening requirements. Energy sector covered. OECD-domiciled investors face low prohibition risk but mandatory notification for covered transactions. BTI process is relatively streamlined by EU comparison."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG 2022/C 80/01",
+    "sde_plus_plus_clearance": "SDE++ has been assessed under CEEAG. Non-competitive (first-come, first-served) structure required specific justification under CEEAG proportionality test. EC has accepted SDE++ design as compatible.",
+    "retrospective_clawback_risk": "Low — SDE++ contracts have not been subject to retroactive adjustment. Government has not exercised windfall levy on SDE++ beneficiaries in the way France and Germany did during 2022-2023 energy crisis.",
+    "eu_windfall_regulation": {
+      "eu_reg_2022_1854": "EU Emergency Regulation applied. Netherlands implemented a revenue cap (tijdelijke energiecrisismaatregelen) — verify whether SDE++ beneficiaries were subject and on what terms.",
+      "status": "Expired 30 June 2023"
+    },
+    "notification_status": "SDE++ framework cleared under CEEAG; no additional notification for standard SDE++ projects"
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: EIA deduction (45.5% on qualifying CapEx) provides the strongest CapEx tax incentive in this knowledge base. Must be modelled as a Year 1 tax deduction impacting Year 1 tax shield calculation. SDE++ has a production cap (vollasturen) — revenue above cap is fully merchant; model this carefully.",
+    "_rule_3a_note": "ONE-WAY mechanism: model revenue as floored at basisbedrag but UNCAPPED above. Zero-subsidy offshore kavels: fully merchant, no floor — model accordingly.",
+    "illustrative_onshore_wind_sde": {
+      "basisbedrag_eur_mwh_approx": 65.00,
+      "mechanism_type": "one_way_production_subsidy",
+      "contract_term_years": 15,
+      "vollasturen_cap_hours_per_year": 3500,
+      "p50_capacity_factor_pct": 35,
+      "typical_capex_eur_per_mw": 1700000,
+      "opex_eur_per_mw_per_year": 50000,
+      "eia_deduction_available": true
+    },
+    "illustrative_offshore_wind_zero_subsidy": {
+      "mechanism_type": "merchant",
+      "revenue_reference": "EPEX SPOT NL day-ahead market price — no floor or ceiling",
+      "contract_term_years": "N/A — merchant",
+      "p50_capacity_factor_pct": 48,
+      "typical_capex_eur_per_mw": 3500000,
+      "ppa_revenue_note": "Corporate PPA is standard revenue mechanism for zero-subsidy offshore kavels. PPA pricing negotiated bilaterally."
+    }
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "GREEN", "rationale": "Omgevingswet framework; efficient administration; stikstof risk lower for solar. Land scarcity is the binding constraint not process." },
+    "permitting_wind_onshore": { "rag": "AMBER", "rationale": "Stikstof crisis is a real blocker in Natura 2000 adjacent areas; organised rural opposition (BBB movement); provincial coordination required" },
+    "permitting_offshore": { "rag": "GREEN", "rationale": "Government pre-investigation kavel model is best-in-class in Europe — individual developer permitting risk is substantially de-risked" },
+    "grid_connection": { "rag": "RED", "rationale": "Netcongestie is acute and worsening. Some areas effectively closed to new connections. Grid expansion timeline is 5–10 years. Primary risk for onshore projects." },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "SDE++ biannual rounds active; 15-year one-way production subsidy; well-administered by RVO. Offshore kavels offer zero-subsidy + PPA pathway." },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "EIA additional 45.5% deduction is the strongest CapEx tax incentive in this knowledge base. Vpb at 25.8% is standard. MIA/VAMIL available as alternative." },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "Dutch contract law is robust; efficient courts; one of Europe's most active PPA markets; zero-subsidy offshore kavels have established liquid PPA market" },
+    "political_risk": { "rag": "GREEN", "rationale": "Aaa/AAA sovereign; SDE++ unmodified since 2011; no retroactive incidents; stable legal framework" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Grid is RED-level for onshore; offshore permitting is GREEN; stikstof is AMBER. Technology-specific." },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "Vifo Act applies to energy ≥250MW; notification required; efficient BTI process; low prohibition risk for OECD investors" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "SDE++ cleared under CEEAG; no EC recovery risk for current framework projects" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Netherlands offers exceptional attributes: Aaa/AAA sovereign, best-in-class EIA tax incentive, world-class offshore kavel model, deep PPA market, and a mature renewable energy ecosystem. The acute grid congestion (netcongestie) is the primary constraint for new onshore projects and must be underwritten carefully with connection timeline risk. Offshore wind (via kavel tender) and solar with clear grid access are the strongest near-term investment opportunities. The EIA 45.5% additional deduction is a material CapEx advantage vs. European peers."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 42,
+    "1_permitting_window_scope": "Onshore wind via Omgevingswet (excluding stikstof assessment)",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 30,000–180,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 30,000–180,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "24–84 (netcongestie areas at upper end)",
+    "3_primary_support_mechanism": "SDE++ (Stimulering Duurzame Energieproductie en Klimaattransitie) — biannual rounds",
+    "3_mechanism_type_code": "one_way_production_subsidy",
+    "4_effective_corporation_tax_rate_pct": 25.8,
+    "4_key_incentive": "EIA (Energie-investeringsaftrek) — additional 45.5% deduction on qualifying energy investments (on top of normal depreciation). Verify current rate at RVO.nl Energielijst.",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Burgerlijk Wetboek; Dutch courts efficient; CertiQ GvO system; zero-subsidy offshore PPA market well-established",
+    "6_political_risk_score": 91,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 62,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 55–75/MWh approx. (onshore wind SDE++ basisbedrag range — see staleness warning)",
+    "8_revenue_floor_eur": "EUR 55–75/MWh",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_production_subsidy",
+    "8_revenue_floor_staleness_warning": "SDE++ basisbedragen updated biannually. Verify at RVO.nl before use. Zero-subsidy offshore kavels have no floor — fully merchant."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "FCR/aFRR ancillary services via TenneT NL. No specific BESS subsidy. Source: TenneT NL/national_tso.",
+      "revenue_floor_description": null,
+      "source": "national_tso",
+      "notes": "Netherlands BESS revenue primarily from TenneT ancillary services (FCR, aFRR). SDE++ does not cover standalone storage. ACM regulates market access. TTF hub proximity supports sophisticated energy trading revenue stacking."
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Netherlands participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). Nationale Waterstof Strategie targets 3–4 GW domestic electrolysis by 2030 and 4 Mt hydrogen import. SDE++ covers green hydrogen production. HyWay27 pipeline infrastructure programme.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Netherlands is IPCEI Hy2Tech and Hy2Infra participant. Rotterdam positioned as primary European hydrogen import hub. SDE++ subsidy extended to electrolysis in recent rounds. HyWay27 repurposed gas pipeline network for H2 transport. Verify current SDE++ parameters at RVO.nl before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_production_subsidy",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "SDE++ (Stimulering Duurzame Energieproductie en Klimaattransitie) production subsidy, administered by RVO.nl under Wet milieubeheer.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Netherlands operates Borssele NPP (1 unit, 485 MW). Government announced plans for 2 new large nuclear plants (2035+). SMR discussion exists as secondary track. Kernenergiewet amended to enable new build. No SMR programme formalised. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 12,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Gate LNG terminal Rotterdam. TPA-regulated. Netherlands is a major European gas hub (TTF)."
+    },
+    "data_centre": {
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "high",
+      "renewable_ppa_market_depth": "high",
+      "source": "national_tso",
+      "notes": "Amsterdam/AMS-IX is Europe's largest data centre hub. ACM and government have imposed moratoriums on new data centres in some regions due to grid constraints. Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": false,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Netherlands operates an energy-only market with no formal capacity market. Gas-fired plants are merchant-exposed. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. TTF gas hub makes Netherlands a key gas price reference market. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": 24,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "primary_support_mechanism": "SDE++ (Stimulering Duurzame Energieproductie) covers waste-to-energy and biogas upgrading. Source: RVO/ec_state_aid.",
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "SDE++ subsidy scheme covers biowaste-to-energy and biogas upgrading. EU RED III compliance and feedstock sustainability criteria apply. Verify current SDE++ open round parameters and biowaste categories at RVO.nl before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Coal ban for electricity generation from 2030 (Dutch Climate Agreement).",
+      "source": null,
+      "notes": "Netherlands legislated coal-fired electricity ban by 2030. New coal investment incompatible with Dutch climate law. EU Taxonomy-excluded."
+    }
+  }
+}

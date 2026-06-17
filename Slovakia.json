@@ -1,0 +1,400 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Slovakia",
+    "local_name": "Slovenská republika",
+    "iso_code": "SK",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency since 1 January 2009",
+    "currency_eur_rate_source": "Slovakia adopted the Euro on 1 January 2009.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Slovak energy policy has been volatile under the Fico government (Smer-SSD/Smer-SD) — verify all support scheme parameters at the Regulatory Office for Network Industries (Úrad pre reguláciu sieťových odvetví — ÚRSO at urso.gov.sk) and the market operator (OKTE a.s. at okte.sk). The political context following the assassination attempt on Robert Fico (May 2024) and subsequent government changes must be independently assessed before investment decisions.",
+    "political_alert": "MATERIAL POLITICAL RISK WARNING: Robert Fico, the Prime Minister, survived an assassination attempt on 15 May 2024. This has had significant political consequences — verify current Slovak government composition, energy policy direction, and political stability with current intelligence before investment decisions."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Act No. 251/2012 Coll. on Energy (Zákon o energetike) and Act No. 309/2009 Coll. on Renewable Energy Sources and Highly Efficient Combined Heat and Power (Zákon o podpore obnoviteľných zdrojov energie — OZE zákon), as amended", "relevance": "Framework energy legislation; RES support scheme (doplatky — price supplements); SEPS TSO obligations; market framework" },
+      { "instrument": "Act No. 250/2012 Coll. on Regulation in Network Industries", "relevance": "ÚRSO regulatory authority; tariff setting; grid access rights" },
+      { "instrument": "National Energy and Climate Plan (NECP) 2030", "relevance": "RES target: at least 22.7% renewable energy by 2030 (modest by EU standards); nuclear energy (Mochovce 3&4 units completion) is central to Slovak energy strategy alongside renewables" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Act No. 50/1976 Coll. on Territorial Planning and Building Code (Stavebný zákon) — substantially amended/replaced by new Construction Act 2022 (Act No. 200/2022 Coll. on Construction)", "relevance": "Building permits (stavebné povolenie); significant procedural reform under new Construction Act — verify current procedural rules at mvrr.gov.sk" },
+      { "instrument": "Act No. 24/2006 Coll. on Environmental Impact Assessment (Zákon o posudzovaní vplyvov na životné prostredie — EIA Act)", "relevance": "EIA for wind projects; Appropriate Assessment; Ministry of Environment as EIA authority" },
+      { "instrument": "Act No. 543/2002 Coll. on Nature and Landscape Conservation (Zákon o ochrane prírody a krajiny)", "relevance": "Natura 2000; protected species; bird migration routes; significant in central Slovak highland areas" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Act No. 595/2003 Coll. on Income Tax (Zákon o dani z príjmov — ZDP), as amended", "relevance": "CIT: 21% standard rate (for companies with taxable income ≥ EUR 100,000); 15% for taxable income < EUR 100,000. Investment aid (investičná pomoc) tax incentive for qualifying investments." },
+      { "instrument": "Act No. 222/2004 Coll. on Value Added Tax (Zákon o DPH), as amended", "relevance": "23% standard VAT rate (increased from 20% to 23% from 1 January 2025 — verify current rate); input VAT recovery available" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Slovak RES support assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Act No. 497/2022 Coll. on Screening of Foreign Investments (Zákon o preverovaní zahraničných investícií) effective from 1 March 2023", "relevance": "Slovakia has enacted a comprehensive FDI screening law covering critical infrastructure including energy. The Ministry of Economy is the competent authority. Non-EU/EEA investors must notify; EU/EEA investors may also face notification requirements in defined sectors." },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Slovak permitting underwent significant structural reform via the new Construction Act 2022 (Act No. 200/2022 Coll.) — intended to streamline processes. However, implementation has been problematic and the new system is still bedding in — verify current effective rules with Slovak legal advisers. The prior stavebný zákon process was known for complexity. Wind permitting is particularly challenging due to nature protection constraints.",
+    "solar_utility": {
+      "primary_authority": "District Office Construction Departments (odbor výstavby) for building permits; Ministry of Environment for EIA; SEPS/DSO for grid connection; ÚRSO for energy permit",
+      "primary_process": "Energy production permit (ÚRSO) → EIA (if required) → Territorial decision (územné rozhodnutie) → Building permit (stavebné povolenie / under new Act: notifikácia or povolenie) → Grid connection → Commissioning certificate (kolaudačné rozhodnutie)",
+      "legal_basis": "Act 200/2022 (new Construction Act); Act 24/2006 (EIA); OZE zákon; Act 251/2012",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 15,
+      "timeline_max_months": 42,
+      "appeal_risk": "medium",
+      "solar_irradiation_note": "Slovakia has moderate solar irradiation — southern areas (Podunajská nížina, Záhorská nížina near the Hungarian border) achieve 1,100–1,250 kWh/kWp p.a. Reasonable but not outstanding by EU standards.",
+      "notes": "Slovak solar development is growing — particularly in the south. The construction permit reform creates procedural uncertainty as the new system is not yet fully settled. Local government engagement is critical."
+    },
+    "onshore_wind": {
+      "primary_authority": "Ministry of Environment (EIA); Ministry of Land Administration, Construction and Regional Development (construction permit under new Act); SEPS (grid connection); nature protection authorities",
+      "primary_process": "Screening → Full EIA + Appropriate Assessment → Territorial decision → Building permit → Grid connection → Commissioning",
+      "legal_basis": "Act 200/2022; Act 24/2006; Act 543/2002; OZE zákon",
+      "timeline_p50_months": 60,
+      "timeline_min_months": 42,
+      "timeline_max_months": 96,
+      "pre_application_months_typical": 24,
+      "appeal_risk": "high",
+      "installed_capacity_mw_approx": 3,
+      "wind_challenge": "Slovakia has effectively developed no onshore wind capacity — approximately 3 MW nationally. This is primarily due to: (1) challenging mountainous terrain making most of Slovakia unsuitable; (2) severe nature protection constraints in highland and Natura 2000 areas; (3) significant public opposition in wind-suitable areas; (4) political environment under Fico government that has shown limited enthusiasm for RES generally. Wind is effectively an unavailable technology at scale in Slovakia.",
+      "rag_assessment": "RED — effectively unavailable at utility scale"
+    },
+    "offshore_wind": {
+      "effective_status": "N/A — landlocked country",
+      "notes": "Slovakia is landlocked; no offshore wind development possible."
+    },
+    "battery_storage_utility": {
+      "primary_process": "ÚRSO energy storage licence; building permit; SEPS/DSO grid connection",
+      "timeline_p50_months": 20,
+      "notes": "BESS market developing with growing solar penetration. Slovakia imports significant electricity — BESS can provide grid balancing services."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "Slovenská elektrizačná prenosová sústava a.s. (SEPS)", "region": "Slovak national TSO; state-owned; member of ENTSO-E Continental European synchronous area" }
+    ],
+    "distribution_operators": "Západoslovenská distribučná a.s. (ZSD — E.ON subsidiary; western Slovakia); Stredoslovenská distribučná a.s. (SSD — E.ON subsidiary; central Slovakia); Východoslovenská distribučná a.s. (VSD — EP Energy subsidiary; eastern Slovakia)",
+    "regulatory_authority": "Úrad pre reguláciu sieťových odvetví (ÚRSO — Regulatory Office for Network Industries)",
+    "legal_basis": "Act 251/2012 (Energy Act); SEPS Grid Code; ÚRSO regulations",
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 36, "range": "24–60", "notes": "Southern Slovakia solar pipeline creating queue pressure in ZSD area; SEPS reinforcement investment needed" },
+      "distribution_connected": { "p50": 24, "range": "18–42" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 20000,
+      "range_high": 150000,
+      "notes": "Grid connection costs are regulated by ÚRSO but can be significant for large projects requiring reinforcement. Southern Slovakia DSO (ZSD) is the most constrained given solar pipeline."
+    }
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: Slovak doplatky (price supplement) is a ONE-WAY mechanism. Generator receives a supplement when the reference price exceeds the market price. No clawback when market price exceeds reference price. ÚRSO sets reference prices annually.",
+    "primary_mechanism": "Doplatky (price supplement) — ÚRSO sets reference prices; OKTE administers settlement",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Úrad pre reguláciu sieťových odvetví (ÚRSO) sets reference prices; OKTE a.s. (Organizátor krátkodobého trhu s elektrinou) administers settlement",
+    "legal_basis": "OZE zákon (Act 309/2009 Coll., as amended); ÚRSO reference price decrees; Act 251/2012",
+    "mechanism_description": {
+      "summary": "Generator with ÚRSO energy permit and qualifying RES installation receives a price supplement (doplatka). Sells electricity on OKTE organised day-ahead/intraday market or bilaterally. Supplement = max(0, ÚRSO reference price − market clearing price). Annual settlement via OKTE. No clawback when market price exceeds reference.",
+      "upside_treatment": "UNCAPPED — one-way mechanism; no clawback above reference price",
+      "downside_treatment": "PROTECTED — OKTE settlement body pays supplement",
+      "contract_term_years": "Typically 15 years from commissioning",
+      "reference_price_setting": "ÚRSO sets reference prices annually (by November/December for next year) by technology and capacity band. Published at urso.gov.sk.",
+      "competitive_tender_status": "Slovakia has been moving toward competitive tender elements but historically used ÚRSO administrative price-setting. Verify current tender/administrative price approach with legal adviser."
+    },
+    "auction": {
+      "administrator": "ÚRSO",
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "ÚRSO reference prices change annually. Verify at ÚRSO (urso.gov.sk) and OKTE (okte.sk) before use. Staleness risk: HIGH.",
+        "solar_pv": { "eur_mwh_range_low": 55, "eur_mwh_range_high": 90, "notes": "Prices reflect older administrative price-setting; competitive tender prices may differ" },
+        "onshore_wind": { "eur_mwh_range_low": 50, "eur_mwh_range_high": 80, "notes": "Largely academic given ~3 MW installed — wind not a practical technology" }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: 21% CIT (standard; for taxable income ≥ EUR 100,000). Investment aid (investičná pomoc) tax incentive for qualifying large investments — apply NPV analysis. No special RES-specific accelerated depreciation beyond general rules.",
+    "corporation_tax_structure": {
+      "cit_rate_standard_pct": 21.0,
+      "cit_rate_reduced_pct": 15.0,
+      "cit_rate_reduced_threshold": "Taxable income < EUR 100,000",
+      "legal_basis": "ZDP §15 — 21% rate (effective from 2024, raised from 21% to 21% — verify any changes at financa.gov.sk); 15% rate for small companies",
+      "investment_aid_incentive": {
+        "name": "Investičná pomoc (Investment Aid) — tax credit component",
+        "description": "Qualifying large investments (above minimum threshold — approximately EUR 1m for less developed regions; verify thresholds at sario.sk — Slovak Investment and Trade Development Agency) may receive a combination of: (a) cash grant; (b) tax credit (daňová úľava) reducing CIT liability by 25–35% of eligible CapEx; (c) contribution to employee training costs. Tax credit is claimed over a 10-year period from investment approval.",
+        "legal_basis": "Act No. 57/2018 Coll. on Regional Investment Aid (Zákon o regionálnej investičnej pomoci)",
+        "_rule_3b_analysis": "NPV of timing benefit: For a EUR 30m solar project qualifying for 25% tax credit: maximum tax credit EUR 7.5m claimed over 10 years. Annual CIT due ≈ EUR 3m × 21% = EUR 630k. Tax credit may eliminate CIT for 10+ years. NPV of CIT savings at 7% WACC over 10 years ≈ EUR 4.4m. Substantial timing benefit.",
+        "ec_state_aid_notification": "Investment Aid is individually notified or under GBER — verify EC clearance with Slovak adviser"
+      },
+      "special_levy_note": "Slovakia has periodically introduced sector-specific levies. Verify whether any energy windfall or special levy applies to RES generators at the time of investment — Fico government has shown appetite for intervention in utility sector.",
+      "dividend_withholding_tax_pct": 7.0,
+      "dividend_wht_note": "7% WHT on dividends to EU parent companies — verify applicability. EU Parent-Subsidiary Directive may reduce to 0% if conditions met.",
+      "eu_parent_subsidiary": "0% WHT may apply for qualifying EU parent company — verify with Slovak tax adviser and Parent-Subsidiary Directive conditions"
+    },
+    "vat": {
+      "standard_rate_pct": 23,
+      "note": "Slovak VAT increased from 20% to 23% from 1 January 2025. Verify current rate at financnasprava.sk. Input VAT recovery available.",
+      "legal_basis": "Act 222/2004 Coll. (ZDP) as amended",
+      "_staleness_warning": "VAT rate change effective 2025 — verify current applicable rate before use"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "Medium-High",
+    "bankability_rating": "Medium",
+    "legal_basis": "Civil Code (Občiansky zákonník — OZ) and Commercial Code (Obchodný zákonník — ObZ); contractual freedom; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Slovak courts (Najvyšší súd — Supreme Court; Krajský súd — Regional Commercial Courts). Proceedings typically 2–4 years for complex commercial disputes. Slovak Chamber of Commerce Arbitration Court (Rozhodcovský súd) and ICC arbitration available.",
+    "market_liquidity": "Nascent — Slovak manufacturing sector (automotive: VW Bratislava, Stellantis Trnava, Kia Žilina) is a significant electricity consumer with ESG corporate PPA interest",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Volkswagen Slovakia a.s. (Bratislava plant — significant electricity consumer); Stellantis; Kia; US Steel Košice; Slovak Telekom; data centres",
+    "typical_contract_term_years": { "min": 5, "max": 12 },
+    "standard_frameworks": ["Bespoke bilateral under ObZ", "EFET framework (growing)", "OKTE market reference for virtual PPA"],
+    "automotive_ppa_note": "Slovakia's automotive sector (VW, Stellantis, Kia — three major OEM plants) has significant electricity demand and strong ESG pressure for renewable procurement. This represents a genuine and growing corporate PPA market, particularly for industrial-scale solar in western Slovakia.",
+    "guarantees_of_origin": {
+      "regulator": "Národný jadrový fond / SEPS (GoO issuance under ÚRSO oversight) — Slovak GoOs in EU AIB framework",
+      "note": "Slovak GoOs are part of the EU AIB/RECS system. Additional revenue stream for RES generators."
+    }
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 66,
+    "credit_ratings": {
+      "moodys": "A2",
+      "sp": "A",
+      "fitch": "A",
+      "source_note": "Slovakia maintains solid investment-grade ratings. Verify at agency websites.",
+      "_staleness_warning": "Verify before use. Slovak fiscal position and political stability are rating considerations following 2024 political events."
+    },
+    "political_stability": "Fico government (Smer) returned to power October 2023. PM Fico survived assassination attempt May 2024 — this has intensified political tensions. Government has shown Eurosceptic tendencies on some issues, Russia-sympathetic rhetoric on Ukraine war.",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2023–2024",
+        "description": "Fico government has signalled changes to energy policy including scepticism about some EU Green Deal targets. No direct retroactive modification of contracted RES revenues as of mid-2025. However, the political environment creates uncertainty.",
+        "severity": "MEDIUM — political uncertainty; no direct retroactive action confirmed"
+      },
+      {
+        "year": "2012",
+        "description": "Slovakia retroactively introduced a 'special levy on business in regulated industries' (Zákon o osobitnom odvode z podnikania v regulovaných odvetviach — Act No. 235/2012 Coll.) — originally targeted at utilities but ultimately applied at 4% of net revenue of regulated businesses. RES generators were affected. Levy later reduced and modified.",
+        "severity": "HIGH — retroactive levy precedent; material historical incident demonstrating Slovak government's appetite for energy sector interventions"
+      }
+    ],
+    "fico_government_energy_policy": {
+      "description": "The current Smer government (Fico, returned October 2023) has shown less enthusiasm for the EU Green Deal / climate targets than predecessor governments. There is a risk of reduced policy support for new RES development without retroactive modification of existing contracts. Close monitoring of energy policy pronouncements at energia.gov.sk.",
+      "severity": "MEDIUM — policy drift risk rather than direct retroactive risk"
+    },
+    "expropriation_risk": "Low — EU member; constitutional property protections; ECHR",
+    "currency_risk": "None — EUR domestic since 2009",
+    "score_rationale": "Deductions from 100: Fico government political unpredictability and Russia-sympathetic stance (-15), 2012 regulatory levy precedent (-10), assassination attempt political instability (-5), policy drift risk for RES (-4). Score 66 reflects genuine governance and political risk below EU average."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 70,
+    "component_scores": {
+      "grid_connection_drag": { "score": 65, "assessment": "MEDIUM-HIGH — southern Slovakia (ZSD area) experiencing growing solar queue pressure; SEPS reinforcement needed; mountainous central/eastern Slovakia has limited grid capacity" },
+      "permitting_drag_solar": { "score": 60, "assessment": "MEDIUM — new Construction Act procedural uncertainty; ÚRSO energy permit required; district office process can be slow; but manageable for southern lowland areas" },
+      "permitting_drag_onshore_wind": { "score": 98, "assessment": "EXTREME — effectively unavailable; ~3 MW installed nationally; Natura 2000 and nature protection constraints; mountainous terrain; political environment" },
+      "bureaucratic_friction": { "score": 68, "assessment": "MEDIUM-HIGH — Slovak language barrier; Construction Act transition period creating procedural uncertainty; complex multi-authority process; moderate corruption risk (Slovakia rates mid-EU on Transparency International CPI)" },
+      "judicial_appeal_risk": { "score": 72, "assessment": "HIGH — court proceedings slow (2–4 years); adversarial stakeholder environment for RES; planning challenges common; environmental NGO appeal risk for wind projects" }
+    },
+    "primary_bottleneck": "Onshore wind effectively unavailable (~3 MW installed nationally); Construction Act transition uncertainty; growing grid queue in southern Slovakia",
+    "new_construction_act_note": "Act No. 200/2022 Coll. on Construction was intended to be a major simplification but implementation was problematic. Verify current effective rules and transition provisions with Slovak legal adviser before modelling timelines.",
+    "score_rationale": "Score 70 reflects high wind unavailability (dragging score), growing solar grid queue, Construction Act uncertainty, and above-average bureaucratic friction."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Act No. 497/2022 Coll. (effective 1 March 2023) — comprehensive FDI screening covering energy and other strategic sectors",
+    "energy_sector_mandatory_notification": true,
+    "process": "Non-EU/EEA investors: mandatory notification to Ministry of Economy before closing. EU/EEA investors: notification required for defined strategic sector transactions (verify energy sub-sector thresholds with legal adviser).",
+    "practical_risk": "Medium — Slovak FDI screening is newer and still evolving; energy sector is covered; Fico government's political stance may create greater scrutiny for Western investors in strategic sectors",
+    "legal_basis": "Act No. 497/2022 Coll.; EU Regulation 2019/452"
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "doplatky_state_aid_status": {
+      "instrument": "ÚRSO doplatky (price supplement) / competitive tender",
+      "status": "ÚRSO administrative price-setting has been adapted toward competitive tender elements for CEEAG compliance. Verify EC clearance at competition.ec.europa.eu. 2012 regulated sector levy history creates additional background context.",
+      "retrospective_clawback_risk": { "assessment": "MEDIUM — 2012 regulated levy precedent; Fico government appetite for energy sector intervention; competitive tender contract protections provide some shelter but cannot fully insulate against legislative action" }
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Slovakia is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY premium — uncapped merchant upside.",
+    "_rule_3b_note": "21% CIT (standard). Investment Aid tax credit (25–35% of qualifying CapEx, claimed over 10 years) provides material timing benefit. Model as annual CIT reduction during credit period.",
+    "illustrative_solar_utility": {
+      "reference_price_eur_mwh_approx": 70,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 13.0,
+      "typical_capex_eur_per_mw": 1500000,
+      "opex_eur_per_mw_per_year": 48000,
+      "cit_pct": 21.0,
+      "investment_aid_tax_credit_note": "Model investment aid tax credit (25% of qualifying CapEx) as annual CIT offset over 10-year claim period — significant timing benefit for large projects"
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
+    "permitting_window_solar": { "rag": "AMBER", "rationale": "Southern Slovakia (Podunajská nížina) viable; Construction Act transition creates procedural uncertainty; ÚRSO energy permit adds step; 24 months P50" },
+    "permitting_window_onshore_wind": { "rag": "RED", "rationale": "~3 MW installed nationally; Natura 2000 constraints; mountainous terrain; challenging political environment; effectively unavailable technology" },
+    "grid_connection": { "rag": "AMBER", "rationale": "Growing solar queue in southern Slovakia (ZSD area); SEPS competent but reinforcement needed; central/eastern regions more constrained" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "ÚRSO doplatky mechanism functional; one-way; but Fico government policy direction creates uncertainty; 2012 regulated levy precedent is a concern for mechanism durability" },
+    "mechanism_type_risk": { "rag": "AMBER", "rationale": "One-way mechanism (no contractual clawback), but 2012 levy demonstrated Slovak government's willingness to impose revenue-based levies on regulated energy companies as a de facto clawback mechanism" },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "21% CIT (standard — middle EU). Investment Aid tax credit is a genuine positive for qualifying large investments. VAT increase (23% from 2025) adds transactional friction. 7% dividend WHT is above EU average." },
+    "ppa_enforceability": { "rag": "MEDIUM", "rationale": "ObZ provides legal framework; courts slower than western EU peers; automotive sector PPA demand (VW, Stellantis, Kia) is genuine; arbitration preferred for international deals" },
+    "political_risk": { "rag": "AMBER", "rationale": "A2/A sovereign; EU member; but Fico government political unpredictability, 2012 levy precedent (HIGH severity), assassination attempt instability, Eurosceptic energy policy rhetoric create meaningful above-EU-average political risk" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Score 70 — high drag from wind unavailability, construction act transition, growing grid queue, bureaucratic friction. Solar in southern Slovakia is viable but not frictionless." },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "2023 FDI screening act covers energy; energy sector notification required; Fico government political stance creates additional scrutiny consideration" },
+    "eu_state_aid_risk": { "rag": "AMBER", "rationale": "Doplatky CEEAG compliance being updated; 2012 levy history; Fico government appetite for sector intervention creates residual risk" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Slovakia offers solar development potential in the south (Podunajská nížina) with a functional ÚRSO doplatky mechanism, a genuine automotive/industrial PPA market (VW, Stellantis, Kia), Investment Aid tax credits, and EUR denomination. However, the Fico government's political unpredictability, the 2012 regulated levy precedent (HIGH severity — demonstrated willingness to intervene retroactively), effectively zero onshore wind development, Construction Act transition uncertainty, and FDI screening create a profile suitable for Value-Add/Development investors with active political risk monitoring — NOT suitable for Low Risk Core Infrastructure profiles. Automotive sector PPA demand is the primary positive differentiator."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 24,
+    "1_permitting_window_scope": "Utility solar (southern Slovakia — Podunajská nížina). WIND: effectively RED (~3 MW installed nationally).",
+    "1_permitting_window_solar_p50_months": 24,
+    "2_grid_connection_cost_native": "EUR 20,000–150,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 20,000–150,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "24–60",
+    "3_primary_support_mechanism": "ÚRSO doplatky (price supplement); OKTE settlement; one-way; annual ÚRSO reference price setting",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": "21% CIT (taxable income ≥ EUR 100k); 15% for small companies (< EUR 100k taxable income)",
+    "4_effective_tax_rate_note": "Investment Aid tax credit (25–35% of qualifying CapEx, 10-year claim period) can significantly reduce effective CIT burden in early operational years. 7% dividend WHT (verify EU Parent-Subsidiary Directive conditions). VAT 23% from 2025.",
+    "4_key_incentive": "Investment Aid tax credit (Act No. 57/2018) — 25–35% of qualifying CapEx reduces CIT liability over 10 years; applicable for investments in less-developed regions (majority of Slovakia)",
+    "5_ppa_enforceability_rating": "Medium",
+    "5_ppa_legal_basis": "Commercial Code (ObZ); Slovak Chamber Arbitration / ICC; automotive sector (VW, Stellantis, Kia) as primary PPA demand driver",
+    "6_political_risk_score": 66,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 70,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 55–90/MWh approx. (ÚRSO solar reference price — indicative; verify at ÚRSO annually)",
+    "8_revenue_floor_eur": "EUR 55–90/MWh (EUR domestic)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "ÚRSO sets reference prices annually. Verify at ÚRSO (urso.gov.sk) and OKTE (okte.sk). Staleness risk: HIGH — annual setting means data changes frequently."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Slovakia participates in IPCEI Hy2Tech (2022). National hydrogen strategy published 2021. Industrial hydrogen demand from steel, chemicals, and automotive sectors (Volkswagen, US Steel Košice). SIEA administers EU-funded support.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Slovakia is an IPCEI Hy2Tech participant. Strong industrial hydrogen demand from automotive and heavy industry. EU Just Transition Fund available for regions dependent on fossil fuels. Verify current national subsidy programme before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Doplatky (market premium) under Zákon č. 309/2009 Z.z. o podpore obnoviteľných zdrojov energie, administered by ÚRSO/OKTE.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "active",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Slovakia operates Bohunice V2 (2 units) and Mochovce (Units 1, 2, 3 — Unit 3 entered commercial operation 2023; Unit 4 completing). Nuclear provides ~55% of electricity. Government pro-nuclear. SMR exploration at early stage. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Landlocked. No LNG terminal. Receives gas via pipeline (Eustream TSO)."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Slovakia has gas-fired generation. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. Landlocked; pipeline gas only. No formal capacity market confirmed. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Slovak bioenergy support under Zákon č. 309/2009 Z.z. framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

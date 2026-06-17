@@ -1,0 +1,398 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Latvia",
+    "local_name": "Latvija",
+    "iso_code": "LV",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency since 1 January 2014",
+    "currency_eur_rate_source": "Latvia adopted the Euro on 1 January 2014 (3rd Baltic state to do so).",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Latvian RES policy is administered by the Public Utilities Commission (PUC — Sabiedrisko pakalpojumu regulēšanas komisija — SPRK). Verify current tender results and support parameters at sprk.gov.lv. The Baltic ENTSO-E synchronization (February 2025) materially changed grid environment — verify at AST (Augstsprieguma tīkls — ast.lv)."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Electricity Market Law (Elektroenerģijas tirgus likums — ETL) 2005, as amended", "relevance": "Framework electricity market legislation; TSO (AST) rights and obligations; grid connection rules" },
+      { "instrument": "Law on the Production of Electricity Using Renewable Energy Resources (Atjaunojamo energoresursu likums — AER likums) 2022 or equivalent current act", "relevance": "Current RES competitive tender framework; premium tariff (atbalsta mehānisms); SPRK administration. NOTE: Latvian RES legislation has evolved through multiple amendments — verify current primary legislation at likumi.lv" },
+      { "instrument": "National Energy and Climate Plan 2030 (Nacionālais enerģētikas un klimata plāns — NEKP)", "relevance": "RES target 80% renewable electricity by 2030; offshore Baltic wind targets" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Construction Law (Būvniecības likums) 2013, as amended", "relevance": "Building permits (būvatļauja) and commissioning procedures" },
+      { "instrument": "Spatial Development Planning Law (Teritorijas attīstības plānošanas likums — TAP likums) 2011", "relevance": "Municipal and national spatial planning; zoning for RES" },
+      { "instrument": "Law on Environmental Impact Assessment (Vides iekļaujošas novērtēšanas likums / Likums par ietekmes uz vidi novērtējumu) and related Cabinet Regulations", "relevance": "EIA for wind projects; Appropriate Assessment for Natura 2000" },
+      { "instrument": "Cabinet Regulation 281 (2018) and successors on protected habitats/species", "relevance": "Nature protection restrictions; Tetrax/raptor constraints in eastern Latvia" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Corporate Income Tax Law (Uzņēmumu ienākuma nodokļa likums — UIN likums) 2017 (effective from 1 January 2018)", "relevance": "Latvia adopted the Estonian distributed profit taxation model in 2018. 20% CIT applies only to distributed profits — NOT to retained/reinvested earnings. This is the defining Latvian tax characteristic for RES investment modelling.", "unique_cit_note": "Latvia's distributed profit CIT model is structurally identical to Estonia. See tax section for full analysis." },
+      { "instrument": "Value Added Tax Law (Pievienotās vērtības nodokļa likums — PVN likums) 2012", "relevance": "21% standard VAT rate; input VAT recovery available for registered businesses" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Latvian RES support assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES measures" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Law on Security Clearance of Transactions (Darījumu valsts drošības izvērtēšanas likums) — enacted 2023", "relevance": "Latvia introduced FDI screening legislation in 2023 covering critical infrastructure including energy. Non-EU/EEA investors require notification for strategic sector investments." },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation mechanism" }
+    ]
+  },
+
+  "permitting": {
+    "solar_utility": {
+      "primary_authority": "State Environmental Impact Assessment Office (Vides pārraudzības valsts birojs — VPVB) for EIA; local municipality for spatial plan; State Construction Inspectorate (Būvniecības valsts kontroles birojs — BVKB) for building permits",
+      "primary_process": "Spatial plan compliance check → EIA (if required by threshold) → Building permit (būvatļauja) → Grid connection agreement with AST/DSO → Commissioning",
+      "legal_basis": "TAP likums; Būvniecības likums; EIA regulations",
+      "timeline_p50_months": 20,
+      "timeline_min_months": 14,
+      "timeline_max_months": 36,
+      "appeal_risk": "low-medium",
+      "notes": "Latvia has a modest but growing solar development pipeline. Solar irradiation is limited (950–1,050 kWh/kWp p.a. — similar to Estonia). Development primarily for corporate PPA or small-scale self-supply. Utility-scale solar is less developed than wind."
+    },
+    "onshore_wind": {
+      "primary_authority": "VPVB (EIA/AA); Ministry of Economics (national planning for large projects); local municipality; AST grid connection",
+      "primary_process": "Municipal/regional spatial plan compatibility → EIA + Appropriate Assessment → Building permit → Grid connection → Commissioning",
+      "legal_basis": "TAP likums; Būvniecības likums; EIA regulations; Nature Protection Law",
+      "timeline_p50_months": 48,
+      "timeline_min_months": 30,
+      "timeline_max_months": 72,
+      "pre_application_months_typical": 18,
+      "appeal_risk": "medium",
+      "notes": "Latvia has a substantial onshore wind resource, particularly in coastal Kurzeme (western Latvia) and in the open agricultural landscape. Capacity factors 30–38% at good sites. The permitting environment has been improving but remains complex — spatial plan amendment requirements are the primary bottleneck. Species constraints (birds of prey, storks, wetland birds in eastern Latvia) require detailed surveys. Onshore wind development community is active and growing."
+    },
+    "offshore_wind": {
+      "primary_authority": "Ministry of Economics and Climate Action; Marine spatial planning authority; AST; Defence Forces",
+      "primary_process": "Marine spatial plan zone designation → EIA → Development rights allocation (auction/tender) → Grid connection → Construction",
+      "legal_basis": "Marine Spatial Plan 2030; EIA regulations; Electricity Market Law",
+      "timeline_p50_months": 96,
+      "capacity_targets": "Latvia has designated Baltic Sea offshore zones; GW-scale ambitions for post-2030 development",
+      "notes": "Latvian offshore is at an earlier development stage than Estonian equivalents. Post-Baltic synchronization, offshore Latvian wind can contribute to regional exports. Defence clearance requirements similar to other Baltic states."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Building permit; AST/DSO grid connection; SPRK market registration",
+      "timeline_p50_months": 18,
+      "notes": "BESS market developing. Baltic synchronization (February 2025) changed ancillary services market — FCR-D now under ENTSO-E CE standards creating FCR/aFRR opportunities."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "AS Augstsprieguma tīkls (AST)", "region": "Latvian national TSO — state-owned; acquired by Latvian government for strategic purposes" }
+    ],
+    "distribution_operators": "AS Sadales tīkls (Latvenergo subsidiary — largest DSO covering most of Latvia)",
+    "regulatory_authority": "Sabiedrisko pakalpojumu regulēšanas komisija (SPRK — Public Utilities Commission)",
+    "legal_basis": "ETL §§14–22 (grid connection rights); AST Grid Code; SPRK regulations",
+    "baltic_synchronization": {
+      "event": "ENTSO-E Continental European Synchronous Area connection achieved on 8 February 2025",
+      "description": "Latvia (together with Estonia and Lithuania) disconnected from the Russian BRELL synchronous power ring and connected to the Continental European (ENTSO-E CE) synchronous area.",
+      "significance_for_res_investment": [
+        "Latvian RES generators now participate in Nord Pool bidding zones connected to CE market",
+        "Frequency regulation (FCR/aFRR) now under ENTSO-E CE standards — larger and more liquid ancillary services market",
+        "Russian grid dependency for frequency regulation eliminated — material geopolitical risk reduction",
+        "Regional RES export potential enhanced"
+      ]
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 30, "range": "20–48", "notes": "Growing wind pipeline creates queue pressure in Kurzeme; AST reinforcement investment underway" },
+      "distribution_connected": { "p50": 18, "range": "12–30" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 20000,
+      "range_high": 120000,
+      "notes": "Grid connection costs regulated by SPRK. Offshore connections substantially higher. Kurzeme coastal areas have better grid infrastructure from prior wind development."
+    }
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Latvian competitive tender premium is a ONE-WAY mechanism. Premium = max(0, reference price − market clearing price). When market price exceeds reference price, premium is zero — generator retains full merchant upside with NO clawback.",
+    "primary_mechanism": "Competitive tender premium tariff (konkursa kārtībā noteikts atbalsts) — SPRK administers",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Sabiedrisko pakalpojumu regulēšanas komisija (SPRK)",
+    "legal_basis": "AER likums (current RES law); Cabinet Regulations on RES tenders",
+    "mechanism_description": {
+      "summary": "Generator wins competitive SPRK tender and receives a reference premium. Sells electricity on Nord Pool LV area. Premium = max(0, reference price − Nord Pool LV quarterly/annual average). One-way: no clawback if market exceeds reference.",
+      "upside_treatment": "UNCAPPED — one-way mechanism",
+      "downside_treatment": "PROTECTED — state settlement body (or JSC Latvenergo as legacy counterparty) pays shortfall",
+      "contract_term_years": "Typically 15–20 years",
+      "legacy_notes": "Pre-2014 KVT (kvotu veicināšanas tarifs — quota obligation tariff) at fixed prices for legacy projects. These legacy projects are distinct from current competitive tender framework. KVT has been subject to EU State Aid litigation — Latvenergo v EC (relevant precedent). New projects use competitive tender mechanism."
+    },
+    "auction": {
+      "administrator": "SPRK",
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Latvian tender reference prices change with each SPRK tender round. Verify at SPRK (sprk.gov.lv) before use.",
+        "onshore_wind": { "eur_mwh_range_low": 30, "eur_mwh_range_high": 60 },
+        "solar_pv": { "eur_mwh_range_low": 40, "eur_mwh_range_high": 70 }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Latvia's distributed profit CIT model (adopted 2018, identical to Estonian model). 20% CIT applies ONLY to distributed profits (dividends). ZERO CIT on retained/reinvested earnings. This is the defining tax advantage for RES project modelling — 0% effective CIT during operational period if profits are reinvested.",
+    "corporation_tax_structure": {
+      "unique_system": "DISTRIBUTED PROFIT TAXATION — Latvia does NOT levy CIT on retained/reinvested profits. 20% CIT only applied when profits are distributed as dividends. Adopted from Estonian model with effect from 1 January 2018.",
+      "rate_pct": 20.0,
+      "rate_applies_to": "Distributed profits (dividends) only — NOT retained earnings",
+      "legal_basis": "Corporate Income Tax Law (UIN likums) 2017, effective 1 January 2018 §§8–12",
+      "effective_rate_on_retained_profits": 0.0,
+      "effective_rate_on_distributions": 20.0,
+      "gross_up_note": "Same gross-up as Estonia: distributed amount × 20/80 = 25% of net dividend. EUR 80 net distribution requires EUR 20 CIT payment.",
+      "dividend_withholding_tax_pct": 0,
+      "eu_parent_subsidiary_exemption": "0% WHT for qualifying EU parent companies under Parent-Subsidiary Directive",
+      "capex_reinvestment_advantage": "RES projects that reinvest operating cash flows pay ZERO CIT during operational period. This is equivalent to the Estonian model and provides material improvement to project-level DSCR, IRR, and payback metrics vs. annual-CIT jurisdictions.",
+      "micro_enterprise_tax_note": "Micro-enterprise tax (MUN) is an alternative for very small companies — not relevant for utility-scale RES."
+    },
+    "vat": {
+      "standard_rate_pct": 21,
+      "legal_basis": "PVN likums",
+      "input_vat_recovery": "Available for VAT-registered businesses"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "Medium-High",
+    "legal_basis": "Civil Law (Civillikums — CL); contractual freedom; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Latvian courts (Augstākā tiesa — Supreme Court). Economic Court (Rīgas pilsētas Vidzemes priekšpilsētas tiesa) for commercial matters. Proceedings typically 1–3 years. Riga arbitration available; ICC arbitration preferred for international deals.",
+    "market_liquidity": "Growing — Baltic corporate PPA market with Latvian manufacturing and Nordic buyer participation",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Latvian manufacturing companies; international corporates with Baltic operations; Nordic companies; data centres; Latvenergo",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET framework (growing)", "Bespoke bilateral under Civillikums", "Virtual PPA referencing Nord Pool LV"],
+    "nordic_integration_note": "Post-Baltic synchronization, Nord Pool LV area is connected to CE markets — expands potential PPA buyer universe.",
+    "guarantees_of_origin": {
+      "regulator": "Latvenergo AS (legacy); SPRK (regulatory oversight) — Latvian GoOs under EU AIB framework",
+      "note": "Latvian GoOs recognised in AIB/RECS system. Additional revenue stream."
+    }
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 80,
+    "credit_ratings": {
+      "moodys": "A3",
+      "sp": "A-",
+      "fitch": "A-",
+      "source_note": "Latvia is solid investment grade. Verify at agency websites.",
+      "_staleness_warning": "Ratings subject to review — verify before use. Defence spending increase (NATO commitment) and fiscal position are rating considerations."
+    },
+    "political_stability": "Stable parliamentary democracy (Saeima); strong pro-Western, pro-EU, pro-NATO orientation; competitive coalition politics but policy continuity on energy",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2014–2019",
+        "description": "Latvia reduced legacy KVT tariff payments to some RES generators, which was subject to EU State Aid review. Latvenergo v European Commission litigation — details of EC/court rulings should be verified. New competitive tender framework (post-2020) designed differently.",
+        "severity": "MEDIUM — affects legacy projects; new SPRK tender framework is designed under CEEAG compliance"
+      }
+    ],
+    "expropriation_risk": "Very Low — EU/NATO member; strong constitutional property protections; ECHR signatory",
+    "currency_risk": "None — EUR domestic since 2014",
+    "geopolitical_context": {
+      "russia_border": "Latvia shares a 214km border with Russia and 172km border with Belarus. NATO membership since 2004; Baltic synchronization (February 2025) eliminated electricity dependency on Russian grid.",
+      "nato_defence_spending": "Latvia increasing defence spending above 2% NATO target; strong commitment to Atlantic alliance.",
+      "large_russian_speaking_minority": "25–30% Russian-speaking population — has been a political and social factor historically but has not materially affected energy sector investment."
+    },
+    "score_rationale": "Deductions from 100: Russian/Belarusian border proximity (-10), smaller economy vulnerability (-5), legacy KVT State Aid episode (-5). Score 80 reflects solid governance, EU/NATO membership, strong rule of law, and Baltic synchronization as geopolitical stabiliser."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 50,
+    "component_scores": {
+      "grid_connection_drag": { "score": 48, "assessment": "MEDIUM-LOW — AST is competent; growing pipeline in Kurzeme creates some pressure; Baltic synchronization improved cross-border context" },
+      "permitting_drag_onshore_wind": { "score": 58, "assessment": "MEDIUM — spatial plan amendments required; EIA/AA process with species surveys; 3–6 year P50; no severe political blockage but process can be protracted" },
+      "permitting_drag_solar": { "score": 40, "assessment": "LOW-MEDIUM — growing but still modest pipeline; process straightforward for smaller projects" },
+      "bureaucratic_friction": { "score": 45, "assessment": "LOW-MEDIUM — Latvia has digital public services (e-Latvia) though less advanced than Estonia; local government engagement required; language (Latvian) adds friction for non-local investors" },
+      "judicial_appeal_risk": { "score": 55, "assessment": "MEDIUM — court proceedings 1–3 years; environmental/planning challenges possible for wind projects; courts generally independent and reliable" }
+    },
+    "primary_bottleneck": "Spatial plan amendment process for large wind projects; species surveys; growing Kurzeme grid queue",
+    "score_rationale": "Score 50 reflects a manageable but not exceptional development environment — better than many EU peers but below the e-Estonia standard."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "FDI screening law enacted 2023 covering critical infrastructure including energy; notification required for non-EEA investors",
+    "energy_sector_mandatory_notification": true,
+    "eu_investors_note": "EU investors may also face notification requirements for critical infrastructure sectors — verify with Latvian legal adviser",
+    "practical_risk": "Low-Medium — Latvia is generally pro-FDI; energy sector investment welcomed but subject to security-sector review",
+    "legal_basis": "Darījumu valsts drošības izvērtēšanas likums (2023); EU Regulation 2019/452"
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "tender_state_aid_status": {
+      "instrument": "SPRK competitive tender premium",
+      "status": "Competitive tender mechanism designed for CEEAG compliance. Verify EC clearance at competition.ec.europa.eu. Legacy KVT tariff has separate State Aid history — not applicable to new tender projects.",
+      "retrospective_clawback_risk": { "assessment": "Low — new SPRK competitive tender framework is designed under modern CEEAG standards; legacy KVT issues resolved separately" }
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Latvia is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY premium — uncapped merchant upside.",
+    "_rule_3b_special": "UNIQUE (shared with Estonia): Latvian CIT is 0% on retained profits. CIT only arises on distributions. Model 0% CIT during operational period for retained profit scenarios. This materially increases DSCR and IRR metrics vs. annual-CIT jurisdictions.",
+    "illustrative_onshore_wind": {
+      "reference_price_eur_mwh_approx": 45,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 34,
+      "typical_capex_eur_per_mw": 1400000,
+      "opex_eur_per_mw_per_year": 45000,
+      "cit_modelling_note": "Model 0% CIT on retained profits. CIT payable only at dividend distribution. This increases DSCR metrics materially vs. 20% annual-CIT jurisdiction."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
+    "permitting_window_solar": { "rag": "GREEN", "rationale": "Modest pipeline; process straightforward; not the primary Latvian technology but growing" },
+    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "Kurzeme has excellent resource; 3–6 year P50 permitting is material but manageable; no political moratorium; species surveys are primary constraint" },
+    "grid_connection": { "rag": "GREEN", "rationale": "AST competent; Baltic synchronization improved environment; Kurzeme has existing wind grid infrastructure" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "SPRK competitive tender operational; one-way mechanism; Baltic synchronization improves Nord Pool LV market integration" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way — no clawback. Legacy KVT modification was limited and pre-dates current framework." },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "0% CIT on retained profits (identical to Estonian model) — unique and material advantage. 0% dividend WHT for EU parent companies." },
+    "ppa_enforceability": { "rag": "HIGH", "rationale": "Civil Law provides reliable enforcement; courts independent; EFET framework growing; Baltic PPA market maturing" },
+    "political_risk": { "rag": "GREEN", "rationale": "A3/A- sovereign; NATO member; Baltic synchronization eliminated Russian grid dependency; stable energy policy; legacy KVT issue was limited scope" },
+    "operational_drag": { "rag": "GREEN", "rationale": "Score 50 — below EU average drag; AST competent; species surveys are primary bottleneck for wind" },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "New (2023) FDI screening regime covers energy; EU investors generally processed efficiently but requires awareness and planning" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "SPRK competitive tender CEEAG-compliant; legacy KVT issues not applicable to new projects" },
+    "overall_stop_go": "GREEN",
+    "overall_rationale": "Latvia offers a compelling combination of the 0% CIT on retained profits (distributed profit model, identical to Estonia), strong onshore wind resource in Kurzeme (30–38% capacity factors), a functional SPRK competitive tender mechanism, and Baltic ENTSO-E synchronization security. The permitting environment for onshore wind (3–6 years P50) is manageable. The new FDI screening regime (2023) is the primary new consideration for non-EU investors. Suitable for Low Risk Core Infrastructure and Value-Add profiles."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 48,
+    "1_permitting_window_scope": "Onshore wind (Kurzeme coastal; open agricultural landscape). Solar: 20 months P50.",
+    "1_permitting_window_solar_p50_months": 20,
+    "2_grid_connection_cost_native": "EUR 20,000–120,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 20,000–120,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "18–48",
+    "3_primary_support_mechanism": "SPRK competitive tender premium; Nord Pool LV market reference; one-way",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": "0% on retained profits; 20% on distributions (gross)",
+    "4_effective_tax_rate_note": "UNIQUE (shared with Estonia): 0% CIT on retained earnings (UIN likums 2017, effective 2018). 20% only on distributions. EU Parent-Subsidiary Directive: 0% WHT for EU parent.",
+    "4_key_incentive": "0% CIT on retained profits — primary and unique incentive; material improvement to project DSCR and IRR vs. annual-CIT jurisdictions",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Civillikums; EFET framework; Riga/ICC arbitration; Baltic PPA market",
+    "6_political_risk_score": 80,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 50,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 30–60/MWh approx. (onshore wind tender reference — indicative; verify at SPRK)",
+    "8_revenue_floor_eur": "EUR 30–60/MWh (EUR domestic)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Verify at SPRK (sprk.gov.lv). Reference prices change with each tender round. Staleness risk: HIGH."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Latvia is not an IPCEI participant. National hydrogen strategy at early stage. Baltic desynchronisation from Russian grid (BRELL completed 2025) and energy security drive interest. EU cohesion funds available."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 29,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Market premium (tirgus piemaksa) under Elektroenerģijas tirgus likums administered by SPRK.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Latvia has no nuclear history. SMR discussion exists at policy level driven by Baltic energy security concerns post-BRELL desynchronisation. No formal policy or programme. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "No existing LNG terminal. Receives LNG via pipeline from Klaipeda (Lithuania). Skulte LNG terminal planned but not yet operational."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Latvia has gas-fired generation. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Latvian bioenergy support under Elektroenerģijas tirgus likums framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

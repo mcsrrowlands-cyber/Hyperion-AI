@@ -1,0 +1,406 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Sweden",
+    "local_name": "Konungariket Sverige",
+    "iso_code": "SE",
+    "currency_native": "SEK",
+    "currency_eur_rate": 0.091,
+    "currency_eur_rate_date": "2026-06-15",
+    "currency_eur_rate_source": "NOTE: SEK/EUR requires verification against live FX. Indicative rate: SEK 1 = EUR 0.091 (approx. EUR 1 = SEK 11.0). SEK is freely floating.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "Swedish elcertifikat system is transitioning — verify current certificate prices and quota obligations at Energimyndigheten. New projects are primarily merchant. Bolagsskatt rate and EIA/ROT deductions require annual verification."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Lag (2011:1200) om elcertifikat (Electricity Certificate Act)", "relevance": "Elcertifikat (electricity certificate) scheme framework; quota obligations on electricity suppliers; joint Sweden-Norway certificate market (ended for new entrants post-2021)" },
+      { "instrument": "Ellag (1997:857) (Electricity Act)", "relevance": "Grid access; concession for electricity production; network operator obligations" },
+      { "instrument": "Klimatlagen (2017:720) (Climate Act)", "relevance": "Net-zero by 2045 statutory target; climate policy framework driving energy investment" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Miljöbalken (SFS 1998:808) (Environmental Code)", "relevance": "Primary permitting law; tillstånd (permit) from Mark- och miljödomstol (MMD) for wind farms; Natura 2000 assessments" },
+      { "instrument": "Plan- och bygglagen (PBL, SFS 2010:900) (Planning and Building Act)", "relevance": "Municipal comprehensive plans (Översiktsplan) identifying wind-suitable areas; building permits" },
+      { "instrument": "Förordning (1998:1252) om områdesskydd enligt miljöbalken m.m.", "relevance": "Nature reserve and protected area regulations affecting siting" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Inkomstskattelagen (IL, SFS 1999:1229) (Income Tax Act)", "relevance": "Bolagsskatt (corporate tax): 20.6% standard rate" },
+      { "instrument": "Fastighetstaxeringslag (1979:1152) (Property Assessment Act)", "relevance": "Fastighetsskatt (property tax) on wind turbines: 0.5% of assessed value per annum" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG 2022/C 80/01", "relevance": "EC framework for elcertifikat scheme compatibility" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption; Sweden may use for any new support scheme elements" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Lag (2023:560) om granskning av utländska direktinvesteringar (FDI Screening Act)", "relevance": "Investment screening; energy sector included; both EU and non-EU investors subject in sensitive sectors. In force 1 December 2023." },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Sweden has a well-functioning permitting system under Miljöbalken. The primary permitting body for onshore wind is the Mark- och miljödomstol (Land and Environment Court) — a specialised court. This is unusual in a European context and creates a judicial (rather than purely administrative) permitting framework.",
+    "solar_utility": {
+      "primary_authority": "Länsstyrelse (County Administrative Board) for EIA (miljökonsekvensbeskrivning — MKB); Byggnadsnämnden (municipal building committee) for building permit",
+      "primary_process": "Environmental impact assessment (MKB); building permit (bygglov) under PBL",
+      "legal_basis": "Miljöbalken Chapter 6 (EIA); PBL Chapter 9 (building permits)",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "appeal_risk": "low",
+      "notes": "Solar permitting in Sweden is straightforward relative to European peers. Sweden's land area is large relative to population, reducing land use conflict. Community opposition is lower than for wind. Low electricity prices historically have made Swedish solar economics challenging vs. southern Europe."
+    },
+    "onshore_wind": {
+      "primary_authority": "Mark- och miljödomstol (MMD — Land and Environment Court) — unusual: permitting is through a court, not an administrative agency",
+      "primary_process": "Tillstånd (permit) application under Miljöbalken Ch. 9 (IPPC) or Ch. 7 (Natura 2000); samråd (consultation) with Länsstyrelse, municipality, and public; MMD hearing and judgment",
+      "legal_basis": "Miljöbalken (1998:808) Chapters 7, 9; Förordning (2013:251) om miljöfarlig verksamhet (wind turbines in category A above threshold)",
+      "municipal_veto": {
+        "description": "Sweden has a unique municipal consent requirement (kommunalt veto) under Miljöbalken: local municipality can VETO a wind energy project regardless of MMD approval. This veto was abolished in January 2025 by law.",
+        "legal_reform": "Lag (2024:868) om ändring i miljöbalken removed the municipal veto for wind energy from 1 January 2025. This is a major structural reform for the Swedish wind market.",
+        "staleness_warning": "Verify implementation status of municipal veto abolition"
+      },
+      "timeline_p50_months": 36,
+      "timeline_min_months": 24,
+      "timeline_max_months": 72,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Mark- och miljödomstol (MMD) → Mark- och miljööverdomstolen (MÖD) → Högsta domstolen (HD, on leave to appeal only)",
+      "notes": "Swedish onshore wind permitting is materially improved by the January 2025 abolition of the municipal veto. The court-based system (MMD) provides procedural clarity but adds a judicial character to the process. Sweden has strong wind resource particularly in Norrland (north) and coastal areas."
+    },
+    "offshore_wind": {
+      "primary_authority": "Länsstyrelse (EIA consultation); Mark- och miljödomstolen (permit); Sjöfartsverket (Maritime Authority) for shipping lane clearance; MSB (civil contingencies)",
+      "primary_process": "Tillstånd under Miljöbalken; MKB; maritime consultation",
+      "legal_basis": "Miljöbalken; Förordning (2009:48) om energimätning i byggnader (limited relevance); specific offshore concession under Ellag",
+      "timeline_p50_months": 72,
+      "timeline_min_months": 48,
+      "timeline_max_months": 120,
+      "swedish_defence_note": "Swedish military (Försvarsmakten) consultation is a significant factor — large areas of Swedish territorial waters are restricted due to defence considerations. This has historically limited offshore wind development.",
+      "notes": "Sweden's offshore wind market is less developed than Denmark or Netherlands. Limited operational capacity. Strong Baltic Sea and Gothenburg area wind resource. Defence consultation constraints are a unique Swedish risk factor."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operator": "Svenska kraftnät (SvK — Swedish Transmission System Operator; state-owned)",
+    "distribution_operators": "Ellevio, E.ON Energidistribution, Vattenfall Eldistribution, others",
+    "regulatory_authority": "Energimarknadsinspektionen (Ei — Energy Markets Inspectorate)",
+    "legal_basis": "Ellag (1997:857); Nätkoncession (network concession) regulations",
+    "bidzone_structure": {
+      "description": "Sweden is divided into four electricity price zones (elbidområden — SE1 to SE4). SE1 (north) has the best wind resource but lowest consumption; SE3/SE4 (south) have higher demand. North-south constraint between SE1/SE2 and SE3/SE4 means northern wind generation prices are often lower.",
+      "implications": "Developers in northern Sweden (SE1, SE2) must model lower achieved spot prices vs. southern zones. Contract/PPA pricing should reference zone-specific prices."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 30, "range": "18–72", "notes": "Nordic grid is generally better-managed than UK/Italy but northern areas have constraints" },
+      "distribution_connected": { "p50": 18, "range": "12–36" }
+    },
+    "connection_cost_sek_per_mw": {
+      "range_low": 400000,
+      "range_high": 2000000
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 36400,
+      "range_high": 182000,
+      "fx_rate_used": 0.091,
+      "fx_rate_date": "2026-06-15"
+    },
+    "curtailment_risk": "low-medium",
+    "notes": "Sweden has significant interconnection with Norway, Denmark, Finland, and Germany (Baltic Cable). Curtailment is lower than UK or Italy. N-S constraint within Sweden is the main issue."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Swedish elcertifikat system is a QUOTA/CERTIFICATE mechanism — neither a one-way premium nor a two-way CfD. Electricity suppliers must hold certificates proportional to their sales (kvotplikt). Generators earn one certificate per MWh and sell these on the open market. Certificate prices are MARKET-DETERMINED with no floor or ceiling set by the state. This is a fundamentally different mechanism from CfD, FiT, or market premium — return assumptions must reflect certificate price volatility. For NEW projects: the elcertifikat system is EFFECTIVELY CLOSED (joint Sweden-Norway market ended for new Swedish entrants after 2022). New projects are MERCHANT.",
+    "primary_mechanism_historical": "Elcertifikatsystem (Electricity Certificate Quota System)",
+    "mechanism_type_historical": "quota_certificate_system",
+    "mechanism_type_new_projects": "merchant",
+    "administrator": "Energimyndigheten (Swedish Energy Agency) as elcertifikat registry; Ei as market regulator",
+    "legal_basis": "Lag (2011:1200) om elcertifikat; Lag (2003:437) om handel med elcertifikat",
+    "elcertifikat_description": {
+      "summary": "Electricity suppliers must surrender certificates equal to a quota % of their electricity sales (kvotplikt). Renewable generators earn one certificate per MWh. Generator revenue = spot market price (per MWh) + certificate price (per certificate). Certificate price is set by supply/demand in the certificate market — no floor, no ceiling, no state guarantee.",
+      "certificate_price_history": "Certificate prices have been volatile — ranging from SEK 0–350+/MWh at different points. Recent years have seen declining prices as renewable capacity exceeds quota demand. Certificate prices have been near or at zero in some periods.",
+      "closed_to_new_entrants": "The joint Sweden-Norway elcertifikat market effectively closed to new Swedish entrants from 2022. Existing certificate earners continue to earn certificates until end of eligibility period. For NEW projects, no elcertifikat income should be assumed.",
+      "joint_market_end_note": "Lag om elcertifikat amended; new Swedish projects no longer qualify for certificates from 2022 onwards. Norway closed the market to new entrants even earlier (2021)."
+    },
+    "new_project_support": {
+      "available": false,
+      "notes": "As of 2026, Sweden has no successor state support scheme for new utility-scale onshore wind or solar projects. New projects must be underwritten on a fully merchant basis (spot electricity price) or via corporate PPA. Government has discussed potential new support mechanisms but none confirmed. Verify whether a new scheme has been introduced.",
+      "capacity_market": "Sweden does not currently have a capacity market equivalent to France or UK. Svenska kraftnät provides some balancing services payments.",
+      "offshore_potential": "New offshore wind support framework under discussion but not confirmed as of last update — verify."
+    },
+    "merchant_pricing_reference": {
+      "market": "EPEX SPOT / Nord Pool — SE1/SE2/SE3/SE4 hourly/day-ahead",
+      "note": "Swedish electricity prices are coupled to Nordic/European market. Average wholesale price has been 300–800+ SEK/MWh (EUR 27–73+) in recent years — highly variable. Model with price scenarios rather than single assumption."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Sweden does not have an accelerated depreciation scheme equivalent to UK Full Expensing or German degressive AfA for renewable energy assets. Standard linear depreciation applies. Fastighetsskatt (property tax) on wind turbines is a material OPEX item.",
+    "bolagsskatt": {
+      "rate_pct": 20.6,
+      "legal_basis": "Inkomstskattelagen (IL) 65 kap. 10 § — reduced from 22% (2019) to 21.4% (2019) to 20.6% (2021 onwards)",
+      "note": "20.6% is one of the lowest corporate tax rates in this knowledge base"
+    },
+    "depreciation": {
+      "method": "Linear (räkenskapsenlig avskrivning) standard; declining balance available (30% per year on tax value — 'skattemässig avskrivning')",
+      "declining_balance_rate_pct": 30,
+      "legal_basis": "IL 18 kap. (depreciation of plant and machinery)",
+      "wind_turbines_note": "Wind turbines depreciated as machinery. At 30% declining balance, significant front-loading. NPV benefit at 20.6% bolagsskatt and 10% WACC: ≈ 17.8% vs linear 12.8%. Delta ≈ 5ppts — meaningful but lower absolute value than Germany due to lower CIT rate.",
+      "npv_benefit_analysis": {
+        "_rule_3b_compliance": true,
+        "description": "Declining balance at 30% p.a. is available under Swedish tax law. At 20.6% bolagsskatt and 10% WACC: NPV of tax shield ≈ 17.8% of qualifying CapEx. Under straight-line (20-year life): NPV ≈ 12.8%. Timing benefit ≈ 5ppts."
+      }
+    },
+    "fastighetsskatt": {
+      "description": "Property tax (fastighetsskatt) on wind turbines — assessed on taxeringsvärdet (assessed/rateable value)",
+      "rate_pct": 0.5,
+      "legal_basis": "Lag (1984:1052) om statlig fastighetsskatt Art. 3",
+      "calculation_basis": "0.5% of assessed value (taxeringsvärde) per annum. Assessed value is typically 75% of estimated market value.",
+      "impact_eur_per_mw_approx": 3000,
+      "impact_note": "Estimated 0.5% × assessed value. For a 3MW turbine at ~EUR 1.5m value: fastighetsskatt ≈ EUR 3,000–5,000/MW/year. Lower than French IFER éolienne (~EUR 8,230/MW) but still a real OPEX item."
+    },
+    "vat": {
+      "standard_rate_pct": 25,
+      "reduced_rates": "12% and 6% for specific categories — standard rate applies to electricity and commercial construction",
+      "legal_basis": "Mervärdesskattelagen (ML, SFS 2023:200)",
+      "input_vat_recovery": "Available for momsregistrerade (VAT-registered) businesses"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "Avtalslagen (Contracts Act, SFS 1915:218); Köplagen (Sales Act, SFS 1990:931). No bespoke PPA statute.",
+    "market_liquidity": "High — Sweden is one of Nordic's most active PPA markets",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Technology (Northvolt supply chain, Ericsson, H&M Group), Industrial (SSAB, Boliden, Sandvik), Data centres (major hyperscalers attracted by Nordic low-price/clean electricity)",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement (Nordic)", "Bespoke bilateral under Avtalslagen", "Virtual PPA referencing Nord Pool SE zones"],
+    "bidzone_ppa_note": "PPA pricing should reference the relevant SE zone (SE1/SE2/SE3/SE4). Northern Sweden (SE1/SE2) has lower spot prices — corporate buyers may price at a premium to SE1/SE2 vs. SE3/SE4.",
+    "go_system": {
+      "description": "GARANTIBEVIS FÖR EL FRÅN FÖRNYBARA ENERGIKÄLLOR — Swedish Guarantees of Origin (equivalent to European GO standard)",
+      "regulator": "Energimyndigheten",
+      "notes": "Active market; well-functioning; issued per MWh of qualifying renewable generation"
+    },
+    "cross_border_enforceability": "High — Swedish courts are efficient; Stockholms Handelskammares Skiljedomsinstitut (SCC Arbitration) is internationally respected; NY Convention signatory"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 92,
+    "credit_ratings": {
+      "moodys": "Aaa",
+      "sp": "AAA",
+      "fitch": "AAA"
+    },
+    "political_stability": "High",
+    "government_structure": "Constitutional monarchy; proportional parliamentary system (Riksdag). Sweden joined NATO in March 2024 — significant geopolitical shift reinforcing security framework.",
+    "regulatory_track_record": "Excellent — elcertifikat system operated from 2003 without retroactive modification (gradual phase-out is prospective, not retroactive). No clawback of existing certificates.",
+    "retroactive_policy_incidents": [],
+    "expropriation_risk": "Very Low",
+    "currency_risk": "Low-Medium — SEK is freely floating; historically stable vs EUR but not pegged. Range approximately SEK 9.5–11.5 per EUR over recent years.",
+    "score_rationale": "Sweden scores highest in this knowledge base (92/100) — Aaa/AAA, no retroactive incidents, excellent institutions, NATO member. Minor discount for SEK currency risk and lack of new renewable support scheme."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 42,
+    "component_scores": {
+      "grid_connection_drag": { "score": 35, "assessment": "LOW-MEDIUM — well-managed Nordic grid; N-S bidzone constraint is real but manageable; interconnection with Norway, Denmark, Finland provides flexibility" },
+      "permitting_drag_solar": { "score": 25, "assessment": "LOW — fast and efficient; low land use conflict; MMD court process for qualifying installations is clear" },
+      "permitting_drag_wind_onshore": { "score": 45, "assessment": "MEDIUM — municipal veto abolished January 2025; court-based MMD process is clear; Länsstyrelse consultation adds time; species/Natura 2000 surveys required" },
+      "permitting_drag_offshore": { "score": 60, "assessment": "MEDIUM-HIGH — defence consultation is a significant constraint; limited operational track record; Baltic Sea EEZ limits" },
+      "bureaucratic_friction": { "score": 30, "assessment": "LOW — Swedish administration is efficient and transparent; good e-government; Energimyndigheten well-organised" },
+      "judicial_appeal_risk": { "score": 40, "assessment": "MEDIUM — MMD/MÖD system is orderly; appeal timelines are manageable; Nordic judicial system is among Europe's most efficient" }
+    },
+    "primary_bottleneck": "For new projects: absence of state support mechanism (elcertifikat closed) means merchant/PPA pricing is the primary risk, not regulatory drag. Permitting and grid are genuinely low-drag.",
+    "support_mechanism_absence_note": "The lack of a new state support scheme is the primary investment risk for Sweden — not regulatory or permitting drag. This is a revenue risk, not an operational drag, and is reflected in the support mechanism RAG.",
+    "score_rationale": "Sweden has the lowest operational drag score in this knowledge base (42/100). Excellent administration, efficient courts, well-maintained grid. Municipal veto abolition (2025) further improved the picture. The primary investment risk is revenue certainty, not process."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Lag (2023:560) om granskning av utländska direktinvesteringar — in force 1 December 2023; EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "scope": "Energy production, transmission, and distribution included as screened sectors",
+    "reviewing_authority": "Inspektionen för strategiska produkter (ISP — Inspectorate of Strategic Products)",
+    "clearance_timeline_working_days": 25,
+    "practical_risk": "Low",
+    "notes": "Sweden introduced FDI screening via the 2023 Act. Process is relatively streamlined by EU comparison. OECD investors face low prohibition risk. Russia-affiliated investors excluded from energy sector."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG 2022/C 80/01",
+    "elcertifikat_clearance": "Elcertifikat system reviewed under EEAG; EC accepted quota-certificate mechanism as compatible. Phase-out of new entrants is prospective.",
+    "new_scheme_note": "If Sweden introduces a new support mechanism for offshore wind or other technologies, it will require fresh EC notification under CEEAG.",
+    "retrospective_clawback_risk": "Very Low — no retroactive incident history; no windfall levy applied to Swedish renewable generators during 2022-2023 energy crisis (verify)",
+    "notification_status": "Elcertifikat scheme cleared. Any new scheme requires fresh notification."
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: New Swedish projects are merchant — model full price exposure with Monte Carlo or scenario analysis on Nord Pool SE1/SE2/SE3/SE4 price. Corporate PPA is the primary revenue mechanism for new utility-scale projects.",
+    "_rule_3a_note": "MERCHANT: No floor or ceiling. Full market price exposure. PPA provides bilateral revenue certainty if negotiated — this is NOT a state-backed mechanism.",
+    "illustrative_onshore_wind_merchant": {
+      "mechanism_type": "merchant_with_ppa_option",
+      "revenue_reference": "Nord Pool SE1/SE2/SE3/SE4 day-ahead spot price — zone-dependent",
+      "p50_capacity_factor_pct": 38,
+      "typical_capex_sek_per_mw": 16000000,
+      "typical_capex_eur_per_mw": 1456000,
+      "opex_sek_per_mw_per_year": 450000,
+      "opex_eur_per_mw_per_year": 40950,
+      "fastighetsskatt_eur_per_mw_approx": 3500,
+      "bolagsskatt_pct": 20.6,
+      "declining_balance_depreciation_available": true,
+      "ppa_note": "PPA pricing with creditworthy corporate offtaker is recommended to provide revenue certainty. Typical PPA term 10–15 years for new merchant projects."
+    },
+    "fx_rate_note": "All SEK figures converted at 1 EUR = 11.0 SEK (indicative). Verify current rate."
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "GREEN", "rationale": "Fast, efficient, low-conflict permitting. Swedish land availability is excellent relative to population density." },
+    "permitting_wind_onshore": { "rag": "GREEN", "rationale": "Municipal veto abolished January 2025 — major structural improvement. MMD court process is clear and well-established. Low community conflict vs. Southern Europe." },
+    "permitting_offshore": { "rag": "AMBER", "rationale": "Defence consultation is a unique Swedish constraint limiting available sea areas. MMD process adds time. Limited operational precedent." },
+    "grid_connection": { "rag": "GREEN", "rationale": "Well-maintained Nordic grid; strong interconnection; N-S bidzone constraint is manageable; efficient SvK/Ei regulation" },
+    "support_mechanism_availability": { "rag": "RED", "rationale": "Elcertifikat closed to new Swedish entrants. NO current state support mechanism for new utility-scale onshore wind or solar. Projects must be merchant or PPA-backed. This is the primary investment risk for Sweden." },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "Bolagsskatt 20.6% is one of the lowest in this knowledge base. 30% declining balance depreciation available. Fastighetsskatt is moderate. No IVPEE or IFER equivalent." },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "Swedish contract law is robust; SCC Arbitration is internationally respected; active Nordic PPA market with creditworthy industrial and tech offtakers; GO system liquid" },
+    "political_risk": { "rag": "GREEN", "rationale": "Aaa/AAA sovereign; no retroactive incidents; NATO member (2024); most stable political environment in this knowledge base" },
+    "operational_drag": { "rag": "GREEN", "rationale": "Lowest operational drag in this knowledge base. Efficient administration, courts, and grid. Municipal veto abolition (2025) was the last major drag item." },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "2023 FDI screening act is proportionate; energy sector covered but process is efficient; OECD investors face low prohibition risk" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Elcertifikat scheme cleared; no new scheme risk; no windfall levy applied" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Sweden presents a striking paradox: the best permitting, political, and grid environment in this knowledge base — combined with the absence of any state support mechanism for new projects. For investors comfortable with full merchant price exposure or those able to execute long-term PPAs with investment-grade Nordic offtakers, Sweden is highly attractive. The 20.6% bolagsskatt, 30% declining balance depreciation, and exceptional capacity factors (38%+ in northern Sweden) provide strong project economics if revenue can be secured via PPA. Investors requiring state-backed revenue support should look to other jurisdictions."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 36,
+    "1_permitting_window_scope": "Onshore wind via MMD (post-2025 municipal veto abolition)",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "SEK 400,000–2,000,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 36,400–182,000 per MW",
+    "2_grid_connection_cost_fx_date": "2026-06-15",
+    "2_grid_connection_timeline_months": "18–72",
+    "3_primary_support_mechanism": "NONE for new projects — merchant / corporate PPA only. Historical: Elcertifikat (closed to new entrants post-2022).",
+    "3_mechanism_type_code": "merchant",
+    "4_effective_corporation_tax_rate_pct": 20.6,
+    "4_key_incentive": "30% declining balance depreciation (skattemässig avskrivning) under IL 18 kap. Lowest bolagsskatt in this knowledge base.",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Avtalslagen; SCC Arbitration Stockholm; Nord Pool SE zone reference price; active Nordic PPA market",
+    "6_political_risk_score": 92,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 42,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "NONE — fully merchant. Revenue at Nord Pool SE zone spot price. No state floor.",
+    "8_revenue_floor_eur": "NONE — merchant. PPA price if contracted bilaterally (not state-backed).",
+    "8_revenue_floor_fx_date": "N/A",
+    "8_revenue_floor_mechanism": "merchant",
+    "8_revenue_floor_staleness_warning": "No state support floor. Nord Pool SE prices are market-determined and volatile. Model with scenario analysis."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Sweden participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). National hydrogen strategy targets industrial decarbonisation (steel — HYBRIT/H2 Green Steel projects). Energimyndigheten administers H2 R&D and commercial support.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Sweden is IPCEI Hy2Tech and Hy2Infra participant. HYBRIT (SSAB/LKAB/Vattenfall) is a landmark green steel hydrogen project. Very low electricity prices (northern Sweden) support competitive electrolysis. Verify current Energimyndigheten H2 support programme before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Elcertifikat (electricity certificate) scheme (Sweden-Norway joint market) with no auction floor — merchant/certificate revenue only. Scheme closing to new entrants from 2035.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "active",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Sweden reversed its nuclear phase-out legislation in 2024 — the Riksdag repealed the ban on new nuclear construction. Ringhals 1 & 2 previously shut; Ringhals 3 & 4, Forsmark 1, 2 & 3, Oskarshamn 3 remain operational. Government actively supports new nuclear including potential SMR deployment. Regulatory framework being updated. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "No large-scale LNG import terminal. Some small LNG bunkering facilities. Receives natural gas via Draggas pipeline from Denmark."
+    },
+    "data_centre": {
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "low",
+      "renewable_ppa_market_depth": "high",
+      "source": "national_tso",
+      "notes": "Strong Nordic renewable energy availability. Low electricity prices. Lulea (Facebook/Meta) and Sandviken (Google) campuses established. Grid capacity better than Western Europe. Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Sweden has limited gas-fired generation (predominantly hydro and nuclear). Energy-only market — no formal capacity market. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. Limited gas infrastructure outside western Sweden. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": 24,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "primary_support_mechanism": "Elcertifikat (electricity certificate) quota obligation system covers biomass. Source: Energimyndigheten.",
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Sweden's Elcertifikat scheme covers biomass-based electricity generation. EU RED III compliance and feedstock sustainability criteria apply. Scheme closing to new entrants from 2035 — verify current eligibility window with Energimyndigheten before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Sweden has no coal-fired power generation. Coal phase-out complete.",
+      "source": null,
+      "notes": "Sweden does not operate coal-fired power stations. No relevant support mechanism. EU Taxonomy-excluded."
+    }
+  }
+}

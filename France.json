@@ -1,0 +1,619 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "France",
+    "local_name": "République Française",
+    "iso_code": "FR",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "currency_eur_rate_source": "No conversion required. All figures are native EUR.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "CRE appel d'offres clearing prices (tarifs de référence) change with each auction round. Verify against current CRE délibérations before relying on indicative figures below."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Code de l'énergie (Energy Code)", "relevance": "Consolidated primary energy legislation; Articles L. 314-18 to L. 314-27 govern complément de rémunération; Articles L. 311-10 governs competitive tenders (appels d'offres)" },
+      { "instrument": "Loi relative à l'accélération des énergies renouvelables (Loi APER) — Law No. 2023-175 du 10 mars 2023", "relevance": "Major 2023 acceleration law: RIIPM designation for renewables; Zones d'accélération (ZAER); streamlined public participation; reduced appeal periods" },
+      { "instrument": "Loi relative à la transition énergétique pour la croissance verte (LTECV) — Law No. 2015-992 du 17 août 2015", "relevance": "Set 40% renewable electricity target by 2030; established PPE (Programmation Pluriannuelle de l'Énergie) planning instrument" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Code de l'environnement — Articles L. 181-1 et seq.", "relevance": "Autorisation Environnementale (AE) — single consolidated permit for ICPE installations including onshore wind; introduced by Ordonnance No. 2017-80 du 26 janvier 2017" },
+      { "instrument": "Code de l'urbanisme — Articles L. 421-1 et seq.", "relevance": "Permis de construire (PC) — building permit required for ground-mounted solar and wind turbines" },
+      { "instrument": "Code de l'urbanisme — Article L. 151-42-1 (as amended by Loi APER 2023)", "relevance": "Zones d'accélération pour les énergies renouvelables (ZAER) — expedited consenting in municipality-designated areas" },
+      { "instrument": "Code de l'environnement — Article L. 411-2 (dérogation espèces protégées)", "relevance": "Species protection derogation — frequently a bottleneck for wind project consenting" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Code général des impôts (CGI) — Article 219", "relevance": "Impôt sur les sociétés (IS): 25% standard rate from fiscal year 2022" },
+      { "instrument": "CGI Article 39 A (amortissement dégressif)", "relevance": "Declining balance (dégressif) depreciation for eligible assets — coefficient 2.25× for assets with useful life ≥7 years" },
+      { "instrument": "CGI Article 39 decies (suramortissement provisions)", "relevance": "Framework for additional deduction provisions. Specific suramortissement measures are introduced and sunset by Loi de finances — verify current availability." },
+      { "instrument": "CGI Article 1519B (IFER éolienne)", "relevance": "IFER — annual flat-rate tax on wind turbines ≥100kW; significant OPEX item for onshore wind" },
+      { "instrument": "CGI Article 1519F", "relevance": "IFER on solar PV installations ≥100kW; verify current rate with DGFiP." }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "EU CEEAG — Climate, Energy and Environmental Aid Guidelines 2022/C 80/01", "relevance": "Primary EC framework governing compatibility of CRE/AO scheme with internal market" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption for certain aid categories below notification threshold" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Code monétaire et financier (CMF) — Articles L. 151-1 to L. 151-4", "relevance": "Foreign investment screening framework; Minister of Economy may condition or prohibit acquisitions in sensitive sectors" },
+      { "instrument": "Décret no. 2019-1590 du 31 décembre 2019 (Loi Pacte implementing decree)", "relevance": "Updated list of sensitive sectors including energy production/distribution; thresholds and procedures" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "Mandatory cooperation with EC and other EU member states on FDI in critical sectors" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "P50 timelines run from formal application submission to permit grant. Pre-application (including étude d'impact scoping, espèces protégées surveys, grid pre-application, public consultation) adds 12–36 months before the administrative clock starts. France's permitting bottleneck is comparable to Germany for onshore wind; solar is materially faster.",
+    "_loi_aper_note": "Loi APER 2023 (Law No. 2023-175) is France's equivalent of Germany's §2 EEG 2023 / UK Planning Act 2008 NSIP designation. Renewables are now declared a 'raison impérative d'intérêt public majeur' (RIIPM) under Article L. 211-2-1 Code de l'environnement — intended to expedite species derogation decisions and tip environmental assessments in favour of projects.",
+    "solar_utility": {
+      "primary_authority": "Préfet de département (via DREAL / DDT instruction)",
+      "primary_process": "Permis de construire (PC) under Code de l'urbanisme; Autorisation Environnementale (AE) if installation classified as ICPE above threshold",
+      "environmental_assessment": "Étude d'impact (EI) required for ground-mounted solar above 1MW under Décret no. 2011-2019; public enquiry (enquête publique) required",
+      "legal_basis": "Code de l'urbanisme Arts. L. 421-1, R. 421-1; Code de l'environnement Arts. L. 122-1 et seq.; Code de l'énergie Arts. L. 314-18 et seq.",
+      "zaer_benefit": "Projects in a ZAER (Zones d'accélération) benefit from streamlined public participation (concertation préalable simplified) and RIIPM presumption under Loi APER 2023",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 36,
+      "pre_application_months_typical": 12,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Tribunal administratif (TA) → Cour administrative d'appel (CAA) → Conseil d'État (CE). Loi APER 2023 introduced specific provisions to limit abusive litigation and accelerated TA examination timelines for renewable energy cases.",
+      "agrivoltaisme": {
+        "available": true,
+        "legal_basis": "Article 54 Loi APER 2023 — inserted Article L. 111-27 Code rural defining agrivoltaïsme",
+        "conditions": "Must demonstrate agricultural production is primary use; renewable production must be subordinate; reversibility required",
+        "notes": "Agrivoltaïsme unlocks agricultural land for dual-use solar development. Detailed implementing décret required; verify current implementing regulations."
+      },
+      "notes": "Solar permitting in France is materially faster than onshore wind. Agrivoltaïsme (Art. 54 Loi APER 2023) has opened new land opportunities. Key risk remains legal challenge from environmental associations (particularly in Natura 2000 zones or near ZNIEFF)."
+    },
+    "onshore_wind": {
+      "primary_authority": "Préfet de département (DREAL instruction); advice from multiple agencies (DGAC for aviation, STAP for landscape, SDIS for fire services)",
+      "primary_process": "Autorisation Environnementale (AE) — single consolidated permit under Articles L. 181-1 et seq. Code de l'environnement, incorporating ICPE classification, étude d'impact, espèces protégées derogation (Article L. 411-2), Natura 2000 assessment",
+      "legal_basis": "Code de l'environnement Arts. L. 181-1 et seq.; Ordonnance No. 2017-80 du 26 janvier 2017; Arrêté du 26 août 2011 (ICPE prescriptions for wind turbines — Rubrique 2980)",
+      "icpe_classification": "Rubrique 2980 — wind turbines ≥50m mast height or ≥10m and ≥50kW: Autorisation (full permit); below this threshold: Déclaration",
+      "riipm_designation": {
+        "applicable": true,
+        "legal_basis": "Article L. 211-2-1 Code de l'environnement (as inserted by Article 1 Loi APER 2023)",
+        "effect": "Projects constituting 'raison impérative d'intérêt public majeur' may obtain derogations from species protection rules under Art. L. 411-2(4) without needing to demonstrate exhaustion of alternatives. Intended to accelerate espèces protégées derogation decisions."
+      },
+      "timeline_p50_months": 60,
+      "timeline_min_months": 42,
+      "timeline_max_months": 120,
+      "pre_application_months_typical": 24,
+      "appeal_risk": "very_high",
+      "appeal_mechanism": "Tribunal administratif (TA) → Cour administrative d'appel (CAA) → Conseil d'État (CE). France has among the highest wind project litigation rates in Europe. Associations like FNE (France Nature Environnement) are well-resourced litigants.",
+      "litigation_statistics_note": "Historically, approximately 30–40% of onshore wind permits in France were subject to legal challenge. Pre-Loi APER 2023 timelines regularly exceeded 10 years from development start to commissioning. Loi APER 2023 reduced appeal deadlines and introduced specialised administrative court chambers for renewable energy cases.",
+      "zaer_benefit": "Projects in ZAER (municipality-designated acceleration zones) benefit from streamlined consultation and RIIPM presumption. ZAER designation is at municipal level — coverage varies significantly by region.",
+      "setback_rules": {
+        "national_minimum_metres": 500,
+        "national_minimum_from": "nearest dwelling (habitation)",
+        "legal_basis": "Article L. 515-44 Code de l'environnement; former 500m rule now supplemented by ICPE arrêté requirements",
+        "local_variation": "PLU (Plan Local d'Urbanisme) can introduce additional constraints. SCOT (Schéma de Cohérence Territoriale) may identify excluded zones. No equivalent of Bavaria's 10H rule nationally."
+      },
+      "notes": "Onshore wind permitting is France's most acute operational drag. The Loi APER 2023 reforms are significant but their practical effect is still being tested through the administrative courts. Pre-development site selection should prioritise ZAER-designated communes and regions with a track record of successful consenting (Hauts-de-France, Grand Est, Occitanie for wind resource)."
+    },
+    "offshore_wind": {
+      "primary_authority": "Préfet coordonnateur + DREAL côtière (coastal DREAL); Commission de Régulation de l'Énergie (CRE) for tender; Direction des Affaires Maritimes",
+      "primary_process": "Concession d'utilisation du domaine public maritime (sea concession) + AE for the onshore connection; competitive tender (appel d'offres) by CRE + State tendering dossier (dossier de consultation)",
+      "legal_basis": "Code de l'énergie Arts. L. 311-10 et seq.; Décret no. 2016-9 du 8 janvier 2016 (offshore AO procedure); Loi APER 2023 Articles 12–19 (offshore acceleration — ZPER designation)",
+      "zper": {
+        "description": "Zones Prioritaires en Mer pour les Énergies Renouvelables (ZPER) — offshore priority zones designated under Loi APER 2023 (Article L. 219-5-1 Code de l'environnement)",
+        "effect": "State pre-identifies preferred offshore areas; individual project EIAs can reference zone-level studies reducing duplication"
+      },
+      "timeline_p50_months": 96,
+      "timeline_min_months": 72,
+      "timeline_max_months": 144,
+      "historical_context": "France's first offshore wind farm (Parc éolien en mer de Saint-Nazaire, 480MW) commissioned in late 2022 — originally tendered in 2012. 10-year delay demonstrates the historical severity of French offshore consenting risk.",
+      "current_pipeline": "Parc de Fécamp (500MW), Parc de Calvados (448MW), Les Deux Côtes/Éoliennes en mer Dieppe-le Tréport under various stages of development. Government restructured CRE tender programme post-2023 to accelerate.",
+      "floating_offshore": {
+        "status": "Emerging — pilot zones designated; commercial-scale auctions not yet run as of 2026",
+        "pilot_sites": ["Eolmed (Méditerranée)", "Les Îles d'Hyères area"]
+      },
+      "appeal_risk": "high",
+      "notes": "Historical offshore permitting experience in France is cautionary — Saint-Nazaire took ~10 years. Loi APER reforms and ZPER designation are structural improvements. Atlantic and Channel coasts have strong resource; Mediterranean is more constrained but floating offshore potential is significant."
+    },
+    "battery_storage_utility": {
+      "primary_process": "ICPE Autorisation if above threshold (Rubrique 2925 — electrical energy storage); Permis de construire for structure",
+      "legal_basis": "Code de l'environnement Rubrique ICPE 2925 (Li-ion BESS above 50MWh or 20MW discharge rate)",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 12,
+      "timeline_max_months": 48,
+      "notes": "BESS consenting complexity depends on battery chemistry and capacity. Li-ion above ICPE threshold requires full AE procedure. Revenue from capacité (capacity mechanism) and system services (FCR, mFRR from RTE). France has a well-developed capacity market (mécanisme de capacité)."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operator": "RTE — Réseau de Transport d'Électricité (government-owned; 50.1% EDF, 49.9% private via RTE International)",
+    "distribution_operator_principal": "Enedis (formerly ERDF; subsidiary of EDF group)",
+    "local_distribution_companies": "Approximately 160 ELD (Entreprises Locales de Distribution) in specific communes — connection via ELD where applicable",
+    "regulatory_authority": "Commission de Régulation de l'Énergie (CRE)",
+    "legal_basis": "Code de l'énergie Arts. L. 321-1 et seq. (RTE obligations); Arts. L. 322-1 et seq. (distribution); TURPE (Tarif d'Utilisation des Réseaux Publics d'Électricité) — regulated access and connection tariff",
+    "s3renr": {
+      "description": "Schémas Régionaux de Raccordement au Réseau des Énergies Renouvelables (S3REnR) — Regional Renewable Energy Grid Connection Schemes",
+      "legal_basis": "Code de l'énergie Art. L. 321-7; Décret no. 2012-533 du 20 avril 2012",
+      "how_it_works": "RTE and Enedis produce regional plans sizing grid capacity for projected renewable development. Developers pay a quote-part (share contribution) to fund regional reinforcements. This socialises some connection costs vs. UK model where individual developers fund full reinforcement.",
+      "quote_part_note": "Quote-part varies by regional S3REnR. Developers should obtain S3REnR contribution estimate at pre-application stage."
+    },
+    "connection_process": {
+      "transmission_request": "Demande de raccordement submitted to RTE for projects connecting to HTB (>50kV) network",
+      "distribution_request": "Demande de raccordement submitted to Enedis/ELD for projects connecting at HTA (1–50kV) or BT (<1kV)",
+      "pre_connection_study": "Étude de raccordement (connection study) ordered before formal permit — provides indicative cost and timeline"
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 30, "range": "18–60", "notes": "Better than UK average; priority connection (raccordement prioritaire) available in S3REnR-covered areas" },
+      "distribution_connected": { "p50": 18, "range": "12–36" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 35000,
+      "range_high": 200000,
+      "notes": "Quote-part contribution to S3REnR regional reinforcement socialises part of the cost. Individual connection from the project to the point of delivery is at full developer cost. Costs are regulated via TURPE framework."
+    },
+    "curtailment_risk": "low-medium",
+    "curtailment_mechanism": "Effacement (curtailment) coordinated by RTE under Code de l'énergie. Renewables have priority dispatch (priorité de transit) but subject to RTE instructions for network security.",
+    "nuclear_baseload_effect": "France's dominant nuclear baseload (approximately 70% of electricity from nuclear at peak; now approximately 60% post-2022 outages) creates a structurally lower-priced merit order. This benefits complément de rémunération premium income but compresses merchant upside in high-nuclear dispatch periods.",
+    "operational_drag_assessment": "LOW-MEDIUM — RTE infrastructure is well-maintained; S3REnR regional schemes provide planning certainty; no equivalent of UK's 10-year grid queue"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The French Complément de rémunération (CR) is a ONE-WAY mechanism. When the market reference price (M7) falls below the tarif de référence, the producer receives a top-up. When the market price exceeds the tarif de référence, the premium is ZERO — the producer retains all merchant upside. There is NO clawback. This is equivalent to Germany's Marktprämie and is NOT a two-way CfD like the UK.",
+    "primary_mechanism": "Complément de rémunération (CR) via Appel d'Offres (competitive tender)",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Commission de Régulation de l'Énergie (CRE) for auctions; EDF OA (Obligation d'Achat) as obligated purchaser of last resort for small/legacy projects",
+    "legal_basis": "Code de l'énergie Arts. L. 314-18 to L. 314-27 (CR regime); Art. L. 311-10 (appels d'offres); CRE délibérations (deliberations setting auction parameters and results)",
+    "mechanism_description": {
+      "summary": "Generator sells electricity on the spot market (EPEX SPOT FR). Generator also receives a complément de rémunération equal to max(0, tarif de référence − M7). The M7 is the monthly average market reference price calculated for the relevant technology. If M7 exceeds the tarif de référence, the complement is zero — generator retains full market upside. There is no clawback.",
+      "upside_treatment": "UNCAPPED — no clawback when market prices exceed the tarif de référence. Generator retains full spot market upside above the reference value.",
+      "downside_treatment": "PROTECTED — when spot market (M7) falls below tarif de référence, CRE-regulated complement tops up revenue to reference tariff level",
+      "merchant_exposure_during_term": "Partial — M7 is a monthly average. Intra-month hourly price variation is borne by the producer. In practice producers use aggregators or direct marketing to manage this.",
+      "contract_term_years": 20,
+      "obligated_purchaser": "EDF OA (Direction Production et Ingénierie d'EDF acting as Acheteur Obligé — obligated purchaser) for legacy tarif d'achat. Competitive CR contracts settled via aggregator/Enedis network."
+    },
+    "tarif_dachat_legacy": {
+      "available_for_new_large_projects": false,
+      "description": "Tarif d'achat (fixed purchase tariff) where EDF OA buys at a guaranteed fixed price — effectively a two-way mechanism (no market exposure). Available for sub-threshold installations (typically <500kW solar, <12MW onshore wind in some regulations) and legacy contracts.",
+      "type": "fixed_purchase_tariff",
+      "note": "Do not conflate tarif d'achat (legacy/small installations) with CR (competitive, utility-scale). For utility-scale projects in this knowledge base, CR via appel d'offres is the operative mechanism."
+    },
+    "auction": {
+      "administrator": "Commission de Régulation de l'Énergie (CRE)",
+      "frequency": "Quarterly to bi-annual depending on technology; CRE publishes a schedule of appels d'offres annually",
+      "technology_auctions": [
+        "Éolien terrestre (onshore wind)",
+        "Centrale solaire au sol (ground-mounted solar PV)",
+        "Installations sur bâtiment et ombrières (rooftop/canopy solar)",
+        "Éolien en mer posé (fixed offshore wind)",
+        "Éolien en mer flottant (floating offshore wind) — pilot/emerging",
+        "Autoconsommation collective (community self-consumption)",
+        "Appels d'offres innovants (innovative/cross-technology auctions)"
+      ],
+      "tarif_de_reference_eur_mwh_approx": {
+        "_staleness_warning": "CRE clearing prices (tarifs de référence) change with each auction round. These are indicative 2024 ranges only. Verify against current CRE délibérations (available at cre.fr) before use.",
+        "_source": "Commission de Régulation de l'Énergie (CRE), délibérations portant décision sur les résultats des appels d'offres, 2024",
+        "onshore_wind": {
+          "eur_mwh_range_low": 65.00,
+          "eur_mwh_range_high": 80.00,
+          "notes": "Nominal EUR. Clearing prices have risen materially since 2021 reflecting supply chain inflation and higher reference costs."
+        },
+        "solar_pv_ground_mounted": {
+          "eur_mwh_range_low": 45.00,
+          "eur_mwh_range_high": 62.00,
+          "notes": "Strong solar resource in southern France (Occitanie, PACA, Nouvelle-Aquitaine) supports competitive clearing prices. Northern France clears at the higher end of this range."
+        },
+        "offshore_wind_fixed": {
+          "eur_mwh_range_low": 80.00,
+          "eur_mwh_range_high": 110.00,
+          "notes": "Offshore clearing prices reflect higher capex, limited operational track record, and long French consenting timelines. Wide range reflects technology maturity uncertainty."
+        }
+      }
+    },
+    "cspe_note": {
+      "description": "The CSPE (Contribution au Service Public de l'Électricité) was the consumer levy funding the CR/tarif d'achat premium. It was restructured in 2016 and incorporated into broader energy taxes (TICFE — Taxe Intérieure sur la Consommation Finale d'Électricité). Premium funding now flows through the state budget mechanism, similar to Germany post-EEG-Umlage abolition.",
+      "current_status": "CR contracts remain funded via state budget and electricity consumer contributions via CRE-regulated mechanism. No direct CSPE levy on electricity bills in the original form."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Amortissement dégressif and any active suramortissement provisions are CapEx TIMING benefits — not permanent reductions to the effective tax rate. NPV of the tax shield must be calculated showing the timing benefit separately. The headline depreciation rate alone is insufficient.",
+    "corporation_tax": {
+      "impot_sur_les_societes_rate_pct": 25,
+      "effective_date": "2022-01-01",
+      "legal_basis": "Code général des impôts (CGI) Art. 219",
+      "rate_trajectory": "IS progressively reduced from 33.33% (pre-2018) to 31% (2019), 28% (2020), 26.5% (2021), 25% (2022 onwards) under Loi de finances 2018 reform programme",
+      "sme_reduced_rate": { "rate_pct": 15, "on_first_eur": 42500, "conditions": "CA < €10m; capital fully paid up; ≥75% held by individuals. Not applicable to typical utility-scale project vehicles." }
+    },
+    "capex_incentives": {
+      "amortissement_degressif": {
+        "type": "declining_balance_depreciation",
+        "legal_basis": "CGI Article 39 A",
+        "coefficients": {
+          "useful_life_3_to_4_years": 1.25,
+          "useful_life_5_to_6_years": 1.75,
+          "useful_life_7_years_and_above": 2.25
+        },
+        "application_to_renewables": {
+          "wind_turbines_useful_life_years": 20,
+          "wind_coefficient": 2.25,
+          "wind_effective_first_year_rate_pct": 11.25,
+          "solar_pv_useful_life_years": 20,
+          "solar_coefficient": 2.25,
+          "solar_effective_first_year_rate_pct": 11.25,
+          "note": "Amortissement dégressif applies to the initial net book value at the relevant coefficient × linear rate. After switching to straight-line when that exceeds the dégressif rate."
+        },
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 25% IS and 10% WACC: NPV of tax shield under amortissement dégressif (coefficient 2.25, 20-year life) ≈ 19.4% of qualifying CapEx. Under standard linear amortissement (5% p.a. over 20 years): NPV ≈ 14.7%. Timing benefit (NPV delta) ≈ 4.7ppts per €1 of qualifying CapEx.",
+          "note": "France's timing benefit is more modest than UK Full Expensing (~6.3ppts) or Germany's 25% degressive AfA (~8.3ppts at 30% tax rate). This reflects both the lower IS rate and the less aggressive front-loading of the French dégressif system."
+        }
+      },
+      "suramortissement": {
+        "general_note": "The suramortissement (additional deduction under CGI Art. 39 decies) has been introduced and sunset multiple times for different asset classes. The 'suramortissement Macron' (40% additional deduction on qualifying industrial investments, 2015–2016) has expired. Verify with current Loi de finances for any active suramortissement specifically applicable to renewable energy generation assets.",
+        "current_status_caution": "No universally applicable suramortissement for utility-scale renewable energy generation assets was confirmed active as of the last update. Specialist French tax advice required to identify any current provisions under the latest Loi de finances.",
+        "legal_basis": "CGI Article 39 decies (framework); specific measures introduced by annual Loi de finances"
+      }
+    },
+    "sector_specific_taxes": {
+      "ifer_eolienne": {
+        "description": "Imposition Forfaitaire sur les Entreprises de Réseaux — wind turbine specific annual flat-rate tax",
+        "applies_to": "Onshore wind turbines with installed capacity ≥100kW",
+        "rate_eur_per_kw_approx": 8.23,
+        "rate_eur_per_mw_approx": 8230,
+        "rate_indexed": true,
+        "indexation": "Annually indexed to CPI under CGI Art. 1519B",
+        "legal_basis": "CGI Article 1519B",
+        "staleness_warning": "Rate changes annually — verify current rate with DGFiP before use",
+        "capex_modelling_impact": "SIGNIFICANT OPEX ITEM — at €8,230/MW, a 50MW wind farm incurs approximately €411,500/year IFER before any production. Must be included in LCOE and DSCR calculations.",
+        "revenue_allocation": "IFER revenue split between communes (26%), intercommunalités (EPCI — 26%), départements (24%), and state (24%) under CGI Art. 1379-0 bis"
+      },
+      "ifer_solar": {
+        "description": "IFER on solar PV installations",
+        "applies_to": "Ground-mounted and building-integrated solar PV ≥100kW",
+        "legal_basis": "CGI Article 1519F",
+        "staleness_warning": "Verify current rate with DGFiP — rate is set annually and is lower than the IFER éolienne",
+        "note": "Solar IFER is materially lower per MW than wind IFER — solar is a less significant OPEX burden in this respect"
+      },
+      "taxe_fonciere": {
+        "applies_to_renewables": true,
+        "description": "Taxe foncière sur les propriétés bâties (TFPB) — annual property tax on built assets",
+        "assessed_by": "Services fonciers des impôts (DGFiP) — rateable value set by local assessment",
+        "note": "Wind turbines are assessed as built property and subject to TFPB. Rate varies by commune — important OPEX item that must be modelled site-specifically."
+      }
+    },
+    "vat": {
+      "standard_rate_pct": 20,
+      "reduced_rate_pct": 5.5,
+      "applies_to_commercial_renewables": true,
+      "input_vat_recovery": "Available for VAT-registered businesses (assujettis TVA) generating taxable supplies. Renewable energy sales are subject to TVA at standard rate or via autoliquidation for B2B.",
+      "legal_basis": "Code général des impôts Arts. 256 et seq."
+    },
+    "droits_denregistrement": {
+      "applicable_to_share_acquisitions": true,
+      "rate_pct": 0.1,
+      "note": "Share deal transfers subject to 0.1% droits d'enregistrement on transfer price — materially lower than UK SDLT or German GrESt. Favourable for M&A of project companies."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "Medium-High",
+    "legal_basis": "Code civil (Civil Code) — contrat de vente d'électricité governed by freedom of contract (Art. 1102 Code civil). No bespoke PPA statute.",
+    "key_civil_law_distinctions": {
+      "imprévision": {
+        "description": "Article 1195 Code civil (Ordonnance du 10 février 2016) introduced the doctrine of imprévision — a party may request renegotiation where an unforeseeable change of circumstances makes performance excessively onerous. If renegotiation fails, a court may revise or terminate the contract.",
+        "risk_to_ppas": "Imprévision creates a limited but real risk that a counterparty could seek court revision of a long-term PPA if energy market prices move materially. Not equivalent to force majeure (full excuse); requires court involvement.",
+        "mitigation": "Well-drafted long-term PPAs should expressly exclude or limit imprévision via Art. 1195(2) waiver where both parties are professionals. Obtain French law legal opinion on drafting."
+      },
+      "force_majeure": {
+        "legal_basis": "CGI Art. 1218 Code civil — force majeure defined as unforeseeable, irresistible event making performance impossible",
+        "note": "French force majeure requires impossibility of performance, not merely increased difficulty. Standard drafting issues."
+      }
+    },
+    "market_liquidity": "Medium and growing rapidly",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Technology (Google FR, Amazon AWS FR, Meta), Automotive (Renault, Stellantis), Industrial (Saint-Gobain, Air Liquide, Schneider Electric), Retail (Carrefour)",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement", "Bespoke bilateral under Code civil", "Virtual/financial PPA referencing EPEX SPOT FR price"],
+    "cr_contract_interaction": {
+      "note": "Projects holding a CR contract from a CRE appel d'offres are selling on the spot market with a top-up from the state. Layering a corporate PPA on top of a CR contract requires careful structuring — typically via a financial/virtual PPA where the corporate pays/receives the difference between a strike price and the EPEX spot price, independently of the CR contract. Physical off-take under a CR contract is not typically transferable to a corporate directly."
+    },
+    "go_system": {
+      "description": "Garanties d'Origine (GO) — French Guarantees of Origin equivalent to UK REGOs and German HKN",
+      "regulator": "RTE (as GO registry operator)",
+      "note": "EDF OA-supported projects (under tarif d'achat) may not receive GO separately — verify based on contract type. Competitive CR projects can typically issue GO. Corporate green energy claims depend on valid GO ownership."
+    },
+    "cross_border_enforceability": "High — French courts respected internationally; NY Convention signatory; ICC arbitration seat (Paris) is globally pre-eminent"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 80,
+    "credit_ratings": {
+      "moodys": "Aa2",
+      "sp": "AA-",
+      "fitch": "AA-",
+      "source_note": "France was downgraded from Aaa by Moody's in 2012 and from AA by S&P in 2023 (budget deficit concerns). Verify current ratings before use."
+    },
+    "political_stability": "Medium-High",
+    "government_structure": "Fifth Republic — strong executive presidency (Président de la République); two-chamber legislature (Assemblée nationale, Sénat). Coalition majority required in Assemblée nationale.",
+    "political_risk_context": {
+      "hung_parliament_2024": "Following snap elections in June 2024, France entered a period of relative parliamentary fragmentation with no single bloc holding a majority. This creates risks of legislative gridlock but has not historically reversed renewable energy support frameworks.",
+      "fifth_republic_resilience": "Presidential system with Art. 49-3 powers (legislative bypass in limited circumstances) and Art. 16 emergency powers provides institutional resilience despite parliamentary complexity.",
+      "energy_policy_bipartisan": "Cross-party support for renewable expansion exists — driven by EU obligations (RED III), energy security post-Ukraine, and industrial policy objectives."
+    },
+    "retroactive_policy_incidents": [
+      {
+        "year": "2011",
+        "description": "3-month moratorium on solar tarif d'achat applications (moratoire solaire) followed by substantial reduction in photovoltaic purchase tariffs for projects in the development pipeline",
+        "legal_instrument": "Décret no. 2010-1510 du 9 décembre 2010 (imposing moratorium); subsequent tariff revision orders",
+        "impact": "Projects with incomplete development dossiers lost expected tariff entitlements. Estimated losses across the sector: hundreds of millions of euros. Multiple international arbitration proceedings followed (ICSID, ICC).",
+        "investor_losses": "Significant — Spanish, Italian, and other European solar developers that had secured sites but not yet obtained permits lost expected revenue streams",
+        "severity": "HIGH — this represents a genuine retroactive-adjacent incident; while technically prospective (it changed future tariff eligibility, not existing contracts), it frustrated legitimate investor expectations in a way functionally indistinguishable from retroactive change for pipeline investors",
+        "resolution": "No mass arbitration awards against France comparable to Spain's solar saga; most claims settled or dismissed. France was not found to have violated the Energy Charter Treaty (ECT) in the same way as Spain."
+      },
+      {
+        "year": "2012–2014",
+        "description": "Repeated modifications to solar tarif d'achat rates and conditions via decrees and Loi de finances amendments; each change affected projects in the pre-permit pipeline",
+        "severity": "Medium — part of a pattern of rapid policy adjustment during the early French solar market"
+      }
+    ],
+    "expropriation_risk": "Very Low",
+    "currency_risk": "None — EUR domestic currency",
+    "notes": "France scores lower on political risk than Germany (89) and UK (87) primarily due to the 2011 solar moratorium precedent, subsequent years of policy instability in PV tariffs, and current parliamentary fragmentation. The Loi APER 2023 signals strong current governmental commitment to renewables, but the 2011 precedent remains a live risk factor in scenario analysis.",
+    "score_rationale": "Deductions from 100: Aa2/AA- credit rating vs. Aaa (-5); 2011 solar moratorium as genuine retroactive-adjacent precedent (-7); 2012-2014 repeat PV tariff revisions (-3); 2024 parliamentary fragmentation risk (-5)."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
+    "operational_drag_score_out_of_100": 67,
+    "component_scores": {
+      "grid_connection_drag": { "score": 35, "assessment": "LOW-MEDIUM — S3REnR regional schemes provide planning certainty; RTE infrastructure strong; no equivalent of UK's 10-year queue" },
+      "permitting_drag_onshore_wind": { "score": 80, "assessment": "HIGH — France has among the longest onshore wind consenting timelines in Europe; legal challenge rate historically 30–40%; Loi APER 2023 improving but not yet transformative" },
+      "permitting_drag_solar": { "score": 35, "assessment": "LOW-MEDIUM — PC process is relatively streamlined; agrivoltaïsme opens agricultural land; ZAER designation accelerates consenting" },
+      "permitting_drag_offshore": { "score": 85, "assessment": "VERY HIGH — Saint-Nazaire took ~10 years; structural complexity of French maritime consenting; ZPER reforms recent and untested at scale" },
+      "bureaucratic_friction": { "score": 70, "assessment": "HIGH — multi-layered French administrative system (commune, EPCI, département, région, préfecture, DREAL, national); multiple consultation bodies (STAP, DGAC, SDIS, INAO for agricultural zones)" },
+      "judicial_appeal_risk": { "score": 75, "assessment": "HIGH — well-resourced environmental NGOs (FNE, LPO); accessible administrative court system; historically high challenge rate for wind; Loi APER 2023 introduced appeal acceleration but culture persists" }
+    },
+    "primary_bottleneck": "Onshore wind and offshore wind permitting — particularly the legal challenge exposure and multi-body consultation requirements",
+    "secondary_bottleneck": "Bureaucratic complexity of the French administrative system; STAP (landscape assessment) and DGAC (aviation) can add months to the instruction period",
+    "technology_specific_note": "Solar and BESS have materially lower operational drag than wind. Investors focused on solar PV (particularly in ZAER-designated communes in high-irradiation regions) will experience effective drag closer to 35/100.",
+    "loi_aper_reform_assessment": "Loi APER 2023 is structurally significant but its impact on shortening realistic development timelines is still materialising. ZAER designation is at municipal level — coverage is uneven and will take years to be fully implemented nationally. The RIIPM designation for renewables is a meaningful tool for species protection derogations but is yet to be extensively tested by the Conseil d'État.",
+    "score_rationale": "Primary drag is onshore wind and offshore permitting. Solar and grid drags are low. French administrative complexity and legal challenge culture drive the composite score to 67."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Code monétaire et financier Arts. L. 151-1 to L. 151-4; Décret no. 2019-1590 du 31 décembre 2019 (implementing Loi Pacte); EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "reviewing_authority": "Ministère de l'Économie — Direction générale du Trésor (DGT)",
+    "sensitive_sector_classification": "Energy production, distribution, and storage are designated 'activités essentielles pour garantir les intérêts de la France en matière... d'énergie'",
+    "thresholds": {
+      "non_eu_non_efta_investors": "Control acquisition or cross-sectoral thresholds — typically 25% of voting rights triggers review",
+      "eu_efta_investors": "Higher threshold; French screening focuses primarily on non-EU investors",
+      "energy_specific": "Décret 2019-1590 Annexe lists energy activities as sensitive — lower thresholds may apply. Obtain DGT pre-notification guidance at early stage."
+    },
+    "clearance_timeline": {
+      "initial_screening_working_days": 30,
+      "formal_review_if_initiated_working_days": 45,
+      "extension_possible": true
+    },
+    "eu_fdi_cooperation": "France participates in EU FDI Screening Regulation (EU) 2019/452 — must notify EC and other EU members. EC opinion non-binding but addressed in ministerial reasoning.",
+    "practical_risk": "Low-Medium",
+    "notes": "France has exercised its screening powers actively in recent years (e.g., blocking of TikTok-related and semiconductor acquisitions). Renewable energy acquisitions by mainstream OECD investors face low prohibition risk but mandatory pre-notification compliance is required. Chinese and Russian-affiliated investors face substantially elevated scrutiny — approach case-by-case with DGT guidance."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Climate, Energy and Environmental Aid Guidelines 2022/C 80/01, in force 27 January 2022",
+    "secondary_framework": "GBER — Commission Regulation (EU) 651/2014 as amended by Regulation (EU) 2023/1315",
+    "french_cr_ao_history": [
+      { "instrument": "Tarif d'achat régimes (2001–2015)", "decision": "Multiple EC decisions — various compatibility clearances under EEAG predecessors" },
+      { "instrument": "Complément de rémunération + Appels d'offres framework", "decision": "Cleared by EC under EEAG 2014 and subsequently under CEEAG 2022 — competitive bidding satisfies proportionality test" },
+      { "instrument": "CSPE (Contribution au Service Public de l'Électricité)", "decision": "Subject to EC State Aid scrutiny — ECJ judgment in ANODE case (C-430/14) addressed CSPE structuring issues. CSPE has since been restructured." }
+    ],
+    "retrospective_clawback_risk": {
+      "assessment": "Low",
+      "notes": "CR/AO framework has received sequential EC clearance. Competitive auction mechanism satisfies CEEAG proportionality. No material EC recovery risk for projects under current cleared framework.",
+      "eu_windfall_levy_note": "EU Emergency Regulation 2022/1854 applied temporarily in France — implementation via decret was different from Germany. Verify French implementation instrument and its expiry confirmation."
+    },
+    "tctf_applicability": {
+      "applicable": false,
+      "notes": "Temporary Crisis and Transition Framework (TCTF) was for new/emergency measures during 2022 energy crisis. Main French CR mechanism operates under CEEAG, not TCTF."
+    },
+    "gber_eligibility": {
+      "note": "Sub-threshold projects may qualify for GBER block exemption without EC notification. Main utility-scale CRE appel d'offres projects cleared through existing framework clearance."
+    },
+    "notification_status": "Current CRE appel d'offres framework cleared under CEEAG — no additional notification required for standard auction-based CR projects"
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: These inputs are for use in IRR, NPV, CapEx payback, DSCR, and LCOE modelling. Do not rely solely on qualitative descriptors.",
+    "_rule_3c_note": "France is a EUR-denominated jurisdiction. No FX conversion required. All figures are native EUR.",
+    "_rule_3a_note": "Return modelling must reflect the ONE-WAY mechanism: floor at tarif de référence but uncapped merchant upside. Do not model as a two-way CfD.",
+    "_ifer_note": "IFER éolienne (approx. €8,230/MW/year) must be included as a fixed OPEX line in LCOE and DSCR models for onshore wind. Omission will materially overstate project economics.",
+    "illustrative_onshore_wind_cr": {
+      "tarif_de_reference_eur_mwh_approx": 73.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct": 27,
+      "typical_capex_eur_per_mw": 1600000,
+      "opex_eur_per_mw_per_year_excl_ifer": 45000,
+      "ifer_eur_per_mw_per_year_approx": 8230,
+      "opex_eur_per_mw_per_year_incl_ifer": 53230,
+      "is_rate_pct": 25,
+      "amortissement_degressif_available": true,
+      "note": "Capacity factor is a national average. Northern France (Hauts-de-France, Normandie, Bretagne) can achieve 30–35%; central/eastern France may be 22–26%. IFER must be included in all LCOE calculations."
+    },
+    "illustrative_solar_pv_cr": {
+      "tarif_de_reference_eur_mwh_approx": 55.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct_dc": 16,
+      "typical_capex_eur_per_mw_dc": 650000,
+      "opex_eur_per_mw_per_year": 12000,
+      "note": "Southern France (Occitanie, PACA) solar irradiation 1,400–1,700 kWh/kWp p.a. — among the best in Western Europe. Northern France capacity factor may be 12–14%. Agrivoltaïsme adds ~15-25% to CapEx but enables agricultural land use."
+    },
+    "illustrative_offshore_wind": {
+      "tarif_de_reference_eur_mwh_approx": 95.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct": 44,
+      "typical_capex_eur_per_mw": 3800000,
+      "opex_eur_per_mw_per_year": 110000,
+      "note": "French offshore CapEx reflects limited supply chain maturity in France, longer consenting timelines, and Atlantic weather conditions. Contract prices have historically been above market due to these factors."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix is mandatory and must appear before narrative. Stop/Go signal for jurisdiction screening.",
+    "permitting_window_solar": { "rag": "GREEN", "rationale": "PC route is streamlined; agrivoltaïsme expanding land availability; ZAER designation provides acceleration; south France solar resource is exceptional" },
+    "permitting_window_onshore_wind": { "rag": "RED", "rationale": "Among Europe's longest onshore wind consenting timelines; historically 30-40% challenge rate; Loi APER 2023 improving but cultural inertia in administrative courts persists" },
+    "permitting_window_offshore": { "rag": "RED", "rationale": "Saint-Nazaire precedent (10+ years from tender to commissioning); maritime consenting complexity; ZPER reforms recent and untested at scale" },
+    "grid_connection": { "rag": "GREEN", "rationale": "S3REnR regional schemes provide planning certainty; RTE infrastructure well-maintained; no equivalent of UK's 10-year grid queue; priority dispatch for renewables" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "Quarterly CRE appels d'offres active; 20-year one-way CR contracts provide long-term revenue visibility; strong state commitment to renewable targets" },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "IS at 25% is competitive; amortissement dégressif provides timing benefit. IFER éolienne (~€8,230/MW/year) is a meaningful drag on onshore wind project economics. Suramortissement availability uncertain — verify current Loi de finances." },
+    "ppa_enforceability": { "rag": "AMBER", "rationale": "French contract law is robust but Art. 1195 Code civil imprévision doctrine creates a low but non-zero risk for long-term PPAs. PPA market growing but thinner than UK/Germany. Paris ICC arbitration seat is excellent." },
+    "political_risk": { "rag": "AMBER", "rationale": "Aa2/AA- rated; strong institutions; but 2011 solar moratorium is a genuine retroactive-adjacent precedent and 2024 parliamentary fragmentation introduces some policy risk" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Solar and grid are GREEN-level; onshore wind and offshore are RED-level. Composite AMBER reflects technology mix dependence." },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "DGT screening applies to energy sector; mandatory notification required; low prohibition risk for OECD investors; Chinese/Russian-affiliated investors face elevated scrutiny" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "CRE appel d'offres mechanism cleared under CEEAG; competitive auction satisfies proportionality; no material EC recovery risk for current framework projects" },
+    "ifer_opex_risk": { "rag": "AMBER", "rationale": "IFER éolienne (~€8,230/MW/year) is a material and often underestimated OPEX item for onshore wind. Must be explicitly modelled." },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "France offers excellent solar resources, a well-established CR/appel d'offres framework, strong grid infrastructure, and a rapidly growing PPA market. The primary risk is technology-specific: onshore wind and offshore wind permitting timelines are among Europe's longest. Investors focused on solar PV — particularly in southern France ZAER-designated zones — will find France a compelling jurisdiction. Onshore wind investors must underwrite 5–10 year development timelines and material legal challenge risk. The 2011 solar moratorium precedent warrants ongoing monitoring of political risk for pipeline-stage projects."
+  },
+
+  "comparison_table": {
+    "_rule_5b_note": "Rule 5B: Standardised comparison categories. Reproduced identically across all jurisdiction JSONs.",
+    "1_permitting_window_months_p50": 60,
+    "1_permitting_window_scope": "Onshore wind via Autorisation Environnementale (excluding pre-application)",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 35,000–200,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 35,000–200,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "18–60 (transmission-connected)",
+    "3_primary_support_mechanism": "Complément de rémunération (CR) via Appel d'Offres (CRE)",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": 25,
+    "4_effective_tax_rate_note": "IS 25% flat rate. No Gewerbesteuer equivalent. IFER éolienne (~€8,230/MW/year) is a separate sector-specific annual tax — not an income tax but must be modelled as OPEX.",
+    "4_key_incentive": "Amortissement dégressif (coefficient 2.25× for assets with useful life ≥7 years, CGI Art. 39A). Verify active suramortissement under current Loi de finances.",
+    "5_ppa_enforceability_rating": "Medium-High",
+    "5_ppa_legal_basis": "Code civil (Art. 1102 freedom of contract); Art. 1195 imprévision risk — exclude contractually for professional parties. Paris ICC arbitration widely used.",
+    "6_political_risk_score": 80,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 67,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 73/MWh approx. (onshore wind, indicative 2024 CRE auction clearing price)",
+    "8_revenue_floor_eur": "EUR 73/MWh (no conversion required — domestic currency)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Tarif de référence changes with each CRE appel d'offres. Verify current clearing prices at cre.fr délibérations before use."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "Mécanisme de capacité (capacity mechanism); DGEC storage tenders. Source: RTE/national_tso.",
+      "revenue_floor_description": null,
+      "source": "national_tso",
+      "notes": "France capacity market (mécanisme de capacité) includes battery storage. RTE ancillary services (FCR/aFRR) also available. DGEC has issued dedicated storage tenders. Verify current capacity market parameters at RTE before use."
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "France participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). France 2030 plan targets 6.5 GW electrolysis by 2030. ADEME and BPI France administer H2 support. Contrats pour la différence d'hydrogène (H2 CfD) under development.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "France is an IPCEI Hy2Tech and Hy2Infra participant with substantial national H2 investment programme. Hydrogen CfD mechanism (inspired by UK HAR model) in legislative development. Verify current CfD parameters via ADEME before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Complément de rémunération (market premium) under CRE appel d'offres, administered by CRE under Code de l'énergie.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "active",
+      "permitting_p50_months": 180,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "government_contract",
+      "primary_support_mechanism": "State-backed EDF investment model; NUWARD SMR under ASN pre-licensing review.",
+      "revenue_floor_description": null,
+      "active_smr_programmes": ["NUWARD SMR (ASN pre-licensing)"],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_nuclear",
+      "notes": "France is the most nuclear-intensive EU economy (70%+ of electricity from nuclear). Loi relative à l'accélération du nucléaire (2023) facilitates new build. NUWARD SMR (EDF/TechnicAtome) is in ASN pre-licensing review. 14 new large EPR2 reactors announced by President Macron."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 37,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Four onshore LNG terminals. Operated by Elengy (GRTgaz subsidiary). Third Party Access regulated by CRE."
+    },
+    "data_centre": {
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": "medium",
+      "renewable_ppa_market_depth": "high",
+      "source": "national_tso",
+      "notes": "Urban planning code (Code de l'urbanisme) permitting. RTE published data centre capacity concerns in Ile-de-France. Corporate PPA market growing rapidly. Source: national_tso."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "Mécanisme de capacité (capacity mechanism) — CRE-administered, approved under EU Reg 2019/943. CCGT and peaker plants are eligible. Source: RTE/CRE.",
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": true,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "France operates a formal capacity mechanism (mécanisme de capacité). CCGT plants are eligible. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": 30,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "feed_in_tariff",
+      "primary_support_mechanism": "Biogaz injection tariff (CRE/DGEC) and bioenergy CfD for electricity generation. Source: CRE.",
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "France has an established biogaz injection tariff framework and bioenergy CfD for electricity generation. EU RED III compliance and feedstock sustainability criteria apply. Verify current CRE tariff parameters at cre.fr before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Final coal plant (Saint-Avold) closed 2022. No coal generation remains.",
+      "source": null,
+      "notes": "France has no operating coal power stations as of 2022. No support mechanism exists. New coal build is effectively prohibited under French climate legislation. EU Taxonomy-excluded."
+    }
+  }
+}

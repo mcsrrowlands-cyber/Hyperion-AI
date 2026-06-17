@@ -1,0 +1,429 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Hungary",
+    "local_name": "Magyarország",
+    "iso_code": "HU",
+    "currency_native": "HUF",
+    "currency_eur_rate": 395.0,
+    "currency_eur_rate_date": "Indicative 2025 — EUR/HUF is volatile; EUR 1 ≈ HUF 395 as of mid-2025",
+    "currency_eur_rate_source": "European Central Bank (ecb.europa.eu). IMPORTANT: HUF is highly volatile — verify current rate before use. EUR/HUF has traded in a wide range (360–420) in recent years.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Hungarian energy policy has been subject to frequent modification under the Orbán government (Fidesz). Verify all support scheme parameters at the Hungarian Energy and Public Utility Regulatory Authority (MEKH — mekh.hu) and the MAVIR TSO (mavir.hu). Government decree instruments (Korm. rendelet) may modify framework at short notice."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Act LXXXVI of 2007 on Electricity (Villamos energiáról szóló törvény — VET 2007)", "relevance": "Framework electricity market legislation; TSO (MAVIR) and DSO obligations; market structure" },
+      { "instrument": "Act LXXXVII of 2007 on Gas Supply (Földgázellátásról szóló törvény — GET 2007)", "relevance": "Gas supply framework; relevant for hybrid projects" },
+      { "instrument": "Act LXXXIX of 2012 on Energy (Energia törvény) and subsequent amendments", "relevance": "Energy policy framework; RES targets; METÁR references" },
+      { "instrument": "Government Decree 299/2017 (X. 17.) on the METÁR system", "relevance": "Primary regulation establishing the METÁR (Megújuló Energia Termelők Akkreditált Rendszere) competitive tender premium system. NOTE: Decree numbers change with amendments — verify current text at njt.hu (Nemzeti Jogszabálytár)." },
+      { "instrument": "National Energy Strategy 2030 (with 2050 outlook)", "relevance": "RES targets: 90% renewable electricity by 2030; nuclear (Paks II expansion) is central to Hungarian energy policy alongside renewables" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Act LIII of 1995 on the General Rules of Environmental Protection", "relevance": "EIA; environmental permits for major RES projects" },
+      { "instrument": "Act LXIV of 2001 on Planning and Building (Épített környezet alakításáról és védelméről szóló törvény — Étv.) and Government Decree 312/2012", "relevance": "Building permits (építési engedély); planning rules" },
+      { "instrument": "Government Decree 462/2021 on Large RES Projects (Nationally Strategic Investments — NBI — Kiemelt Beruházások)", "relevance": "Fast-track permitting designation for large-scale solar projects above threshold MW — bypasses local planning authority; Ministry of Technology and Industry as single permit authority" },
+      { "instrument": "Government Decree 419/2021 on Protection of Agricultural Land", "relevance": "Restricts solar development on agricultural land above 1st-4th grade (aranykorona value) — critical constraint for utility solar on farmland" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Act LXXXI of 1996 on Corporate Tax (Társasági adóról és az osztalékadóról szóló törvény — Tao.tv.)", "relevance": "9% flat CIT — lowest in the EU. Investment tax base reduction." },
+      { "instrument": "Act CXVII of 1995 on Personal Income Tax and Act C of 1990 on Local Taxes (Helyi adókról szóló törvény — Htv.)", "relevance": "HIPA — Helyi Iparűzési Adó (Local Business Tax): up to 2% of net revenue minus COGS and subcontractor costs. Levied by local municipalities. Major additional tax burden unique to Hungary." },
+      { "instrument": "Act CXXXIX of 2022 on Extra-Profit Taxes (Extraprofitadó) — sector-specific windfall levy", "relevance": "Hungary introduced windfall levies on energy sector companies in 2022–2023. Verify whether any energy windfall levy applies to RES generators in the relevant assessment period." }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Hungarian METÁR state aid clearance" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions applicable" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Act LII of 2018 on the Screening of Foreign Investments in Hungary (Külföldi befektetők átvilágítási törvénye) and Government Decree 246/2018", "relevance": "Hungary has a significant FDI screening regime. Energy, water, and critical infrastructure are designated sensitive sectors requiring notification and potential ministerial approval." },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation mechanism" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Hungarian permitting underwent significant reform via Nationally Strategic Investment (NBI/KBI) fast-track for large RES. Solar: NBI track has dramatically reduced permitting time for qualifying utility-scale projects. Onshore wind: Near-impossible in practice — de facto moratorium via setback rules (12km wind setback) since 2011. Wind is effectively a RED technology in Hungary.",
+    "solar_utility": {
+      "primary_authority": "Ministry of Technology and Industry (NBI track for qualifying projects); otherwise local building authority",
+      "primary_process": "NBI fast-track: single permit from Ministry of Technology and Industry (bypasses local municipality) → MEKH grid connection approval → Operational permit. Standard track: Environmental permit → Building permit → Grid connection.",
+      "legal_basis": "Government Decree 462/2021; VET 2007; Environmental Protection Act",
+      "timeline_p50_months_nbi": 18,
+      "timeline_p50_months_standard": 30,
+      "agricultural_land_restriction": "Government Decree 419/2021 restricts solar development on high-quality agricultural land (gold crown value above threshold). Agrivoltaic models under discussion but not yet formally permitted at scale.",
+      "appeal_risk": "medium",
+      "notes": "Hungary has deployed significant utility solar capacity. The 12% solar penetration target is effectively already exceeded. NBI track has been used extensively for industrial-scale projects. Land availability on acceptable grades is the primary constraint."
+    },
+    "onshore_wind": {
+      "effective_status": "DE FACTO MORATORIUM",
+      "legal_basis": "Government Decree 44/2011 (III. 23.) established a minimum 12km setback from populated areas for wind turbines. In practice, this makes virtually all Hungarian territory ineligible for wind development.",
+      "installed_capacity_mw_approx": 329,
+      "latest_addition_year": 2011,
+      "policy_note": "Hungary essentially stopped new onshore wind development in 2011. The 12km setback rule has no equivalent in any other EU member state. The Orbán government has shown no indication of relaxing this restriction. Onshore wind in Hungary must be treated as an unavailable technology.",
+      "timeline_p50_months": "N/A — effectively unavailable",
+      "rag_assessment": "RED — unavailable technology"
+    },
+    "offshore_wind": {
+      "effective_status": "N/A — landlocked country",
+      "notes": "Hungary is landlocked; no offshore wind development possible."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Building permit; MAVIR grid connection; MEKH registration",
+      "timeline_p50_months": 18,
+      "notes": "BESS market developing with growing renewable penetration. Grid frequency regulation (FCR/aFRR) available via MAVIR."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "MAVIR ZRt. (Magyar Villamosenergia-ipari Átviteli Rendszerirányító Zártkörűen Működő Részvénytársaság)", "region": "Hungarian national TSO; state-owned; subsidiary of MVM Group" }
+    ],
+    "distribution_operators": "E.ON Hungária Zrt. (E.ON subsidiary — major DSO); NKM Áramhálózati Kft.; others",
+    "regulatory_authority": "MEKH (Magyar Energetikai és Közmű-szabályozási Hivatal — Hungarian Energy and Public Utility Regulatory Authority)",
+    "legal_basis": "VET 2007; MEKH regulations; MAVIR Grid Code",
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 30, "range": "20–48", "notes": "Solar pipeline pressure is building; Dunántúl region experiencing queue pressure" },
+      "distribution_connected": { "p50": 18, "range": "12–30" }
+    },
+    "connection_cost_huf_per_mw": {
+      "range_low": 40000000,
+      "range_high": 250000000,
+      "eur_equivalent_low": 101266,
+      "eur_equivalent_high": 632911,
+      "fx_rate_used": "EUR 1 = HUF 395 (indicative 2025 — verify at ECB)"
+    },
+    "connection_cost_note": "Grid connection costs in Hungary have been regulated but are increasing as solar pipeline pressure grows. DSO and TSO reinforcement costs can be material.",
+    "operational_drag_assessment": "MEDIUM-HIGH — growing solar pipeline creating queue pressure; MAVIR professionally run but pipeline volume increasing"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Hungarian METÁR premium is a ONE-WAY mechanism. The premium (kötelező átvétel / piaci prémium) pays the difference when the reference price exceeds the market clearing price. When market prices exceed the reference price, the premium is zero — the generator retains full market revenue with NO clawback. However: Hungary introduced windfall levies on energy companies in 2022 which must be modelled separately.",
+    "primary_mechanism": "METÁR (Megújuló Energia Termelők Akkreditált Rendszere) — competitive tender premium",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "MEKH (regulatory authority); MVM (MVM Energia Kft. — settlement body)",
+    "legal_basis": "Government Decree 299/2017 (X. 17.) on METÁR, as amended",
+    "mechanism_description": {
+      "summary": "Generator wins competitive METÁR tender and is entitled to a reference premium (kötelező átvételi ár / piaci prémium referencia ára). Generator sells electricity on HUPX spot market. Premium = max(0, reference price − HUPX quarterly average). If market price exceeds reference price, premium is zero; generator retains full market revenue.",
+      "upside_treatment": "UNCAPPED one-way mechanism — no clawback above reference price (subject to windfall levy scrutiny — separate instrument)",
+      "downside_treatment": "PROTECTED — METÁR settlement body pays shortfall",
+      "contract_term_years": "Typically 15 years for onshore solar",
+      "market_price_reference": "HUPX (Hungarian Power Exchange) quarterly average"
+    },
+    "auction": {
+      "administrator": "MEKH",
+      "tender_frequency": "Periodic rounds — MEKH publishes tender calls; verify current tender schedule at mekh.hu",
+      "reference_price_huf_mwh_approx": {
+        "_staleness_warning": "METÁR reference prices change with each tender round and are subject to government decree modification. Verify at MEKH (mekh.hu) before use.",
+        "solar_pv": { "huf_mwh_range_low": 20000, "huf_mwh_range_high": 40000, "eur_mwh_equivalent_low": 50.6, "eur_mwh_equivalent_high": 101.3, "fx_note": "EUR 1 = HUF 395 indicative — verify at ECB" }
+      }
+    },
+    "windfall_levy_risk": {
+      "description": "Hungary enacted Act CXXXIX of 2022 and related Government Decrees imposing extra-profit (windfall) levies on energy sector companies including electricity generators. The applicability, rate, and duration of any levy on RES generators (vs. fossil generators) must be independently verified.",
+      "legal_basis": "Act CXXXIX of 2022; Government Decree 197/2022 (VI.4.) — verify current status at njt.hu",
+      "severity": "HIGH — verify before modelling; has material impact on post-levy IRR",
+      "staleness_warning": "Windfall levy measures were enacted as emergency/transitional instruments. Verify current applicability with Hungarian legal adviser."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: CIT of 9% on taxable profit. Development Tax Allowance (fejlesztési adókedvezmény) provides up to 80% CIT reduction for qualifying investment — apply NPV analysis to timing benefit, not headline rate.",
+    "corporation_tax_structure": {
+      "cit_rate_standard_pct": 9.0,
+      "note": "9% flat CIT — the lowest statutory CIT rate in the EU",
+      "legal_basis": "Act LXXXI of 1996 (Tao.tv.) §19 — 9% rate set by Act LXIX of 2016 (effective 2017), replacing prior 10/19% system",
+      "development_tax_allowance": {
+        "name": "Fejlesztési adókedvezmény (Development Tax Allowance — DTA)",
+        "description": "Companies making qualifying large investments (generally above HUF 3 billion / EUR ~7.6m at 395 FX — verify threshold at mekh.hu/njt.hu) may reduce CIT liability by up to 80% of the tax due in any year. Total allowance amount is generally 70% of qualifying investment value. Claim period typically 12 years from investment commissioning.",
+        "legal_basis": "Tao.tv. §22/B",
+        "_rule_3b_analysis": "NPV of timing benefit: For a EUR 50m solar project at 9% CIT, annual operating profit (EBIT) ≈ EUR 5–7m. CIT due ≈ EUR 450–630k p.a. DTA may reduce CIT by 80% → effective CIT payment ≈ EUR 90–126k p.a. during allowance period. NPV of reduction at 7% WACC over 12 years ≈ EUR 2.8–4.0m. This is a significant CapEx timing benefit on top of the already-low 9% rate.",
+        "ec_state_aid_notification": "DTA under GBER or individually notified — verify EC clearance"
+      }
+    },
+    "local_business_tax_hipa": {
+      "name": "Helyi Iparűzési Adó (HIPA) — Local Business Tax",
+      "legal_basis": "Act C of 1990 on Local Taxes (Htv.) §35–52",
+      "rate_pct_max": 2.0,
+      "tax_base": "Net revenue minus cost of goods sold minus subcontractor costs (NOT a CIT-style profit-based tax). Applied to top-line revenue less direct material/subcontractor deductions — NOT on profit.",
+      "capex_deductibility": "HIPA cap on maximum base: maximum 2% of the HIPA taxable base. From 2023, a cap of HUF 1 million (EUR ~2,532) per employee was introduced — verify current rule at njt.hu",
+      "significance": "CRITICAL: HIPA is levied by the local municipality where the project is located. It is a revenue-based tax (not profit-based), so it applies even when the project is in a loss position. At 2% of net revenue, this is a material additional burden above CIT. For a solar project with EUR 10m/year revenue: HIPA up to EUR 200k/year.",
+      "combined_effective_burden": "9% CIT on profit + up to 2% HIPA on net revenue — combined effective burden is material and must be modelled separately. HIPA is often overlooked by non-Hungarian advisers.",
+      "staleness_warning": "HIPA rules subject to legislative amendment. Verify current rates and base definitions at njt.hu and with Hungarian tax adviser."
+    },
+    "vat": {
+      "standard_rate_pct": 27,
+      "note": "Hungary has the highest standard VAT rate in the EU at 27%. Input VAT is recoverable for VAT-registered businesses.",
+      "legal_basis": "Act CXXVII of 2007 (ÁFA törvény)",
+      "reduced_rate": "No reduced rate for electricity/energy under standard rules — verify current treatment with Hungarian VAT adviser"
+    },
+    "dividend_withholding_tax_pct": 0,
+    "dividend_wht_note": "No domestic WHT on dividends to qualifying corporate recipients; 0% under EU Parent-Subsidiary Directive",
+    "npv_tax_benefit_summary": "9% CIT combined with DTA (up to 80% CIT reduction over 12 years) can reduce effective CIT burden significantly in early years. However, HIPA (up to 2% of net revenue, revenue-based) is a unique and persistent burden not present in most EU jurisdictions. Model both separately. HIPA may exceed CIT burden for high-revenue/low-profit project phases."
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "Medium-High",
+    "bankability_rating": "Medium",
+    "legal_basis": "Act V of 2013 (Civil Code — Ptk.); contractual freedom; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Hungarian courts (Kúria — Supreme Court; Fővárosi Törvényszék — Budapest Metropolitan Court for commercial matters). Proceedings can be slow (2–5 years for complex commercial disputes). Budapest International Arbitration Centre (BIAC) and ICC arbitration available.",
+    "market_liquidity": "Growing — large manufacturing base (BMW Debrecen, Samsung SDI, SK Innovation battery gigafactories) creates industrial PPA demand",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "BMW (Debrecen gigafactory, 100MW+ PPA appetite); Samsung SDI; SK Innovation; other automotive/battery manufacturers; large retailers; data centres",
+    "typical_contract_term_years": { "min": 7, "max": 15 },
+    "standard_frameworks": ["Bespoke bilateral under Hungarian Ptk.", "EFET framework (growing)", "Virtual/financial PPA referencing HUPX"],
+    "industrial_demand_note": "Hungary's massive automotive and battery manufacturing build-out (BMW, CATL, Samsung, SK, and others have announced or broken ground on EUR 10bn+ of investment) is creating genuine industrial PPA demand at scale. This is a significant positive for merchant/PPA-backed solar development.",
+    "guarantees_of_origin": {
+      "regulator": "MAVIR issues MSZH (Megújuló Energia Szertanúsítvány — Guarantees of Origin)",
+      "note": "Hungarian GoOs are part of the EU AIB framework. Additional revenue stream for certified RES generators."
+    },
+    "credit_risk_note": "Corporate credit quality of automotive/battery manufacturers (BMW, Samsung SDI, SK) is investment grade. Hungarian domestic corporate credit is more variable.",
+    "orbán_government_ppa_risk": "Government price interventions (e.g., utility bill freezes, energy price caps for households introduced in 2022–2023) create regulatory uncertainty. PPA counterparty risk is primarily corporate/bilateral rather than state-regulated for wholesale generators — lower intervention risk than retail market."
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 63,
+    "credit_ratings": {
+      "moodys": "Baa2",
+      "sp": "BBB-",
+      "fitch": "BBB",
+      "source_note": "Hungary's ratings are at/near the lowest investment grade tier. Sovereign outlook is stable but ratings have been under pressure. Verify at agency websites.",
+      "_staleness_warning": "Ratings are subject to review — verify before use. Hungarian fiscal position has been under pressure; EU fund disbursements have been withheld in part due to rule-of-law concerns."
+    },
+    "political_stability": "Governing Fidesz party has supermajority; stable in parliamentary terms but policy environment is unpredictable for investors. Orbán government has pursued non-standard economic policies including sectoral windfall levies, price controls, and foreign investor restrictions in some sectors.",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2022",
+        "description": "Extra-profit (windfall) levies enacted under Act CXXXIX of 2022 affecting energy sector companies, banks, retail, and telecommunications. Applicability to RES METÁR-contracted generators requires verification — distinctions between fossil and renewable generators were drawn in some decrees.",
+        "severity": "HIGH — material to return modelling; verify current applicability"
+      },
+      {
+        "year": "2012–2013",
+        "description": "Retroactive modifications to previously contracted renewable energy support under the KÁT (Kötelező Átvétel) system — purchase price orders were modified through regulatory action. Legal challenges followed.",
+        "severity": "HIGH — historical precedent for retroactive RES intervention; METÁR system (post-2017) is designed differently, but historical precedent is relevant"
+      }
+    ],
+    "eu_rule_of_law_risk": {
+      "description": "The European Commission has partially withheld cohesion fund disbursements to Hungary citing rule-of-law concerns under Article 7 TEU. This is a material geopolitical/governance risk signal for long-term investors.",
+      "current_status": "Verify current EU-Hungary relations re: rule-of-law conditionality at ec.europa.eu",
+      "investment_relevance": "EU fund suspension affects government fiscal capacity and creates political friction. May indirectly affect grid investment (EU-co-funded grid reinforcement) timelines."
+    },
+    "expropriation_risk": "Medium — EU member; constitutional property protections; but history of sectoral levies and government activism in utilities markets",
+    "currency_risk": "HIGH — HUF is highly volatile (EUR/HUF has moved 20%+ over 3-year periods). All financial modelling must account for HUF/EUR basis risk. FX hedging cost in Hungary is material. Projects with EUR-denominated debt and HUF revenue face significant FX mismatch.",
+    "score_rationale": "Deductions from 100: Orbán government policy unpredictability and retroactive intervention history (-20), HUF currency volatility (-8), EU rule-of-law concerns (-5), Baa2/BBB- sovereign rating (-4). Score 63 reflects real but manageable risk for Value-Add/Development profiles."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 66,
+    "component_scores": {
+      "grid_connection_drag": { "score": 58, "assessment": "MEDIUM — MAVIR is competent but growing solar pipeline is creating queue pressure; DSO reinforcement costs can be material" },
+      "permitting_drag_solar_nbi": { "score": 45, "assessment": "MEDIUM-LOW — NBI fast-track dramatically reduces permitting time for qualifying large-scale solar; single Ministry authority; well-established process" },
+      "permitting_drag_solar_standard": { "score": 65, "assessment": "MEDIUM-HIGH — standard (non-NBI) track involves local planning and can be protracted; agricultural land restrictions limit available sites" },
+      "permitting_drag_onshore_wind": { "score": 100, "assessment": "RED — 12km setback effectively prohibits onshore wind; not a viable technology in Hungary" },
+      "bureaucratic_friction": { "score": 60, "assessment": "MEDIUM — not a digitally efficient jurisdiction; bureaucratic processes can be slow; language barrier (Hungarian) adds friction for non-local investors; informal relationship management important" },
+      "judicial_appeal_risk": { "score": 65, "assessment": "MEDIUM-HIGH — court proceedings slow (2–5 years for commercial disputes); rule-of-law concerns create institutional uncertainty; NBI status helps by limiting local authority challenge rights" }
+    },
+    "primary_bottleneck": "Onshore wind effectively unavailable (12km setback); agricultural land restrictions for solar; HUF currency risk in financial modelling; HIPA revenue tax adds operational cost",
+    "score_rationale": "Score 66 reflects NBI fast-track as a genuine positive for large solar, offset by wind moratorium, growing grid queue, and medium-level bureaucratic friction."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Hungary has a significant FDI screening law (Act LII of 2018) covering strategic sectors including energy, water, and critical infrastructure",
+    "energy_sector_mandatory_notification": true,
+    "process": "Non-EEA investors (and potentially EU investors for strategic sectors) must notify the Minister responsible. Minister may prohibit or impose conditions.",
+    "eu_investors_note": "EU/EEA investors may also face notification requirements for strategic sector investments — verify with Hungarian legal adviser",
+    "practical_risk": "Medium — Hungary has generally welcomed EU-origin investment but has political discretion in approvals; Chinese investment has faced greater scrutiny in some sectors",
+    "legal_basis": "Act LII of 2018; Government Decree 246/2018; EU Regulation 2019/452"
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "metár_state_aid_status": {
+      "instrument": "METÁR competitive tender under Decree 299/2017",
+      "status": "Competitive tender mechanism designed to comply with CEEAG. Verify current EC clearance at competition.ec.europa.eu.",
+      "windfall_levy_note": "Windfall levies may interact with State Aid analysis — a levy that effectively claws back subsidy revenue warrants separate State Aid assessment."
+    },
+    "retrospective_clawback_risk": { "assessment": "MEDIUM-HIGH — historical KÁT modification precedent; windfall levy instruments demonstrate government willingness to claw back energy sector revenues by legislative action" }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Hungary uses HUF. All figures below in native HUF first, then EUR equivalent. EUR 1 = HUF 395 (indicative 2025 — verify at ECB). HUF volatility is material — model FX sensitivity.",
+    "_rule_3a_note": "ONE-WAY premium — uncapped merchant upside. Windfall levy risk must be modelled as a scenario.",
+    "_rule_3b_note": "9% CIT + DTA (up to 80% reduction, 12-year claim). HIPA up to 2% of net revenue (revenue-based). Model CIT and HIPA as separate line items.",
+    "illustrative_solar_utility": {
+      "mechanism_type": "one_way_market_premium",
+      "reference_price_huf_mwh_approx": 30000,
+      "reference_price_eur_mwh_equivalent": 75.9,
+      "fx_rate": "EUR 1 = HUF 395 (indicative)",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 14.5,
+      "typical_capex_huf_per_mw": 600000000,
+      "typical_capex_eur_per_mw_equivalent": 1518987,
+      "opex_huf_per_mw_per_year": 25000000,
+      "opex_eur_per_mw_equivalent": 63291,
+      "cit_pct": 9.0,
+      "hipa_pct_of_net_revenue": 2.0,
+      "dta_cit_reduction_pct": 80.0,
+      "dta_claim_period_years": 12,
+      "huf_fx_sensitivity_note": "HUF volatile. EUR-denominated debt with HUF revenues creates FX mismatch. Sensitivity analysis: model EUR/HUF at 370, 395, 420."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
+    "permitting_window_solar_nbi": { "rag": "GREEN", "rationale": "NBI fast-track for qualifying large-scale solar is genuinely efficient; Ministry-level single authority bypasses local planning friction" },
+    "permitting_window_solar_standard": { "rag": "AMBER", "rationale": "Standard track slower; agricultural land restrictions limit sites" },
+    "permitting_window_onshore_wind": { "rag": "RED", "rationale": "12km setback = effectively de facto moratorium since 2011. Onshore wind is not a viable technology in Hungary." },
+    "grid_connection": { "rag": "AMBER", "rationale": "MAVIR competent; growing solar pipeline creating queue pressure; cost can be material" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "METÁR operational but windfall levy risk (Act CXXXIX of 2022) must be independently verified before modelling; periodic tender rounds; mechanism architecture sound" },
+    "mechanism_type_risk": { "rag": "AMBER", "rationale": "One-way mechanism (no clawback) is structurally sound, but Hungarian government's demonstrated willingness to enact sectoral levies (KÁT 2012, windfall 2022) reduces the certainty that 'no clawback' holds through the full contract term" },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "9% CIT is the lowest in the EU — strong positive. However HIPA (up to 2% of net revenue) is a unique and persistent burden that must be modelled alongside CIT. Combined burden is material. DTA allowance improves early-year cash flow." },
+    "ppa_enforceability": { "rag": "MEDIUM", "rationale": "Corporate/bilateral PPA market growing strongly (automotive gigafactories are a genuine demand driver). Court enforcement is slower than Western EU peers. Arbitration preferred." },
+    "political_risk": { "rag": "AMBER", "rationale": "Baa2/BBB- sovereign; Orbán government policy unpredictability; EU rule-of-law fund suspension; retroactive KÁT modification (2012) and windfall levies (2022) are HIGH severity precedents. Not suitable for Low Risk Core Infrastructure profile without risk mitigants." },
+    "operational_drag": { "rag": "AMBER", "rationale": "Score 66 — moderate drag. NBI solar track is efficient; wind is unavailable; HIPA and currency friction add operational complexity." },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "FDI screening regime covers energy sector; notification required; EU investors generally welcomed but regulatory discretion exists" },
+    "currency_risk": { "rag": "AMBER", "rationale": "HUF highly volatile; EUR-debt/HUF-revenue mismatch is a material structural risk requiring hedging programme or EUR/HUPX pricing PPA with EUR escalation" },
+    "eu_state_aid_risk": { "rag": "AMBER", "rationale": "METÁR competitive tender designed for compliance; however historical interventions and windfall levy instruments create meaningful retrospective risk" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Hungary offers the EU's lowest CIT (9%), a genuinely efficient NBI fast-track for large solar, and a growing industrial PPA market driven by the gigafactory build-out. These are real positives. However, the Orbán government's track record of retroactive energy sector intervention (2012 KÁT modifications, 2022 windfall levies), HUF currency volatility, the effective wind moratorium, HIPA (a unique revenue-based tax burden), and EU rule-of-law tensions create a profile suitable for Value-Add/Development investors with tolerance for political and currency risk — NOT suitable for Low Risk Core Infrastructure profiles."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 18,
+    "1_permitting_window_scope": "Utility solar via NBI fast-track (Ministry of Technology and Industry; single authority). WIND: DE FACTO MORATORIUM.",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "HUF 40–250 million per MW",
+    "2_grid_connection_cost_eur": "EUR 101,266–632,911 per MW (EUR 1 = HUF 395 indicative — verify at ECB)",
+    "2_grid_connection_cost_fx_date": "EUR 1 = HUF 395 indicative 2025 — HUF volatile; verify at ECB (ecb.europa.eu)",
+    "2_grid_connection_timeline_months": "18–48",
+    "3_primary_support_mechanism": "METÁR competitive tender premium (Megújuló Energia Termelők Akkreditált Rendszere); HUPX market reference",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": "9% CIT (EU minimum) + HIPA up to 2% of net revenue (revenue-based, not profit-based — unique to Hungary)",
+    "4_effective_tax_rate_note": "9% CIT is EU's lowest. Development Tax Allowance (DTA) may reduce CIT by up to 80% over 12 years (NPV benefit: approx EUR 2.8–4.0m on EUR 50m project at 7% WACC). HIPA is a separate revenue-based burden — must be modelled independently.",
+    "4_key_incentive": "9% CIT flat rate (Tao.tv. §19, effective 2017); Development Tax Allowance (DTA) up to 80% CIT reduction for qualifying CapEx (Tao.tv. §22/B)",
+    "5_ppa_enforceability_rating": "Medium-High",
+    "5_ppa_legal_basis": "Civil Code (Ptk.); bilateral contracts; BIAC/ICC arbitration; growing industrial demand (BMW, Samsung SDI, SK gigafactories)",
+    "6_political_risk_score": 63,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 66,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "HUF 20,000–40,000/MWh approx. (METÁR solar reference price — indicative; verify at MEKH)",
+    "8_revenue_floor_eur": "EUR 50.6–101.3/MWh (EUR 1 = HUF 395 indicative — verify at ECB)",
+    "8_revenue_floor_fx_date": "EUR 1 = HUF 395 indicative 2025",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "METÁR reference prices change with each tender round. Windfall levy risk may effectively reduce post-levy floor. Verify at MEKH (mekh.hu). Staleness risk: HIGH."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Hungary participates in IPCEI Hy2Tech (2022). National hydrogen strategy published 2021. Industrial hydrogen demand from chemicals sector. MEKH administers energy support.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Hungary is an IPCEI Hy2Tech participant. Political environment has some unpredictability; verify current state aid framework before use. Windfall levy precedent creates investor concern about retroactive policy changes."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "METÁR piaci prémium (market premium) under Megújuló energia közösségekről és a villamosenergia-termelésről szóló törvény, administered by MEKH.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Hungary is expanding Paks NPP with two new VVER-1200 units (Paks II — Rosatom, contracted 2014). This is a large reactor expansion, not an SMR programme. Paks II construction delayed; EU State Aid approval disputed. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Landlocked. No LNG terminal. Receives gas via pipeline."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Hungary has gas-fired generation capacity. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. Windfall levy precedent creates investor uncertainty. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Windfall levy risk applies to bioenergy generators. Verify current Hungarian bioenergy support under METÁR framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

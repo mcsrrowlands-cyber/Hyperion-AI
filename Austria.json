@@ -1,0 +1,500 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Austria",
+    "local_name": "Österreich",
+    "iso_code": "AT",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "currency_eur_rate_source": "No conversion required. All figures are native EUR.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Austrian EAG auction clearing prices are published by OeMAG and E-Control after each tender. Verify against current OeMAG/E-Control publications at e-control.at before relying on figures below."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Erneuerbaren-Ausbau-Gesetz (EAG) — BGBl I Nr. 150/2021, in force 1 July 2021", "relevance": "Primary RES support law; establishes the market premium (Marktprämie) via competitive auction; sets 2030 target of 100% renewable electricity (net annual balance); replaces ÖSG 2012 for new projects" },
+      { "instrument": "Ökostromgesetz 2012 (ÖSG 2012) — BGBl I Nr. 75/2011", "relevance": "Legacy FiT framework for projects commissioned before EAG 2021; grandfathered contracts still active; relevant for retroactive risk assessment of legacy portfolio" },
+      { "instrument": "Elektrizitätswirtschafts- und -organisationsgesetz (ElWOG) 2010 — BGBl I Nr. 110/2010", "relevance": "Framework law for electricity market organisation; grid connection rights; distribution and transmission operator obligations" },
+      { "instrument": "Gaswirtschaftsgesetz (GWG) 2011 and Erneuerbaren-Ausbau-Gesetz-Durchführungsgesetz (EABG)", "relevance": "Implementing regulations under EAG 2021; auction procedural rules; OeMAG operating framework" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Umweltverträglichkeitsprüfungsgesetz (UVP-G) 2000 — BGBl Nr. 697/1993, as amended", "relevance": "EIA law; wind farms above threshold (typically 6+ turbines or >30 MW) trigger full UVP procedure; primary permitting bottleneck for onshore wind" },
+      { "instrument": "Bundesvergabegesetz (BVergG)", "relevance": "Public procurement law applicable to some EAG auction procedural aspects" },
+      { "instrument": "Landesgesetze (Bundesland legislation)", "relevance": "Spatial planning and construction law is Bundesland-competence; wind and solar permitting rules vary significantly by Bundesland — Burgenland, Lower Austria, and Styria are primary wind markets" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Körperschaftsteuergesetz (KStG) 1988 — BGBl Nr. 401/1988, as amended by AbgÄG 2022", "relevance": "23% CIT rate effective 2024; reduced from 25% (2023: 24%, 2024: 23%) under Steuerreformgesetz 2022" },
+      { "instrument": "Steuerreformgesetz 2022 — BGBl I Nr. 108/2022", "relevance": "Legislated phased CIT reduction: 25%→24% (2023)→23% (2024+); also introduced investment premium (Investitionsfreibetrag, IFB)" },
+      { "instrument": "Einkommensteuergesetz (EStG) 1988 — BGBl Nr. 400/1988", "relevance": "Depreciation provisions (§§7–9); Investitionsfreibetrag (IFB) provisions; applicable to pass-through partnership structures" },
+      { "instrument": "Umsatzsteuergesetz (UStG) 1994 — BGBl Nr. 663/1994", "relevance": "20% standard VAT; reduced rates for certain energy services" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "Primary EU framework for EAG support scheme assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES aid; some EAG sub-threshold measures may qualify" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Investitionskontrollgesetz (InvKG) — BGBl I Nr. 87/2020", "relevance": "Austrian FDI screening; energy is critical infrastructure requiring notification for acquisitions ≥10% by third-country (non-EU/EEA) acquirers; reviewed by BMAW (Ministry of Labour and Economy)" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation; Austria must notify EC and other member states of covered FDI proceedings" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Austrian RES permitting is Bundesland-competent for spatial planning and construction law. This creates significant variation across Austria's nine Bundesländer. P50 timelines run from formal application. Pre-application (including wind resource assessment, UVP scoping, species surveys) adds 12–24 months. Burgenland, Lower Austria (Niederösterreich), and Styria are the primary wind markets and have the most developed permitting frameworks.",
+    "solar_utility": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Bundesland Building Authorities (Baubehörde) and Regional Planning Authorities (Raumordnungsbehörde); BMLK (Ministry of Agriculture, Forestry, Regions and Water Management) for ELER-linked agricultural land",
+      "primary_process": "Bundesland spatial plan designation (Widmung/Flächenwidmung) → Building Permit → EIA if above UVP-G threshold → Grid connection",
+      "legal_basis": "UVP-G 2000; Bundesland Bauordnungen; Bundesland Raumordnungsgesetze; EAG 2021",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "pre_application_months_typical": 9,
+      "appeal_risk": "low-medium",
+      "appeal_mechanism": "Bundesland Administrative Courts (Landesverwaltungsgericht); Federal Administrative Court (Bundesverwaltungsgericht); VwGH (Verwaltungsgerichtshof)",
+      "notes": "Austrian ground-mounted solar permitting is relatively streamlined by EU standards. Bundesland variation exists but is less extreme than for wind. EAG 2021 §4 designates RES as overriding public interest — intended to tip planning balances in favour of projects. Agri-PV emerging with growing policy support."
+    },
+    "onshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Bundesland authorities competent; key markets: Burgenland (LH Burgenland), Lower Austria (NÖ Landesregierung), Styria (Steirische Landesregierung)",
+      "primary_process": "Bundesland spatial plan designation (Windzonenkarte / Eignungszone) → UVP procedure (mandatory above threshold) → Building Permit → Grid Connection",
+      "legal_basis": "UVP-G 2000 Anhang 1 Z 6 (wind above threshold triggers mandatory UVP); Bundesland Raumordnungsgesetze; EAG 2021 §4",
+      "uvp_threshold": "Wind farms typically trigger mandatory UVP above 6 turbines or total height >100m (varies by Bundesland — verify applicable thresholds with local counsel)",
+      "timeline_p50_months": 36,
+      "timeline_min_months": 24,
+      "timeline_max_months": 60,
+      "pre_application_months_typical": 18,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Bundesland Administrative Courts; Bundesverwaltungsgericht; VwGH",
+      "bundesland_variation": {
+        "burgenland": "Most permitting-friendly Bundesland for wind; has issued Windzonenkarte designating suitable areas; strong political commitment to wind energy; significant existing capacity",
+        "lower_austria": "Active wind market; Niederösterreich issued revised wind suitability maps; strong existing wind base but new areas increasingly contested",
+        "styria": "Growing wind market; Windkraftzonenplan provides designated areas; more complex topography than Burgenland",
+        "other_bundeslaender": "Tirol, Vorarlberg, Kärnten — limited wind development due to topography and planning restrictions; Vienna/Upper Austria — limited suitable areas"
+      },
+      "notes": "Austrian onshore wind permitting is significantly better than Germany but still requires 3–5 year realistic timelines. The Bundesland-competent model creates variation but leading Bundesländer (Burgenland, Lower Austria) have workable frameworks. UVP requirement is the primary timing driver. Species protection (Naturschutz) assessments — particularly for golden eagle and bats — are material in Alpine and pre-Alpine sites."
+    },
+    "offshore_wind": {
+      "applicable": false,
+      "notes": "Austria is a landlocked country — no offshore wind applicable."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Building permit under Bundesland Bauordnung; EIA if above UVP-G threshold; E-Control registration",
+      "legal_basis": "UVP-G 2000; Bundesland Bauordnungen; ElWOG 2010 (storage provisions)",
+      "timeline_p50_months": 15,
+      "timeline_min_months": 9,
+      "timeline_max_months": 24,
+      "notes": "BESS is a growing market in Austria. Standalone BESS not directly EAG-supported; revenue from frequency regulation (FCR/aFRR via APG) and arbitrage. EAG 2021 does not provide operating aid for standalone BESS."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "Austrian Power Grid (APG)", "region": "Austrian national transmission system (wholly owned by Verbund AG)" }
+    ],
+    "distribution_operators": "EVN Netz (Lower Austria); Netz Burgenland; Energie Steiermark Netz (Styria); TINETZ (Tirol); Salzburg Netz; Stadtwerke Wien Netz (Vienna); approx. 130 DSOs total",
+    "regulatory_authority": "E-Control (Energie-Control Austria — Rundfunk und Telekom Regulierungs-GmbH für Energiemärkte)",
+    "legal_basis": "ElWOG 2010 §§16–20 (grid connection rights); E-Control System Usage Tariff Orders; EAG 2021 §§20–25 (priority grid access for RES)",
+    "priority_access": {
+      "applicable": true,
+      "mechanism": "Priority dispatch for RES under ElWOG 2010 and EAG 2021; consistent with EU Electricity Directive 2019/944",
+      "description": "RES generators have statutory priority dispatch. Curtailment compensation under E-Control Grid Code."
+    },
+    "grid_congestion": {
+      "assessment": "LOW-MEDIUM",
+      "notes": "Austria benefits from its role as a major Central European electricity transit hub. APG has been investing significantly in grid reinforcement to accommodate EAG 2021 targets. Cross-border interconnection with Germany (DE/AT was a single bidding zone until 2018 price zone split) means Austrian grid is well-integrated. Some local distribution grid constraints exist in wind-heavy Burgenland and Lower Austria."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 24, "range": "18–42" },
+      "distribution_connected": { "p50": 15, "range": "9–24" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 25000,
+      "range_high": 150000,
+      "notes": "Connection costs regulated by E-Control. Lower than German equivalents due to less congested system. Reinforcement costs beyond the connection point socialised via regulated tariffs."
+    },
+    "operational_drag_assessment": "LOW-MEDIUM — one of the better grid connection environments in central Europe; APG investment programme aligned with EAG 2021 targets"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Austrian EAG Marktprämie under EAG 2021 is a ONE-WAY market premium. The premium = max(0, contracted tariff (Ausschreibungsergebnis) − monthly average EPEX Austria price). When market price exceeds the contracted tariff, the premium is ZERO — the generator retains full market revenue with NO clawback. This is structurally equivalent to the German EEG Marktprämie (one-way) and materially different from a two-way CfD. Return assumptions must reflect uncapped merchant upside above the contracted tariff.",
+    "primary_mechanism": "Marktprämie (Market Premium) — EAG 2021",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "OeMAG Abwicklungsstelle für Ökostrom AG (OeMAG) for premium disbursement; E-Control for auction oversight",
+    "legal_basis": "EAG 2021 (BGBl I Nr. 150/2021) §§12–30; EAG-Durchführungsgesetz (EABG) implementing provisions",
+    "mechanism_description": {
+      "summary": "Generator participates in competitive auction (Ausschreibung) and receives a contracted tariff (Ausschreibungsergebnis). Generator sells electricity on EPEX Austria spot market. OeMAG pays market premium = max(0, contracted tariff − monthly average EPEX AT price). When market price exceeds contracted tariff, premium is zero and generator retains full merchant revenue. No clawback.",
+      "upside_treatment": "UNCAPPED — when market price exceeds contracted tariff, premium is zero and generator retains all market revenue. No clawback mechanism.",
+      "downside_treatment": "PROTECTED — when market falls below contracted tariff, OeMAG pays the shortfall",
+      "merchant_exposure_during_term": "Partial — hourly spot price risk within each month; monthly average basis risk vs. contracted tariff",
+      "contract_term_years": 20,
+      "eag_overriding_public_interest": "EAG 2021 §4 designates renewable energy development in the 'overriding public interest' (überragendes öffentliches Interesse) — intended to tilt planning and EIA assessments in favour of RES projects"
+    },
+    "auction": {
+      "administrator": "E-Control (oversight); OeMAG (contract administration)",
+      "frequency": "Auctions typically conducted 1–2 times per year per technology; technology-neutral and technology-specific rounds",
+      "technology_auctions": [
+        "Onshore wind (Windkraft)",
+        "Solar PV — ground-mounted (Freiflächen-PV)",
+        "Solar PV — rooftop and building-integrated",
+        "Hydropower (new and repowering)",
+        "Biomass/biogas"
+      ],
+      "ausschreibungsergebnis_eur_mwh_approx": {
+        "_staleness_warning": "Austrian auction clearing prices change with each round. Figures below are indicative 2023–2024 ranges. Verify current results at E-Control / OeMAG official publications (e-control.at) before use.",
+        "_source": "E-Control Ausschreibungsergebnisse publications; OeMAG official data",
+        "onshore_wind": {
+          "eur_mwh_range_low": 80.00,
+          "eur_mwh_range_high": 100.00,
+          "notes": "Indicative 2023–2024 range. Austrian clearing prices reflect higher development costs in a smaller market vs. Germany."
+        },
+        "solar_pv_ground_mounted": {
+          "eur_mwh_range_low": 65.00,
+          "eur_mwh_range_high": 85.00,
+          "notes": "Austrian solar irradiation (950–1,200 kWh/kWp p.a.) — better than Germany in eastern/southern regions but not Mediterranean levels."
+        }
+      },
+      "investment_premium": {
+        "description": "EAG 2021 also provides for Investitionszuschüsse (investment grants) for certain RES technologies including small hydropower and grid-scale storage — administered by AWS (Austria Wirtschaftsservice) and OeMAG",
+        "note": "Investment grant and operating premium (Marktprämie) are generally not combinable for the same project. Election required."
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: The Austrian Investitionsfreibetrag (IFB) introduced by Steuerreformgesetz 2022 is a CapEx TIMING benefit — not a permanent reduction to the effective tax rate. NPV of the IFB benefit must be calculated and shown separately.",
+    "corporation_tax_structure": {
+      "rate_pct": 23.0,
+      "legal_basis": "KStG 1988 §22; phased reduction under Steuerreformgesetz 2022 (BGBl I Nr. 108/2022): 25%→24% (2023)→23% (2024+)",
+      "previous_rate_trajectory": "25% until 2022; 24% in 2023; 23% from 2024",
+      "dividend_withholding_tax_pct": 27.5,
+      "eu_parent_subsidiary_exemption": "0% WHT on dividends to qualifying EU parent companies under EU Parent-Subsidiary Directive (Mutter-Tochter-Richtlinie)",
+      "notes": "23% CIT is competitive by EU standards. The phased reduction from 25% is a positive signal for investment confidence."
+    },
+    "combined_effective_tax_rate_range_pct": {
+      "standard": 23.0,
+      "notes": "Austria has no regional trade tax equivalent to Germany's Gewerbesteuer. Effective CIT rate is close to 23% statutory rate. Municipal taxes (Kommunalsteuer) apply to wages — not to profits."
+    },
+    "capex_incentives": {
+      "investitionsfreibetrag_ifb": {
+        "type": "accelerated_upfront_deduction",
+        "scheme_name": "Investitionsfreibetrag (IFB) — Investment Allowance",
+        "legal_basis": "EStG 1988 §11 as amended by Steuerreformgesetz 2022 (BGBl I Nr. 108/2022), effective from tax year 2023",
+        "standard_ifb_rate_pct": 10.0,
+        "ecological_ifb_rate_pct": 15.0,
+        "ecological_qualifying_note": "15% IFB applies to investments in low-emission transport, heat recovery, and certain renewable energy equipment qualifying under the ecological investment category (ökologisches Merkmal)",
+        "mechanism": "An additional 10% or 15% of the acquisition cost of qualifying moveable assets is deductible in the year of acquisition — in addition to normal depreciation. This is a free deduction reducing taxable income in Year 1.",
+        "qualifying_assets": "Qualifying new moveable assets — renewable energy plant, turbines, solar panels, inverters, BESS (where classified as machinery). Real property and intangibles generally excluded.",
+        "maximum_qualifying_base_eur": 1000000,
+        "maximum_ifb_benefit_eur_ecological": 150000,
+        "permanent": true,
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 23% CIT and 10% WACC: The 15% ecological IFB on €1m of qualifying CapEx = €150,000 additional deduction × 23% CIT = €34,500 tax saving in Year 1. NPV of this Year 1 benefit at 10% WACC = €34,500 (no discounting — it is realised in Year 1 acquisition year). As a percentage of CapEx: 3.45ppts saving on the first €1m. Plus standard depreciation NPV applies on top.",
+          "note": "The IFB is capped at €1m qualifying base per tax year — relevant constraint for large CapEx projects. Additional deduction reduces first-year taxable income, creating a timing benefit separate from standard depreciation. The ecological rate (15%) is most likely to apply to RES plant."
+        }
+      }
+    },
+    "standard_depreciation": {
+      "wind_turbines_useful_life_years": 20,
+      "solar_pv_panels_useful_life_years": 20,
+      "method": "straight-line (lineare Abschreibung) as standard under §7 EStG; declining balance not generally available for tax purposes in Austria (unlike Germany)",
+      "legal_basis": "EStG 1988 §§7–9"
+    },
+    "vat": {
+      "standard_rate_pct": 20,
+      "reduced_rate_pct": 10,
+      "applies_to_commercial_renewables": true,
+      "input_vat_recovery": "Available for VAT-registered businesses",
+      "small_pv_zero_rate": "0% VAT supply and installation of solar PV panels for residential use (BGBl II Nr. 14/2023) — not applicable to utility-scale",
+      "legal_basis": "UStG 1994; BGBl II Nr. 14/2023 (residential PV zero-rate)"
+    },
+    "real_estate_transfer_tax": {
+      "grunderwerbsteuer_rate_pct": 3.5,
+      "legal_basis": "Grunderwerbsteuergesetz (GrEStG) 1987",
+      "notes": "3.5% on real property transfers. Long-term lease structures (Pacht) commonly used for wind/solar land arrangements — leases do not trigger GrEStG. Share deal structures (≥95% threshold triggers) require specialist Austrian tax advice."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "Allgemeines Bürgerliches Gesetzbuch (ABGB) — Austrian Civil Code; §§859 et seq. (contractual obligations); no bespoke PPA statute; EAG 2021 permits merchant/PPA sales outside the auction support framework",
+    "jurisdiction_enforcement": "Austrian courts are efficient and well-regarded. Commercial disputes in Vienna: 12–24 months first instance. Vienna International Arbitral Centre (VIAC) is a well-respected European arbitration centre.",
+    "market_liquidity": "Medium-High — active corporate buyer market growing significantly since 2021",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Austrian industrial companies, retail chains, Verbund AG (national utility), international corporations with Austrian operations, data centres",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement (widely adopted)", "Bespoke bilateral under ABGB", "Virtual / financial PPA referencing EPEX AT price"],
+    "marktpramie_interaction_note": "EAG-supported projects receive the Marktprämie via OeMAG and sell power at market price (one-way mechanism). Corporate PPAs alongside EAG support are structurally complex — typically structured as virtual (financial) PPAs or synthetic structures. Projects outside EAG support (merchant or expired support) can enter physical PPAs freely.",
+    "guarantees_of_origin": {
+      "regulator": "OeMAG — Guarantees of Origin (Herkunftsnachweise / HKN) issued under the Austrian system",
+      "note": "EAG-supported projects may issue Guarantees of Origin in Austria — check specific EAG scheme terms. GoO issuance provides additional corporate green power revenue stream."
+    },
+    "credit_risk_note": "Austrian corporate credit market is mature. Strong base of investment-grade industrial and utility offtakers. VIAC arbitration provides efficient dispute resolution.",
+    "cross_border_enforceability": "High — Austrian courts respected; NY Convention signatory; EU enforcement regime applies"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 87,
+    "credit_ratings": {
+      "moodys": "Aa1",
+      "sp": "AA+",
+      "fitch": "AA+",
+      "source_note": "Austria maintains strong investment-grade ratings. Verify current ratings at agency websites.",
+      "_staleness_warning": "Ratings subject to review — verify before use."
+    },
+    "political_stability": "High — stable parliamentary democracy; coalition government norms but constitutional stability is strong",
+    "government_structure": "Federal parliamentary republic; bicameral Parliament (Nationalrat + Bundesrat); Constitutional Court (VfGH) provides strong rule-of-law backstop",
+    "regulatory_track_record": "Strong — ÖSG/EAG frameworks have provided consistent RES support since 2003; no retroactive modifications to contracted FiT/premium revenues; EAG 2021 provides well-designed forward-looking framework",
+    "retroactive_policy_incidents": [
+      {
+        "year": "None material",
+        "description": "Austria has not imposed retroactive modifications to contracted RES revenues. The transition from ÖSG 2012 to EAG 2021 was prospective and did not affect existing contracts.",
+        "severity": "N/A — no material retroactive incident"
+      }
+    ],
+    "expropriation_risk": "Very Low — EU/NATO member; strong property rights protection under Austrian Constitution and ECHR",
+    "currency_risk": "None — EUR is domestic currency",
+    "political_notes": "Austria is one of the most stable regulatory environments in Central Europe for energy investment. The EAG 2021 framework with 100% renewable electricity target by 2030 (net annual balance) creates strong policy commitment. Coalition politics can slow legislation but has not materially affected RES support continuity. ÖVP-led governments have been broadly pro-investment.",
+    "score_rationale": "Deductions from 100: coalition government policy uncertainty risk (-5), some Bundesland planning resistance to wind (-4), IFB cap limits benefit for large CapEx (-2), higher auction clearing prices vs. Germany reflecting smaller market (-2). Score 87 reflects one of the more reliable frameworks in continental Europe."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
+    "operational_drag_score_out_of_100": 52,
+    "component_scores": {
+      "grid_connection_drag": { "score": 30, "assessment": "LOW — APG grid is well-invested and integrated into Central European system; connection timelines shorter than Germany; E-Control regulation is effective" },
+      "permitting_drag_onshore_wind": { "score": 60, "assessment": "MEDIUM — materially better than Germany or Czech Republic; Bundesland variation means Burgenland/Lower Austria are workable; UVP process drives 3–5 year timelines but without the functional prohibition seen in Germany's Bavaria" },
+      "permitting_drag_solar": { "score": 35, "assessment": "LOW-MEDIUM — Bundesland processes are manageable; ground-mounted solar timelines are competitive; EAG 2021 overriding public interest designation helps" },
+      "permitting_drag_offshore": { "score": null, "assessment": "N/A — landlocked country" },
+      "bureaucratic_friction": { "score": 48, "assessment": "MEDIUM — Austrian federal system creates Bundesland variation; UVP process is multi-stage but well-structured; E-Control regulatory process is efficient" },
+      "judicial_appeal_risk": { "score": 50, "assessment": "MEDIUM — appeals possible through Landesverwaltungsgericht and BVwG; organised opposition in some locations; Alpine/pre-Alpine sites face nature protection challenges" }
+    },
+    "primary_bottleneck": "Onshore wind UVP procedure — mandatory EIA creates 3–5 year baseline timeline; Bundesland spatial plan designation is required before development can proceed",
+    "secondary_bottleneck": "Species protection requirements (golden eagle, bats, birds) for Alpine and pre-Alpine wind sites",
+    "offshore_note": "N/A — landlocked",
+    "technology_note": "Solar and BESS have materially lower operational drag than onshore wind. The composite score of 52 reflects a jurisdiction where solar/BESS development is straightforward, wind is manageable but requires careful Bundesland selection.",
+    "score_rationale": "Austria scores materially better than Germany (65) or Czech Republic (70) on operational drag. Grid connection is low-drag. Wind permitting is medium — better than Germany/Czech but not frictionless. Composite 52 reflects a genuinely investor-friendly environment for solar and BESS."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Investitionskontrollgesetz (InvKG) BGBl I Nr. 87/2020; EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "critical_infrastructure_threshold_pct": 10,
+    "reviewing_ministry": "BMAW (Bundesministerium für Arbeit und Wirtschaft — Federal Ministry of Labour and Economy)",
+    "legal_basis": "InvKG §§4–9; EU Regulation 2019/452 Article 4",
+    "energy_as_critical_infrastructure": "Yes — energy production, transmission, and distribution designated critical under InvKG Annex",
+    "clearance_timeline": {
+      "initial_screening_working_days": 20,
+      "formal_review_if_opened_calendar_days": 85,
+      "extension_possible": true
+    },
+    "eu_investors_note": "EU/EEA investors are not subject to InvKG notification requirement — only third-country (non-EU/EEA) acquirers trigger the screening obligation",
+    "practical_risk": "Very Low for EU/EEA investors (no notification required); Low for OECD non-EU investors; elevated for non-OECD / state-connected acquirers",
+    "notes": "Austria's FDI screening is targeted and proportionate. EU investors are explicitly exempt from InvKG notification. OECD non-EU investors (e.g., US, UK, Swiss) face notification but low prohibition risk. Chinese and Russian-affiliated investors face heightened scrutiny."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01",
+    "secondary_framework": "GBER — Commission Regulation (EU) 651/2014 as amended",
+    "eag_state_aid_status": {
+      "instrument": "EAG 2021 Marktprämie scheme",
+      "status": "EAG 2021 notified to and cleared by the European Commission. Competitive auction mechanism satisfies CEEAG proportionality requirements. Verify current clearance status via EC State Aid register (competition.ec.europa.eu).",
+      "prior_scheme": "ÖSG 2012 support scheme was cleared under prior EEAG framework — grandfathered contracts remain legally valid"
+    },
+    "retrospective_clawback_risk": {
+      "assessment": "Low",
+      "notes": "EAG 2021 operates under EC-cleared framework. No history of retroactive support modifications in Austrian RES sector. Austria's strong rule-of-law tradition makes retroactive clawback risk materially lower than Greece or Czech Republic."
+    },
+    "tctf_applicability": {
+      "applicable": false,
+      "notes": "EAG 2021 framework operates under CEEAG. TCTF transitional measures are not the applicable framework for EAG support."
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Austria is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY mechanism: premium floors at zero — generators retain full market upside above contracted tariff. Model uncapped upside scenario as well as floor scenario.",
+    "illustrative_onshore_wind_marktpramie": {
+      "contracted_tariff_eur_mwh_approx": 90.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct": 30,
+      "typical_capex_eur_per_mw": 1550000,
+      "opex_eur_per_mw_per_year": 48000,
+      "effective_tax_rate_pct": 23,
+      "note": "30% capacity factor typical for Burgenland/Lower Austria sites. Higher than German average due to better Pannonian plain wind resource in eastern Austria. Contracted tariff indicative — verify at current E-Control auction results."
+    },
+    "illustrative_solar_pv_marktpramie": {
+      "contracted_tariff_eur_mwh_approx": 74.00,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct_dc": 13,
+      "typical_capex_eur_per_mw_dc": 620000,
+      "opex_eur_per_mw_per_year": 16000,
+      "note": "Austrian irradiation (950–1,200 kWh/kWp) better than Germany especially in eastern and southern regions. Clearing prices higher than Germany reflecting smaller market scale and cost base."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory — Stop/Go signal before detailed narrative.",
+    "permitting_window_solar": { "rag": "GREEN", "rationale": "Bundesland processes manageable; EAG 2021 overriding public interest designation helps; typical 18-month P50 competitive by EU standards" },
+    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "Manageable in key Bundesländer (Burgenland, Lower Austria, Styria); UVP mandatory but structured; 3–5 year P50 — materially better than Germany or Czech Republic" },
+    "permitting_window_offshore": { "rag": "N/A", "rationale": "Landlocked — not applicable" },
+    "grid_connection": { "rag": "GREEN", "rationale": "APG grid well-invested; E-Control regulation effective; shorter timelines and lower costs than Germany; Central European grid integration is a structural advantage" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "EAG 2021 provides well-designed one-way premium framework; 100% renewable electricity target by 2030 drives sustained auction pipeline; 20-year contract term; no history of retroactive changes" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way mechanism preserves merchant upside — better return profile than two-way CfD for high-price scenarios" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "23% CIT (down from 25%); IFB 15% ecological investment allowance on qualifying CapEx; no trade tax equivalent; mature tax system" },
+    "ppa_enforceability": { "rag": "HIGH", "rationale": "ABGB provides solid contractual basis; Austrian courts efficient; VIAC respected arbitration centre; growing corporate buyer market" },
+    "political_risk": { "rag": "GREEN", "rationale": "Aa1/AA+ sovereign; no retroactive support modifications; EAG 2021 framework reflects strong long-term policy commitment; one of the most stable regulatory environments in Central Europe" },
+    "operational_drag": { "rag": "GREEN", "rationale": "One of the lower-drag environments in the EU for solar and wind; grid connection is LOW; wind permitting MEDIUM but manageable with Bundesland selection" },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "EU investors exempt from InvKG; non-EU OECD investors face notification but low prohibition risk; efficient clearance process" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "EAG 2021 EC-cleared; competitive auction satisfies CEEAG proportionality; no retroactive modification history" },
+    "overall_stop_go": "GREEN",
+    "overall_rationale": "Austria is one of the most attractive RES investment jurisdictions in Central Europe. It combines a stable one-way EAG Marktprämie framework (100% renewable electricity target by 2030), a low-drag grid connection environment, competitive 23% CIT with IFB investment allowance, efficient courts, and an excellent political risk profile (Aa1/AA+, no retroactive modifications). Wind development is manageable with careful Bundesland selection (Burgenland, Lower Austria, Styria). The primary constraints are higher clearing prices than Germany (smaller market) and the €1m IFB cap limiting the benefit for very large CapEx projects. Suitable for most investor risk profiles including Low Risk Core Infrastructure."
+  },
+
+  "comparison_table": {
+    "_rule_5b_note": "Rule 5B: Standardised comparison categories — identical across all jurisdiction JSONs.",
+    "1_permitting_window_months_p50": 36,
+    "1_permitting_window_scope": "Onshore wind (P50 — leading Bundesländer: Burgenland / Lower Austria)",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 25,000–150,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 25,000–150,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "15–42 (transmission-connected)",
+    "3_primary_support_mechanism": "Marktprämie (Market Premium) — EAG 2021 (BGBl I Nr. 150/2021) competitive auction",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": 23,
+    "4_effective_tax_rate_note": "23% CIT (KStG 1988 §22 as amended by Steuerreformgesetz 2022 — phased from 25% to 23% by 2024). No trade tax equivalent.",
+    "4_key_incentive": "Investitionsfreibetrag (IFB) at 15% ecological rate on qualifying RES CapEx (up to €1m base per year) — EStG 1988 §11 per Steuerreformgesetz 2022",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "ABGB (Austrian Civil Code); VIAC arbitration; EFET framework widely adopted",
+    "6_political_risk_score": 87,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 52,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 90/MWh approx. (onshore wind, indicative 2023–2024 auction contracted tariff)",
+    "8_revenue_floor_eur": "EUR 90/MWh (no conversion required — domestic currency)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "EAG auction contracted tariffs change with each round. Verify at E-Control / OeMAG official auction results (e-control.at) before use."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Austria participates in IPCEI Hy2Tech (2022). National hydrogen strategy supports electrolysis deployment. Funding via Klima- und Energiefonds.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Austria is an IPCEI Hy2Tech participant. Green hydrogen regulatory framework still developing. Verify current national hydrogen subsidy programme before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Market premium (Marktprämie) via OeMAG under Erneuerbaren-Ausbau-Gesetz (EAG) 2021.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "prohibited",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": true,
+      "source": null,
+      "notes": "Nuclear energy is prohibited in Austria under the Atomsperrgesetz 1978 and confirmed by the Bundesverfassungsgesetz für ein atomfreies Österreich 1999. No SMR programme possible under current constitutional framework."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Landlocked. No LNG terminal possible. Receives gas via pipeline (BAUMGARTEN hub). LNG not applicable for direct investment."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Austria has gas-fired generation capacity. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for CCGT plants below 270gCO2e/kWh lifecycle threshold. No formal capacity market; energy-only market. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Austrian biowaste support under EAG 2021 framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Austria has no coal-fired power generation.",
+      "source": null,
+      "notes": "Austria does not operate coal power stations. EU Taxonomy-excluded."
+    }
+  }
+}

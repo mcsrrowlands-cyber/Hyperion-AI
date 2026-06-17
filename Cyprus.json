@@ -1,0 +1,405 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Cyprus",
+    "local_name": "Κύπρος (Kypros) / Kıbrıs",
+    "iso_code": "CY",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency since 1 January 2008",
+    "currency_eur_rate_source": "Cyprus adopted the Euro on 1 January 2008.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Cyprus RES support parameters are set by CERA (Cyprus Energy Regulatory Authority). The EuroAsia Interconnector (Cyprus–Greece–Israel subsea cable) will materially change the island electricity market when operational — verify current status at euroasia-interconnector.com. Verify CERA publications at cera.org.cy before use.",
+    "material_constraint_warning": "CRITICAL: Cyprus is a non-interconnected island electricity system with NO current physical connection to the European mainland grid. This is the defining operational constraint for the jurisdiction. All RES projects must be assessed against island grid absorption capacity. The EuroAsia Interconnector project, if completed, will transform this position — verify current project status."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Law on Promotion of Energy from Renewable Sources — Law 57(I)/2009, as amended", "relevance": "Primary RES support law; establishes feed-in premium and auction framework; defines CERA regulatory role" },
+      { "instrument": "Regulation of the Electricity Market Law — Law 122(I)/2003, as amended", "relevance": "Framework electricity market law; licensing; grid connection rights; EAC (Electricity Authority of Cyprus) role" },
+      { "instrument": "National Energy and Climate Plan (NECP) Cyprus 2021–2030", "relevance": "23% RES target in gross final energy consumption by 2030; 26% in electricity by 2030" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Town and Country Planning Law (Cap. 96) as amended", "relevance": "Primary planning and development permission framework; administered by Town Planning and Housing Department" },
+      { "instrument": "Environmental Impact Assessment Law — Law 140(I)/2005 as amended", "relevance": "EIA for RES projects above threshold; Department of Environment" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Income Tax Law — Law 118(I)/2002 as amended", "relevance": "12.5% corporate income tax — one of the lowest in the EU" },
+      { "instrument": "Value Added Tax Law — Law 95(I)/2000 as amended", "relevance": "19% standard VAT; reduced rates for certain services" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for RES support scheme assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES measures" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452 — Cyprus has implemented screening via Ministry of Energy, Commerce and Industry", "relevance": "Energy critical infrastructure notification requirement" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Cypriot permitting is a multi-stage process administered primarily by CERA and local authorities. The primary constraint is NOT permitting per se but rather island grid absorption capacity. Projects must secure grid capacity confirmation from TSOC before investment commitment. The government of Cyprus controls only the southern part of the island — northern Cyprus (occupied since 1974) is not covered.",
+    "solar_utility": {
+      "primary_authority": "CERA (licence); Town Planning and Housing Department (development permission); Department of Environment (EIA)",
+      "primary_process": "CERA Licence → Planning Permission (Town Planning Dept) → EIA (if required) → Building Permit → Grid Connection Agreement with TSOC/EAC → Commissioning",
+      "legal_basis": "Law 57(I)/2009; Town and Country Planning Law; EIA Law 140(I)/2005",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 18,
+      "timeline_max_months": 36,
+      "pre_application_months_typical": 6,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Administrative Court of Cyprus; Supreme Court",
+      "notes": "Cyprus has excellent solar resource (1,900–2,000 kWh/kWp p.a. — among the highest in the EU). Solar permitting is manageable. The binding constraint is grid connection capacity given the island's closed electricity system."
+    },
+    "onshore_wind": {
+      "primary_authority": "CERA; Town Planning Dept; Department of Environment",
+      "primary_process": "CERA Licence → Planning Permission → EIA → Building Permit → Grid Connection",
+      "legal_basis": "Law 57(I)/2009; Town and Country Planning Law",
+      "timeline_p50_months": 36,
+      "timeline_min_months": 24,
+      "timeline_max_months": 54,
+      "pre_application_months_typical": 12,
+      "appeal_risk": "medium",
+      "notes": "Cyprus has moderate onshore wind resource (capacity factors 25–32% at good sites in Troodos/southern ranges). Tourism is a major industry and visual impact on coastal zones is politically sensitive. Wind development area is constrained by island geography."
+    },
+    "offshore_wind": {
+      "applicable_note": "Cyprus has Exclusive Economic Zone (EEZ) in eastern Mediterranean. Offshore RES development is nascent — no projects commissioned. Proximity to contested maritime areas (Lebanon, Israel, Egypt EEZ delimitation agreements) adds complexity. EuroAsia Interconnector uses submarine cable through similar waters.",
+      "timeline_p50_months": 144,
+      "notes": "Not a near-term investment opportunity."
+    },
+    "battery_storage_utility": {
+      "primary_process": "CERA licence; planning permission; building permit; grid connection",
+      "legal_basis": "Regulation of Electricity Market Law; Law 57(I)/2009",
+      "timeline_p50_months": 18,
+      "notes": "BESS is strategically important for Cyprus's island grid stability and to enable higher RES penetration. TSOC (Transmission System Operator of Cyprus) has identified storage as critical for RES integration given island grid constraints. EuroAsia Interconnector completion will reduce but not eliminate the storage requirement."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "TSOC Ltd (Transmission System Operator of Cyprus)", "region": "Cyprus national transmission system (subsidiary of EAC)" }
+    ],
+    "distribution_operators": "EAC (Electricity Authority of Cyprus) — integrated utility; distribution role alongside generation",
+    "regulatory_authority": "CERA (Cyprus Energy Regulatory Authority — Ρυθμιστική Αρχή Ενέργειας Κύπρου)",
+    "legal_basis": "Regulation of Electricity Market Law §§15–25; CERA Grid Code",
+    "island_system_critical_note": "CRITICAL: Cyprus operates a non-interconnected island electricity system. There is NO physical connection to the European mainland grid or to any neighbouring country's grid (as of 2025 — verify EuroAsia Interconnector status). This means: (1) no cross-border balancing; (2) instantaneous RES penetration is strictly capped by TSOC for grid stability; (3) curtailment can occur even during strong resource conditions; (4) the effective maximum RES capacity the island system can absorb without storage is limited.",
+    "res_penetration_cap": "TSOC imposes instantaneous RES penetration limits to maintain grid frequency stability on the island system. These caps vary by time of year and grid load conditions. Exceeding caps requires storage or load management.",
+    "euroasia_interconnector": {
+      "description": "The EuroAsia Interconnector is a proposed EU Project of Common Interest (PCI) consisting of a high-voltage direct current (HVDC) submarine cable connecting Cyprus to Greece (Crete) and Israel.",
+      "capacity_gw": 2.0,
+      "significance": "If completed, would END Cyprus's status as a non-interconnected island for electricity purposes — transformational for RES investment capacity",
+      "status_note": "Project has been in development for many years with multiple delays. Verify current completion timeline at euroasia-interconnector.com before factoring into investment thesis.",
+      "_staleness_warning": "EuroAsia Interconnector status must be independently verified on analysis date. Do not assume completion on any specific timeline."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 24, "range": "18–42", "notes": "Grid capacity confirmation is the critical gating factor — not just connection timeline" },
+      "distribution_connected": { "p50": 18, "range": "12–30" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 25000,
+      "range_high": 120000,
+      "notes": "Connection costs regulated by CERA. Island system constraints mean connection cost is secondary to capacity availability."
+    },
+    "operational_drag_assessment": "HIGH — island grid absorption is the structural barrier; TSOC penetration caps limit viable project capacity; EuroAsia Interconnector would transform this position if completed"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The current Cypriot RES support includes both feed-in premium (for competitive auction winners) and transitional FiT for some existing/small projects. The new competitive tender framework provides a ONE-WAY premium. Verify current mechanism structure with CERA and local counsel — Cyprus has been evolving its support scheme under RED II transposition.",
+    "primary_mechanism": "Feed-in Premium (competitive auction) — transitioning from FiT to auction-based under Law 57(I)/2009 amendments",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "CERA",
+    "legal_basis": "Law 57(I)/2009 as amended; CERA Decisions on auction parameters",
+    "mechanism_description": {
+      "summary": "For auction-based projects: generator wins tender and receives reference price. Sells electricity on Cyprus market (currently dominated by EAC). Premium = max(0, reference price − market price). Island market pricing is distinct from European continental markets.",
+      "island_market_note": "Cyprus electricity prices on the island market are significantly influenced by EAC's regulated tariff structure, oil generation costs (diesel/heavy fuel oil historically dominant), and the absence of mainland interconnection. Market price reference for premium calculation is the Cypriot island market price — not European spot prices.",
+      "upside_treatment": "UNCAPPED — one-way mechanism; no clawback above reference price",
+      "contract_term_years": 20,
+      "verification_note": "Cyprus support scheme parameters are set by CERA and evolve frequently. Verify current auction rules, contract terms, and reference prices at cera.org.cy before project commitment."
+    },
+    "auction": {
+      "administrator": "CERA",
+      "frequency": "Limited — Cyprus auction programme is small given island grid capacity constraints",
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Very limited auction history. Verify at CERA before use.",
+        "solar_pv": { "eur_mwh_range_low": 55, "eur_mwh_range_high": 85, "notes": "Wide range reflects island premium and limited auction history" },
+        "onshore_wind": { "eur_mwh_range_low": 65, "eur_mwh_range_high": 95 }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Cyprus depreciation at 12.5% CIT rate — low absolute timing benefit; primary tax advantage is the 12.5% rate itself.",
+    "corporation_tax_structure": {
+      "rate_pct": 12.5,
+      "legal_basis": "Income Tax Law §§24–28 — 12.5% CIT; one of the lowest in the EU",
+      "dividend_withholding_tax_pct": 0.0,
+      "dividend_wht_note": "Cyprus imposes ZERO withholding tax on dividends paid to non-resident shareholders — significant structural advantage for holding company structures",
+      "special_defence_contribution": {
+        "rate_pct": 17.0,
+        "applies_to": "Dividend income received by Cyprus tax-resident companies and individuals (Special Defence Contribution — SDC); does NOT apply to non-resident shareholders",
+        "legal_basis": "Special Contribution for the Defence of the Republic Law",
+        "note": "SDC applies to Cyprus residents only. Non-resident corporate investors receive dividends free of Cypriot WHT."
+      }
+    },
+    "combined_effective_tax_rate_range_pct": {
+      "standard": 12.5,
+      "notes": "12.5% CIT plus potential SDC for resident recipients. For non-resident corporate investors: 12.5% CIT at operating company level with 0% dividend WHT. Highly competitive jurisdiction for holding and finance structures."
+    },
+    "holding_structure_note": "Cyprus is widely used as a holding jurisdiction for European energy investments due to: (1) 12.5% CIT; (2) 0% dividend WHT to non-residents; (3) participation exemption on dividends and capital gains from qualifying subsidiaries; (4) extensive DTA network. Holding company benefits are separate from the operating economics of Cypriot RES projects themselves.",
+    "capex_incentives": {
+      "standard_depreciation": {
+        "wind_turbines_pct_per_annum": 10.0,
+        "solar_pv_pct_per_annum": 20.0,
+        "method": "straight-line",
+        "legal_basis": "Income Tax Law — depreciation rates schedule",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 12.5% CIT and 10% WACC: solar 20% p.a. straight-line (5-year basis): NPV of tax shield ≈ 10.4% of qualifying solar CapEx. Wind 10% p.a. (10-year basis): NPV ≈ 8.0%. Low CIT rate limits absolute timing benefit.",
+          "note": "Solar assets depreciated faster (20% p.a.) than in most EU jurisdictions — relative timing advantage for solar."
+        }
+      }
+    },
+    "vat": {
+      "standard_rate_pct": 19,
+      "applies_to_commercial_renewables": true,
+      "input_vat_recovery": "Available for VAT-registered businesses",
+      "legal_basis": "VAT Law — Law 95(I)/2000"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "Medium",
+    "bankability_rating": "Medium-Low",
+    "legal_basis": "Contract Law (Cap. 149) — Cyprus contract law is based on English common law (Cyprus was under British administration 1878–1960); no bespoke PPA statute",
+    "jurisdiction_enforcement": "Cyprus courts apply English common law principles — well-understood by international investors. Commercial proceedings: 2–4 years. ICC arbitration recommended for high-value transactions.",
+    "market_liquidity": "Limited — small island economy; thin corporate PPA market",
+    "active_corporate_buyers": "Limited — primarily large hotels/resort operators, retail chains, industrial companies on the island",
+    "typical_contract_term_years": { "min": 3, "max": 10 },
+    "island_market_note": "The Cypriot electricity market is very small (~2 TWh p.a. consumption). Corporate PPA market is thin. EAC is the dominant offtaker. Retail customers face high electricity prices (one of highest in EU) due to island diesel/fuel oil generation costs — creating strong economics for self-consumption solar but limited third-party PPA market.",
+    "english_law_note": "Cyprus's English common law heritage means PPA documentation concepts are well-understood. For international investors, Cyprus common law courts are more familiar than many EU civil law jurisdictions.",
+    "cross_border_enforceability": "High — English common law basis; ICC arbitration; EU enforcement regime applies; NY Convention signatory"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 72,
+    "credit_ratings": {
+      "moodys": "Ba1",
+      "sp": "BBB-",
+      "fitch": "BBB-",
+      "source_note": "Cyprus regained investment grade from S&P and Fitch post-banking crisis. Moody's at Ba1. Verify current ratings.",
+      "_staleness_warning": "Ratings subject to ongoing review — verify before use."
+    },
+    "political_stability": "Medium — stable southern Cypriot government; ongoing UN-mediated Cyprus Problem (division since 1974) remains unresolved but does not materially affect southern Cyprus investment environment day-to-day",
+    "government_structure": "Presidential republic; unicameral House of Representatives (Βουλή των Αντιπροσώπων); Supreme Court",
+    "regulatory_track_record": "Medium — no retroactive RES incidents; banking crisis 2012–2013 created significant sovereign stress; post-crisis recovery trajectory is positive",
+    "retroactive_policy_incidents": [
+      { "year": "2012–2013", "description": "Banking sector crisis and EU/IMF bailout (ESM programme). Senior depositors in Laiki Bank and Bank of Cyprus were subject to bail-in (haircut). Not directly related to RES support — but demonstrates vulnerability to external shock and precedent for exceptional measures.", "severity": "Medium for energy investors — not directly RES-related; relevant for sovereign risk assessment" }
+    ],
+    "cyprus_problem": {
+      "description": "Northern Cyprus has been under Turkish military occupation since 1974. The Republic of Cyprus (EU member) governs approximately 59% of the island (southern part). The Turkish Republic of Northern Cyprus (TRNC) is recognised only by Turkey. UN-mediated reunification talks have been intermittent.",
+      "investment_impact": "Projects in the Government of Cyprus-controlled area are unaffected by the division for operational purposes. However: (1) overall island area available is reduced; (2) offshore EEZ delimitation in eastern Mediterranean is contested with Turkey; (3) geopolitical risk context for investors."
+    },
+    "expropriation_risk": "Low in Government-controlled area — EU member state; ECHR; English common law property rights",
+    "currency_risk": "None — EUR domestic",
+    "score_rationale": "Deductions from 100: banking crisis bail-in precedent (-8), Moody's sub-investment-grade Ba1 (-5), Cyprus Problem geopolitical context (-4), thin corporate market and judiciary capacity (-5), island system constraint as structural economic risk (-6). Score 72 reflects genuine EU member stability with unique legacy and structural risks."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 82,
+    "component_scores": {
+      "grid_connection_drag": { "score": 92, "assessment": "EXTREME — island system absorption caps are a fundamental structural barrier; TSOC penetration limits mean effective capacity for new RES is tightly capped without storage; EuroAsia Interconnector would transform this if completed" },
+      "permitting_drag_solar": { "score": 40, "assessment": "LOW-MEDIUM — planning permission process manageable; EIA required above threshold; 18–36 month P50 for solar" },
+      "permitting_drag_onshore_wind": { "score": 65, "assessment": "MEDIUM-HIGH — tourism and visual impact concerns; smaller island limits available sites; 2–5 year P50" },
+      "bureaucratic_friction": { "score": 58, "assessment": "MEDIUM — Cypriot public administration is functional; English common law basis aids commercial documentation; limited administrative capacity" },
+      "judicial_appeal_risk": { "score": 45, "assessment": "LOW-MEDIUM — English common law courts are well-understood; challenge risk lower than continental civil law peers" }
+    },
+    "primary_bottleneck": "Island grid absorption capacity — TSOC penetration limits are the single most material constraint; without EuroAsia Interconnector or significant BESS, the island system cannot absorb additional large-scale RES",
+    "score_rationale": "Score 82 dominated by grid absorption constraints. Permitting is reasonable. Island system is the structural constraint that no permitting reform can fix without physical interconnection or storage."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "EU FDI Screening Regulation (EU) 2019/452 — implementation via Ministry of Energy, Commerce and Industry",
+    "energy_sector_mandatory_notification": true,
+    "practical_risk": "Low for OECD investors — Cyprus is historically very open to FDI",
+    "notes": "Cyprus has one of the most open FDI environments in the EU. Long history of attracting international investment. Basic screening applies for energy critical infrastructure but low prohibition risk for OECD investors."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01",
+    "law_57_state_aid_status": {
+      "instrument": "Law 57(I)/2009 competitive auction framework",
+      "status": "Evolving — Cyprus has been transitioning its RES support to comply with CEEAG competitive auction requirements. Verify current EC clearance status at competition.ec.europa.eu.",
+      "_staleness_warning": "Cyprus support scheme is in transition. EC clearance status must be verified before project commitment."
+    },
+    "retrospective_clawback_risk": { "assessment": "Low for projects under cleared competitive auction framework" }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Cyprus is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY premium — uncapped upside above reference price. Note: island electricity price dynamics are distinct from continental European spot markets.",
+    "illustrative_solar_fip": {
+      "reference_price_eur_mwh_approx": 68,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct_dc": 20,
+      "typical_capex_eur_per_mw_dc": 620000,
+      "effective_tax_rate_pct": 12.5,
+      "island_note": "20% capacity factor reflects excellent Cypriot irradiation (1,900–2,000 kWh/kWp p.a.). Grid absorption is the critical constraint — project size must be assessed against available TSOC capacity."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
+    "permitting_window_solar": { "rag": "AMBER", "rationale": "Permitting manageable; grid capacity confirmation is the critical gating factor before permitting investment is worthwhile" },
+    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "Tourism/visual constraints and limited island geography create real limits; 2–5 year P50 achievable for well-sited projects" },
+    "grid_connection": { "rag": "RED", "rationale": "Island system absorption is a structural RED constraint; TSOC caps limit viable capacity; EuroAsia Interconnector transformational if completed — verify status before investment" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "Auction framework evolving; island market pricing is distinct from continental; CERA as counterparty is credible; limited auction history" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "12.5% CIT one of lowest in EU; 0% dividend WHT for non-residents; English common law familiar to international investors; solar depreciation at 20% p.a." },
+    "ppa_enforceability": { "rag": "AMBER", "rationale": "English common law basis is advantageous; thin corporate offtaker market; high electricity prices on island create self-consumption demand" },
+    "political_risk": { "rag": "AMBER", "rationale": "Improving post-banking crisis; Moody's Ba1; Cyprus Problem context; EU member; 0% dividend WHT attracts international holding structures" },
+    "operational_drag": { "rag": "RED", "rationale": "Score 82 — island grid absorption is extreme RED; overall drag heavily influenced by grid constraint" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Cyprus offers exceptional solar resource (1,900–2,000 kWh/kWp p.a. — highest in the EU), a highly competitive 12.5% CIT with 0% dividend WHT for non-residents, and an English common law legal framework. The fundamental constraint is the island electricity system — without the EuroAsia Interconnector, new large-scale RES development capacity is tightly limited by TSOC grid absorption caps. Cyprus should be treated as a HIGH PRIORITY jurisdiction conditional on EuroAsia Interconnector completion. The holding/finance jurisdiction advantages (12.5% CIT, 0% WHT) are valid and separate from the RES development constraints."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 36,
+    "1_permitting_window_scope": "Onshore wind",
+    "1_permitting_window_solar_p50_months": 24,
+    "2_grid_connection_cost_native": "EUR 25,000–120,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 25,000–120,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "18–42 (subject to TSOC capacity availability)",
+    "3_primary_support_mechanism": "Feed-in Premium (competitive auction) — Law 57(I)/2009 as amended; administered by CERA",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": 12.5,
+    "4_effective_tax_rate_note": "12.5% CIT (Income Tax Law). 0% dividend WHT for non-resident shareholders. No regional trade tax. Highly competitive.",
+    "4_key_incentive": "12.5% CIT + 0% dividend WHT for non-residents; solar depreciation at 20% p.a.; English common law legal certainty",
+    "5_ppa_enforceability_rating": "Medium",
+    "5_ppa_legal_basis": "Cap. 149 Contract Law (English common law basis); ICC arbitration recommended",
+    "6_political_risk_score": 72,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 82,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 68/MWh approx. (solar, indicative reference price — very limited auction history; island market pricing distinct from continental)",
+    "8_revenue_floor_eur": "EUR 68/MWh (EUR domestic)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Verify at CERA (cera.org.cy) before use. Island market pricing is distinct from continental European electricity markets."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Cyprus is not an IPCEI participant. High solar irradiation offers potential for electrolysis-based green hydrogen. EU funding available via Recovery and Resilience Facility. Regulatory framework nascent."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Feed-in premium (market premium) under national renewable energy legislation administered by CERA.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "no_policy",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": null,
+      "notes": "No nuclear energy policy in Cyprus. Island grid size and electricity demand make large-scale nuclear unviable. No SMR discussion at policy level."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "No LNG import terminal. FSRU project at Vasilikos under consideration for energy security. Significant domestic gas reserves (Aphrodite field) could support LNG export."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Cyprus relies on oil-fired generation with gas transition planned. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. Island grid; no capacity market. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Small island market limits biowaste-to-energy scale. Verify current Cypriot bioenergy support framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

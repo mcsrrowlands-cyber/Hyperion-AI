@@ -1,0 +1,413 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Croatia",
+    "local_name": "Hrvatska",
+    "iso_code": "HR",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency since 1 January 2023",
+    "currency_eur_rate_source": "Croatia adopted the Euro on 1 January 2023, replacing the Croatian kuna (HRK) at a fixed irrevocable rate of 7.53450 HRK/EUR. All current transactions are in EUR.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Croatian RES auction clearing prices are published by HROTE (Hrvatska regulatorna agencija za mrežne djelatnosti / Croatian Energy Market Operator). Verify at hrote.hr before use."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Act on Renewable Energy Sources and High-Efficiency Cogeneration (Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji) 2021, as amended", "relevance": "Primary RES support law; establishes market premium (tržišna premija) via HROTE; defines one-way sliding premium mechanism; transposes EU RED II" },
+      { "instrument": "Energy Act (Zakon o energiji) 2018, as amended", "relevance": "Framework energy law; licensing; HERA regulatory authority powers; grid connection rights" },
+      { "instrument": "National Energy and Climate Plan (NECP) Croatia 2021–2030", "relevance": "36.4% renewable energy target by 2030; drives auction volume planning" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Physical Planning Act (Zakon o prostornom uređenju) 2013, as amended", "relevance": "Spatial planning framework; project location permits (lokacijska dozvola); primary planning framework for RES" },
+      { "instrument": "Act on Environmental and Nature Protection Impact Assessment 2018", "relevance": "EIA and appropriate assessment (AA) for Natura 2000; mandatory for wind farms above threshold" },
+      { "instrument": "Building Act (Zakon o gradnji) 2013, as amended", "relevance": "Building permits (građevinska dozvola); construction standards" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Corporate Income Tax Act (Zakon o porezu na dobit — ZPD) — 18% standard rate", "relevance": "18% CIT (standard); 10% reduced rate for taxpayers with annual revenue ≤ EUR 1 million" },
+      { "instrument": "Value Added Tax Act (Zakon o porezu na dodanu vrijednost)", "relevance": "25% standard VAT rate" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Croatian RES support scheme assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES measures" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Act on Strategic Investment Projects of the Republic of Croatia (Zakon o strateškim investicijskim projektima RH)", "relevance": "Fast-track status for qualifying strategic investments; reduced permitting timelines; Ministry of Economy as lead coordinator" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452 — implemented via Ministry of Economy", "relevance": "Croatia has implemented basic FDI screening; energy critical infrastructure notification applies" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Croatian permitting is governed by a three-stage process: location permit → building permit → use permit. RES projects additionally require production licence from HERA and grid connection agreement with HOPS/HEP-ODS. Island projects face additional complexity due to island grid constraints. P50 timelines from formal application.",
+    "solar_utility": {
+      "primary_authority": "Ministry of Physical Planning, Construction and State Assets (lokacijska dozvola); HERA (production licence); Ministry of Economy for EIA coordination",
+      "primary_process": "Production Licence (HERA) → EIA (if required) → Location Permit (lokacijska dozvola) → Building Permit (građevinska dozvola) → Grid Connection Agreement (HOPS/HEP-ODS) → Use Permit",
+      "legal_basis": "Act on RES 2021; Physical Planning Act 2013; Building Act 2013",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 18,
+      "timeline_max_months": 42,
+      "pre_application_months_typical": 9,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Administrative Court (Upravni sud); High Administrative Court (Visoki upravni sud); Constitutional Court (Ustavni sud)",
+      "notes": "Croatia has good solar resource (1,300–1,650 kWh/kWp p.a. on Adriatic coast). Ground-mounted solar permitting is relatively manageable. Dalmatian coast and islands have excellent resource but face grid and landscape constraints."
+    },
+    "onshore_wind": {
+      "primary_authority": "Ministry of Physical Planning; HERA; Ministry of Environment for EIA/AA",
+      "primary_process": "Production Licence → EIA + Appropriate Assessment (AA) for Natura 2000 → Location Permit → Building Permit → Grid Connection → Use Permit",
+      "legal_basis": "Act on RES 2021; Act on Environmental and Nature Protection Impact Assessment 2018; Physical Planning Act",
+      "timeline_p50_months": 42,
+      "timeline_min_months": 30,
+      "timeline_max_months": 72,
+      "pre_application_months_typical": 18,
+      "appeal_risk": "medium-high",
+      "appeal_mechanism": "Administrative courts; High Administrative Court; Ustavni sud",
+      "setback_rules": "Typically 500m from residential areas; karst terrain Natura 2000 constraints material — Croatian Dinaric karst supports significant biodiversity; griffon vulture colonies in Kvarner area create protected zone restrictions",
+      "notes": "Croatia has strong wind resource on the Adriatic coast and Dalmatian hinterland (bura and jugo winds). Karst terrain and Natura 2000 designations (approximately 37% of Croatian territory) are the primary permitting constraints. Griffon vulture (Gyps fulvus) colonies in Kvarner create specific wind constraints. Existing installed capacity is significant (~1 GW) with more pipeline."
+    },
+    "offshore_wind": {
+      "primary_authority": "Ministry of Economy; Ministry of Physical Planning; HERA; Ministry of Maritime Affairs",
+      "primary_process": "Offshore zone designation → HERA licence → EIA → Location Permit → Grid Connection",
+      "legal_basis": "Act on RES 2021 §§40–55 (offshore provisions); Maritime Domain and Seaports Act",
+      "timeline_p50_months": 96,
+      "notes": "Croatian Adriatic offshore wind — nascent framework; no projects commissioned. Adriatic is shared with Italy and Slovenia — cross-border maritime coordination required. Tourism industry is politically influential and may oppose visible offshore turbines."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Production licence from HERA; building permit; grid connection with HOPS/HEP-ODS",
+      "legal_basis": "Act on RES 2021 (storage provisions); Energy Act 2018",
+      "timeline_p50_months": 18,
+      "notes": "BESS market growing in Croatia. Co-located BESS with RES projects benefits from streamlined permitting. Island BESS for grid stability on Dalmatian islands has specific support pathways."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "HOPS d.o.o. (Hrvatska elektroprivreda Operator prijenosnog sustava — Croatian Transmission System Operator)", "region": "Croatian national transmission system" }
+    ],
+    "distribution_operators": "HEP-ODS d.o.o. (Hrvatska elektroprivreda — Operator distribucijskog sustava) — dominant distribution operator across most of Croatia",
+    "regulatory_authority": "HERA (Hrvatska energetska regulatorna agencija — Croatian Energy Regulatory Agency)",
+    "legal_basis": "Energy Act 2018 §§60–75 (grid connection rights); HERA Grid Codes",
+    "priority_access": {
+      "applicable": true,
+      "mechanism": "Priority dispatch for RES under Energy Act 2018 and EU Electricity Directive 2019/944 (transposed)",
+      "description": "RES generators have statutory priority dispatch. Curtailment compensation framework under HERA Grid Code."
+    },
+    "island_grid_constraints": {
+      "description": "Croatian Dalmatian islands rely on submarine cables from the mainland. RES penetration on smaller islands is limited by cable capacity and local grid stability requirements.",
+      "interconnected_islands_note": "Major islands (Krk, Brač, Hvar, Korčula) have mainland interconnections but capacity headroom varies. Smaller inhabited islands face greater constraints.",
+      "island_bess_opportunity": "Island BESS projects co-located with RES can enable higher RES penetration on island grids — emerging commercial opportunity."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 24, "range": "18–42" },
+      "distribution_connected": { "p50": 18, "range": "12–30" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 25000,
+      "range_high": 150000,
+      "notes": "Connection costs regulated by HERA. Island submarine connection costs substantially higher."
+    },
+    "operational_drag_assessment": "MEDIUM — mainland grid adequate; island grid constraints are the primary bottleneck for coastal/island projects"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Croatian market premium (tržišna premija) under the Act on RES 2021 is a ONE-WAY mechanism. Premium = max(0, reference price − monthly average HUPX/regional market price). When market price exceeds the reference price, premium is zero — generators retain full merchant upside with NO clawback.",
+    "primary_mechanism": "Tržišna premija (Market Premium) — competitive auction",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "HROTE (Hrvatska regulatorna agencija za mrežne djelatnosti / Croatian Energy Market Operator)",
+    "legal_basis": "Act on RES 2021 §§20–38; HROTE auction rules",
+    "mechanism_description": {
+      "summary": "Generator wins competitive auction and receives a reference price. Sells electricity on CROPEX (Croatian Power Exchange) or bilateral market. HROTE pays premium = max(0, reference price − monthly average market price). No clawback when market exceeds reference price.",
+      "upside_treatment": "UNCAPPED — premium is zero when market price exceeds reference price",
+      "downside_treatment": "PROTECTED — HROTE pays the shortfall",
+      "contract_term_years": 15,
+      "mechanism_verification_note": "Verify current contract term and mechanism parameters at hrote.hr"
+    },
+    "auction": {
+      "administrator": "HROTE",
+      "frequency": "Auctions conducted periodically; verify current calendar at hrote.hr",
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Verify at HROTE official auction results before use.",
+        "onshore_wind": { "eur_mwh_range_low": 55, "eur_mwh_range_high": 75 },
+        "solar_pv": { "eur_mwh_range_low": 50, "eur_mwh_range_high": 68 }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Croatian depreciation timing benefit calculated on 18% CIT rate base.",
+    "corporation_tax_structure": {
+      "rate_pct_standard": 18.0,
+      "rate_pct_reduced": 10.0,
+      "reduced_rate_condition": "10% rate for taxpayers with annual revenue ≤ EUR 1 million per year",
+      "legal_basis": "ZPD (Corporate Income Tax Act); standard rate 18%; reduced rate 10% for qualifying small entities",
+      "dividend_withholding_tax_pct": 10.0,
+      "eu_parent_subsidiary_exemption": "0% WHT for qualifying EU parent companies"
+    },
+    "combined_effective_tax_rate_range_pct": {
+      "standard": 18.0,
+      "notes": "18% CIT with no regional trade tax equivalent. Effective rate is close to 18%."
+    },
+    "capex_incentives": {
+      "standard_depreciation": {
+        "wind_turbines_useful_life_years": 20,
+        "solar_pv_useful_life_years": 20,
+        "method": "straight-line as standard under ZPD",
+        "legal_basis": "ZPD §§12–13 (depreciation)",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 18% CIT and 10% WACC: straight-line 20 years (5% p.a.): NPV of tax shield ≈ 13.9% of qualifying CapEx. No specific accelerated depreciation for RES in current law beyond standard straight-line.",
+          "note": "Croatia does not offer enhanced depreciation equivalent to Germany's degressive AfA or Austria's IFB for RES. Standard straight-line applies."
+        }
+      },
+      "investment_incentives": {
+        "scheme": "Act on Strategic Investment Projects — fast-track designation, infrastructure support, potential State Aid for qualifying investments",
+        "legal_basis": "Act on Strategic Investment Projects of the Republic of Croatia",
+        "note": "Qualifying energy investments may receive strategic status — primarily reduces permitting timelines rather than providing direct financial incentives"
+      }
+    },
+    "vat": {
+      "standard_rate_pct": 25,
+      "notes": "25% standard VAT — highest standard rate in the EU alongside Hungary. Input VAT recoverable for VAT-registered businesses.",
+      "legal_basis": "VAT Act (Zakon o PDV-u)"
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "Medium-High",
+    "bankability_rating": "Medium",
+    "legal_basis": "Civil Obligations Act (Zakon o obveznim odnosima — ZOO); contractual freedom; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Croatian courts are functional but slower than northern European peers. Commercial disputes: 2–4 years. Zagreb Arbitration Court (Stalno arbitražno sudište HGK) available.",
+    "market_liquidity": "Growing — small but developing corporate PPA market",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Croatian industrial companies (JANAF, Petrokemija), regional manufacturers, tourism sector companies, international corporations with Croatian operations",
+    "typical_contract_term_years": { "min": 5, "max": 12 },
+    "credit_risk_note": "Thin Croatian corporate credit market. International parent guarantees recommended for higher-value transactions.",
+    "cross_border_enforceability": "Medium-High — EU enforcement regime applies; NY Convention signatory"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 76,
+    "credit_ratings": {
+      "moodys": "Baa2",
+      "sp": "BBB+",
+      "fitch": "BBB+",
+      "source_note": "Croatia achieved investment grade ratings and Eurozone membership in 2023. Verify current ratings.",
+      "_staleness_warning": "Ratings subject to review — verify before use."
+    },
+    "political_stability": "Medium-High — stable democracy since 2000; EU and NATO member; Eurozone membership (2023) is a positive structural anchor; coalition governments are manageable",
+    "government_structure": "Parliamentary republic; unicameral Parliament (Hrvatski sabor); Constitutional Court",
+    "regulatory_track_record": "Medium — Act on RES 2021 provides improved framework; no major retroactive RES incidents; historical concerns about administrative capacity",
+    "retroactive_policy_incidents": [
+      { "year": "None material", "description": "Croatia has not enacted retroactive modifications to contracted RES revenues. The transition from FiT to market premium was prospective.", "severity": "N/A" }
+    ],
+    "expropriation_risk": "Low — EU/NATO member",
+    "currency_risk": "None — EUR adopted January 2023",
+    "euro_adoption_note": "Croatia's Eurozone accession in January 2023 materially reduced currency risk and enhanced investor confidence. Combined with Schengen area entry (January 2023), this represents a significant step-change in Croatia's investment environment.",
+    "score_rationale": "Deductions from 100: administrative capacity constraints (-8), slower judiciary (-6), corruption risk in local administration (-5), relatively new Eurozone member / EU accession 2013 (+0 benefit already incorporated). Score 76 reflects solid improvement trajectory."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 60,
+    "component_scores": {
+      "grid_connection_drag": { "score": 50, "assessment": "MEDIUM — mainland grid adequate; island submarine cable capacity is the primary constraint for coastal/island projects" },
+      "permitting_drag_solar": { "score": 42, "assessment": "LOW-MEDIUM — three-stage process manageable; 18–42 month P50; improving under Act on RES 2021" },
+      "permitting_drag_onshore_wind": { "score": 65, "assessment": "MEDIUM-HIGH — Natura 2000 (37% of territory), karst terrain, griffon vulture constraints create real delays; 3–6 year P50" },
+      "bureaucratic_friction": { "score": 58, "assessment": "MEDIUM — Croatian administration is improving but multi-agency coordination still creates friction; digitalisation ongoing" },
+      "judicial_appeal_risk": { "score": 55, "assessment": "MEDIUM — administrative court system functional; organised environmental opposition growing; Natura 2000 is primary challenge vector" }
+    },
+    "primary_bottleneck": "Natura 2000 (37% of territory) — one of the highest coverage rates in the EU; griffon vulture constraints for wind; island grid capacity for coastal projects",
+    "score_rationale": "Score 60 reflects a manageable development environment for well-sited solar; wind requires careful Natura 2000 site screening."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "EU FDI Screening Regulation (EU) 2019/452 — basic implementation via Ministry of Economy",
+    "energy_sector_mandatory_notification": true,
+    "practical_risk": "Low for OECD investors; elevated for non-EU/non-OECD",
+    "notes": "Croatia's FDI screening is basic but improving. Strategic Investment Act provides fast-track for qualifying investments. Low prohibition risk for OECD investors in RES."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01",
+    "act_on_res_state_aid_status": {
+      "instrument": "Act on RES 2021 market premium",
+      "status": "Competitive auction mechanism satisfies CEEAG proportionality. Verify EC clearance at competition.ec.europa.eu."
+    },
+    "retrospective_clawback_risk": { "assessment": "Low — no retroactive incident history; cleared competitive auction framework" }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Croatia is EUR-denominated since January 2023 — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY mechanism — uncapped merchant upside above reference price.",
+    "illustrative_solar_tržišna_premija": {
+      "reference_price_eur_mwh_approx": 59,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct_dc": 17,
+      "typical_capex_eur_per_mw_dc": 560000,
+      "effective_tax_rate_pct": 18
+    },
+    "illustrative_wind_tržišna_premija": {
+      "reference_price_eur_mwh_approx": 65,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 33,
+      "typical_capex_eur_per_mw": 1300000,
+      "effective_tax_rate_pct": 18,
+      "note": "Dalmatian hinterland and Velebit area have strong wind resource (30–38% capacity factors for well-sited projects)."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
+    "permitting_window_solar": { "rag": "AMBER", "rationale": "Manageable three-stage process; 18–42 month P50; Natura 2000 site screening essential but solar has lower AA requirement than wind" },
+    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "Natura 2000 (37% territory), griffon vulture constraints, and multi-stage process require experienced local team; 3–6 year P50 but achievable" },
+    "grid_connection": { "rag": "AMBER", "rationale": "Mainland adequate; island projects require submarine cable assessment; HOPS is a competent TSO" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "Act on RES 2021 provides one-way market premium; HROTE counterparty is credible; limited auction history" },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "18% CIT competitive; 25% VAT is highest in EU (input recoverable); no enhanced CapEx incentive; Euro adoption removes FX risk" },
+    "ppa_enforceability": { "rag": "AMBER", "rationale": "ZOO provides contractual framework; courts slower than western Europe; growing corporate buyer market" },
+    "political_risk": { "rag": "GREEN", "rationale": "Baa2/BBB+ sovereign; EU/NATO member; Eurozone January 2023; no retroactive RES incidents; improving administrative trajectory" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Croatia offers solid solar and wind resource (particularly Dalmatian coast), no retroactive RES incidents, Eurozone membership since 2023, and a functioning one-way market premium framework. Natura 2000 coverage (37% of territory) is the defining permitting constraint. The 25% VAT rate is the highest standard rate in the EU — unusual and worth noting in CapEx cash flow models. Suitable for all investor profiles with appropriate Natura 2000 site selection diligence."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 42,
+    "1_permitting_window_scope": "Onshore wind",
+    "1_permitting_window_solar_p50_months": 24,
+    "2_grid_connection_cost_native": "EUR 25,000–150,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 25,000–150,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic since January 2023",
+    "2_grid_connection_timeline_months": "18–42",
+    "3_primary_support_mechanism": "Tržišna premija (Market Premium) — Act on RES 2021, competitive auction via HROTE",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": 18,
+    "4_effective_tax_rate_note": "18% standard CIT (ZPD). 10% reduced rate for revenue ≤ EUR 1m. 25% VAT (highest standard rate in EU — input recoverable). No regional trade tax.",
+    "4_key_incentive": "Standard straight-line depreciation; Strategic Investment Act fast-track for qualifying projects",
+    "5_ppa_enforceability_rating": "Medium-High",
+    "5_ppa_legal_basis": "Civil Obligations Act (ZOO); Zagreb Arbitration Court; ICC",
+    "6_political_risk_score": 76,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 60,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 65/MWh approx. (onshore wind, indicative reference price — verify at HROTE)",
+    "8_revenue_floor_eur": "EUR 65/MWh (EUR domestic)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Verify at HROTE (hrote.hr) official auction results before use."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Croatia has a national hydrogen strategy but is not an IPCEI participant. EU cohesion and recovery funds (NPOO) support hydrogen projects. Regulatory framework at early stage."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Market premium (tržna premija) under Zakon o obnovljivim izvorima energije i visokoučinkovitoj kogeneraciji (ZOIEVUK).",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Croatia shares the Krško NPP (NEK) with Slovenia (50% stake). No independent nuclear or SMR programme. NEK 2 new unit discussions relate to Slovenia-led project. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 6,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "LNG Croatia terminal at Krk Island. Regional supply point for Central/Eastern Europe."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Croatia has gas-fired generation. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Croatian bioenergy support framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

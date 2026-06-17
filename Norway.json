@@ -1,0 +1,470 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Norway",
+    "local_name": "Kongeriket Norge",
+    "iso_code": "NO",
+    "currency_native": "NOK",
+    "currency_eur_rate": 11.50,
+    "currency_eur_rate_date": "2026-06-15",
+    "currency_eur_rate_note": "NOK is a freely floating currency. NOK/EUR has been volatile (range: approximately NOK 10.0–12.5 per EUR over 2022–2026). Use rate with date; apply FX sensitivity analysis. NOK/EUR is partially correlated with oil prices and global risk sentiment.",
+    "region": "Europe",
+    "eu_member": false,
+    "eea_member": true,
+    "efta_member": true,
+    "eu_state_aid_applicable": false,
+    "state_aid_regime": "EFTA Surveillance Authority (ESA) under EEA Agreement — applies EEA State Aid rules equivalent to EU State Aid rules including EEAG/CEEAG equivalents via EEA Supplement and ESA guidelines",
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "The Grunnrenteskatt (resource rent tax) on onshore wind entered force 1 January 2024 and is among the most significant developments in European wind energy taxation. Its precise parameters, rate, and calculation methodology must be verified against the most recent Norwegian tax authorities guidance (Skatteetaten) and the text of Lov om skatt av grunnrente for landbasert vindkraft (passed Stortinget 2023) before use in any financial model. The resource rent tax fundamentally changes IRR calculations for onshore wind in Norway."
+  },
+
+  "regulatory_framework": {
+    "_critical_note": "Norway is NOT an EU member but IS an EEA/EFTA member. This means: (1) EU Directives on renewables (RED II/III) are not directly applicable but equivalent EEA provisions may apply; (2) State Aid is governed by the EFTA Surveillance Authority (ESA) — not the European Commission; (3) EU DSO/TSO regulations apply via EEA transposition; (4) Norway's hydro-dominated electricity system (approaching 92% hydro) creates a unique grid and power market context with highly variable but generally low electricity prices; (5) The elcertifikat system with Sweden has CLOSED to new Norwegian applicants — no green certificate income for new projects; (6) Norwegian financial model assumptions CANNOT be transplanted from EU comparators without adjustment for grunnrenteskatt, NOK currency risk, and hydro-dominated price dynamics.",
+    "primary_energy_legislation": [
+      { "instrument": "Energiloven — Lov av 29. juni 1990 nr. 50 om produksjon, omforming, overføring, omsetning, fordeling og bruk av energi m.m. (Energy Act)", "relevance": "Core electricity production and grid framework; NVE (Norwegian Water Resources and Energy Directorate) licensing authority" },
+      { "instrument": "Vassdragsloven / Vannressursloven — Lov av 24. november 2000 nr. 82 (Water Resources Act)", "relevance": "Water resource management; relevant for hydro; contextual for multi-use waterways in wind areas" },
+      { "instrument": "Havenergilova — Lov av 4. juni 2010 nr. 21 om fornybar energiproduksjon til havs (Offshore Energy Act / Havenergiloven)", "relevance": "Legal framework for offshore wind in Norwegian continental shelf; licensing of Sørlige Nordsjø II and Utsira Nord zones" },
+      { "instrument": "Lov om skatt av grunnrente for landbasert vindkraft — vedtatt Stortinget 2023 (Resource Rent Tax Act)", "relevance": "CRITICAL — 25% resource rent tax on onshore wind from 1 January 2024. Calculated on net income above a normal return threshold. This law FUNDAMENTALLY CHANGES the financial case for new onshore wind in Norway." }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Energiloven §§3-1 to 3-5 (konsesjon for produksjonsanlegg)", "relevance": "Production licence (konsesjon) for wind farms; issued by NVE" },
+      { "instrument": "Plan- og bygningsloven — Lov av 27. juni 2008 nr. 71 (Planning and Building Act)", "relevance": "Municipal planning (kommuneplan/reguleringsplan) — must align with NVE konsesjon" },
+      { "instrument": "Naturmangfoldloven — Lov av 19. juni 2009 nr. 100 (Nature Diversity Act)", "relevance": "Biodiversity and nature protection — significant constraint on wind energy siting" },
+      { "instrument": "Konsekvensutredningsforskriften — Forskrift av 21. juni 2017 nr. 854 (EIA Regulation)", "relevance": "Environmental Impact Assessment requirements for energy projects" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Skatteloven — Lov av 26. mars 1999 nr. 14 om skatt av formue og inntekt (Tax Act)", "relevance": "Corporate income tax (selskapsskatt) 22% (§§17-1 et seq. as applicable)" },
+      { "instrument": "Lov om skatt av grunnrente for landbasert vindkraft 2023 (Resource Rent Tax Act)", "relevance": "25% grunnrenteskatt on onshore wind from 1 January 2024" },
+      { "instrument": "Skatteloven §§14-40 to 14-48 (depreciation rules — saldoavskrivning)", "relevance": "Declining balance depreciation method; wind turbines classified in saldogruppe d (20% declining balance)" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Lov av 1. juni 2018 nr. 24 om nasjonal sikkerhet (National Security Act / Sikkerhetsloven)", "relevance": "Norwegian national security screening; energy infrastructure is a covered sector" },
+      { "instrument": "Lov av 16. desember 2022 nr. 98 om kontroll med erverv av virksomheter av sikkerhetsinteresse (FDI Screening Act — Lov om ervervsscreening)", "relevance": "Specific FDI screening law; dedicated screening mechanism for acquisitions with security implications; energy sector covered" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Norwegian onshore wind permitting went through a major political crisis 2019–2021 following the adoption of the National Wind Energy Framework (Nasjonal ramme for vindkraft) and its subsequent WITHDRAWAL following public and political backlash. Since 2021, NVE resumed individual licensing (konsesjon) but at a slower pace than 2010–2018. Key constraint: MUNICIPALITIES must actively consent — municipal siting plans are required. The permitting environment for onshore wind is politically difficult despite NVE's technical licensing capacity.",
+    "solar_utility": {
+      "primary_authority": "NVE (Norges vassdrags- og energidirektorat — Norwegian Water Resources and Energy Directorate) for grid-connected utility projects; municipal planning for smaller installations",
+      "primary_process": "NVE konsesjon (production licence) under Energiloven §3-1; kommuneplan/reguleringsplan under Plan- og bygningsloven",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 12,
+      "timeline_max_months": 48,
+      "notes": "Solar PV is a relatively new sector in Norway — low irradiation (Bergen: ~1,000 kWh/kWp/year; Oslo: ~900 kWh/kWp/year compared to Spain 1,700+). Growing interest in agri-solar and industrial rooftop. Grid-connected utility solar has smaller pipeline than wind."
+    },
+    "onshore_wind": {
+      "primary_authority": "NVE (konsesjon under Energiloven); OED (Olje- og energidepartementet — Ministry of Petroleum and Energy) for projects >10 MW on appeal or at policy level; Miljødirektoratet (Environment Agency) and Statsforvalteren for environmental conditions",
+      "primary_process": "NVE konsesjon under Energiloven §§3-1 to 3-5; EIA (konsekvensutredning) required; municipalities must consent via reguleringsplan or kommuneplanens arealdel",
+      "timeline_p50_months": 60,
+      "timeline_min_months": 36,
+      "timeline_max_months": 120,
+      "appeal_risk": "Very High — Sivilombudet (Ombudsman) and Statsforvalter appeal avenues; further to OED; judicial review via Tingrett/Lagmannsrett. Strong Norwegian environmental NGO community (Natur og Ungdom, Naturvernforbundet) — active appellants.",
+      "scoping_note": "NVE has published updated veiledere (guidance) on wind energy following 2021 policy reset. Each project requires early municipal dialogue (kommunedialog). Many municipalities actively oppose onshore wind — politically very sensitive following the 2019–2021 backlash.",
+      "national_framework_note": "CRITICAL: The Nasjonal ramme for vindkraft (National Wind Framework) was published June 2019 to identify suitable areas but was WITHDRAWN following political and public backlash in February 2021. This withdrawal created significant investor uncertainty. NVE now processes applications individually without a national spatial framework.",
+      "repowering": "Some interest in repowering existing consented sites — potentially faster than greenfield"
+    },
+    "offshore_wind": {
+      "primary_authority": "NVE (under Havenergilova); OED (policy); Fiskeridirektoratet for fisheries consultation; Forsvaret/NSM for military/security consultation",
+      "primary_process": "Offshore wind licence under Havenergilova; strategic EA; individual project assessment",
+      "soerlige_nordsjoe_ii": {
+        "description": "Sørlige Nordsjø II — bottom-fixed offshore zone, 3,000 MW capacity target. First tender round completed (Parkwind/Norsk Havvind awarded portions in 2024/2025). Grid connection via Statnett offshore grid.",
+        "capacity_gw": 3.0,
+        "distance_from_shore_km": "~140 km — fully offshore, no coastal visual impact"
+      },
+      "utsira_nord": {
+        "description": "Utsira Nord — FLOATING offshore wind zone, 1,500 MW capacity target. Tendered separately from bottom-fixed. One of world's largest floating offshore wind tenders.",
+        "capacity_gw": 1.5,
+        "technology": "Floating offshore wind — at frontier of commercial scale. Significantly higher CapEx than bottom-fixed.",
+        "note": "Utsira Nord is a globally significant project. Floating offshore wind at commercial scale is not yet proven at this magnitude. LCOE will be higher than bottom-fixed offshore."
+      },
+      "timeline_p50_months": 96,
+      "timeline_min_months": 72,
+      "timeline_max_months": 144
+    }
+  },
+
+  "grid_connection": {
+    "transmission_system_operator": "Statnett SF (100% Norwegian state-owned; SF = statsforetak / state enterprise)",
+    "regulatory_authority": "RME (Reguleringsmyndigheten for energi — Norwegian Energy Regulatory Authority; part of NVE)",
+    "legal_basis": "Energiloven; nettregulering (network regulation) by RME",
+    "electricity_market": {
+      "description": "Norway is part of the Nord Pool power market. Norwegian electricity prices are set at regional bidding zones (NO1 Bergen, NO2 Kristiansand, NO3 Trondheim/mid, NO4 Tromsø/north, NO5 region). Prices can vary SUBSTANTIALLY between zones due to transmission constraints.",
+      "price_dynamics": "Norwegian electricity prices are historically among Europe's lowest (hydro-dominated, ~92% renewable via hydro). However, in 2021–2022, prices spiked dramatically due to low reservoir levels and high European gas prices (NO2 prices reached EUR 300+/MWh). Hydro reservoir levels are the primary determinant of Norwegian price dynamics.",
+      "price_risk_note": "CRITICAL: Wind energy in Norway earns the local bidding zone price — which is highly variable depending on reservoir levels, hydro production, export capacity, and European price coupling. Do NOT assume stable Norwegian power prices. A long-term PPA is the primary means to manage price risk."
+    },
+    "interconnectors": {
+      "description": "Norway is interconnected with Sweden, Denmark, Netherlands (NorNed), Germany (NordLink), and UK (North Sea Link). These interconnectors are significant for price coupling but also for capacity crowding.",
+      "nornl": "NorNed — 700MW HVDC, NL; NordLink — 1,400MW HVDC, Germany; NSL — North Sea Link, 1,400MW HVDC, UK",
+      "congestion_note": "Interconnector capacities are frequently fully utilised, especially during high European price periods. Norwegian zone prices can diverge significantly from Continental European prices."
+    },
+    "connection_wait_time_months": {
+      "onshore_wind_transmission_connected": { "p50": 36, "range": "24–60" },
+      "offshore_via_statnett": { "p50": 48, "range": "36–84" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 50000,
+      "range_high": 300000,
+      "note": "Norway's mountainous terrain and long distances mean grid connection costs are highly site-specific and can be very high for remote onshore wind locations. Offshore connection via Statnett offshore grid under development."
+    },
+    "curtailment_risk": "low",
+    "notes": "Curtailment in Norway is unusual — the flexible hydro system means thermal constraints driving curtailment are rare. Weather-related production imbalances are managed via hydro dispatch. Main risk is price cannibalisation during high wind/high hydro periods."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: CRITICAL — Norway effectively has NO ACTIVE RENEWABLE SUPPORT SCHEME for new onshore wind or solar. The elcertifikat (green certificate) system with Sweden is CLOSED to new Norwegian applicants (closed 31 December 2021 for Norwegian projects). Offshore wind receives support via the Sørlige Nordsjø II tender contract — verify structure when awarded. New onshore wind in Norway is effectively MERCHANT. This means the entire revenue stream is Nord Pool spot price (bidding zone). FX risk (NOK), hydro reservoir price dynamics, and the grunnrenteskatt all combine to create a complex financial model requirement.",
+    "elcertifikat": {
+      "mechanism": "Elcertifikat (green certificates) joint system with Sweden",
+      "mechanism_type": "quota_certificate_system",
+      "status": "CLOSED to new Norwegian applicants from 31 December 2021",
+      "legal_basis": "Lov om elsertifikater — Lov av 24. juni 2011 nr. 42",
+      "swedish_counterpart": "Lag (2011:1200) om elcertifikat",
+      "staleness_warning": "New Norwegian wind projects commissioned after 31 December 2021 are NOT eligible for elcertifikat. Any financial model showing certificate income for new projects is INCORRECT. Legacy projects with certificates still receive income until certificate eligibility expires (15-year eligibility period from qualification date).",
+      "quota_operator": "NVE for Norwegian market; Energimyndigheten for Swedish market"
+    },
+    "offshore_soerlige_nordsjoe_ii": {
+      "mechanism": "Offshore wind support — Sørlige Nordsjø II contract",
+      "mechanism_type": "regulated_concession",
+      "status": "First tender awarded (2024/2025 timeframe) — verify current parameters",
+      "description": "The Norwegian government ran a competitive tender for Sørlige Nordsjø II capacity. Awarded developers receive long-term revenue support via a regulated contract — terms set by OED/NVE. The mechanism structure (whether two-way CfD or one-way floor) must be verified against the specific concession award documentation.",
+      "staleness_warning": "Contract terms for Sørlige Nordsjø II are project-specific and were established in the tender round. Verify all commercial parameters directly with OED/Statnett and award documentation before modelling."
+    },
+    "current_onshore_support": {
+      "mechanism": "NONE — new onshore wind is fully MERCHANT",
+      "mechanism_type": "merchant",
+      "revenue_reference": "Nord Pool System Price (Elspot) or relevant Norwegian bidding zone (NO1–NO5)",
+      "ppa_is_primary_risk_management": true,
+      "note": "Corporate PPAs with Norwegian industrial offtakers (aluminium smelters, data centres, process industry) or international trading parties are the primary revenue management tool for onshore wind developers in Norway."
+    }
+  },
+
+  "resource_rent_tax": {
+    "_criticality": "CRITICAL — the grunnrenteskatt is the defining distinguishing tax feature of Norway in this knowledge base. It does not exist in any other comparable European jurisdiction for wind energy.",
+    "grunnrenteskatt_onshore_wind": {
+      "description": "Resource Rent Tax (grunnrenteskatt) on onshore wind energy. Modelled on the existing resource rent tax for hydropower (which has existed since 1997). Introduced by Lov om skatt av grunnrente for landbasert vindkraft, passed by Stortinget in 2023, in force from 1 January 2024.",
+      "legal_basis": "Lov om skatt av grunnrente for landbasert vindkraft (2023) — exact official statute name to be confirmed in Norwegian Official Gazette (Norsk Lovtidend); implemented via amendments to Skatteloven",
+      "rate_pct": 25,
+      "effective_date": "1 January 2024",
+      "basis": "Net income above a normal return threshold ('friinntekt' — deduction for normal return on invested capital). Only excess returns (resource rent) are taxed. CapEx and OPEX are deductible; a normal return on investment is also deductible as 'friinntekt'.",
+      "friinntekt_note": "The friinntekt deduction (normal return allowance) means the effective grunnrenteskatt burden is project-specific. Projects with higher actual IRR than the friinntekt rate bear more grunnrenteskatt; projects earning only a normal return bear near-zero grunnrenteskatt. This creates a convex tax profile — high-performing sites carry a significantly higher effective tax rate.",
+      "total_effective_tax_rate_high_return": "CIT 22% + grunnrenteskatt 25% on excess returns = effective rate can approach 40–47% depending on project economics. At a friinntekt rate of say 5% and a project IRR of 12%, the marginal rate on excess returns is very high.",
+      "investor_concern": "The grunnrenteskatt was announced suddenly (October 2022 for hydropower extension to wind) and the RETROACTIVE ELEMENT was a major investor concern — projects that had invested under a 22% CIT assumption were suddenly subject to the additional tax. The final law for wind (2023) avoided retroactive application to consented projects but all NEW projects from 2024 are subject. This announcement sent shockwaves through the European offshore/onshore wind investor community and damaged Norwegian political risk perceptions.",
+      "npv_impact_analysis": {
+        "_rule_3b_compliance": true,
+        "description": "Grunnrenteskatt acts as a participation tax on project returns above the normal return threshold. Unlike CIT (which applies to all profits), grunnrenteskatt only hits excess returns. For a merchant project with p50 IRR of ~10% and friinntekt rate of ~5%, the 25% tax applies to the ~5% excess return per year on invested capital. Effect: reduces unleveraged project IRR by approximately 2–4ppts depending on exact project economics and friinntekt rate. Must model explicitly using Norwegian-specific financial model.",
+        "note": "Financial model must: (1) compute normal return (friinntekt) on invested capital; (2) compute excess return above friinntekt; (3) apply 25% grunnrenteskatt to excess; (4) apply 22% CIT to residual income after grunnrenteskatt deduction. Total effective rate on high-return projects significantly exceeds 22% CIT alone.",
+        "staleness_warning": "The friinntekt rate is set by regulation — verify current rate with Skatteetaten (Norwegian Tax Administration) before modelling."
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Two separate tax analyses required for Norway onshore wind: (1) Standard CIT 22% with saldoavskrivning (declining balance depreciation); (2) Grunnrenteskatt 25% on excess returns above friinntekt — this is NOT a timing benefit but a participation tax on project returns. Models that only account for CIT and ignore grunnrenteskatt will materially overstate project returns.",
+    "selskapsatt_cit": {
+      "rate_pct": 22,
+      "legal_basis": "Skatteloven §17-1 et seq. (as applicable); Stortingets skattevedtak (annual tax resolution)",
+      "notes": "Norway's CIT of 22% is among the lowest in the knowledge base alongside Sweden (20.6%) and Ireland (12.5%). However, for onshore wind, the grunnrenteskatt 25% makes the combined rate the HIGHEST in the knowledge base for above-normal-return projects."
+    },
+    "saldoavskrivning_depreciation": {
+      "method": "Declining balance (saldoavskrivning) — Skatteloven §§14-40 to 14-48",
+      "saldogruppe_d": {
+        "description": "Wind turbines classified in saldogruppe d",
+        "declining_balance_rate_pct": 20,
+        "legal_basis": "Skatteloven §14-43(1)(d)"
+      },
+      "npv_delta_analysis": {
+        "_rule_3b_compliance": true,
+        "scenario": "EUR 100m CapEx, 22% CIT, 10% WACC, 25-year project life",
+        "straight_line_25yr_pv_of_tax_shield_pct_capex": 18.4,
+        "declining_balance_20pct_pv_of_tax_shield_pct_capex": 21.7,
+        "npv_delta_ppts": 3.3,
+        "notes": "NPV timing benefit of 20% declining balance vs. straight-line at 22% CIT, 10% WACC: approximately 3.3ppts. At 22% CIT, timing benefit is moderate. Grunnrenteskatt treatment of depreciation for the resource rent base must also be verified — CapEx is deductible under grunnrenteskatt in the year incurred (immediate expensing) which creates a larger timing benefit within the grunnrenteskatt calculation."
+      }
+    },
+    "mva_vat": {
+      "standard_rate_pct": 25,
+      "reduced_rate": "Not applicable to energy generation",
+      "legal_basis": "Merverdiavgiftsloven — Lov av 19. juni 2009 nr. 58"
+    },
+    "property_tax": {
+      "description": "Eiendomsskatt (property tax) on wind turbines — municipalities may levy",
+      "rate_range_pct": "0.2–0.7 of taxable value per year",
+      "notes": "Many municipalities where wind farms are located do levy eiendomsskatt. Grunnrenteskatt includes a mandatory 'natural resource tax' (naturressursskatt) sharing element to benefit host municipalities."
+    },
+    "naturressursskatt": {
+      "description": "Natural resource tax — 1.3 øre/kWh (approximately EUR 0.12/MWh at NOK/EUR 11.5) paid by large wind generators; split between municipalities and counties.",
+      "legal_basis": "Skatteloven §18-8 (as applied to wind via grunnrenteskatt law)",
+      "note": "This compensates local communities for hosting wind infrastructure — a social licence mechanism."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "Medium",
+    "legal_basis": "Norwegian law (Norsk rett); contracts governed under Norwegian law or English law by election. EFET Master Agreement widely used. Nordic Master Agreement for derivatives also used.",
+    "market_liquidity": "Medium",
+    "nord_pool_spot": "Elspot NO1–NO5 bidding zones are the reference price. CfDs (difference contracts vs. Elspot) are used in Norwegian PPAs.",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Norsk Hydro (aluminium — major buyer of renewable power under long-term contracts), Yara (fertiliser/ammonia — large power consumer), SINTEF/research institutions, Data centres (Oslo area growing DC market), Equinor (own renewable targets). Industrial offtakers are critical to Norwegian PPA market given limited utility retail.",
+    "typical_contract_term_years": { "min": 5, "max": 20 },
+    "standard_frameworks": ["EFET Master Agreement (Norwegian law or English law annex)", "Nordic Master Agreement", "Bespoke bilateral PPA"],
+    "currency_note": "NOK-denominated PPAs are the norm. EUR-denominated PPAs are possible for international offtakers. FX hedging required for EUR-reporting investors.",
+    "go_system": {
+      "description": "OPPRINNELSESGARANTIER (Guarantees of Origin) — Norwegian GOs under EEA harmonised system",
+      "regulator": "NVE",
+      "note": "Norwegian GOs (hydro or wind) trade at a premium in some European markets due to additionality and hydro association. GO value is a distinct revenue stream from electricity price."
+    },
+    "cross_border_enforceability": "Very High — Norway has a developed legal system; Oslo tingsrett is internationally respected; Norwegian Arbitration Act 2004; NY Convention signatory"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 83,
+    "credit_ratings": {
+      "moodys": "Aaa",
+      "sp": "AAA",
+      "fitch": "AAA"
+    },
+    "political_stability": "Very High",
+    "regulatory_track_record": "Good historically BUT the grunnrenteskatt announcement in October 2022 (sudden, applied potentially retroactively to hydropower before wind law finalised) caused significant investor concern. The WITHDRAWAL of the Nasjonal ramme for vindkraft in February 2021 also demonstrated policy reversal capacity. Norway's democracy is strong but energy policy has been subject to significant populist pressure.",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2022 (October announcement)",
+        "description": "Sudden announcement of grunnrenteskatt on hydropower (existing) and proposed extension to wind energy. Initial proposal included retroactive elements for hydropower. Wind grunnrenteskatt ultimately applied from 2024 with exemption for already-consented projects, but the announcement process caused material investor concern.",
+        "severity": "High — caused significant market disruption; several European wind developers paused Norway activity pending clarity. NOT technically retroactive for wind (2024 effective date) but retroactive optics are clear.",
+        "source": "Prop. 2 LS (2022-2023) Skatt på grunnrente for kraftproduksjon; Finansdepartementet"
+      },
+      {
+        "year": "2021 (February)",
+        "description": "Withdrawal of Nasjonal ramme for vindkraft — the national spatial framework for wind energy that had been developed over several years, published June 2019, then withdrawn after strong political and public backlash. Created policy uncertainty for offshore and onshore development.",
+        "severity": "Medium — delayed pipeline projects; no retroactive impact on consented projects"
+      }
+    ],
+    "eea_membership_note": "Norway's EEA membership means Single Market rules (including energy liberalisation Directives) apply. However, ESA (not EC) supervises compliance. Norway's exclusion from EU political decision-making means it has no vote on EU energy policy that is then transposed into EEA rules.",
+    "government_petroleum_fund_note": "Norway's sovereign wealth fund (Norges Bank Investment Management — NBIM / Statens pensjonsfond utland — SPU / Government Pension Fund Global) is the world's largest sovereign wealth fund. This provides exceptional fiscal resilience. AAA/Aaa rating reflects this structural strength.",
+    "expropriation_risk": "Very Low",
+    "currency_risk": "High — NOK is freely floating; EUR-reporting investors carry full NOK/EUR FX exposure on revenues and distributions",
+    "score_rationale": "Norway scores 83 — highest sovereign credit (AAA/Aaa) but reduced from potential maximum for: (1) grunnrenteskatt sudden announcement creating retroactive risk perception; (2) national wind framework withdrawal; (3) populist political pressure on wind energy creating policy uncertainty; (4) NOK currency risk for EUR investors. Despite Aaa rating, renewable energy policy risk is materially higher than the credit rating alone implies."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 70,
+    "component_scores": {
+      "grid_connection_drag": { "score": 55, "assessment": "MEDIUM-HIGH — Statnett is capable but grid connection distances for remote mountain/coastal wind can be extreme (100+ km extensions in some cases); costs are high and timelines are long for remote sites; offshore Statnett grid under development for SN2 zone" },
+      "permitting_drag_solar": { "score": 30, "assessment": "LOW-MEDIUM — NVE process is methodical; solar is a small market; main barriers are low irradiation and grid rather than process" },
+      "permitting_drag_wind_onshore": { "score": 85, "assessment": "VERY HIGH — political backlash (2019–2021 framework withdrawal); municipal consent required; NGO challenge rate very high; complex multi-authority consultation (NVE, Statsforvalter, Forsvaret, Fiskeridirektorat, Reindeer herding rights (Sami))" },
+      "permitting_drag_offshore": { "score": 55, "assessment": "MEDIUM — SN2 zone is defined; process more structured than onshore; fisheries consultation is a major bottleneck (Norwegian fishing industry is politically powerful); floating offshore (Utsira Nord) adds technical complexity" },
+      "bureaucratic_friction": { "score": 50, "assessment": "MEDIUM — Norwegian public administration is efficient and professional; NVE is technically competent; BUT multiple consultation rounds with fisheries, military, Sami/indigenous rights, municipalities create extended timelines" },
+      "sami_indigenous_rights": { "score": 75, "assessment": "HIGH — Fosen wind farm case (Norwegian Supreme Court ruling 11 October 2021: state consent violated Sami indigenous rights under ICCPR Art. 27) created fundamental legal uncertainty for wind projects in reindeer herding areas. The Fosen case is the dominant legal risk for central and northern Norwegian onshore wind." },
+      "judicial_appeal_risk": { "score": 65, "assessment": "HIGH — Norway's courts are independent and rigorous; Høyesterett (Supreme Court) has shown willingness to overrule government on energy projects (Fosen); environmental NGOs (Natur og Ungdom) are active litigants; Sivilombudet (Ombudsman) provides additional oversight" }
+    },
+    "fosen_case_note": {
+      "description": "Høyesterett (Norwegian Supreme Court) ruled on 11 October 2021 that the government's approval of Fosen Vind DA (the largest onshore wind farm in Europe by capacity at time of construction — Roan and Storheia sections) violated Sami indigenous rights under ICCPR Article 27 (right to enjoy culture). The Sivilombudet subsequently confirmed the ongoing violation. The case remained unresolved for years.",
+      "legal_basis_court": "Høyesterett (Supreme Court of Norway) ruling HR-2021-1975-S, 11 October 2021",
+      "significance": "CRITICAL for any Norwegian onshore wind project in areas with traditional Sami land use, particularly reindeer herding. Consent is legally insufficient if Sami rights under ICCPR Art. 27 are not adequately weighed. A project may be physically constructed and operating while its consent is legally void.",
+      "geographic_impact": "Primarily relevant in Trøndelag, Nordland, Troms, and Finnmark — significant portions of Norway's best wind resource areas",
+      "current_status": "Ongoing litigation and negotiation. Verify current legal status before any investment decision involving affected areas.",
+      "rag_assessment": "RED for projects in reindeer herding areas without full Sami consent process completed"
+    },
+    "score_rationale": "Composite 70 — Norway's onshore wind operational drag is among the HIGHEST in this knowledge base, driven by the combination of the Fosen legal precedent, municipal consent requirements, post-2021 political environment, remote grid connection costs, and NGO litigation culture. Offshore drag is lower but SN2/Utsira Nord timelines are very long. Solar drag is low but the market is small."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Lov av 16. desember 2022 nr. 98 om kontroll med erverv av virksomheter av sikkerhetsinteresse (FDI Screening Act); Lov av 1. juni 2018 nr. 24 om nasjonal sikkerhet (National Security Act / Sikkerhetsloven)",
+    "energy_sector_mandatory_notification": true,
+    "reviewing_authority": "NSM (Nasjonal sikkerhetsmyndighet — Norwegian National Security Authority) + relevant ministries (OED for energy sector acquisitions)",
+    "clearance_timeline_working_days": 60,
+    "practical_risk": "Low-Medium",
+    "notes": "Norway has tightened FDI screening since 2018 (National Security Act) and 2022 (dedicated screening law). Energy infrastructure is explicitly covered. Chinese and Russian investors face higher scrutiny. OECD/NATO-origin investors have low prohibition risk but must complete notification. EEA membership does not exempt from Norwegian FDI screening — EEA rules on capital movement apply but national security exceptions are valid."
+  },
+
+  "state_aid_efta": {
+    "applicable_regime": "EFTA Surveillance Authority (ESA) — NOT European Commission",
+    "legal_basis": "EEA Agreement (Agreement on the European Economic Area — signed 2 May 1992); Protocol 26 on Functions and Powers; ESA/Court Agreement",
+    "efta_guidelines": "ESA applies State Aid guidelines equivalent to EC guidelines — including equivalents to CEEAG 2022 (ESA Decision on comparable framework). ESA Decisions are binding on Norway, Iceland, and Liechtenstein.",
+    "current_support_clearance": "Elcertifikat joint system previously cleared; grunnrenteskatt is a tax measure (not State Aid). Offshore SN2 support: verify clearance status with ESA.",
+    "note": "Because Norway has no active onshore wind support scheme, State Aid analysis is less relevant for onshore wind. Offshore SN2 concession support mechanism requires ESA clearance analogous to EC CEEAG review for EU member states.",
+    "retrospective_clawback_risk": "Low"
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Norwegian financial models require TWO separate tax layers: CIT 22% and grunnrenteskatt 25% (excess return above friinntekt). All figures must be in NOK first, then EUR equivalent at NOK 11.50 = EUR 1 as of 2026-06-15 (VERIFY current rate — NOK floats). Nord Pool bidding zone price used as reference — specify NO1–NO5 zone. NO PPA floor exists for onshore projects — model must include merchant revenue sensitivity analysis.",
+    "_currency_model_requirement": "FX sensitivity analysis is MANDATORY for Norwegian projects given NOK float. EUR-reporting investors must model P10/P50/P90 NOK/EUR scenarios. Minimum sensitivity range: NOK 9.5 to NOK 13.0 per EUR.",
+    "illustrative_onshore_wind_norway": {
+      "mechanism_type": "merchant",
+      "revenue_reference": "Nord Pool Elspot (relevant bidding zone — specify NO1–NO5)",
+      "p50_capacity_factor_pct": 36,
+      "typical_capex_nok_per_mw": 17000000,
+      "typical_capex_eur_per_mw_equiv": 1478261,
+      "capex_fx_date": "2026-06-15 at NOK 11.50 = EUR 1",
+      "opex_nok_per_mw_per_year": 370000,
+      "opex_eur_per_mw_per_year_equiv": 32174,
+      "tax_cit_rate_pct": 22,
+      "grunnrenteskatt_rate_pct": 25,
+      "grunnrenteskatt_applies_to": "Excess returns above friinntekt (normal return on invested capital)",
+      "note": "Capex is higher than many European markets due to Norwegian terrain, remote locations, long road/cable builds. Infrastructure costs are a significant component."
+    },
+    "illustrative_offshore_wind_sn2": {
+      "mechanism_type": "regulated_concession",
+      "zone": "Sørlige Nordsjø II — bottom-fixed, ~140km offshore",
+      "p50_capacity_factor_pct": 52,
+      "typical_capex_nok_per_mw_offshore": 45000000,
+      "typical_capex_eur_per_mw_equiv_offshore": 3913043,
+      "capex_fx_date": "2026-06-15 at NOK 11.50 = EUR 1",
+      "grunnrenteskatt_offshore": "Confirm whether grunnrenteskatt applies to offshore wind — at time of writing, the 2023 law applied to land-based (landbasert) wind only. Verify whether offshore extension has been enacted.",
+      "note": "Offshore wind CapEx in Norway is comparable to North Sea norms but with Norwegian contractor cost base (higher labour costs; Norwegian content requirements)."
+    }
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "AMBER", "rationale": "Low irradiation makes large-scale solar commercially marginal in most of Norway; NVE process is manageable; grid and economics are primary constraints not process." },
+    "permitting_wind_onshore": { "rag": "RED", "rationale": "Post-2021 policy environment is hostile to new onshore wind; Fosen precedent creates legal uncertainty in significant portions of Norway's best wind resource areas; municipal consent required; Natur og Ungdom/Naturvernforbundet litigation is consistent and well-funded; framework withdrawal in 2021 has not been replaced." },
+    "permitting_offshore": { "rag": "AMBER", "rationale": "SN2 and Utsira Nord zones defined; process more structured than onshore; fisheries consultation is a major bottleneck with politically powerful fishing industry; floating offshore (Utsira) is at technological frontier — LCOE significantly above bottom-fixed." },
+    "grid_connection": { "rag": "AMBER", "rationale": "Statnett is competent; hydro system provides flexibility; BUT remote site connection costs are very high and timelines long; offshore Statnett grid is under development; interconnectors provide price coupling but at volatility cost." },
+    "support_mechanism_availability": { "rag": "RED", "rationale": "CRITICAL: No active support scheme for new onshore wind or solar. Elcertifikat closed to new Norwegian applicants from 31 December 2021. Projects are fully merchant. Long-term PPA with creditworthy Norwegian industrial offtaker is the only means to manage revenue risk. This is the dominant financial constraint for Norwegian renewables." },
+    "grunnrenteskatt": { "rag": "RED", "rationale": "The 25% resource rent tax on onshore wind returns above the friinntekt threshold, in force from 1 January 2024, materially reduces project economics and was announced without adequate industry consultation. For high-return sites, the combined CIT (22%) + grunnrenteskatt (25% on excess) creates an effective marginal rate well above any other jurisdiction in this knowledge base. Financial model MUST incorporate grunnrenteskatt." },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "CIT 22% is competitive; declining balance depreciation 20% provides some timing benefit; but grunnrenteskatt dominates the tax analysis for onshore wind and turns an attractive CIT base into the highest effective marginal rate in the knowledge base for successful projects." },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "Norwegian law is strong; EFET framework widely used; Nordic Master Agreement provides liquidity; Norsk Hydro, Yara, and other industrial offtakers provide creditworthy counterparties; Oslo tingsrett is internationally respected." },
+    "political_risk": { "rag": "AMBER", "rationale": "AAA/Aaa sovereign; stable democracy; BUT grunnrenteskatt announcement and wind framework withdrawal demonstrate capacity for sudden adverse policy change. Combined with Sami rights precedent and municipal consent requirements, renewable energy policy risk is higher than sovereign credit alone implies." },
+    "operational_drag": { "rag": "RED", "rationale": "Norway has the highest operational drag score (70/100) in this knowledge base driven by the Fosen precedent, post-2021 political environment, remote grid connection costs, and the requirement for Sami consent in much of the prime wind resource territory." },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "FDI screening applies to energy; process is proportionate; OECD/NATO investors face low prohibition risk; EEA membership provides some protection. No material impediment for mainstream European and North American investors." },
+    "currency_risk_nok": { "rag": "RED", "rationale": "NOK is freely floating and historically volatile; EUR-reporting investors carry full currency exposure on all NOK-denominated revenues; NOK/EUR range of NOK 10–13 over recent years implies ±15% revenue impact from currency alone. MANDATORY FX sensitivity analysis required." },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Norway presents a deeply bifurcated investment case: (1) OFFSHORE WIND (SN2/Utsira Nord) — AMBER. Well-defined zones; mature offshore expertise; Statnett support; but long timelines, very high CapEx (floating at Utsira is frontier-risk), fisheries bottleneck, and NOK exposure. For sophisticated offshore developers with risk tolerance: attractive. (2) ONSHORE WIND — RED. Merchant revenues only; grunnrenteskatt 25% on excess returns; Fosen precedent; municipal consent requirement; post-2021 political hostility; and NOK currency risk. Onshore wind in Norway is currently the most challenging investment case in this knowledge base from a combined support/tax/permitting perspective. (3) SOLAR — AMBER-RED. Low irradiation; merchant; limited opportunity. Overall: Norway is a specialist jurisdiction suited to large offshore wind developers or parties with established Norwegian industrial offtake relationships. It is NOT suitable for first-time entry into the European renewables market."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 60,
+    "1_permitting_window_scope": "Onshore wind NVE konsesjon (includes municipal consent); offshore via Havenergiloven 96 months",
+    "1_permitting_window_solar_p50_months": 24,
+    "2_grid_connection_cost_native": "NOK 575,000–3,450,000 per MW (onshore — highly variable by site remoteness)",
+    "2_grid_connection_cost_eur": "EUR 50,000–300,000 per MW at NOK 11.50 = EUR 1 (2026-06-15)",
+    "2_grid_connection_cost_fx_date": "2026-06-15: NOK 11.50 = EUR 1",
+    "2_grid_connection_timeline_months": "24–60",
+    "3_primary_support_mechanism": "NONE for new onshore wind/solar (MERCHANT). Offshore SN2: regulated concession. Elcertifikat CLOSED to new Norwegian applications from 31 December 2021.",
+    "3_mechanism_type_code": "merchant",
+    "4_effective_corporation_tax_rate_pct": 22,
+    "4_key_incentive": "CIT 22% (competitive) BUT Grunnrenteskatt 25% on excess returns above friinntekt for onshore wind (from 1 January 2024 — Lov om skatt av grunnrente for landbasert vindkraft). Combined effective marginal rate for high-return onshore projects: up to ~40–47%. Saldoavskrivning 20% declining balance for wind turbines (saldogruppe d).",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Norwegian law / English law by election; EFET Master Agreement; Nordic Master Agreement; Norsk Hydro, Yara, industrial offtakers",
+    "6_political_risk_score": 83,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 70,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "NONE — fully MERCHANT. Nord Pool Elspot NO1–NO5 zone price (NOK/MWh).",
+    "8_revenue_floor_eur": "None — merchant. Revenue in NOK; EUR equivalent depends on NOK/EUR (floating rate: NOK 11.50 = EUR 1 as at 2026-06-15)",
+    "8_revenue_floor_fx_date": "2026-06-15: NOK 11.50 = EUR 1",
+    "8_revenue_floor_mechanism": "merchant",
+    "8_revenue_floor_staleness_warning": "No floor — Nord Pool spot price. NOK/EUR rate changes daily. FX sensitivity analysis is MANDATORY. SN2 offshore concession has revenue support — verify terms with OED/NVE concession documentation."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Norway is not an EU member and not an IPCEI participant. Enova SF (state enterprise) provides technology support for hydrogen projects. Near-100% hydropower electricity provides very low-carbon feedstock for electrolysis. Hydrogen export ambitions to EU markets via pipeline or liquefaction. No dedicated hydrogen CfD or auction regime."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "No specific floating solar support mechanism. Subject to general solar investment grant via Enova SF and standard Elsertifikat scheme.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Norway has a research reactor (JEEP II at Kjeller, now decommissioning) but no commercial nuclear. Some policy-level SMR discussion given energy security and decarbonisation considerations. No formal programme or legislative framework for new nuclear. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Norway is a major LNG exporter (Hammerfest/Snøhvit, Melkøya). No import terminal needed. New LNG export capacity (additional trains) possible but different investment thesis from import terminals."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": null,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Norway is a gas exporter, not a gas-fired power market. Domestic electricity is nearly 100% hydropower. EU Taxonomy Delegated Act does not apply to Norway (non-EU, EEA member). No formal capacity market. CCGT investment rationale for domestic Norwegian market is limited. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. Norway is an EEA member — EU RED III sustainability criteria apply in practice. Enova SF provides technology support for bioenergy projects. Verify current Norwegian bioenergy support framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "Norway has no coal-fired power generation. Hydropower-dominant grid. EU Taxonomy does not apply directly (non-EU EEA). No coal support mechanism."
+    }
+  }
+}

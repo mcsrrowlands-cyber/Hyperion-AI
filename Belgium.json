@@ -1,0 +1,448 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Belgium",
+    "local_name": "Royaume de Belgique / Koninkrijk België / Königreich Belgien",
+    "iso_code": "BE",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-15",
+    "data_staleness_warning": "Belgian renewable energy support is REGIONAL — Wallonia, Flanders, and Brussels Capital Region each have separate schemes. Federal level covers offshore wind. Verify current certificat vert (CV) minimum prices and quota obligations with CWaPE (Wallonia), VREG (Flanders), BRUGEL (Brussels) before use. Federal offshore regime parameters should be confirmed with CREG and ELIA."
+  },
+
+  "regulatory_framework": {
+    "_critical_note": "Belgium is a federal state. Electricity production and distribution is a REGIONAL competence (since 2014 Sixth State Reform). Support schemes for onshore wind, solar, and small-scale generation are set separately by Wallonia, Flanders, and Brussels Capital Region. Only offshore wind (in the Belgian Exclusive Economic Zone — EEZ) and transmission are federal competences. Analysing 'Belgian' renewables requires identifying the relevant regional jurisdiction.",
+    "primary_energy_legislation": {
+      "federal": [
+        { "instrument": "Loi relative à l'organisation du marché de l'électricité / Wet betreffende de organisatie van de elektriciteitsmarkt — 29 avril 1999 (Electricity Act)", "relevance": "Federal electricity market framework; CREG (federal regulator) powers; offshore wind framework" },
+        { "instrument": "Loi du 29 avril 1999 Art. 7 (offshore wind concessions)", "relevance": "Legal basis for Belgian offshore wind concessions (domaine public de la mer territoriale / openbaar domein van de territoriale zee)" }
+      ],
+      "wallonia": [
+        { "instrument": "Décret du 23 janvier 2003 relatif aux certificats verts (as amended)", "relevance": "Certificats verts (green certificates) scheme in Wallonia; quota obligations on suppliers; CWaPE as regulator" }
+      ],
+      "flanders": [
+        { "instrument": "Energiedecreet van 8 mei 2009 (as amended)", "relevance": "Flemish energy policy including groenestroomcertificaten (GSC — green electricity certificates) scheme; VREG as regulator" }
+      ]
+    },
+    "permitting_legislation": {
+      "wallonia": [{ "instrument": "Code wallon de l'Aménagement du Territoire, de l'Urbanisme, du Patrimoine et de l'Énergie (CWATUPE) / Code du Développement Territorial (CoDT)", "relevance": "Planning and environmental permits in Wallonia" }],
+      "flanders": [{ "instrument": "Omgevingsvergunningdecreet — Decreet van 25 april 2014", "relevance": "Omgevingsvergunning (environment permit) in Flanders — consolidated environmental and planning permit" }],
+      "federal_offshore": [{ "instrument": "Loi du 20 janvier 1999 visant la protection du milieu marin (Marine Environment Act)", "relevance": "Marine environmental assessment for offshore projects in Belgian EEZ" }]
+    },
+    "tax_legislation": [
+      { "instrument": "Code des impôts sur les revenus 1992 (CIR92) / Wetboek van de inkomstenbelastingen 1992 (WIB92)", "relevance": "Corporate income tax (vennootschapsbelasting / impôt des sociétés): 25% standard rate" },
+      { "instrument": "CIR92 Art. 205bis–205novies (Notional Interest Deduction)", "relevance": "Aftrek voor risicokapitaal / Déduction pour capital à risque (NID) — deduction of notional interest on equity. Significant and distinctive Belgian tax incentive." },
+      { "instrument": "CIR92 Art. 68-77 (Investeringsaftrek / Déduction pour investissement)", "relevance": "Investment deduction for qualifying capital expenditures" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG 2022/C 80/01", "relevance": "EC framework for regional green certificate scheme and offshore support compatibility" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemption for sub-threshold regional aids" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Loi du 19 mai 2022 concernant le contrôle des investissements étrangers (FDI Screening Act)", "relevance": "Investment screening for sensitive sectors including energy; CFI (Centre for Foreign Investments) as reviewing body" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Permitting in Belgium is REGIONAL. The relevant regime depends entirely on which region the project is in. Offshore wind is federal. Flanders (north) has the Omgevingsvergunning consolidated permit. Wallonia (south) has the Permis unique procedure. Brussels Capital Region is primarily urban — limited renewable energy development potential.",
+    "solar_utility": {
+      "flanders": {
+        "primary_authority": "Departement Omgeving (Department of Environment); deputatie (provincial council) for some projects",
+        "primary_process": "Omgevingsvergunning (consolidated environment permit) under Omgevingsvergunningdecreet 2014",
+        "timeline_p50_months": 12,
+        "timeline_min_months": 8,
+        "timeline_max_months": 24
+      },
+      "wallonia": {
+        "primary_authority": "Direction générale opérationnelle Aménagement du territoire, Logement, Patrimoine et Énergie (DGO4)",
+        "primary_process": "Permis unique (consolidated permit under CoDT)",
+        "timeline_p50_months": 18,
+        "timeline_min_months": 12,
+        "timeline_max_months": 36
+      },
+      "appeal_risk": "medium",
+      "notes": "Belgium has limited land for large-scale solar given high population density. Industrial rooftops and agri-solar are the primary growth areas in Flanders. Wallonia has more available land."
+    },
+    "onshore_wind": {
+      "flanders": {
+        "primary_authority": "Departement Omgeving; OVAM for soil assessment if applicable",
+        "primary_process": "Omgevingsvergunning; MER (Milieueffectrapportage — EIA) for projects above threshold",
+        "timeline_p50_months": 24,
+        "timeline_min_months": 18,
+        "timeline_max_months": 48,
+        "setback_note": "Vlarem II sets noise and shadow flicker standards for wind turbines; 300m minimum setback from residential buildings in most cases (subject to noise model)"
+      },
+      "wallonia": {
+        "primary_authority": "ARES (Autorité de régulation wallonne du secteur énergie) consultation; DGO4",
+        "primary_process": "Permis unique; EIE (Évaluation des Incidences sur l'Environnement)",
+        "timeline_p50_months": 30,
+        "timeline_min_months": 24,
+        "timeline_max_months": 60
+      },
+      "appeal_risk": "medium-high",
+      "notes": "Belgium's small size and high population density make wind energy siting challenging — communities are close to all potential sites. Legal challenges are common. Walloon wind energy has faced significant legal challenges in Conseil d'État proceedings."
+    },
+    "offshore_wind": {
+      "primary_authority": "Federal: Direction générale Énergie (DGE/FOD Economie) for concessions; UGMM (Unité de Gestion du Modèle mathématique de la mer du Nord) for marine environmental assessment",
+      "primary_process": "Federal offshore concession (domaine public maritime); Marine Environmental Impact Assessment; ELIA grid connection",
+      "legal_basis": "Loi du 29 avril 1999 Art. 7; Loi du 20 janvier 1999 (Marine Environment Act); Arrêté royal relatif aux installations de production d'électricité en mer du Nord",
+      "princess_elisabeth_zone": {
+        "description": "The Princess Elisabeth Zone is Belgium's second offshore wind zone (beyond the existing Hollandse Kust equivalent Belgian zone). New federal tenders for Princess Elisabeth were run 2021-2023.",
+        "capacity_target_gw": 3.5,
+        "operational_projects": ["Norther", "Rentel", "Seastar", "Mermaid", "Northwester 2", "Borssele (NL) comparable"],
+        "status": "Belgium's existing offshore wind zone is substantially developed. Princess Elisabeth Zone represents the expansion area."
+      },
+      "timeline_p50_months": 84,
+      "timeline_min_months": 60,
+      "timeline_max_months": 120,
+      "notes": "Belgian offshore wind is highly mature — Belgium was an early offshore adopter. The existing zone in the Belgian North Sea (Thorntonbank, Belwind, etc.) is substantially developed. ELIA offshore grid (Modular Offshore Grid / MOG) provides collective grid connection for offshore wind."
+    }
+  },
+
+  "grid_connection": {
+    "federal_transmission_operator": "Elia Group (publicly listed; Belgian state + municipalities hold majority via Publi-T/Belfius)",
+    "distribution_operators": "Fluvius (Flanders/Brussels; merged DSO); Ores (Wallonia)",
+    "regulatory_authority": "CREG (Commission de Régulation de l'Électricité et du Gaz — federal); CWaPE (Wallonia); VREG (Flanders); BRUGEL (Brussels)",
+    "legal_basis": "Loi électricité 1999; Tarification réseau CREG; ELIA grid codes",
+    "offshore_grid": {
+      "description": "ELIA operates the Modular Offshore Grid (MOG) for offshore wind collective transmission — government-funded offshore grid infrastructure, substantially reducing individual developer grid risk.",
+      "elia_offshore_note": "Offshore grid connection is via ELIA's MOG rather than individual developer-funded cables (unlike UK where developer funds offshore transmission to some extent). This is a material cost advantage."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 24, "range": "12–48" },
+      "distribution_connected": { "p50": 18, "range": "12–36" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 25000,
+      "range_high": 150000,
+      "notes": "Onshore costs regulated by CREG. Offshore connection via MOG — developer contribution negotiated."
+    },
+    "curtailment_risk": "low-medium",
+    "notes": "Belgium is a major electricity transit country (interconnected with France, Netherlands, Germany, UK via Nemo Link). Grid is generally well-managed. Belgium's nuclear fleet (being extended under energy law amendments) provides baseload stability."
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: Belgium's support mechanisms are REGIONAL and vary in type. CRITICAL DISTINCTION: (1) Green certificate schemes (Wallonia CVs, Flanders GSCs) are QUOTA/CERTIFICATE mechanisms — neither CfD nor fixed FiT. Certificate prices are market-determined with a guaranteed minimum purchase price (prix de référence / minimumprijs). This is effectively a ONE-WAY price floor mechanism. (2) Federal offshore wind: structured as concession contracts with revenue support — closer to a CfD. (3) These mechanisms CANNOT be conflated across regions or with each other.",
+    "federal_offshore": {
+      "mechanism": "Offshore wind concession with federal revenue support",
+      "mechanism_type": "regulated_concession_with_revenue_floor",
+      "administrator": "Federal government (FOD Economie); ELIA for grid; CREG for tariff regulation",
+      "legal_basis": "Loi du 29 avril 1999 Art. 7; Arrêtés royaux on offshore concession terms",
+      "support_structure": "Princess Elisabeth Zone tender winners receive revenue support via a long-term contract with ELIA (or state-guaranteed mechanism). Structure is project-specific — verify terms for specific tenders.",
+      "note": "Offshore support structure has evolved — verify current Princess Elisabeth Zone contract terms with DGE/FOD Economie."
+    },
+    "wallonia_green_certificates": {
+      "mechanism": "Certificats verts (CVs) — quota/certificate system with guaranteed minimum purchase price",
+      "mechanism_type": "quota_certificate_with_minimum_price",
+      "administrator": "CWaPE (Commission Wallonne pour l'Énergie)",
+      "legal_basis": "Décret du 23 janvier 2003; CWAPE decisions on minimum CV price",
+      "description": "Walloon generators earn CVs per MWh. Electricity suppliers have quota obligations (quotas d'électricité verte). CVs can be sold on market (to suppliers to meet quota) or to Awex/CWAPE at guaranteed minimum purchase price (prix de référence garanti). Minimum price provides a floor — but no ceiling; generators benefit if market CV prices exceed minimum.",
+      "guaranteed_minimum_price_eur_per_cv_approx": 65,
+      "staleness_warning": "Minimum CV price varies by technology and changes over time. Verify with CWaPE.",
+      "certificate_duration_years": 10,
+      "note_on_mechanism_type": "The minimum guaranteed price makes this effectively a ONE-WAY floor mechanism. When market CV price > minimum: generator sells at market. When market CV price < minimum: generator sells to CWaPE/network at minimum. No clawback."
+    },
+    "flanders_green_certificates": {
+      "mechanism": "Groenestroomcertificaten (GSC) — similar quota/certificate system",
+      "mechanism_type": "quota_certificate_with_minimum_price",
+      "administrator": "VREG (Vlaamse Regulator van de Elektriciteits- en Gasmarkt)",
+      "legal_basis": "Energiedecreet 2009; VREG decisions",
+      "description": "Similar to Walloon CV system. GSCs earned per MWh. Guaranteed minimum purchase price (minimumsteunbedrag) set by VREG per technology category. Suppliers have quota obligations (quotum).",
+      "note": "Flanders has been reducing support levels for new installations over recent years as technology costs have fallen — verify current VREG support levels for new projects."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Belgium's NID (Notional Interest Deduction) is a distinctive structural tax incentive — it reduces the effective tax rate on equity-financed activities, not merely the timing of deductions. Must be modelled as a permanent structural benefit, not a timing benefit.",
+    "vpb_is": {
+      "rate_pct": 25,
+      "legal_basis": "CIR92 Art. 215",
+      "reduced_rate_sme": { "rate_pct": 20, "on_first_eur": 100000, "conditions": "Revenue < €10m; capital fully paid; conditions on dividends and remuneration" }
+    },
+    "notional_interest_deduction": {
+      "description": "Aftrek voor risicokapitaal / Déduction pour capital à risque (NID) — Belgium allows companies to deduct a notional return on equity (adjusted net assets) as a tax deduction. This reduces the effective tax rate on equity-financed profits significantly.",
+      "rate_for_large_companies_pct_approx": 1.5,
+      "rate_for_smes_pct_approx": 2.0,
+      "legal_basis": "CIR92 Art. 205bis–205novies; Loi du 22 juin 2005",
+      "staleness_warning": "NID rate is set annually by Royal Decree based on 10-year government bond yield + spread. Verify current rate. NID has been modified multiple times — confirm current eligibility rules.",
+      "npv_benefit_analysis": {
+        "_rule_3b_compliance": true,
+        "description": "NID reduces effective IS rate below 25% for equity-financed companies. At 1.5% NID rate on, say, €100m equity: annual deduction of €1.5m; tax saving at 25% IS = €375,000/year. This is a PERMANENT structural benefit proportional to equity base. For highly equity-financed project vehicles, NID can reduce effective rate by 2–5ppts depending on equity/asset ratio.",
+        "note": "NID calculation is complex and entity-specific. Belgian tax specialist advice is essential to quantify project-specific NID benefit."
+      }
+    },
+    "investment_deduction": {
+      "description": "Investeringsaftrek / Déduction pour investissement — additional % deduction on qualifying investments",
+      "rate_pct": 20,
+      "qualifying_assets": "Energy-efficient and environmentally positive investments — verify current qualifying list with FOD Financiën",
+      "legal_basis": "CIR92 Art. 68–77",
+      "staleness_warning": "Investment deduction rates and qualifying categories change annually via Wet diverse bepalingen / Loi diverses dispositions"
+    },
+    "standard_depreciation": {
+      "method": "Straight-line (lineaire afschrijving / amortissement linéaire) or declining balance",
+      "wind_turbines_useful_life_years": 20,
+      "solar_pv_useful_life_years": 25,
+      "declining_balance_max_coefficient": 2.0
+    },
+    "vat": {
+      "standard_rate_pct": 21,
+      "reduced_rate_pct": 6,
+      "legal_basis": "Wetboek BTW / Code TVA",
+      "input_vat_recovery": "Available for BTW/TVA-registered entities"
+    },
+    "registratierechten": {
+      "note": "Registration duties on real property transactions — rates vary by region. Flanders: 12%; Wallonia: 12.5%; Brussels: 12.5%. Share deal structures are preferred (0.2% on share transfers)."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "Medium-High",
+    "legal_basis": "Code civil belge / Belgisch Burgerlijk Wetboek (reformed 2022) — freedom of contract. EFET Master Agreement widely used.",
+    "market_liquidity": "Medium",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Industrial (BASF Belgium, ArcelorMittal Belgium, Solvay, UCB), Tech (data centres in Belgium), Retail (Delhaize, Colruyt Group — Colruyt is a major Belgian renewable developer itself)",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["EFET Master Agreement (Belgian law version)", "Bespoke bilateral", "Virtual PPA referencing EPEX SPOT BE price"],
+    "cv_gsc_interaction": "Green certificate income (CVs/GSCs) is separate from electricity revenue. PPA structure needs to address whether CVs/GSCs are transferred to the offtaker or retained by the generator for separate sale.",
+    "go_system": {
+      "description": "GARANTIECERTIFICATEN VAN OORSPRONG / CERTIFICATS DE GARANTIE D'ORIGINE — Belgian Guarantees of Origin",
+      "regulator": "VREG (Flanders), CWaPE (Wallonia), CREG (federal oversight)",
+      "notes": "GOs issued alongside or separately from green certificates; confirm aggregation/separation with Belgian counsel"
+    },
+    "cross_border_enforceability": "Very High — Brussels is the seat of many international institutions; Belgian courts are competent; CEPANI arbitration centre; NY Convention signatory"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 81,
+    "credit_ratings": {
+      "moodys": "Aa3",
+      "sp": "AA-",
+      "fitch": "AA-"
+    },
+    "political_stability": "Medium",
+    "political_complexity": "Belgium has a uniquely complex political system — six governments (Federal + three communities + three regions + German-speaking community). Belgium has experienced world-record government formation periods (record ~652 days 2010-2011). Complex coalition negotiations are the norm.",
+    "federal_state_note": "Energy support being regional competence means different political cycles in Wallonia and Flanders can create inconsistent support scheme development. Federal government manages offshore wind and transmission.",
+    "regulatory_track_record": "Moderate — regional green certificate schemes have been adjusted multiple times. No large-scale retroactive clawback comparable to Spain/Portugal.",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2013–2016",
+        "description": "Flanders introduced 'sociaal tarief' correction to GSC support calculations; multiple VREG decisions reduced support levels for existing installations below original expectations",
+        "severity": "Low-Medium — adjustments were within contractual framework but reduced investor returns vs expectations"
+      }
+    ],
+    "expropriation_risk": "Very Low",
+    "currency_risk": "None — EUR domestic",
+    "score_rationale": "Belgium scores 81 — Aa3/AA- rated; EU founding member; no major retroactive incidents. Deduction for political complexity (federal system creates slow, complex policy process), historical GSC adjustments, and Flanders/Wallonia political divergence."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 60,
+    "component_scores": {
+      "grid_connection_drag": { "score": 35, "assessment": "LOW-MEDIUM — ELIA is well-managed; MOG for offshore significantly reduces offshore grid risk; Belgium's transit role keeps grid well-maintained; Nemo Link to UK; interconnected with Netherlands and France" },
+      "permitting_drag_solar": { "score": 40, "assessment": "MEDIUM — regional variation; Flanders Omgevingsvergunning is efficient; land scarcity is primary constraint not process" },
+      "permitting_drag_wind_onshore": { "score": 70, "assessment": "HIGH — high population density creates opposition; Conseil d'État challenges frequent in Wallonia; setback rules limit available sites; Belgium's small territory means turbine placements are always contentious" },
+      "permitting_drag_offshore": { "score": 35, "assessment": "LOW-MEDIUM — existing offshore zone substantially developed; Princess Elisabeth Zone tenders well-structured; ELIA MOG reduces individual project complexity" },
+      "bureaucratic_friction": { "score": 65, "assessment": "HIGH — six-government federal structure; regional competence fragmentation; different processes in Flanders, Wallonia, Brussels; overlapping authority consultations" },
+      "judicial_appeal_risk": { "score": 65, "assessment": "MEDIUM-HIGH — Conseil d'État/Raad van State (administrative supreme court) accessible; Conseil d'État has issued several wind permit cancellations in Wallonia; environmental NGOs active" }
+    },
+    "primary_bottleneck": "Political complexity and bureaucratic fragmentation across regions. For onshore wind: population density and Conseil d'État challenge rate. For offshore: largely managed by existing frameworks.",
+    "score_rationale": "Composite 60 — offshore drag is low (MOG, mature framework); onshore drag is high (density, complexity). Bureaucratic six-government structure is the systemic drag."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Loi du 19 mai 2022 concernant le contrôle des investissements étrangers; EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "reviewing_authority": "CFI (Centre for Foreign Investments) — under Chancellerie du Premier Ministre and Ministère des Affaires économiques",
+    "clearance_timeline_working_days": 30,
+    "practical_risk": "Low",
+    "notes": "Belgian FDI screening is proportionate. Energy is a covered sector. OECD investors face low prohibition risk. Brussels-based international institutions make Belgium structurally open to foreign investment."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG 2022/C 80/01",
+    "regional_schemes_clearance": "Walloon and Flemish green certificate schemes reviewed under EEAG/CEEAG. EC has cleared the minimum guaranteed price mechanisms as compatible.",
+    "offshore_clearance": "Federal offshore support mechanisms cleared on case-by-case basis per tender.",
+    "retrospective_clawback_risk": "Low — mechanisms have been reviewed and cleared. No major EC recovery action against Belgian renewable schemes.",
+    "notification_status": "Regional schemes cleared; federal offshore cleared per-tender"
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: NID benefit must be modelled as a function of project equity base — not a fixed percentage. ELIA MOG offshore grid is a significant CapEx reduction vs. UK/Germany where developers fund offshore transmission. Regional scheme (Wallonia CV vs. Flanders GSC) affects revenue calculation.",
+    "_rule_3a_note": "REGIONAL VARIATION — confirm mechanism type for target region. Wallonia: CV minimum price floor (one-way). Flanders: GSC minimum price floor (one-way). Federal offshore: concession with revenue support (project-specific). Do not conflate.",
+    "illustrative_offshore_wind_federal": {
+      "mechanism_type": "regulated_concession_with_revenue_floor",
+      "p50_capacity_factor_pct": 42,
+      "typical_capex_eur_per_mw": 3200000,
+      "offshore_grid_cost_note": "ELIA MOG offshore grid — developer contribution negotiated separately but below what UK developers pay for individual OFTO assets",
+      "opex_eur_per_mw_per_year": 100000
+    },
+    "illustrative_onshore_wind_wallonia": {
+      "cv_minimum_price_eur_approx": 65,
+      "mechanism_type": "quota_certificate_with_minimum_price",
+      "cv_duration_years": 10,
+      "p50_capacity_factor_pct": 27,
+      "typical_capex_eur_per_mw": 1500000,
+      "opex_eur_per_mw_per_year": 42000,
+      "note": "Revenue = electricity spot price (EPEX SPOT BE) + CV price (minimum guaranteed or market if higher). Model both components separately."
+    }
+  },
+
+  "rag_matrix": {
+    "permitting_solar": { "rag": "AMBER", "rationale": "Regional variation; Flanders is faster. Land scarcity is primary constraint in Belgium's densely populated territory." },
+    "permitting_wind_onshore": { "rag": "RED", "rationale": "High population density means every wind turbine site creates opposition; Conseil d'État challenges in Wallonia are frequent and successful; limited remaining suitable sites." },
+    "permitting_offshore": { "rag": "GREEN", "rationale": "Existing offshore zone mature; Princess Elisabeth Zone well-structured; ELIA MOG reduces developer permitting burden; Belgian offshore wind is among Europe's most developed." },
+    "grid_connection": { "rag": "GREEN", "rationale": "ELIA is well-managed; MOG offshore connection reduces offshore grid risk; Belgium's transit role means strong interconnection with neighbours" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "Regional fragmentation: Wallonia CVs, Flanders GSCs — separate systems with different parameters. Federal offshore support available but structured per-tender. Complexity is material." },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "Vpb/IS 25%; NID (Notional Interest Deduction) is a distinctive and valuable structural incentive reducing effective rate for equity-financed entities. Investment deduction 20% for qualifying assets. Belgium's tax structure is one of the more investor-friendly in this knowledge base." },
+    "ppa_enforceability": { "rag": "AMBER", "rationale": "Belgian contract law is sound (reformed BW 2022); Brussels arbitration (CEPANI) is respected; PPA market is active but thinner than UK/Germany. Regional complexity for CV/GSC accounting adds structuring complexity." },
+    "political_risk": { "rag": "AMBER", "rationale": "Aa3/AA- rated; EU founding member; complex six-government federal system creates policy fragmentation and slow reform; regional political cycles affect support scheme parameters" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Offshore drag is GREEN; onshore wind drag is RED; solar and grid are AMBER. Belgium's primary issue is onshore renewable development capacity relative to its territory size." },
+    "fdi_restrictions": { "rag": "AMBER", "rationale": "FDI screening in force from 2022; energy covered; process is proportionate; Brussels institutional openness means low prohibition risk; compliance required" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Regional schemes and offshore support cleared; minimum price mechanisms satisfy CEEAG; no EC recovery risk for current framework projects" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Belgium's investment case is bifurcated by technology: (1) OFFSHORE WIND — GREEN overall. Belgium has one of Europe's most mature offshore frameworks, ELIA MOG infrastructure, strong federal support, and excellent North Sea resource. For offshore-focused investors, Belgium is a top-tier market. (2) ONSHORE WIND AND SOLAR — AMBER-RED. Belgium's territory is one of Europe's most densely populated; onshore wind sites are contentious and increasingly constrained; regional support scheme complexity adds overhead. NID is a distinctive tax advantage. Best Belgian opportunity is federal offshore + NID-optimised project financing structure."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 24,
+    "1_permitting_window_scope": "Offshore wind via federal concession process",
+    "1_permitting_window_solar_p50_months": 12,
+    "2_grid_connection_cost_native": "EUR 25,000–150,000 per MW onshore; offshore via ELIA MOG (developer contribution negotiated)",
+    "2_grid_connection_cost_eur": "EUR 25,000–150,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "12–48",
+    "3_primary_support_mechanism": "REGIONAL: Wallonia — Certificats verts (CV) with minimum price; Flanders — Groenestroomcertificaten (GSC) with minimum price. FEDERAL OFFSHORE: concession with revenue support.",
+    "3_mechanism_type_code": "quota_certificate_with_minimum_price",
+    "4_effective_corporation_tax_rate_pct": 25,
+    "4_key_incentive": "Notional Interest Deduction (NID/DIC) — deduction of notional return on equity (rate set annually). Distinctive and valuable structural incentive for equity-financed project vehicles. Investment deduction 20% for qualifying CapEx.",
+    "5_ppa_enforceability_rating": "Medium-High",
+    "5_ppa_legal_basis": "Belgisch Burgerlijk Wetboek (reformed 2022); EPEX SPOT BE reference price; CEPANI arbitration",
+    "6_political_risk_score": 81,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 60,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "REGIONAL VARIATION. Wallonia: EUR ~65/CV (minimum CV price — see staleness warning). Offshore: project-specific per concession agreement.",
+    "8_revenue_floor_eur": "REGIONAL — Wallonia approx. EUR 65/CV; Flanders — verify with VREG; Offshore — concession-specific",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "quota_certificate_with_minimum_price",
+    "8_revenue_floor_staleness_warning": "CV/GSC minimum prices and quota obligations change. Verify with CWaPE (Wallonia), VREG (Flanders), CREG (federal) before use. Revenue = electricity price + certificate price. Both components must be modelled."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Belgium participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). Federal and regional hydrogen strategies in place.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Belgium is an IPCEI Hy2Tech and Hy2Infra participant. Port of Antwerp/Zeebrugge positioned as hydrogen import hub. Verify current subsidy programmes with federal/regional authorities before use."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 21,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "quota_certificate_with_minimum_price",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Green certificates (CV/GSC) with minimum price guarantee under regional energy legislation (Wallonia, Flanders, Brussels).",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "phase_out",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Belgian nuclear phase-out legislated; however, Doel 4 and Tihange 3 received 10-year extensions to 2035 under agreement with Engie signed 2023. No SMR programme active or planned."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 9,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Zeebrugge LNG terminal (Fluxys). TPA-regulated. Major North Sea/European hub connection point."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "Belgian Capacity Remuneration Mechanism (CRM) — Royal Decree implementing EU Regulation 2019/943. CCGT and peaker plants eligible. Source: CREG/Elia.",
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": true,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Belgium operates a formal CRM (Capacity Remuneration Mechanism) approved by EC (State Aid SA.45974). CCGT plants are eligible participants. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Biowaste support schemes vary by region (Flanders, Wallonia, Brussels Capital). Verify current regional support framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": "Belgium closed its last coal plant in 2016.",
+      "source": null,
+      "notes": "No coal-fired power in Belgium. No support mechanism exists. EU Taxonomy-excluded."
+    }
+  }
+}

@@ -1,0 +1,390 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Malta",
+    "local_name": "Malta / Repubblika ta' Malta",
+    "iso_code": "MT",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency since 1 January 2008",
+    "currency_eur_rate_source": "Malta adopted the Euro on 1 January 2008.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Malta's utility-scale RES sector is severely constrained by its island geography (total land area 316 km²). Verify current support parameters at the Malta Resources Authority (MRA — mra.org.mt) and Enemalta plc (enemalta.com.mt). Malta's primary energy challenge is island grid saturation — not insufficient ambition.",
+    "investor_profile_note": "CRITICAL: Malta is covered for completeness. As a utility-scale RES project development jurisdiction, Malta is SEVERELY LIMITED by: (1) island geography — 316 km² total land area; (2) island electricity grid (Enemalta) with a single HVDC interconnector to Sicily; and (3) near-total grid saturation at current penetration levels. The primary Malta investment case is (a) small/rooftop solar; (b) holding company structures; or (c) the TAP/interconnector strategic angle. Large-scale utility project investors should NOT prioritise Malta as a project location."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Malta Resources Authority Act (Cap. 423, Laws of Malta) 2001, as amended", "relevance": "MRA regulatory authority; energy licensing; electricity market oversight; RES authorisations" },
+      { "instrument": "Electricity Market Act (Cap. 575) 2012, as amended", "relevance": "Framework electricity market legislation; Enemalta obligations; grid connection rules; RES market framework" },
+      { "instrument": "Renewable Energy Act (Cap. 587) or equivalent current legislation", "relevance": "RES support mechanisms — verify current primary legislation at legislation.mt. Malta's RES legislation has evolved through multiple instruments and EU transposition measures." },
+      { "instrument": "National Energy and Climate Plan (NECP) 2030", "relevance": "RES target: 24.7% renewable energy by 2030 (adjusted from initial 10% — raised significantly); solar as primary technology given land constraints; offshore wind under investigation" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Environment and Development Planning Act (Cap. 504) 2010, as amended", "relevance": "Planning authority (Planning Authority — PA) jurisdiction; development permits for all projects" },
+      { "instrument": "Environment and Development Planning Act (Cap. 549) and subsidiary legislation", "relevance": "Environmental permits; EIA threshold requirements" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Income Tax Act (Cap. 123, Laws of Malta)", "relevance": "Malta's unique full imputation CIT system. Statutory CIT rate: 35%. However, for non-resident shareholders, a 6/7 refund mechanism effectively reduces the tax burden on qualifying distributions to approximately 5% (or 2/3 refund in some cases). For holding/operating structures: effective rate is 5% after full imputation refund." },
+      { "instrument": "Income Tax Management Act (Cap. 372)", "relevance": "Tax compliance and administration" },
+      { "instrument": "VAT Act (Cap. 406, Laws of Malta)", "relevance": "18% standard VAT rate; input VAT recovery available" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Malta RES support assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Malta Investment Services Act (Cap. 370) and Malta Enterprise Acts", "relevance": "Malta Enterprise provides investment incentives and is the primary FDI promotion body; no energy-sector-specific FDI restriction" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Malta's permitting bottleneck is not regulatory complexity but physical capacity — there is simply very limited land for utility-scale projects. The Planning Authority (PA) handles all development permits. EIA thresholds apply. The primary constraint for solar is land and rooftop space availability.",
+    "solar_utility": {
+      "primary_authority": "Planning Authority (PA — pa.org.mt); MRA (energy permit/authorisation); Enemalta (grid connection)",
+      "primary_process": "PA development permit (full or minor permit depending on scale) → MRA energy production licence → EIA (if above threshold) → Enemalta grid connection",
+      "legal_basis": "Environment and Development Planning Act; Malta Resources Authority Act; Electricity Market Act",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "land_constraint": "CRITICAL — Malta's total land area is 316 km² with 550,000 inhabitants (one of the densest territories in the world). Agricultural land is scarce and protected. Utility-scale ground-mounted solar development opportunities are severely limited.",
+      "rooftop_solar": "Rooftop solar is the primary practical RES development pathway in Malta — both domestic and commercial scale.",
+      "appeal_risk": "medium",
+      "notes": "Malta has high solar irradiation (~1,800–2,000 kWh/kWp p.a.) — excellent resource. The constraint is not irradiation but physical space. Agrivoltaic and floating solar (harbours, reservoirs) are being explored."
+    },
+    "onshore_wind": {
+      "effective_status": "Very limited — turbine noise and visual impact concerns; small island population density; planning authority resistance",
+      "installed_capacity_mw_approx": 7,
+      "notes": "Malta has very limited onshore wind capacity. The island geography and high population density make new turbine siting extremely difficult. Wind is not a meaningful technology pathway in Malta.",
+      "rag_assessment": "RED — effectively unavailable technology at utility scale in Malta"
+    },
+    "offshore_wind": {
+      "primary_authority": "MRA; Transport Malta; PA",
+      "development_status": "Early investigation stage — Maltese EEZ in the Mediterranean is under study for offshore wind potential",
+      "timeline_p50_months": 120,
+      "notes": "Malta's Mediterranean EEZ has moderate wind resource and significant water depth challenges for fixed-bottom offshore. Floating offshore wind is technically complex and expensive at this stage. Malta has explored offshore wind in its NECP but no projects are in advanced development.",
+      "rag_assessment": "RED for near-term; AMBER for post-2030 floating wind technology maturity"
+    },
+    "battery_storage_utility": {
+      "primary_process": "PA development permit; MRA energy storage licence; Enemalta grid connection",
+      "timeline_p50_months": 18,
+      "notes": "BESS is strategically important for Malta given island grid constraints and high solar variability. Enemalta is actively seeking BESS solutions to manage grid stability. This is the most realistic utility-scale storage development pathway."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "Enemalta plc", "region": "Malta's integrated electricity utility; generates, transmits, and distributes electricity; state majority-owned (Shanghai Electric holds minority stake)" }
+    ],
+    "regulatory_authority": "Malta Resources Authority (MRA)",
+    "legal_basis": "Electricity Market Act; MRA Act; Enemalta grid connection regulations",
+    "island_interconnector": {
+      "description": "Malta-Sicily HVDC Interconnector (Enemalta–Terna interconnection) — 200 MW capacity, 95 km submarine HVDC cable, commissioned 2015",
+      "significance": "Malta's SINGLE external electricity connection. This interconnector is structurally critical — it provides limited import/export capacity and does not create the same market integration as Continental European TSO connections.",
+      "planned_upgrade": "Malta-2 Interconnector (potential second Malta-Sicily cable) — verify current development status at Enemalta/MRA",
+      "constraint_for_res": "The 200 MW import/export constraint, combined with Enemalta's island grid capacity, severely limits the volume of RES that can be absorbed or exported. Grid saturation is the binding constraint for RES development."
+    },
+    "grid_saturation_analysis": {
+      "total_system_peak_mw_approx": 500,
+      "res_penetration_constraint": "Island grid stability requires careful management of RES intermittency. The Malta-Sicily interconnector provides some balancing capability but 200 MW capacity limits. High solar penetration creates midday production peaks that challenge grid stability.",
+      "constraint_severity": "HIGH — this is the primary structural constraint on Malta RES investment"
+    },
+    "connection_wait_time_months": {
+      "typical": { "p50": 24, "range": "18–42", "notes": "Enemalta grid connection queues are building as solar penetration increases; grid saturation risk" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 20000,
+      "range_high": 120000,
+      "notes": "Grid reinforcement costs can be significant given island grid constraints; Enemalta regulated tariffs"
+    }
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: Malta's premium support mechanism is ONE-WAY. Premium = max(0, reference price − electricity market price). No clawback. However, grid absorption limits constrain the volume of projects that can receive support.",
+    "primary_mechanism": "Competitive tender premium / Feed-in tariff for smaller projects — MRA administers",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Malta Resources Authority (MRA) in coordination with Enemalta",
+    "legal_basis": "Renewable Energy Act and subsidiary legislation; MRA tender rules",
+    "mechanism_description": {
+      "summary": "Malta uses a combination of competitive tender (for larger projects above threshold) and administrative feed-in tariff (for smaller residential/commercial projects). The tender premium is one-way: no clawback when market price exceeds reference. Volume is severely constrained by grid absorption capacity.",
+      "upside_treatment": "UNCAPPED — one-way mechanism; no clawback",
+      "downside_treatment": "PROTECTED — MRA/state mechanism pays shortfall",
+      "contract_term_years": "Typically 15–20 years",
+      "volume_constraint": "CRITICAL: Malta's grid saturation limits the total volume of RES that can receive support. Grid connection capacity is allocated before financial support — if grid cannot absorb, the support is irrelevant."
+    },
+    "auction": {
+      "administrator": "MRA",
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Malta tenders are infrequent and small in volume. Verify at MRA (mra.org.mt). Prices likely above EU average due to island energy costs.",
+        "solar_pv": { "eur_mwh_range_low": 60, "eur_mwh_range_high": 110, "notes": "Higher reference prices reflect island energy cost premium" }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Malta's 6/7 imputation refund system is the defining tax characteristic. For qualifying non-resident shareholders, the effective CIT burden after refund is approximately 5%. This makes Malta an extremely efficient holding jurisdiction for RES investments IN OTHER COUNTRIES — not necessarily for projects IN Malta.",
+    "corporation_tax_structure": {
+      "statutory_cit_rate_pct": 35.0,
+      "legal_basis": "Income Tax Act (Cap. 123) §27",
+      "imputation_system": {
+        "description": "Malta uses a full imputation dividend system (classical full imputation inherited from Maltese Companies Act and UK influence). When a Malta company distributes dividends, shareholders receive a credit for the CIT paid by the company. For qualifying non-resident corporate shareholders: 6/7 refund of the CIT originally paid by the Malta company.",
+        "effective_rate_after_6_7_refund_pct": 5.0,
+        "calculation": "On EUR 100 gross profit: Malta company pays EUR 35 CIT → EUR 65 net profit → company distributes as dividend → non-resident shareholder receives 6/7 of EUR 35 CIT paid = EUR 30 refund → net tax burden EUR 5 on EUR 100 gross profit = 5% effective rate",
+        "conditions": "6/7 refund applies when: (1) distributing from the 'foreign income account' or 'Malta taxed account'; (2) recipient is a qualifying non-resident shareholder; (3) income does not fall within anti-avoidance provisions (passive interest/royalty income). Verify conditions with Maltese legal adviser.",
+        "legal_basis": "Income Tax Act Cap. 123 §§47–48; Income Tax Management Act; Subsidiary legislation",
+        "two_thirds_refund_note": "For passive interest/royalties: 2/3 refund available (effective rate ~10%). Verify classification of RES income with Maltese tax adviser.",
+        "anti_avoidance": "ATAD (EU Anti-Tax Avoidance Directive) implementation and Pillar Two (OECD GloBE) minimum tax (15%) implementation must be verified — applies to groups with EUR 750m+ consolidated revenue. Large infrastructure funds investing through Malta HoldCo must assess GloBE compliance."
+      },
+      "dividend_withholding_tax_pct": 0,
+      "dividend_wht_note": "No dividend WHT payable when distributing to qualifying non-resident shareholders (where 6/7 refund applies, WHT is effectively zero)",
+      "_rule_3b_analysis": "For a Malta project company (EUR 50m solar project): Annual taxable profit ≈ EUR 4m. CIT at 35% = EUR 1.4m. After 6/7 refund to non-resident parent: net Malta CIT burden ≈ EUR 0.2m (5% effective). Standard 25% declining balance depreciation on machinery (no special RES acceleration). NPV of timing benefit from depreciation vs. straight-line at 7% WACC: approx EUR 0.8m on EUR 50m project. Combined tax benefit: extremely competitive for distribution-focused investors."
+    },
+    "vat": {
+      "standard_rate_pct": 18,
+      "legal_basis": "VAT Act (Cap. 406)",
+      "input_vat_recovery": "Available for VAT-registered businesses"
+    },
+    "holding_structure_note": "Malta's full imputation 6/7 refund makes it competitive with Ireland (12.5% CIT, no refund) and Luxembourg (participation exemption) as a European holding/finance jurisdiction. The key distinction: Ireland and Luxembourg offer lower statutory rates; Malta's mechanism works through refund. For RES fund structures, Luxembourg's participation exemption is generally preferred due to broader treaty network and AIFM framework. Malta is competitive for smaller structures and specific tax planning scenarios."
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "Medium",
+    "legal_basis": "Civil Code (Cap. 16, Laws of Malta); Maltese Contract Law; English common law influence (pre-independence British administration)",
+    "jurisdiction_enforcement": "Malta courts (Civil Court; Court of Appeal). English-language proceedings available. Malta Arbitration Centre (MAC) — relatively new; ICC arbitration for international deals. Court proceedings 2–4 years for complex disputes.",
+    "market_liquidity": "Very Limited — Malta's electricity market is tiny (approximately 500 MW peak demand). The PPA market is nascent.",
+    "active_corporate_buyers": false,
+    "domestic_ppa_constraints": "Malta's primary electricity consumer is the tourism and hospitality sector (hotels, gaming companies) plus some manufacturing. PPA market volume is very small.",
+    "gaming_industry_note": "Malta's large iGaming sector (MGA-licensed operators) represents electricity consumers that may be interested in green PPA for ESG purposes, but data centre load sizes are moderate.",
+    "guarantees_of_origin": {
+      "regulator": "MRA — issues GoOs for Malta-based projects",
+      "note": "Maltese GoOs in EU AIB framework. Very limited volume."
+    }
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 78,
+    "credit_ratings": {
+      "moodys": "A2",
+      "sp": "A-",
+      "fitch": "A+",
+      "source_note": "Malta maintains solid investment-grade ratings. Verify at agency websites.",
+      "_staleness_warning": "Verify before use. Malta's fiscal resilience is partly dependent on gaming and financial services sector performance."
+    },
+    "political_stability": "Stable parliamentary democracy; Labour government with large majority; historically alternating Labour/Nationalist (PN) coalition politics. Rule-of-law concerns have been raised (Daphne Caruana Galizia assassination 2017 — subsequent inquiry findings implicated elements of government). Independent judiciary.",
+    "rule_of_law_note": {
+      "description": "The inquiry into the assassination of journalist Daphne Caruana Galizia (2017) and subsequent findings raised international rule-of-law concerns about Malta. FATF (Financial Action Task Force) grey-listed Malta in 2021 — removed from grey list in June 2022 after remedial action.",
+      "severity": "MEDIUM — institutional improvements made; FATF de-listing is positive; courts remain independent; no direct impact on energy sector RES contracts",
+      "investor_relevance": "For holding company structures: verify current FATF status and AML/CFT compliance framework with Maltese legal adviser"
+    },
+    "expropriation_risk": "Low — EU member; constitutional property protections; ECHR",
+    "currency_risk": "None — EUR domestic since 2008",
+    "banking_system_note": "Maltese banking sector is well-capitalised (2012-2013 Cyprus-style crisis was not replicated in Malta). MFSA (Malta Financial Services Authority) is the integrated financial regulator.",
+    "score_rationale": "Deductions from 100: Rule-of-law concerns and FATF history (-10), small island state vulnerability (-7), very limited RES development opportunity (-5). Score 78 reflects solid sovereign fundamentals with governance caveats."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 88,
+    "component_scores": {
+      "grid_absorption_constraint": { "score": 95, "assessment": "EXTREME RED — single 200 MW HVDC interconnector to Sicily; island grid total peak ~500 MW; high solar penetration already creating midday absorption challenges; grid saturation is the primary binding constraint for all RES development" },
+      "permitting_drag": { "score": 60, "assessment": "MEDIUM — PA permitting process can be detailed; some political/public sensitivity to development; process manageable for small-scale projects" },
+      "land_availability": { "score": 92, "assessment": "EXTREME — 316 km² total territory; one of the world's densest populations; virtually no land available for utility-scale ground-mounted projects" },
+      "grid_connection_drag": { "score": 70, "assessment": "HIGH — Enemalta grid connection queue growing; saturation risk creates genuine connection denial risk for larger projects" },
+      "bureaucratic_friction": { "score": 55, "assessment": "MEDIUM — English-language administration; MRA and PA are accessible; small government size means direct access to decision-makers but also limited bandwidth" }
+    },
+    "primary_bottleneck": "Physical constraints are the binding limit — island size (316 km²) and single HVDC interconnector (200 MW) create hard limits on RES development that cannot be overcome through regulatory reform alone.",
+    "score_rationale": "Score 88 is the highest operational drag of all covered jurisdictions except Cyprus (island grid constraint 92). Both island jurisdictions face the same structural barrier: grid absorption is the binding constraint."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "No comprehensive FDI screening law; EU Regulation 2019/452 basic implementation; Malta Enterprise promotes FDI actively",
+    "energy_sector_mandatory_notification": false,
+    "practical_risk": "Very Low — Malta is pro-FDI; gaming, financial services, and (to a limited extent) energy are priority sectors; no material FDI restriction",
+    "enemalta_ownership_note": "Enemalta is state majority-owned with a 33% stake held by Shanghai Electric Power (acquired 2015). This Chinese strategic interest in Malta's primary utility is a notable ownership fact for investors considering energy infrastructure positions in Malta."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "tender_state_aid_status": {
+      "instrument": "MRA competitive tender premium",
+      "status": "Limited-volume tender; CEEAG compliance. Verify EC clearance at competition.ec.europa.eu.",
+      "retrospective_clawback_risk": { "assessment": "Low — no retroactive modification history for RES; very small market" }
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Malta is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY premium — uncapped merchant upside.",
+    "_rule_3b_note": "35% statutory CIT reduced to approximately 5% effective rate after 6/7 imputation refund for qualifying non-resident shareholders. GloBE/Pillar Two minimum tax (15%) applies for large groups (EUR 750m+ revenue) — verify applicability with Malta tax adviser.",
+    "illustrative_solar_rooftop_commercial": {
+      "reference_price_eur_mwh_approx": 85,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 16.0,
+      "typical_capex_eur_per_mw": 1800000,
+      "effective_cit_after_6_7_refund_pct": 5.0,
+      "note": "6/7 refund applicable for qualifying non-resident shareholders — reduces effective CIT from 35% to ~5%. Model CIT as 5% effective for distribution scenarios. Verify conditions with Maltese tax adviser."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
+    "permitting_window_solar_rooftop": { "rag": "GREEN", "rationale": "Small-scale rooftop solar: straightforward PA process; MRA registration; manageable timeline; highest solar irradiation among covered jurisdictions (1,800–2,000 kWh/kWp)" },
+    "permitting_window_solar_utility": { "rag": "RED", "rationale": "Land availability is effectively prohibitive for utility-scale ground-mounted solar — 316 km² territory with dense population; agricultural land protected" },
+    "permitting_window_onshore_wind": { "rag": "RED", "rationale": "Effectively unavailable — 7 MW installed, high population density, planning authority resistance, small island geography" },
+    "grid_connection": { "rag": "RED", "rationale": "Single 200 MW HVDC interconnector to Sicily; island grid ~500 MW peak; high solar penetration already straining absorption; grid saturation is the primary structural barrier to RES investment" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "Mechanism exists and is functional; however, very limited volume and grid absorption capacity limits render it largely academic for utility-scale projects" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way; no clawback; A2 sovereign counterparty" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "5% effective CIT after 6/7 imputation refund for qualifying non-resident shareholders — among the most competitive in the EU. Primary attraction for Malta holding structures in other jurisdictions." },
+    "ppa_enforceability": { "rag": "MEDIUM", "rationale": "English-language courts; MAC arbitration; but market is tiny and PPA counterparty depth is very limited" },
+    "political_risk": { "rag": "AMBER", "rationale": "A2/A- sovereign; EU member; NATO partner; rule-of-law concerns (FATF grey list history; Caruana Galizia inquiry); FATF de-listed 2022 — improved but requires monitoring" },
+    "operational_drag": { "rag": "RED", "rationale": "Score 88 — near-maximum drag; grid saturation and land scarcity create hard physical constraints on development" },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "No FDI screening; pro-FDI environment; Malta Enterprise active" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "CEEAG-compliant; no retroactive history; very small market reduces State Aid significance" },
+    "overall_stop_go": "RED (for project development) / GREEN (for holding structure)",
+    "overall_rationale": "As a PROJECT DEVELOPMENT jurisdiction, Malta is RED — hard physical constraints (316 km² territory, single 200 MW HVDC interconnector, near-complete grid saturation) make utility-scale RES development effectively impossible. Rooftop solar remains the practical pathway. As a HOLDING COMPANY / TAX STRUCTURE jurisdiction, Malta's 5% effective CIT (after 6/7 imputation refund) is highly competitive for investors seeking an EU-domiciled vehicle for European RES portfolios. The primary competition is Luxembourg's participation exemption — Malta's advantage is lower effective tax rate; Luxembourg's advantage is broader treaty network and established AIFM framework. Investors should clearly separate these two distinct roles."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 18,
+    "1_permitting_window_scope": "Small-scale / rooftop solar only (primary viable technology). Utility-scale ground-mounted: effectively prohibited by land constraint. Onshore wind: RED. Offshore wind: pre-development stage.",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 20,000–120,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 20,000–120,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "18–42 (grid saturation risk for larger projects — Enemalta may decline)",
+    "3_primary_support_mechanism": "MRA competitive tender / feed-in tariff; one-way; severely volume-constrained by island grid saturation",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": "35% statutory; ~5% effective after 6/7 imputation refund for qualifying non-resident shareholders",
+    "4_effective_tax_rate_note": "Full imputation system: 35% CIT at company level; 6/7 refund to qualifying non-resident shareholders reduces effective burden to ~5%. GloBE/Pillar Two minimum 15% applies for large groups (EUR 750m+ revenue). Verify with Maltese tax adviser.",
+    "4_key_incentive": "6/7 imputation refund (Income Tax Act Cap. 123) — ~5% effective CIT for qualifying non-resident shareholders; 0% dividend WHT; extensive double tax treaty network",
+    "5_ppa_enforceability_rating": "Medium",
+    "5_ppa_legal_basis": "Civil Code (Cap. 16); MAC arbitration; English-language proceedings; very limited domestic PPA market",
+    "6_political_risk_score": 78,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 88,
+    "7_operational_drag_direction": "Higher = more drag / worse — driven by island grid saturation and land scarcity",
+    "8_revenue_floor_native": "EUR 60–110/MWh approx. (MRA reference price for solar — island energy cost premium; verify at MRA)",
+    "8_revenue_floor_eur": "EUR 60–110/MWh (EUR domestic)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Verify at MRA (mra.org.mt). Limited tender volume; infrequent. Staleness risk: HIGH."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Malta is not an IPCEI participant. Very small island state — limited land and renewable resource for large-scale green hydrogen production. May benefit from EU hydrogen imports. High electricity import dependence limits electrolysis economics."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Feed-in premium scheme under Renewable Energy Act (Cap. 559), administered by Regulator for Energy and Water Services (REWS) / Malta Resources Authority (MRA).",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "no_policy",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": null,
+      "notes": "No nuclear energy policy in Malta. Island geography, grid size, and population density make nuclear generation impractical. No SMR discussion at policy level."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": 60,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Small island nation. Electrogas FSRU at Marsaxlokk provides gas for power generation — this is an existing FSRU for domestic power, not an import terminal open to TPA. Limited investment opportunity."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Malta operates gas-fired generation (Delimara CCGT/OCGT). EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT. Island grid — no interconnected capacity market. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Very small island state — limited biowaste feedstock. Verify current MRA bioenergy support framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

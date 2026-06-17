@@ -1,0 +1,389 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Luxembourg",
+    "local_name": "Lëtzebuerg / Grand-Duché de Luxembourg",
+    "iso_code": "LU",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency (founding Eurozone member)",
+    "currency_eur_rate_source": "Luxembourg is a founding member of the Eurozone (1999).",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Luxembourg's utility-scale RES sector is very limited. Verify current tender parameters at the Luxembourg Energy Regulatory Institute (Institut Luxembourgeois de Régulation — ILR at ilr.lu). Luxembourg's primary relevance to energy CapEx investors is as a holding company / finance jurisdiction, not a project development location.",
+    "investor_profile_note": "IMPORTANT: Luxembourg is covered here for completeness. It is primarily a holding/finance jurisdiction for European energy investments — very limited utility-scale RES development potential given its small territory (2,586 km²). RES investors should assess Luxembourg as a holding structure location, not a project development location, unless the investment is specifically a small-scale project."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Loi du 1er août 2007 relative à l'organisation du marché de l'électricité (Electricity Market Law 2007), as amended", "relevance": "Framework electricity market legislation; ILR regulatory authority; grid connection rules" },
+      { "instrument": "Loi du 23 décembre 2016 relative à la promotion des énergies renouvelables (RES Promotion Law 2016) and successors", "relevance": "RES support mechanisms; premium tariff system; competitive tender framework. NOTE: Luxembourg has updated its RES legislation multiple times — verify current primary law at legilux.public.lu" },
+      { "instrument": "Plan national intégré en matière d'énergie et de climat (PNEC) — Luxembourg NECP", "relevance": "RES target: 25% renewable energy by 2030; solar-focused given land constraints; cross-border statistical transfer agreements with other EU member states (unique mechanism)" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Loi du 18 juillet 2018 sur la protection de la nature (Nature Protection Law)", "relevance": "EIA; Appropriate Assessment for Natura 2000; protected habitats" },
+      { "instrument": "Law on Planning (aménagement du territoire) and municipal building permits (autorisation de bâtir)", "relevance": "Permitting process; municipal authority is the primary competent authority for small-scale RES" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Loi de l'impôt sur le revenu des collectivités (LIRC) — Corporate Income Tax Law, as amended", "relevance": "Corporate income tax (Körperschaftsteuer) at 17% (reduced from 18% in 2017 for companies with taxable income > EUR 200,000). Municipal business tax (impôt commercial communal — ICC) adds 6.75% on average in Luxembourg City. Unemployment solidarity surcharge (solidariteitsabgabe) of 7% on CIT due." },
+      { "instrument": "Luxembourg VAT Law 2009, as amended", "relevance": "17% standard VAT rate — lowest standard VAT rate in the EU; input VAT recovery available" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "EU framework for Luxembourg RES support assessment" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Luxembourg has no comprehensive FDI screening law beyond EU Regulation 2019/452 basic implementation", "relevance": "One of the most open FDI environments in the EU — Luxembourg's status as a financial centre and investment hub means highly welcoming environment for capital deployment" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Luxembourg's territory is 2,586 km² — smaller than Rhode Island. Onshore wind development is effectively saturated relative to the country's size. Utility-scale solar is the primary RES technology but land availability is severely constrained. The country relies on cross-border statistical transfers with other EU member states to partially meet its RES targets.",
+    "solar_utility": {
+      "primary_authority": "Municipalities (autorisation de bâtir); Ministry of Environment (EIA where required); ILR (grid connection via CREOS)",
+      "primary_process": "Municipal planning permission → EIA (if above threshold) → Building permit → Grid connection with CREOS → ILR notification",
+      "legal_basis": "Nature Protection Law; municipal planning regulations; Electricity Market Law",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "land_constraint_note": "Land availability is the primary constraint — not permitting speed. Luxembourg's dense population and small territory severely limit available land for utility-scale solar. Agricultural land protection and visual impact are significant factors.",
+      "appeal_risk": "medium",
+      "notes": "Rooftop and small-scale solar is the primary growth area. Large ground-mounted utility projects are limited by land availability."
+    },
+    "onshore_wind": {
+      "installed_capacity_mw_approx": 175,
+      "development_status": "Mature but constrained — limited sites available; most viable areas already developed or in planning pipeline",
+      "timeline_p50_months": 60,
+      "timeline_min_months": 36,
+      "timeline_max_months": 96,
+      "notes": "Luxembourg has approximately 175 MW of onshore wind installed — high penetration per capita. New sites are extremely limited. Visual impact, noise, and Natura 2000 constraints are significant. New onshore wind development in Luxembourg should not be assumed as a primary investment opportunity.",
+      "rag_assessment": "AMBER — limited sites; high competition for remaining suitable land"
+    },
+    "offshore_wind": {
+      "effective_status": "N/A — landlocked country",
+      "notes": "Luxembourg is landlocked; no offshore wind development possible."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Building permit; CREOS grid connection; ILR registration",
+      "timeline_p50_months": 18,
+      "notes": "BESS market is relatively small given Luxembourg's grid size but strategically positioned in the NW European interconnected grid (connected to Belgium, France, Germany)."
+    },
+    "cross_border_statistical_transfer": {
+      "description": "Luxembourg uses EU Directive 2009/28/EC cross-border statistical transfer mechanism to import RES statistics from other EU member states (notably Norway for hydro, and other MS). This is a unique policy tool not available to all jurisdictions and reflects Luxembourg's inability to meet RES targets domestically.",
+      "investor_relevance": "Not a direct project investment opportunity but demonstrates Luxembourg's open approach to cross-border energy policy mechanisms."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "CREOS Luxembourg S.A.", "region": "Luxembourg combined TSO/DSO — state-owned (Encevo Group subsidiary); operates both transmission (225kV/110kV) and distribution (20kV/0.4kV) networks as an integrated network operator given the country's small size" }
+    ],
+    "regulatory_authority": "Institut Luxembourgeois de Régulation (ILR)",
+    "legal_basis": "Electricity Market Law 2007; ILR regulations; CREOS Grid Code",
+    "interconnections": "Luxembourg is well-connected: interconnections with Germany (Amprion/TransNetBW), France (RTE), and Belgium (Elia). This makes Luxembourg electricity prices closely correlated with CWE (Central Western Europe) market prices.",
+    "connection_wait_time_months": {
+      "typical": { "p50": 18, "range": "12–30", "notes": "CREOS processes are relatively efficient for Luxembourg's scale; limited large-project queue pressure" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 15000,
+      "range_high": 80000,
+      "notes": "Regulated by ILR; competitive for Luxembourg's scale"
+    }
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: Luxembourg's premium tariff (prime d'injection) is a ONE-WAY mechanism. Premium = max(0, reference price − electricity market price). No clawback when market price exceeds reference. Cross-border statistical transfers are a separate instrument — not a direct project support mechanism.",
+    "primary_mechanism": "Prime d'injection (injection premium) — competitive tender for larger projects; fixed support for smaller projects",
+    "mechanism_type": "one_way_market_premium",
+    "administrator": "Institut Luxembourgeois de Régulation (ILR)",
+    "legal_basis": "RES Promotion Law 2016 and amendments; ILR tender rules",
+    "mechanism_description": {
+      "summary": "For larger projects (above threshold — verify at ILR): competitive tender for a premium over the market price. For smaller projects: fixed premium or administrative tariff. Luxembourg's RES market is small — tender volumes reflect the limited development potential.",
+      "upside_treatment": "UNCAPPED — one-way mechanism; no clawback above reference price",
+      "downside_treatment": "PROTECTED — ILR/state mechanism pays shortfall",
+      "contract_term_years": "Typically 15 years",
+      "volume_note": "Luxembourg's RES tender volumes are very small in absolute terms (MW scale). Luxembourg is not a significant utility-scale RES project jurisdiction."
+    },
+    "auction": {
+      "administrator": "ILR",
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Verify at ILR (ilr.lu). Luxembourg runs small-volume tenders.",
+        "solar_pv": { "eur_mwh_range_low": 50, "eur_mwh_range_high": 90 },
+        "onshore_wind": { "eur_mwh_range_low": 40, "eur_mwh_range_high": 75 }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Luxembourg's combined effective CIT rate (including municipal business tax and solidarity surcharge) is approximately 24.94% in Luxembourg City. No specific accelerated depreciation for RES beyond standard machinery rates. Investment structure optimization (Luxembourg holding companies) is the primary tax planning tool — see notes.",
+    "corporation_tax_structure": {
+      "cit_rate_pct": 17.0,
+      "applicable_above_eur": 200000,
+      "cit_rate_reduced_pct": 15.0,
+      "cit_rate_reduced_threshold": "Taxable income EUR 0–175,000 at 15%; EUR 175,001–200,000 at tapered rate",
+      "legal_basis": "LIRC §174 (rate schedule) — verify current rates at legilux.public.lu",
+      "solidarity_surcharge_pct": 7.0,
+      "solidarity_surcharge_base": "7% applied to CIT due (not to taxable income)",
+      "municipal_business_tax_icc": {
+        "rate_pct_luxembourg_city": 6.75,
+        "note": "ICC rate varies by municipality. Luxembourg City: 6.75%. Other municipalities vary (5.5–9.5%). Most utility-scale projects would be in or near Luxembourg City area.",
+        "legal_basis": "Municipal business tax law; ILR calculations"
+      },
+      "combined_effective_rate_luxembourg_city_pct": {
+        "calculation": "17% CIT × 1.07 solidarity surcharge = 18.19% effective CIT + 6.75% ICC = 24.94% approximate combined effective rate",
+        "note": "24.94% combined effective rate in Luxembourg City — standard tax rate, neither low nor high by EU standards. Luxembourg's tax advantage lies in its holding/finance structure (IP box, participation exemption, etc.) not in the base CIT rate for operating companies."
+      },
+      "participation_exemption": {
+        "description": "Luxembourg's participation exemption (régime mère-filiale) provides 100% exemption from Luxembourg CIT on qualifying dividends and capital gains received from qualifying subsidiaries (generally ≥ 10% shareholding). This makes Luxembourg an optimal holding company jurisdiction for European RES portfolios.",
+        "investor_relevance": "A Luxembourg holding company (SA, SARL) holding project companies in Germany, France, Poland, etc. may receive dividends from those subsidiaries free of Luxembourg CIT (subject to conditions). This is the primary reason RES fund structures often use Luxembourg HoldCo vehicles — NOT because of project development economics.",
+        "legal_basis": "LIRC §166 (participation exemption)"
+      },
+      "ip_box_regime": {
+        "description": "Luxembourg IP box (régime d'exonération des revenus provenant de la propriété intellectuelle) at 80% income exemption for qualifying IP income. Limited relevance for standard RES project revenue but potentially applicable to technology licensing.",
+        "legal_basis": "LIRC §§50bis and following"
+      },
+      "standard_depreciation_machinery_pct": 25.0,
+      "depreciation_note": "No special RES accelerated depreciation beyond standard machinery declining balance (25%). No equivalent to German §7g, UK Full Expensing, or French suramortissement.",
+      "_rule_3b_analysis": "For a EUR 50m RES project in Luxembourg: standard depreciation (25% declining balance). CIT 24.94% on taxable profit vs. standard 40% declining balance in some peers. No special first-year enhancement. NPV of timing benefit vs. straight-line: modest — estimate EUR 1–2m at 7% WACC. Primary Luxembourg tax advantage is HOLDING STRUCTURE, not project-level CIT."
+    },
+    "vat": {
+      "standard_rate_pct": 17,
+      "note": "Luxembourg has the lowest standard VAT rate in the EU (17%). Input VAT recovery available for registered businesses.",
+      "legal_basis": "Luxembourg VAT Law"
+    },
+    "holding_structure_note": "Luxembourg's primary role in European RES investment is as a holding company/fund vehicle jurisdiction. The participation exemption, extensive double tax treaty network (80+ treaties), AIF/UCITS fund frameworks, and AIFM regulatory environment make Luxembourg the dominant European location for RES fund structures (e.g., Blackstone, Brookfield, infrastructure funds maintain Luxembourg-based HoldCo structures). This is distinct from project-level development economics."
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "High",
+    "bankability_rating": "High",
+    "legal_basis": "Civil Code (Code Civil); contractual freedom; Luxembourg courts",
+    "jurisdiction_enforcement": "Luxembourg courts (Cour d'appel; Tribunal d'arrondissement). Proceedings efficient by European standards — 1–2 years for commercial disputes. Luxembourg Court of Arbitration (CAL) available; ICC arbitration (Luxembourg seat option).",
+    "market_liquidity": "Limited domestic project market — but Luxembourg-headquartered companies (ArcelorMittal, SES, Luxembourg Stock Exchange, financial services sector) are potential corporate PPA buyers for non-Luxembourg projects.",
+    "ppa_structure_role": "Luxembourg is primarily relevant as the SPV/holding company jurisdiction for structuring cross-border PPAs, not as a PPA offtaker location. Luxembourg-domiciled holding companies may be the contractual PPA counterparty for projects in other jurisdictions.",
+    "guarantees_of_origin": {
+      "regulator": "ILR — issues Garanties d'origine (GoOs) for Luxembourg-based projects",
+      "note": "Luxembourg GoOs in EU AIB framework. Very limited volume given project scale."
+    }
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 93,
+    "credit_ratings": {
+      "moodys": "Aaa",
+      "sp": "AAA",
+      "fitch": "AAA",
+      "source_note": "Luxembourg maintains the highest possible sovereign credit ratings across all major agencies — triple-A rated. EU founding member; NATO member; political stability exemplary.",
+      "_staleness_warning": "Verify at agency websites before use."
+    },
+    "political_stability": "Exceptional — stable coalition government (CSV/DP traditionally); Grand Duchy; EU/NATO founding member; financial centre with political commitment to rule of law",
+    "retroactive_policy_incidents": [
+      { "year": "None", "description": "No retroactive modifications to contracted RES revenues in Luxembourg.", "severity": "N/A" }
+    ],
+    "expropriation_risk": "Negligible — triple-A sovereign; EU founding member; ECHR; ICC arbitration hub",
+    "currency_risk": "None — EUR founding member",
+    "score_rationale": "Deductions from 100: Very small state; very limited project development space; modest absolute RES pipeline (-7). Score 93 reflects triple-A sovereign, exemplary governance, and the most stable investment environment in Europe."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse",
+    "operational_drag_score_out_of_100": 55,
+    "component_scores": {
+      "grid_connection_drag": { "score": 35, "assessment": "LOW — CREOS efficient for Luxembourg's scale; well-integrated with CWE grid; limited queue pressure" },
+      "permitting_drag": { "score": 60, "assessment": "MEDIUM — land availability is the primary constraint (not process); municipal planning can be detailed; Natura 2000 constraints in Ardennes region; visual impact scrutiny" },
+      "bureaucratic_friction": { "score": 45, "assessment": "LOW-MEDIUM — multilingual administration (Lëtzebuergesch, French, German); ILR and CREOS are professional; digital services available; small government provides access to decision-makers" },
+      "land_availability": { "score": 80, "assessment": "HIGH DRAG — 2,586 km² territory; dense population; most viable wind sites already developed; utility solar constrained by agricultural land; this is the binding constraint" }
+    },
+    "primary_bottleneck": "Land availability — Luxembourg is simply too small for significant utility-scale RES development. The drag score should be interpreted in context: the processes are efficient, but the opportunity is severely limited.",
+    "score_rationale": "Score 55 reflects an efficient process dragged up by severe land availability constraints. For the investor focused on holding/finance structures (Luxembourg's primary energy investment role), operational drag is not the relevant metric."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "No comprehensive FDI screening law; EU Regulation 2019/452 basic implementation",
+    "energy_sector_mandatory_notification": false,
+    "practical_risk": "Very Low — Luxembourg is a financial centre with the most open investment environment in Europe; no material FDI screening for energy sector",
+    "legal_basis": "EU Regulation 2019/452 basic cooperation"
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "premium_state_aid_status": {
+      "instrument": "ILR competitive tender premium",
+      "status": "Small-volume tender mechanism; CEEAG compliance. Verify EC clearance at competition.ec.europa.eu.",
+      "retrospective_clawback_risk": { "assessment": "Very Low" }
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Luxembourg is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "ONE-WAY premium — uncapped merchant upside.",
+    "_rule_3b_note": "Combined effective CIT ~24.94% in Luxembourg City (CIT 17% × 1.07 solidarity + ICC 6.75%). No special RES accelerated depreciation. Standard 25% declining balance machinery depreciation.",
+    "_primary_use_case": "Luxembourg is primarily modelled as a HOLDING COMPANY jurisdiction for European RES portfolios, not as a project development location. Financial model inputs for project companies located in Luxembourg are secondary to holding structure analysis.",
+    "illustrative_solar_small_scale": {
+      "reference_price_eur_mwh_approx": 70,
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 15,
+      "p50_capacity_factor_pct": 11.5,
+      "typical_capex_eur_per_mw": 1700000,
+      "combined_effective_cit_pct": 24.94
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory. Note: assessments below are for Luxembourg as a PROJECT DEVELOPMENT jurisdiction. As a HOLDING COMPANY jurisdiction, the assessment is GREEN across all categories.",
+    "permitting_window_solar": { "rag": "AMBER", "rationale": "Process itself is efficient; land availability is the primary binding constraint limiting development opportunity" },
+    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "Limited remaining viable sites; most accessible areas already developed; planning scrutiny high; long timelines for remaining sites" },
+    "grid_connection": { "rag": "GREEN", "rationale": "CREOS efficient; well-connected CWE grid; limited queue pressure given project scale" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "ILR tender mechanism functional but very limited volume; Luxembourg is not a scale RES project market" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way; no clawback; triple-A sovereign counterparty" },
+    "tax_efficiency_project_company": { "rag": "AMBER", "rationale": "24.94% combined effective CIT rate is middle-of-EU — not particularly competitive for operating project company. No special RES accelerated depreciation." },
+    "tax_efficiency_holding_structure": { "rag": "GREEN", "rationale": "Luxembourg participation exemption (100% dividend/gain exemption from qualifying subsidiaries), extensive treaty network, AIF/AIFM structures make Luxembourg the optimal EU holding company/fund vehicle jurisdiction for multi-country RES portfolios." },
+    "ppa_enforceability": { "rag": "HIGH", "rationale": "Excellent courts; ICC/CAL arbitration; reliable legal system; primary role as holding jurisdiction rather than offtaker" },
+    "political_risk": { "rag": "GREEN", "rationale": "Triple-A sovereign (Aaa/AAA); EU/NATO founding member; exemplary governance; no retroactive RES incidents" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Score 55 — process is efficient but land availability is the binding constraint for project development. As holding structure jurisdiction: GREEN." },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "No FDI screening; most open investment environment in Europe" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "CEEAG-compliant tender; triple-A sovereign; no retroactive risk history" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "As a PROJECT DEVELOPMENT jurisdiction, Luxembourg is AMBER — limited development potential, constrained land availability, and modest scale opportunities make it unsuitable as a primary RES development target for all but small-scale projects. As a HOLDING COMPANY/FUND VEHICLE jurisdiction for European RES portfolios (Germany, France, Poland, Nordics, CEE), Luxembourg is STRONGLY RECOMMENDED — triple-A sovereign, 100% participation exemption, extensive treaty network, and AIFM framework make it the dominant European holding structure location. Investors should distinguish between these two roles."
+  },
+
+  "comparison_table": {
+    "1_permitting_window_months_p50": 18,
+    "1_permitting_window_scope": "Small-scale solar (primary viable technology; land-constrained). Onshore wind: 60 months P50 (limited remaining sites).",
+    "1_permitting_window_solar_p50_months": 18,
+    "2_grid_connection_cost_native": "EUR 15,000–80,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 15,000–80,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "12–30",
+    "3_primary_support_mechanism": "ILR competitive tender premium (prime d'injection); one-way; limited volume",
+    "3_mechanism_type_code": "one_way_market_premium",
+    "4_effective_corporation_tax_rate_pct": "24.94% combined (CIT 17% × 1.07 solidarity + ICC 6.75% — Luxembourg City)",
+    "4_effective_tax_rate_note": "Project company CIT is middle-EU. Holding company: 100% participation exemption on qualifying dividends/gains (LIRC §166). Primary Luxembourg tax advantage is holding structure, not operating company CIT.",
+    "4_key_incentive": "Participation exemption (LIRC §166): 100% Luxembourg CIT exemption on qualifying dividends and capital gains from project company subsidiaries — primary incentive for European RES holding structures",
+    "5_ppa_enforceability_rating": "High",
+    "5_ppa_legal_basis": "Civil Code; Luxembourg courts; ICC/CAL arbitration; Luxembourg HoldCo frequently used as SPV counterparty for cross-border PPAs",
+    "6_political_risk_score": 93,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 55,
+    "7_operational_drag_direction": "Higher = more drag / worse — primarily driven by land availability constraint, not process",
+    "8_revenue_floor_native": "EUR 40–90/MWh approx. (ILR tender reference; limited project volume)",
+    "8_revenue_floor_eur": "EUR 40–90/MWh (EUR domestic)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "one_way_market_premium",
+    "8_revenue_floor_staleness_warning": "Verify at ILR (ilr.lu). Very limited tender volume — prices may not be observable from recent rounds. Staleness risk: HIGH."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Luxembourg is not an IPCEI participant. Very small electricity generation market — domestic hydrogen production potential limited. May participate as hydrogen importer/transit hub given central EU location. ILR administers energy regulation."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Prime de marché (market premium) under Loi du 23 décembre 2016 relative aux installations de production d'électricité à partir de sources d'énergie renouvelables, administered by ILR.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "no_policy",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": null,
+      "notes": "No nuclear energy policy in Luxembourg. Country is landlocked and very small — domestic nuclear generation not relevant. Bordered by France (nuclear) and Germany (phase-out). No SMR discussion at policy level."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Landlocked. No LNG terminal possible."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Luxembourg has minimal domestic gas-fired generation. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT. Landlocked; relies on Belgian and German grid interconnection. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Very small domestic market. Verify current Luxembourg bioenergy support under ILR framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

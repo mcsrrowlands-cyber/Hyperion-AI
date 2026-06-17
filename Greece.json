@@ -1,0 +1,510 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Greece",
+    "local_name": "Ελλάδα (Ellada)",
+    "iso_code": "GR",
+    "currency_native": "EUR",
+    "currency_eur_rate": 1.0,
+    "currency_eur_rate_date": "N/A — EUR is the domestic currency",
+    "currency_eur_rate_source": "No conversion required. All figures are native EUR.",
+    "region": "Europe",
+    "eu_member": true,
+    "eu_state_aid_applicable": true,
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Greek RES auction clearing prices (Reference Prices) change with each auction round. RAE and DAPEEP publish results after each tender. Verify against current RAE publications at rae.gr before relying on figures below."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Law 4685/2020 — Fast-Track Licensing of RES and Spatial Planning for Energy Projects", "relevance": "Overhauled environmental licensing; introduced single-permit procedure for RES projects; abolished production licence requirement for <1 MW; streamlined EIA; primary post-2020 permitting reform" },
+      { "instrument": "Law 4414/2016 — Support Scheme for Electricity from RES and High-Efficiency CHP", "relevance": "Established the two-way Feed-in Premium (ΕΦΑ) framework via competitive auctions; replaced Law 3468/2006 FiT for new projects; defines Reference Price mechanism and DAPEEP role" },
+      { "instrument": "Law 3468/2006 — RES and High-Efficiency CHP (as amended)", "relevance": "Legacy FiT framework; pre-2016 grandfathered contracts still active; relevant for retroactive risk assessment" },
+      { "instrument": "Law 5037/2023 — Offshore Wind Framework and Other Provisions", "relevance": "First comprehensive offshore wind licensing framework for Greece; zone designation (ΧΑΡΠΕ); administered by RAE" },
+      { "instrument": "National Energy and Climate Plan (NECP) 2019, under revision 2024–2025", "relevance": "Targets >70% renewable electricity by 2030; primary driver for auction programme sizing and grid investment" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Law 4685/2020 Articles 7 et seq.", "relevance": "Single environmental and permit procedure; Hellenic Environmental Authority (EAAD) as primary EIA authority" },
+      { "instrument": "Law 4759/2020 — Spatial Planning Modernisation", "relevance": "Land use designations relevant to ground-mounted solar and onshore wind; spatial planning framework" },
+      { "instrument": "Presidential Decree 11/2023 — Offshore Renewable Energy Zones", "relevance": "Designates offshore RES spatial planning zones (ΧΑΡΠΕ) in Greek territorial waters" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Income Tax Code — Law 4172/2013 as amended", "relevance": "22% corporate income tax rate; standard depreciation rules; dividend withholding tax 5%" },
+      { "instrument": "Development Law 4887/2022 — 'Greece 2.0'", "relevance": "State investment incentives: enhanced depreciation, tax exemption on profits, or CapEx grant for qualifying investments including RES projects" },
+      { "instrument": "VAT Code — Law 2859/2000", "relevance": "24% standard VAT rate on energy equipment and electricity supply" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "CEEAG — Commission Notice 2022/C 80/01", "relevance": "Primary EU framework for assessing Greek RES support compatibility with internal market" },
+      { "instrument": "GBER — Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES aid measures; Development Law 4887/2022 cleared under GBER" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Law 4953/2022 — FDI Screening Mechanism", "relevance": "National implementation of EU Regulation 2019/452; energy designated as critical infrastructure; Ministry of Development as reviewing authority" },
+      { "instrument": "Law 4608/2019 — Hellenic Investment Fund and Strategic Investment Fast-Track", "relevance": "Fast-track permitting and support for large qualifying investments; Enterprise Greece as promotion agency" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation mechanism; Greece must notify the EC and other member states of covered FDI proceedings" }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Post-Law 4685/2020, Greek permitting has materially improved. P50 timelines run from formal application. Pre-application (grid pre-application, EIA scoping, spatial plan confirmation) adds 6–18 months. Non-interconnected island (ΜΔΝ) projects face additional regulatory steps under the separate island grid framework.",
+    "solar_utility": {
+      "threshold_mw_national_process": 1,
+      "primary_authority": "EAAD (Hellenic Environmental Authority) for EIA; Regional Authority for installation and operation permits",
+      "above_threshold_authority": "EAAD for projects >1 MW; Ministry of Environment and Energy fast-track for strategic projects >50 MW",
+      "primary_process": "Environmental Permit (AEPO) + Installation Permit + Operation Permit; post-Law 4685/2020 combined single procedure where possible",
+      "legal_basis": "Law 4685/2020; Law 4414/2016; Law 4759/2020 (spatial planning)",
+      "timeline_p50_months": 24,
+      "timeline_min_months": 18,
+      "timeline_max_months": 42,
+      "pre_application_months_typical": 9,
+      "appeal_risk": "medium",
+      "appeal_mechanism": "Council of State (Συμβούλιο της Επικρατείας); Administrative Courts of Appeal",
+      "notes": "Greece has the best solar irradiation in the EU (1,400–1,900 kWh/kWp p.a.). Ground-mounted solar permitting has improved materially. Grid connection (not permitting) is now the primary development bottleneck. Agri-PV emerging with dedicated provisions."
+    },
+    "onshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "EAAD for EIA; Regional Authorities for installation/operation permits; RAE for production licence >1 MW",
+      "primary_process": "RAE Production Licence (for >1 MW) → Environmental Permit (AEPO) → Installation Permit → Operation Permit",
+      "legal_basis": "Law 4685/2020; Law 4414/2016 §3; Law 4951/2022",
+      "timeline_p50_months": 36,
+      "timeline_min_months": 24,
+      "timeline_max_months": 60,
+      "pre_application_months_typical": 12,
+      "appeal_risk": "medium-high",
+      "appeal_mechanism": "Council of State; Administrative Courts",
+      "setback_rules": "500m from residential areas (general rule); Natura 2000 network restrictions apply; forested and protected archaeological areas restricted",
+      "notes": "Excellent wind resources — especially Aegean islands and Crete. Post-2020 reform has materially improved timelines. Natura 2000 designations (approx. 27% of Greek territory) are the primary permitting constraint. Archaeological surveys mandatory across large areas. Island wind faces grid penetration caps."
+    },
+    "offshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "RAE; Ministry of Environment and Energy; Ministry of Shipping and Island Policy",
+      "primary_process": "Zone designation (ΧΑΡΠΕ) → RAE licence → EIA → Installation and Operation permits",
+      "legal_basis": "Law 5037/2023; Presidential Decree 11/2023; Law 4685/2020",
+      "model": "Zone-based licensing; RAE designates zones following offshore spatial plan; individual project licensing within designated zones",
+      "timeline_p50_months": 96,
+      "timeline_min_months": 72,
+      "timeline_max_months": 144,
+      "capacity_targets": "Approx. 6 GW offshore wind by 2030 (revised NECP target 2024–2025)",
+      "appeal_risk": "medium",
+      "notes": "Law 5037/2023 framework is nascent — no offshore project commissioned as of 2025. Regulatory processes still being established. Floating wind relevant for deep Aegean waters. Greece's island geography creates submarine cable routing complexity."
+    },
+    "battery_storage_utility": {
+      "primary_process": "EAAD environmental permit if above thresholds; simplified licensing for co-located BESS under Law 4685/2020 single procedure",
+      "legal_basis": "Law 4685/2020; Law 4951/2022 (energy storage provisions)",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "notes": "Island BESS projects supported under non-interconnected island (ΜΔΝ) grid stability programmes — potentially faster route and premium revenue from ancillary services."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "ADMIE / IPTO (Ανεξάρτητος Διαχειριστής Μεταφοράς Ηλεκτρικής Ενέργειας)", "region": "Mainland Greece and interconnected islands" }
+    ],
+    "distribution_operators": "DEDDIE/HEDNO — mainland and interconnected islands; separate DSOs for non-interconnected islands (ΜΔΝ)",
+    "regulatory_authority": "RAE (Ρυθμιστική Αρχή Ενέργειας)",
+    "legal_basis": "Law 4001/2011 (Energy Markets); Law 4951/2022 §§20–30 (RES grid connection); RAE Grid Codes",
+    "priority_access": {
+      "applicable": true,
+      "mechanism": "Priority dispatch for RES under Law 4001/2011 and EU Electricity Directive 2019/944 (transposed)",
+      "description": "RES generators have statutory priority dispatch rights. Curtailment compensation rules apply under the Greek Grid Code."
+    },
+    "non_interconnected_islands": {
+      "description": "ΜΔΝ islands operate separate grids. RES penetration subject to strict instantaneous limits to preserve grid stability.",
+      "ren_penetration_cap": "Typically 20–30% instantaneous cap — materially limits RES project size on smaller islands without storage",
+      "interconnection_programme": "Ariadne Interconnection programme: Crete interconnected 2024; Cyclades pending. Each interconnection unlocks significant additional RES capacity."
+    },
+    "grid_connection_backlog": {
+      "assessment": "SEVERE for mainland solar",
+      "notes": "Significant backlog particularly for solar PV on the mainland. ADMIE and DEDDIE/HEDNO have implemented queue management procedures. Available connection capacity exceeded by applications in Western Peloponnese, Thessaly, and parts of Central Greece."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 36, "range": "24–60", "notes": "Projects >20 MW typically transmission-connected" },
+      "distribution_connected": { "p50": 24, "range": "18–42" }
+    },
+    "connection_cost_eur_per_mw": {
+      "range_low": 30000,
+      "range_high": 180000,
+      "notes": "Island submarine cable projects substantially higher. RAE regulates connection charges. Network reinforcement costs partially socialised via tariffs."
+    },
+    "operational_drag_assessment": "HIGH — grid connection backlog is material; island grid caps are a structural barrier for ΜΔΝ projects"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: The Greek Feed-in Premium (ΕΦΑ / FIP) under Law 4414/2016 is a TWO-WAY mechanism (equivalent to a CfD). When market price EXCEEDS the Reference Price (Τιμή Αναφοράς), the generator must RETURN the difference to DAPEEP — there is no uncapped upside. This is fundamentally different from the German EEG Marktprämie (one-way). Return assumptions must reflect a CAPPED revenue profile equal to the Reference Price.",
+    "primary_mechanism": "Feed-in Premium (ΕΦΑ — Ειδικό Πριμ Αναφοράς)",
+    "mechanism_type": "two_way_cfd",
+    "administrator": "DAPEEP (Διαχειριστής ΑΠΕ και Εγγυήσεων Προέλευσης — RES Operator and Guarantees of Origin)",
+    "legal_basis": "Law 4414/2016 §§5–9; auction rules via Ministerial Decisions issued by YPEN/RAE",
+    "mechanism_description": {
+      "summary": "Generator wins a competitive auction and receives a Reference Price. Generator sells electricity on the day-ahead wholesale market (ENEX/HEnEx). DAPEEP pays the difference when market price falls below the Reference Price. Generator returns the difference to DAPEEP when market price exceeds the Reference Price. Revenue is effectively capped at the Reference Price.",
+      "upside_treatment": "CAPPED — excess revenue above the Reference Price is returned to DAPEEP. No merchant upside.",
+      "downside_treatment": "PROTECTED — DAPEEP pays the shortfall when market price is below the Reference Price",
+      "merchant_exposure_during_term": "None — full two-way price protection during contract term",
+      "contract_term_years": 20,
+      "two_way_clawback_legal_basis": "Law 4414/2016 §5(3) — generator obligation to return excess revenue when market price exceeds Reference Price"
+    },
+    "auction": {
+      "administrator": "RAE conducts auctions; DAPEEP administers FIP contracts",
+      "frequency": "Typically 2–3 rounds per year (technology-specific and technology-neutral)",
+      "technology_auctions": [
+        "Onshore wind (Χερσαία Αιολική Ενέργεια)",
+        "Solar PV — ground-mounted (Φωτοβολταϊκά Εδάφους)",
+        "Technology-neutral mixed rounds",
+        "Offshore wind (nascent — Law 5037/2023)"
+      ],
+      "reference_price_eur_mwh_approx": {
+        "_staleness_warning": "Reference Prices change with each auction round. Figures below are indicative 2023–2024 ranges only. Verify at RAE (rae.gr) official auction results before use.",
+        "_source": "RAE official auction results publications; DAPEEP data",
+        "onshore_wind": {
+          "eur_mwh_range_low": 55.00,
+          "eur_mwh_range_high": 70.00,
+          "notes": "Indicative 2023–2024 clearing range. Resource quality varies significantly between mainland and island sites."
+        },
+        "solar_pv_ground_mounted": {
+          "eur_mwh_range_low": 45.00,
+          "eur_mwh_range_high": 62.00,
+          "notes": "Strong solar resource enables competitive clearing prices. Southern sites (Crete, Peloponnese) command premium resource but face grid constraints."
+        }
+      },
+      "de_minimis_threshold_kw": {
+        "solar_exempt_kw": 500,
+        "note": "Sub-500kWp solar installations may use net-metering (νέο net metering) provisions — not subject to competitive auction"
+      }
+    },
+    "retroactive_risk_historical": {
+      "description": "Between 2012 and 2014, Greece imposed retroactive reductions on FiT revenues for projects already commissioned under Law 3468/2006. Law 4254/2014 (Troika austerity package) reduced FiT revenues retroactively for operating projects.",
+      "severity": "HIGH — revenues reduced retroactively by 15–34% depending on project size; existing contracted revenues were modified",
+      "investor_impact": "Material financial losses; extensive arbitration proceedings; significant chilling effect on FDI in Greek renewables during 2012–2017",
+      "current_status": "Post-2016 FIP contracts under Law 4414/2016 have not been retroactively revised. Greek government has actively sought to restore investor confidence since 2019. The 2012–2014 precedent remains a material political risk factor in investor due diligence."
+    },
+    "guarantees_of_origin": {
+      "regulator": "DAPEEP",
+      "note": "Greek FIP-supported projects CAN issue Guarantees of Origin (GoO) — unlike Germany (where EEG-supported projects are excluded from HKN issuance). GoO revenue is an additional income stream for Greek FIP projects."
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Development Law 4887/2022 enhanced depreciation and tax exemption options are CapEx TIMING benefits and profit-period shelters — not permanent reductions to the effective tax rate. NPV of the timing/exemption benefit must be shown separately.",
+    "corporation_tax_structure": {
+      "rate_pct": 22.0,
+      "legal_basis": "Income Tax Code Law 4172/2013 Article 58; reduced from 24% to 22% via Law 4799/2021 effective from tax year 2021",
+      "dividend_withholding_tax_pct": 5.0,
+      "legal_basis_wht": "Law 4172/2013 Article 64"
+    },
+    "combined_effective_tax_rate_range_pct": {
+      "standard": 22.0,
+      "notes": "Greece has a unitary CIT — no regional trade tax equivalent. Effective rate is close to the 22% statutory rate. Solidarity surcharges (previously applicable to individuals) are not applicable to corporate entities."
+    },
+    "capex_incentives": {
+      "development_law_4887_2022": {
+        "type": "elective_incentive_package",
+        "scheme_name": "Development Law 'Greece 2.0' (Law 4887/2022)",
+        "qualifying_mechanism": "Qualifying RES investments above minimum thresholds may elect ONE of: (a) tax exemption on profits for up to 15 years; (b) enhanced depreciation at 200% of standard rate in Year 1; (c) CapEx subsidy (grant); or (d) leasing subsidy",
+        "enhanced_depreciation_option": "200% of standard depreciation rate applied in Year 1 — effectively doubles the first-year deduction",
+        "permanent": false,
+        "legal_basis": "Law 4887/2022 (replacing Development Law 4399/2016)",
+        "state_aid_clearance": "Cleared under GBER and CEEAG — individual project grants subject to maximum aid intensity per GBER Article 41 (energy projects)",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 22% CIT and 10% WACC: Enhanced depreciation (200% Year 1 vs. standard 5% p.a. straight-line over 20 years for wind): NPV of tax shield under enhanced option ≈ 20.1% of qualifying CapEx. Under standard straight-line: NPV ≈ 13.2%. Timing benefit (NPV delta) ≈ 6.9ppts per €1 of qualifying CapEx.",
+          "note": "Tax exemption option may provide greater total benefit for high-cashflow projects — but requires qualification assessment and is subject to maximum aid intensity ceilings."
+        }
+      }
+    },
+    "standard_depreciation": {
+      "wind_turbines_useful_life_years": 20,
+      "solar_pv_panels_useful_life_years": 25,
+      "method": "straight-line (μέθοδος σταθερής απόσβεσης) as standard",
+      "legal_basis": "Income Tax Code Law 4172/2013 Article 24; Ministerial Decision POL.1073/2015 (depreciation rate tables)"
+    },
+    "vat": {
+      "standard_rate_pct": 24,
+      "reduced_rate_pct": 13,
+      "applies_to_commercial_renewables": true,
+      "input_vat_recovery": "Available for VAT-registered commercial enterprises",
+      "legal_basis": "Law 2859/2000 (VAT Code)"
+    },
+    "property_transfer_tax": {
+      "rate_pct": 3.09,
+      "notes": "Φόρος Μεταβίβασης Ακινήτων (FMA) — 3% + 0.09% municipal surcharge on real property transfers. Long-term leases for wind/solar land rights are common and may attract stamp duty rather than transfer tax — specialist Greek tax advice required on deal structure."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "Medium-High",
+    "bankability_rating": "Medium",
+    "legal_basis": "Greek Civil Code (Αστικός Κώδικας) — contractual freedom; Law 4414/2016 Article 3 explicitly permits corporate PPAs for generators outside the FIP scheme",
+    "jurisdiction_enforcement": "Greek courts are functional but slower than northern European peers. Commercial disputes typically take 2–4 years in first instance. Arbitration (Greek Arbitration Association; ICC Paris) is available and recommended for higher-value transactions.",
+    "market_liquidity": "Growing — historically limited but expanding since 2020",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Industrial conglomerates (Mytilineos, Titan Cement), aluminium producers, large retail chains, data centres, international corporates with Greek operations",
+    "typical_contract_term_years": { "min": 5, "max": 15 },
+    "standard_frameworks": ["Bespoke bilateral under Greek Civil Code", "EFET Master Agreement (growing adoption)", "Virtual / synthetic PPA referencing HEnEx market price"],
+    "fip_interaction_note": "FIP-supported projects are counterparted with DAPEEP under the two-way mechanism. Corporate PPAs alongside FIP support are structurally complex — typically virtual (financial) PPAs referencing a market price index. Specialist structuring advice required.",
+    "goo_advantage": "Unlike Germany (where EEG projects cannot issue HKN), Greek FIP projects CAN issue Guarantees of Origin through DAPEEP — providing an additional revenue stream for corporate green claim purposes.",
+    "credit_risk_note": "Greek corporate credit market is less deep than northern European peers. Minimum investment-grade offtaker or parent guarantee strongly recommended for lender approval.",
+    "cross_border_enforceability": "Medium — Greek courts respected; NY Convention signatory; EU enforcement regime applies; practical enforcement speed is a concern"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 68,
+    "credit_ratings": {
+      "moodys": "Ba1 (sub-investment-grade)",
+      "sp": "BBB-",
+      "fitch": "BBB-",
+      "source_note": "Greece regained investment grade from S&P and Fitch in 2023. Moody's at Ba1 as of mid-2025. Verify current ratings at agency websites.",
+      "_staleness_warning": "Ratings subject to ongoing review — verify before use."
+    },
+    "political_stability": "Medium — improving steadily since 2019 New Democracy government; stable parliamentary majority following 2023 re-election",
+    "government_structure": "Presidential parliamentary republic; unicameral Hellenic Parliament; subject to EU enhanced surveillance framework (post-ESM programme oversight)",
+    "regulatory_track_record": "Mixed — materially damaged by 2012–2014 retroactive FiT revisions; significantly rehabilitated by post-2016 Law 4414/2016 framework and post-2019 policy consistency",
+    "retroactive_policy_incidents": [
+      {
+        "year": "2012–2014",
+        "description": "Emergency austerity measures including Law 4254/2014 imposed retroactive reductions of 15–34% on existing FiT revenues for operating RES projects commissioned under Law 3468/2006.",
+        "impact": "Material financial losses; extensive ICSID and domestic arbitration; 5+ year chilling effect on FDI in Greek renewables",
+        "severity": "HIGH — explicitly retroactive modification of contracted revenues"
+      },
+      {
+        "year": "2013",
+        "description": "LAGIE RES account accumulated multi-billion euro deficit from FiT payment obligations exceeding levy income — caused delayed FiT payments to generators.",
+        "impact": "Cash flow disruption; lender concerns about payment certainty; partially resolved via restructuring",
+        "severity": "Medium — resolved; current DAPEEP/FIP structure better capitalised"
+      }
+    ],
+    "expropriation_risk": "Low — EU member state; property rights protected under ECHR and Greek Constitution",
+    "currency_risk": "None — EUR is domestic currency",
+    "political_notes": "Post-2019 trajectory has been markedly more investor-friendly. Development Law reforms, FDI promotion, and Law 4685/2020 permitting reforms reflect structural policy shift. The 2012–2014 retroactive precedent remains the dominant legacy risk factor in institutional investor due diligence.",
+    "score_rationale": "Deductions from 100: retroactive FiT revision 2012–2014 (-18), Moody's sub-investment-grade Ba1 (-5), slower judiciary and enforcement (-5), RES account deficit precedent (-4). Score of 68 reflects genuine improvement trajectory but significant legacy discount."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
+    "operational_drag_score_out_of_100": 68,
+    "component_scores": {
+      "grid_connection_drag": { "score": 78, "assessment": "HIGH — severe mainland backlog especially for solar; ΜΔΝ island RES penetration caps are a structural barrier; ADMIE reinforcement underway but years from resolution" },
+      "permitting_drag_onshore_wind": { "score": 60, "assessment": "MEDIUM — Law 4685/2020 materially improved; Natura 2000 (27% of territory) and archaeological surveys remain real constraints; 3–5 year realistic P50" },
+      "permitting_drag_solar": { "score": 42, "assessment": "LOW-MEDIUM — reformed single procedure works well; grid connection (not permitting) is binding constraint for most solar projects" },
+      "permitting_drag_offshore": { "score": 88, "assessment": "HIGH — framework nascent (Law 5037/2023); no projects consented; regulatory processes still being established" },
+      "bureaucratic_friction": { "score": 62, "assessment": "MEDIUM-HIGH — public administration improving under digitalisation but multi-ministry coordination required for large projects; capacity constraints remain" },
+      "judicial_appeal_risk": { "score": 55, "assessment": "MEDIUM — Council of State challenges possible but less prolific than Germany; environmental NGO activity increasing; Natura 2000 the primary judicial risk vector" }
+    },
+    "primary_bottleneck": "Grid connection backlog — particularly for solar PV in Central Greece, Peloponnese, and Thessaly; ΜΔΝ island grid penetration caps",
+    "secondary_bottleneck": "Natura 2000 designations (approx. 27% of Greek territory) creating permitting complexity for wind and solar in ecologically sensitive areas",
+    "island_note": "ΜΔΝ projects are a separate risk/return category — higher operational complexity but potentially premium Reference Prices in island-specific auctions and BESS ancillary service revenues.",
+    "score_rationale": "Grid connection is the dominant drag at score 78. Permitting has improved materially post-2020. Combined score 68 reflects genuine improvement from pre-2020 regime but structural grid constraints persisting through early 2030s."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "Law 4953/2022 (national FDI screening); EU FDI Screening Regulation (EU) 2019/452",
+    "energy_sector_mandatory_notification": true,
+    "critical_infrastructure_threshold_pct": 10,
+    "reviewing_ministry": "Ministry of Development and Investment (General Secretariat for Strategic and Private Investments)",
+    "legal_basis": "Law 4953/2022 §§3–8; EU Regulation 2019/452 Article 4",
+    "energy_as_critical_infrastructure": "Yes — power generation and grid infrastructure designated critical under Law 4953/2022",
+    "clearance_timeline": {
+      "initial_screening_working_days": 25,
+      "formal_review_if_opened_calendar_days": 90,
+      "extension_possible": true
+    },
+    "practical_risk": "Low for OECD investors; heightened scrutiny for non-EU/non-OECD investors",
+    "notes": "Greece is actively FDI-friendly post-2019. Enterprise Greece provides investment facilitation services. Strategic investment fast-track (Law 4608/2019) available for large qualifying investments. Non-OECD investors in energy infrastructure face elevated but not prohibitive scrutiny."
+  },
+
+  "eu_state_aid": {
+    "applicable": true,
+    "primary_framework": "CEEAG — Commission Notice 2022/C 80/01",
+    "secondary_framework": "GBER — Commission Regulation (EU) 651/2014 as amended",
+    "fip_state_aid_status": {
+      "instrument": "Law 4414/2016 FIP framework",
+      "status": "Competitive auction mechanism satisfies CEEAG proportionality; scheme notified to and cleared by European Commission",
+      "verification_note": "Verify current EC clearance status via EC State Aid register (competition.ec.europa.eu) — search for Greek RES auction support measures"
+    },
+    "retrospective_clawback_risk": {
+      "assessment": "Low for post-2016 FIP projects",
+      "notes": "Post-2016 FIP contracts operate under EC-cleared framework — low State Aid recovery risk. The 2012–2014 retroactive revisions were domestic fiscal austerity measures, NOT EC State Aid recovery orders. These are separate risk vectors: EC State Aid recovery risk vs. domestic political retroactivity risk. Both must be assessed independently."
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "Greece is EUR-denominated — no FX conversion required.",
+    "_rule_3a_note": "TWO-WAY mechanism: revenue is CAPPED at the Reference Price. Model revenue as min(market price, Reference Price) + max(0, Reference Price - market price). Do NOT model uncapped merchant upside.",
+    "illustrative_onshore_wind_fip": {
+      "reference_price_eur_mwh_approx": 62.00,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct": 33,
+      "typical_capex_eur_per_mw": 1300000,
+      "opex_eur_per_mw_per_year": 40000,
+      "effective_tax_rate_pct": 22,
+      "note": "33% capacity factor reflects good mainland Greek sites. Aegean island sites can exceed 45% but face ΜΔΝ grid caps. Verify Reference Price at current RAE auction results."
+    },
+    "illustrative_solar_pv_fip": {
+      "reference_price_eur_mwh_approx": 52.00,
+      "mechanism_type": "two_way_cfd",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct_dc": 20,
+      "typical_capex_eur_per_mw_dc": 550000,
+      "opex_eur_per_mw_per_year": 12000,
+      "note": "20% capacity factor reflects high Greek irradiation (1,400–1,900 kWh/kWp p.a.). Grid connection timing — not project economics — is the primary development risk."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory — Stop/Go signal before detailed narrative.",
+    "permitting_window_solar": { "rag": "AMBER", "rationale": "Permitting improved post-Law 4685/2020; grid connection backlog (not permitting) is the binding constraint; Natura 2000 creates site-specific complexity" },
+    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "Materially improved post-2020; Natura 2000 (27% of territory) and archaeological requirements are real but manageable with proper site selection" },
+    "permitting_window_offshore": { "rag": "RED", "rationale": "Framework nascent (Law 5037/2023); no projects consented; 8–12 year realistic development timeline; processes still being established" },
+    "grid_connection": { "rag": "RED", "rationale": "Severe mainland backlog for solar; ΜΔΝ island penetration caps are a structural barrier; Ariadne interconnection improving position but years from full resolution" },
+    "support_mechanism_availability": { "rag": "GREEN", "rationale": "Regular FIP auction programme; 20-year contract term; established DAPEEP counterparty; growing auction pipeline driven by ambitious NECP targets" },
+    "mechanism_type_risk": { "rag": "AMBER", "rationale": "Two-way CfD caps revenue — appropriate for downside protection but no merchant upside; DAPEEP creditworthiness state-backed but weaker than UK LCCC" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "22% CIT is competitive within EU; Development Law 4887/2022 provides meaningful CapEx incentives; no regional trade tax" },
+    "ppa_enforceability": { "rag": "AMBER", "rationale": "Valid contractual framework; courts slower than northern European peers; growing corporate buyer pool; GoO issuance available for FIP projects" },
+    "political_risk": { "rag": "AMBER", "rationale": "2012–2014 retroactive FiT precedent is material; improving since 2019; Moody's Ba1 (sub-investment-grade); EU oversight stabilising factor" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Permitting improved significantly; grid backlog and island caps dominate; feasibility highly site-specific" },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "FDI-friendly post-2019; Enterprise Greece support; low prohibition risk for OECD investors" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Post-2016 FIP EC-cleared; competitive auction satisfies CEEAG proportionality; low State Aid recovery risk" },
+    "retroactive_policy_risk": { "rag": "AMBER", "rationale": "2012–2014 precedent is significant; mitigated by post-2016 consistency, EU oversight, and explicit government commitment to stability" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Greece offers the best solar irradiation in the EU, a well-established two-way CfD auction programme, a competitive 22% CIT rate, and materially improved permitting since 2020. The primary constraints are a severe grid connection backlog (especially for solar) and the significant historical precedent of retroactive FiT revision in 2012–2014. Suitable for well-resourced developers prepared to manage grid connection timelines and conduct thorough site screening against Natura 2000 and archaeological constraints."
+  },
+
+  "comparison_table": {
+    "_rule_5b_note": "Rule 5B: Standardised comparison categories — identical across all jurisdiction JSONs.",
+    "1_permitting_window_months_p50": 36,
+    "1_permitting_window_scope": "Onshore wind (P50 post-Law 4685/2020 reform)",
+    "1_permitting_window_solar_p50_months": 24,
+    "2_grid_connection_cost_native": "EUR 30,000–180,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 30,000–180,000 per MW",
+    "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
+    "2_grid_connection_timeline_months": "24–60 (transmission-connected, mainland)",
+    "3_primary_support_mechanism": "Feed-in Premium (ΕΦΑ/FIP) — Law 4414/2016 competitive auction",
+    "3_mechanism_type_code": "two_way_cfd",
+    "4_effective_corporation_tax_rate_pct": 22,
+    "4_effective_tax_rate_note": "22% CIT (Law 4172/2013 as amended). No regional trade tax. Effective rate closely tracks statutory rate.",
+    "4_key_incentive": "Development Law 4887/2022 — enhanced depreciation at 200% Year 1, or multi-year profit tax exemption, for qualifying RES investments",
+    "5_ppa_enforceability_rating": "Medium-High",
+    "5_ppa_legal_basis": "Greek Civil Code contractual freedom; GoO issuance available for FIP-supported projects (advantage vs. Germany)",
+    "6_political_risk_score": 68,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 68,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "EUR 62/MWh approx. (onshore wind, indicative 2023–2024 auction Reference Price)",
+    "8_revenue_floor_eur": "EUR 62/MWh (no conversion required — domestic currency)",
+    "8_revenue_floor_fx_date": "N/A — EUR domestic",
+    "8_revenue_floor_mechanism": "two_way_cfd",
+    "8_revenue_floor_staleness_warning": "Reference Prices change with each auction round. Verify at RAE (rae.gr) official results before use."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "ipcei_grant",
+      "ipcei_participant": true,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": "Greece participates in IPCEI Hy2Tech (2022). National hydrogen strategy (2022) targets hydrogen for island decarbonisation and industrial use. High solar irradiation provides competitive electrolysis feedstock.",
+      "revenue_floor_description": null,
+      "source": "ec_state_aid",
+      "notes": "Greece is an IPCEI Hy2Tech participant. Among Europe's highest solar irradiation — strong economics for green hydrogen via electrolysis. EU Recovery and Resilience Facility supports H2 projects. Export potential to Central Europe via EastMed/interconnectors."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "two_way_cfd",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Συμβόλαιο Διαφοράς (Symvolaio Diaforon) — Contract for Difference administered by RAE under Law 4685/2020.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "exploring",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": "iea_country",
+      "notes": "Greece has no nuclear power history. Government exploratory discussions on SMR commenced 2023–2024. Energy minister statements indicate interest but no formal policy or regulatory framework exists. Source: IEA country review."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": true,
+      "lng_regasification_capacity_bcm_year": 8,
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Revithoussa island LNG terminal. Alexandroupolis floating LNG terminal planned (DESFA). Regional hub ambitions."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": true,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Greece has significant gas-fired generation capacity. EU Taxonomy Delegated Act (EU 2022/1214) transition eligibility applies for qualifying CCGT below 270gCO2e/kWh. No formal capacity market confirmed. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Greek bioenergy support under Law 4685/2020 framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    }
+  }
+}

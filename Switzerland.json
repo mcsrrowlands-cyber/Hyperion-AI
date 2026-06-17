@@ -1,0 +1,543 @@
+﻿{
+  "_schema": "hyperion-jurisdiction-v1",
+  "_template_version": "1.0",
+  "_scoring_convention": {
+    "political_risk_score": "0–100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0–100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
+  },
+
+  "jurisdiction": {
+    "name": "Switzerland",
+    "local_name": "Schweiz / Suisse / Svizzera / Svizra",
+    "iso_code": "CH",
+    "currency_native": "CHF",
+    "currency_eur_rate_chf_per_eur": 0.94,
+    "currency_eur_per_chf": 1.064,
+    "currency_eur_rate_date": "Indicative — approximately mid-2025. VERIFY at SNB (snb.ch) or ECB reference rates before use. CHF/EUR rate has been managed in approximately 0.90–0.98 band since SNB abandoned the 1.20 floor in January 2015.",
+    "currency_eur_rate_source": "SNB (Swiss National Bank) reference rate indicative. Switzerland is NOT in the EU or Eurozone. CHF appreciates in risk-off environments — FX risk must be explicitly modelled.",
+    "region": "Europe",
+    "eu_member": false,
+    "eu_state_aid_applicable": false,
+    "non_eu_note": "Switzerland is NOT an EU member state. EU State Aid rules (CEEAG, GBER) do NOT apply. EU FDI Screening Regulation (EU) 2019/452 does NOT apply. Switzerland has its own WTO-compliant subsidy framework and bilateral agreements with the EU. EU-Switzerland electricity market integration is incomplete — see grid_connection section.",
+    "last_updated": "2026-06-16",
+    "data_staleness_warning": "Swiss Mantelerlass support scheme parameters are under active implementation. Swissgrid and SFOE (Swiss Federal Office of Energy — SFOE/OFEN) publish tender results and support parameters. CHF/EUR rate must be verified at SNB on analysis date. Swiss energy policy is subject to referendum risk — verify current status of key legislative instruments."
+  },
+
+  "regulatory_framework": {
+    "primary_energy_legislation": [
+      { "instrument": "Energy Act (Energiegesetz EnG, SR 730.0) — 30 September 2016, in force 1 January 2018", "relevance": "Primary framework energy law; sets renewable energy targets; establishes support mechanisms (Einspeisevergütung / Einmalvergütung / tender-based support); approved by Swiss public referendum in May 2017" },
+      { "instrument": "Mantelerlass — Bundesgesetz über eine sichere Stromversorgung mit erneuerbaren Energien (Federal Act on Secure Power Supply from Renewable Energies)", "relevance": "Major reform package (so-called 'Mantelerlass') adopted by Swiss Parliament in 2023; introduces large-scale auction-based support for new RES projects; expands eligible areas including Alpine solar fast-track; enhances offshore (lake) wind and solar provisions. Voted on in referendum and approved June 2024.", "legal_reference": "BBl 2023 (Federal Gazette) — verify current SR number and in-force date for specific provisions" },
+      { "instrument": "Electricity Supply Act (Stromversorgungsgesetz StromVG, SR 734.7)", "relevance": "Grid access rights; distribution and transmission operator obligations; Swissgrid's role as TSO; power market liberalisation framework" },
+      { "instrument": "Federal Energy Strategy 2050", "relevance": "Long-term strategic framework; nuclear phase-out commitment; 2050 net-zero target; primary driver for renewable capacity expansion policy" }
+    ],
+    "permitting_legislation": [
+      { "instrument": "Spatial Planning Act (Raumplanungsgesetz RPG, SR 700)", "relevance": "National spatial planning framework; restricts construction outside building zones; wind and ground-mounted solar outside building zones require RPG cantonal plan designation" },
+      { "instrument": "Spatial Planning Ordinance (Raumplanungsverordnung RPV, SR 700.1)", "relevance": "Implementing regulations under RPG; criteria for renewable energy facilities outside building zones" },
+      { "instrument": "Environmental Protection Act (Umweltschutzgesetz USG, SR 814.01)", "relevance": "EIA procedure for projects above threshold; noise and landscape impact assessment" },
+      { "instrument": "Ordinance on Environmental Impact Assessment (UVPV, SR 814.011)", "relevance": "Lists project types requiring full EIA — wind farms above 5 turbines or 5 MW; large-scale solar" },
+      { "instrument": "Nature and Cultural Heritage Protection Act (NHG, SR 451)", "relevance": "Protection of landscapes (BLN inventory), cultural heritage; significant constraint for wind and ground-mounted solar in scenic areas" },
+      { "instrument": "Mantelerlass special provisions for Alpine solar", "relevance": "Fast-track permitting procedure for Alpine solar installations above 2,000m altitude exceeding certain capacity — designed to unlock Switzerland's high-altitude solar resource quickly" }
+    ],
+    "tax_legislation": [
+      { "instrument": "Federal Direct Tax Act (Bundesgesetz über die direkte Bundessteuer DBG, SR 642.11)", "relevance": "Federal CIT at 8.5% base rate (effective approximately 7.83% after deductibility of tax from taxable base)" },
+      { "instrument": "Cantonal and Communal Tax Acts (Kantons- und Gemeindesteuergesetze)", "relevance": "Cantonal and communal taxes vary significantly — combined effective tax rate ranges from approximately 11.9% (Zug) to approximately 24.4% (Geneva) depending on location" },
+      { "instrument": "Harmonised Direct Tax Act (Steuerharmonisierungsgesetz StHG, SR 642.14)", "relevance": "Framework for cantonal tax harmonisation; defines depreciation and valuation rules applicable across cantons" }
+    ],
+    "subsidy_control_legislation": [
+      { "instrument": "WTO Agreement on Subsidies and Countervailing Measures (SCM Agreement)", "relevance": "Switzerland is a WTO member; energy subsidies must comply with SCM Agreement — separate from EU State Aid rules. EU CEEAG and GBER do NOT apply." },
+      { "instrument": "Swiss bilateral agreements with EU — Bilateral I and II packages", "relevance": "Switzerland has sectoral bilateral agreements with EU; electricity agreement (Stromabkommen) negotiations ongoing as of 2025 — critical for grid integration and market access" }
+    ],
+    "fdi_legislation": [
+      { "instrument": "Lex Koller (Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland BewG, SR 211.412.41)", "relevance": "Restricts acquisition of certain Swiss real estate by foreign persons — specific exemptions for commercial property and energy infrastructure; specialist Swiss legal advice required for land acquisition structures" },
+      { "instrument": "No comprehensive FDI screening law as of mid-2025", "relevance": "Switzerland does not have a comprehensive mandatory FDI screening regime equivalent to EU Regulation 2019/452 or national implementations. Limited sectoral restrictions apply. Switzerland has been evaluating FDI screening introduction but no law enacted as of mid-2025." }
+    ]
+  },
+
+  "permitting": {
+    "_notes": "Swiss RES permitting is among the most complex in Europe due to: (1) three-tier governance (federal/cantonal/communal); (2) extensive direct democracy (referendums at all levels); (3) strict landscape and nature protection laws; (4) RPG restrictions on construction outside building zones. Wind permitting in particular is extremely difficult. P50 timelines run from formal application. Pre-application adds 24–48 months. Alpine solar fast-track (Mantelerlass) is the main improvement since 2023.",
+    "solar_utility": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Cantonal Building Authority (kantonale Baubehörde) for standard solar; SFOE for tender-based support eligibility; Federal Authority for Alpine fast-track",
+      "primary_process_standard": "Cantonal spatial plan designation → Building permit (Baubewilligung) → Grid Connection → SFOE support registration",
+      "primary_process_alpine_fast_track": "Simplified federal authorisation procedure under Mantelerlass special provisions for Alpine solar ≥2,000m altitude — faster than standard cantonal procedure",
+      "legal_basis": "RPG SR 700; Bundesverfassung Art. 89 (energy); Mantelerlass; Cantonal Baugesetze",
+      "timeline_p50_months": {
+        "standard_ground_mounted": 36,
+        "alpine_fast_track": 24,
+        "rooftop_large_scale": 12
+      },
+      "timeline_min_months": 12,
+      "timeline_max_months": 60,
+      "pre_application_months_typical": 12,
+      "appeal_risk": "medium-high",
+      "appeal_mechanism": "Cantonal Administrative Courts (Verwaltungsgerichte); Federal Administrative Court (Bundesverwaltungsgericht); Federal Supreme Court (Bundesgericht) on points of law; referendum possibility at cantonal level",
+      "alpine_solar_note": "Switzerland has exceptional high-altitude solar resource — winter solar generation is uniquely valuable for balancing seasonal hydro depletion. The Mantelerlass Alpine solar fast-track is designed to rapidly unlock this resource. Projects such as Grengiols-Solar (300+ MW) represent the scale of ambition. However, NHG landscape protection and BLN inventory conflicts remain even under the fast-track.",
+      "direct_democracy_risk": "Cantonal or communal referendums can be triggered against planning decisions. Solar projects in scenic locations face organised opposition with referendum tools. Must be factored into development timeline."
+    },
+    "onshore_wind": {
+      "threshold_mw_national_process": null,
+      "primary_authority": "Cantonal authorities primarily (Standortkanton); federal consultation for NHG/RPG matters; BLN inventory review by BAFU (Federal Office for the Environment)",
+      "primary_process": "Federal and cantonal spatial plan designation in Richtplan (Cantonal Master Plan) → RPG use zone amendment (cantonal plan) → EIA (UVPV) → Building permit → Grid connection",
+      "legal_basis": "RPG SR 700; UVPV SR 814.011; NHG SR 451; Cantonal Baugesetze",
+      "timeline_p50_months": 96,
+      "timeline_min_months": 72,
+      "timeline_max_months": 180,
+      "pre_application_months_typical": 36,
+      "appeal_risk": "very high",
+      "appeal_mechanism": "Cantonal Administrative Courts; Bundesverwaltungsgericht; Bundesgericht; cantonal referendum mechanisms",
+      "direct_democracy_risk": "EXTREME — Swiss wind projects are subject to challenge via cantonal and communal referendums at every stage of the planning process. Citizens can demand popular votes on cantonal planning decisions. Wind projects have been blocked by referendum or municipal referendum vote in multiple cantons.",
+      "landscape_protection": "BLN (Bundesinventar der Landschaften und Naturdenkmäler von nationaler Bedeutung) covers approximately 19% of Swiss territory. NHG §4 requires that BLN sites be maintained 'unimpaired'. Wind turbines in or adjacent to BLN areas face extremely high legal challenge risk.",
+      "installed_capacity_context": "Switzerland has approximately 50 MW of installed onshore wind capacity as of 2024 — negligible for an economy of its size. This reflects the extreme difficulty of wind development, not a lack of resource potential in Jura and pre-Alpine areas.",
+      "notes": "Onshore wind development in Switzerland is functionally prohibitive under current conditions for most sites. The combination of three-tier permitting, referendum exposure, NHG/BLN landscape protection, and cantonal political resistance means development timelines of 10–15 years are not uncommon. Investors should treat Switzerland as a negligible onshore wind market for near-term capital deployment."
+    },
+    "offshore_wind": {
+      "applicable": false,
+      "notes": "Switzerland is a landlocked country — no offshore wind applicable. Lake-based wind (Seenwindkraft) is theoretically possible on large Swiss lakes but not material."
+    },
+    "battery_storage_utility": {
+      "primary_process": "Building permit under cantonal Baugesetz; SFOE/ElCom notification for large-scale storage; grid connection with Swissgrid or DSO",
+      "legal_basis": "StromVG SR 734.7 (storage provisions as amended by Mantelerlass); Cantonal Baugesetze",
+      "timeline_p50_months": 18,
+      "timeline_min_months": 12,
+      "timeline_max_months": 30,
+      "notes": "Switzerland's pumped hydro fleet (largest per capita globally) already provides substantial long-duration storage. Lithium-ion BESS is growing for shorter-duration frequency regulation and intraday arbitrage. Swissgrid ancillary services market (FCR, aFRR) provides BESS revenue streams. Switzerland is a net electricity exporter in summer (hydro) and importer in winter — creating arbitrage opportunities for BESS."
+    }
+  },
+
+  "grid_connection": {
+    "transmission_operators": [
+      { "name": "Swissgrid AG", "region": "Swiss national transmission system (state-owned, not-for-profit structure)" }
+    ],
+    "distribution_operators": "Cantonal utilities: EKZ (Zurich), EKT/Rätia Energie (Graubünden), EKW (Central Switzerland), BKW (Bern), SIG (Geneva), Services Industriels de Lausanne (SIL), EWZ (Zurich city), and approximately 630 additional municipal and regional DSOs",
+    "regulatory_authority": "ElCom (Eidgenössische Elektrizitätskommission — Federal Electricity Commission) for grid tariffs and access; SFOE for energy policy",
+    "legal_basis": "StromVG SR 734.7 §§5–15 (grid access rights); ElCom Ordinance (StromVV, SR 734.71); Swissgrid Grid Code",
+    "eu_electricity_market_integration": {
+      "description": "Switzerland is NOT a member of the EU Internal Electricity Market. The bilateral Electricity Agreement (Stromabkommen) between Switzerland and the EU has been under negotiation since 2007 and remains unratified as of mid-2025. This means Swiss generators cannot directly access EU cross-border intraday and balancing markets through standard EU mechanisms.",
+      "practical_impact": "Swiss RES projects are not eligible for EU-standard cross-border market participation. Switzerland's electricity market is effectively isolated from the EU single electricity market, relying on bilateral trading agreements with neighbouring TSOs (Austria, France, Germany, Italy). The lack of the Stromabkommen increases market risk for Swiss RES investors.",
+      "transit_role": "Switzerland remains a major transit country for European electricity flows — Swissgrid operates Europe's largest cross-border electricity trading infrastructure. However, Swiss generators access this transit value only indirectly."
+    },
+    "connection_wait_time_months": {
+      "transmission_connected": { "p50": 24, "range": "18–42" },
+      "distribution_connected": { "p50": 15, "range": "9–24" }
+    },
+    "connection_cost_chf_per_mw": {
+      "range_low_chf": 30000,
+      "range_high_chf": 200000,
+      "range_low_eur_indicative": 31915,
+      "range_high_eur_indicative": 212766,
+      "fx_note": "CHF/EUR conversion at indicative rate of 1 CHF = 1.064 EUR (1 EUR = CHF 0.94). Verify at SNB on analysis date.",
+      "notes": "Swiss connection costs are regulated by ElCom. Mountain and Alpine connection costs substantially higher due to terrain and line length requirements."
+    },
+    "operational_drag_assessment": "LOW-MEDIUM for grid quality and reliability; HIGH for solar in Alpine terrain due to construction cost; wind projects face functional connection queue issues given very low consented volumes"
+  },
+
+  "support_mechanisms": {
+    "_rule_3a_note": "Rule 3A: Swiss support mechanisms include: (1) Einmalvergütung (EIV) — a ONE-TIME investment grant for solar ≤150kWp — this is a grant, not a revenue mechanism; (2) Tender-based operating support under the Mantelerlass for larger projects — a ONE-WAY premium (max(0, reference price − market price)); no clawback when market exceeds reference price. Swiss mechanisms are NOT two-way CfDs. Return assumptions must reflect: for EIV projects — merchant revenue post-grant; for tender-based projects — uncapped merchant upside above tender reference price.",
+    "primary_mechanisms": {
+      "eiv_einmalvergutung": {
+        "type": "one_time_investment_grant",
+        "name": "Einmalvergütung (EIV) — One-Time Investment Grant",
+        "applicable_to": "Solar PV ≤150 kWp (small commercial/rooftop); rate per kWp set by SFOE annually",
+        "mechanism": "One-time capital grant paid after commissioning; no ongoing revenue support. Generator receives full merchant revenue from electricity sales.",
+        "administrator": "Swissgrid (waiting list management); SFOE (rate setting)",
+        "legal_basis": "Energy Act EnG SR 730.0 §§25–27; Energy Ordinance EnV; Mantelerlass (expanded EIV provisions)",
+        "rate_chf_per_kwp_approx": {
+          "_staleness_warning": "EIV rates are set annually by SFOE. Verify current rates at SFOE (bfe.admin.ch) before use.",
+          "indicative_range_chf": "220–500 CHF/kWp depending on installation type and size",
+          "indicative_eur_equivalent": "234–532 EUR/kWp indicative (at 1 CHF = 1.064 EUR — verify SNB rate)"
+        },
+        "waiting_list_note": "The EIV scheme has historically had a multi-year waiting list. Mantelerlass provisions aim to expedite processing but waiting list management by Swissgrid should be verified before project commitment."
+      },
+      "tender_based_operating_support": {
+        "type": "one_way_market_premium",
+        "name": "Wettbewerbliches Ausschreibeverfahren — Competitive Tender Support",
+        "applicable_to": "Solar PV >150 kWp; onshore wind; hydropower; other RES technologies eligible under Mantelerlass",
+        "mechanism_description": {
+          "summary": "Generator participates in competitive tender (Ausschreibung) administered by Swissgrid. Tender-winning projects receive a reference price. Premium paid = max(0, reference price − quarterly average Swiss electricity market price). When market price exceeds reference price, premium is zero and generator retains full merchant revenue. No clawback.",
+          "upside_treatment": "UNCAPPED — when Swiss electricity market price exceeds reference price, premium is zero and generator retains all market revenue. No clawback applies.",
+          "downside_treatment": "PROTECTED — when market price falls below reference price, Swissgrid pays the shortfall",
+          "merchant_exposure_during_term": "Partial — quarterly average market price comparison means some intra-quarter price risk",
+          "market_price_reference": "Swiss electricity spot market (EPEX SPOT CH price area or bilateral reference); noting Switzerland is not fully integrated into EU electricity market",
+          "contract_term_years": 20
+        },
+        "administrator": "Swissgrid AG",
+        "legal_basis": "Energy Act EnG SR 730.0 §§19–24 as amended by Mantelerlass; Energy Ordinance EnV implementing provisions",
+        "reference_price_chf_mwh_approx": {
+          "_staleness_warning": "Swiss tender reference prices change with each round and Mantelerlass implementation is ongoing. Very limited tender history for new framework. Verify at Swissgrid / SFOE publications before use.",
+          "_source": "SFOE (bfe.admin.ch); Swissgrid tender results",
+          "solar_pv_large": {
+            "chf_mwh_range_low": 90,
+            "chf_mwh_range_high": 130,
+            "eur_mwh_indicative_low": 95.7,
+            "eur_mwh_indicative_high": 138.3,
+            "fx_note": "CHF/EUR at indicative 1 CHF = 1.064 EUR — verify at SNB on analysis date",
+            "notes": "Higher CHF reference prices vs. EU peers reflects Swiss cost structure and smaller market. Alpine winter solar premium pricing potential."
+          },
+          "onshore_wind": {
+            "chf_mwh_range_low": 120,
+            "chf_mwh_range_high": 180,
+            "eur_mwh_indicative_low": 127.7,
+            "eur_mwh_indicative_high": 191.5,
+            "fx_note": "CHF/EUR at indicative 1 CHF = 1.064 EUR",
+            "notes": "Very few onshore wind projects in Switzerland — reference prices highly indicative and reflect high development cost in restrictive permitting environment."
+          }
+        }
+      }
+    }
+  },
+
+  "tax": {
+    "_rule_3b_note": "Rule 3B: Swiss cantonal tax rate variation means CapEx timing benefits from standard depreciation must be calculated using the applicable combined (federal + cantonal + communal) tax rate for the project's location canton. NPV of timing benefit varies materially by canton.",
+    "federal_corporation_tax": {
+      "base_rate_pct": 8.5,
+      "effective_federal_rate_pct": 7.83,
+      "notes": "The 8.5% federal CIT rate is applied to profit after deduction of the tax itself — effective rate is 8.5% / 1.085 = approximately 7.83% of profit before tax",
+      "legal_basis": "DBG SR 642.11 §68"
+    },
+    "cantonal_and_communal_tax": {
+      "range_note": "Cantonal and communal taxes vary substantially across Switzerland's 26 cantons",
+      "combined_effective_rates_by_selected_canton": {
+        "zug": { "combined_pct_approx": 11.9, "notes": "Lowest-tax canton — major holding company location" },
+        "nidwalden": { "combined_pct_approx": 12.7 },
+        "uri": { "combined_pct_approx": 13.0 },
+        "obwalden": { "combined_pct_approx": 13.0 },
+        "schwyz": { "combined_pct_approx": 14.1 },
+        "appenzell_innerrhoden": { "combined_pct_approx": 14.2 },
+        "lucerne": { "combined_pct_approx": 14.2 },
+        "zurich": { "combined_pct_approx": 19.7 },
+        "bern": { "combined_pct_approx": 21.0 },
+        "valais": { "combined_pct_approx": 19.5 },
+        "graubunden": { "combined_pct_approx": 17.5 },
+        "geneva": { "combined_pct_approx": 24.2 },
+        "_source_note": "Rates are indicative effective total rates including federal (7.83%) + cantonal + communal. Verify current rates at cantonal tax authorities and SFTA (Federal Tax Administration, estv.admin.ch) before use. Rates subject to cantonal reform."
+      }
+    },
+    "combined_effective_tax_rate_range_pct": {
+      "low_canton_approx": 11.9,
+      "high_canton_approx": 24.4,
+      "typical_alpine_canton_energy_project": 14.0,
+      "notes": "For RES projects located in Alpine/mountain cantons (Valais, Graubünden, Uri, Nidwalden) where the resource is concentrated, effective rates typically 13–20%. Canton of project location is determined by where the electricity is generated — not where the holding company is registered."
+    },
+    "capex_incentives": {
+      "standard_depreciation": {
+        "machinery_method": "declining balance at rates determined by cantonal tax authorities; federal DBG allows 40% declining balance p.a. for eligible machinery",
+        "federal_machinery_declining_balance_pct": 40.0,
+        "qualifying_assets": "Qualifying machinery and equipment (Maschinen, Einrichtungen, Apparate) — includes wind turbines, solar PV panels, inverters, BESS",
+        "legal_basis": "DBG SR 642.11 §28(1)(b); cantonal StHG provisions",
+        "permanent": true,
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At typical Alpine canton combined rate ~14% and 10% WACC: 40% declining balance depreciation for solar panels (15-year economic life): NPV of tax shield ≈ 13.2% of qualifying CapEx. Under standard straight-line (6.67% p.a. over 15 years): NPV ≈ 9.4%. Timing benefit (NPV delta) ≈ 3.8ppts per CHF 1 of qualifying CapEx. At higher Zurich/Geneva rate (~20%): timing benefit increases proportionately.",
+          "note": "Swiss declining balance depreciation at 40% p.a. is generous — higher rate than most EU peers — but lower combined tax rates mean absolute CHF benefit per unit of CapEx is canton-dependent."
+        }
+      },
+      "cantonal_investment_incentives": {
+        "description": "Several Alpine cantons offer tax holidays or reduced rates for qualifying new investments under cantonal economic development law. Valais and Graubünden have offered temporary tax rate reductions for large qualifying energy projects.",
+        "legal_basis": "Cantonal economic development legislation (varies by canton)",
+        "note": "Availability and terms vary. Verify with specific canton's economic development office and cantonal tax authority."
+      }
+    },
+    "vat": {
+      "standard_rate_pct": 8.1,
+      "reduced_rate_pct": 2.6,
+      "applies_to_commercial_renewables": true,
+      "input_vat_recovery": "Available for VAT-registered businesses",
+      "legal_basis": "VAT Act (Mehrwertsteuergesetz MWSTG, SR 641.20); rate increased from 7.7% to 8.1% from 1 January 2024",
+      "note": "Swiss VAT rate is among the lowest in Europe (8.1% standard vs. 20–25% in most EU states). Minimal impact on utility-scale project economics but relevant for construction phase cash flows."
+    },
+    "real_estate_transfer_taxes": {
+      "notes": "No federal real estate transfer tax. Cantonal-level Grundstückgewinnsteuer (real estate capital gains tax) on gains from real property sales — applies to seller, not buyer. Some cantons also apply Handänderungssteuer (ownership transfer tax) on purchase — typically 1–3% of transaction value. Verify with cantonal tax authority for the specific project location.",
+      "lex_koller_note": "Lex Koller (BewG SR 211.412.41) restricts foreign acquisition of certain Swiss real property. Commercial property and property used for business purposes (including energy infrastructure) is generally exempt from Lex Koller restrictions. Specialist Swiss legal advice essential for any land acquisition structure."
+    },
+    "withholding_tax": {
+      "dividend_wht_pct": 35.0,
+      "refund_for_eu_investors": "Swiss WHT of 35% applies but refund available under Swiss-EU bilateral agreement on savings taxation for qualifying EU recipients — effective rate may be 0% or 15% depending on treaty application",
+      "double_tax_treaties": "Switzerland has an extensive network of double tax treaties — typically reducing dividend WHT to 0–15% for qualifying treaty partners",
+      "legal_basis": "Federal Withholding Tax Act (Verrechnungssteuergesetz VStG, SR 642.21)",
+      "note": "35% headline Swiss WHT is high but refund mechanisms significantly reduce effective rate. Holding structure through a treaty-efficient location is standard practice."
+    }
+  },
+
+  "ppa_market": {
+    "enforceability_rating": "Very High",
+    "bankability_rating": "High",
+    "legal_basis": "Swiss Code of Obligations (Obligationenrecht OR, SR 220); contractual freedom under OR Art. 1–183; no bespoke PPA statute; Swiss courts are highly reliable",
+    "jurisdiction_enforcement": "Swiss courts are among the most efficient and reliable in the world. Commercial proceedings in Zurich or Geneva: typically 1–2 years. Swiss Arbitration Centre (successor to Swiss Chambers' Arbitration Institution) is a highly regarded international arbitration centre.",
+    "market_liquidity": "Medium — growing but smaller market than Germany/UK/Finland; Swiss market is smaller and domestic corporate buyer pool is limited",
+    "active_corporate_buyers": true,
+    "prominent_corporate_offtakers": "Swiss industrial multinationals (Nestlé, Novartis, Roche, ABB, Holcim), retail (Migros, Coop), financial institutions for green bond alignment, cantonal utilities (BKW, EKZ, Romande Energie)",
+    "typical_contract_term_years": { "min": 5, "max": 20 },
+    "standard_frameworks": ["EFET Master Agreement (used in Swiss market)", "Bespoke bilateral under Swiss Code of Obligations", "Virtual/financial PPA referencing Swiss spot price"],
+    "eu_market_access_limitation": "Switzerland's lack of full EU electricity market integration means Swiss RES generators cannot directly access the larger EU corporate PPA market through standard mechanisms. Cross-border PPAs require bilateral arrangements rather than standard EU market frameworks.",
+    "market_note": "The Swiss corporate PPA market is growing but limited by Switzerland's smaller economic base. Swiss multinationals (Nestlé, Novartis, Roche) are sophisticated green power buyers but their Swiss operations' electricity demand is much smaller than their global footprint. The cantonal utilities (BKW, EKZ) are also increasingly active PPA offtakers as they transition from nuclear to renewables.",
+    "guarantees_of_origin": {
+      "regulator": "Pronovo AG (formerly Swissgrid GoO department) — issues Swiss Herkunftsnachweise (HKN) for RES electricity",
+      "note": "Swiss HKN system is well-established. Swiss HKN are used by Swiss corporates for green power claims. Alignment with European GoO standards (AIB framework) allows cross-border recognition. EIV-supported projects can issue HKN — an additional revenue stream."
+    },
+    "credit_risk_note": "Swiss corporate credit quality is generally high. Swiss multinationals are amongst the most creditworthy corporate counterparties globally. Cantonal utilities backed by cantonal governments provide investment-grade credit quality.",
+    "cross_border_enforceability": "Very High — Swiss courts widely respected; NY Convention signatory; Switzerland has bilateral enforcement agreements with EU member states; Swiss Arbitration Centre internationally recognised"
+  },
+
+  "sovereign_risk": {
+    "_scoring_direction": "Higher score = lower risk = better",
+    "political_risk_score_out_of_100": 92,
+    "credit_ratings": {
+      "moodys": "Aaa",
+      "sp": "AAA",
+      "fitch": "AAA",
+      "source_note": "Switzerland maintains the highest sovereign credit ratings globally. Verify current ratings at agency websites.",
+      "_staleness_warning": "Ratings subject to review — verify before use."
+    },
+    "political_stability": "Very High — Switzerland's direct democracy model provides exceptional long-term policy stability; Federal Council consensus government structure prevents extreme policy swings",
+    "government_structure": "Federal republic; bicameral Federal Assembly (Nationalrat + Ständerat); direct democracy with mandatory and optional referendum mechanisms at federal, cantonal, and communal levels",
+    "regulatory_track_record": "Excellent for financial and commercial matters — no retroactive modifications to energy subsidy contracts; however, direct democracy means energy policy can be reversed by popular vote (e.g., the nuclear phase-out was confirmed by referendum; the Mantelerlass was approved by referendum in June 2024)",
+    "retroactive_policy_incidents": [
+      {
+        "year": "None material",
+        "description": "Switzerland has not imposed retroactive modifications to contracted RES revenues. EIV grants and operating premiums under existing contracts have been honoured.",
+        "severity": "N/A — no material retroactive incident"
+      }
+    ],
+    "direct_democracy_risk": {
+      "description": "Swiss direct democracy allows citizens to force referendums on virtually any policy decision. Energy projects can be challenged via cantonal or communal referendum. The process is procedurally legitimate but creates development timeline uncertainty.",
+      "notable_examples": "Multiple wind projects have been delayed or blocked by communal referendum votes in cantons including Vaud, Fribourg, and Bern. The Windpark Grenchenberg (Solothurn) and several Jura wind projects have faced referendum challenges.",
+      "mitigation": "Early community engagement, participatory project design, and legal arrangements (such as profit sharing with host communities) can materially reduce referendum risk.",
+      "score_impact": "Score deduction of -5 reflects the direct democracy risk as a structural development constraint distinct from standard political risk"
+    },
+    "expropriation_risk": "Very Low — Switzerland has the strongest property rights protection of any country in Europe; independent courts; multilateral investment treaty protections; ECHR signatory",
+    "currency_risk": "MEDIUM — CHF is a safe-haven currency that tends to appreciate in risk-off environments; EUR/CHF rate can move materially (dropped 15% overnight when SNB removed the floor in January 2015); EUR-denominated investors are exposed to CHF appreciation; CHF-denominated investors benefit from currency strength",
+    "non_eu_note": "Switzerland is not an EU member — no EU treaty obligations, EU State Aid rules, or EU FDI screening apply. This provides regulatory autonomy but also means Swiss generators cannot access the EU Single Electricity Market on standard terms.",
+    "political_notes": "Switzerland's AAA sovereign rating and Federal Council consensus model provide exceptional political stability. The primary political risk is specific to energy development rather than sovereign or contractual — direct democracy creates project-level referendum exposure that is unique among European developed markets.",
+    "score_rationale": "Deductions from 100: direct democracy risk for energy project approvals (-5), CHF FX appreciation risk for EUR investors (-2), EU electricity market non-integration (-1). Score 92 reflects the strongest sovereign risk profile among all notable absence jurisdictions."
+  },
+
+  "operational_drag": {
+    "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
+    "operational_drag_score_out_of_100": 75,
+    "component_scores": {
+      "grid_connection_drag": { "score": 35, "assessment": "LOW — Swissgrid is an excellent TSO; Switzerland is at the geographic heart of European grid infrastructure; connection timelines shorter than Germany; EU market integration gap is the main structural limitation" },
+      "permitting_drag_onshore_wind": { "score": 95, "assessment": "EXTREME — functionally prohibitive under current conditions; three-tier governance, referendum exposure, NHG/BLN landscape protection, and communal opposition combine to make Swiss onshore wind development practically impossible for most sites; ~50 MW total installed capacity reflects 20+ years of failed development" },
+      "permitting_drag_solar_standard": { "score": 58, "assessment": "MEDIUM — cantonal variation; RPG restrictions outside building zones; referendum risk for ground-mounted projects; rooftop solar is more straightforward" },
+      "permitting_drag_alpine_solar_fast_track": { "score": 40, "assessment": "MEDIUM-LOW — Mantelerlass fast-track for ≥2,000m Alpine sites is a genuine improvement; specific NHG landscape conflicts remain; still requires federal coordination" },
+      "permitting_drag_offshore": { "score": null, "assessment": "N/A — landlocked" },
+      "bureaucratic_friction": { "score": 52, "assessment": "MEDIUM — Swiss public administration is efficient and honest but three-tier (federal/cantonal/communal) complexity creates coordination burden; cantonal variation in planning law creates inconsistency" },
+      "judicial_appeal_risk": { "score": 78, "assessment": "HIGH — Swiss courts are excellent but the volume of appeals against RES projects is very high; referendum tools create additional administrative burden; Bundesverwaltungsgericht challenges are routine for wind and large solar" }
+    },
+    "primary_bottleneck": "Onshore wind — functionally prohibitive due to combined effect of three-tier governance, direct democracy referendum tools, NHG landscape protection, and communal political resistance",
+    "secondary_bottleneck": "RPG restrictions on ground-mounted solar outside building zones; cantonal planning variation creating inconsistent development environment",
+    "offshore_note": "N/A — landlocked",
+    "technology_specific_summary": "Solar (especially Alpine fast-track and rooftop) is increasingly viable under Mantelerlass reforms. Wind is extremely difficult. BESS is manageable. Switzerland's grid infrastructure is excellent.",
+    "score_rationale": "Wind drag of 95 is extreme — the most constrained onshore wind market in Europe. Alpine solar fast-track is a genuine improvement reducing solar drag. Grid connection is LOW. The composite 75 reflects a jurisdiction where technology selection is critical: Alpine solar and BESS are feasible; wind is not."
+  },
+
+  "fdi_restrictions": {
+    "screening_regime": "No comprehensive FDI screening law as of mid-2025; Lex Koller applies to real estate acquisition",
+    "energy_sector_mandatory_notification": false,
+    "non_eu_note": "EU FDI Screening Regulation (EU) 2019/452 does NOT apply to Switzerland. Switzerland does not have an equivalent national FDI screening law as of mid-2025.",
+    "lex_koller": {
+      "legal_basis": "BewG SR 211.412.41 (Lex Koller)",
+      "applies_to": "Acquisition of certain Swiss real property by foreign persons",
+      "exemptions": "Commercial property and property used for business activities (including energy infrastructure) is generally exempt from Lex Koller restrictions",
+      "note": "Specialist Swiss legal advice required for any land acquisition structure to confirm Lex Koller status"
+    },
+    "cantonal_restrictions": "Some cantonal utilities and energy concessions require cantonal government approval for ownership changes — sector-specific rather than general FDI screening",
+    "practical_risk": "Low — Switzerland is one of the most open FDI environments in the world for commercial investments",
+    "notes": "Switzerland's open FDI environment is a significant advantage vs. EU member states where mandatory FDI screening applies. No mandatory notification, no approval timelines to manage. Cantonal concessions for hydropower and grid access may carry change-of-control provisions — verify in due diligence."
+  },
+
+  "eu_state_aid": {
+    "applicable": false,
+    "reason": "Switzerland is NOT an EU member state. EU State Aid rules (CEEAG, GBER, TCTF) do NOT apply. Swiss domestic energy support schemes are governed by Swiss federal law and WTO SCM Agreement compliance — NOT by EU State Aid framework.",
+    "swiss_state_aid_framework": {
+      "wto_compliance": "Swiss energy support (EIV grants, tender-based premiums) must comply with WTO Agreement on Subsidies and Countervailing Measures (SCM Agreement). Switzerland has assessed its support schemes as WTO-compatible.",
+      "bilateral_eu_note": "The bilateral Switzerland-EU negotiations (ongoing as of 2025) include discussions on State Aid equivalence. If a new Bilateral Agreement with State Aid provisions is concluded, Swiss support schemes may need to align more closely with EU standards. Monitor bilateral agreement status."
+    },
+    "state_aid_recovery_risk": {
+      "assessment": "N/A — EU State Aid recovery regime does not apply to Switzerland",
+      "notes": "EU-State-Aid-recovery risk (e.g., EC ordering repayment of incompatible aid) does not apply. Swiss domestic legal challenges to support schemes would proceed under Swiss federal law and Swiss administrative courts."
+    }
+  },
+
+  "financial_model_inputs": {
+    "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
+    "_rule_3c_note": "CHF is the domestic currency. All CHF figures converted to EUR at indicative rate of 1 CHF = 1.064 EUR (1 EUR = CHF 0.94). Verify at SNB on analysis date. CHF appreciation risk must be explicitly modelled for EUR-denominated investors.",
+    "_rule_3a_note": "Tender-based support is ONE-WAY: premium floors at zero — generators retain full market upside above reference price. EIV is a one-time grant — post-grant revenue is fully merchant. Model merchant revenue scenario as primary case for EIV projects.",
+    "illustrative_alpine_solar_tender": {
+      "reference_price_chf_mwh_approx": 110,
+      "reference_price_eur_mwh_indicative": 117.0,
+      "fx_note": "CHF 110 × 1.064 = EUR 117.0 indicative. Verify at SNB on analysis date.",
+      "mechanism_type": "one_way_market_premium",
+      "contract_term_years": 20,
+      "p50_capacity_factor_pct_dc": 17,
+      "alpine_seasonal_note": "Alpine solar provides significant winter generation (25–30% of annual output in Dec-Jan vs. 5% for lowland solar) — winter electricity commands significant price premiums in Switzerland due to seasonal hydro depletion. This is a unique Swiss revenue advantage.",
+      "typical_capex_chf_per_mw_dc": 1400000,
+      "typical_capex_eur_per_mw_dc_indicative": 1489600,
+      "opex_chf_per_mw_per_year": 35000,
+      "effective_tax_rate_pct_alpine_canton": 16,
+      "note": "17% DC capacity factor for Alpine site reflects ~1,300–1,450 kWh/kWp with winter generation advantage. Higher Swiss construction costs reflect mountain access, snow loads, and logistics. CfD reference price is indicative — very limited tender history."
+    },
+    "illustrative_lowland_solar_eiv": {
+      "mechanism_type": "one_time_grant_then_merchant",
+      "eiv_grant_chf_per_kwp_approx": 320,
+      "eiv_grant_eur_per_kwp_indicative": 340.5,
+      "fx_note": "CHF 320 × 1.064 = EUR 340.5 indicative. Verify at SNB and current SFOE EIV rate.",
+      "post_grant_revenue": "Fully merchant — generator receives spot market revenue (EPEX SPOT CH area) with no ongoing support premium",
+      "p50_capacity_factor_pct_dc": 13,
+      "typical_capex_chf_per_mw_dc": 1100000,
+      "typical_capex_eur_per_mw_dc_indicative": 1170400,
+      "note": "EIV grant reduces effective CapEx. Post-grant revenue is pure merchant exposure to Swiss spot prices — model price risk carefully. Swiss electricity prices are influenced by seasonal hydro and cross-border pricing with limited EU market integration."
+    }
+  },
+
+  "rag_matrix": {
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory — Stop/Go signal before detailed narrative.",
+    "permitting_window_solar_alpine_fast_track": { "rag": "AMBER", "rationale": "Mantelerlass fast-track is a genuine improvement for Alpine sites ≥2,000m; NHG landscape conflicts remain; federal coordination required; referendum risk exists but reduced for Alpine sites distant from populated areas" },
+    "permitting_window_solar_standard": { "rag": "AMBER", "rationale": "Cantonal variation; RPG building zone restrictions; referendum risk for ground-mounted projects in scenic areas; rooftop solar more straightforward" },
+    "permitting_window_onshore_wind": { "rag": "RED", "rationale": "Functionally prohibitive — three-tier governance, referendum exposure, NHG/BLN landscape protection, and communal resistance combine to make Swiss onshore wind development effectively impossible for most sites; ~50 MW total installed is the evidence" },
+    "permitting_window_offshore": { "rag": "N/A", "rationale": "Landlocked — not applicable" },
+    "grid_connection": { "rag": "GREEN", "rationale": "Swissgrid is an excellent TSO at the heart of European infrastructure; connection timelines are good; EU market non-integration is the structural limitation not the physical grid" },
+    "support_mechanism_availability": { "rag": "AMBER", "rationale": "Mantelerlass improves framework; EIV has waiting list management issues; tender-based support for larger projects is growing but programme scale is limited relative to EU peers; non-EU status means no CEEAG/GBER framework protection" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "Tender-based premium is ONE-WAY — preserves merchant upside; EIV is a one-time grant with pure merchant post-grant exposure — suitable for investors comfortable with Swiss electricity price exposure" },
+    "tax_efficiency": { "rag": "GREEN", "rationale": "Very low effective CIT (11.9–24.4% depending on canton, with Alpine cantons typically 13–17%); 40% declining balance depreciation for machinery; 8.1% VAT (lowest in Europe); 35% dividend WHT mitigated by treaty network — overall very tax-efficient jurisdiction" },
+    "ppa_enforceability": { "rag": "GREEN", "rationale": "Swiss courts are among the best in Europe; Swiss Code of Obligations provides strong framework; Swiss Arbitration Centre well-regarded; deep base of creditworthy Swiss multinational offtakers; Pronovo HKN system well-established" },
+    "political_risk": { "rag": "GREEN", "rationale": "AAA sovereign (Aaa/AAA/AAA); no retroactive support modifications; Federal Council consensus governance; direct democracy is a project-level risk not a sovereign risk — score 92 reflects exceptional stability" },
+    "direct_democracy_risk": { "rag": "RED", "rationale": "Wind projects are uniquely exposed to communal and cantonal referendum challenge; multiple projects blocked by referendum; Alpine solar is less exposed but risk not zero; this is Switzerland's primary project-level risk factor" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Score 75 — Alpine solar is viable (AMBER); wind is extreme RED drag (score 95); grid is GREEN; the composite masks critical technology-specific variation" },
+    "fdi_restrictions": { "rag": "GREEN", "rationale": "No comprehensive FDI screening law; most open FDI environment in Europe for commercial investments; Lex Koller exemption for commercial/energy property; major advantage vs. EU member states" },
+    "eu_state_aid_risk": { "rag": "GREEN", "rationale": "EU State Aid regime does NOT apply — no EC clearance requirement, no CEEAG/GBER constraints, no EC recovery risk. WTO SCM compliance is the applicable standard — assessed as compliant." },
+    "eu_market_integration_risk": { "rag": "AMBER", "rationale": "Switzerland's lack of full EU electricity market integration (no signed Stromabkommen as of 2025) means cross-border market access is via bilateral agreements only; impacts revenue upside from EU market prices and limits PPA market to domestic Swiss buyers" },
+    "currency_risk": { "rag": "AMBER", "rationale": "CHF is a safe-haven currency that appreciates in risk-off environments; EUR/CHF can move materially (January 2015 SNB floor removal precedent); EUR-denominated investors face meaningful FX risk; CHF investors benefit from currency quality" },
+    "overall_stop_go": "AMBER",
+    "overall_rationale": "Switzerland offers an exceptional sovereign (AAA, Aaa), very low cantonal CIT rates (11.9–17% for Alpine cantons), the most open FDI environment in Europe, reliable courts, and a unique Alpine winter solar advantage. The Mantelerlass is improving the support framework. However, the jurisdiction is bifurcated: Alpine solar and BESS are increasingly viable; onshore wind is functionally off-limits (score 95 drag — among worst in Europe). The direct democracy risk at communal/cantonal level is unique and must be managed through early community engagement. EU electricity market non-integration is a structural revenue constraint. Suitable for solar-focused and BESS investors who can exploit the winter solar premium and low cantonal tax rates, and who can structure CHF FX exposure appropriately."
+  },
+
+  "comparison_table": {
+    "_rule_5b_note": "Rule 5B: Standardised comparison categories — identical across all jurisdiction JSONs.",
+    "1_permitting_window_months_p50": 96,
+    "1_permitting_window_scope": "Onshore wind (P50 where achievable — functionally prohibitive for most sites); Alpine solar fast-track P50: 24 months",
+    "1_permitting_window_solar_p50_months": 24,
+    "2_grid_connection_cost_native": "CHF 30,000–200,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 31,915–212,766 per MW (indicative at 1 CHF = 1.064 EUR / 1 EUR = CHF 0.94)",
+    "2_grid_connection_cost_fx_date": "Indicative mid-2025 CHF/EUR rate — verify at SNB on analysis date",
+    "2_grid_connection_timeline_months": "15–42 (transmission-connected)",
+    "3_primary_support_mechanism": "Einmalvergütung (EIV) one-time grant (≤150kWp solar) OR Wettbewerbliches Ausschreibeverfahren tender-based one-way premium (>150kWp solar, wind) — Energy Act EnG SR 730.0 as amended by Mantelerlass",
+    "3_mechanism_type_code": "one_way_market_premium_or_one_time_grant",
+    "4_effective_corporation_tax_rate_pct": "11.9–24.4 (canton-dependent; Alpine cantons typically 13–17%)",
+    "4_effective_tax_rate_note": "Federal CIT ~7.83% + cantonal + communal. Lowest in Europe at best (Zug: ~11.9%). Canton of generation determines applicable rate.",
+    "4_key_incentive": "40% declining balance depreciation for qualifying machinery (DBG §28); 8.1% VAT (lowest in Europe); no FDI screening; extensive DTA network for dividend WHT mitigation",
+    "5_ppa_enforceability_rating": "Very High",
+    "5_ppa_legal_basis": "Swiss Code of Obligations (OR SR 220); Swiss Arbitration Centre; Pronovo HKN GoO system",
+    "6_political_risk_score": 92,
+    "6_political_risk_direction": "Higher = lower risk",
+    "7_operational_drag_score": 75,
+    "7_operational_drag_direction": "Higher = more drag / worse",
+    "8_revenue_floor_native": "CHF 110/MWh approx. (Alpine solar, indicative tender reference price) OR EIV one-time grant of CHF 220–500/kWp (sub-150kWp solar)",
+    "8_revenue_floor_eur": "EUR 117/MWh indicative (Alpine solar tender, at 1 CHF = 1.064 EUR) OR EUR 234–532/kWp (EIV grant indicative)",
+    "8_revenue_floor_fx_date": "Indicative mid-2025 CHF/EUR rate — verify at SNB on analysis date",
+    "8_revenue_floor_mechanism": "one_way_market_premium (tender) or one_time_grant (EIV) — then fully merchant",
+    "8_revenue_floor_staleness_warning": "Swiss support scheme parameters under active Mantelerlass implementation. Very limited tender history. EIV rates set annually by SFOE. Verify at SFOE (bfe.admin.ch) and Swissgrid before use."
+  },
+
+  "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
+
+  "new_technology_data": {
+    "bess": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": null
+    },
+    "green_hydrogen": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "ipcei_participant": false,
+      "eu_hydrogen_bank_eligible": true,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "source": "iea_hydrogen",
+      "notes": "Switzerland is not an EU member and not an IPCEI participant. Bundesrat hydrogen strategy under development. Electricity Agreement with EU would improve hydrogen cooperation. SFOE administers renewable and hydrogen technology support. Limited domestic renewable generation capacity for large-scale electrolysis."
+    },
+    "floating_solar": {
+      "permitting_p50_months": 33,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "one_way_market_premium_or_one_time_grant",
+      "eligible_under_existing_solar_auction": true,
+      "water_body_consent_required": true,
+      "primary_support_mechanism": "Einmalvergütung (EIV one-time investment grant) or Einspeisevergütung tender (market premium) under Energiegesetz (EnG) / Mantelerlass 2023, administered by SFOE/Swissgrid.",
+      "revenue_floor_description": null,
+      "source": "jrc_pvgis",
+      "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
+    },
+    "nuclear_smr": {
+      "policy_status": "phase_out",
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "active_smr_programmes": [],
+      "constitutional_or_legislative_ban": false,
+      "source": null,
+      "notes": "Switzerland's Energy Act 2017 (Energiegesetz) prohibits construction of new nuclear power plants; existing plants (Beznau 1&2, Gösgen, Leibstadt) may continue operating indefinitely. A 2024 federal referendum on allowing new nuclear was narrowly defeated. No SMR programme. Reversal would require legislative change."
+    },
+    "lng_gas": {
+      "has_existing_lng_infrastructure": false,
+      "lng_regasification_capacity_bcm_year": null,
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "revenue_floor_description": null,
+      "eu_taxonomy_transition_eligible": null,
+      "source": "entso_g",
+      "notes": "Landlocked. No LNG terminal possible. Receives gas via pipeline from Germany, France, Italy."
+    },
+    "data_centre": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "corporate_ppa",
+      "primary_support_mechanism": null,
+      "grid_capacity_risk": null,
+      "renewable_ppa_market_depth": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence estimate."
+    },
+    "natural_gas_lng": {
+      "permitting_p50_months": 36,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_transition_eligible": null,
+      "capacity_market_available": null,
+      "ccgt_typical_capex_eur_mw": 900000,
+      "source": "entso_e",
+      "notes": "Switzerland has minimal gas-fired power generation (predominantly hydro and nuclear). Landlocked; no LNG access. EU Taxonomy Delegated Act does not apply to Switzerland (non-EU, non-EEA). No formal capacity market. Very limited CCGT investment rationale in Swiss domestic market. CCGT CapEx estimate: EUR 900,000/MW (IEA mid-point reference)."
+    },
+    "biowaste_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": null,
+      "primary_support_mechanism": null,
+      "eu_red_iii_compliance_required": true,
+      "feedstock_sustainability_criteria_applicable": true,
+      "revenue_floor_description": null,
+      "source": null,
+      "notes": "Insufficient published data for medium-confidence assessment. Switzerland is not an EU member but RED III sustainability criteria apply in practice through bilateral trade arrangements. SFOE provides technology support for bioenergy. Verify current Swiss bioenergy support under Energiegesetz (EnG) framework before use."
+    },
+    "coal_energy": {
+      "permitting_p50_months": null,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": null,
+      "eu_taxonomy_eligible": false,
+      "coal_phase_out_commitment": null,
+      "source": null,
+      "notes": "Switzerland has no coal-fired electricity generation. Nuclear and hydro dominant. EU Taxonomy does not apply directly (non-EU). No coal support mechanism."
+    }
+  }
+}
