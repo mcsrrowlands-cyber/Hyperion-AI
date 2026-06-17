@@ -892,8 +892,9 @@ const $aboutSaveBtn     = document.getElementById('about-save-btn');
 const $aboutResetBtn    = document.getElementById('about-reset-btn');
 const aboutDefault      = $aboutContent.innerHTML;
 
-// Clear any stale localStorage to prevent old inline styles persisting
-localStorage.removeItem(ABOUT_STORAGE_KEY);
+// Load saved content if available
+const savedAbout = localStorage.getItem(ABOUT_STORAGE_KEY);
+if (savedAbout) $aboutContent.innerHTML = savedAbout;
 
 $aboutEditBtn.addEventListener('click', () => {
   $aboutContent.contentEditable = 'true';
