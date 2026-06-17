@@ -292,7 +292,7 @@ function showStep(n) {
   });
 
   $backBtn.style.visibility = n === 1 ? 'hidden' : 'visible';
-  $nextBtn.classList.toggle('hidden', n === 4 || n === 1);
+  $nextBtn.classList.toggle('hidden', n === 4);
 
   if (n === 4) {
     initScopeChat();
@@ -302,11 +302,7 @@ function showStep(n) {
 }
 
 function syncNextButton() {
-  const pane1Btn = document.getElementById('pane1-next-btn');
-  if (state.currentStep === 1) {
-    $nextBtn.disabled = !state.profile;
-    if (pane1Btn) pane1Btn.disabled = !state.profile;
-  }
+  if (state.currentStep === 1) $nextBtn.disabled = !state.profile;
   if (state.currentStep === 2) $nextBtn.disabled = !state.technology;
   if (state.currentStep === 3) $nextBtn.disabled = !state.budget;
 }
@@ -362,11 +358,6 @@ $nextBtn.addEventListener('click', () => {
   if (state.currentStep < 4) showStep(state.currentStep + 1);
 });
 
-document.addEventListener('click', e => {
-  if (e.target.id === 'pane1-next-btn' && state.currentStep === 1) {
-    showStep(2);
-  }
-});
 
 // ---------------------------------------------------------------------------
 // Scope chat — core helpers
