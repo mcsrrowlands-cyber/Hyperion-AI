@@ -193,6 +193,7 @@ table { border-spacing: 0; }
 .required { color: #dc2626; font-weight: 400; text-transform: none; }
 
 .pane1-next-row { display: flex; justify-content: flex-end; margin-top: 16px; }
+.section-divider { border: none; border-top: 1px solid var(--border); margin: 28px 0 0; }
 
 /* ============================================================
    ABOUT BUBBLE
