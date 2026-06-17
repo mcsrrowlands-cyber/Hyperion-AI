@@ -362,7 +362,7 @@ $nextBtn.addEventListener('click', () => {
 // Scope chat — core helpers
 // ---------------------------------------------------------------------------
 
-const BOLT_SVG = `<img src="Logo2.png" width="22" height="22" alt="" style="display:block;mix-blend-mode:multiply">`;
+const BOLT_SVG = `<img src="Logo4.png" width="22" height="22" alt="" style="display:block;mix-blend-mode:multiply">`;
 
 function postBotHtml(html) {
   const $msgs = document.getElementById('chat-messages');
