@@ -302,7 +302,11 @@ function showStep(n) {
 }
 
 function syncNextButton() {
-  if (state.currentStep === 1) $nextBtn.disabled = !state.profile;
+  const pane1Btn = document.getElementById('pane1-next-btn');
+  if (state.currentStep === 1) {
+    $nextBtn.disabled = !state.profile;
+    if (pane1Btn) pane1Btn.disabled = !state.profile;
+  }
   if (state.currentStep === 2) $nextBtn.disabled = !state.technology;
   if (state.currentStep === 3) $nextBtn.disabled = !state.budget;
 }
@@ -356,6 +360,12 @@ $backBtn.addEventListener('click', () => {
 
 $nextBtn.addEventListener('click', () => {
   if (state.currentStep < 4) showStep(state.currentStep + 1);
+});
+
+document.addEventListener('click', e => {
+  if (e.target.id === 'pane1-next-btn' && state.currentStep === 1) {
+    showStep(2);
+  }
 });
 
 // ---------------------------------------------------------------------------
