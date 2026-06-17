@@ -230,6 +230,7 @@ table { border-spacing: 0; }
   padding: 8px;
   min-height: 40px;
 }
+#about-bubble-content, #about-bubble-content * { background: transparent; }
 .about-bubble-title {
   font-size: 13px;
   font-weight: 700;

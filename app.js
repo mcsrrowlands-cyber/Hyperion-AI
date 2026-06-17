@@ -292,7 +292,7 @@ function showStep(n) {
   });
 
   $backBtn.style.visibility = n === 1 ? 'hidden' : 'visible';
-  $nextBtn.classList.toggle('hidden', n === 4);
+  $nextBtn.classList.toggle('hidden', n === 4 || n === 1);
 
   if (n === 4) {
     initScopeChat();
@@ -302,7 +302,11 @@ function showStep(n) {
 }
 
 function syncNextButton() {
-  if (state.currentStep === 1) $nextBtn.disabled = !state.profile;
+  const pane1Btn = document.getElementById('pane1-next-btn');
+  if (state.currentStep === 1) {
+    $nextBtn.disabled = !state.profile;
+    if (pane1Btn) pane1Btn.disabled = !state.profile;
+  }
   if (state.currentStep === 2) $nextBtn.disabled = !state.technology;
   if (state.currentStep === 3) $nextBtn.disabled = !state.budget;
 }
@@ -357,6 +361,8 @@ $backBtn.addEventListener('click', () => {
 $nextBtn.addEventListener('click', () => {
   if (state.currentStep < 4) showStep(state.currentStep + 1);
 });
+
+document.getElementById('pane1-next-btn')?.addEventListener('click', () => showStep(2));
 
 
 // ---------------------------------------------------------------------------
@@ -886,9 +892,8 @@ const $aboutSaveBtn     = document.getElementById('about-save-btn');
 const $aboutResetBtn    = document.getElementById('about-reset-btn');
 const aboutDefault      = $aboutContent.innerHTML;
 
-// Load saved content if available
-const savedAbout = localStorage.getItem(ABOUT_STORAGE_KEY);
-if (savedAbout) $aboutContent.innerHTML = savedAbout;
+// Clear any stale localStorage to prevent old inline styles persisting
+localStorage.removeItem(ABOUT_STORAGE_KEY);
 
 $aboutEditBtn.addEventListener('click', () => {
   $aboutContent.contentEditable = 'true';
