@@ -157,6 +157,29 @@ The ethical framework underpinning every output was a core design priority, not 
 
 The result is a decision-support tool that reflects the rigour expected of legal and financial professionals, built by a student who believes that responsible AI deployment in high-stakes domains must begin with the architecture, not just the disclaimer.
 
+**Tools Used**
+
+Core Development:
+- Visual Studio Code — the code editor where all files were written and viewed. Claude Code runs as an extension inside it.
+- Claude Code — Anthropic's AI coding assistant, running inside VS Code. Wrote, edited, and debugged virtually all application code — HTML, CSS, JavaScript, and the API layer.
+
+AI & Intelligence Layer:
+- Anthropic Claude API — the AI model powering Hyperion's chat responses. Every user query is routed through this API to generate jurisdiction analysis.
+- Claude Sonnet 4.6 — the specific model being called, defined in api/chat.js.
+
+Version Control & Source Management:
+- Git — tracks every change made to the codebase locally, with a full history of commits.
+- GitHub — hosts the code repository online at mcsrrowlands-cyber/Hyperion-AI. Acts as the source of truth for the project.
+
+Deployment & Hosting:
+- Vercel — hosts and serves the live website. Runs the serverless API functions (api/chat.js, api/health.js) and delivers the static frontend files.
+
+Data & Configuration:
+- JSON files (30 jurisdiction files) — hand-structured data files containing all regulatory, financial, and risk data for each European market.
+- scoring_engine.js — a custom-built scoring algorithm that ranks jurisdictions against the user's profile and technology.
+- system_prompt.txt — the instruction set that tells the AI how to behave, what rules to follow, and how to structure outputs.
+- CLAUDE.md — the project rules file that governs how Claude Code behaves when working on this project.
+
 ----------------------------------------------------------------
 
 # Rule 7 — Working Practices
