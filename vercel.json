@@ -2,5 +2,15 @@
   "functions": {
     "api/chat.js":   { "maxDuration": 30 },
     "api/health.js": { "maxDuration": 5  }
-  }
+  },
+  "headers": [
+    {
+      "source": "/(.*).html",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }]
+    },
+    {
+      "source": "/",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }]
+    }
+  ]
 }
