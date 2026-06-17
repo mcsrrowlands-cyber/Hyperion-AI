@@ -292,7 +292,7 @@ function showStep(n) {
   });
 
   $backBtn.style.visibility = n === 1 ? 'hidden' : 'visible';
-  $nextBtn.classList.toggle('hidden', n === 4);
+  $nextBtn.classList.toggle('hidden', n === 4 || n === 1);
 
   if (n === 4) {
     initScopeChat();
@@ -302,8 +302,10 @@ function showStep(n) {
 }
 
 function syncNextButton() {
+  const pane1Btn = document.getElementById('pane1-next-btn');
   if (state.currentStep === 1) {
     $nextBtn.disabled = !state.profile;
+    if (pane1Btn) pane1Btn.disabled = !state.profile;
   }
   if (state.currentStep === 2) $nextBtn.disabled = !state.technology;
   if (state.currentStep === 3) $nextBtn.disabled = !state.budget;
@@ -880,6 +882,7 @@ checkServer();
 // About Me — editable bubble with localStorage persistence
 // ---------------------------------------------------------------------------
 
+document.getElementById('pane1-next-btn')?.addEventListener('click', () => showStep(2));
 
 // ---------------------------------------------------------------------------
 // Chat — send a message
