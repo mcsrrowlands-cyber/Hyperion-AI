@@ -885,14 +885,20 @@ checkServer();
 // About Me — editable bubble with localStorage persistence
 // ---------------------------------------------------------------------------
 
-const ABOUT_STORAGE_KEY = 'hyperion_about_content';
-const $aboutContent     = document.getElementById('about-bubble-content');
-const $aboutEditBtn     = document.getElementById('about-edit-btn');
-const $aboutSaveBtn     = document.getElementById('about-save-btn');
-const $aboutResetBtn    = document.getElementById('about-reset-btn');
-const aboutDefault      = $aboutContent.innerHTML;
+const ABOUT_STORAGE_KEY    = 'hyperion_about_content';
+const ABOUT_VERSION_KEY    = 'hyperion_about_version';
+const ABOUT_CURRENT_VERSION = 'v3';
+const $aboutContent        = document.getElementById('about-bubble-content');
+const $aboutEditBtn        = document.getElementById('about-edit-btn');
+const $aboutSaveBtn        = document.getElementById('about-save-btn');
+const $aboutResetBtn       = document.getElementById('about-reset-btn');
+const aboutDefault         = $aboutContent.innerHTML;
 
-// Load saved content if available
+// Clear stale localStorage if version has changed, then load saved content
+if (localStorage.getItem(ABOUT_VERSION_KEY) !== ABOUT_CURRENT_VERSION) {
+  localStorage.removeItem(ABOUT_STORAGE_KEY);
+  localStorage.setItem(ABOUT_VERSION_KEY, ABOUT_CURRENT_VERSION);
+}
 const savedAbout = localStorage.getItem(ABOUT_STORAGE_KEY);
 if (savedAbout) $aboutContent.innerHTML = savedAbout;
 
