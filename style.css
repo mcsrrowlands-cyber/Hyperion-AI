@@ -210,8 +210,10 @@ table { border-spacing: 0; }
   line-height: 1.7;
   color: var(--text-2);
 }
-.about-bubble p { margin: 0 0 12px; }
+.about-bubble p { margin: 0 0 6px; }
 .about-bubble p:last-child { margin-bottom: 0; }
+.about-list { margin: 0 0 12px 18px; padding: 0; }
+.about-list li { margin-bottom: 4px; }
 .about-bubble-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
 .about-bubble-header .about-bubble-title { margin-bottom: 0; }
 .about-edit-btn, .about-save-btn, .about-reset-btn {

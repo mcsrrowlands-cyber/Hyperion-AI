@@ -110,7 +110,32 @@
             <p>The ethical framework underpinning every output was a core design priority, not an afterthought. Hyperion AI is governed by a layered compliance architecture aligned with the <strong>SRA Standards and Regulations (15/12/24 edition)</strong> and the <strong>FCA Handbook (08/06/26 edition)</strong>. This means all outputs are clearly framed as indicative jurisdiction-screening tools only — never as legal or financial advice. The system is hardcoded to refuse requests that conflict with its ethical framework, to cite only traceable primary sources, and to clearly distinguish between revenue mechanisms such as two-way CfDs, one-way premium tariffs, and merchant exposure — distinctions that are critical to accurate investment analysis but frequently conflated in generic tools.</p>
             <p>The result is a decision-support tool that reflects the rigour expected of legal and financial professionals, built by a student who believes that responsible AI deployment in high-stakes domains must begin with the architecture, not just the disclaimer.</p>
             <div class="about-bubble-title" style="margin-top:16px">Tools Used</div>
-            <p>Hyperion AI was built using <strong>Visual Studio Code</strong> as the primary development environment and <strong>Claude Code</strong> — Anthropic's AI-powered coding assistant — to generate, refine, and debug the application code. Version control and source management were handled through <strong>GitHub</strong>, with the codebase hosted in a public repository. The application is deployed and served via <strong>Vercel</strong>, which provides serverless function hosting for the API layer and static delivery for the frontend.</p>
+            <p><strong>Core Development:</strong></p>
+            <ul class="about-list">
+              <li><strong>Visual Studio Code</strong> — the code editor where all files were written and viewed. Claude Code runs as an extension inside it.</li>
+              <li><strong>Claude Code</strong> — Anthropic's AI coding assistant, running inside VS Code. Wrote, edited, and debugged virtually all application code — HTML, CSS, JavaScript, and the API layer.</li>
+            </ul>
+            <p><strong>AI &amp; Intelligence Layer:</strong></p>
+            <ul class="about-list">
+              <li><strong>Anthropic Claude API</strong> — the AI model powering Hyperion's chat responses. Every user query is routed through this API to generate jurisdiction analysis.</li>
+              <li><strong>Claude Sonnet 4.6</strong> — the specific model being called, defined in api/chat.js.</li>
+            </ul>
+            <p><strong>Version Control &amp; Source Management:</strong></p>
+            <ul class="about-list">
+              <li><strong>Git</strong> — tracks every change made to the codebase locally, with a full history of commits.</li>
+              <li><strong>GitHub</strong> — hosts the code repository online at mcsrrowlands-cyber/Hyperion-AI. Acts as the source of truth for the project.</li>
+            </ul>
+            <p><strong>Deployment &amp; Hosting:</strong></p>
+            <ul class="about-list">
+              <li><strong>Vercel</strong> — hosts and serves the live website. Runs the serverless API functions (api/chat.js, api/health.js) and delivers the static frontend files.</li>
+            </ul>
+            <p><strong>Data &amp; Configuration:</strong></p>
+            <ul class="about-list">
+              <li><strong>JSON files</strong> (30 jurisdiction files) — hand-structured data files containing all regulatory, financial, and risk data for each European market.</li>
+              <li><strong>scoring_engine.js</strong> — a custom-built scoring algorithm that ranks jurisdictions against the user's profile and technology.</li>
+              <li><strong>system_prompt.txt</strong> — the instruction set that tells the AI how to behave, what rules to follow, and how to structure outputs.</li>
+              <li><strong>CLAUDE.md</strong> — the project rules file that governs how Claude Code behaves when working on this project.</li>
+            </ul>
           </div>
         </div>
       </div>
