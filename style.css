@@ -193,6 +193,31 @@ table { border-spacing: 0; }
 .required { color: #dc2626; font-weight: 400; text-transform: none; }
 
 /* ============================================================
+   ABOUT BUBBLE
+   ============================================================ */
+.about-bubble {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-left: 4px solid #00606e;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-2);
+}
+.about-bubble p { margin: 0 0 12px; }
+.about-bubble p:last-child { margin-bottom: 0; }
+.about-bubble-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #00606e;
+  margin-bottom: 8px;
+}
+
+/* ============================================================
    PROFILE CARDS
    ============================================================ */
 .profile-grid {
