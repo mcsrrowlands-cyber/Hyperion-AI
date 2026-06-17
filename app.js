@@ -887,7 +887,7 @@ checkServer();
 
 const ABOUT_STORAGE_KEY    = 'hyperion_about_content';
 const ABOUT_VERSION_KEY    = 'hyperion_about_version';
-const ABOUT_CURRENT_VERSION = 'v4';
+const ABOUT_CURRENT_VERSION = 'v5';
 const $aboutContent        = document.getElementById('about-bubble-content');
 const $aboutEditBtn        = document.getElementById('about-edit-btn');
 const $aboutSaveBtn        = document.getElementById('about-save-btn');
