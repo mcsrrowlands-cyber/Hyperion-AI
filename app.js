@@ -292,7 +292,7 @@ function showStep(n) {
   });
 
   $backBtn.style.visibility = n === 1 ? 'hidden' : 'visible';
-  $nextBtn.classList.toggle('hidden', n === 4 || n === 1);
+  $nextBtn.classList.toggle('hidden', n === 4);
 
   if (n === 4) {
     initScopeChat();
@@ -302,10 +302,8 @@ function showStep(n) {
 }
 
 function syncNextButton() {
-  const pane1Btn = document.getElementById('pane1-next-btn');
   if (state.currentStep === 1) {
     $nextBtn.disabled = !state.profile;
-    if (pane1Btn) pane1Btn.disabled = !state.profile;
   }
   if (state.currentStep === 2) $nextBtn.disabled = !state.technology;
   if (state.currentStep === 3) $nextBtn.disabled = !state.budget;
@@ -361,9 +359,6 @@ $backBtn.addEventListener('click', () => {
 $nextBtn.addEventListener('click', () => {
   if (state.currentStep < 4) showStep(state.currentStep + 1);
 });
-
-document.getElementById('pane1-next-btn')?.addEventListener('click', () => showStep(2));
-
 
 // ---------------------------------------------------------------------------
 // Scope chat — core helpers
@@ -885,50 +880,6 @@ checkServer();
 // About Me — editable bubble with localStorage persistence
 // ---------------------------------------------------------------------------
 
-const ABOUT_STORAGE_KEY    = 'hyperion_about_content';
-const ABOUT_VERSION_KEY    = 'hyperion_about_version';
-const ABOUT_CURRENT_VERSION = 'v5';
-const $aboutContent        = document.getElementById('about-bubble-content');
-const $aboutEditBtn        = document.getElementById('about-edit-btn');
-const $aboutSaveBtn        = document.getElementById('about-save-btn');
-const $aboutResetBtn       = document.getElementById('about-reset-btn');
-const aboutDefault         = $aboutContent.innerHTML;
-
-// Clear stale localStorage if version has changed, then load saved content
-if (localStorage.getItem(ABOUT_VERSION_KEY) !== ABOUT_CURRENT_VERSION) {
-  localStorage.removeItem(ABOUT_STORAGE_KEY);
-  localStorage.setItem(ABOUT_VERSION_KEY, ABOUT_CURRENT_VERSION);
-}
-const savedAbout = localStorage.getItem(ABOUT_STORAGE_KEY);
-if (savedAbout) $aboutContent.innerHTML = savedAbout;
-
-$aboutEditBtn.addEventListener('click', () => {
-  $aboutContent.contentEditable = 'true';
-  $aboutContent.classList.add('about-editing');
-  $aboutContent.focus();
-  $aboutEditBtn.classList.add('hidden');
-  $aboutSaveBtn.classList.remove('hidden');
-  $aboutResetBtn.classList.remove('hidden');
-});
-
-$aboutSaveBtn.addEventListener('click', () => {
-  $aboutContent.contentEditable = 'false';
-  $aboutContent.classList.remove('about-editing');
-  localStorage.setItem(ABOUT_STORAGE_KEY, $aboutContent.innerHTML);
-  $aboutSaveBtn.classList.add('hidden');
-  $aboutResetBtn.classList.add('hidden');
-  $aboutEditBtn.classList.remove('hidden');
-});
-
-$aboutResetBtn.addEventListener('click', () => {
-  $aboutContent.innerHTML = aboutDefault;
-  $aboutContent.contentEditable = 'false';
-  $aboutContent.classList.remove('about-editing');
-  localStorage.removeItem(ABOUT_STORAGE_KEY);
-  $aboutSaveBtn.classList.add('hidden');
-  $aboutResetBtn.classList.add('hidden');
-  $aboutEditBtn.classList.remove('hidden');
-});
 
 // ---------------------------------------------------------------------------
 // Chat — send a message
