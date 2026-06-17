@@ -143,6 +143,22 @@ Every output must close with the following statement, verbatim:
 
 ----------------------------------------------------------------
 
+# Additional Consideration — Website Front Page Text
+
+The following text is displayed on the front page of the Hyperion AI website under the "Additional Information" section. It represents Max's public-facing description of the project and its ethical framework. Claude should be aware of this text as it reflects the intended tone, purpose, and positioning of Hyperion AI:
+
+**About Me**
+My name is Max, and I am an undergraduate law student at the University of Exeter. Hyperion AI is a personal project built to demonstrate my ability to compile, structure, and deploy AI-powered outputs within the legal and financial space.
+
+**How This Was Built**
+Hyperion AI was developed using the Anthropic Claude API, with a custom scoring engine and a hand-curated dataset covering 30 European jurisdictions. Each jurisdiction's data — spanning permitting timelines, support mechanisms, tax incentives, sovereign risk, and PPA enforceability — was individually researched and structured into a machine-readable format, drawing exclusively on primary sources: EU Directives, national energy legislation, Statutory Instruments, and published government guidance.
+
+The ethical framework underpinning every output was a core design priority, not an afterthought. Hyperion AI is governed by a layered compliance architecture aligned with the SRA Standards and Regulations (15/12/24 edition) and the FCA Handbook (08/06/26 edition). This means all outputs are clearly framed as indicative jurisdiction-screening tools only — never as legal or financial advice. The system is hardcoded to refuse requests that conflict with its ethical framework, to cite only traceable primary sources, and to clearly distinguish between revenue mechanisms such as two-way CfDs, one-way premium tariffs, and merchant exposure — distinctions that are critical to accurate investment analysis but frequently conflated in generic tools.
+
+The result is a decision-support tool that reflects the rigour expected of legal and financial professionals, built by a student who believes that responsible AI deployment in high-stakes domains must begin with the architecture, not just the disclaimer.
+
+----------------------------------------------------------------
+
 # Rule 7 — Working Practices
 
 7A: Always ask clarifying questions before starting a complex task.
