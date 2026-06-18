@@ -393,6 +393,220 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Lithuania's strategic position as the 'anchor point' of Baltic ENTSO-E synchronization (February 2025 — via LitPol Link 2 interconnection to Poland) makes it uniquely positioned as a Baltic H2 export route to Central European demand. Klaipėda LNG terminal (Independence FSRU) infrastructure provides a template for gas/H2 import facilities. Achema fertiliser plant is a large-scale industrial H2 consumer. Safety regime: SEVESO III via Aplinkos apsaugos įstatymas (Environmental Protection Law) + VDI (State Labour Inspectorate) implementing decree. CIT: conventional 15% annual rate (NOT the distributed profit model of Estonia and Latvia).",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or FiT in Lithuania. Standalone LH2 facilities operate on a tolling or merchant basis. Invega (Investment and Business Guarantees Agency — invega.lt) investment project grants and REACT-EU/ERDF cohesion funds may provide CapEx support. Investment project incentive (investicinis projektas — PMĮ §17¹) provides up to 100% CIT offset against qualifying CapEx. EU Hydrogen Bank eligible as EU member state. Source: Invega; Litgrid; iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "invega_lt; litgrid; iea_hydrogen",
+      "staleness_warning": "Invega grant parameters and EU cohesion fund programme calls are time-sensitive. Verify current open calls at invega.lt and esinvesticijos.lt. Nord Pool LT electricity prices change continuously — verify before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Aplinkos apsaugos įstatymas (Environmental Protection Law) + Pavojingų cheminių medžiagų ir preparatų registravimo, klasifikavimo, ženklinimo bei naudojimo taisyklės + VDI (Valstybinė darbo inspekcija — State Labour Inspectorate) implementing decree — Lithuanian SEVESO III transposition",
+            "relevance": "Lower tier (≥10 t flammable gas including LH2): notify ATPKL (Aplinkos apsaugos departamentas) and VDI; prepare MAPP and internal emergency plan (vidinė avarinio reagavimo programa). Upper tier (≥50 t flammable gas): detailed saugos ataskaita (safety report), external emergency plan (išorinė avarinio reagavimo programa), public information duty, periodic inspection."
+          },
+          {
+            "instrument": "Gaisrinės saugos pagrindiniai reikalavimai (Fire Safety Basic Requirements) and Priešgaisrinės apsaugos ir gelbėjimo departamentas (Fire and Rescue Department) regulations",
+            "relevance": "Fire safety requirements for LH2 storage facilities; permits from PAGD (Priešgaisrinės apsaugos ir gelbėjimo departamentas)."
+          },
+          {
+            "instrument": "Atmosferos apsaugos įstatymas (Atmospheric Protection Law) and Aplinkos ministerija (Ministry of Environment) regulations",
+            "relevance": "Environmental permits for BOG atmospheric emissions from LH2 facility; Aplinkos apsaugos departamentas (AAD) administers."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Statybos įstatymas (Law on Construction) 1996, as amended",
+            "relevance": "Building permits (statybos leidimas) for LH2 storage and liquefaction plant construction; VTPSI (Valstybinė teritorijų planavimo ir statybos inspekcija) supervision."
+          },
+          {
+            "instrument": "Teritorijų planavimo įstatymas (Law on Territorial Planning) 1995, as amended",
+            "relevance": "Spatial plan compatibility; industrial zone designation required for LH2 facility."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Lietuvos vandenilio technologijų plėtros strategija (Lithuanian Hydrogen Strategy 2021)",
+            "relevance": "National H2 strategy; Baltic H2 corridor; positions Lithuania as H2 transit hub via LitPol Link 2; identifies industrial (Achema) and transport (Klaipėda port) demand."
+          },
+          {
+            "instrument": "Klaipėdos Nafta LNG Terminal + H2 Retrofit Concept",
+            "relevance": "Independence FSRU at Klaipėda serves Latvia, Estonia, and Lithuania via pipeline. Klaipėdos Nafta has explored H2 import/storage potential. Infrastructure expertise and port location create LH2 bunkering opportunity."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — tender rounds (EC Regulation)",
+            "relevance": "Lithuania is eligible as EU member state. LH2 production and storage may qualify. Verify at innovation-fund.ec.europa.eu."
+          }
+        ]
+      },
+
+      "seveso_iii_regime": {
+        "competent_authority": "Aplinkos apsaugos departamentas (AAD — Environmental Protection Department, under Ministry of Environment) jointly with Valstybinė darbo inspekcija (VDI — State Labour Inspectorate)",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lh2_classification": "LH2 classified as flammable gas (Category 2, Annex I Part 1 of SEVESO III as transposed by VDI/AAD implementing rules). Thresholds apply to total quantity on site.",
+        "lower_tier_obligations": "Notify AAD and VDI; prepare pagrindinių avarijų prevencijos politika (MAPP); vidinė avarinio reagavimo programa (internal emergency plan).",
+        "upper_tier_obligations": "Prepare saugos ataskaita (safety report) acceptable to AAD/VDI; išorinė avarinio reagavimo programa (external emergency plan) prepared by regional civil protection authorities; public information duty; periodic joint inspection.",
+        "legal_basis": "Pavojingų cheminių medžiagų registravimo ir kontrolės įstatymas + VDI implementing rules transposing SEVESO III (Directive 2012/18/EU). Verify current primary instruments at e-tar.lt.",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 7,
+        "authority_assessment_months": 5,
+        "notes": "AAD and VDI are the primary SEVESO III authorities in Lithuania. Upper-tier sites may not operate until saugos ataskaita is accepted. Pre-application engagement with AAD is recommended. Lithuanian language administration — local legal advisers essential. VERT involvement for energy-specific permits under electricity market law."
+      },
+
+      "permitting": {
+        "planning_authority": "Local municipality for territorial plan compatibility; VTPSI for construction permit supervision; AAD for environmental and SEVESO III permits",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 15, "max": 42 },
+        "parallel_consent_tracks": [
+          "Building permit (Statybos įstatymas) — 12–20 months",
+          "SEVESO III notification / saugos ataskaita (AAD/VDI) — 3–12 months post-submission",
+          "Environmental permit (AAD) for BOG emissions — 3–5 months",
+          "PAGD fire safety permit — concurrent with building permit"
+        ],
+        "aad_consultation_in_planning": true,
+        "appeal_risk": "low-medium",
+        "notes": "P50 of 24 months assumes lower-tier SEVESO III site. Upper-tier adds 5–10 months. Lithuanian permitting for industrial facilities is generally efficient. VERT and Litgrid are responsive regulators. Lithuanian language administration is primary friction for international investors — local advisers essential."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Connection from Litgrid (TSO) or ESO (ESO AB — dominant DSO, Ignitis Group subsidiary) for the liquefaction plant.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Litgrid AB (TSO) or ESO AB (dominant DSO — Ignitis Group subsidiary; ~99% of Lithuania)",
+        "green_credentials_note": "Lithuanian grid has growing wind and solar but does NOT automatically qualify as green H2 feedstock under EU Delegated Regulation 2023/1184. A dedicated onshore wind or solar PPA is required for green H2 certification.",
+        "electricity_price_risk": "MEDIUM-LOW — Litgrid is the Baltic 'bridge' to CE markets via LitPol Link 2; Nord Pool LT connected to CE market post-synchronization. Southern Lithuania solar PPA or Žemaitija/coastal wind PPA provides competitive electricity cost.",
+        "litpol_link_advantage": "Lithuania's LitPol Link 2 interconnection to Poland is the strongest Baltic-CE physical connection. This provides Litgrid-connected LH2 projects with the best export route for H2-embedded renewable electricity (via virtual H2 export to Polish and German demand).",
+        "renewable_ppa_strategy": "Pairing liquefaction with a VERT competitive tender onshore wind PPA (western Lithuania — Žemaitija) or solar PPA (southern Lithuania — higher irradiation than Baltic peers) achieves best combination of green credentials and competitive electricity cost.",
+        "notes": "Litgrid is an excellent TSO. Grid connection timelines (15–24 months) are competitive. Connection at Klaipėda port area would leverage existing LNG terminal industrial cluster infrastructure and DSO capacity."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Lithuania. Revenue is via tolling contracts with no state commodity floor. The Investment Project Incentive (PMĮ §17¹) reduces CIT liability but is a timing benefit, not a revenue mechanism.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing; no commodity price floor.",
+        "investment_project_incentive": {
+          "applicable": true,
+          "description": "Investment project incentive (investicinis projektas — PMĮ §17¹): qualifying LH2 CapEx may receive up to 100% CIT offset against CIT otherwise payable in the year(s) of qualifying investment, with carry-forward to subsequent years until credit is fully utilised. Effectively eliminates CIT liability in early years for large CapEx investments.",
+          "legal_basis": "Pelno mokesčio įstatymas (PMĮ) §17¹; Ministry of Finance regulations",
+          "_rule_3b_analysis": "For a EUR 50m LH2 project: qualifying CapEx ≈ EUR 45m. Annual CIT (EBIT ~EUR 4m × 15%) ≈ EUR 600k/year. Investment incentive eliminates CIT for first 10–15 years until credit exhausted. NPV of CIT savings at 7% WACC over 12 years vs. no incentive ≈ EUR 4.5–5.5m (15% CIT). Note: this is an annual CIT credit (not the distributed profit model of Estonia/Latvia) — Lithuanian investors still face annual CIT once credit is exhausted."
+        },
+        "invega_grants": {
+          "applicable": "Invega (invega.lt) investment project grants and loan guarantees for qualifying industrial projects. Verify current programme calls at invega.lt.",
+          "staleness_warning": "Programme terms and open calls change. Verify at invega.lt."
+        },
+        "eu_cohesion_funds": {
+          "applicable": "REACT-EU and ERDF cohesion funds via Lithuanian Ministry of Economy and Innovation. Verify open calls at esinvesticijos.lt.",
+          "staleness_warning": "Programme calls are time-limited and competitive."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": "Lithuania is eligible as EU member state for EU Hydrogen Bank auction rounds.",
+          "source": "innovation-fund.ec.europa.eu — verify current round"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage operating on a merchant basis, serving Klaipėda port bunkering, Achema fertiliser plant H2 transition, heavy transport, and Baltic H2 corridor transit.",
+          "achema_note": "Achema AB (Lithuania's largest ammonia/fertilizer producer) has significant H2 demand and strategic interest in green H2 supply. This is a unique, large-scale industrial anchor offtaker not available in Estonia or Latvia.",
+          "credit_risk_note": "Achema is a creditworthy industrial counterparty. Ignitis Group (state utility — Ignitis.lt) is also a credible domestic counterparty."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Lithuania uses CONVENTIONAL ANNUAL CIT at 15% (NOT the distributed profit model of Estonia/Latvia). Investment project incentive (PMĮ §17¹) provides CIT timing benefit — model as annual CIT credit during investment period, exhausting over time.",
+        "cit_rate_standard_pct": 15.0,
+        "cit_note": "Conventional annual system — CIT on annual taxable profit at 15%. Distinguishes Lithuania from its Baltic neighbours Estonia and Latvia which use the distributed profit model.",
+        "legal_basis": "Pelno mokesčio įstatymas (PMĮ) §5",
+        "investment_project_incentive": {
+          "description": "Up to 100% CIT offset against qualifying CapEx (PMĮ §17¹). Materially reduces CIT burden in years 1–12 for a large LH2 project.",
+          "rate": "100% of CIT otherwise due (subject to qualifying CapEx)",
+          "carry_forward": "Until credit exhausted",
+          "_rule_3b_analysis": "LH2 project: EUR 50m CapEx. Annual CIT (EBIT EUR 4m × 15%) = EUR 600k. Investment credit eliminates CIT for ~10 years. NPV of savings at 7% WACC ≈ EUR 4.5–5.5m. Model as annual CIT reduction (not elimination of CIT as in Estonian/Latvian distributed profit model).",
+          "comparison_to_ee_lv": "The Investment Project Incentive reduces but does not eliminate annual CIT (once the credit is exhausted). In Estonia and Latvia, 0% CIT on retained profits applies throughout the project life — a structurally larger advantage for long-duration LH2 projects."
+        },
+        "dividend_withholding_tax_pct": 0.0,
+        "eu_parent_subsidiary": "0% WHT for qualifying EU parent companies (EU Parent-Subsidiary Directive)"
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "LST EN 1251 (Lithuanian Standards Board adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "ATEX zone classification per Lithuanian implementation of Directive 2014/34/EU; documented in saugos ataskaita",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (AAD environmental permit required)", "On-site fuel use"],
+          "regulatory_basis": "BOG management addressed in saugos ataskaita. AAD environmental permit governs atmospheric releases.",
+          "environmental_note": "Vented hydrogen is not a GHG (GWP ≈ 0). AAD permit may impose vent frequency conditions."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: indicative inputs for IRR, NPV, CapEx payback, and DSCR modelling.",
+        "_rule_3c_note": "Lithuania is EUR-denominated — no FX conversion required.",
+        "_cit_modelling_note": "Lithuania uses CONVENTIONAL annual CIT (15%) — not distributed profit model. Model as: Investment Project Incentive eliminates CIT in years 1–12 (approx); thereafter 15% CIT applies annually. Compare to Estonian/Latvian 0% retained profit CIT — Lithuania's CIT structure is less advantageous for long-payback LH2 projects.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_midpoint": 1000000
+          },
+          "illustrative_total_project_capex_eur": {
+            "total_indicative": 68400000,
+            "notes": "20% BOP and civil works. Excludes grid connection reinforcement."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "wind_ppa_price_eur_per_kwh_indicative": 0.04,
+            "electricity_opex_eur_per_kg_lh2_wind_ppa": 0.44,
+            "source": "IEA, The Future of Hydrogen, 2019; VERT tender reference (verify at vert.lt)",
+            "staleness_warning": "Lithuanian industrial electricity prices and PPA reference rates are time-sensitive. Verify at VERT."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "investment_project_incentive_npv_benefit_indicative_eur": 5000000,
+          "investment_incentive_note": "Investment Project Incentive benefit at 15% CIT over 12-year credit period at 7% WACC — illustrative only. Subject to qualifying CapEx assessment by Ministry of Finance.",
+          "note": "Illustrative only. Klaipėda port location offers industrial cluster synergies (LNG terminal, Achema proximity, port bunkering demand)."
+        }
+      },
+
+      "market_context": {
+        "lt_hydrogen_policy": "Lithuanian Hydrogen Strategy 2021 emphasises energy independence and Baltic H2 corridor. Klaipėda LNG terminal infrastructure (Klaipėdos Nafta) provides a natural platform for H2 import/storage expansion. Achema fertiliser plant is the Baltic region's largest single industrial H2 consumer — a unique and credible anchor offtaker. LitPol Link 2 positions Lithuania as the primary H2 export route from the Baltic region to Central European demand.",
+        "key_lt_lh2_projects_indicative": [
+          {
+            "project": "Klaipėda LNG Terminal + H2 Potential (Klaipėdos Nafta)",
+            "status": "H2 retrofit concept at early exploration stage — verify at kn.lt",
+            "note": "Independence FSRU infrastructure and Klaipėda port energy cluster provide natural platform for LH2 import/storage. Klaipėdos Nafta is the operator."
+          },
+          {
+            "project": "Achema Fertiliser Plant H2 Transition",
+            "status": "Achema is actively exploring green H2 supply for ammonia production. Largest industrial H2 consumer in Baltic region. Verify at achema.lt.",
+            "note": "Achema's transition to green ammonia requires large-scale green H2 supply — potentially the anchor demand for a large-scale LH2 or pipeline H2 project."
+          },
+          {
+            "project": "Ignitis Group Renewable + H2 Concept",
+            "status": "Ignitis Group (state utility) has explored H2 as part of broader energy strategy. Verify at ignitis.lt.",
+            "note": "Ignitis as a state-backed counterparty provides creditworthy offtaker for LH2 tolling arrangements."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Achema fertiliser plant — green ammonia transition (largest Baltic industrial H2 demand)",
+          "Klaipėda port LH2 bunkering — Baltic maritime corridor",
+          "Nordic-Baltic H2 corridor transit — LitPol Link 2 as the export route to Polish and German demand",
+          "Heavy road transport — HGV and bus fleet in Lithuania and Baltic region"
+        ],
+        "litpol_link2_export_advantage": "Lithuania's LitPol Link 2 is the strongest physical Baltic-CE grid connection. For H2 embedded in electrons (virtual H2 export via PPA structure): Lithuanian LH2-producing electrolysers benefit from the most direct CE market price connection of any Baltic state. For physical LH2 export by tanker truck/rail: Klaipėda port provides the Baltic Sea maritime route to North Sea demand centres."
+      },
+
+      "notes": "Lithuania's LH2 investment case is strengthened by: (1) the unique Achema anchor offtaker (Baltic region's largest industrial H2 consumer) not available in Estonia or Latvia; (2) LitPol Link 2 as the best Baltic export route to Central European H2 demand; (3) the 15% CIT rate (lower than most EU peers) with the Investment Project Incentive (PMĮ §17¹) eliminating CIT in early years; and (4) Klaipėda port infrastructure creating a natural LH2 bunkering hub. Note that Lithuania uses conventional annual CIT (not the Estonian/Latvian distributed profit model) — for the longest-payback LH2 scenarios, Estonia and Latvia's 0% retained CIT provides a larger structural advantage. SEVESO III regime via AAD/VDI is demanding but professionally administered. All support parameters must be verified with Invega (invega.lt) and VERT (vert.lt) before project commitment."
     }
   }
 }

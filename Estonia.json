@@ -416,6 +416,210 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Estonia's world-leading digital governance (e-Estonia), low operational drag, and unique 0% CIT on retained profits make it structurally advantageous for capital-intensive LH2 projects with long payback periods. Baltic ENTSO-E synchronization (February 2025) has materially improved energy security and market integration. Tallinn port LH2 bunkering concept and offshore wind-to-H2 ambitions are the primary investment contexts. Safety regime: SEVESO III implemented via Kemikaaliseadus (Chemicals Act — Riigi Teataja RT I, 2009, 74, 505, as amended). Electricity cost for liquefaction is the primary OpEx risk.",
+
+      "permitting_p50_months": 22,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or FiT in Estonia. Standalone LH2 facilities operate on a tolling or merchant basis. Enterprise Estonia (EAS — eas.ee) and KredEx (kredex.ee) provide CapEx grants for clean technology projects. Riigieelarve strateegia (State Budget Strategy) H2 R&D funding via EAS innovation grants. EU cohesion funds (ERDF) via Estonian Ministry of Climate may provide CapEx support for qualifying H2 infrastructure. EU Hydrogen Bank eligible as EU member state. Source: EAS; Elering; iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "eas_estonia; elering; iea_hydrogen",
+      "staleness_warning": "EAS/KredEx grant parameters and EU cohesion fund programme calls are time-sensitive. Verify current open calls at eas.ee and kredex.ee. Nord Pool EE electricity prices change continuously — verify before use.",
+
+      "unique_tax_advantage": {
+        "headline": "UNIQUE: Estonia's 0% CIT on retained profits is the defining financial advantage for LH2 investment",
+        "description": "Estonian CIT of 20% applies ONLY to distributed profits (dividends) — NOT to retained or reinvested earnings (Income Tax Act TuMS §50). For a capital-intensive LH2 project with a 15–20 year payback period: ZERO CIT is payable on operating cash flows that are retained and reinvested. CIT only becomes payable when the investor chooses to distribute dividends. This eliminates the CapEx timing benefit calculation entirely (there is no annual CIT drag during the investment and early operational period to optimise against). Model as: 0% CIT during project operational period for retained profit scenarios; 20% (gross) only at point of dividend distribution.",
+        "investor_implication": "This model significantly improves project-level DSCR, IRR, and payback metrics vs. standard annual-CIT EU jurisdictions. For LH2 projects where CapEx is high and payback periods long (15+ years), the advantage is compounded: the investor captures the full cash flow benefit of operating surplus without annual CIT drag throughout the investment recovery period.",
+        "legal_basis": "Tulumaksuseadus (TuMS) §50 — taxation of distributed profits; riigiteataja.ee"
+      },
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Kemikaaliseadus (Chemicals Act) — Riigi Teataja RT I, 2009, 74, 505, as amended",
+            "relevance": "Estonian SEVESO III transposition. Lower tier (≥10 t flammable gas including LH2): notify Tööinspektsioon (Labour Inspectorate) and Keskkonnaamet (Environmental Board); prepare MAPP and internal emergency plan. Upper tier (≥50 t flammable gas): detailed ohutusaruanne (safety report), external emergency plan (välisõnnetuse lahendamise kava), public information duty, periodic inspection."
+          },
+          {
+            "instrument": "Tuleohutuse seadus (Fire Safety Act) — RT I 2010, 24, 116, as amended",
+            "relevance": "Fire safety classification, prevention and protection requirements for LH2 storage; Päästeamet (Rescue Board) administers."
+          },
+          {
+            "instrument": "Keskkonnaseadustiku üldosa seadus (KeÜS) and Atmosfääriõhu kaitse seadus (Atmospheric Air Protection Act)",
+            "relevance": "Environmental permit for BOG atmospheric emissions from LH2 facility; Keskkonnaamet administers."
+          },
+          {
+            "instrument": "Ehitusseadustik (EhS) 2015 — Building Code",
+            "relevance": "Building permits (ehitusluba) for LH2 storage and liquefaction plant construction."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Planeerimisseadus (PlanS) 2015 — Planning Act",
+            "relevance": "Spatial planning; detailed plans (detailplaneering) required for LH2 industrial facilities; municipality as primary planning authority."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "ELMO + VKG H2 Shale Oil Transition Concept",
+            "relevance": "Eesti Energia (Enefit) is transitioning the oil shale sector; hydrogen is identified as a transition technology. LH2 production and storage may be integrated into broader energy transition plans."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — tender rounds (EC Regulation)",
+            "relevance": "Estonia is eligible as EU member state. LH2 production and storage may qualify for EU Hydrogen Bank auction support. Verify current round at innovation-fund.ec.europa.eu."
+          },
+          {
+            "instrument": "Tallinn Port LH2 Bunkering Concept",
+            "relevance": "Tallinn port authorities and Alexela Group have explored LH2 bunkering for short-sea shipping — a potential anchor demand driver for LH2 import/storage infrastructure. Verify current project status."
+          }
+        ]
+      },
+
+      "seveso_iii_regime": {
+        "competent_authority": "Tööinspektsioon (Labour Inspectorate) jointly with Keskkonnaamet (Environmental Board — Keskkonnaamet.ee)",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lh2_classification": "LH2 classified as flammable gas (Category 2, Annex I Part 1 of SEVESO III as transposed by Kemikaaliseadus). Thresholds apply to total quantity on site.",
+        "lower_tier_obligations": "Notify Tööinspektsioon and Keskkonnaamet; prepare suurõnnetuse vältimise poliitika (MAPP — Major Accident Prevention Policy); internal emergency plan only.",
+        "upper_tier_obligations": "Prepare ohutusaruanne (safety report) acceptable to Tööinspektsioon/Keskkonnaamet; välisõnnetuse lahendamise kava (external emergency plan) prepared by Päästeamet (Rescue Board); public information duty; periodic joint inspection.",
+        "legal_basis": "Kemikaaliseadus §§32–45 and Lisa 1 (Schedule 1 — dangerous substance thresholds).",
+        "pre_notification_lead_time_months": 2,
+        "safety_report_preparation_months": 6,
+        "authority_assessment_months": 4,
+        "e_estonia_advantage": "e-Estonia digital governance means notifications and permit applications can be filed digitally through the Estonian state portal (eesti.ee). This materially reduces bureaucratic friction compared to paper-based EU peers — one of the genuine operational advantages of the Estonian regulatory environment.",
+        "notes": "Tööinspektsioon and Keskkonnaamet are professional and accessible agencies. English is widely spoken in Estonian public administration — reducing language barrier for international investors. Upper-tier sites may not operate until ohutusaruanne is accepted. Novel LH2 technology may require additional review time."
+      },
+
+      "permitting": {
+        "planning_authority": "Local municipality for detailed plan (detailplaneering); Keskkonnaamet for environmental permit; Tööinspektsioon for SEVESO III",
+        "timeline_p50_months": 22,
+        "timeline_range_months": { "min": 14, "max": 36 },
+        "parallel_consent_tracks": [
+          "Detailed plan / building permit (EhS) — 10–18 months (digital process via eesti.ee)",
+          "SEVESO III notification / ohutusaruanne — 2–10 months post-submission",
+          "Environmental permit (Keskkonnaamet) — 3–5 months",
+          "Päästeamet fire safety permit — concurrent with building permit"
+        ],
+        "e_estonia_advantage": "Digital permit applications via eesti.ee and X-Road data exchange significantly reduce process time vs. paper-based EU peers. Municipal cooperation is generally positive.",
+        "appeal_risk": "low",
+        "notes": "P50 of 22 months assumes lower-tier SEVESO III site. Upper-tier adds 4–8 months. Estonia's digital governance and cooperative municipal approach make it one of the faster permitting environments for industrial H2 facilities in the EU. Language of administration is Estonian but English documentation is widely accepted."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Connection from Elering (TSO) or Elektrilevi (DSO) for the liquefaction plant.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Elering AS (TSO) or Elektrilevi OÜ (primary DSO — Eesti Energia subsidiary; ~95% of connections)",
+        "green_credentials_note": "Estonian grid electricity does NOT automatically qualify as green H2 feedstock under EU Delegated Regulation 2023/1184 — additionality and renewable hourly matching criteria apply. A dedicated onshore wind PPA (Saaremaa/Hiiumaa wind is excellent at 35–42% capacity factor) provides both green credentials and competitive electricity cost.",
+        "electricity_price_risk": "MEDIUM-LOW — Nord Pool EE area now connected to CE markets post-synchronization (February 2025). Onshore wind PPA from Saaremaa/Hiiumaa at near-zero reference price levels can deliver very competitive electricity costs for liquefaction.",
+        "baltic_synchronization_advantage": "Post-synchronization (February 2025), Elering operates in the CE synchronous area. FCR/aFRR ancillary service revenues for co-located BESS help offset project-level electricity costs. Offshore wind development pipeline (GW-scale ambitions) may provide long-term low-cost PPA feedstock for large-scale H2 electrolysis.",
+        "renewable_ppa_strategy": "Pairing liquefaction with a dedicated Estonian onshore wind PPA (zero/near-zero reference price competitive tender) or merchant wind PPA achieves best combination of green credentials and low electricity cost.",
+        "notes": "Elering is an excellent TSO. Grid connection timelines (15–24 months) are among the shortest in the EU. Digital connection process further reduces friction."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Estonia. Revenue is via tolling contracts with no state commodity floor. The 0% CIT on retained profits is a structural financial advantage, not a revenue support mechanism.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing; no commodity price floor from the state.",
+        "eas_kredex_grants": {
+          "applicable": "Enterprise Estonia (EAS) clean technology grants and KredEx green investment financing may provide CapEx support for qualifying LH2 infrastructure. Verify current programme calls at eas.ee and kredex.ee.",
+          "staleness_warning": "Grant programme terms and open calls change frequently. Do not rely on availability without verifying current calls."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": "Estonia is eligible as EU member state. LH2 production may qualify directly; storage as enabling infrastructure in integrated project scope.",
+          "source": "innovation-fund.ec.europa.eu — verify current round"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a merchant basis serving Tallinn port bunkering, Eesti Energia (Enefit) industrial transition, heavy transport fleets, and potential export via EstLink (Finland) or Baltic maritime routes.",
+          "credit_risk_note": "Merchant revenues are contract-dependent; no state backstop. Eesti Energia (Enefit) is the most creditworthy domestic counterparty."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Estonia's unique 0% CIT on retained profits fundamentally changes CapEx timing analysis. There is NO CIT timing benefit to optimise (no annual CIT drag to accelerate). The traditional 'NPV of depreciation tax shield' calculation is irrelevant during the operational period — model CIT as a terminal distribution tax only.",
+        "unique_cit_system": "DISTRIBUTED PROFIT TAXATION — 0% CIT on retained/reinvested profits; 20% only on distributed profits (dividends)",
+        "cit_rate_on_retained_profits_pct": 0.0,
+        "cit_rate_on_distributions_pct": 20.0,
+        "legal_basis": "Tulumaksuseadus (TuMS) §50 — taxation of distributed profits",
+        "lh2_specific_advantage": {
+          "description": "For a capital-intensive LH2 project (EUR 70m total CapEx, 15–20 year payback): annual operating surplus retained and reinvested incurs ZERO CIT. DSCR benefits directly from elimination of annual CIT drain. IRR calculation: model CIT as a terminal event (distribution tax) not an annual P&L deduction. NPV of CIT saving vs. a 21% annual-CIT jurisdiction at 7% WACC over 15 years: approximately EUR 8–12m on a EUR 70m project (illustrative — project-specific calculation required).",
+          "comparison_to_annual_cit_jurisdictions": "Estonia's 0% CIT on retained profits is uniquely advantageous for LH2 projects vs. Slovakia (21% annual CIT), Slovenia (19% annual CIT), Lithuania (15% annual CIT), and most EU peers."
+        },
+        "dividend_withholding_tax_pct": "0% for qualifying EU parent companies (EU Parent-Subsidiary Directive); 7% for natural persons",
+        "eu_parent_subsidiary": "0% WHT for qualifying EU corporate shareholders"
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "EVS EN 1251 (Estonian adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "ATEX zone classification per Estonian implementation of Directive 2014/34/EU; zone documentation required in ohutusaruanne",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (Keskkonnaamet environmental permit required)", "On-site fuel use"],
+          "regulatory_basis": "BOG must be addressed in ohutusaruanne. Keskkonnaamet environmental permit governs atmospheric releases under Atmospheric Air Protection Act.",
+          "environmental_note": "Vented hydrogen is not a GHG (GWP ≈ 0). Keskkonnaamet permit may impose vent frequency conditions."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: indicative inputs for IRR, NPV, CapEx payback, and DSCR modelling. Project-specific engineering estimates required.",
+        "_rule_3c_note": "Estonia is EUR-denominated — no FX conversion required.",
+        "_unique_cit_modelling_note": "CRITICAL: Model 0% CIT on operating cash flows during project life (retained profit scenario). CIT payable only at dividend distribution — use terminal distribution tax, not annual CIT deduction. This materially increases DSCR and IRR vs. standard EU CIT jurisdictions.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_midpoint": 1000000
+          },
+          "illustrative_total_project_capex_eur": {
+            "total_indicative": 68400000,
+            "notes": "20% BOP and civil works allowance. Excludes grid connection reinforcement."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "wind_ppa_price_eur_per_kwh_indicative": 0.035,
+            "electricity_opex_eur_per_kg_lh2_wind_ppa": 0.385,
+            "source": "IEA, The Future of Hydrogen, 2019; Konkurentsiamet tender results (verify at konkurentsiamet.ee)",
+            "notes": "Estonian onshore wind PPA at near-zero reference price levels may deliver EUR 0.03–0.05/kWh — among the lowest electricity costs for LH2 production in the EU. Verify current wind PPA prices with active developers."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "cit_advantage_illustrative_eur": "Approx EUR 8–12m NPV saving vs. 21% annual-CIT jurisdiction over 15-year project life at 7% WACC (retained profit scenario — illustrative; project-specific calculation required)",
+          "note": "Illustrative only. Estonian wind electricity cost advantage may make Estonian LH2 among the most competitive in the EU on a unit production cost basis."
+        }
+      },
+
+      "market_context": {
+        "ee_hydrogen_policy": "Estonia is transitioning away from oil shale (Eesti Energia/Enefit) and exploring hydrogen as a decarbonisation vector. Tallinn port LH2 bunkering concept (Alexela Group) is an early-stage but genuine demand driver. Offshore wind GW-scale ambitions (Gulf of Finland, Baltic) would provide low-cost renewable electricity for large-scale electrolysis. Baltic ENTSO-E synchronization creates energy security context for H2 import/export via maritime routes.",
+        "key_ee_lh2_projects_indicative": [
+          {
+            "project": "Tallinn Port LH2 Bunkering Concept",
+            "status": "Concept/early exploration — Alexela Group (Tallinn port energy terminal) has explored LH2 bunkering for short-sea Baltic shipping. Verify current project status at alexela.ee.",
+            "note": "Maritime LH2 bunkering is the primary near-term demand driver for LH2 storage in the Tallinn port area."
+          },
+          {
+            "project": "Eesti Energia (Enefit) Shale + H2 Transition",
+            "status": "Transition strategy in progress — verify current H2 component details at enefit.com",
+            "note": "Enefit's oil shale transition could involve H2 production as a decarbonisation pathway for its industrial complex."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Maritime bunkering — Tallinn port short-sea shipping (Baltic ferry operators, cargo vessels)",
+          "Offshore wind to H2 export — long-term ambition as Baltic offshore wind scales up",
+          "Industrial transition — Eesti Energia (Enefit) oil shale H2 replacement concept",
+          "Heavy road transport — HGV and bus fuel cell vehicle refuelling"
+        ],
+        "supply_chain_note": "Estonian LH2 production supply chain is nascent. Domestic liquefaction capacity does not yet exist at commercial scale. Import via ISO cryogenic tanker from Finnish or German LH2 producers is the near-term supply route for pilot projects. The Baltic synchronization creates a more integrated regional energy market context for H2 supply chains.",
+        "e_estonia_ecosystem_advantage": "Estonia's e-governance ecosystem (digital company registration, e-Residency, X-Road data interoperability) provides a uniquely friction-free business environment for structuring and operating LH2 projects, particularly for international investors."
+      },
+
+      "notes": "Estonia's LH2 storage investment case is structurally distinctive in the EU for two reasons: (1) the 0% CIT on retained profits (TuMS §50) eliminates annual CIT drag during long-payback LH2 project life — a unique and material financial advantage; and (2) near-zero reference price onshore wind PPAs (Saaremaa/Hiiumaa — 35–42% capacity factors) may deliver the lowest electricity cost for LH2 production in the EU. The SEVESO III regime via Kemikaaliseadus is demanding but administered by a professional, digital-first regulatory environment. e-Estonia digital governance materially reduces bureaucratic friction. The absence of a dedicated LH2 revenue mechanism means investors rely on tolling contracts and the structural 0% CIT advantage. All grant parameters must be verified with EAS (eas.ee) and KredEx (kredex.ee) before project commitment."
     }
   }
 }

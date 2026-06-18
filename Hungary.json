@@ -424,6 +424,240 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Hungary participates in IPCEI Hy2Tech and has published a National Hydrogen Technology and Industrial Strategy (2021–2030). The primary regulatory gate is the SEVESO III safety regime administered by Katasztrófavédelmi Hatóság (National Directorate General for Disaster Management). The dominant commercial risks are: (1) HUF currency volatility affecting all EUR-denominated cost and revenue modelling; (2) the Különadó (extraordinary energy sector levy) precedent; (3) HIPA local business tax on revenues. Electricity for liquefaction benefits from Hungary's relatively low wholesale power prices (growing nuclear and solar base) but HIPA applies to LH2 storage revenues.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism. Standalone facilities operate on a tolling or merchant basis. Industrial development grants (Iparfejlesztési Program / KEHOP) and EU Structural Funds (Kohéziós Alap — Cohesion Fund) may provide CapEx support for qualifying projects. Hungary participates in IPCEI Hy2Tech — industrial partners may access IPCEI funding for integrated projects. EU Hydrogen Bank competitive funding rounds are available for qualifying renewable hydrogen projects. Source: Magyar Energetikai és Közmű-szabályozási Hivatal (MEKH); European Commission DG ENER.",
+      "revenue_floor_description": null,
+      "source": "mekh_hu; ipcei_hy2tech; iea_hydrogen",
+      "staleness_warning": "IPCEI Hy2Tech project parameters, Iparfejlesztési Program grant terms, and industrial electricity prices are time-sensitive. HUF/EUR exchange rate is HIGHLY VOLATILE — EUR 1 ≈ HUF 395 indicative (mid-2025) but has traded 360–420 in recent years. Verify at ECB Reference Rate (ecb.europa.eu) on analysis date. Különadó (special sector levy) status must be verified with Hungarian legal counsel.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "219/2011. (X. 20.) Korm. rendelet a veszélyes anyagokkal kapcsolatos súlyos balesetek elleni védekezésről (Government Decree 219/2011 on Protection Against Major Accidents Involving Dangerous Substances)",
+            "relevance": "Hungarian transposition of SEVESO III Directive (2012/18/EU). Mandatory safety regime for LH2 storage at or above threshold quantities. Lower tier (≥10 t flammable gas, including LH2): notification to Katasztrófavédelmi Hatóság, prepare veszélymegelőzési politika (MAPP equivalent) and on-site emergency plan. Upper tier (≥50 t): detailed biztonsági jelentés (safety report), external emergency plan, public information duty, periodic inspection."
+          },
+          {
+            "instrument": "Kémiai biztonsági törvény — Act XXV of 2000 on Chemical Safety",
+            "relevance": "Framework chemical safety law; governs classification and risk assessment of dangerous substances including hydrogen."
+          },
+          {
+            "instrument": "45/2011. (XII. 7.) BM rendelet — Decree on fire safety at industrial premises",
+            "relevance": "Fire safety requirements for cryogenic hydrogen storage; Tűzoltóság (Fire Service) approval required."
+          },
+          {
+            "instrument": "7/2002. (IV. 23.) SZCSM rendelet — Explosive atmospheres safety",
+            "relevance": "ATEX implementation; explosive atmosphere risk assessment mandatory around LH2 storage and dispensing areas."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Government Decree 462/2021 on Nationally Strategic Investments (Kiemelt Beruházások — KBI/NBI)",
+            "relevance": "Large-scale H2 infrastructure projects (meeting investment threshold criteria) may qualify for NBI fast-track designation — single Ministry of Technology and Industry permit authority, bypassing local planning authority. Dramatically reduces permitting time for qualifying projects."
+          },
+          {
+            "instrument": "Act LXIV of 2001 (Étv.) and Government Decree 312/2012 — Building permits",
+            "relevance": "Építési engedély (building permit) required for LH2 storage tanks and liquefaction plant structures."
+          },
+          {
+            "instrument": "Act LIII of 1995 on Environmental Protection — EIA framework",
+            "relevance": "Environmental Impact Assessment required for LH2 facilities above threshold scale. Hatósági EIA (Környezeti hatásvizsgálat) may be required."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Nemzeti Hidrogén Technológiai és Ipari Stratégia 2021–2030 (National Hydrogen Technology and Industrial Strategy)",
+            "relevance": "Targets 1 GW electrolyser capacity by 2030; identifies industrial (chemicals, steel) and mobility hydrogen demand; positions LH2 storage as enabling infrastructure for heavy transport."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech — Hungary as participating Member State",
+            "relevance": "Hungary participates in the Important Project of Common European Interest for Hydrogen Technologies (IPCEI Hy2Tech, EC clearance 2022). Hungarian industrial partners (Mol Group, MVM) may access IPCEI funding for integrated hydrogen production and storage projects."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — Competitive Grant Rounds (European Commission)",
+            "relevance": "Hungarian LH2 projects producing renewable hydrogen are eligible. First auction concluded 2024. Verify current round at European Hydrogen Bank portal."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "219/2011. (X. 20.) Korm. rendelet a veszélyes anyagokkal kapcsolatos súlyos balesetek elleni védekezésről (Hungarian SEVESO III transposition)",
+        "competent_authority_primary": "Katasztrófavédelmi Hatóság — BM Országos Katasztrófavédelmi Főigazgatóság (National Directorate General for Disaster Management, Ministry of Interior)",
+        "competent_authority_regional": "Fővárosi/Vármegyei Katasztrófavédelmi Igazgatóságok (Budapest Metropolitan and County Disaster Management Directorates) — regional inspection and enforcement",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lower_tier_obligations": "Notify Katasztrófavédelmi Hatóság; prepare and implement Veszélymegelőzési Politika (major accident prevention policy); on-site emergency plan; periodic inspection",
+        "upper_tier_obligations": "Prepare detailed Biztonsági Jelentés (safety report) acceptable to Katasztrófavédelmi Hatóság; external emergency plan prepared by local authority; public information duty; regular inspection",
+        "legal_basis": "219/2011. (X. 20.) Korm. rendelet, 1. melléklet (Annex 1) — folyékony gyúlékony gázok (liquefied flammable gases) including hydrogen; SEVESO III thresholds apply",
+        "safety_report_preparation_months_estimate": 6,
+        "authority_assessment_months_estimate": 3,
+        "notes": "Katasztrófavédelmi Hatóság is the primary competent authority. Pre-application engagement with the relevant County Katasztrófavédelmi Igazgatóság is advisable. Hungary's NBI fast-track may accelerate the planning aspects but does not override SEVESO safety report obligations — safety report assessment timeline is independent of the planning fast-track."
+      },
+
+      "permitting": {
+        "planning_authority": "Ministry of Technology and Industry (NBI fast-track if qualifying); otherwise local building authority (Fővárosi/Vármegyei Kormányhivatal); Katasztrófavédelmi Hatóság for SEVESO regime",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 15, "max": 42 },
+        "nbi_fast_track_applicability": "Large-scale LH2 storage projects meeting NBI investment thresholds may qualify for fast-track designation under Government Decree 462/2021, reducing planning timeline to 12–18 months via single Ministry authority. SEVESO safety report timeline is not accelerated by NBI status.",
+        "parallel_consent_tracks": [
+          "NBI planning fast-track / standard építési engedély (building permit) — 12–18 months (NBI) or 18–30 months (standard)",
+          "SEVESO biztonsági jelentés (safety report) assessment by Katasztrófavédelmi Hatóság — 6–9 months post-submission",
+          "Hatósági EIA (Environmental Impact Assessment) — concurrent with planning",
+          "Tűzoltóság (Fire Service) approval — concurrent with building permit"
+        ],
+        "appeal_risk": "medium",
+        "notes": "P50 of 24 months assumes NBI fast-track designation for a qualifying large-scale project. Standard track adds 6–12 months. Hungarian language creates additional complexity for non-Hungarian development teams — experienced Hungarian legal and technical advisers are essential. NBI status significantly reduces local authority challenge rights, which lowers appeal risk relative to standard Hungarian planning process."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Grid connection for the liquefaction plant is the primary infrastructure interface.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "MAVIR ZRt. (Magyar Villamosenergia-ipari Átviteli Rendszerirányító) — TSO; regional DNOs for distribution-connected",
+        "grid_queue_risk": "MEDIUM — MAVIR is professionally managed; growing solar pipeline is creating queue pressure but position is markedly better than UK or Romania Dobrogea",
+        "electricity_price_risk": "MEDIUM-HIGH — HUF-denominated electricity prices are subject to HUF/EUR FX risk for EUR investors. Industrial electricity prices in Hungary are moderate by EU standards (growing nuclear and solar base); however government intervention in energy pricing (household price caps 2022–2023) creates regulatory uncertainty around industrial tariff stability.",
+        "hipa_on_electricity_cost_note": "Note: HIPA (Local Business Tax up to 2% of net revenue) applies to the LH2 facility's net revenues. The electricity cost is a direct deductible from HIPA base (cost of goods sold / subcontractor costs). However the HIPA structure means the tax burden applies even in loss-making periods — model explicitly.",
+        "renewable_ppa_strategy": "Hungarian solar PPAs (with investment-grade automotive/battery off-takers) can provide a competitive electricity cost for liquefaction. BMW Debrecen and battery gigafactories create a deep PPA market for renewable electricity.",
+        "fx_electricity_cost_note": "Industrial electricity approximately HUF 30,000–50,000/MWh for large consumers (indicative 2024–2025 at EUR 1 = HUF 395: EUR 76–127/MWh). At HUF 40,000/MWh (EUR 101/MWh indicative) and 11 kWh/kg: electricity cost approximately EUR 1.11/kg LH2. HUF volatility (EUR/HUF range 360–420 in recent years) creates meaningful FX sensitivity — model at 370, 395, 420 HUF/EUR."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Hungary. Revenue is via tolling contracts with no state commodity floor. IPCEI Hy2Tech provides CapEx grant support for qualifying integrated projects — this is a capital subsidy, not a revenue mechanism.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing; no state commodity price floor",
+        "ipcei_hy2tech": {
+          "applicable": true,
+          "description": "Hungary participates in IPCEI Hy2Tech (EC State Aid clearance 2022). Qualifying Hungarian industrial hydrogen projects (including integrated production and storage) may access IPCEI funding channelled through Hungarian national grants.",
+          "legal_basis": "Commission Decision on IPCEI Hy2Tech, C(2022) 5358 final, 15 July 2022",
+          "administering_body": "Hungarian Ministry of National Economy / Innovation and Technology ministry (verify current ministry structure at kormany.hu)",
+          "staleness_warning": "IPCEI Hy2Tech project calls and Hungarian national implementation are subject to revision. Verify current application process with Hungarian ministry before use."
+        },
+        "industrial_development_grants": {
+          "applicable": true,
+          "description": "Iparfejlesztési Program (Industrial Development Programme) and KEHOP (Cohesion Fund-backed Environmental Development Programme) provide CapEx grants for qualifying industrial energy investments. LH2 liquefaction and storage may qualify under industrial decarbonisation categories.",
+          "administering_body": "Ministry of National Economy / Nemzeti Fejlesztési Ügynökség (National Development Agency)",
+          "staleness_warning": "Verify current programme call parameters at palyazat.gov.hu and with Hungarian State Aid counsel."
+        },
+        "különadó_political_risk_flag": {
+          "CRITICAL_WARNING": "SOVEREIGN RISK FLAG — KÜLÖNADÓ: Hungary enacted extraordinary special levies (Különadó / Extra-profit tax) on energy sector companies under Act CXXXIX of 2022 and Government Decree 197/2022. These levies targeted electricity generators, gas utilities, and oil companies. The Orbán government has demonstrated a clear willingness to impose retroactive-adjacent sectoral levies on energy revenues by emergency decree. For LH2 storage tolling revenue: (1) the applicable levy category for gas/hydrogen infrastructure must be verified with Hungarian legal counsel; (2) the rate and duration must be confirmed as of the analysis date; (3) all financial modelling must include a Különadó sensitivity scenario reducing post-levy tolling revenue by the applicable rate. This is not a theoretical risk — it is an established policy instrument.",
+          "legal_basis": "Act CXXXIX of 2022 on Extra-Profit Taxes; Government Decree 197/2022 (VI.4.); verify current status at njt.hu",
+          "severity": "HIGH — treat as material sovereign/political risk in all investor presentations and project finance information memoranda",
+          "staleness_warning": "Különadó measures were enacted as transitional instruments. Verify current applicability, rate, and duration with Hungarian legal adviser as of analysis date."
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a fully merchant basis, charging automotive/battery manufacturing facilities, industrial consumers, and transport hubs.",
+          "credit_quality_note": "BMW, Samsung SDI, SK Innovation, CATL (all with Hungarian manufacturing presence) are investment-grade potential offtakers for LH2 in mobility and industrial applications — materially stronger credit than typical Hungarian domestic corporate counterparties."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Hungarian CIT is 9% — the lowest in the EU. Development Tax Allowance (DTA) may reduce CIT by up to 80% over 12 years. Both are timing/base benefits on an already-low rate. HIPA (up to 2% of net revenue, revenue-based) is the more material and persistent tax burden for LH2 storage operations and must be modelled separately.",
+        "cit_rate_pct": 9.0,
+        "legal_basis": "Act LXXXI of 1996 (Tao.tv.) §19",
+        "development_tax_allowance": {
+          "applicable": true,
+          "description": "Fejlesztési adókedvezmény (DTA) — qualifying investments above HUF 3 billion (approximately EUR 7.6m at 395 HUF/EUR — verify current threshold) may reduce CIT liability by up to 80% per year over a 12-year claim period. Total allowance typically 70% of qualifying investment value.",
+          "legal_basis": "Tao.tv. §22/B",
+          "npv_timing_benefit_note": "At 9% CIT and 7% WACC: DTA over 12 years on a EUR 30m LH2 project (operating profit ≈ EUR 3m/year, CIT due ≈ EUR 270k/year, DTA reduces by 80% → EUR 54k/year effective CIT) — NPV of reduction ≈ EUR 1.6m. Modest in absolute terms given 9% base rate."
+        },
+        "hipa_local_business_tax": {
+          "name": "Helyi Iparűzési Adó (HIPA) — Local Business Tax",
+          "rate_pct_max": 2.0,
+          "tax_base": "Net revenue minus cost of goods sold and subcontractor costs — revenue-based, NOT profit-based. Applies even when LH2 facility is in a loss-making position.",
+          "significance": "CRITICAL: For an LH2 storage facility with HUF 1 billion/year (approximately EUR 2.5m at 395 HUF/EUR) tolling revenue: HIPA up to HUF 20 million (EUR 50k) per year — regardless of profitability. This is a persistent operational cost not present in most EU jurisdictions. Model as a separate annual cost line.",
+          "legal_basis": "Act C of 1990 on Local Taxes (Htv.) §35–52",
+          "staleness_warning": "HIPA rules subject to amendment — verify current rates and base definition at njt.hu."
+        },
+        "huf_fx_note": "All HUF tax calculations subject to HUF/EUR FX risk. Sensitivity analysis at HUF 370, 395, 420 per EUR is required for all EUR-denominated financial models."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "MSZ EN 1251 (Hungarian adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "Zone classification per MSZ EN 60079 (Hungarian ATEX adoption); explosive atmosphere risk assessment mandatory under 7/2002 SZCSM rendelet",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion / controlled flare (Katasztrófavédelmi approval required)", "Use as on-site fuel"],
+          "regulatory_basis": "BOG must be addressed as a major accident scenario in the Biztonsági Jelentés under 219/2011 Korm. rendelet. Environmental authority (OKI) permit conditions govern atmospheric releases."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, and DSCR modelling. Figures are indicative benchmarks only.",
+        "_rule_3c_note": "Primary currency is HUF. EUR equivalents shown at indicative rate of EUR 1 = HUF 395 (mid-2025 indicative — VERIFY at ECB Reference Rate). HUF is HIGHLY VOLATILE — model FX sensitivity at HUF 370, 395, and 420 per EUR.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_huf": {
+            "per_tonne_per_day_midpoint_huf": 1382500000,
+            "eur_midpoint_approx": 3500000,
+            "fx_rate_used": "EUR 1 = HUF 395 (indicative — verify at ECB)",
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023 — EUR midpoint converted at indicative rate"
+          },
+          "storage_tank_capex_huf": {
+            "per_tonne_midpoint_huf": 395000000,
+            "eur_midpoint_approx": 1000000,
+            "fx_rate_used": "EUR 1 = HUF 395 (indicative)"
+          },
+          "illustrative_total_project_capex": {
+            "total_indicative_huf": 27090000000,
+            "eur_equivalent_approx": 68580000,
+            "fx_rate_used": "EUR 1 = HUF 395 (indicative — verify at ECB on analysis date)",
+            "notes": "Balance of plant 20% of equipment. Hungarian construction costs are moderate by EU standards. Excludes grid connection costs."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_huf_per_kwh_indicative": 40,
+            "eur_per_kwh_indicative": 0.101,
+            "electricity_opex_huf_per_kg_lh2": 440,
+            "electricity_opex_eur_per_kg_lh2_indicative": 1.11,
+            "fx_rate_used": "EUR 1 = HUF 395 (indicative)",
+            "source": "Indicative Hungarian industrial tariff — verify current MEKH regulated tariff or market price before use. IEA energy intensity figure."
+          },
+          "hipa_annual_cost_model_note": "At HUF 2 billion tolling revenue and 2% HIPA: HUF 40m/year (approximately EUR 101k/year) — model as a fixed recurring cost in operational phase, independent of profitability.",
+          "boil_off_loss_pct_per_day": 0.5,
+          "különadó_sensitivity_note": "Model Különadó scenario: if a sectoral levy of 5% applies to LH2 tolling revenue, this reduces post-levy revenue by HUF 100m/year on HUF 2 billion revenue — material IRR impact. Verify current applicability."
+        }
+      },
+
+      "market_context": {
+        "hungary_policy_position": "National Hydrogen Strategy 2021–2030 targets 1 GW electrolyser by 2030. Industrial hydrogen demand from chemicals, refining, and the growing automotive/battery manufacturing sector (BMW Debrecen, CATL, Samsung SDI, SK Innovation). Mol Group H2 mobility network is the primary private sector driver.",
+        "key_hungary_lh2_projects_indicative": [
+          {
+            "project": "Mol Group H2 Mobility Network",
+            "status": "Active development — Mol has deployed H2 refuelling stations (primarily compressed H2); LH2 format relevant for heavy transport corridors",
+            "operator": "MOL Magyar Olaj- és Gázipari Nyrt.",
+            "note": "Mol Group is the dominant private H2 market player in Hungary; LH2 for HGV fuelling is a strategic interest"
+          },
+          {
+            "project": "MVM (Magyar Villamos Művek) H2 Storage Concept",
+            "status": "Concept/early development — state utility exploring H2 storage for seasonal balancing",
+            "operator": "MVM Zrt.",
+            "note": "MVM's hydrogen strategy links to Paks II nuclear expansion as a baseload source for electrolysis"
+          },
+          {
+            "project": "Budapest H2 Bus Fleet (BKV/Alstom collaboration)",
+            "status": "Pilot — compressed H2 at bus depot; potential LH2 upgrade for scale",
+            "note": "Compressed H2 currently preferred at pilot scale; LH2 relevant if fleet significantly expands"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Automotive and battery gigafactory decarbonisation — BMW (Debrecen), CATL, Samsung SDI, SK Innovation all have stated H2 ambitions for manufacturing processes",
+          "Heavy road transport — HGV fuelling along Trans-European road corridors (TEN-T); Hungary is a major East-West transit country",
+          "Industrial hydrogen for chemicals and refining (Mol Group Danube Refinery, Tisza chemical complex)",
+          "Seasonal grid balancing — MVM exploring power-to-gas with underground storage"
+        ],
+        "supply_chain_note": "Hungary has no domestic LH2 production as of 2025. European suppliers (Linde, Air Liquide, Chart Industries) are primary equipment vendors. Hungarian industrial construction capacity is adequate."
+      },
+
+      "notes": "Hungary offers Europe's lowest CIT (9%) and potentially fast NBI permitting for qualifying large-scale projects, which are genuine positives for LH2 infrastructure development. However, the Különadó (extraordinary energy sector levy) precedent under Act CXXXIX of 2022 is a material sovereign risk that MUST be disclosed to investors and modelled as a scenario — the Orbán government has demonstrated repeated willingness to impose sectoral levies on energy revenues by emergency legislative action. HIPA (up to 2% of net revenue) is a persistent, revenue-based operational cost unique to Hungary that must be modelled separately from CIT. HUF currency volatility (EUR/HUF range 360–420 in recent years) creates structural FX mismatch risk for EUR-denominated projects. The IPCEI Hy2Tech participation and growing industrial H2 demand from gigafactories are the strongest commercial positives. All financial parameters must be verified with current ECB HUF/EUR rate and Hungarian legal counsel on Különadó applicability before use."
     }
   }
 }

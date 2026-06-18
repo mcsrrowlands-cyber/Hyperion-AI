@@ -408,6 +408,249 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Croatia's most distinctive LH2 asset is the operational LNG Krk Island terminal (LNG Croatia), which provides existing cryogenic infrastructure knowledge and potential conversion/co-location opportunities for LH2 bunkering. Croatia adopted the Euro on 1 January 2023 — no FX risk for EUR-denominated investors, a material advantage shared only with Greece among this five-jurisdiction group. The primary regulatory gate is the SEVESO III safety regime administered by Ministarstvo unutarnjih poslova (Ministry of Interior, Civil Protection Directorate) and HAOP. Croatia's Adriatic maritime position creates genuine LH2 bunkering demand as IMO decarbonisation mandates take effect.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism. Standalone facilities operate on a tolling or merchant basis. FOND ZA ZAŠTITU OKOLIŠA I ENERGETSKU UČINKOVITOST (Environmental Protection and Energy Efficiency Fund — FZOEU) provides grants for clean energy infrastructure. NPOO (Nacionalni plan oporavka i otpornosti — National Recovery and Resilience Plan) includes an H2 investment component. OPKK 2021–2027 (EU Cohesion Funds Operational Programme for Competitiveness and Cohesion) provides CapEx grant routes. EU Hydrogen Bank competitive funding rounds are available for qualifying projects. Source: FZOEU (fzoeu.hr); HAOP; European Commission DG ENER.",
+      "revenue_floor_description": null,
+      "source": "hops_hr; haop_hr; iea_hydrogen",
+      "staleness_warning": "FZOEU grant competition parameters, NPOO programme call conditions, and LNG Croatia terminal conversion studies are time-sensitive. Verify at fzoeu.hr and Ministry of Economy and Sustainable Development (mingor.gov.hr) before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Uredba o sprječavanju velikih nesreća koje uključuju opasne tvari (NN 44/2014, as amended) — Ordinance on Prevention of Major Accidents Involving Dangerous Substances",
+            "relevance": "Croatian transposition of SEVESO III Directive (2012/18/EU). Mandatory safety regime for LH2 storage at or above threshold quantities. Lower tier (≥10 t flammable gas, including LH2): notify MUP/Civil Protection Directorate, prepare politiku sprječavanja velikih nesreća (MAPP equivalent) and on-site emergency plan. Upper tier (≥50 t): detailed izvješće o sigurnosti (safety report), external emergency plan, public information duty, periodic inspection."
+          },
+          {
+            "instrument": "Zakon o zaštiti okoliša (Environmental Protection Act, NN 80/2013 as amended) and Uredba o procjeni utjecaja zahvata na okoliš",
+            "relevance": "Environmental Impact Assessment (procjena utjecaja na okoliš — PUO) required for LH2 facilities above threshold scale. HAOP (Hrvatska agencija za okoliš i prirodu — Croatian Agency for the Environment and Nature) is the competent EIA authority."
+          },
+          {
+            "instrument": "Zakon o zaštiti od požara (Fire Protection Act, NN 92/2010 as amended)",
+            "relevance": "Fire safety requirements for cryogenic hydrogen storage; DUZS (Državna uprava za zaštitu i spašavanje — Civil Protection and Rescue Service) / MUP fire inspection authority."
+          },
+          {
+            "instrument": "Pravilnik o zaštiti od eksplozivnih atmosfera (Ordinance on Explosive Atmospheres Protection, NN 39/2006)",
+            "relevance": "ATEX implementation; explosive atmosphere risk assessment and zone classification around LH2 storage and dispensing areas."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Zakon o prostornom uređenju (Physical Planning Act, NN 153/2013 as amended)",
+            "relevance": "Lokacijska dozvola (location permit) required as the first planning stage for LH2 infrastructure; spatial plan compliance check by county/local planning authority."
+          },
+          {
+            "instrument": "Zakon o gradnji (Building Act, NN 153/2013 as amended)",
+            "relevance": "Građevinska dozvola (building permit) required for LH2 storage tanks, liquefaction plant, and associated structures."
+          },
+          {
+            "instrument": "Zakon o strateškim investicijskim projektima Republike Hrvatske (Act on Strategic Investment Projects)",
+            "relevance": "Large-scale LH2 hub projects meeting strategic investment criteria may qualify for fast-track designation with Ministry of Economy as lead coordinator — significantly reduces permitting timelines."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Hrvatska strategija razvoja vodikovih tehnologija (Croatian Hydrogen Strategy — in development post-2022)",
+            "relevance": "Croatia's H2 strategy is under development; NPOO includes an H2 investment component. LNG Krk terminal conversion to H2-compatible use (LH2 or NH3) is identified as a strategic option."
+          },
+          {
+            "instrument": "NPOO (Nacionalni plan oporavka i otpornosti — Croatian National Recovery and Resilience Plan)",
+            "relevance": "EU-funded investment plan; H2 component includes production, storage, and transport enabling infrastructure. Ministry of Economy and Sustainable Development administers grant competitions."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — Competitive Grant Rounds (European Commission)",
+            "relevance": "Croatian LH2 projects producing renewable hydrogen are eligible. First auction concluded 2024. Verify current round at European Hydrogen Bank portal."
+          },
+          {
+            "instrument": "LNG Croatia — Krk Island Floating Storage and Regasification Unit (FSRU)",
+            "relevance": "The operational LNG Croatia FSRU at Krk Island (commercial operations from January 2021) provides established cryogenic infrastructure, maritime logistics knowledge, and potential co-location/conversion opportunity for LH2 bunkering. Source: LNG Croatia LLC (lng.hr)."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "Uredba o sprječavanju velikih nesreća koje uključuju opasne tvari (NN 44/2014, as amended) — Croatian SEVESO III transposition",
+        "competent_authority_primary": "Ministarstvo unutarnjih poslova (MUP — Ministry of Interior), Ravnateljstvo civilne zaštite (Civil Protection Directorate) — primary SEVESO competent authority",
+        "competent_authority_supporting": "HAOP — Hrvatska agencija za okoliš i prirodu (Croatian Agency for the Environment and Nature) — EIA and nature protection authority; DUZS / MUP fire service for fire safety inspection",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lower_tier_obligations": "Notify MUP Civil Protection Directorate; prepare politiku sprječavanja velikih nesreća (major accident prevention policy); on-site emergency plan; periodic inspection",
+        "upper_tier_obligations": "Prepare detailed Izvješće o sigurnosti (safety report) acceptable to MUP; external emergency plan by county civil protection authority; public information duty; periodic MUP inspection",
+        "legal_basis": "Uredba NN 44/2014, Prilog I (Annex I) — zapaljivi plinovi (flammable gases) including hydrogen; SEVESO III thresholds (10t lower, 50t upper) apply",
+        "safety_report_preparation_months_estimate": 5,
+        "authority_assessment_months_estimate": 3,
+        "lng_krk_knowledge_transfer_note": "LNG Croatia's operational FSRU at Krk provides a domestic precedent for cryogenic fuel storage under SEVESO III. The technical and regulatory knowledge base at MUP and local emergency planning authorities is therefore higher for cryogenic fuel handling than in other CEE jurisdictions. This may reduce assessment time for LH2 safety reports relative to jurisdictions with no cryogenic precedent."
+      },
+
+      "permitting": {
+        "planning_authority": "County/municipal physical planning authority for lokacijska dozvola; MUP Civil Protection Directorate for SEVESO safety report; HAOP for EIA; DUZS/MUP for fire safety",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 15, "max": 42 },
+        "strategic_investment_fast_track": "LH2 hub projects (with Krk terminal co-location or standalone large-scale) may qualify for strategic investment fast-track under Zakon o strateškim investicijskim projektima — this can reduce permitting timeline by 30–40% via Ministry-level coordination.",
+        "parallel_consent_tracks": [
+          "SEVESO Izvješće o sigurnosti (safety report) submission and MUP assessment — 5–8 months post-submission",
+          "EIA (PUO) via HAOP — 9–15 months",
+          "Lokacijska dozvola (location permit) from county/municipal authority — 6–12 months",
+          "Građevinska dozvola (building permit) — 6–9 months post location permit",
+          "DUZS/MUP fire safety approval — concurrent with building permit"
+        ],
+        "appeal_risk": "medium",
+        "appeal_mechanism": "Upravni sud (Administrative Court); Visoki upravni sud (High Administrative Court); Ustavni sud (Constitutional Court)",
+        "natura_2000_note": "Croatia has approximately 37% of its territory under Natura 2000 designation — one of the highest coverage rates in the EU. LH2 storage sites in industrial/port zones (Krk, Rijeka, Split, Zadar) are generally outside Natura 2000 areas. Greenfield inland sites require careful Natura 2000 screening.",
+        "notes": "P50 of 24 months assumes a port-based or industrial zone facility (preferred siting for LH2). Strategic investment fast-track for qualifying projects can reduce to 15–18 months. Upper-tier SEVESO sites (≥50t LH2) add 5–8 months for safety report. LNG Croatia's cryogenic precedent at Krk may reduce novel technology assessment friction at MUP compared to jurisdictions without cryogenic fuel experience."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Grid connection for the liquefaction plant is the primary infrastructure interface.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "HOPS d.o.o. (Hrvatska elektroprivreda Operator prijenosnog sustava — Croatian TSO) for transmission-connected; HEP-ODS for distribution-connected",
+        "grid_queue_risk": "MEDIUM — mainland grid adequate; Krk Island connection via undersea cable from mainland — cable capacity headroom must be verified for large industrial loads. HOPS is a competent and professionally-run TSO.",
+        "electricity_price_risk": "LOW-MEDIUM — Croatian electricity prices are EUR-denominated (no FX risk); moderate by EU standards. Significant hydropower base (major rivers: Sava, Drava, Krka) provides stable baseload and moderate industrial pricing.",
+        "eur_domestic_currency_advantage": "CRITICAL ADVANTAGE: Croatia adopted the EUR on 1 January 2023 (replacing HRK at fixed rate of 7.53450 HRK/EUR). All electricity prices, tariffs, and costs are EUR-denominated with zero FX risk. Combined with LNG Krk cryogenic infrastructure knowledge, this makes Croatia one of the most straightforward EUR-denominated LH2 markets in the CEE region.",
+        "krk_island_electricity_note": "LNG Croatia at Krk Island currently requires significant electricity for FSRU operations. Incremental LH2 liquefaction load at Krk would use the existing Krk Island grid connection (Omišalj 110kV substation) — potential for shared infrastructure with LNG Croatia. Verify available capacity headroom with HOPS and HEP-ODS.",
+        "renewable_ppa_strategy": "Croatian wind (Dalmatian coast, Velebit — 30–38% capacity factors) and solar (1,300–1,650 kWh/kWp) PPAs provide green credentials for LH2. Significant existing wind capacity creates an active PPA market with competitive pricing."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated one-way market premium or two-way CfD in Croatia. Revenue is via tolling contracts with no state commodity floor. FZOEU/NPOO grants are capital subsidies, not revenue mechanisms.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing; no state commodity price floor",
+        "fzoeu_npoo_capex_grant": {
+          "applicable": true,
+          "description": "FZOEU (Environmental Protection and Energy Efficiency Fund) provides grants for clean energy infrastructure. NPOO H2 component provides CapEx support for qualifying hydrogen infrastructure. Eligible costs include liquefaction plant, cryogenic storage tanks, and civil works.",
+          "indicative_grant_rate": "Aid intensity limits under CEEAG / GBER Article 41. Croatia qualifies for Cohesion Fund support (GDP per capita approximately 70–75% EU average). Indicative range: 35–55% of eligible CapEx. Verify at fzoeu.hr and mingor.gov.hr for current call parameters.",
+          "staleness_warning": "FZOEU and NPOO call parameters are time-sensitive. Verify current open calls at fzoeu.hr and Ministry of Economy and Sustainable Development (mingor.gov.hr)."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Croatian LH2 projects producing renewable hydrogen are eligible for EU Hydrogen Bank competitive grants.",
+          "source": "European Commission DG ENER"
+        },
+        "lng_krk_strategic_option": {
+          "description": "LNG Croatia LLC (Krk Island FSRU) represents a potential LH2 co-location or conversion opportunity. The existing cryogenic vessel knowledge, maritime logistics infrastructure, maritime safety approvals, and grid/jetty connections could reduce the incremental CapEx for LH2 bunkering significantly. A greenfield LH2 facility adjacent to or integrated with the Krk FSRU would benefit from established: (1) SEVESO compliance history; (2) maritime authority approvals; (3) electricity connection; (4) jetty and tanker berthing infrastructure.",
+          "note": "LNG Croatia is owned by HEP (30%), JANAF (20%), Plinacro (30%), and Croatian state entities. Any strategic partnership or co-location agreement would require shareholder consent. Verify current LNG Croatia strategic direction with lng.hr.",
+          "lng_to_lh2_conversion_complexity": "LNG (liquefied natural gas, -162°C) and LH2 (liquid hydrogen, -253°C) storage require different materials and insulation systems. Direct tank conversion is not straightforward — LH2 requires specialised materials-of-construction (austenitic stainless steel, specialised insulation) due to 90°C lower operating temperature. Co-location rather than tank conversion is the more realistic scenario."
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage on the Adriatic coast can serve: (1) maritime bunkering (IMO decarbonisation demand from Adriatic shipping); (2) road transport HGV fuelling corridors (TEN-T Adriatic highway); (3) industrial offtake from INA and Petrokemija industrial complex at Kutina.",
+          "credit_risk_note": "Croatian corporate credit market is thin. HEP, INA, and JANAF are the strongest domestic counterparties. International shipping companies and energy majors with Adriatic maritime operations are preferred creditworthy offtakers."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Croatian standard straight-line depreciation (20-year useful life for wind/plant) provides a modest NPV timing benefit at 18% CIT. No enhanced depreciation equivalent to Germany's degressive AfA. NPV timing benefit should be shown as a separate line item.",
+        "cit_rate_pct": 18.0,
+        "legal_basis": "Zakon o porezu na dobit (ZPD — Corporate Income Tax Act); 18% standard rate",
+        "depreciation": {
+          "method": "Straight-line (ravnomjerna amortizacija) as standard under ZPD",
+          "useful_life_equipment_years": 20,
+          "legal_basis": "ZPD §§12–13 (amortizacija / depreciation)",
+          "npv_timing_benefit": "At 18% CIT and 10% WACC: straight-line 20 years (5% p.a.): NPV of tax shield ≈ 13.9% of qualifying CapEx. No accelerated depreciation available under current ZPD for LH2 assets. Standard straight-line applies."
+        },
+        "no_fx_risk": "Croatia adopted EUR on 1 January 2023 — all CIT calculations, revenues, and debt service are EUR-denominated with zero FX risk. This is a material simplification for EUR-denominated project finance.",
+        "vat": {
+          "standard_rate_pct": 25,
+          "note": "25% standard VAT rate — joint highest in the EU (alongside Hungary at 27%). Input VAT fully recoverable for VAT-registered businesses on all qualifying business inputs.",
+          "legal_basis": "Zakon o porezu na dodanu vrijednost (Zakon o PDV-u)"
+        },
+        "no_local_trade_tax": "Croatia has no municipal trade/business tax equivalent to Hungary's HIPA. 18% CIT and 25% VAT (recoverable) are the primary tax considerations."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "HRN EN 1251 (Croatian adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "Zone classification per HRN EN 60079 (ATEX — Croatian adoption); Pravilnik o zaštiti od eksplozivnih atmosfera (NN 39/2006)",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion / controlled flare (HAOP permit condition governs)", "Use as on-site fuel"],
+          "regulatory_basis": "BOG must be addressed as a major accident scenario in the Izvješće o sigurnosti under Uredba NN 44/2014. HAOP environmental permit conditions govern atmospheric releases.",
+          "adriatic_climate_note": "Adriatic coastal ambient temperatures (summer 30–35°C) are higher than northern European LH2 sites. BOG calculations should use site-specific summer temperature assumptions."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, and DSCR modelling. Figures are indicative benchmarks only.",
+        "_rule_3c_note": "Croatia is EUR-denominated since 1 January 2023 — no FX conversion required. All figures are in EUR native. No FX sensitivity required. This simplifies project finance structuring materially.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000,
+            "notes": "Vacuum-insulated Type C cryogenic tank; scale economies apply"
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Croatian civil construction costs are moderate (comparable to southern EU average). Excludes grid connection and any LNG Krk co-location infrastructure sharing credits."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_indicative": 0.095,
+            "electricity_opex_eur_per_kg_lh2": 1.045,
+            "source": "Indicative Croatian industrial tariff — verify current HERA regulated price before use. IEA energy intensity figure.",
+            "wind_ppa_scenario": {
+              "wind_ppa_price_eur_per_kwh_illustrative": 0.065,
+              "electricity_opex_eur_per_kg_lh2_wind_ppa": 0.715,
+              "note": "Croatian wind PPA (Dalmatian hinterland, ~35% capacity factor) provides meaningful electricity cost reduction vs. grid tariff."
+            }
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "eur_currency_advantage_note": "EUR domestic currency since January 2023. All financial model cashflows, debt service, and tax calculations in EUR with no FX sensitivity required. Combined with Adriatic maritime LH2 bunkering opportunity, this makes Croatia a structurally simpler EUR-denominated LH2 market than the RON (Romania) or HUF (Hungary) jurisdictions.",
+          "note": "Illustrative inputs only. Engineering study required before financial modelling. LNG Krk co-location scenario should be modelled as a separate sensitivity with shared infrastructure credit."
+        }
+      },
+
+      "market_context": {
+        "croatia_policy_position": "Croatia's LH2 opportunity is anchored around: (1) the operational LNG Croatia Krk Island FSRU as cryogenic infrastructure knowledge base and potential co-location site; (2) Adriatic maritime bunkering demand as IMO decarbonisation mandates take effect; (3) Adriatic coast renewable energy (wind and solar) as feedstock for green H2; (4) EUR adoption (January 2023) simplifying project finance.",
+        "key_croatia_lh2_projects_indicative": [
+          {
+            "project": "LNG Croatia (Krk Island FSRU) — Potential LH2 Co-location",
+            "status": "LNG Croatia fully operational since January 2021 (6 bcm/year regasification capacity). LH2 bunkering co-location is a strategic option under study — verify current status with lng.hr",
+            "operator": "LNG Croatia LLC (shareholders: HEP 30%, JANAF 20%, Plinacro 30%, others)",
+            "note": "Operational cryogenic infrastructure is the primary asset — maritime approvals, SEVESO compliance, jetty infrastructure, electricity connection all established. LH2 co-location would require separate LH2-specific safety report and Uredba compliance."
+          },
+          {
+            "project": "HEP (Hrvatska elektroprivreda) Renewable + H2 Concept",
+            "status": "Early concept — HEP exploring H2 from surplus hydropower and wind; LH2 storage for maritime/transport applications",
+            "operator": "HEP d.d. (Hrvatska elektroprivreda)",
+            "note": "HEP is a diversified energy utility with hydropower, wind, and solar assets — natural fit for integrated H2 production and storage"
+          },
+          {
+            "project": "INA H2 Refinery Applications",
+            "status": "Early study — INA d.d. (Croatian oil/gas company, MOL Group subsidiary) exploring H2 for Rijeka refinery decarbonisation",
+            "operator": "INA d.d. (MOL Group)",
+            "note": "Refinery H2 demand is primarily compressed/pipeline; LH2 may be relevant for distribution to satellite industrial users"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Maritime bunkering — Adriatic Sea is a major Mediterranean shipping route; IMO 2030/2050 decarbonisation mandates create LH2 bunker demand at Rijeka, Split, Zadar, and Ploče",
+          "LNG Krk co-location — existing cryogenic infrastructure at Krk provides lowest-CapEx route to LH2 bunkering capacity on the Northern Adriatic",
+          "Heavy road transport — TEN-T Adriatic highway corridor (Split–Rijeka–Zagreb) and Pan-European Corridor Vc; HGV fuelling infrastructure demand",
+          "INA / Petrokemija industrial hydrogen — Kutina chemical complex and Rijeka refinery H2 demand for decarbonisation",
+          "Central European H2 export — Croatia as Adriatic gateway for H2 imports from North Africa or production for Central European industrial demand"
+        ],
+        "lng_krk_strategic_advantage": "The LNG Croatia Krk Island FSRU is Croatia's most significant LH2-adjacent asset. Its operational status provides: SEVESO III compliance history, MUP/Civil Protection authority familiarity with cryogenic fuel safety, established maritime logistics and jetty infrastructure, grid connection, and a workforce experienced in cryogenic operations. These are all genuine de-risking factors for an adjacent LH2 facility. The primary technical distinction is the 90°C temperature difference between LNG (-162°C) and LH2 (-253°C) — this requires different materials and insulation, but does not preclude co-location."
+      },
+
+      "notes": "Croatia presents a distinctive LH2 investment case built around the Krk Island cryogenic infrastructure, Adriatic maritime bunkering demand, EUR domestic currency (since January 2023), and manageable permitting (operational drag score 60 — the best of the five jurisdictions in this group). The SEVESO III regime under Uredba NN 44/2014 is administered by MUP's Civil Protection Directorate, and the LNG Croatia operational precedent at Krk reduces novel technology assessment friction. The absence of retroactive RES incidents (unlike Romania, Bulgaria, Greece, and Hungary) and EUR adoption make Croatia the lowest political and FX risk profile in this five-jurisdiction group for LH2 infrastructure. Key constraints: thin corporate credit market (requiring international-grade offtakers), 25% VAT (the highest in the EU, though recoverable), and Natura 2000 coverage (37% of territory — critical for inland sites, less relevant for port/industrial zone siting). All grant parameters must be verified at fzoeu.hr and mingor.gov.hr before project commitment."
     }
   }
 }

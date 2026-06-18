@@ -447,6 +447,271 @@
       "coal_phase_out_commitment": "Italy committed to coal phase-out by 2025 (south Italy) and 2035 (islands).",
       "source": null,
       "notes": "Italy has a capacity market (MACSE) where coal-fired plants have historically participated transitionally. Phase-out commitment by 2025/2035. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at −253°C and associated liquefaction plant. Italy has committed EUR 3.19bn under PNRR Mission 2 Component 2 (hydrogen) and participates in IPCEI Hy2Tech, positioning southern Italy (Puglia, Sicilia, Sardegna) as a green hydrogen production and export hub leveraging exceptional solar and wind resources. The primary regulatory gate for SEVESO-threshold LH2 facilities is D.Lgs. 105/2015 (Italian SEVESO III implementation), administered by the Prefettura, ISPRA, and ARPA. CRITICAL CHALLENGE: Italy's north-south grid constraint means the regions with the best LH2 production economics (south Italy — highest solar irradiation) have the worst grid connection infrastructure, creating a fundamental tension between production cost and grid access.",
+
+      "permitting_p50_months": 32,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage tariffa incentivante (two-way CfD). Standalone facilities operate on a tolling basis. PNRR Contratti di Sviluppo (development contracts, administered by Invitalia) provide CapEx grants. Piano Industria 4.0 / Transizione 4.0 Credito d'imposta per beni strumentali may apply to qualifying plant. IPCEI Hy2Tech provides CapEx grant coverage for qualifying projects. EU Hydrogen Bank eligible. Source: MASE/MISE; Invitalia; ec_state_aid.",
+      "revenue_floor_description": null,
+      "source": "gse_hydrogen; iea_hydrogen; dlgs105_2015",
+      "staleness_warning": "PNRR Contratti di Sviluppo parameters evolve with MASE/Invitalia calls. Credito d'imposta beni strumentali rates change annually via Legge di Bilancio — verify current Finance Act provisions before modelling. Italian industrial electricity prices are among the highest in Europe — verify current GME/ARERA data.",
+      "eu_state_aid_applicable": true,
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Decreto Legislativo 26 giugno 2015, n. 105 (D.Lgs. 105/2015) — Attuazione della direttiva 2012/18/UE (SEVESO III)",
+            "relevance": "Primary SEVESO III implementation in Italy. Mandatory major accident hazard regime for LH2 facilities at or above threshold quantities. Lower tier (≥10 t LH2 flammable gas / ≥50 t liquefied flammable gas): Notifica al Prefetto and all'autorità competente; Piano di Emergenza Interno (PEI — internal emergency plan); Sistema di Gestione della Sicurezza (SGS — safety management system). Upper tier (≥50 t / ≥200 t): Rapporto di Sicurezza (safety report — submitted to and reviewed by Comitato Tecnico Regionale — CTR); Piano di Emergenza Esterno (PEE — external emergency plan prepared by Prefettura); informazione alla popolazione; periodic inspection."
+          },
+          {
+            "instrument": "D.Lgs. 105/2015 — Comitato Tecnico Regionale (CTR)",
+            "relevance": "The CTR (Regional Technical Committee) is the body that reviews and expresses an opinion (parere) on the Rapporto di Sicurezza for SEVESO upper-tier facilities. CTR is chaired by the Prefettura and includes ISPRA, ARPA, Vigili del Fuoco (fire service), INAIL, and local health authority. Rapporto di Sicurezza cannot be approved without CTR parere."
+          },
+          {
+            "instrument": "D.Lgs. 81/2008 (Testo Unico sulla Salute e Sicurezza sul Lavoro — TUSSL)",
+            "relevance": "Occupational health and safety requirements for LH2 handling, ATEX zone management, and worker safety in cryogenic environments. Includes Titolo XI (explosive atmospheres — implementation of ATEX Directive 1999/92/EC)."
+          },
+          {
+            "instrument": "DPR 1 agosto 2011, n. 151 — Regolamento dei procedimenti relativi alla prevenzione incendi (Fire Prevention Certificate)",
+            "relevance": "Certificato di Prevenzione Incendi (CPI) from Comando dei Vigili del Fuoco required for LH2 storage and liquefaction facilities. Fire safety certification is a prerequisite for operational authorisation. LH2 is a novel fuel type — consult Vigili del Fuoco early for fire safety assessment methodology."
+          },
+          {
+            "instrument": "Decreto Ministeriale 10 marzo 1998 (Criteri generali di sicurezza antincendio e gestione dell'emergenza)",
+            "relevance": "General fire safety criteria applicable to industrial facilities including hazardous substance storage. Applied by Vigili del Fuoco in CPI assessment."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Decreto Legislativo 3 aprile 2006, n. 152 (Codice dell'Ambiente) — Valutazione di Impatto Ambientale (VIA)",
+            "relevance": "Environmental impact assessment (VIA — Valutazione di Impatto Ambientale) required for large industrial SEVESO-threshold LH2 facilities. Allegato II or Allegato III of D.Lgs. 152/2006 determines whether national VIA (MASE Commissione VIA-VAS) or regional VIA (Regione) applies."
+          },
+          {
+            "instrument": "Decreto Legislativo 29 dicembre 2003, n. 387 (Autorizzazione Unica — AU)",
+            "relevance": "Autorizzazione Unica (single authorisation) required for energy production facilities — may apply to integrated LH2 production facilities co-located with renewable generation. AU issued by Regione (or MASE for national-level projects)."
+          },
+          {
+            "instrument": "Decreto Legislativo 8 novembre 2021, n. 199 (Decreto Rinnovabili) — simplified authorisation for co-located renewables",
+            "relevance": "Where LH2 facility is co-located with renewable energy (e.g., solar PV powering electrolysis and liquefaction), DLgs 199/2021 simplifications for renewable energy authorisation may apply to the renewable component."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Piano Nazionale di Ripresa e Resilienza (PNRR) — Missione 2: Rivoluzione verde e Transizione Ecologica, Componente 2: Energia Rinnovabile, Idrogeno, Rete e Mobilità Sostenibile",
+            "relevance": "EUR 3.19bn allocated for hydrogen investment under PNRR M2C2. Includes investments in hydrogen production, storage, and distribution. LH2 storage and liquefaction infrastructure qualifies as eligible expenditure. Administered via MASE and Invitalia (Contratti di Sviluppo)."
+          },
+          {
+            "instrument": "Strategia Nazionale Idrogeno (SNI) — MASE/MISE, 2020",
+            "relevance": "Italian national hydrogen strategy targeting 5 GW electrolysis by 2030. Positions Mezzogiorno (southern Italy) as green hydrogen production hub. LH2 identified for maritime and export applications."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech — Important Project of Common European Interest (EC Decision 2022)",
+            "relevance": "Italy is an IPCEI Hy2Tech participant. ENI, Snam, Edison, and others are Italian IPCEI participants. Ravenna CCS+H2 hub and Puglia Hydrogen Valley are within IPCEI scope. LH2 technology development and storage infrastructure qualifies."
+          },
+          {
+            "instrument": "Decreto FER2 (anticipated — verify current legislative status with MASE/GSE)",
+            "relevance": "FER2 Decree is under development and may include provisions for hydrogen CfD mechanisms (contratto per differenza idrogeno) or LH2 storage support. Verify current status at GSE and MASE before use."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "instrument": "D.Lgs. 105/2015 — Italian implementation of SEVESO III Directive 2012/18/EU",
+        "competent_authority": "Prefettura (coordinates CTR process and PEE); ISPRA (Istituto Superiore per la Protezione e la Ricerca Ambientale — national technical body for Rapporto di Sicurezza review); ARPA regionale (regional environmental agency — site inspections and local environmental input); Vigili del Fuoco (fire safety); INAIL (occupational health and safety); local health authority (ASL/AUSL).",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "lower_tier_threshold_tonnes_liquefied_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_liquefied_flammable_gas": 200,
+        "seveso_iii_note": "SEVESO III thresholds for flammable gases (including hydrogen): lower tier 10 t / upper tier 50 t. For liquefied flammable gases: lower tier 50 t / upper tier 200 t. These differ from UK COMAH (5 t / 50 t for flammable gases). A 15 t LH2 storage facility triggers SEVESO lower tier in Italy but COMAH upper tier in the UK.",
+        "ctr_process": {
+          "description": "Comitato Tecnico Regionale (CTR) reviews the Rapporto di Sicurezza for SEVESO upper-tier facilities. CTR is chaired by the Prefettura and includes ISPRA, ARPA, Vigili del Fuoco, INAIL, and local health authority. CTR must issue a formal parere (opinion) — positive parere is required before the Prefettura can grant authorisation.",
+          "review_timeline_months": 8,
+          "notes": "CTR review is the primary permitting bottleneck for SEVESO upper-tier LH2 facilities in Italy. LH2 is a novel substance type for most CTRs — anticipate extended technical review. ISPRA technical guidance on LH2 safety assessment is limited — early engagement with CTR chair (Prefettura) and ISPRA recommended."
+        },
+        "notes": "Italy's SEVESO III regime is genuinely multi-authority, with multiple bodies (ISPRA, ARPA, Vigili del Fuoco, INAIL, ASL) all providing input to the CTR. This creates significant coordination complexity and timelines of 18+ months for the Rapporto di Sicurezza review alone for novel hazard types like LH2. Southern Italy CTRs (Puglia, Sicilia, Calabria) may have less experience with large-scale LH2 than northern Italy — though southern Italy is the primary target location for solar-powered LH2 production."
+      },
+
+      "permitting": {
+        "primary_authority": "Prefettura (CTR coordination for SEVESO); MASE or Regione for VIA; Regione for AU (if co-located with renewable); Comune for building permits",
+        "timeline_p50_months": 32,
+        "timeline_range_months": { "min": 24, "max": 60 },
+        "parallel_consent_tracks": [
+          "D.Lgs. 105/2015 SEVESO — Notifica / Rapporto di Sicurezza → CTR parere: 18–30 months for upper-tier",
+          "VIA (Valutazione di Impatto Ambientale) — national (MASE) or regional (Regione): 18–30 months, may run parallel to SEVESO",
+          "Autorizzazione Unica (if co-located with renewable) — Regione/MASE: 18–24 months",
+          "Certificato di Prevenzione Incendi (CPI) — Vigili del Fuoco: 6–12 months",
+          "Permesso di costruire / SCIA — Comune: concurrent with above",
+          "Connessione alla rete (grid connection — TERNA): submit concurrently — south Italy grid saturation risk"
+        ],
+        "soprintendenza_risk": "HIGH in southern regions. Many southern Italy sites (Puglia, Basilicata, Sicilia) are near archaeological zones, landscape-protected areas (aree paesaggistiche), or Natura 2000 sites. Soprintendenza per i Beni Culturali e Paesaggistici consultation can add 6–24 months. This is a primary permitting risk for southern Italy LH2 hubs.",
+        "appeal_risk": "high",
+        "appeal_mechanism": "Tribunale Amministrativo Regionale (TAR) — TAR Puglia (Bari/Lecce) and TAR Sicilia are active in industrial authorisation challenges. Consiglio di Stato for appeals. Opposition from local environmental groups and Soprintendenza is well-organised in the south.",
+        "richiesta_di_integrazione_risk": "MEDIUM-HIGH — Italian permitting authorities frequently issue richieste di integrazione (requests for additional documentation) that pause the review clock and reset timelines. This is a structural feature of Italian permitting that must be factored into project schedules.",
+        "notes": "P50 assumes a greenfield SEVESO upper-tier facility in southern Italy with experienced legal and environmental consultants managing parallel consent tracks. The combination of CTR review, VIA, Soprintendenza, and grid connection creates Italy's highest permitting complexity for LH2 in this knowledge base. Northern Italy sites (near Ravenna, Taranto repurposing, or industrial zones) may be faster."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). For Italy, the north-south grid constraint creates a fundamental tension: the best solar resource (and therefore lowest electricity cost) is in the south, but southern Italy grid capacity for large new connections is severely constrained.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "illustrative_electrical_load_kw_per_tonne_day": { "range_low": 420, "range_high": 500 },
+        "grid_operator": "Terna S.p.A. for transmission; Enel Distribuzione and others for distribution",
+        "north_south_grid_risk": {
+          "description": "South Italy grid saturation (Puglia, Sicilia, Sardegna) is systemic. New large industrial connections in the south face TERNA queue timelines of 3–7+ years. This directly conflicts with the co-location of LH2 facilities near the best solar resource.",
+          "tyrrhenian_link": "Terna's Tyrrhenian Link (Hyphen project — Sicily-Campania and Sardinia-Lazio HVDC cables, ~1 GW each) is the structural fix but is not expected to be operational until 2027–2029. Until then, south Italian grid capacity for large new industrial connections is severely constrained.",
+          "mitigation": "Co-located solar PV with dedicated connection (not using general grid for liquefaction electricity) is the primary mitigation. This avoids the general TERNA connection queue by using a project-specific solar connection. Requires integrated project design (solar + electrolyser + liquefaction as a single installation).",
+          "legal_basis": "DLgs 79/1999; ARERA Delibere on grid access; TERNA TICA (Testo Integrato Connessioni Attive)"
+        },
+        "industrial_electricity_price_eur_kwh_ref": "EUR 0.11–0.16/kWh for large industrial consumers in Italy (2024 reference; Italy has relatively high industrial electricity prices in European context). Verify with ARERA published data.",
+        "south_italy_solar_ppa_advantage": "Southern Italy solar irradiation (1,800–2,000 kWh/kWp p.a.) supports solar PPA prices of EUR 0.04–0.07/kWh. Co-located solar for liquefaction is the preferred electricity supply model. At EUR 0.05/kWh and 11 kWh/kg: electricity cost ≈ EUR 0.55/kg LH2.",
+        "notes": "The primary LH2 investment model for Italy is co-located renewable (solar or wind) powering an integrated electrolyser and liquefaction plant in southern Italy — avoiding the general grid connection queue entirely. Import terminal model (Ravenna, Civitavecchia, Augusta/Sicily) is the alternative for facilities not co-located with generation."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated tariffa incentivante (two-way CfD against PUN). Revenue is primarily via tolling contracts. PNRR Contratti di Sviluppo provide CapEx grants — not revenue support.",
+        "primary_mechanism_standalone": "Tolling arrangement — no state commodity price floor for LH2 storage services.",
+        "pnrr_contratti_di_sviluppo": {
+          "applicable": true,
+          "description": "PNRR Contratti di Sviluppo (development contracts) administered by Invitalia provide CapEx grants for industrial development projects including hydrogen infrastructure. LH2 liquefaction and storage qualifies as eligible investment under M2C2 (Idrogeno).",
+          "grant_rate_indicative": "Up to 30–50% of eligible CapEx for qualifying projects (indicative — subject to Invitalia competitive evaluation). Aid intensity limits apply under CEEAG.",
+          "legal_basis": "DM MISE 9 dicembre 2014 (Contratti di Sviluppo regulation); PNRR M2C2 operational programme",
+          "staleness_warning": "PNRR programme timelines and call parameters are subject to revision. Verify current Contratti di Sviluppo open call status at invitalia.it before use.",
+          "source": "Invitalia, Contratti di Sviluppo — invitalia.it; MASE PNRR M2C2"
+        },
+        "credito_dimposta_beni_strumentali": {
+          "applicable": "Potentially — for qualifying tangible assets. Verify whether LH2 liquefaction plant and cryogenic storage qualify as 'beni strumentali materiali' or 'beni 4.0' under the current Legge di Bilancio provisions.",
+          "generic_rate_pct": 6,
+          "transizione_40_rate_pct": "Up to 20% for qualifying Transizione 4.0 assets (verify current decree)",
+          "legal_basis": "Legge di Bilancio provisions (verify current year Finance Act for applicable rates and categories)",
+          "staleness_warning": "Credito d'imposta rates and eligibility change ANNUALLY via Legge di Bilancio. Specialist Italian tax advice required.",
+          "source": "Agenzia delle Entrate; MISE Transizione 4.0 programme documentation"
+        },
+        "ipcei_support": {
+          "applicable": "Yes — for projects qualifying under IPCEI Hy2Tech or Hy2Use",
+          "it_ipcei_projects": "ENI (Ravenna CCS+H2 hub), Snam (hydrogen infrastructure), Puglia Hydrogen Valley (solar electrolysis), Taranto green H2 (ArcelorMittal steel decarbonisation).",
+          "grant_nature": "IPCEI grants are CapEx contributions with EC state aid coverage.",
+          "legal_basis": "IPCEI EC Decision (Hy2Tech) — state aid clearance covers Italian participant awards"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage on a tolling basis — primary offtakers are maritime sector (Taranto, Augusta/Sicily, Genova), industrial decarbonisation, and northern Italy/export via Adriatic corridor.",
+          "credit_risk_note": "Tolling revenues are contract-dependent. No state backstop."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Italy's Credito d'imposta per beni strumentali (investment tax credit) for qualifying plant is a PERMANENT CapEx benefit (not merely a timing benefit) — applied over 3 years following investment. However, rates change annually via Legge di Bilancio — verify current provisions each year.",
+        "ires_rate_pct": 24,
+        "irap_rate_pct": 3.9,
+        "combined_effective_rate_pct": 27.9,
+        "legal_basis_ires": "TUIR (DPR 917/1986) Art. 75 et seq.",
+        "legal_basis_irap": "DLgs 446/1997",
+        "credito_dimposta_for_lh2": {
+          "description": "Investment tax credit (Credito d'imposta per beni strumentali materiali) for qualifying new tangible plant and equipment. Applied against IRES liability over 3 tax years following investment. LH2 liquefaction plant, cryogenic storage tanks, and boil-off gas management systems are likely to qualify as 'beni strumentali materiali nuovi'.",
+          "generic_tangible_assets_rate_pct": 6,
+          "transizione_40_higher_rate": "Up to 20% for qualifying Transizione 4.0 / Industria 4.0 assets — verify whether LH2 plant qualifies as 4.0 asset under current decree",
+          "application_period": "Typically over 3 tax years (in thirds) following investment year",
+          "npv_benefit": "At 6% credit rate and 10% WACC applied over 3 years: NPV ≈ 5.4% of qualifying CapEx. At 20% (if Transizione 4.0 qualifying): NPV ≈ 17.7% — significantly more valuable. Subject to qualification criteria.",
+          "staleness_warning": "Credito d'imposta rates and qualifying asset categories change ANNUALLY via Legge di Bilancio. Verify current Finance Act provisions with Agenzia delle Entrate or specialist Italian tax counsel before use."
+        },
+        "ammortamento_lh2_plant": {
+          "method": "Declining balance (ammortamento a quote decrescenti) or straight-line (ammortamento ordinario)",
+          "cryogenic_plant_rate_pct_per_year": "Up to 25% declining balance (coefficients de massimo ammortamento — verify Agenzia delle Entrate tabella)",
+          "legal_basis": "TUIR Art. 102; DM 31 dicembre 1988 (Coefficients tabella)"
+        }
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "UNI EN 1251 (Italian adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels); DPR 15 luglio 2003, n. 459 (Pressure Equipment Regulation implementing Directive 97/23/EC — now updated to Directive 2014/68/EU via DLgs 26 maggio 2016, n. 93)",
+        "atex_zone_classification": "Zone ATEX — Zona 1 o Zona 2 intorno ai punti di rilascio di idrogeno; classification under DLgs 81/2008 Titolo XI (Luoghi con pericolo di esplosione — ATEX). Zone classification documented in Documento Protezione Esplosione (DPE — Explosion Protection Document)",
+        "certificato_prevenzione_incendi": {
+          "description": "Certificato di Prevenzione Incendi (CPI) from local Comando dei Vigili del Fuoco is mandatory for LH2 storage and liquefaction facilities. CPI assessment may take 6–12 months and may require specialist hydrogen safety engineering input as LH2 is a novel fuel type for most Italian fire brigades.",
+          "legal_basis": "DPR 1 agosto 2011, n. 151; DM 10 marzo 1998"
+        },
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (riliquefazione) — capital-intensive but zero loss", "Catalytic combustion or controlled flare — subject to VIA and ARPA conditions on atmospheric emissions", "On-site use as process fuel"],
+          "regulatory_basis": "BOG must be addressed in D.Lgs. 105/2015 Rapporto di Sicurezza; atmospheric releases subject to ARPA inspection conditions under VIA and environmental authorisations; Vigili del Fuoco fire safety assessment for flare/combustion options",
+          "environmental_note": "Southern Italy ARPA agencies (ARPA Puglia, ARPA Sicilia) have active inspection regimes. BOG management plan must be included in the environmental authorisation (AIA or equivalente) dossier."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. South Italy curtailment haircut must be applied to co-located solar PV generation capacity factors. IRAP (3.9%) must be included in effective tax rate. Credito d'imposta rate must be confirmed via current Legge di Bilancio.",
+        "_rule_3c_note": "Italy is EUR-denominated. No FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity (co-located with solar PV + electrolyser, Puglia); 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. South Italy civil infrastructure costs may be higher due to logistics and site access. Excludes solar PV and electrolyser co-location CapEx."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "south_italy_solar_ppa_electricity_price_eur_per_kwh_ref": 0.050,
+            "electricity_opex_eur_per_kg_lh2_solar_ppa": 0.55,
+            "grid_industrial_electricity_price_eur_per_kwh_ref": 0.13,
+            "electricity_opex_eur_per_kg_lh2_grid": 1.43,
+            "source": "GME PUN market data; ARERA industrial tariff — verify current year",
+            "note": "Italy's grid industrial electricity prices are among the highest in Europe. Co-located solar PPA in Puglia provides a competitive advantage, but curtailment haircut (~8-12% in south Italy) reduces effective generation."
+          },
+          "south_italy_curtailment_haircut_pct": 10,
+          "boil_off_loss_pct_per_day": 0.5,
+          "credito_dimposta_indicative_npv_benefit_pct_of_capex": 5.4,
+          "pnrr_grant_capex_reduction_indicative_pct": 35,
+          "note": "Illustrative inputs only. PNRR grant reduces effective CapEx — model on net-of-grant basis if grant awarded. IRAP must be included in effective tax rate (IRES 24% + IRAP 3.9% = 27.9%)."
+        }
+      },
+
+      "market_context": {
+        "it_policy_position": "Italy's PNRR hydrogen investment (EUR 3.19bn) is one of Europe's largest. SNI targets 5 GW electrolysis by 2030 with southern Italy as the production hub. ENI and Snam (Italy's dominant energy infrastructure companies) are leading LH2 infrastructure development. Ravenna CCS+H2 hub (ENI) and Puglia Hydrogen Valley are the flagship national projects.",
+        "key_it_lh2_projects_indicative": [
+          {
+            "project": "ENI / Snam — Ravenna CCS + H2 Hub",
+            "status": "Development stage — blue hydrogen via CCS with LH2 distribution component under study",
+            "operator": "ENI SpA / Snam SpA",
+            "note": "Ravenna Adriatic Hub concept integrates offshore CCS with blue hydrogen production. LH2 for industrial and maritime export."
+          },
+          {
+            "project": "Puglia Hydrogen Valley",
+            "status": "Concept / early development — solar-powered green hydrogen electrolysis in Puglia for local industrial and maritime use",
+            "note": "Multiple project proponents (Edison, GreenIT, others) developing solar electrolysis sites in Puglia. LH2 liquefaction for Taranto maritime export under feasibility study."
+          },
+          {
+            "project": "Taranto Green H2 — ArcelorMittal Italia",
+            "status": "Development — green hydrogen for direct reduction steel at Taranto Ilva/ArcelorMittal facility",
+            "note": "Primarily compressed hydrogen for steel production. LH2 not primary delivery mode but demonstrates southern Italy industrial H2 demand."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Industrial decarbonisation — steel (Taranto), chemicals (Brindisi, Augusta), and fertilisers (Brindisi/Ravenna) are primary industrial hydrogen consumers",
+          "Maritime bunkering — Augusta (Sicily), Taranto (Ionian), Genova (Ligurian), and Trieste (Adriatic) for zero-emission shipping",
+          "Aviation — LH2 for Fiumicino (Rome) and Malpensa (Milan) airports for future hydrogen aircraft and SAF production",
+          "Export via Adriatic/Mediterranean — Italy as potential H2 export hub to central Europe via pipeline (ADRION hydrogen backbone concept)"
+        ],
+        "supply_chain_note": "Italy's LH2 supply chain is nascent. Air Liquide, Linde, and SOL Group are the primary industrial gas companies with cryogenic expertise. ENI and Snam are leading infrastructure development. Equipment for large LH2 plant (liquefaction compressors) is predominantly German, French, or Japanese — import dependency is a CapEx risk in current supply chain environment."
+      },
+
+      "notes": "Italy's LH2 opportunity is driven by exceptional southern solar resource and PNRR grant support, but constrained by four simultaneous challenges: (1) south Italy grid saturation requires co-located solar design (avoiding general grid connection); (2) multi-authority SEVESO permitting (CTR, Soprintendenza, Vigili del Fuoco, VIA) creates 30+ month timelines; (3) Italian industrial electricity prices are among Europe's highest if grid supply is used; and (4) IRAP adds ~3.9% to the effective tax burden. The co-located solar + electrolyser + liquefaction integrated model is the primary viable investment structure for southern Italy LH2. All PNRR Contratti di Sviluppo grant parameters, Credito d'imposta rates (current Legge di Bilancio), and TERNA grid connection availability must be verified before use."
     }
   }
 }

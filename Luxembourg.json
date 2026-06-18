@@ -384,6 +384,198 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Luxembourg's primary LH2 investment case is as a TRANSIT and HUB jurisdiction — not a production location. Its central position in the EU (borders France, Belgium, Germany), proximity to ArcelorMittal's green steel transition at Differdange (XCarb DRI technology using H2 from Paul Wurth/SMS Group), and role as a major European financial and holding company jurisdiction make it an important H2 transit node. The very small domestic market (~680,000 population, 2,586 km²) limits standalone LH2 demand. Safety regime: SEVESO III via Règlement grand-ducal du 28 juin 2016. Effective CIT: approximately 23.68% (17% national + ~6.75% municipality business tax for Luxembourg City).",
+
+      "permitting_p50_months": 20,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or FiT in Luxembourg. Standalone LH2 facilities operate on a tolling or merchant basis. Luxinnovation (luxinnovation.lu) administers R&D grants and innovation programmes. SNHBM / Klima-Agence may co-fund qualifying low-carbon energy projects. EU Hydrogen Bank eligible as EU member state. Note: Luxembourg is also a major H2 project holding company jurisdiction (financial centre). Source: ITM; AEV; Luxinnovation; iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "itm_lu; aev_lu; luxinnovation; iea_hydrogen",
+      "staleness_warning": "Luxembourg support programme parameters are time-sensitive. Verify current calls at luxinnovation.lu. Nord Pool LU area pricing and Creos grid connection capacity change — verify at creos.net and cer.public.lu.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Règlement grand-ducal du 28 juin 2016 concernant la maîtrise des dangers liés aux accidents majeurs impliquant des substances dangereuses — SEVESO III Luxembourg",
+            "relevance": "Luxembourgish SEVESO III transposition. Lower tier (≥10 t flammable gas including LH2): notify ITM (Inspection du Travail et des Mines); prepare PPAM (politique de prévention des accidents majeurs) and internal emergency plan. Upper tier (≥50 t flammable gas): detailed rapport de sécurité (safety report), plan d'urgence externe (external emergency plan by Administration des Services de Secours), public information duty, periodic inspection."
+          },
+          {
+            "instrument": "Loi du 10 juin 1999 relative aux établissements classés + Règlement grand-ducal du 10 juin 1999 — Classified Establishments Law",
+            "relevance": "Environmental and operational permit (autorisation d'exploitation) from Ministry of the Environment required for LH2 industrial installation. AEV (Administration de l'Environnement) administers."
+          },
+          {
+            "instrument": "Loi du 19 juillet 2004 concernant l'aménagement communal et le développement urbain — Communes Law",
+            "relevance": "Local authority consent and zone-compatible land use for LH2 industrial facility."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Loi du 17 avril 2018 concernant l'aménagement du territoire — Spatial Planning Law",
+            "relevance": "National and regional spatial planning framework; industrial zone compatibility required for LH2 facility."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Mouvement Climatique Lëtzebuerg / Luxembourg Climate Strategy 2050 and NECP 2021–2030",
+            "relevance": "Luxembourg commits to carbon neutrality by 2050; hydrogen referenced as industrial decarbonisation vector particularly for ArcelorMittal XCarb steel decarbonisation at Differdange."
+          },
+          {
+            "instrument": "ArcelorMittal XCarb — Direct Reduced Iron (DRI) using H2 at Differdange",
+            "relevance": "ArcelorMittal's Differdange plant uses Paul Wurth (SMS Group) DRI technology — one of the EU's first H2-based green steel sites. This creates genuine industrial H2 demand in Luxembourg and is the primary anchor for any LH2 storage investment thesis. Verify current operational status and H2 supply arrangements at arcelormittal.com."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — tender rounds (EC Regulation)",
+            "relevance": "Luxembourg is eligible as EU member state for EU Hydrogen Bank auction rounds."
+          }
+        ]
+      },
+
+      "seveso_iii_regime": {
+        "competent_authority": "ITM (Inspection du Travail et des Mines — itm.lu) jointly with AEV (Administration de l'Environnement — environnement.public.lu)",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lh2_classification": "LH2 classified as flammable gas (Category 2, Annex I Part 1 of SEVESO III as transposed by Règlement grand-ducal du 28 juin 2016). Thresholds apply to total site quantity.",
+        "lower_tier_obligations": "Notify ITM; prepare PPAM (politique de prévention des accidents majeurs); plan d'urgence interne (internal emergency plan).",
+        "upper_tier_obligations": "Prepare rapport de sécurité (safety report) acceptable to ITM/AEV; plan d'urgence externe (external emergency plan) by Administration des Services de Secours; droit à l'information (public information); periodic joint inspection.",
+        "legal_basis": "Règlement grand-ducal du 28 juin 2016, Annexe 1 — dangerous substance thresholds.",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 7,
+        "itm_assessment_months": 5,
+        "luxembourg_advantage": "Luxembourg's compact governance and highly professional public administration (ITM, AEV) makes pre-application engagement straightforward. English, French, German, and Luxembourgish are all usable in permit processes. Small country means senior officials are accessible.",
+        "notes": "ITM is a professional and accessible regulator. Novel LH2 technology may require expert engagement. Upper-tier sites may not operate until rapport de sécurité is accepted. Luxembourg's scale means fewer novel LH2 precedents — build in timeline contingency."
+      },
+
+      "permitting": {
+        "planning_authority": "Local commune for zone compatibility; Ministry of Environment / AEV for classified establishment permit; ITM for SEVESO III",
+        "timeline_p50_months": 20,
+        "timeline_range_months": { "min": 12, "max": 32 },
+        "parallel_consent_tracks": [
+          "Classified establishment permit (AEV) — 6–12 months",
+          "SEVESO III notification / rapport de sécurité (ITM) — 3–12 months post-submission",
+          "Construction permit (Commune) — 4–8 months",
+          "Administration des Services de Secours fire safety approval — concurrent"
+        ],
+        "appeal_risk": "low",
+        "notes": "P50 of 20 months is achievable given Luxembourg's compact, professional regulatory environment. Lower-tier SEVESO III assumption. Upper-tier adds 5–8 months. Esch-sur-Alzette / Differdange / Rodange industrial areas (south Luxembourg — former ArcelorMittal steel zone) offer pre-zoned industrial land suited to LH2 infrastructure adjacent to XCarb steel site."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Connection from Creos (TSO and DSO — creos.net) for liquefaction plant.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Creos Luxembourg S.A. (both TSO and primary DSO in Luxembourg)",
+        "interconnection_context": "Luxembourg has strong synchronous connections to France (RTE), Belgium (Elia), and Germany (Amprion/TenneT). This means electricity prices track CE market prices and renewable import is available. No significant grid connection queue — small country with developed infrastructure.",
+        "electricity_price_note": "Luxembourg industrial electricity prices are competitive within CE market. A French or German renewable PPA (import-backed) could provide low-cost green credentials. Luxembourg itself has limited domestic renewable generation (small country, modest wind resource).",
+        "green_credentials_note": "Luxembourg grid does NOT automatically qualify as green H2 feedstock under EU Delegated Regulation 2023/1184. A dedicated renewable PPA (imported or domestic) with additionality compliance is required. A French nuclear-backed EAC + German wind PPA combination is practical.",
+        "notes": "Creos is a professional grid operator. Connection timelines are among the shortest in the EU (12–18 months estimated for industrial capacity). Luxembourg's central CE position means electricity supply security is high."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Luxembourg. Revenue is via tolling contracts with no state commodity floor. Luxembourg's primary LH2 value proposition is hub/transit and holding company structure for pan-European LH2 projects.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing to ArcelorMittal XCarb and road/transit offtakers; no commodity price floor from the state.",
+        "luxinnovation_grants": {
+          "applicable": "Luxinnovation (luxinnovation.lu) administers EU and national R&D, innovation, and SME grants that may support LH2 technology development. Verify current calls.",
+          "staleness_warning": "Programme parameters change. Verify current availability at luxinnovation.lu."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": "Luxembourg is eligible as EU member state. LH2 production/storage may qualify in integrated project scope.",
+          "source": "innovation-fund.ec.europa.eu — verify current round"
+        },
+        "holding_structure_note": "Luxembourg is one of Europe's premier holding company and SPV jurisdictions. A Luxembourg SARL or SA holding company structure for a multi-jurisdiction European LH2 project benefits from: extensive DTA network (90+ treaties), EU Parent-Subsidiary Directive 0% WHT, IP Box regime, and access to Luxembourg financial market (Eurobond listing, EIB proximity).",
+        "merchant_route": {
+          "available": true,
+          "description": "LH2 storage at Differdange/Esch-Alzette industrial area serving ArcelorMittal XCarb DRI green steel as primary offtaker; transit to Belgian (Zeebrugge corridor) or German (Aachen direction) hydrogen distribution network as secondary route.",
+          "arcelor_mittal_note": "ArcelorMittal XCarb at Differdange is the single most credible LH2 anchor offtaker in Luxembourg. H2 supply agreements with ArcelorMittal (investment grade credit) would substantially de-risk LH2 storage investment."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: ~23.68% effective CIT for Luxembourg City entities. Accelerated depreciation under standard Luxembourg tax rules analysed as NPV of timing benefit.",
+        "cit_rate_national_pct": 17.0,
+        "municipal_business_tax_rate_typical_pct": 6.75,
+        "effective_cit_rate_luxembourg_city_pct": 23.68,
+        "effective_cit_note": "Total effective rate: national CIT 17% + Solidarity Surcharge ~1.19% (7% of 17%) + Municipal Business Tax (ICC) ~6.75% for Luxembourg City = ~23.68% effective. ICC rate varies by commune — Differdange/Esch area rates may differ. Verify applicable commune rate.",
+        "legal_basis": "Loi de l'impôt sur le revenu des collectivités (LIRC) — Corporate Income Tax Law; applicable commune ICC schedule",
+        "capex_incentives": {
+          "investment_tax_credit": {
+            "description": "Bonification d'impôt pour investissement (Investment Tax Credit): 8% credit on first EUR 150,000 of qualifying CapEx + 2% on excess.",
+            "legal_basis": "Loi de l'impôt sur le revenu (LIR) Article 152bis, as amended",
+            "_rule_3b_analysis": "For EUR 70m LH2 project: credit on first EUR 0.15m = EUR 12k; credit on remainder EUR 69.85m × 2% = EUR 1.397m. Total credit ≈ EUR 1.41m. Modest benefit — Luxembourg's primary advantage is holding structure, not CapEx incentives.",
+            "note": "Luxembourg's CapEx incentives are modest vs. Slovakia or Slovenia. Financial structure (HoldCo, IP Box, DTA) is the main Luxembourg tax advantage."
+          },
+          "depreciation_industrial_plant": {
+            "rate_pct_pa": 10.0,
+            "method": "declining balance up to 3× straight-line rate permissible (LIR)",
+            "_rule_3b_analysis": "At 23.68% CIT, 10-year straight-line on EUR 50m liquefaction plant, 7% WACC: NPV of tax shield ≈ 16.7% of qualifying CapEx ≈ EUR 8.35m. At declining balance (30% p.a.): NPV ≈ 20.1% ≈ EUR 10.05m."
+          }
+        },
+        "dividend_withholding_tax_pct": 0.0,
+        "eu_parent_subsidiary": "0% WHT for qualifying EU parent companies (EU Parent-Subsidiary Directive)",
+        "ip_box_regime": "Luxembourg IP Box: 80% exemption on qualifying IP income (effective ~5.2% on IP revenues). Relevant if LH2 technology IP held in Luxembourg HoldCo."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "ILNAS EN 1251 (Luxembourg Institute for Standardisation adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "ATEX zone classification per Luxembourg implementation of Directive 2014/34/EU; documented in rapport de sécurité",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (AEV permit required)", "On-site fuel use for ArcelorMittal process heat"],
+          "regulatory_basis": "BOG management addressed in rapport de sécurité and AEV classified establishment permit.",
+          "arcelormittal_synergy": "Co-located LH2 storage with ArcelorMittal XCarb DRI facility: BOG used directly as process fuel in steelmaking — high-value synergy reducing waste and improving project economics."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: indicative inputs for IRR, NPV, CapEx payback, and DSCR modelling.",
+        "_rule_3c_note": "Luxembourg is EUR-denominated — no FX conversion required.",
+        "illustrative_transit_hub": {
+          "scale": "2 tonne/day liquefaction capacity or receive+storage; 50 tonne vacuum-insulated storage; primary offtaker: ArcelorMittal XCarb Differdange",
+          "storage_tank_capex_eur": {
+            "per_tonne_midpoint": 1000000,
+            "source": "IEA, The Future of Hydrogen, 2019"
+          },
+          "liquefaction_capex_if_greenfield_eur": {
+            "per_tonne_per_day_midpoint": 3500000,
+            "note": "Luxembourg transit hub may receive LH2 from Germany/Belgium rather than liquefy on-site; receipt terminal CapEx substantially lower than full liquefaction plant."
+          },
+          "effective_cit_pct": 23.68,
+          "investment_tax_credit_eur": 1410000,
+          "depreciation_npv_benefit_eur_indicative": 8350000,
+          "note": "Illustrative only. ArcelorMittal XCarb as anchor offtaker is the key de-risking element. Luxembourg HoldCo structure should be modelled separately for pan-European LH2 project equity structuring."
+        }
+      },
+
+      "market_context": {
+        "lu_hydrogen_context": "Luxembourg has Europe's highest GDP per capita and is a major EU institutional hub (EIB, ECJ, ECB). ArcelorMittal XCarb Differdange DRI is the primary industrial H2 demand driver. Paul Wurth/SMS Group (H2-DRI technology developer, Luxembourg-based) is a key strategic player. Luxembourg's position at the intersection of German, French, and Belgian H2 infrastructure networks makes it a natural node in the emerging European H2 grid.",
+        "key_lu_lh2_projects_indicative": [
+          {
+            "project": "ArcelorMittal XCarb — H2-DRI at Differdange",
+            "status": "Active industrial transition — Paul Wurth (SMS Group) DRI technology using H2 for green steel production. Verify current operational status and H2 procurement route at arcelormittal.com.",
+            "note": "Primary anchor demand for any LH2 storage facility in Luxembourg. Investment-grade offtaker."
+          },
+          {
+            "project": "Paul Wurth / SMS Group H2-DRI Technology Export",
+            "status": "Active — Paul Wurth (Luxembourg HQ, SMS Group subsidiary) licenses H2-DRI technology globally.",
+            "note": "Luxembourg as IP/HQ jurisdiction for H2 industrial technology export."
+          }
+        ],
+        "primary_demand_drivers": [
+          "ArcelorMittal XCarb Differdange DRI — green steel H2 demand (industrial anchor, investment-grade credit)",
+          "Transit — H2 import from Germany/Belgium for Luxembourg and cross-border transit",
+          "EIB and EU institution green finance — Luxembourg as financial hub for H2 project bond issuance",
+          "Limited domestic transport demand — HGV and bus fleet in Luxembourg City"
+        ],
+        "holdco_note": "Luxembourg's primary value for LH2 investors may be as a HoldCo jurisdiction for multi-country European LH2 projects — EIB (Luxembourg HQ), Eurobond market, and 0% WHT for EU parents all support Luxembourg-domiciled project finance structures."
+      },
+
+      "notes": "Luxembourg's LH2 physical investment case is niche but genuine: ArcelorMittal XCarb DRI at Differdange is one of Europe's highest-credibility H2 industrial demand anchors. The compact, professional regulatory environment (ITM/AEV) and short permitting timeline (P50 20 months) are real advantages. Effective CIT (~23.68%) is above EU average — the CapEx incentive (ITaC) is modest. Luxembourg's primary value for LH2 investors is more likely as a HoldCo and financial structure jurisdiction than as a physical project site. All parameters must be verified with ITM (itm.lu), AEV (environnement.public.lu), and Luxinnovation (luxinnovation.lu) before project commitment."
     }
   }
 }

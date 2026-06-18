@@ -614,6 +614,235 @@
       "coal_phase_out_commitment": "Final coal plant (Saint-Avold) closed 2022. No coal generation remains.",
       "source": null,
       "notes": "France has no operating coal power stations as of 2022. No support mechanism exists. New coal build is effectively prohibited under French climate legislation. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at −253°C and associated liquefaction plant. France has committed €9bn to hydrogen by 2030 under Plan Hydrogène (Stratégie nationale pour le développement de l'hydrogène décarboné) and participates in IPCEI Hy2Tech. The primary regulatory gate is the ICPE (Installations Classées pour la Protection de l'Environnement) regime, administered by DREAL (Directions Régionales de l'Environnement, de l'Aménagement et du Logement) and the Préfet, which implements SEVESO III in France. ARENH access (regulated nuclear electricity at capped prices) is a potential electricity cost mitigant for large industrial consumers, including LH2 liquefaction.",
+
+      "permitting_p50_months": 28,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or Complément de rémunération. Standalone facilities operate on a tolling basis. CapEx support available via France 2030 investment plan (administered by ADEME and BPIFrance) and IPCEI Hy2Tech grants for qualifying projects. Source: ADEME/BPIFrance France 2030; BMWK IPCEI equivalent for FR participant projects.",
+      "revenue_floor_description": null,
+      "source": "ademe_hydrogen; iea_hydrogen; dreal_icpe",
+      "staleness_warning": "France 2030 hydrogen programme grant rates and ADEME appels à projets parameters are time-sensitive. ARENH volume allocation and pricing are subject to annual ministerial decision. Verify all support parameters with ADEME before use.",
+      "eu_state_aid_applicable": true,
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Code de l'environnement — Articles L. 511-1 et seq. (Installations Classées pour la Protection de l'Environnement — ICPE)",
+            "relevance": "Primary regulatory framework for LH2 facilities. LH2 storage and liquefaction plant are classified as ICPE installations. Classification depends on threshold quantities: below seuil bas = Enregistrement or Déclaration; above seuil bas = Autorisation (SEVESO lower tier); above seuil haut = Autorisation SEVESO seuil haut (upper tier). Competent authority: Préfet de département (via DREAL instruction)."
+          },
+          {
+            "instrument": "Directive SEVESO III (2012/18/EU) — implemented via décret ICPE and Arrêté du 26 mai 2014 relatif à la prévention des accidents majeurs",
+            "relevance": "SEVESO III implementation in France through the ICPE regime. Upper-tier ICPE (SEVESO seuil haut) classification triggers: Plan de Prévention des Risques Technologiques (PPRT) preparation by DREAL; études de dangers (hazard assessment report — equivalent to UK Safety Report / German Sicherheitsbericht); Plan d'Opération Interne (POI — internal emergency plan); Plan Particulier d'Intervention (PPI — external emergency plan prepared by Préfet); inspection by DREAL inspectors (service des installations classées)."
+          },
+          {
+            "instrument": "Arrêté du 10 mai 2000 modifié relatif à la prévention des accidents majeurs impliquant des substances ou préparations dangereuses",
+            "relevance": "Technical prescriptions for SEVESO installations — specific requirements for hazard studies, safety management systems, and emergency procedures for sites handling flammable substances including hydrogen."
+          },
+          {
+            "instrument": "Code de l'environnement — Article L. 181-1 et seq. (Autorisation Environnementale — AE)",
+            "relevance": "Single consolidated environmental authorisation required for upper-tier ICPE LH2 facilities. Integrates ICPE authorisation, PPRT requirements, and species protection derogation (if applicable) into a single AE procedure administered by the Préfet."
+          },
+          {
+            "instrument": "Code du travail — Articles L. 4531-1 et seq. (ATEX and workplace safety in hazardous atmospheres)",
+            "relevance": "Explosive atmosphere (ATEX) zone classification and protection requirements for LH2 handling and dispensing areas. Employer obligations for Zone 1/Zone 2 classification around hydrogen release sources."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Code de l'urbanisme — Articles L. 421-1 et seq. (Permis de construire)",
+            "relevance": "Building permit required for LH2 cryogenic storage structures and liquefaction plant buildings. Submitted to mairie / Préfet concurrently with ICPE Autorisation Environnementale."
+          },
+          {
+            "instrument": "Code de l'environnement — Article L. 122-1 et seq. (Étude d'Impact — EI)",
+            "relevance": "Environmental impact study (étude d'impact) required for ICPE installations above threshold. Incorporated into the AE dossier."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Stratégie nationale pour le développement de l'hydrogène décarboné en France (Plan Hydrogène) — Gouvernement, September 2020",
+            "relevance": "National hydrogen strategy committing €9bn by 2030 (€7.2bn public funding). Target 6.5 GW electrolysis by 2030. LH2 identified as a priority supply vector for transport and industrial applications."
+          },
+          {
+            "instrument": "France 2030 Investment Plan — financement hydrogène vert via ADEME and BPIFrance",
+            "relevance": "€900m allocated specifically for hydrogen production, storage, and distribution infrastructure under France 2030. Administered via ADEME appels à projets (competitive calls for projects) and BPIFrance direct investment. LH2 storage and liquefaction infrastructure qualifies as eligible expenditure."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech — Important Project of Common European Interest (EC Decision 2022)",
+            "relevance": "France is an IPCEI Hy2Tech participant with projects including LH2 technology development. Air Liquide's Normand'Hy project (LH2 production for maritime and industrial users) is an emblematic French IPCEI participant."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "instrument": "ICPE SEVESO seuil haut — French implementation of SEVESO III Directive 2012/18/EU via Code de l'environnement and ICPE arrêtés",
+        "competent_authority": "Préfet de département — decides on Autorisation Environnementale based on DREAL instruction. DREAL (Direction Régionale de l'Environnement, de l'Aménagement et du Logement) is the technical inspection authority.",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "lower_tier_threshold_tonnes_liquefied_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_liquefied_flammable_gas": 200,
+        "seveso_iii_note": "SEVESO III thresholds for flammable gases (including hydrogen): lower tier 10 t / upper tier 50 t. For liquefied flammable gases: lower tier 50 t / upper tier 200 t. These differ from UK COMAH (5 t / 50 t for flammable gases). A LH2 storage facility of 15 t stored mass falls at German/French SEVESO lower tier but UK COMAH upper tier.",
+        "lower_tier_obligations": "ICPE Autorisation (or Enregistrement for certain categories); Plan de Prévention des Risques Technologiques (PPRT) study; Plan d'Opération Interne (POI); DREAL declaration",
+        "upper_tier_obligations": "Full Autorisation Environnementale (AE) under Code de l'environnement Art. L. 181-1; études de dangers (detailed hazard study); Plan Particulier d'Intervention (PPI) prepared by Préfet; public enquête publique required; DREAL inspection",
+        "ae_process_p50_months": 24,
+        "ae_process_max_months": 36,
+        "notes": "France's ICPE AE process for SEVESO upper-tier LH2 facilities is one of the more demanding in Europe. The enquête publique (public inquiry) adds 2–4 months. DREAL review can add 6–12 months beyond the AE notional timeline. Pre-application dialogue with DREAL is strongly recommended. The PPRT process (which maps acceptable land uses around SEVESO sites) can affect site planning and potentially constrain expansion."
+      },
+
+      "permitting": {
+        "primary_authority": "Préfet de département for AE decision; DREAL for technical instruction; Mairie for Permis de construire",
+        "timeline_p50_months": 28,
+        "timeline_range_months": { "min": 18, "max": 48 },
+        "parallel_consent_tracks": [
+          "Autorisation Environnementale (AE) — ICPE upper-tier: 24–36 months including enquête publique",
+          "Permis de construire — concurrent: 3–6 months (submitted to mairie simultaneously with AE)",
+          "Raccordement électrique (grid connection) — submit to RTE/Enedis concurrently with AE",
+          "Plan Particulier d'Intervention (PPI) — prepared by Préfet post-AE grant; prerequisite for operations"
+        ],
+        "appeal_risk": "medium",
+        "appeal_mechanism": "Tribunal administratif (TA) → Cour administrative d'appel (CAA) → Conseil d'État (CE). Industrial ICPE authorisations attract less NGO litigation than onshore wind but associations protecting local amenity and landscape have standing.",
+        "notes": "P50 assumes a greenfield SEVESO upper-tier ICPE facility. The AE process integrates planning, environmental, and safety consents — a structural efficiency. Key risk is DREAL capacity and the enquête publique timeline. Loi APER 2023 RIIPM designation (raison impérative d'intérêt public majeur) for hydrogen infrastructure may expedite species derogation decisions — specialist advice on applicability."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). France's nuclear baseload provides relatively stable industrial electricity prices, and ARENH (regulated nuclear baseload access) may provide large industrial consumers with access to below-market electricity for the liquefaction process.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "illustrative_electrical_load_kw_per_tonne_day": { "range_low": 420, "range_high": 500 },
+        "grid_operator": "RTE (Réseau de Transport d'Électricité) for transmission; Enedis or ELD for distribution",
+        "turpe_note": "Industrial electricity tariff includes TURPE (tarif d'utilisation des réseaux publics d'électricité), which varies by voltage level and annual consumption. Large LH2 liquefaction plants connecting at HTB (>50kV) transmission level benefit from lower per-kWh TURPE rates than smaller consumers.",
+        "arenh_electricity_mitigant": {
+          "description": "ARENH (Accès Régulé à l'Électricité Nucléaire Historique) provides qualifying large industrial consumers with access to regulated nuclear electricity at a capped price (EUR 42/MWh historically; increased to EUR 46.2/MWh in 2022). ARENH provides a fraction of a large consumer's electricity need (volume-limited quota system).",
+          "arenh_price_eur_mwh": 46.2,
+          "staleness_warning": "ARENH mechanism is transitional and scheduled to end in 2026 when EDF's new contract with the French state (régulation économique post-2026) takes effect. Verify current ARENH status and successor mechanism before modelling.",
+          "legal_basis": "Loi NOME (Nouvelle organisation du marché de l'électricité) — Loi no. 2010-1488; Code de l'énergie Arts. L. 336-1 et seq."
+        },
+        "industrial_electricity_price_eur_kwh_ref": "EUR 0.09–0.13/kWh for large industrial consumers (excluding ARENH component) in France in 2024 reference period. Verify with CRE published data.",
+        "renewable_ppa_strategy": "Co-located or dedicated renewable PPA is recommended to minimise electricity cost and support green credentials for ESG-sensitive offtakers. French solar PPA (particularly Occitanie/PACA) prices have been highly competitive (EUR 0.04–0.07/kWh in recent CRE auctions).",
+        "notes": "France's industrial electricity prices are generally more competitive than Germany due to lower TURPE charges and nuclear baseload influence on wholesale prices. At EUR 0.10/kWh and 11 kWh/kg: electricity cost ≈ EUR 1.10/kg LH2. With renewable PPA at EUR 0.06/kWh: reduces to EUR 0.66/kg LH2."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated Complément de rémunération (CR) or Tarif d'achat. Revenue is primarily via tolling contracts with no state commodity price floor.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for storage and dispensing services. No state commodity price floor.",
+        "france_2030_capex_grant": {
+          "applicable": true,
+          "description": "France 2030 investment plan allocates €900m for hydrogen projects. ADEME administers competitive appels à projets for hydrogen production, storage, and distribution infrastructure. LH2 liquefaction plant and storage may qualify as eligible infrastructure.",
+          "grant_rate_indicative": "Up to 30–50% of eligible CapEx for qualifying projects (indicative — subject to competitive evaluation by ADEME jury)",
+          "staleness_warning": "ADEME appels à projets parameters change with each call. Do not rely on indicative grant rates without verifying the current prospectus at ademe.fr.",
+          "source": "ADEME, France 2030 Hydrogène — ademe.fr; BPIFrance direct investment programme"
+        },
+        "ipcei_support": {
+          "applicable": "Yes — for projects qualifying under IPCEI Hy2Tech or Hy2Use",
+          "france_ipcei_projects": "Air Liquide Normand'Hy (LH2 production for maritime sector) is a flagship French IPCEI Hy2Tech participant. Lhyfe (offshore electrolysis) is in IPCEI scope.",
+          "grant_nature": "IPCEI grants are CapEx contributions with EC state aid coverage. Revenue from the facility is determined by tolling contracts.",
+          "legal_basis": "IPCEI EC Decision (Hy2Tech) — state aid clearance covers French participant grant awards"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage on a merchant tolling basis for transport hubs, industrial offtakers, and aviation fuel supply.",
+          "credit_risk_note": "Tolling revenues are contract-dependent. No state backstop."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Amortissement dégressif (CGI Art. 39A, coefficient 2.25 for assets with useful life ≥7 years) applies to LH2 plant and equipment and provides a CapEx TIMING benefit — not a permanent tax rate reduction. Verify whether any active suramortissement provision under current Loi de finances applies to hydrogen infrastructure.",
+        "amortissement_degressif_applicable": true,
+        "qualifying_assets": "Cryogenic storage tanks, liquefaction equipment, boil-off gas management systems, heat exchangers, dispensing infrastructure — all qualify as industrial plant and equipment under CGI Art. 39A",
+        "coefficient": 2.25,
+        "legal_basis": "Code général des impôts (CGI) Article 39 A",
+        "npv_timing_benefit": "At 25% IS and 10% WACC: NPV of tax shield under dégressif (coefficient 2.25, 20-year life) ≈ 19.4% of qualifying CapEx vs. 14.7% under linear amortissement. Timing benefit ≈ 4.7ppts per €1 of qualifying CapEx.",
+        "suramortissement_note": "Verify whether any active suramortissement under current Loi de finances specifically applies to hydrogen infrastructure investment. No universally applicable suramortissement for this asset class was confirmed at last update. Specialist French tax advice required.",
+        "is_rate_pct": 25,
+        "legal_basis_is": "Code général des impôts (CGI) Art. 219"
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "NF EN 1251 (French adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels); also Directive Équipements sous Pression (DESP) 2014/68/EU — implemented via Code de l'environnement and ICPE arrêtés",
+        "atex_zone_classification": "Zones ATEX — Zone 1 or Zone 2 around hydrogen release sources; classification under Code du travail and Décret no. 2002-1553 (ATEX implementing decree). Zone classification must be documented in the ICPE étude de dangers.",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (réliquéfaction) — capital-intensive but zero loss", "Catalytic combustion or controlled flare — subject to ICPE arrêté conditions on atmospheric emissions", "On-site use as process or vehicle fuel"],
+          "regulatory_basis": "BOG must be addressed as a major accident scenario in the ICPE étude de dangers (safety hazard study) and Plan d'Opération Interne (POI); atmospheric releases subject to DREAL inspection conditions under ICPE arrêté",
+          "environmental_note": "Hydrogen atmospheric venting may trigger DREAL conditions under the ICPE arrêté. PPRT mapping may restrict vent plume orientation at constrained sites."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. Figures are indicative benchmarks only. Engineering study required before financial commitment.",
+        "_rule_3c_note": "France is EUR-denominated. No FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000,
+            "notes": "Vacuum-insulated Type C cryogenic tank; cost per tonne decreases with scale"
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Highly site-dependent. Excludes grid connection costs (raccordement électrique)."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_ref": 0.10,
+            "electricity_opex_eur_per_kg_lh2": 1.10,
+            "arenh_note": "ARENH access may partially reduce effective electricity cost below market reference rate for qualifying large consumers — verify current ARENH volumes and post-2026 successor mechanism.",
+            "source": "CRE, Observatoire des marchés de gros — verify current year data"
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "amortissement_degressif_npv_benefit_pct_of_capex": 4.7,
+          "note": "Illustrative inputs only. Actual costs depend on technology vendor, site, electricity procurement strategy (ARENH + PPA mix), and supply chain lead times."
+        }
+      },
+
+      "market_context": {
+        "fr_policy_position": "Plan Hydrogène 2020 commits €9bn by 2030 with a focus on electrolytic (green) hydrogen. LH2 is specifically identified for transport and export applications. Air Liquide, Lhyfe, and McPhy are the principal French hydrogen technology companies. France's nuclear baseload gives it a structural advantage in electrolytic hydrogen cost compared to markets reliant on variable renewables alone.",
+        "key_fr_lh2_projects_indicative": [
+          {
+            "project": "HyPort Toulouse — LH2 airport fuel supply",
+            "status": "Development stage — targeting LH2 supply for ground vehicles and ultimately aircraft at Toulouse-Blagnac Airport",
+            "operator": "Airbus consortium / Toulouse Airport Authority",
+            "note": "Flagship French LH2 aviation project. Linked to Airbus ZEROe hydrogen aircraft programme."
+          },
+          {
+            "project": "Air Liquide Normand'Hy — LH2 production for maritime",
+            "status": "IPCEI Hy2Tech participant; development stage targeting LH2 for Le Havre maritime bunkering",
+            "operator": "Air Liquide",
+            "note": "One of the most advanced French LH2 projects — targeting 200 kg/day scale initially, scaling to tonne/day range."
+          },
+          {
+            "project": "Lhyfe — offshore wind-powered electrolysis",
+            "status": "Operating onshore pilot (Brittany); offshore prototype development underway",
+            "operator": "Lhyfe",
+            "note": "Primarily compressed hydrogen; LH2 conversion relevant for export or long-distance supply chain development."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Aviation — France is a global aviation hub (Air France, Airbus); LH2 for aircraft propulsion and airport ground operations",
+          "Maritime — Le Havre and Marseille ports targeting LH2 bunkering for zero-emission shipping",
+          "Heavy transport — FCEV heavy goods vehicles supplied by Hyundai, Toyota (Hynamics / Air Liquide distribution network)",
+          "Industrial export — France as potential LH2 export hub to Germany and southern EU via European Hydrogen Backbone corridor"
+        ],
+        "supply_chain_note": "Air Liquide is the dominant LH2 producer in France, operating multiple LH2 liquefiers for industrial use. McPhy manufactures electrolysers domestically. France's nuclear baseload provides stable electricity for liquefaction — a structural cost advantage vs. Germany."
+      },
+
+      "notes": "France offers a structurally advantageous LH2 environment: competitive industrial electricity pricing (enhanced by ARENH nuclear access), a substantial France 2030 CapEx grant programme, IPCEI participation, and a growing aviation and maritime demand base. The primary challenge is the ICPE AE process (P50 24–28 months for SEVESO upper-tier) and the PPRT regime, which can constrain siting near population centres. Amortissement dégressif provides a meaningful but less aggressive timing benefit than German degressive AfA or UK Full Expensing. All France 2030, ADEME, and ARENH parameters must be verified before use as the French hydrogen support landscape is evolving rapidly post-2026."
     }
   }
 }

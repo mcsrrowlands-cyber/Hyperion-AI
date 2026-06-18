@@ -442,6 +442,231 @@
       "coal_phase_out_commitment": "Spain closed all remaining coal plants in June 2020.",
       "source": null,
       "notes": "Spain has no operating coal-fired power stations since 2020. No support mechanism. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at −253°C and associated liquefaction plant. Spain has one of Europe's most ambitious hydrogen programmes, anchored by the Hoja de Ruta del Hidrógeno (H2 Roadmap 2020) with a revised 11 GW electrolysis target by 2030, and exceptional solar irradiation providing competitive electrolysis electricity economics. The primary regulatory gate for SEVESO-threshold LH2 facilities is Real Decreto 840/2015 (implementing SEVESO III), administered by the competent Comunidad Autónoma. CRITICAL CAVEAT: Spain's 2012–2013 retroactive policy reversal (Royal Decree-Law 1/2012 and RDL 9/2013) is the defining European precedent for retroactive renewable energy policy reversal. Any LH2 investment relying on Spanish state subsidy conditionality must conduct detailed due diligence on the robustness of IDAE/PERTE grant conditions against policy reversal risk.",
+
+      "permitting_p50_months": 30,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or REER mechanism. Standalone facilities operate on a tolling basis. IDAE (Instituto para la Diversificación y Ahorro de la Energía) grants via PERTE Hidrógeno Verde and NextGenerationEU provide CapEx support. EU Hydrogen Bank and IPCEI Hy2Tech provide additional grant channels. Source: MITECO/IDAE; ec_state_aid.",
+      "revenue_floor_description": null,
+      "source": "idae_hydrogen; iea_hydrogen; miteco_h2",
+      "staleness_warning": "IDAE PERTE grant parameters, IPCEI project list, and EU Hydrogen Bank auction results are time-sensitive. Verify all support parameters with IDAE/MITECO before use. IVPEE status (7% electricity production tax) may affect integrated production economics — verify current application.",
+      "eu_state_aid_applicable": true,
+
+      "retroactive_risk_critical_warning": {
+        "severity": "CRITICAL",
+        "description": "Spain's 2012–2013 retroactive renewable energy policy reversal (Real Decreto-ley 1/2012 + RDL 9/2013 / Ley 24/2013 / Real Decreto 413/2014) is the most severe retroactive regulatory intervention in European renewable energy history, triggering 50+ ECT international arbitrations. LH2 investors relying on Spanish state subsidies must explicitly model the risk that IDAE/PERTE grant conditions could be retrospectively varied or clawed back in a future fiscal crisis. Political risk score of 62/100 reflects this precedent explicitly.",
+        "mitigation": "Invest only on the basis of REER contract receipts (signed, executed) or on a pure tolling/merchant basis. Do not commit capital on the basis of pipeline IDAE grant expectations alone. Obtain Spanish legal opinion on grant conditionality and enforceability.",
+        "source": "Hyperion AI sovereign_risk assessment; ICSID arbitration register (Spain)."
+      },
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Real Decreto 840/2015, de 21 de septiembre, por el que se aprueban medidas de control de los riesgos inherentes a los accidentes graves en los que intervengan sustancias peligrosas (SEVESO III transposition)",
+            "relevance": "Mandatory major accident hazard regime for LH2 facilities at or above SEVESO III threshold quantities. Lower tier (≥10 t LH2 flammable gas / ≥50 t liquefied flammable gas): Notificación al órgano competente de la Comunidad Autónoma; Política de Prevención de Accidentes Graves (PPAG — equivalent to MAPP). Upper tier (≥50 t / ≥200 t): Informe de Seguridad (safety report — equivalent to UK Safety Report); Plan de Emergencia Interior (PEI — internal emergency plan) and Plan de Emergencia Exterior (PEE — external emergency plan prepared by autoridad competente); inspección periódica."
+          },
+          {
+            "instrument": "Ley 21/2013, de 9 de diciembre, de evaluación ambiental (LEA) — Declaración de Impacto Ambiental (DIA)",
+            "relevance": "Environmental impact assessment required for large industrial SEVESO-threshold LH2 facilities. DIA is issued by MITECO (national) or Comunidad Autónoma (regional), depending on project scale and location."
+          },
+          {
+            "instrument": "Real Decreto 836/2003, de 27 de junio, por el que se aprueba una nueva Instrucción técnica complementaria MI-IP 04 del Reglamento de instalaciones petrolíferas (adapted for cryogenic facilities)",
+            "relevance": "Technical safety regulations for industrial liquid fuel and cryogenic storage; adapted application to LH2 pending specific Spanish hydrogen technical instructions."
+          },
+          {
+            "instrument": "Real Decreto 842/2002 de 2 de agosto (Reglamento Electrotécnico de Baja Tensión — REBT)",
+            "relevance": "Electrical safety requirements for hazardous area (ATEX zone) installations at LH2 facilities."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Ley 21/2013 de evaluación ambiental — Autorización Ambiental Integrada (AAI) where applicable",
+            "relevance": "Integrated Environmental Authorisation required for certain large industrial ICAP installations. For SEVESO upper-tier LH2 facilities, AAI may be the primary planning consent route depending on Comunidad Autónoma implementation."
+          },
+          {
+            "instrument": "Real Decreto 1955/2000, de 1 de diciembre (procedimiento de autorización de instalaciones de energía eléctrica)",
+            "relevance": "Authorisation procedure for electricity connection infrastructure associated with LH2 liquefaction plant."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Hoja de Ruta del Hidrógeno (H2 Roadmap) — Ministerio para la Transición Ecológica (MITECO), October 2020",
+            "relevance": "National hydrogen strategy targeting 4 GW electrolysis by 2030 (revised to 11 GW). Explicitly identifies LH2 as a priority for heavy transport, maritime, and export. Anchors PERTE and IDAE programme funding."
+          },
+          {
+            "instrument": "PERTE Hidrógeno Verde — Proyecto Estratégico para la Recuperación y Transformación Económica",
+            "relevance": "Strategic public-private investment programme for green hydrogen under NextGenerationEU. EUR 1.55bn allocated for electrolysis, storage, and distribution infrastructure. IDAE administers grant awards. LH2 storage and liquefaction infrastructure is an eligible expenditure category."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech — Important Project of Common European Interest (EC Decision 2022)",
+            "relevance": "Spain is an IPCEI Hy2Tech participant. Iberdrola (Puertollano electrolyser), Fertiberia, Acciona, and others are Spanish IPCEI participants. LH2 technology components may qualify under IPCEI scope."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "instrument": "Real Decreto 840/2015 — Spanish implementation of SEVESO III Directive 2012/18/EU",
+        "competent_authority": "Consejería competente de la Comunidad Autónoma (regional government ministry). ICAP (Inspección de Control de Actividades Peligrosas) is the inspection body. National coordination via MITECO.",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "lower_tier_threshold_tonnes_liquefied_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_liquefied_flammable_gas": 200,
+        "seveso_iii_note": "SEVESO III thresholds for flammable gases (including hydrogen): lower tier 10 t / upper tier 50 t. For liquefied flammable gases: lower tier 50 t / upper tier 200 t. These differ from UK COMAH (5 t / 50 t for flammable gases). Regional variation is important: Castilla-La Mancha, Andalucía, and Cataluña each have their own ICAP inspector capacity and LH2 precedent.",
+        "regional_variation_note": "SEVESO III permitting competence in Spain rests with Comunidades Autónomas. Andalucía (Consejería de Sostenibilidad, Medio Ambiente y Economía Azul) and Castilla-La Mancha are expected to be primary LH2 hub regions given solar resource. Practical experience with LH2 SEVESO submissions varies by region.",
+        "lower_tier_obligations": "Notificación to Comunidad Autónoma competent authority; Política de Prevención de Accidentes Graves (PPAG); Plan de Emergencia Interior (PEI)",
+        "upper_tier_obligations": "Informe de Seguridad (full safety report); Plan de Emergencia Exterior (PEE) prepared by Comunidad Autónoma; public information duty; periodic ICAP inspections",
+        "notes": "Spain's SEVESO III implementation via RD 840/2015 is functionally equivalent to the UK, German, and French regimes but with regional variation in competent authority capacity. LH2 is a novel submission type in most Comunidades Autónomas — anticipate longer review times and recommend pre-application engagement with the relevant Consejería."
+      },
+
+      "permitting": {
+        "primary_authority": "Consejería competente de la Comunidad Autónoma for SEVESO / DIA / AAI; MITECO for national-level DIA where project exceeds regional threshold",
+        "timeline_p50_months": 30,
+        "timeline_range_months": { "min": 18, "max": 54 },
+        "parallel_consent_tracks": [
+          "Autorización Ambiental Integrada (AAI) / Autorización de Instalación — Comunidad Autónoma: 18–36 months",
+          "DIA (Declaración de Impacto Ambiental) — concurrent with AAI: 12–24 months",
+          "RD 840/2015 SEVESO Informe de Seguridad — submitted to and reviewed by ICAP: 6–12 months",
+          "Plan de Emergencia Exterior (PEE) — prepared by Comunidad Autónoma post-authorisation",
+          "Autorización de la instalación eléctrica — concurrent grid connection authorisation"
+        ],
+        "appeal_risk": "medium",
+        "appeal_mechanism": "Contencioso-administrativo: Audiencia Nacional (AN) → Tribunal Supremo (TS) for national-level decisions; Tribunales Superiores de Justicia (TSJ) for Comunidad Autónoma decisions",
+        "regional_variation": "17 Comunidades Autónomas with different permitting cultures. Andalucía and Castilla-La Mancha have most active renewable energy permitting track records. Cataluña and Cantábrico coast for maritime LH2.",
+        "notes": "P50 assumes a greenfield SEVESO upper-tier facility in a Comunidad Autónoma with active renewable/industrial permitting track record (Andalucía, Castilla-La Mancha). Novel LH2 technology type may extend timelines in Comunidades with less industrial SEVESO experience."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Spain's competitive solar resource is the primary LH2 economic advantage — co-located solar PV can supply liquefaction electricity at some of the lowest levelised costs in Europe.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "illustrative_electrical_load_kw_per_tonne_day": { "range_low": 420, "range_high": 500 },
+        "grid_operator": "Red Eléctrica de España S.A.U. (REE — now Redeia) for transmission; regional distribution operators for HTA/BT connections",
+        "solar_ppa_advantage": "Spain's solar irradiation (1,600–2,000 kWh/kWp p.a. in Andalucía and Extremadura) means co-located solar PPA electricity can be sourced at EUR 0.03–0.06/kWh — among the lowest in Europe. At EUR 0.04/kWh and 11 kWh/kg: electricity cost ≈ EUR 0.44/kg LH2, making Spain potentially the lowest-cost electrolytic LH2 producer in Western Europe.",
+        "grid_node_saturation_risk": "Grid node saturation at key high-resource areas (Castilla-La Mancha, Extremadura) is a constraint for large LH2 facilities requiring large grid connections. RD 1183/2020 reform has improved framework but access backlogs persist.",
+        "industrial_electricity_price_eur_kwh_ref": "EUR 0.09–0.12/kWh for large industrial consumers on bilateral contracts (OMIE reference; PVPC regulated tariff not applicable to industrial scale). IVPEE (7% tax on electricity production) applies to electricity generated on-site — check interaction with co-located generation.",
+        "notes": "Spain's solar-driven electricity cost advantage is the primary LH2 competitiveness driver. For merchant or IDAE-funded facilities pairing solar PV with LH2 liquefaction, Spain may offer the best unit LH2 cost in Europe. Verify current OMIE market prices and grid access availability before modelling."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated REER two-way CfD. Revenue is primarily via tolling contracts with no state commodity price floor.",
+        "primary_mechanism_standalone": "Tolling arrangement — no state commodity price floor for LH2 storage services.",
+        "idae_perte_grant": {
+          "applicable": true,
+          "description": "PERTE Hidrógeno Verde (EUR 1.55bn allocated) administered by IDAE and MITECO provides CapEx grants for electrolysis, storage, and distribution. LH2 liquefaction and storage infrastructure qualifies as eligible expenditure under the distribution and storage categories.",
+          "grant_rate_indicative": "Typically 30–45% of eligible CapEx for qualifying projects (indicative — subject to competitive evaluation). Aid intensity limits apply under CEEAG.",
+          "retroactive_risk_note": "IDAE grant conditions should be reviewed for robustness against future policy reversal. Spain's retroactive RD 413/2014 precedent means grant conditionality must be reviewed by Spanish counsel with specific attention to revocability provisions.",
+          "staleness_warning": "PERTE call parameters and IDAE grant rounds evolve. Verify current programme status at idae.es and miteco.gob.es before use.",
+          "source": "IDAE, PERTE Hidrógeno Verde — idae.es; MITECO"
+        },
+        "eu_hydrogen_bank_eligibility": {
+          "applicable": true,
+          "description": "Spain is an EU member and its hydrogen projects are eligible for EU Hydrogen Bank auctions, which provide fixed premium support for green hydrogen production. LH2 storage integrated with qualifying green hydrogen production may benefit from EU Hydrogen Bank premium.",
+          "source": "European Commission, European Hydrogen Bank — energy.ec.europa.eu"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage on a tolling basis for transport hubs, Puertollano/Huelva industrial complex, maritime bunkering (Algeciras, Cartagena, Huelva ports).",
+          "credit_risk_note": "Tolling revenues are contract-dependent. No state backstop."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Spain does not have a Full Expensing or aggressive degressive depreciation regime for utility-scale industrial assets. Standard amortización lineal applies. IVPEE (7% tax on electricity production value) may affect integrated LH2 production economics — verify current status.",
+        "is_rate_pct": 25,
+        "legal_basis_is": "Ley 27/2014 del Impuesto sobre Sociedades",
+        "amortizacion_lh2_plant": {
+          "method": "Standard straight-line (amortización lineal)",
+          "applicable_rate_pct_range": "10–20% per annum (depending on asset classification under Tabla de Coeficientes de Amortización — cryogenic plant likely classified as industrial plant ≥10% p.a.)",
+          "legal_basis": "Reglamento del Impuesto sobre Sociedades, Tabla de Coeficientes de Amortización"
+        },
+        "npv_timing_benefit": "At 25% IS and 10% WACC: NPV of tax shield under standard straight-line amortización (10% p.a. over 10 years): ≈ 16.6% of qualifying CapEx. No significant front-loading — timing benefit is minimal vs UK/Germany/Netherlands peers. This is a relative competitive disadvantage for CapEx-intensive LH2 projects.",
+        "ivpee_note": "IVPEE (7% tax on total value of electricity production — Ley 15/2012) applies to electricity generated on-site (co-located solar or gas). For LH2 facilities with integrated solar PV generation, IVPEE reduces the economic benefit of co-located renewable generation. Verify current IVPEE application status (subject to temporary suspensions) with AEAT before modelling.",
+        "libertad_amortizacion_zones": "Libertad de amortización available in Zona Especial Canaria (Canary Islands Special Economic Zone — ZEC). LH2 facilities in Canarias may qualify — specialist advice required."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "UNE-EN 1251 (Spanish adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels); Real Decreto 709/2015 (Pressure Equipment Regulations) implementing Directive 2014/68/EU",
+        "atex_zone_classification": "Zonas ATEX — Zone 1 or Zone 2 around hydrogen release sources; Real Decreto 681/2003 (ATEX workplace implementing regulation). Classification documented in the Plan de Emergencia Interior (PEI) and Informe de Seguridad.",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction — capital-intensive but zero loss", "Catalytic combustion or controlled flare — subject to Autorización Ambiental Integrada (AAI) conditions", "On-site use as process or vehicle fuel"],
+          "regulatory_basis": "BOG must be addressed in the RD 840/2015 Informe de Seguridad; atmospheric releases subject to AAI conditions and ICAP inspection",
+          "environmental_note": "Hydrogen atmospheric venting subject to ICAP inspection. Comunidad Autónoma AAI may impose specific conditions on vent frequency."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. Spain's solar LH2 cost advantage is the primary differentiator. Figures are indicative benchmarks only.",
+        "_rule_3c_note": "Spain is EUR-denominated. No FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage (Andalucía/Extremadura solar hub)",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "solar_ppa_electricity_price_eur_per_kwh_ref": 0.045,
+            "electricity_opex_eur_per_kg_lh2_solar_ppa": 0.495,
+            "industrial_grid_electricity_price_eur_per_kwh_ref": 0.10,
+            "electricity_opex_eur_per_kg_lh2_grid": 1.10,
+            "source": "OMIE market data; CRE solar PPA market reference",
+            "note": "Spain's solar PPA electricity cost advantage is the primary LH2 competitiveness driver. Solar PPA at EUR 0.04–0.05/kWh makes Spain the lowest-cost LH2 producer in Western Europe."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "idae_grant_capex_reduction_indicative_pct": 35,
+          "note": "Illustrative inputs only. IDAE grant reduces effective CapEx — model on net-of-grant basis if grant awarded."
+        }
+      },
+
+      "market_context": {
+        "es_policy_position": "Spain's H2 Roadmap targets 11 GW electrolysis by 2030 — one of the most ambitious in Europe. Spain's outstanding solar resource makes it a potential low-cost green hydrogen producer and LH2 exporter. Iberdrola's Puertollano 20MW electrolyser (Fertiberia ammonia plant) is Europe's largest operational green hydrogen facility. Maritime LH2 export via Algeciras, Huelva, and Cartagena is a primary strategic ambition.",
+        "key_es_lh2_projects_indicative": [
+          {
+            "project": "Puertollano Green H2 Facility — Iberdrola / Fertiberia",
+            "status": "Operational since 2021 (20MW electrolyser; 3,000 tonnes/year green ammonia)",
+            "note": "Europe's largest operational green hydrogen facility at commissioning. Primarily ammonia/fertiliser feedstock — LH2 not primary delivery mode but demonstrates Spanish green H2 supply chain."
+          },
+          {
+            "project": "Mallorca LH2 Bunkering Concept — Acciona",
+            "status": "Feasibility/pre-development stage",
+            "note": "Maritime LH2 bunkering for inter-island ferry services in the Balearic Islands. Small scale but strategically important demonstration."
+          },
+          {
+            "project": "Green Hydrogen Huelva (Cepsa / Fertiberia consortium)",
+            "status": "Development — 1GW+ green hydrogen electrolysis for maritime export",
+            "note": "Huelva port targeting green ammonia and potentially LH2 export to northern Europe. One of Europe's largest planned green hydrogen export hubs."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Green hydrogen export — Spain as a low-cost producer for Northern European industrial markets via maritime LH2 or pipeline",
+          "Maritime bunkering — Algeciras (largest Mediterranean port), Cartagena, Bilbao, and Huelva targeting zero-emission shipping",
+          "Industrial decarbonisation — Asturias (ArcelorMittal steel), Puertollano (chemicals), Tarragona (petrochemicals) hydrogen demand",
+          "Heavy transport — growing FCEV HGV fleet in Iberian corridor"
+        ]
+      },
+
+      "notes": "Spain's LH2 opportunity is primarily driven by the combination of exceptional solar resource (lowest electrolysis electricity cost in Western Europe), ambitious national H2 strategy, IDAE/PERTE grant support, and strategic port infrastructure for LH2 export. The primary investment risk — beyond the retroactive policy precedent noted above — is grid node saturation at best solar locations and the absence of aggressive CapEx tax incentives (no Spanish equivalent of UK Full Expensing or German degressive AfA). All IDAE PERTE grant parameters, IVPEE current status, and EU Hydrogen Bank parameters must be verified before use. The retroactive risk precedent requires specialist Spanish legal counsel review of any grant conditionality before capital commitment."
     }
   }
 }

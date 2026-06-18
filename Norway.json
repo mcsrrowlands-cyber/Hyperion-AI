@@ -465,6 +465,252 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "Norway has no coal-fired power generation. Hydropower-dominant grid. EU Taxonomy does not apply directly (non-EU EEA). No coal support mechanism."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Norway's defining characteristic is its near-100% hydropower electricity grid — one of the lowest-carbon electricity mixes in the world — providing exceptional green credentials for LH2 production. Norwegian electricity prices (NO1–NO5 zones) can be among the lowest in Europe during high-hydro/high-wind periods. Norway has explicit LH2 export ambitions to Germany and the Netherlands. The safety regime is administered via Storulykkeforskriften (FOR-2016-6-1-602), modelled on SEVESO III principles, administered by DSB and Arbeidstilsynet. CRITICAL: Norway is NOT an EU member — EU State Aid rules (GBER/CEEAG) do NOT apply; ESA (EFTA Surveillance Authority) is the relevant authority. EU Taxonomy does not apply. Grunnrenteskatt does NOT apply to hydrogen facilities (applies only to landbasert vindkraft — verify). Currency: NOK — EUR-base investors carry full NOK/EUR FX exposure.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD. EU State Aid rules do not apply (Norway is not EU member). Primary support mechanism is Enova SF (state enterprise) grants. Enova provides investment support for low-emission technology including hydrogen production and storage infrastructure. Support is project-specific and competitive. No LH2 OZE-type auction. Source: Enova SF (enova.no); NVE.",
+      "revenue_floor_description": null,
+      "source": "enova_sf; nve; iea_hydrogen",
+      "eu_state_aid_applicable": false,
+      "staleness_warning": "Enova SF support programme terms, support rates, and NOK/EUR exchange rate are time-sensitive. Verify current Enova programme documentation (enova.no) before use. NOK/EUR is volatile — apply FX sensitivity analysis.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Storulykkeforskriften — Forskrift om tiltak for å forebygge og begrense konsekvensene av storulykker i virksomheter der farlige kjemikalier forekommer (FOR-2016-6-1-602)",
+            "relevance": "Norwegian major accident prevention regulation — modelled on EU SEVESO III principles (Norway is EEA member; SEVESO III applies via EEA Agreement transposition). Sets threshold quantities for dangerous substances including liquid hydrogen. Lower tier: 10 tonnes LH2 (same as EU SEVESO III). Upper tier: 50 tonnes LH2. Operators must notify DSB and Arbeidstilsynet and maintain safety management systems."
+          },
+          {
+            "instrument": "Arbeidsmiljøloven — Lov av 17. juni 2005 nr. 62 om arbeidsmiljø, arbeidstid og stillingsvern mv. (Working Environment Act)",
+            "relevance": "General workplace safety legislation; Arbeidstilsynet is the supervisory authority for worker safety at LH2 facilities. Arbeidstilsynet co-operates with DSB on major hazard installations."
+          },
+          {
+            "instrument": "Brann- og eksplosjonsvernloven — Lov av 14. juni 2002 nr. 20 (Fire and Explosion Protection Act)",
+            "relevance": "Framework for fire and explosion risk management; DSB (Direktoratet for samfunnssikkerhet og beredskap) is the primary safety authority for major industrial hazards."
+          },
+          {
+            "instrument": "Produktkontrolloven — Lov av 11. juni 1976 nr. 79 om kontroll med produkter og forbrukertjenester",
+            "relevance": "Product safety regulations for cryogenic pressure vessels and equipment."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Plan- og bygningsloven — Lov av 27. juni 2008 nr. 71 (Planning and Building Act)",
+            "relevance": "Reguleringsplan (zoning plan) and byggetillatelse (building permit) required for LH2 storage structures. Municipal planning authority (kommunen) must approve land use for industrial LH2 facility."
+          },
+          {
+            "instrument": "Forurensningsloven — Lov av 13. mars 1981 nr. 6 om vern mot forurensninger og om avfall (Pollution Control Act)",
+            "relevance": "Environmental permit (utslippstillatelse) from Miljødirektoratet required for industrial emissions including BOG (boil-off gas) management. Defines conditions for atmospheric hydrogen release."
+          },
+          {
+            "instrument": "Konsekvensutredningsforskriften — Forskrift av 21. juni 2017 nr. 854 (EIA Regulation)",
+            "relevance": "Environmental Impact Assessment (konsekvensutredning) required for energy projects above qualifying thresholds; large LH2 terminals will trigger this requirement."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Norsk hydrogenstrategi — En satsing for verdiskaping, industri og klimamål (Norwegian Hydrogen Strategy, June 2021, updated 2023)",
+            "relevance": "National policy framework for hydrogen. Targets 2+ GW electrolyser capacity by 2030; explicit LH2 export ambitions; positions Norway as major H2 exporter to Europe via pipeline or liquefied transport."
+          },
+          {
+            "instrument": "Havenergilova — Lov av 4. juni 2010 nr. 21 om fornybar energiproduksjon til havs",
+            "relevance": "Offshore energy production framework; relevant for floating offshore wind + hydrogen integrated production concepts."
+          },
+          {
+            "instrument": "Enova SF — Investeringsprogram for hydrogen",
+            "relevance": "Enova's hydrogen investment support programme provides grants for hydrogen production (electrolysis), storage, and distribution infrastructure. This is the primary Norwegian state support mechanism for LH2 — analogous to UK NZHF but administered by Enova rather than a central ministry."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "regime_name": "Storulykkeforskriften (FOR-2016-6-1-602) — Norway's major accident prevention regulation, modelled on SEVESO III",
+        "eu_seveso_applicability_note": "Norway is NOT an EU member but IS an EEA member. EU SEVESO III Directive (2012/18/EU) applies via EEA Agreement transposition. The Storulykkeforskriften implements equivalent obligations to EU SEVESO III. Threshold quantities for liquid hydrogen are identical to EU SEVESO III Annex I.",
+        "competent_authority_primary": "DSB — Direktoratet for samfunnssikkerhet og beredskap (Directorate for Civil Protection) — primary registration and inspection authority for major hazard establishments",
+        "competent_authority_secondary": "Arbeidstilsynet (Norwegian Labour Inspection Authority) — worker safety co-authority; issues workplace safety approvals for hazardous operations",
+        "lower_tier_threshold_tonnes_lh2": 10,
+        "upper_tier_threshold_tonnes_lh2": 50,
+        "lower_tier_obligations": "Register with DSB; prepare Sikkerhetsrapport (safety report — simplified lower-tier version); maintain internkontrollsystem (internal safety management system); internal beredskapsplan (emergency plan)",
+        "upper_tier_obligations": "Submit full Sikkerhetsrapport to DSB for assessment; DSB/kommunen coordinate ekstern beredskapsplan (external emergency plan); public information duty; periodic DSB inspection",
+        "legal_basis": "Storulykkeforskriften (FOR-2016-6-1-602) §§4–22 (operator obligations); Vedlegg 1 (Annex 1 — threshold quantities). Liquid hydrogen classified as ekstremt brannfarlig gass — lower tier 10 t, upper tier 50 t.",
+        "pre_notification_lead_time_months": 2,
+        "safety_report_preparation_months": 5,
+        "dsb_assessment_months": 4,
+        "notes": "DSB is a technically capable authority with experience in major industrial hazards from Norway's offshore oil and gas sector. Pre-application engagement with DSB is recommended. DSB has published veiledere (guidance) on SEVESO compliance for novel technologies. Arbeidstilsynet will conduct independent worker safety review in parallel."
+      },
+
+      "permitting": {
+        "planning_authority": "Kommunen (municipal government) for reguleringsplan and byggetillatelse; DSB for Storulykkeforskriften; Miljødirektoratet for forurensningsloven permit; NVE for any energy production element",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 18, "max": 42 },
+        "parallel_consent_tracks": [
+          "Konsekvensutredning (EIA) if required: 6–12 months",
+          "Reguleringsplan adoption by kommunen: 12–24 months (concurrent with EIA in pre-application phase)",
+          "Byggetillatelse (building permit): 3–6 months",
+          "Storulykkeforskriften DSB notification / Sikkerhetsrapport: 2–9 months",
+          "Forurensningsloven utslippstillatelse from Miljødirektoratet: 3–6 months",
+          "NVE licence if energy production element: 12–36 months (longer if grid connection involved)"
+        ],
+        "appeal_risk": "medium",
+        "appeal_mechanism": "Statsforvalteren (State Administrator) for municipal planning decisions; Sivilombudet (Ombudsman) for regulatory decisions; Tingrett/Lagmannsrett/Høyesterett for judicial review",
+        "notes": "P50 assumes a lower-tier SEVESO facility (10–50 t LH2) in an existing industrial zone (e.g., Porsgrunn — Yara/Nel H2 hub; Stavanger area — offshore energy sector; Mo i Rana industrial zone). Greenfield sites in new municipalities will require reguleringsplan adoption — which in Norway requires municipal political consent, potentially difficult given the post-2021 onshore wind political environment (municipalities may conflate H2 with wind controversy). Industrial port and quayside sites (Moss Havnelager concept) are preferred for LH2 export projects."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is electricity-intensive (~10–12 kWh per kg H2 liquefied). Norway's ~90% hydropower grid provides one of the lowest-carbon electricity mixes globally — LH2 produced from Norwegian grid electricity has exceptional green credentials. However, Norwegian electricity prices are volatile (reservoir-dependent) — electricity cost risk for liquefaction OpEx is material.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Statnett SF (TSO); local nettselskaper (regional DSOs) for distribution connections",
+        "electricity_market_note": "Norway participates in Nord Pool via bidding zones NO1–NO5. Norwegian prices are highly variable: driven by hydro reservoir levels, wind, and interconnector flows to UK (NSL), Germany (NordLink), Netherlands (NorNed). In low-reservoir years (e.g., 2021–2022), NO2 prices reached EUR 300+/MWh. In high-reservoir years, prices can be below EUR 30/MWh. A long-term PPA with a Norwegian hydro/wind operator is MANDATORY for LH2 project financial viability.",
+        "renewable_credentials": "Norwegian grid electricity: approximately 90% hydro + 8% wind + 2% other (NVE statistics — verify current). Carbon intensity: estimated <10–20 gCO2e/kWh — among the lowest in the world. LH2 from Norwegian grid electricity meets renewable hydrogen carbon intensity thresholds without requiring dedicated additionality structure. NOTE: Norway is not EU member — EU Delegated Regulation 2023/1184 does not directly apply; however, EU offtakers will apply EU rules to Norwegian LH2. Verify additionality requirements with EU importers.",
+        "nok_electricity_price": "Industrial electricity price in Norway: approximately NOK 0.50–1.50/kWh depending on zone and period (Nord Pool data — verify current). EUR equivalent at NOK 11.5 = EUR 1: EUR 0.043–0.130/kWh. At EUR 0.06/kWh and 11 kWh/kg: electricity cost EUR 0.66/kg LH2 (P50 scenario — but highly volatile; model with scenarios).",
+        "notes": "Norwegian electricity price volatility is the dominant OpEx risk for LH2 liquefaction. A 15–20 year PPA with Statkraft, Equinor Renewables, or another Norwegian hydro/wind producer is the standard risk mitigation approach. Prioritise NO4 (northern Norway) and NO3 (Trondheim) zones for lowest average prices and best wind integration."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: Norway has NO dedicated LH2 storage CfD, FiT, or auction mechanism. EU State Aid rules (GBER/CEEAG/TCTF) do NOT apply to Norway. EFTA Surveillance Authority (ESA) governs state aid under EEA Agreement equivalents. Enova SF provides CAPEX GRANTS — this is a one-off capital subsidy, NOT a revenue floor or ongoing support mechanism. All LH2 storage revenue is MERCHANT/TOLLING.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, cryogenic storage, and dispensing; no commodity price floor; no state revenue support for operational phase",
+        "enova_sf": {
+          "applicable": true,
+          "description": "Enova SF (state enterprise) is Norway's primary low-emission technology investment support body. Enova provides competitive CapEx grants for hydrogen production (electrolysis) and enabling infrastructure including storage. Enova has funded Nel Hydrogen projects and Yara/Equinor hydrogen pilots.",
+          "administrator": "Enova SF (administered under Olje- og energidepartementet mandate)",
+          "grant_rate_indicative": "Project-specific; Enova does not publish fixed rate tables. Typical CapEx grants cover 20–40% of eligible project cost for hydrogen infrastructure (indicative — verify with Enova programme documentation). Competitive assessment.",
+          "staleness_warning": "Enova programme terms, call schedules, and grant rates change with each programme cycle. Verify current programme at enova.no before use.",
+          "source": "Enova SF — enova.no",
+          "non_eu_note": "Enova grants are governed by Norwegian law and ESA state aid rules (not EC/GBER). This means EU Taxonomy compliance is NOT required for Enova grant eligibility — an advantage vs EU member state programmes."
+        },
+        "hydrogen_norway_programme": {
+          "applicable": true,
+          "description": "Norwegian Hydrogen Strategy (2021, updated 2023) provides the policy framework. OED (Olje- og energidepartementet) coordinates. No specific programme beyond Enova for LH2 storage as of 2026 — verify whether new instruments have been introduced.",
+          "source": "OED / Norsk hydrogenstrategi — regjeringen.no"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a fully merchant tolling basis — charging industrial offtakers, maritime bunkering customers, and export terminal users. Principal offtakers: Equinor (own H2 ambitions), Yara (ammonia), Nel Hydrogen-linked projects, Nordic export to Germany/Netherlands.",
+          "ppa_parallel": "Long-term LH2 offtake agreement with creditworthy industrial buyer (investment-grade: Equinor, Yara, Norsk Hydro) alongside an Enova CapEx grant is the standard project finance structure for Norwegian LH2."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Norwegian saldoavskrivning (20% declining balance — saldogruppe d) applies to LH2 plant and equipment. CRITICAL: Grunnrenteskatt (25% resource rent tax) applies to LANDBASERT VINDKRAFT (onshore wind) — confirm it does NOT apply to standalone LH2 storage or hydrogen production facilities. At time of writing, the Lov om skatt av grunnrente for landbasert vindkraft (2023) is specific to wind energy. If LH2 is co-located with wind generation, verify tax treatment with Skatteetaten.",
+        "selskapsskatt_cit_rate_pct": 22,
+        "legal_basis": "Skatteloven §17-1 et seq.",
+        "grunnrenteskatt_applicability_lh2": "NOT applicable to standalone LH2 storage or electrolysis facilities based on the 2023 law scope (Lov om skatt av grunnrente for landbasert vindkraft) — which is specific to landbasert vindkraft (onshore wind). VERIFY with Skatteetaten before relying on this assessment — the Norwegian government may extend resource rent taxation to other energy sectors.",
+        "depreciation_applicable": {
+          "method": "Saldoavskrivning (declining balance) — Skatteloven §§14-40 to 14-48",
+          "saldogruppe_d": {
+            "description": "LH2 plant and equipment classified in saldogruppe d",
+            "declining_balance_rate_pct": 20,
+            "legal_basis": "Skatteloven §14-43(1)(d)"
+          },
+          "npv_timing_benefit": "At 22% CIT and 10% WACC: NPV of tax shield under 20% declining balance ≈ 21.7% of qualifying CapEx. Under straight-line (25-year life): NPV ≈ 18.4%. Timing benefit ≈ 3.3ppts.",
+          "grunnrenteskatt_immediate_capex_expensing": "If grunnrenteskatt were to apply (e.g., if extended to H2 in future): CapEx would be immediately expensable for the resource rent tax base — a larger timing benefit within the resource rent calculation. Monitor Skatteetaten guidance."
+        },
+        "mva_vat": {
+          "standard_rate_pct": 25,
+          "legal_basis": "Merverdiavgiftsloven — Lov av 19. juni 2009 nr. 58",
+          "recovery": "Input MVA recoverable by MVA-registered foretak (entities)"
+        },
+        "nok_note": "All NOK tax computations should be converted to EUR at NOK 1 = EUR 0.087 (EUR 1 = NOK 11.5) as of 2026-06-15 for comparison. Verify FX rate — NOK floats freely."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "NS-EN 1251 (Norwegian Standards Institute implementation of EN 1251 — Cryogenic vessels); mandatory for cryogenic equipment in Norway",
+        "electrical_hazardous_area": "Ex-zone classification per NS-EN 60079 series (Norwegian implementation of IEC 60079); DSB guidance on ATEX/Ex zone classification for hydrogen storage applies",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (requires utslippstillatelse from Miljødirektoratet)", "On-site generation fuel"],
+          "regulatory_basis": "BOG management must be addressed in Sikkerhetsrapport (DSB) as a major accident scenario. Atmospheric releases require environmental permit conditions under Forurensningsloven from Miljødirektoratet.",
+          "environmental_note": "Norway's ambitious net-zero target and climate legislation will drive stringent BOG management conditions. Reliquefaction or productive use (fuel gas) is expected to be required for new utslippstillatelse."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: these inputs are for IRR, NPV, CapEx payback, and DSCR modelling. All figures shown first in NOK then EUR at NOK 1 = EUR 0.087 (EUR 1 = NOK 11.5) as of 2026-06-15. NOK/EUR FX sensitivity analysis is MANDATORY — NOK is freely floating and volatile.",
+        "_rule_3c_note": "FX rate: NOK 1 = EUR 0.087 (EUR 1 = NOK 11.5) as of 2026-06-15. Apply minimum NOK/EUR sensitivity range of NOK 10.0–13.0 per EUR in scenario analysis.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_nok": {
+            "per_tonne_per_day_midpoint": 40250000,
+            "eur_midpoint_approx": 3500000,
+            "fx_rate": 0.087,
+            "fx_rate_date": "2026-06-15",
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_nok": {
+            "per_tonne_midpoint": 11500000,
+            "eur_midpoint_approx": 1000500,
+            "fx_rate": 0.087,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Vacuum-insulated Type C cryogenic tank; Norwegian contractor cost base is higher than European average due to labour cost and Norwegian content norms"
+          },
+          "illustrative_total_project_capex_nok": {
+            "liquefaction_2tpd_nok": 80500000,
+            "storage_50t_nok": 575000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative_nok": 786600000,
+            "eur_equivalent_approx": 68434200,
+            "fx_rate": 0.087,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Norwegian civil works and Norwegian contractor cost basis typically 15–25% above European average. Remote mountain/fjord sites add further civil works premium. Excludes Statnett grid connection costs which are site-specific and potentially very high for remote locations."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "p50_electricity_price_nok_per_kwh_ref": 0.55,
+            "eur_equivalent_per_kwh": 0.048,
+            "electricity_opex_eur_per_kg_lh2": 0.53,
+            "fx_rate": 0.087,
+            "fx_rate_date": "2026-06-15",
+            "source": "Nord Pool NO1–NO5 historical data; NVE energy statistics — verify current zone-specific prices",
+            "price_volatility_warning": "Norwegian electricity prices are HIGHLY VOLATILE. Range: NOK 0.20–3.00+/kWh (NO2 peaked NOK 3.00+ in winter 2021/2022). P50 scenario (NOK 0.55/kWh) is indicative. Model with P10/P50/P90 electricity price scenarios. A long-term PPA with a hydro/wind generator at fixed or capped price is MANDATORY for project bankability.",
+            "ppa_reference": "Long-term PPA with Statkraft, Equinor Renewables, or major Norwegian hydro generator: indicative range NOK 0.30–0.50/kWh (EUR 0.026–0.043/kWh) for 15–20 year term. This is among the lowest long-term electricity costs in Europe outside of Iceland."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "All NOK figures converted at EUR 1 = NOK 11.5 (2026-06-15). NOK/EUR volatility: apply ±15% sensitivity. Norwegian contractor and labour costs are higher than EU peers — civil works estimates should incorporate Norwegian factor premiums. Engineering study required."
+        }
+      },
+
+      "market_context": {
+        "norway_policy_position": "Norwegian Hydrogen Strategy (2021, updated 2023) targets 2+ GW electrolyser by 2030 with explicit export ambitions. Norway exports H2 to Germany and Netherlands (North Sea pipeline corridor under study; ISO tanker as near-term route). Enova SF has funded Nel Hydrogen (Herøya/Porsgrunn), Yara (green ammonia at Porsgrunn), and Equinor hydrogen projects.",
+        "key_norwegian_lh2_projects_indicative": [
+          {
+            "project": "Nel Hydrogen / Yara Porsgrunn Green Ammonia",
+            "status": "Development — large-scale green hydrogen for Yara ammonia production at Porsgrunn; Nel providing electrolyser technology",
+            "operator": "Nel Hydrogen / Yara International",
+            "note": "Primarily compressed/pipeline H2 for ammonia feedstock — LH2 liquefaction not primary delivery mode but demonstrates scale of Norwegian H2 production ambition. Enova SF funded component. Source: Nel Hydrogen project documentation."
+          },
+          {
+            "project": "Moss Havnelager LH2 Storage Concept",
+            "status": "Concept — LH2 storage at Moss port for Nordic export and maritime bunkering",
+            "operator": "Concept stage — verify current operator and status",
+            "note": "Relevant for LH2 export via Oslofjord to Baltic and North Sea shipping lanes"
+          },
+          {
+            "project": "Northern Lights CCS / Sleipner — Blue H2 Context",
+            "status": "Operational (CO2 storage); blue H2 linked concepts",
+            "operator": "Equinor, Shell, TotalEnergies",
+            "note": "Blue hydrogen (SMR + CCS) is a parallel Norwegian H2 pathway. Sleipner CO2 injection is established. Blue H2 may compete with green LH2 for some industrial uses."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Export to Germany and Netherlands — Norway's explicit ambition; North Sea pipeline (NordLink context) or ISO tanker from Stavanger/Bergen terminals",
+          "Maritime bunkering — LH2 for Norwegian Coastal Route (Hurtigruten context) and North Sea ferry operators",
+          "Industrial feedstock — Yara ammonia, Norsk Hydro aluminium (potential H2 for process heat)",
+          "Offshore oil and gas decarbonisation — Equinor platform electrification and H2 fuel concepts"
+        ],
+        "supply_chain_note": "Norway has a strong industrial H2 ecosystem via Nel Hydrogen (electrolyser manufacturer, HQ Oslo), Equinor (own H2 targets), and Yara (largest ammonia/H2 consumer). Statnett grid expansion in western Norway (Bergensregionen) relevant for LH2 facility electricity supply. Hammerfest LNG (Equinor — existing LNG liquefaction infrastructure) provides relevant cryogenic technology experience for LH2 liquefaction adaptation.",
+        "non_eu_export_note": "Norwegian LH2 exported to EU must meet EU renewable hydrogen standards (EU Delegated Regulation 2023/1184) to qualify as RFNBO (Renewable Fuel of Non-Biological Origin) at the EU import point. Verify additionality and carbon intensity requirements with EU importer before structuring production and certification."
+      },
+
+      "notes": "Norway is a compelling but complex LH2 investment case. Key advantages: near-zero-carbon hydropower grid, Enova CapEx grants, established industrial H2 players (Nel, Yara, Equinor), and explicit government export ambitions. Key risks: (1) NOK currency volatility — MANDATORY FX sensitivity analysis; (2) Norwegian electricity price volatility — long-term PPA is essential; (3) Grunnrenteskatt does NOT appear to apply to LH2/hydrogen facilities but this must be independently verified with Skatteetaten — the Norwegian government has shown willingness to extend resource rent taxation; (4) No EU State Aid framework — ESA oversight is equivalent but confirmation of ESA clearance for any Enova support is required; (5) Norwegian labour and contractor costs are 15–25% above European average. All Enova grant parameters, NOK/EUR rate, and zone-specific electricity prices must be verified before financial modelling."
     }
   }
 }

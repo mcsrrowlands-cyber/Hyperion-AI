@@ -148,14 +148,39 @@ Every output must close with the following statement, verbatim:
 The following text is displayed on the front page of the Hyperion AI website under the "Additional Information" section. It represents Max's public-facing description of the project and its ethical framework. Claude should be aware of this text as it reflects the intended tone, purpose, and positioning of Hyperion AI:
 
 **About Me**
-My name is Max, and I am an undergraduate law student at the University of Exeter. Hyperion AI is a personal project built to demonstrate my ability to compile, structure, and deploy AI-powered outputs within the legal and financial space.
+My name is Max Rowlands, and I am an undergraduate law student at the University of Exeter. Hyperion AI is a self-initiated work experience project in the application of AI to legal and financial analysis. I conceived, designed, and built the tool independently — from initial research through to deployment — and received independent guidance from Partner X, a technology and AI specialist at Simmons & Simmons, whose input helped stress-test the regulatory framing and professional positioning of the tool.
 
 **How This Was Built**
-Hyperion AI was developed using the Anthropic Claude API, with a custom scoring engine and a hand-curated dataset covering 30 European jurisdictions. Each jurisdiction's data — spanning permitting timelines, support mechanisms, tax incentives, sovereign risk, and PPA enforceability — was individually researched and structured into a machine-readable format, drawing exclusively on primary sources: EU Directives, national energy legislation, Statutory Instruments, and published government guidance.
+The foundation of Hyperion AI is a hand-curated dataset spanning 30 European jurisdictions. Constructing this dataset was the most labour-intensive phase of the project. Each jurisdiction required individual research from scratch, drawing exclusively on primary sources: EU Directives, national energy legislation, Statutory Instruments, and published government guidance. I structured each jurisdiction's profile across eight scoring dimensions — permitting timelines, grid connection cost and timeline, primary support mechanism (CfD / FiT / PPA / Merchant), effective corporate tax rate and key incentives, PPA enforceability and bankability, sovereign risk, operational drag, and revenue floor — before encoding each into a machine-readable JSON file.
 
-The ethical framework underpinning every output was a core design priority, not an afterthought. Hyperion AI is governed by a layered compliance architecture aligned with the SRA Standards and Regulations (15/12/24 edition) and the FCA Handbook (08/06/26 edition). This means all outputs are clearly framed as indicative jurisdiction-screening tools only — never as legal or financial advice. The system is hardcoded to refuse requests that conflict with its ethical framework, to cite only traceable primary sources, and to clearly distinguish between revenue mechanisms such as two-way CfDs, one-way premium tariffs, and merchant exposure — distinctions that are critical to accurate investment analysis but frequently conflated in generic tools.
+The process required significant iterative refinement. Early drafts exposed structural inconsistencies: in particular, the distinction between two-way CfDs (where revenue above the strike price is clawed back by the state) and one-way premium tariffs (where no such clawback applies) was ambiguous across several national frameworks. I built explicit rules into both the JSON data structure and the AI's governing instruction set to enforce this distinction in every output, regardless of how a query is framed. Repeated testing against edge cases drove several rounds of revision before the dataset reached a standard I considered analytically reliable.
+
+The ethical framework was a core design priority, not an afterthought. The governing rules document — CLAUDE.md — was written and iterated throughout development, requiring Hyperion AI to comply with the SRA Standards and Regulations (15/12/24 edition) and the FCA Handbook (08/06/26 edition), to cite only traceable primary sources, and to refuse outputs that conflict with its ethical framework.
 
 The result is a decision-support tool that reflects the rigour expected of legal and financial professionals, built by a student who believes that responsible AI deployment in high-stakes domains must begin with the architecture, not just the disclaimer.
+
+**Tools Used**
+
+Core Development:
+- Visual Studio Code — the code editor where all files were written and viewed. Claude Code runs as an extension inside it.
+- Claude Code — Anthropic's AI coding assistant, running inside VS Code. Wrote, edited, and debugged virtually all application code — HTML, CSS, JavaScript, and the API layer.
+
+AI & Intelligence Layer:
+- Anthropic Claude API — the AI model powering Hyperion's chat responses. Every user query is routed through this API to generate jurisdiction analysis.
+- Claude Sonnet 4.6 — the specific model being called, defined in api/chat.js.
+
+Version Control & Source Management:
+- Git — tracks every change made to the codebase locally, with a full history of commits.
+- GitHub — hosts the code repository online at mcsrrowlands-cyber/Hyperion-AI. Acts as the source of truth for the project.
+
+Deployment & Hosting:
+- Vercel — hosts and serves the live website. Runs the serverless API functions (api/chat.js, api/health.js) and delivers the static frontend files.
+
+Data & Configuration:
+- JSON files (30 jurisdiction files) — hand-structured data files containing all regulatory, financial, and risk data for each European market.
+- scoring_engine.js — a custom-built scoring algorithm that ranks jurisdictions against the user's profile and technology.
+- system_prompt.txt — the instruction set that tells the AI how to behave, what rules to follow, and how to structure outputs.
+- CLAUDE.md — the project rules file that governs how Claude Code behaves when working on this project.
 
 **Tools Used**
 

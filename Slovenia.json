@@ -389,6 +389,205 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Slovenia's NECP includes a hydrogen component and its electricity mix (~60–70% hydro) provides inherently low-carbon generation well-suited to green H2 electrolysis with a renewable PPA. The Italian interconnection (400kV) creates both export opportunities for LH2 and access to Italian corporate buyers. Safety regime: SEVESO III implemented via Uredba o preprečevanju in zmanjšanju posledic večjih nesreč (Uradni list RS, št. 22/16 in 68/19). Electricity cost for liquefaction is the primary OpEx risk.",
+
+      "permitting_p50_months": 27,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism in Slovenia. Standalone LH2 facilities operate on a tolling or merchant basis. EU cohesion funds (ERDF, SRIP — Strategic Research and Innovation Partnership — H2 cluster via SPIRIT Slovenia) may provide CapEx grant support for qualifying H2 infrastructure. Investment relief (naložbena olajšava — ZDDPO-2 §55) provides 40% of qualifying CapEx deducted from taxable base. SPIRIT Slovenia (spiritslovenia.si) administers investment incentives. Source: SPIRIT Slovenia; ARSO; pisrs.si.",
+      "revenue_floor_description": null,
+      "source": "spirit_slovenia; arso; iea_hydrogen",
+      "staleness_warning": "EU cohesion fund programme calls and SPIRIT Slovenia investment incentive terms are time-sensitive. Verify current availability at spiritslovenia.si and eu-skladi.si. Borzen RES tender parameters change per round — verify at borzen.si.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Uredba o preprečevanju in zmanjšanju posledic večjih nesreč (Uradni list RS, št. 22/16 in 68/19) — SEVESO III Regulation",
+            "relevance": "Slovenian SEVESO III transposition. Lower tier (≥10 t flammable gas including LH2): notify ARSO, prepare MAPP and internal emergency plan. Upper tier (≥50 t flammable gas): detailed varnostno poročilo (safety report), external emergency plan (zunanji načrt zaščite in reševanja), public information duty, periodic ARSO inspection."
+          },
+          {
+            "instrument": "Zakon o varstvu pred požarom (ZVPoz) — Fire Protection Act (Uradni list RS, št. 3/07 — official consolidated text, as amended)",
+            "relevance": "Fire safety classification and protection requirements for LH2 storage and dispensing; permits from Uprava RS za zaščito in reševanje (Administration for Civil Protection and Disaster Relief)."
+          },
+          {
+            "instrument": "Zakon o varstvu okolja (ZVO-2) 2022",
+            "relevance": "Environmental permit (okoljevarstveno dovoljenje) for LH2 facilities; administered by ARSO (Agencija RS za okolje — Slovenian Environment Agency); governs BOG atmospheric emissions."
+          },
+          {
+            "instrument": "Zakon o kemikalijah (ZKem) — Chemicals Act",
+            "relevance": "Classification and handling of hydrogen as a dangerous chemical; REACH coordination."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Gradbeni zakon (GZ-1) 2017 as amended",
+            "relevance": "Building permits (gradbeno dovoljenje); commissioning certificates (uporabno dovoljenje); applies to LH2 facility construction."
+          },
+          {
+            "instrument": "Zakon o urejanju prostora (ZUreP-3) 2022",
+            "relevance": "Spatial plan compliance check; LH2 industrial facilities require compatible spatial designation (industrial zone)."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Resolucija o nacionalnem energetskem in podnebnem programu (ReNEPP) 2023–2030",
+            "relevance": "NECP includes H2 component; targets renewable electricity growth with hydrogen as storage and transport medium; identifies green H2 as priority decarbonisation tool."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — tender rounds (EC Regulation)",
+            "relevance": "Slovenia is eligible as EU member state. LH2 production and enabling infrastructure may qualify for EU Hydrogen Bank auction support. Verify current round at innovation-fund.ec.europa.eu."
+          },
+          {
+            "instrument": "SRIP Energetika (Strategic Research and Innovation Partnership — Energy cluster)",
+            "relevance": "Slovenia's H2 innovation cluster includes Kolektor Group (H2 components), GEN-I (H2 trading), and research institutions. SRIP programme may provide R&D co-funding."
+          }
+        ]
+      },
+
+      "seveso_iii_regime": {
+        "competent_authority": "ARSO (Agencija RS za okolje — Slovenian Environment Agency) jointly with IRSD (Inšpektorat RS za delo — Labour Inspectorate of the Republic of Slovenia)",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lh2_classification": "LH2 classified as flammable gas (Category 2 Annex I, Part 1 of SEVESO III / Uredba 22/16). Thresholds apply to total quantity on site.",
+        "lower_tier_obligations": "Notify ARSO; prepare politika preprečevanja večjih nesreč (MAPP equivalent); internal emergency plan only.",
+        "upper_tier_obligations": "Prepare detailed varnostno poročilo (safety report) acceptable to ARSO; zunanji načrt zaščite in reševanja (external emergency plan) prepared by regional civil protection authority; public information duty; periodic ARSO/IRSD inspection.",
+        "legal_basis": "Uredba o preprečevanju in zmanjšanju posledic večjih nesreč (Uradni list RS, št. 22/16 in 68/19), Aneks 1 — dangerous substance thresholds.",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 7,
+        "arso_assessment_months": 5,
+        "notes": "ARSO is the primary SEVESO III competent authority in Slovenia. Upper-tier sites may not operate until ARSO has assessed the varnostno poročilo. Pre-application engagement with ARSO is strongly recommended. Slovenian SEVESO practice is less developed than western EU peers — allow additional time for novel technology assessment. Proceedings in Slovenian language."
+      },
+
+      "permitting": {
+        "planning_authority": "Municipality and Ministry of Infrastructure for spatial plan compliance; ARSO as key regulatory body for environmental permits and SEVESO III",
+        "timeline_p50_months": 27,
+        "timeline_range_months": { "min": 18, "max": 48 },
+        "parallel_consent_tracks": [
+          "Building permit under GZ-1 — 12–18 months",
+          "SEVESO III notification / varnostno poročilo (ARSO) — 3–12 months post-submission",
+          "Environmental permit / okoljevarstveno dovoljenje (ARSO) — 4–6 months",
+          "Fire safety permit (Uprava RS za zaščito in reševanje) — concurrent with building permit"
+        ],
+        "arso_consultation_in_planning": true,
+        "appeal_risk": "low-medium",
+        "notes": "P50 of 27 months assumes a lower-tier SEVESO III site outside Natura 2000 areas. Upper-tier sites add 6–12 months. Slovenia's permitting for industrial facilities is more streamlined than for wind (which requires spatial plan amendments). ARSO is a professional agency with English-speaking capability for international investors."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Grid connection from ELES (TSO) or Elektro DSOs required for liquefaction plant.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "ELES d.o.o. (TSO) or regional Elektro DSO (Elektro Celje, Elektro Ljubljana, Elektro Maribor, Elektro Primorska, Elektro Gorenjska)",
+        "green_credentials_note": "Slovenia's grid is ~60–70% hydro — inherently low-carbon but does NOT automatically qualify as green H2 feedstock under EU Delegated Regulation 2023/1184 without meeting additionality and renewable hourly matching criteria. A dedicated renewable PPA remains the recommended approach for green H2 certification.",
+        "electricity_price_risk": "MEDIUM — Slovenian industrial electricity prices broadly track HUPX-SI market price; connected to Italian and Central European markets. Verify current prices at AGEN-RS (agencija-energija.si).",
+        "renewable_ppa_strategy": "Pairing with a Borzen-tender solar PPA from Prekmurje or hydro bilateral PPA provides best combination of green credentials and price stability.",
+        "notes": "Prekmurje solar grid queue (Elektro Maribor DSO) is growing — early engagement with DSO for industrial connection is advised. Italian interconnection provides cross-border balancing capability beneficial for variable RES-backed electrolysis."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Slovenia. Revenue is via tolling contracts with no state commodity floor. Investment relief (naložbena olajšava) is a tax base deduction, not a revenue mechanism.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing; no commodity price floor from the state.",
+        "investment_relief": {
+          "applicable": true,
+          "description": "Investment relief (naložbena olajšava — ZDDPO-2 §55): 40% of qualifying LH2 CapEx deducted from taxable base in the investment year, with 5-year carry-forward for excess. Applies to qualifying machinery and equipment including cryogenic tanks, liquefaction plant, and dispensing infrastructure.",
+          "legal_basis": "ZDDPO-2 §55",
+          "note": "This is a base deduction (not a CIT credit). Benefit = 40% × qualifying CapEx × 19% CIT rate, arising in investment year vs. distribution over project life."
+        },
+        "eu_cohesion_funds": {
+          "applicable": "EU ERDF/ESF cohesion funds via SPIRIT Slovenia (spiritslovenia.si) may provide CapEx grants for qualifying H2 industrial infrastructure. SRIP Energetika H2 cluster provides R&D co-funding.",
+          "staleness_warning": "Programme calls are time-limited. Verify at spiritslovenia.si and eu-skladi.si for current open calls."
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a merchant basis, charging industrial off-takers (Revoz/Renault, KRKA, Kolektor Group), transport sector (H2 bus/HGV fleet operators), and potentially Italian cross-border buyers via the Italian interconnection.",
+          "credit_risk_note": "Merchant tolling revenues are contract-dependent; no state backstop. Industrial offtakers (Revoz, KRKA) are solid credit counterparties."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: 19% CIT. Investment relief (naložbena olajšava — ZDDPO-2 §55) provides 40% of qualifying CapEx as a deduction from taxable base — a timing benefit, not a permanent rate reduction.",
+        "cit_rate_pct": 19.0,
+        "investment_relief": {
+          "rate_of_base_deduction_pct": 40.0,
+          "qualifying_assets": "Qualifying equipment and machinery including cryogenic storage tanks, liquefaction plant, BOG management systems, dispensing infrastructure",
+          "legal_basis": "ZDDPO-2 §55",
+          "_rule_3b_analysis": "For a EUR 40m LH2 project with EUR 35m qualifying investment: 40% base deduction = EUR 14m. CIT saving in year 1 = EUR 14m × 19% = EUR 2.66m (vs. standard depreciation distributed over 15 years). At 7% WACC, NPV acceleration benefit ≈ EUR 1.2–1.5m. Moderate but material timing benefit.",
+          "carry_forward_years": 5
+        },
+        "dividend_withholding_tax_pct": 0.0,
+        "dividend_wht_note": "0% dividend WHT for qualifying EU parent companies (ZDDPO-2 §71 — EU Parent-Subsidiary Directive)"
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "SIST EN 1251 (Cryogenic vessels — static vacuum-insulated vessels — Slovenian adoption of EN 1251)",
+        "electrical_hazardous_area": "ATEX zone classification per Slovenian implementation of Directive 2014/34/EU; DSEAR equivalent per Pravilnik o eksplozijsko ogroženih območjih (Rules on Explosive Atmospheres)",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (ARSO environmental permit required)", "On-site fuel use"],
+          "regulatory_basis": "BOG management must be addressed in varnostno poročilo and okoljevarstveno dovoljenje — ARSO governs atmospheric emissions.",
+          "environmental_note": "Vented hydrogen is not a GHG (GWP ≈ 0) but is a safety hazard. ARSO permit conditions may limit vent frequency."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: indicative inputs for IRR, NPV, CapEx payback, and DSCR modelling. Project-specific engineering estimates required before financial commitment.",
+        "_rule_3c_note": "Slovenia is EUR-denominated — no FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_midpoint": 1000000
+          },
+          "illustrative_total_project_capex_eur": {
+            "total_indicative": 68400000,
+            "notes": "20% BOP and civil works allowance. Excludes grid connection reinforcement."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_ref": 0.10,
+            "electricity_opex_eur_per_kg_lh2": 1.10,
+            "source": "IEA, The Future of Hydrogen, 2019; AGEN-RS industrial price reference (verify at agencija-energija.si)",
+            "staleness_warning": "Slovenian industrial electricity prices track HUPX-SI market. Verify before use."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "investment_relief_npv_benefit_indicative_eur": 1400000,
+          "note": "Illustrative only. Actual costs depend on technology vendor, site, electricity procurement strategy, and supply chain."
+        }
+      },
+
+      "market_context": {
+        "si_hydrogen_policy": "Slovenian NECP 2023–2030 includes H2 component. H2 blending trials in gas grid (Plinarna Maribor, Plinovodi) at early stage. Italian interconnection creates potential export route for Slovenian green H2. GEN-I is active in H2 energy trading. Kolektor Group is developing H2 components for the automotive supply chain.",
+        "key_si_lh2_projects_indicative": [
+          {
+            "project": "Revoz (Renault) green factory H2 supply concept",
+            "status": "Conceptual — H2 supply for green manufacturing at Novo Mesto plant; verify current status at revoz.si",
+            "note": "Renault group has pan-European H2 ambitions; Novo Mesto plant is the Slovenian production base."
+          },
+          {
+            "project": "Solaris H2 bus mobility pilot",
+            "status": "Pilot stage — H2 bus operations; LH2 bunkering requirement",
+            "note": "H2 mobility creates local LH2 demand for refuelling infrastructure."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Automotive sector decarbonisation (Revoz/Renault — largest Slovenian manufacturer)",
+          "H2 mobility — bus and HGV fleet operators",
+          "Industrial export — green H2 to Italian market via 400kV interconnection route",
+          "KRKA/pharmaceuticals and chemical sector"
+        ],
+        "italian_market_note": "Slovenia's 400kV interconnection with Italy and its position in the Italian/Central European price zone creates access to Italian green H2 buyers and importers — a significantly larger market than the domestic Slovenian economy. This cross-border export potential is a genuine differentiator for Slovenian LH2 projects."
+      },
+
+      "notes": "Slovenia's LH2 storage investment case benefits from the Golob government's pro-RES stance, an inherently low-carbon grid (~60–70% hydro), the SEVESO III regime administered by a professional ARSO, and genuine Italian market access via 400kV interconnection. The absence of a dedicated LH2 revenue mechanism means investors rely on tolling contracts, the investment relief tax base deduction (ZDDPO-2 §55), and EU cohesion funds. Electricity cost is the primary OpEx risk — a dedicated renewable PPA is required for green H2 certification under EU Delegated Regulation 2023/1184. ARSO's SEVESO III permitting pathway is demanding but structured. Italian cross-border export potential is a structural advantage over landlocked CEE peers. Verify all EU cohesion fund programme calls at spiritslovenia.si and eu-skladi.si before project commitment."
     }
   }
 }

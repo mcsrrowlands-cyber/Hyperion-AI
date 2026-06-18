@@ -449,6 +449,263 @@
       "coal_phase_out_commitment": "2049 target per Polish National Energy and Climate Plan (NECP); subject to EU pressure for earlier phase-out.",
       "source": null,
       "notes": "Poland has Europe's most coal-intensive power sector (~70% coal share). EU Taxonomy-excluded. High stranded-asset risk post-2035. CBAM exposure for coal-intensive industries."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Poland is an emerging hydrogen market anchored by PKN Orlen's 1 GW electrolysis ambition and EU-backed financing (KPO, FEnIKS). The primary safety regulatory gate is the SEVESO III regime administered via WIOŚ and PSP. Critically, Poland's electricity mix remains approximately 70% coal-based — grid-powered electrolysis will not meet green hydrogen carbon intensity thresholds without a dedicated renewable PPA. A co-located or dedicated PPA is essential for credible green LH2 credentials. Currency is PLN — EUR-base investors must model FX exposure on OpEx and grant receipts.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or FiT. OZE auction mechanism does not cover LH2 storage. Standalone facilities operate on a tolling basis. CapEx grant support may be available via: (i) Fundusz Modernizacji (Modernisation Fund) — EU-backed fund targeting coal-region transition including H2 projects; (ii) FEnIKS (Fundusze Europejskie na Infrastrukturę, Klimat, Środowisko) 2021–2027 programme — EU structural funds for energy infrastructure; (iii) Krajowy Plan Odbudowy (KPO — National Recovery and Resilience Plan) — hydrogen component includes investment subsidies. Source: Ministerstwo Klimatu i Środowiska; NFOŚiGW; KPO programme documentation.",
+      "revenue_floor_description": null,
+      "source": "ministerstwo_klimatu; nfosigw; iea_hydrogen",
+      "staleness_warning": "KPO grant call parameters, FEnIKS programme terms, and PLN/EUR exchange rate are all time-sensitive. Verify current call documentation with NFOŚiGW (Narodowy Fundusz Ochrony Środowiska i Gospodarki Wodnej) and Ministerstwo Funduszy i Polityki Regionalnej before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Ustawa z dnia 27 kwietnia 2001 r. Prawo ochrony środowiska (Environmental Protection Law)",
+            "relevance": "Primary framework transposing SEVESO III into Polish law. Operators of establishments handling dangerous substances at or above threshold quantities must notify WIOŚ and prepare a Raport o bezpieczeństwie (Safety Report) and Wewnętrzny Plan Operacyjno-Ratowniczy (internal emergency plan). For upper-tier: Zewnętrzny Plan Operacyjno-Ratowniczy (external emergency plan) coordinated by PSP."
+          },
+          {
+            "instrument": "Rozporządzenie Ministra Środowiska z dnia 30 grudnia 2002 r. w sprawie poważnych awarii przemysłowych (SEVESO III implementing regulation)",
+            "relevance": "Sets specific threshold quantities for dangerous substances including flammable gases (wodór ciekły — liquid hydrogen). Lower tier: 10 tonnes LH2. Upper tier: 50 tonnes LH2. These are identical to EU SEVESO III baseline thresholds."
+          },
+          {
+            "instrument": "Ustawa z dnia 24 sierpnia 1991 r. o ochronie przeciwpożarowej (Fire Protection Act)",
+            "relevance": "PSP (Państwowa Straż Pożarna — State Fire Service) is the co-competent authority alongside WIOŚ for emergency planning at SEVESO establishments. PSP coordinates the external emergency plan (Zewnętrzny Plan Operacyjno-Ratowniczy) for upper-tier sites."
+          },
+          {
+            "instrument": "Dyrektywa 2012/18/UE (SEVESO III) transposed via Prawo ochrony środowiska",
+            "relevance": "EU SEVESO III Directive basis; Poland as EU member is required to implement in full. SEVESO thresholds for flammable gases (hydrogen) are: lower tier 10 t; upper tier 50 t. Confirm no national variation has been adopted."
+          },
+          {
+            "instrument": "Ustawa z dnia 7 lipca 1994 r. Prawo budowlane (Construction Law)",
+            "relevance": "Pozwolenie na budowę (building permit) required for cryogenic storage structures; specific requirements for classified industrial facilities."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Ustawa z dnia 27 marca 2003 r. o planowaniu i zagospodarowaniu przestrzennym",
+            "relevance": "Spatial planning law; LH2 facilities require compatibility with MPZP (Miejscowy Plan Zagospodarowania Przestrzennego — local spatial plan) or individual planning decision (decyzja WZ). Industrial/special economic zone sites are typically already designated for industrial use."
+          },
+          {
+            "instrument": "Ustawa z dnia 3 października 2008 r. o udostępnianiu informacji o środowisku... (OOŚ Act)",
+            "relevance": "Environmental impact assessment (Ocena Oddziaływania na Środowisko — OOŚ) required for chemical/industrial facilities above qualifying thresholds; large LH2 installations will trigger OOŚ."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Polska Strategia Wodorowa do roku 2030 z perspektywą do 2040 (Polish Hydrogen Strategy 2021–2030)",
+            "relevance": "National policy framework targeting 2 GW electrolysis capacity by 2030; identifies LH2 as a key transport and storage vector; designates hydrogen valleys (doliny wodorowe) as cluster development zones."
+          },
+          {
+            "instrument": "Krajowy Plan Odbudowy i Zwiększania Odporności (KPO — Poland's National Recovery and Resilience Plan)",
+            "relevance": "EU RRF-funded programme. Component C4 (green energy and energy efficiency reduction) includes hydrogen investment subsidies. KPO grants may fund LH2-enabling infrastructure."
+          },
+          {
+            "instrument": "Program FEnIKS (Fundusze Europejskie na Infrastrukturę, Klimat, Środowisko 2021–2027)",
+            "relevance": "EU structural and cohesion fund programme; energy priority axis covers hydrogen projects. NFOŚiGW is the managing institution for energy components."
+          },
+          {
+            "instrument": "Ustawa z dnia 10 maja 2018 r. o Centralnym Porcie Komunikacyjnym",
+            "relevance": "CPK infrastructure investment programme has hydrogen logistics component — relevant context for LH2 transport infrastructure in Poland."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "regime_name": "SEVESO III — implemented via Prawo ochrony środowiska",
+        "competent_authority_primary": "WIOŚ — Wojewódzki Inspektorat Ochrony Środowiska (Voivodship Inspectorate for Environmental Protection) — primary notification and inspection authority",
+        "competent_authority_secondary": "PSP — Państwowa Straż Pożarna (State Fire Service) — emergency planning co-authority for upper-tier establishments",
+        "lower_tier_threshold_tonnes_lh2": 10,
+        "upper_tier_threshold_tonnes_lh2": 50,
+        "lower_tier_obligations": "Notify WIOŚ; prepare and implement Polityka Zapobiegania Poważnym Awariom (PZPA — Major Accident Prevention Policy); prepare Wewnętrzny Plan Operacyjno-Ratowniczy (WPOR — internal emergency plan)",
+        "upper_tier_obligations": "Prepare and submit Raport o bezpieczeństwie (Safety Report) to WIOŚ; Zewnętrzny Plan Operacyjno-Ratowniczy (ZPOR — external emergency plan) coordinated by PSP; public information duty; periodic WIOŚ inspection",
+        "legal_basis": "Prawo ochrony środowiska Art. 248–264; Rozporządzenie MS z dnia 30 grudnia 2002 r. — SEVESO threshold quantities. Liquid hydrogen falls within the category of extremely flammable gases (gazy skrajnie łatwopalne).",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 6,
+        "wios_assessment_months": 4,
+        "notes": "Operations at upper-tier SEVESO establishments must not commence until WIOŚ has assessed and accepted the Safety Report. WIOŚ assessment capacity varies by voivodship. For industrial park / special economic zone locations, pre-application consultation with the relevant WIOŚ office is strongly recommended. PSP will review external emergency plan in parallel."
+      },
+
+      "permitting": {
+        "planning_authority": "Starostwo powiatowe (county office) — building permit; RDOŚ (Regionalna Dyrekcja Ochrony Środowiska) for OOŚ/EIA decision; WIOŚ as SEVESO competent authority",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 18, "max": 42 },
+        "parallel_consent_tracks": [
+          "OOŚ decision from RDOŚ — environmental impact assessment: 6–12 months",
+          "Pozwolenie na budowę (building permit) from Starostwo: 3–6 months (follows OOŚ)",
+          "SEVESO WIOŚ notification / Safety Report submission: 3–10 months post-submission",
+          "PSP co-ordination for external emergency plan: concurrent with WIOŚ assessment",
+          "Grid/industrial connection for liquefaction plant: via local OSD/PSE — timelines as per grid_connection section"
+        ],
+        "psi_zone_advantage": "Location within Polska Strefa Inwestycji (PSI — Polish Investment Zone) may streamline permitting via single investor service point (PSSE — Polska Agencja Inwestycji i Handlu) coordination. PSSE can assist with administrative coordination across voivodship authorities.",
+        "appeal_risk": "low-medium",
+        "appeal_mechanism": "Samorządowe Kolegium Odwoławcze (SKO) → Wojewódzki Sąd Administracyjny (WSA) → Naczelny Sąd Administracyjny (NSA)",
+        "notes": "P50 assumes a lower-tier SEVESO facility (10–50 tonnes LH2) in an industrial zone with existing MPZP designation. Upper-tier sites (>50 t) add significant time for Safety Report preparation. Special economic zone and industrial park sites (Katowice, Gdańsk, Łódź, Wrocław) typically have stronger planning designation and shorter MPZP-related delays. Rural greenfield sites will require MPZP amendment — add 12–24 months."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is electricity-intensive (~10–12 kWh per kg H2 liquefied). CRITICAL NOTE: Poland's electricity grid is approximately 70% coal-fired (2025 data — verify current Urząd Regulacji Energetyki statistics). Grid electricity is not eligible for green hydrogen carbon intensity thresholds under EU Delegated Regulation 2023/1184. A dedicated renewable PPA or co-located renewable generation is mandatory for LH2 to qualify as renewable hydrogen under EU rules.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "PSE S.A. (Polskie Sieci Elektroenergetyczne) for transmission; local OSD (Operator Systemu Dystrybucyjnego) for distribution connections",
+        "grid_carbon_intensity_warning": "CRITICAL: Polish grid electricity has a carbon intensity of approximately 750–900 gCO2e/kWh (URE/KOBIZE data — verify current). This EXCEEDS the 70% GHG savings threshold required for 'renewable hydrogen' under EU Delegated Regulation 2023/1184. LH2 from Polish grid electricity CANNOT be classified as green hydrogen without a dedicated renewable additionality structure.",
+        "renewable_ppa_strategy": "Co-located wind or solar PPA is MANDATORY for green LH2 credentials. Poland's OZE auction market provides access to wind/solar PPAs. Northern Poland (Baltic offshore) and central Poland (wind belt) offer best co-location options for renewable electricity. Industrial electricity price in Poland: approximately EUR 80–120/MWh for large consumers (URE data — verify current).",
+        "connection_queue_note": "Poland faces a severe grid connection queue at distribution level — see grid_connection section. LH2 liquefaction plant requiring a dedicated high-voltage connection should plan for PSE or OSD connection timelines of 24–60 months depending on voltage level and area congestion.",
+        "notes": "At EUR 0.10/kWh and 11 kWh/kg, electricity cost is EUR 1.10/kg LH2. A dedicated renewable PPA at EUR 0.06/kWh reduces this to EUR 0.66/kg. PLN-denominated industrial electricity is subject to PLN/EUR FX risk for EUR-reporting investors."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: No dedicated LH2 storage two-way CfD, one-way FiT, or auction mechanism exists in Poland. LH2 storage revenue is derived from tolling contracts (opłata za usługi skraplania i magazynowania — liquefaction and storage service fee). State support is CapEx grant only via EU-funded programmes.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing services; no commodity price floor from the state",
+        "capex_grant_programmes": {
+          "kpo_component": {
+            "applicable": true,
+            "description": "KPO (Krajowy Plan Odbudowy) Component C4 — Green energy transition. Hydrogen infrastructure investment subsidies available for qualifying electrolysis and storage projects.",
+            "administrator": "NFOŚiGW (Narodowy Fundusz Ochrony Środowiska i Gospodarki Wodnej)",
+            "indicative_grant_rate": "Grant rate project-specific; KPO energy components have provided 25–50% of eligible CapEx in published call documentation (verify current call prospectus)",
+            "staleness_warning": "KPO call parameters are revised per competition round. Poland's KPO disbursement has been subject to rule of law conditions — verify current EC disbursement approvals with NFOŚiGW before use.",
+            "source": "KPO documentation — verify at funduszeeuropejskie.gov.pl"
+          },
+          "feniks_component": {
+            "applicable": true,
+            "description": "FEnIKS (Fundusze Europejskie na Infrastrukturę, Klimat, Środowisko 2021–2027) — EU structural fund programme. Priority axis for low-emission energy includes hydrogen infrastructure.",
+            "administrator": "NFOŚiGW / Ministerstwo Funduszy i Polityki Regionalnej",
+            "staleness_warning": "FEnIKS call schedule and grant rates are published periodically. Verify current call with NFOŚiGW."
+          },
+          "fundusz_modernizacji": {
+            "applicable": true,
+            "description": "Fundusz Modernizacji (Modernisation Fund) — EU Innovation Fund mechanism funding clean energy transition in coal-dependent member states including Poland. Relevant for LH2 in coal-region contexts (e.g., Bełchatów H2 valley concept).",
+            "administrator": "NFOŚiGW as implementing body",
+            "source": "European Commission / NFOŚiGW Modernisation Fund documentation"
+          }
+        },
+        "psi_cit_exemption": {
+          "applicable": true,
+          "description": "Polska Strefa Inwestycji (PSI) — Polish Investment Zone. LH2 facilities in PSI-designated zones may qualify for CIT exemption (zwolnienie z podatku dochodowego) on qualifying investment. Exemption can cover up to 50% of eligible CapEx in certain assisted regions (maximum aid intensity per EU regional aid map — verify with PAIIH).",
+          "legal_basis": "Ustawa z dnia 10 maja 2018 r. o wspieraniu nowych inwestycji (New Investment Support Act); Rozporządzenie Rady Ministrów z dnia 28 sierpnia 2018 r. w sprawie pomocy publicznej udzielanej niektórym przedsiębiorcom na realizację nowych inwestycji",
+          "staleness_warning": "PSI aid intensity limits and regional assistance map are reviewed periodically by EC under State Aid regional guidelines. Verify current aid intensity for target location with PAIIH (Polska Agencja Inwestycji i Handlu) before use.",
+          "note": "PSI CIT exemption is a significant incentive that can materially improve project NPV — effectively a CIT holiday on qualifying investment rather than a timing benefit."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Poland is an EU member state — projects may apply to the EU Hydrogen Bank auction programme (administered by the European Commission / EIB) for production subsidies. EU Hydrogen Bank targets green hydrogen producers via competitive grants.",
+          "source": "European Commission, EU Hydrogen Bank — ec.europa.eu/hydrogen-bank"
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Polish depreciation for LH2 storage plant and equipment should be assessed under Ustawa CIT Art. 16h–16m. No Full Expensing equivalent exists. PSI CIT exemption is the primary CapEx-related tax incentive — it is NOT a timing benefit but a permanent exemption on qualifying investment.",
+        "cit_standard_rate_pct": 19,
+        "legal_basis": "Ustawa CIT Art. 19",
+        "psi_cit_exemption_applicable": true,
+        "depreciation_available": {
+          "method": "Declining balance (metoda degresywna) — coefficient up to 2× linear rate under Ustawa CIT Art. 16k",
+          "equipment_linear_rate_pct": 10,
+          "declining_balance_year1_effective_rate_pct": 20,
+          "legal_basis": "Ustawa CIT Art. 16h–16m; Załącznik 1 (depreciation rates table)",
+          "npv_timing_benefit": "At 19% CIT and 10% WACC: NPV of tax shield under 2× declining balance (first year 20% on LH2 plant) ≈ 15.8% of qualifying CapEx. Under standard linear 10%/annum: NPV ≈ 12.2%. Timing benefit ≈ 3.6ppts. This is a modest incentive — lower absolute value than UK Full Expensing due to lower CIT rate."
+        },
+        "vat": {
+          "standard_rate_pct": 23,
+          "recovery": "Input VAT recoverable by VAT-registered operators (podatnicy VAT)"
+        },
+        "note": "PSI CIT exemption (up to 50% of qualifying CapEx covered as tax exemption) is far more impactful than depreciation timing for Polish LH2 projects. Priority for tax analysis: (1) confirm PSI eligibility and aid intensity for target location; (2) model CIT exemption period; (3) apply standard declining balance depreciation for non-exempt period."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "EN 1251 (Cryogenic vessels — static vacuum-insulated vessels) — harmonised standard applicable in Poland as EU member state; implemented via Ustawa z dnia 13 kwietnia 2016 r. o systemach oceny zgodności i nadzoru rynku (conformity assessment framework)",
+        "electrical_hazardous_area": "ATEX zone classification required per Rozporządzenie Ministra Energii z dnia 28 sierpnia 2019 r. w sprawie bezpieczeństwa i higieny pracy przy urządzeniach energetycznych (energy equipment safety regulation); ATEX Directive 2014/34/UE implemented via Polish law",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion with EA permit under Prawo ochrony środowiska", "On-site power generation as boiler/turbine fuel"],
+          "regulatory_basis": "BOG must be addressed in WIOŚ Safety Report as a major accident scenario. Atmospheric venting may require pozwolenie na emisję (emission permit) from WIOŚ. Poland's air quality regulations (Prawo ochrony środowiska Art. 155 et seq.) govern industrial gas releases.",
+          "environmental_note": "Vented hydrogen is not a direct GHG but is a safety hazard. Polish emission permitting (pozwolenie zintegrowane or pozwolenie sektorowe) governs BOG management choices."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: these inputs are for IRR, NPV, CapEx payback, and DSCR modelling. All figures shown first in PLN (native currency) then EUR equivalent at PLN 1 = EUR 0.235 (approximately EUR 1 = PLN 4.25) as of 2026-06-15. PLN/EUR FX sensitivity analysis is MANDATORY.",
+        "_rule_3c_note": "FX rate: PLN 1 = EUR 0.235 as of 2026-06-15. PLN is volatile vs EUR. Apply minimum sensitivity range of PLN 3.90–4.60 per EUR in scenario analysis.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_pln": {
+            "per_tonne_per_day_midpoint": 14875000,
+            "eur_midpoint_approx": 3500000,
+            "fx_rate": 0.235,
+            "fx_rate_date": "2026-06-15",
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_pln": {
+            "per_tonne_midpoint": 4255000,
+            "eur_midpoint_approx": 1000000,
+            "fx_rate": 0.235,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Vacuum-insulated Type C cryogenic tank; cost per tonne decreases with scale"
+          },
+          "illustrative_total_project_capex_pln": {
+            "liquefaction_2tpd_pln": 29750000,
+            "storage_50t_pln": 212750000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative_pln": 290100000,
+            "eur_equivalent_approx": 68173500,
+            "fx_rate": 0.235,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Highly site-dependent. PSI CIT exemption may cover portion of qualifying CapEx — model separately."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_pln_per_kwh_ref": 0.42,
+            "eur_equivalent_per_kwh": 0.099,
+            "electricity_opex_eur_per_kg_lh2": 1.09,
+            "fx_rate": 0.235,
+            "fx_rate_date": "2026-06-15",
+            "source": "URE Polish industrial electricity price data — verify current. Renewable PPA rate may be lower (0.25–0.35 PLN/kWh at EUR 0.06–0.08/kWh) for dedicated green LH2 production.",
+            "renewable_ppa_note": "Green LH2 from dedicated renewable PPA: electricity cost approximately PLN 0.30/kWh = EUR 0.071/kWh. Electricity OpEx: EUR 0.78/kg LH2. Non-green (grid) at PLN 0.42/kWh: EUR 1.09/kg LH2."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "All PLN figures converted at PLN 1 = EUR 0.235 (2026-06-15). Verify FX rate. PLN/EUR sensitivity of ±10% translates to ±10% on all PLN-denominated OpEx items. Engineering study required before financial modelling."
+        }
+      },
+
+      "market_context": {
+        "poland_policy_position": "Polska Strategia Wodorowa 2030 targets 2 GW electrolysis by 2030. Poland is an IPCEI Hy2Tech participant. The dominant commercial actors are PKN Orlen (targeting 1 GW electrolyser capacity) and Lotos/PKN Orlen Gdańsk (refinery hydrogen hub). Bełchatów post-coal transition includes an H2 valley concept funded via Fundusz Modernizacji.",
+        "key_polish_lh2_projects_indicative": [
+          {
+            "project": "PKN Orlen Hydrogen Strategy",
+            "status": "Development — Orlen committed to 1 GW electrolysis capacity across Poland and Czech Republic by 2030. Includes production, liquefaction, and distribution for transport.",
+            "operator": "PKN Orlen S.A.",
+            "note": "Poland's dominant energy company. Orlen's hydrogen programme is the largest single pipeline in the Polish market."
+          },
+          {
+            "project": "Lotos/Orlen Gdańsk Refinery Hydrogen Hub",
+            "status": "Operational — Gdańsk refinery uses hydrogen for desulphurisation; integration of electrolytic H2 in development",
+            "operator": "PKN Orlen (post-Lotos merger)",
+            "note": "Existing hydrogen demand at Gdańsk creates immediate market for locally produced LH2 storage and supply"
+          },
+          {
+            "project": "Bełchatów H2 Valley",
+            "status": "Concept/early development — coal region transition concept linking decommissioned Bełchatów power plant site with hydrogen production and storage",
+            "note": "Fundusz Modernizacji relevant; site has existing grid infrastructure"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Heavy road transport (PKN Orlen developing LH2 refuelling network along Polish motorways — A1, A2, A4 corridors)",
+          "Industrial decarbonisation (steel — ArcelorMittal Poland; chemicals — Ciech, Anwil)",
+          "Rail transport (PKP intercity hydrogen train pilot concepts)",
+          "Export potential — proximity to German hydrogen demand via Baltic pipeline or ISO tanker"
+        ],
+        "supply_chain_note": "Poland has limited domestic LH2 production and no established commercial LH2 supply chain. Air Products and Linde operate industrial gas infrastructure. Electrolysis technology suppliers include Hydrogenious LOHC, Nel Hydrogen. CCGT gas infrastructure in Poland (Gaz-System) provides pipeline hydrogen transport context but not LH2 direct analogue.",
+        "grid_decarbonisation_note": "Poland's ~70% coal electricity mix is the single biggest barrier to green LH2 credibility. Without a dedicated renewable PPA, LH2 produced from Polish grid electricity will not qualify as 'renewable fuel of non-biological origin' under EU Delegated Regulation 2023/1184 Article 3 (carbon intensity threshold). This is a fundamental constraint that must be addressed in project design before any financial commitment."
+      },
+
+      "notes": "Poland is an emerging market for LH2 with strong policy ambition but structural constraints. The SEVESO III safety pathway via WIOŚ and PSP is clear but demanding. The most material investment risks are: (1) Grid decarbonisation — Polish coal-heavy electricity mix requires dedicated renewable PPA for green LH2 qualification; (2) PLN currency risk — all support grants, tariffs, and operational revenues are in PLN, creating material FX exposure for EUR-reporting investors; (3) PSI eligibility confirmation — the CIT exemption is a major incentive but location-dependent. KPO/FEnIKS grant availability has been subject to rule of law conditionality — verify current EC disbursement status with NFOŚiGW. All grant parameters, PLN/EUR rate, and industrial electricity prices must be verified before use."
     }
   }
 }

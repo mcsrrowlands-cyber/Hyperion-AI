@@ -400,6 +400,200 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Cyprus's primary LH2 investment case is as a TRANSIT and BUNKERING hub rather than a large-scale production location: the island's exceptional solar resource (1,900–2,000 kWh/kWp p.a. — highest in the EU) combined with the planned EuroAsia Interconnector (Cyprus–Greece–Israel HVDC cable) creates a potential green H2 export platform for the Eastern Mediterranean corridor. The island grid constraint (TSOC absorption caps) limits domestic electricity for electrolysis without the Interconnector. Safety regime: SEVESO III via Ο Νόμος αρ. 42(Ι)/2016 — Control of Major Accident Hazards Law. CIT: 12.5% — one of the lowest in the EU.",
+
+      "permitting_p50_months": 28,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or FiT in Cyprus. Standalone LH2 facilities operate on a tolling or merchant basis. ΙΠΕΚ (Institute for the Promotion of Research and Innovation — ipekipek.org.cy) and RESTART 2021–2027 programme provide R&D grants. EU cohesion funds (ERDF) via Deputy Ministry of Research, Innovation and Digital Policy may provide CapEx support for qualifying H2 infrastructure. EU Hydrogen Bank eligible as EU member state. Source: CERA; ΙΠΕΚ; iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "cera_cy; ipek_cy; iea_hydrogen",
+      "staleness_warning": "ΙΠΕΚ and RESTART programme parameters are time-sensitive. EuroAsia Interconnector project status is a critical variable for LH2 investment thesis — verify at euroasia-interconnector.com. CERA support parameters change per round. Verify at cera.org.cy.",
+
+      "island_grid_constraint_for_lh2": {
+        "critical_note": "CRITICAL: LH2 production from electrolysis requires large-scale electricity. Cyprus's island grid (TSOC — total peak ~700 MW) imposes instantaneous RES penetration caps. Without the EuroAsia Interconnector, the volume of new electrolysis capacity is tightly capped. LH2 import for bunkering (via ISO cryogenic tanker ship) bypasses this constraint entirely and is the more viable near-term pathway.",
+        "euroasia_interconnector_dependency": "The EuroAsia Interconnector (2,000 MW HVDC, Cyprus–Crete–Israel) would transform the LH2 electrolysis case: Cyprus solar + Interconnector would enable GW-scale electrolysis with direct export to European and Mediterranean H2 demand. Verify current project timeline at euroasia-interconnector.com before committing to production-based LH2 investment thesis.",
+        "bunkering_as_primary_pathway": "LH2 IMPORT for maritime bunkering at Vasilikos Energy Centre or Limassol port does not require large-scale domestic electricity and bypasses the island grid constraint. This is the more viable near-term LH2 investment pathway for Cyprus."
+      },
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Ο Νόμος αρ. 42(Ι)/2016 — Ο περί Ελέγχου των Κινδύνων Μεγάλων Ατυχημάτων που Προκαλούνται από Επικίνδυνες Ουσίες Νόμος (Control of Major Accident Hazards Law) — SEVESO III Cyprus",
+            "relevance": "Cypriot SEVESO III transposition. Lower tier (≥10 t flammable gas including LH2): notify Τμήμα Επιθεώρησης Εργασίας (Department of Labour Inspection); prepare MAPP and internal emergency plan. Upper tier (≥50 t flammable gas): detailed έκθεση ασφαλείας (safety report), external emergency plan (σχέδιο εκτάκτου ανάγκης), public information duty, periodic inspection."
+          },
+          {
+            "instrument": "Νόμος αρ. 140(Ι)/2005 — Ο περί Εκτίμησης των Επιπτώσεων στο Περιβάλλον από Ορισμένα Έργα και Σχέδια Νόμος (EIA Law 140(I)/2005)",
+            "relevance": "EIA for LH2 facilities above threshold — administered by Τμήμα Περιβάλλοντος (Department of Environment)."
+          },
+          {
+            "instrument": "Νόμος για την Πρόληψη και Αντιμετώπιση Πυρκαγιών (Fire Service Law) and Cyprus Fire Service regulations",
+            "relevance": "Fire safety classification and permits for LH2 storage and dispensing; Πυροσβεστική Υπηρεσία (Cyprus Fire Service) administers."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Town and Country Planning Law (Cap. 96) as amended",
+            "relevance": "Development permission for LH2 facility; Town Planning and Housing Department administers. Industrial zone designation required."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Ενεργειακή Στρατηγική Κύπρου 2022–2030 (Cyprus Energy Strategy)",
+            "relevance": "Includes H2 component; identifies EuroAsia Interconnector as enabler for green H2 export; Vasilikos Energy Centre as potential H2 hub."
+          },
+          {
+            "instrument": "EuroHydrogen — Eastern Mediterranean H2 Export Concept",
+            "relevance": "Conceptual project for Cypriot green H2 export to European markets via EuroAsia Interconnector cable corridor. Verify current project status."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — tender rounds (EC Regulation)",
+            "relevance": "Cyprus is eligible as EU member state. LH2 production/storage may qualify. Verify at innovation-fund.ec.europa.eu."
+          }
+        ]
+      },
+
+      "seveso_iii_regime": {
+        "competent_authority": "Τμήμα Επιθεώρησης Εργασίας (Department of Labour Inspection — under Ministry of Labour and Social Insurance) jointly with Τμήμα Περιβάλλοντος (Department of Environment)",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lh2_classification": "LH2 classified as flammable gas (Category 2, Annex I Part 1 of SEVESO III as transposed by Νόμος αρ. 42(Ι)/2016). Thresholds apply to total site quantity.",
+        "lower_tier_obligations": "Notify Τμήμα Επιθεώρησης Εργασίας; prepare πολιτική πρόληψης μεγάλων ατυχημάτων (MAPP); εσωτερικό σχέδιο εκτάκτου ανάγκης (internal emergency plan).",
+        "upper_tier_obligations": "Prepare έκθεση ασφαλείας (safety report) acceptable to Τμήμα Επιθεώρησης Εργασίας; εξωτερικό σχέδιο εκτάκτου ανάγκης (external emergency plan) prepared by Civil Defence (Πολιτική Άμυνα); δικαίωμα πληροφόρησης (public information duty); periodic inspection.",
+        "legal_basis": "Νόμος αρ. 42(Ι)/2016, Παράρτημα I — dangerous substance thresholds.",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 8,
+        "authority_assessment_months": 6,
+        "notes": "Cyprus SEVESO III authority (Department of Labour Inspection) has limited experience with large-scale cryogenic H2 facilities — novel technology assessment may require additional time and expert engagement. English is widely used in Cypriot professional and regulatory contexts. Pre-application engagement strongly recommended. Allow additional contingency for island administration capacity."
+      },
+
+      "permitting": {
+        "planning_authority": "Town Planning and Housing Department for development permission; Τμήμα Επιθεώρησης Εργασίας for SEVESO III; Τμήμα Περιβάλλοντος for EIA and environmental permit",
+        "timeline_p50_months": 28,
+        "timeline_range_months": { "min": 18, "max": 48 },
+        "parallel_consent_tracks": [
+          "Development permission (Town and Country Planning Law) — 12–20 months",
+          "SEVESO III notification / έκθεση ασφαλείας — 3–14 months post-submission",
+          "EIA (Department of Environment) — 4–8 months (if required)",
+          "Fire Service permit — concurrent with planning"
+        ],
+        "appeal_risk": "medium",
+        "notes": "P50 of 28 months assumes lower-tier SEVESO III site at Vasilikos or Limassol port industrial area. Upper-tier adds additional time. English common law administrative tradition makes documentation processes familiar to international investors. Limited regulatory capacity creates timeline risk for novel technology."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). For LH2 production from electrolysis, TSOC island grid absorption capacity is the critical constraint.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "TSOC Ltd (Transmission System Operator of Cyprus); EAC (Electricity Authority of Cyprus) for distribution",
+        "island_grid_critical_constraint": "TSOC's instantaneous RES penetration caps severely limit the additional electricity available for electrolysis without grid storage or the EuroAsia Interconnector. This is the fundamental constraint for LH2 PRODUCTION in Cyprus. LH2 IMPORT (bunkering) bypasses this constraint.",
+        "electricity_price_note": "Cypriot electricity prices for large consumers are among the highest in the EU due to island generation structure (gas CCGT + solar). Industrial electricity for electrolysis at Cypriot grid prices would result in high LH2 unit costs vs. other EU jurisdictions.",
+        "solar_ppa_potential": "Co-located solar PPA on the same Vasilikos/industrial site could provide low-cost electricity for electrolysis BUT is subject to TSOC instantaneous grid absorption limits. EuroAsia Interconnector would change this calculation entirely.",
+        "notes": "LH2 import for bunkering is the recommended near-term pathway for Cyprus — avoids grid electricity constraint entirely. LH2 production investment thesis is contingent on EuroAsia Interconnector progress."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Cyprus. Revenue is via tolling contracts for bunkering/dispensing. No state commodity floor.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for LH2 import receipt, storage, and dispensing to maritime and industrial offtakers; no commodity price floor from the state.",
+        "ipek_restart_grants": {
+          "applicable": "ΙΠΕΚ (Institute for the Promotion of Research and Innovation) and RESTART 2021–2027 programme provide R&D grants for clean technology development including H2. Verify current calls at ipekipek.org.cy.",
+          "staleness_warning": "Programme calls are time-limited. Verify current availability."
+        },
+        "eu_cohesion_funds": {
+          "applicable": "ERDF cohesion funds via Deputy Ministry of Research, Innovation and Digital Policy may provide CapEx support for qualifying H2 infrastructure.",
+          "staleness_warning": "Verify open calls at esif.org.cy or Deputy Ministry publications."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": "Cyprus is eligible as EU member state for EU Hydrogen Bank auction rounds.",
+          "source": "innovation-fund.ec.europa.eu — verify current round"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "LH2 bunkering at Vasilikos Energy Centre or Limassol port serving Mediterranean maritime corridor (container ships, ferry operators, cruise lines increasingly exploring H2). High Cypriot electricity prices create demand for LH2 from cheaper non-island sources.",
+          "credit_risk_note": "Maritime bunkering revenue is contractually dependent on offtake agreements with shipping operators. CERA and EAC as potential counterparties. International ship operators as end-users."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: 12.5% CIT — lowest in the EU (with Ireland). Low absolute tax rate means timing benefit of accelerated depreciation is modest in absolute EUR terms. Primary Cyprus tax advantage is the 12.5% statutory rate itself.",
+        "cit_rate_pct": 12.5,
+        "legal_basis": "Income Tax Law Law 118(I)/2002 §§24–28",
+        "capex_incentives": {
+          "standard_depreciation_solar_pct_pa": 20.0,
+          "standard_depreciation_industrial_machinery_pct_pa": "10–15% (verify applicable category for liquefaction plant equipment)",
+          "method": "straight-line",
+          "legal_basis": "Income Tax Law — depreciation rates schedule",
+          "_rule_3b_analysis": "At 12.5% CIT and 10% WACC: liquefaction plant (10% p.a. straight-line, 10-year basis): NPV of tax shield ≈ 7.7% of qualifying CapEx. Under standard 20% p.a. solar depreciation: NPV ≈ 10.4%. The low absolute CIT rate (12.5%) limits the absolute EUR benefit of any accelerated depreciation — but the low rate itself is the primary structural advantage.",
+          "note": "No special LH2 accelerated depreciation in Cyprus. Standard schedule applies. Low CIT rate is the primary benefit."
+        },
+        "dividend_withholding_tax_pct": 0.0,
+        "dividend_wht_note": "ZERO dividend WHT for non-resident shareholders — a significant structural advantage for international holding structures",
+        "special_defence_contribution_note": "SDC (Special Defence Contribution) at 17% applies ONLY to Cyprus tax-resident shareholders — NOT to non-resident corporate investors. For international investors, effective tax profile is 12.5% CIT + 0% WHT.",
+        "holding_structure_note": "Cyprus is widely used as a holding jurisdiction for Mediterranean and European energy investments. The 12.5% CIT + 0% WHT + participation exemption + extensive DTA network creates an efficient structure for LH2 project companies investing across Eastern Mediterranean jurisdictions."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "Cyprus adopts EN standards via CYS (Cyprus Organisation for Standardisation): CYS EN 1251 (Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "ATEX zone classification per Cyprus implementation of Directive 2014/34/EU; documented in έκθεση ασφαλείας",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (Τμήμα Περιβάλλοντος permit required)", "On-site fuel use"],
+          "regulatory_basis": "BOG management addressed in έκθεση ασφαλείας and environmental permit from Τμήμα Περιβάλλοντος.",
+          "environmental_note": "Vented hydrogen is not a GHG (GWP ≈ 0) but is a safety hazard. Island location may create additional public sensitivity to incidents."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: indicative inputs for IRR, NPV, CapEx payback, and DSCR modelling.",
+        "_rule_3c_note": "Cyprus is EUR-denominated — no FX conversion required.",
+        "illustrative_bunkering_hub": {
+          "description": "LH2 import terminal and bunkering hub (not production from electrolysis) — the recommended near-term Cyprus LH2 model",
+          "scale": "Import receipt jetty + 100 tonne vacuum-insulated storage + dispensing to maritime vessels",
+          "storage_tank_capex_eur": {
+            "per_tonne_midpoint": 1200000,
+            "notes": "Maritime/port location may require higher-spec containment systems; cost at upper end of standard range. Source: IEA, The Future of Hydrogen, 2019"
+          },
+          "jetty_and_bop_capex_eur_indicative": 15000000,
+          "effective_cit_pct": 12.5,
+          "dividend_wht_pct": 0.0,
+          "note": "LH2 import terminal avoids island grid electricity constraint entirely. Revenue from maritime bunkering at Limassol or Vasilikos port. Tax profile (12.5% CIT, 0% WHT) is highly competitive for equity returns on distribution."
+        },
+        "illustrative_electrolysis_production": {
+          "note": "CONDITIONAL on EuroAsia Interconnector completion. Until Interconnector operational: electrolysis scale is strictly limited by TSOC grid absorption capacity. Do NOT model large-scale Cypriot LH2 production without confirming Interconnector status at euroasia-interconnector.com.",
+          "post_interconnector_advantage": "Post-EuroAsia Interconnector: Cypriot solar (1,900–2,000 kWh/kWp) + 2,000 MW HVDC import/export capacity would create one of Europe's most attractive green H2 export platforms — ultra-low LCOE solar + direct Mediterranean maritime access."
+        }
+      },
+
+      "market_context": {
+        "cy_hydrogen_policy": "Cyprus Energy Strategy 2022–2030 includes H2 component focused on export potential and Vasilikos Energy Centre. EuroAsia Interconnector is the transformational project. Eastern Mediterranean H2 export corridor (including Israel, Egypt, Greece) is the strategic context.",
+        "key_cy_lh2_projects_indicative": [
+          {
+            "project": "Vasilikos Energy Centre H2 Concept",
+            "status": "Conceptual — Vasilikos industrial area identified as potential H2 hub location; no confirmed investment as of mid-2025. Verify at state energy ministry publications.",
+            "note": "Vasilikos already hosts LNG infrastructure concept (FSRU) — industrial cluster effect makes it natural LH2 hub location."
+          },
+          {
+            "project": "EuroHydrogen — Eastern Mediterranean H2 Pipeline/Export Concept",
+            "status": "Conceptual — academic/policy discussion stage; no confirmed investment",
+            "note": "Concept involves Cyprus as H2 transit hub from Middle Eastern and Eastern Mediterranean solar production to European demand via EuroAsia Interconnector corridor."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Maritime bunkering — Limassol port Mediterranean shipping corridor (container, bulk, ferry, cruise)",
+          "Eastern Mediterranean H2 export hub — post-EuroAsia Interconnector green H2 from Cypriot solar to European buyers",
+          "Tourism/hotel sector electricity decarbonisation via H2 cogeneration (niche)",
+          "Holding company structures for pan-Mediterranean H2 projects (12.5% CIT advantage)"
+        ],
+        "tax_holding_note": "Cyprus's 12.5% CIT + 0% WHT + English common law + extensive DTA network makes it an attractive holding jurisdiction for pan-Mediterranean LH2 project structures, even where the underlying projects are in other Eastern Mediterranean countries (Israel, Greece, Egypt)."
+      },
+
+      "notes": "Cyprus's LH2 investment case is bifurcated: (1) LH2 IMPORT BUNKERING — viable near-term pathway at Limassol/Vasilikos port; avoids island grid constraint; 12.5% CIT + 0% WHT provides efficient tax structure; English common law familiar to international maritime investors; (2) LH2 PRODUCTION from solar electrolysis — CONDITIONAL on EuroAsia Interconnector completion; potentially transformational given best-in-EU solar resource (1,900–2,000 kWh/kWp) but structurally blocked by island grid without the Interconnector. The SEVESO III regime (Νόμος αρ. 42(Ι)/2016) provides the legal framework but limited Cypriot regulatory experience with large-scale LH2 creates timeline uncertainty. All parameters must be verified with CERA (cera.org.cy) and ΙΠΕΚ (ipekipek.org.cy) before project commitment. EuroAsia Interconnector status must be independently verified on analysis date — it is the single most material variable for the Cypriot LH2 electrolysis thesis."
     }
   }
 }

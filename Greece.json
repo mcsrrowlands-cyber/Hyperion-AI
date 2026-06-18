@@ -505,6 +505,241 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Greece has the highest solar irradiation in the EU (1,400–1,900 kWh/kWp p.a.), making the economics of solar-powered electrolysis and LH2 production among the most competitive in Europe. Greece participates in IPCEI Hy2Tech and has a National Hydrogen Strategy targeting 2 GW electrolysis by 2030. The primary regulatory gate is the SEVESO III safety regime administered by ΥΠΕΝ (Ministry of Environment and Energy) and associated authorities. Piraeus port LH2 bunkering and SE Mediterranean export hub ambitions provide potential long-dated demand. No FX risk — EUR is the domestic currency.",
+
+      "permitting_p50_months": 28,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism. Standalone facilities operate on a tolling or merchant basis. The Greek Recovery and Resilience Facility (ΤΑΑ — Ταμείο Ανάκαμψης και Ανθεκτικότητας) allocates over EUR 500 million for hydrogen including storage infrastructure. EU Hydrogen Bank competitive funding rounds are available. ΕΣΠΑ 2021–2027 (Structural Funds — Greek Operational Programmes) and ΕΠΑνΕΚ (Business Development programme) provide additional CapEx grant routes. IPCEI Hy2Tech funding is accessible for qualifying integrated projects. Source: Greek Ministry of Development (ministry-espa.gr); European Commission DG ENER.",
+      "revenue_floor_description": null,
+      "source": "rae_gr; ipcei_hy2tech; iea_hydrogen",
+      "staleness_warning": "Greek TAA / RRF grant competition parameters, ΕΣΠΑ programme call conditions, and industrial electricity prices are time-sensitive. Verify at Ministry of Development (development.gov.gr) and RAE (rae.gr) before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "ΚΥΑ 172058/ΕYΑΛ/458/2019 — Κοινή Υπουργική Απόφαση (Joint Ministerial Decision implementing SEVESO III Directive 2012/18/EU)",
+            "relevance": "Greek transposition of SEVESO III. Mandatory safety regime for LH2 storage at or above threshold quantities. Lower tier (≥10 t flammable gas, including LH2): notification to ΥΠΕΝ, prepare μέτρα πρόληψης ατυχημάτων (MAPP equivalent) and on-site emergency plan. Upper tier (≥50 t): detailed μελέτη ασφαλείας (safety study / report), external emergency plan, public information duty, periodic inspection by ΥΠΕΝ."
+          },
+          {
+            "instrument": "ΠΔ 16/1996 — Ελάχιστες προδιαγραφές ασφάλειας και υγείας (Minimum safety and health requirements) — Greek ATEX transposition",
+            "relevance": "Explosive atmosphere risk assessment; zone classification around LH2 storage and dispensing areas."
+          },
+          {
+            "instrument": "Νόμος 4442/2016 — New licensing framework for economic activities (simplification)",
+            "relevance": "Simplification of industrial licensing procedures for energy storage activities; may reduce some administrative steps for smaller LH2 facilities."
+          },
+          {
+            "instrument": "Νόμος 1428/1984 and successor legislation on industrial installations",
+            "relevance": "General framework for industrial plant licensing — applies to liquefaction plant and LH2 storage as industrial installations."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Νόμος 4685/2020 — Fast-Track Licensing of RES and Energy Projects",
+            "relevance": "Streamlined single environmental permit procedure (AEPO — Άδεια Εγκατάστασης και Λειτουργίας). May apply to integrated solar-electrolysis-LH2 projects as combined energy investments. EAAD (Ελληνική Αρχή Περιβαλλοντικής Αξιολόγησης) is competent EIA authority."
+          },
+          {
+            "instrument": "Νόμος 4759/2020 — Spatial Planning Modernisation",
+            "relevance": "Land use designations relevant to industrial hydrogen facility siting; industrial zones (ΒΕΠΕ — industrial areas) are the preferred location for LH2 infrastructure."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Εθνική Στρατηγική για το Υδρογόνο (National Hydrogen Strategy) 2020–2030",
+            "relevance": "Targets 2 GW electrolysis capacity by 2030; identifies solar-powered green hydrogen and LH2 as export vectors; positions Greece as SE Mediterranean H2 hub. Ministry of Environment and Energy (ΥΠΕΝ) is responsible ministry."
+          },
+          {
+            "instrument": "ΤΑΑ — Ταμείο Ανάκαμψης και Ανθεκτικότητας (Greek Recovery and Resilience Facility / RRF implementation)",
+            "relevance": "Allocates over EUR 500m for hydrogen including production and storage enabling infrastructure. Primary CapEx grant route for large-scale projects."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech — Greece as participating Member State",
+            "relevance": "Greece participates in IPCEI Hy2Tech (EC clearance 2022). Greek industrial partners may access IPCEI funding for integrated hydrogen production and storage projects. DEI (Public Power Corporation) has a stated H2 strategy."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — Competitive Grant Rounds (European Commission)",
+            "relevance": "Greek LH2 projects producing renewable hydrogen are eligible. First auction concluded 2024. Verify current round at European Hydrogen Bank portal."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "ΚΥΑ 172058/ΕYΑΛ/458/2019 (Greek SEVESO III transposition)",
+        "competent_authority_primary": "ΥΠΕΝ — Υπουργείο Περιβάλλοντος και Ενέργειας (Ministry of Environment and Energy) — primary SEVESO competent authority",
+        "competent_authority_supporting": "ΕΛΙΝΥΑΕ (Ελληνικό Ινστιτούτο Υγιεινής και Ασφάλειας της Εργασίας — Hellenic Institute of Occupational Health and Safety) — technical coordination on workplace chemical safety aspects; local fire authority (Πυροσβεστικό Σώμα / Hellenic Fire Corps) for emergency planning",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lower_tier_obligations": "Notify ΥΠΕΝ; prepare μέτρα πρόληψης ατυχημάτων (major accident prevention policy); on-site emergency plan; ΥΠΕΝ inspection",
+        "upper_tier_obligations": "Prepare detailed μελέτη ασφαλείας (safety study) acceptable to ΥΠΕΝ; external emergency plan by local civil protection authority; public information duty; periodic ΥΠΕΝ inspection",
+        "legal_basis": "ΚΥΑ 172058/ΕYΑΛ/458/2019, Παράρτημα Ι (Annex I) — υδρογόνο (hydrogen) listed as a flammable gas in Category 2; SEVESO III thresholds (10t lower, 50t upper) apply",
+        "safety_study_preparation_months_estimate": 6,
+        "authority_assessment_months_estimate": 4,
+        "notes": "ΥΠΕΝ is the primary competent authority. Pre-application engagement with ΥΠΕΝ's General Directorate for Environmental Policy is strongly recommended. Greek public administration reform (ΕΣΠΑ-funded digitalisation) is improving regulatory capacity but processing times for novel technology remain uncertain. Piraeus port and industrial zone (ΒΕΠΕ) siting will have additional local authority consultation requirements."
+      },
+
+      "permitting": {
+        "planning_authority": "EAAD for EIA (Hellenic Environmental Authority); ΥΠΕΝ for SEVESO safety study; Regional Authority for installation and operation permits; Πυροσβεστικό Σώμα (Fire Corps) for fire safety approval",
+        "timeline_p50_months": 28,
+        "timeline_range_months": { "min": 18, "max": 48 },
+        "law_4685_2020_applicability": "Integrated solar-electrolysis-LH2 projects may benefit from Law 4685/2020 single-procedure (AEPO) streamlining if the entire chain qualifies as a combined energy installation. Standalone LH2 storage (without co-located generation) uses the standard industrial permitting route under Law 4442/2016.",
+        "parallel_consent_tracks": [
+          "SEVESO μελέτη ασφαλείας (safety study) submission and ΥΠΕΝ assessment — 6–10 months post-submission",
+          "EIA / AEPO environmental permit (EAAD) — 9–15 months (may be combined with planning under Law 4685/2020 for integrated projects)",
+          "Installation permit (Άδεια Εγκατάστασης) from Regional Authority — concurrent with EIA",
+          "Fire Corps approval (Πυροσβεστικό Σώμα) — concurrent with installation permit"
+        ],
+        "appeal_risk": "medium",
+        "appeal_mechanism": "Council of State (Συμβούλιο της Επικρατείας); Administrative Courts of Appeal",
+        "notes": "P50 of 28 months assumes a greenfield lower-tier SEVESO facility in an established industrial zone. Upper-tier sites (≥50t LH2) add 6–10 months for safety study preparation and ΥΠΕΝ assessment. Law 4685/2020 has materially improved environmental permitting speed — integrated solar-LH2 projects should seek single-procedure coverage. Greek administrative capacity constraints remain: novel technology installations where case officers lack LH2 familiarity may face delays. Piraeus port (for LH2 bunkering) would require additional Harbour Master and Ministry of Shipping approval."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Greece's exceptional solar resource (1,400–1,900 kWh/kWp p.a.) makes dedicated solar PPA the most commercially attractive electricity supply strategy — reducing LH2 unit cost and maximising green credentials.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "ADMIE / IPTO (Ανεξάρτητος Διαχειριστής Μεταφοράς Ηλεκτρικής Ενέργειας) — TSO; DEDDIE/HEDNO for distribution-connected",
+        "grid_queue_risk": "HIGH (same mainland backlog as RES projects) — significant queue for large industrial consumers seeking transmission-connected supply. Island grid penetration caps may affect LH2 projects on islands.",
+        "electricity_price_risk": "MEDIUM — Greek industrial electricity prices (EUR-denominated, no FX risk) are moderate. Solar PPA from co-located or dedicated Greek solar provides among the cheapest green electricity in Europe — a significant competitive advantage for Greek LH2 economics.",
+        "solar_ppa_lcoe_note": "Greek solar LCOE is approximately EUR 25–40/MWh for utility-scale ground-mounted (southern mainland, Crete, Peloponnese) based on 1,600–1,900 kWh/kWp resource and EUR 550,000/MWdc CapEx. At EUR 35/MWh PPA and 11 kWh/kg: electricity cost ≈ EUR 0.385/kg LH2 — dramatically lower than northern European peers (UK ≈ EUR 1.10/kg, Germany ≈ EUR 0.77/kg). This is Greece's primary LH2 competitive advantage. Source: JRC PVGIS (irradiation); IEA LCOE benchmarks 2023.",
+        "island_bunkering_note": "LH2 bunkering at Piraeus port or Heraklion (Crete) for maritime fuelling would use shore-based supply via road ISO cryogenic tanker or dedicated pipeline from mainland liquefaction plant. Island LH2 production from local solar is theoretically attractive but faces island grid constraints for large-scale electrolysis power supply."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way FIP or one-way FiT in Greece. Revenue is via tolling contracts with no state commodity floor. TAA/RRF and IPCEI provide CapEx grants — capital subsidies, not revenue mechanisms.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing; no state commodity price floor",
+        "taa_rrf_capex_grant": {
+          "applicable": true,
+          "description": "Greek TAA (Recovery and Resilience Facility) allocates over EUR 500m for hydrogen including storage enabling infrastructure. Ministry of Development administers grant competitions. Eligible costs include liquefaction plant, cryogenic storage tanks, and associated civil works.",
+          "indicative_grant_rate": "Aid intensity limits apply under CEEAG / GBER Article 41. Indicative range: 35–55% of eligible CapEx for qualifying projects in development regions (note: much of Greece qualifies as a less-developed or transition region for EU Structural Fund purposes). Verify at development.gov.gr.",
+          "staleness_warning": "TAA grant call parameters are time-sensitive. Verify current open calls at Ministry of Development (development.gov.gr) and EU TAA portal."
+        },
+        "ipcei_hy2tech": {
+          "applicable": true,
+          "description": "Greece participates in IPCEI Hy2Tech (EC clearance 2022). Greek industrial hydrogen projects may access IPCEI funding for integrated production and storage. DEI (Δημόσια Επιχείρηση Ηλεκτρισμού — Public Power Corporation) and Mytilineos have stated H2 strategies.",
+          "legal_basis": "Commission Decision on IPCEI Hy2Tech, C(2022) 5358 final, 15 July 2022",
+          "staleness_warning": "Verify current Greek IPCEI national call parameters with Ministry of Development."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Greek LH2 projects producing renewable hydrogen are eligible for EU Hydrogen Bank competitive grants. First auction concluded 2024. Verify current round at European Hydrogen Bank portal.",
+          "source": "European Commission DG ENER"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a fully merchant basis — Piraeus port bunkering, industrial offtake, SE Mediterranean export via shipping. Greek maritime position (Piraeus is Europe's largest port by passenger volume) provides significant logistics advantage.",
+          "export_hub_note": "Greece has articulated ambitions as an SE Mediterranean H2 export hub. LH2 shipping from Greek liquefaction facilities to German import terminals (via North Sea) or to Italian/French ports is a plausible long-term revenue vector — but subject to global LH2 shipping supply chain maturity (2030+ realistically)."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Development Law 4887/2022 enhanced depreciation (200% Year 1) and profit tax exemption options are CapEx TIMING and base benefits — not permanent CIT rate reductions. NPV timing benefit at 22% CIT is meaningful and should be quantified.",
+        "cit_rate_pct": 22.0,
+        "legal_basis": "Income Tax Code Law 4172/2013 Article 58",
+        "development_law_4887_2022": {
+          "applicable": true,
+          "description": "Development Law 'Greece 2.0' (Law 4887/2022) qualifying LH2 infrastructure investments may elect: (a) tax exemption on profits for up to 15 years; (b) enhanced depreciation at 200% of standard rate in Year 1; or (c) CapEx subsidy grant. LH2 storage and liquefaction plant are expected to qualify as industrial energy infrastructure under the eligible categories.",
+          "legal_basis": "Law 4887/2022 (Development Law)",
+          "npv_timing_benefit": "At 22% CIT and 10% WACC: Enhanced depreciation (200% Year 1 vs. standard 5% p.a. straight-line over 20 years): NPV of tax shield under enhanced option ≈ 20.1% of qualifying CapEx vs. 13.2% standard. Timing benefit ≈ 6.9ppts per €1 of qualifying CapEx. Tax exemption option may provide greater total benefit for high-cashflow years.",
+          "state_aid_note": "Development Law incentives are cleared under GBER — verify maximum aid intensity ceiling for the specific project category and location (aid intensity varies by region)."
+        },
+        "no_fx_risk": "Greece is EUR-denominated — no FX risk on tax calculations, revenues, or debt service."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "ΕΛΟΤ EN 1251 (Greek adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "Zone classification per ΕΛΟΤ EN 60079 (ATEX — Greek adoption); ΠΔ 16/1996 explosive atmosphere safety regulations",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion / controlled flare (ΥΠΕΝ environmental permit condition governs)", "Use as on-site fuel"],
+          "regulatory_basis": "BOG must be addressed as a major accident scenario in the μελέτη ασφαλείας under ΚΥΑ 172058/ΕYΑΛ/458/2019. ΥΠΕΝ environmental permit conditions govern atmospheric releases.",
+          "greek_climate_note": "Greek summer ambient temperatures (35–42°C on southern mainland and islands) increase BOG rates compared to northern European benchmarks — site-specific thermal management calculations are required."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, and DSCR modelling. Figures are indicative benchmarks only.",
+        "_rule_3c_note": "Greece is EUR-denominated — no FX conversion required. All figures in EUR native.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000,
+            "notes": "Vacuum-insulated Type C cryogenic tank; scale economies apply"
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Greek civil construction costs are competitive — lower than northern EU but higher than southeastern EU. Excludes grid connection reinforcement."
+          },
+          "opex_electricity_solar_ppa_scenario": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "solar_ppa_price_eur_per_kwh_illustrative": 0.035,
+            "electricity_opex_eur_per_kg_lh2_solar_ppa": 0.385,
+            "grid_electricity_price_eur_per_kwh_indicative": 0.10,
+            "electricity_opex_eur_per_kg_lh2_grid": 1.10,
+            "competitive_advantage_note": "Greek solar PPA at EUR 35/MWh gives electricity opex of EUR 0.385/kg LH2 — approximately 65% lower than grid electricity and 50–70% lower than northern European solar PPA benchmarks. This is Greece's primary LH2 cost competitiveness driver.",
+            "source": "Solar PPA price: JRC PVGIS irradiation data + IEA LCOE benchmarks 2023. Grid price: indicative Greek industrial tariff — verify at RAE before use."
+          },
+          "boil_off_loss_pct_per_day_adjusted": 0.6,
+          "bog_note": "BOG rate adjusted slightly upward from northern European baseline to reflect Greek summer ambient temperatures — site-specific calculation required.",
+          "note": "Illustrative inputs only. Engineering study required before financial modelling. Development Law 4887/2022 enhanced depreciation or profit exemption should be modelled as a separate scenario — potentially adding 6–7ppts to project IRR depending on election and qualification."
+        }
+      },
+
+      "market_context": {
+        "greece_policy_position": "Greece's National Hydrogen Strategy 2020–2030 positions the country as an SE Mediterranean H2 production and export hub, exploiting the highest solar irradiation in the EU. Primary vectors: green hydrogen via solar electrolysis for industrial, maritime, and export use; LH2 as the preferred long-distance export vector via Black Sea and Mediterranean shipping.",
+        "key_greece_lh2_projects_indicative": [
+          {
+            "project": "DEI (Public Power Corporation) H2 Strategy — Ptolemaida Green H2",
+            "status": "Early development — DEI exploring green H2 at Ptolemaida site as coal phase-out replacement; LH2 storage relevant for export",
+            "operator": "Δημόσια Επιχείρηση Ηλεκτρισμού (DEI) A.E.",
+            "note": "Ptolemaida Just Transition Fund supports industrial repurposing; H2 is a stated DEI strategic priority"
+          },
+          {
+            "project": "Piraeus Port LH2 Bunkering Concept",
+            "status": "Concept/early study — Piraeus Port Authority and OLP exploring LH2 bunkering infrastructure for maritime decarbonisation",
+            "operator": "ΟΛΠ A.E. (Piraeus Port Authority / COSCO-controlled)",
+            "note": "Piraeus is Europe's largest port by passenger volume and a major container hub; LH2 bunkering demand from IMO decarbonisation mandates is a realistic medium-term driver"
+          },
+          {
+            "project": "Mytilineos H2 Storage and Export",
+            "status": "Early concept — Mytilineos S.A. exploring solar-powered H2 production and LH2 export",
+            "operator": "Mytilineos Holdings S.A.",
+            "note": "Mytilineos has strong solar development pipeline; LH2 export aligns with SE Mediterranean hub ambitions"
+          },
+          {
+            "project": "Corinth Pipeworks H2-Ready Pipeline and Storage Studies",
+            "status": "Early assessment — H2-ready pipeline infrastructure and storage compatibility study",
+            "note": "Compressed H2 pipeline is primary focus; LH2 relevant for long-distance maritime export"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Maritime decarbonisation — Piraeus port LH2 bunkering for shipping (IMO 2030/2050 targets); Mediterranean shipping lanes are among Europe's busiest",
+          "SE Mediterranean H2 export — shipping LH2 to Northern European import terminals (Germany, Netherlands) as alternative to pipeline routes",
+          "Industrial decarbonisation — aluminium (Elvalhalcor), chemicals, refining H2 demand",
+          "Aviation — LH2 propulsion concept for Aegean island aviation; Athens airport infrastructure studies",
+          "Export to Central/Eastern Europe — H2 transit via interconnectors (EastMed, TAP corridor) or LH2 shipping via Black Sea"
+        ],
+        "competitive_advantage_summary": "Greece's LH2 competitive advantage is fundamentally based on solar economics. At 1,600–1,900 kWh/kWp p.a. in southern mainland and island sites, solar LCOE is EUR 25–40/MWh — yielding electricity costs for electrolysis of EUR 0.025–0.040/kg H2-equivalent, which translates to liquefaction electricity cost of approximately EUR 0.275–0.440/kg LH2. This is materially below northern European (UK, Germany, Netherlands) benchmarks. The Development Law 4887/2022 CapEx incentive and TAA/RRF grants further improve project economics."
+      },
+
+      "notes": "Greece is among the most compelling European jurisdictions for LH2 production infrastructure due to the combination of exceptional solar resource, EUR domestic currency (no FX risk), competitive Development Law tax incentives, TAA/RRF CapEx grants, and Piraeus port logistics. The SEVESO III regime under ΚΥΑ 172058/ΕYΑΛ/458/2019 provides a structured safety pathway administered by ΥΠΕΝ. The principal development risks are: (1) the mainland grid connection backlog (same constraint as solar PV development — co-located or dedicated solar with private wire connection is the preferred model to avoid grid queue); (2) the 2012–2014 retroactive FiT precedent (relevant to investor due diligence on political risk, though not directly applicable to LH2 tolling revenue); (3) ΥΠΕΝ administrative capacity for novel technology safety assessments. The solar-LH2 cost advantage is Greece's defining competitive position — all financial models must quantify this explicitly against northern European alternatives. Verify all grant parameters at development.gov.gr and RAE before project commitment."
     }
   }
 }

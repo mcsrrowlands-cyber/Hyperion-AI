@@ -612,6 +612,252 @@
       "coal_phase_out_commitment": "Coal Adjustment Act (KVBG, 2020) — hard coal phase-out by 2038, potentially accelerated to 2030 under coalition discussions.",
       "source": null,
       "notes": "Germany's coal phase-out is legislated (KVBG). New coal investment is policy-incompatible. No state support for new coal. EU Taxonomy-excluded. Significant stranded-asset risk."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at −253°C and associated liquefaction plant. Germany is Europe's largest hydrogen economy by investment commitment, with the Nationale Wasserstoffstrategie (NWS) targeting 10 GW electrolysis by 2030 and active participation in IPCEI Hy2Tech and Hy2Use. The primary regulatory gate is the SEVESO III regime implemented via 12. BImSchV (Störfall-Verordnung). The dominant commercial risk is the high cost of industrial electricity for liquefaction — German Netzentgelte (grid charges) are among the highest in Europe, making renewable PPA procurement essential for LH2 cost competitiveness.",
+
+      "permitting_p50_months": 30,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD. Standalone facilities operate on a tolling basis. Where LH2 storage is integral to an IPCEI-funded or BMDV National Hydrogen Programme project, IPCEI grants provide indirect CapEx support. Klimaschutzverträge (KCfD — Carbon Contracts for Difference) under BMWK are available for industrial decarbonisation and may cover integrated LH2 facilities. Source: BMWK/BMDV Nationales Wasserstoffprogramm.",
+      "revenue_floor_description": null,
+      "source": "bmwk_hydrogen; iea_hydrogen; hse_comah_equivalent",
+      "staleness_warning": "IPCEI grant allocation, BMDV programme parameters, and KCfD eligibility criteria are time-sensitive. Netzentgelte (grid charges) change annually — verify current industrial electricity price benchmarks before use.",
+      "eu_state_aid_applicable": true,
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "12. Verordnung zur Durchführung des Bundes-Immissionsschutzgesetzes (12. BImSchV — Störfall-Verordnung), as amended to implement Directive 2012/18/EU (SEVESO III)",
+            "relevance": "Mandatory major accident hazard regime for LH2 facilities at or above SEVESO III threshold quantities. Lower tier (≥10 t LH2 flammable gas / ≥50 t liquefied flammable gas): Betriebsbereich notification, Konzept zur Verhinderung von Störfällen (major accident prevention concept — equivalent to MAPP). Upper tier (≥50 t / ≥200 t): detailed Sicherheitsbericht (safety report), internal and external emergency plan (Alarm- und Gefahrenabwehrplan), periodic inspections by Staatliche Gewerbeaufsichtsämter."
+          },
+          {
+            "instrument": "Bundes-Immissionsschutzgesetz (BImSchG) §4 — Genehmigungspflicht für genehmigungsbedürftige Anlagen",
+            "relevance": "Primary permitting law for LH2 liquefaction plant as a major industrial installation. LH2 plant above BImSchG thresholds requires formal Genehmigung via Immissionsschutzbehörde. Applies prior to commencement of operation."
+          },
+          {
+            "instrument": "Vierte Bundesimmissionsschutzverordnung (4. BImSchV) — Anhang 1",
+            "relevance": "Schedule of plant categories requiring BImSchG Genehmigung. Cryogenic gas production and storage facilities fall within relevant categories — confirm specific classification with the competent Immissionsschutzbehörde."
+          },
+          {
+            "instrument": "Betriebssicherheitsverordnung (BetrSichV) — Regulation on Industrial Safety and Health",
+            "relevance": "Safety requirements for pressure equipment, cryogenic storage vessels, and associated plant. Implements Pressure Equipment Directive 2014/68/EU in German law. Occupational safety obligations for LH2 handling."
+          },
+          {
+            "instrument": "Verordnung über Anlagen zum Umgang mit wassergefährdenden Stoffen (AwSV)",
+            "relevance": "Water hazard classification for cryogenic substances. Hydrogen is not a water-hazardous substance per se, but ancillary chemicals (coolants, lubricants) at LH2 facilities may trigger AwSV requirements."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Baugesetzbuch (BauGB) §35 — Privilegierte Vorhaben im Außenbereich",
+            "relevance": "Industrial energy infrastructure in open countryside may qualify as privileged use — relevant for LH2 hub development outside designated industrial zones. Bebauungsplan (B-Plan) change may be required for sites not yet designated industrial."
+          },
+          {
+            "instrument": "Umweltverträglichkeitsprüfungsgesetz (UVPG) — UVP-Pflicht",
+            "relevance": "Environmental impact assessment (UVP) triggered for large-scale industrial installations including LH2 liquefaction plant above relevant capacity thresholds. Competent authority integrates UVP into BImSchG Genehmigung process."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Nationale Wasserstoffstrategie (NWS) 2020, updated June 2023 — BMWK",
+            "relevance": "National hydrogen strategy targeting 10 GW domestic electrolysis by 2030. Explicitly identifies LH2 as a priority vector for heavy transport, maritime, aviation, and industrial applications. Anchors IPCEI participation and BMDV programme."
+          },
+          {
+            "instrument": "BMDV Nationales Wasserstoffprogramm — direct funding programme for hydrogen pilot and commercial infrastructure",
+            "relevance": "Federal funding programme administered by Bundesministerium für Digitales und Verkehr (BMDV) for hydrogen infrastructure including LH2 hubs at ports and industrial sites. CapEx grants available for qualifying pilot projects."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech — Important Project of Common European Interest (EC Decision SA.54625 and related decisions, 2022)",
+            "relevance": "Germany is an IPCEI Hy2Tech participant with multiple funded projects. LH2 technology development, storage equipment, and distribution infrastructure may qualify. State aid cover provided by IPCEI EC clearance."
+          },
+          {
+            "instrument": "IPCEI Hy2Use — Important Project of Common European Interest (EC Decision 2022)",
+            "relevance": "IPCEI for hydrogen use in industry — relevant for LH2 supply to industrial decarbonisation projects. Germany participates with major industrial partners."
+          },
+          {
+            "instrument": "Klimaschutzverträge (KCfD) — Carbon Contracts for Difference, BMWK",
+            "relevance": "Two-way CfD for industrial decarbonisation covering the spread between fossil fuel production cost and green alternative cost. Relevant for LH2 integrated with industrial offtakers. First tender (Pilotausschreibung) launched 2023. Verify current round parameters with BMWK."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "instrument": "12. BImSchV (Störfall-Verordnung) — German implementation of SEVESO III Directive 2012/18/EU",
+        "competent_authority": "Staatliche Gewerbeaufsichtsämter (state occupational safety offices) — competency varies by Bundesland. Environmental aspects: Umweltbehörden (Landesumweltämter). Joint competence for SEVESO sites.",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "lower_tier_threshold_tonnes_liquefied_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_liquefied_flammable_gas": 200,
+        "seveso_iii_note": "SEVESO III thresholds for flammable gases (including hydrogen): lower tier 10 t / upper tier 50 t. For liquefied flammable gases: lower tier 50 t / upper tier 200 t. These differ from UK COMAH (5 t / 50 t for flammable gases). The distinction matters for threshold planning: a small LH2 storage facility of 15 t stored mass triggers UK COMAH upper tier but only German SEVESO III lower tier.",
+        "lower_tier_obligations": "Notification to competent Gewerbeaufsichtsamt; prepare Konzept zur Verhinderung von Störfällen (major accident prevention concept — KVSP); internal emergency plan; register in ZEMA (Zentrales Meldeverfahren für Anlagen) database",
+        "upper_tier_obligations": "Detailed Sicherheitsbericht (safety report) — submitted to and reviewed by Gewerbeaufsichtsamt; external emergency plan prepared by Gemeinde/Landkreis (local authority); public information duty (§8a 12. BImSchV); periodic inspections by Gewerbeaufsicht",
+        "safety_report_review_months": 6,
+        "competent_authority_pre_engagement_recommended": true,
+        "notes": "Germany's SEVESO III implementation is generally well-structured but varies in practice by Bundesland. Bavaria and NRW have large industrial SEVESO expertise; eastern Länder may have less precedent with LH2-specific facilities. Early dialogue with the relevant Staatliches Gewerbeaufsichtsamt is strongly recommended before formal application. The 12. BImSchV Sicherheitsbericht for an LH2 facility is a novel document type in most Länder — anticipate longer review times than for conventional flammable gas sites."
+      },
+
+      "permitting": {
+        "primary_authority": "Immissionsschutzbehörde (varies by Bundesland) for BImSchG Genehmigung; Staatliches Gewerbeaufsichtsamt for 12. BImSchV / SEVESO oversight",
+        "timeline_p50_months": 30,
+        "timeline_range_months": { "min": 18, "max": 54 },
+        "parallel_consent_tracks": [
+          "BImSchG Genehmigung (Immissionsschutzbehörde) — 18–36 months depending on Bundesland",
+          "12. BImSchV Sicherheitsbericht review (Gewerbeaufsichtsamt) — runs parallel to BImSchG process for upper-tier sites",
+          "UVP (environmental impact assessment) — integrated into BImSchG process",
+          "Baugenehmigung (building consent for cryogenic structures) — concurrent with BImSchG; typically 3–6 months",
+          "Wasserrechtliche Erlaubnis (water law permit) if site near watercourses"
+        ],
+        "appeal_risk": "medium",
+        "appeal_mechanism": "Verwaltungsgericht (VG) → Oberverwaltungsgericht (OVG) / Verwaltungsgerichtshof (VGH) → Bundesverwaltungsgericht (BVerwG). Judicial challenges are less common for industrial energy infrastructure than for onshore wind, but citizen and environmental groups retain standing.",
+        "bundesland_variation": "Permitting competence rests with Bundesland-level Immissionsschutzbehörde. NRW (Landesamt für Natur, Umwelt und Verbraucherschutz — LANUV) and Bayern (Regierungspräsidien) have established industrial permitting frameworks. Eastern Länder may have less LH2 precedent.",
+        "notes": "P50 assumes greenfield lower-tier SEVESO III facility with BImSchG Genehmigung. Upper-tier sites add 6–12 months for Sicherheitsbericht preparation and Gewerbeaufsichtsamt review. The BImSchG Genehmigung integrates planning, environmental, and safety consents — a structural advantage of the German system vs. the UK's parallel consent tracks."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). For Germany, the critical commercial risk is the Netzentgelt (grid use-of-system charge) — German industrial grid charges are among the highest in Europe and represent a material OpEx risk for the liquefaction process.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "illustrative_electrical_load_kw_per_tonne_day": { "range_low": 420, "range_high": 500 },
+        "grid_operator": "Four TSOs (Amprion, TenneT, 50Hertz, TransnetBW) for transmission; approximately 900 DSOs for distribution",
+        "netzentgelt_risk": {
+          "description": "German Netzentgelte (grid charges) for industrial consumers are among Europe's highest, driven by the cost of north-south grid reinforcement (SuedLink, SuedOstLink), offshore wind grid integration, and the distributed TSO structure. For LH2 liquefaction, which requires a stable, baseload-proximate electricity supply, grid charges significantly increase the levelised cost of LH2.",
+          "indicative_netzentgelt_eur_kwh": "EUR 0.02–0.07/kWh for large industrial consumers (location-dependent; verify current BNetzA-regulated tariffs)",
+          "mitigation": "Netzentgelt reduction available under §19 StromNEV for large consumers (>10 GWh/year) with stable load profiles — LH2 liquefaction (continuous baseload load) may qualify. Specialist regulatory advice required.",
+          "legal_basis": "Stromnetzentgeltverordnung (StromNEV) §19 — Netzentgeltbefreiung für besondere netztechnische Anforderungen"
+        },
+        "south_germany_congestion_risk": "Bavaria and Baden-Württemberg face grid congestion pending SuedLink completion (target 2027–2028). LH2 facilities in southern Germany requiring large grid connections may face delayed connection or high reinforcement costs.",
+        "renewable_ppa_strategy": "Co-located or dedicated renewable PPA strongly recommended to mitigate electricity cost risk. Merchant LH2 cost at EUR 0.12/kWh industrial price and 11 kWh/kg: EUR 1.32/kg LH2 in electricity cost alone. A renewable PPA at EUR 0.06–0.08/kWh reduces this to EUR 0.66–0.88/kg LH2.",
+        "notes": "Industrial electricity price for large consumers in Germany (2024 reference): approximately EUR 0.10–0.14/kWh including all levies and Netzentgelt. Verify current published data from BDEW (Bundesverband der Energie- und Wasserwirtschaft) before use. H2-Global import auctions provide a market reference for LH2 import pricing that implicitly benchmarks domestic liquefaction economics."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or EEG one-way Marktprämie. Revenue is primarily via tolling contracts with no state commodity floor, unless the facility is integrated with IPCEI/KCfD funding.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for storage, regasification, and dispensing. No state commodity price floor.",
+        "ipcei_support": {
+          "applicable": "Yes — where LH2 storage is integral to an IPCEI Hy2Tech or Hy2Use funded project",
+          "ipcei_hy2tech_status": "Germany is lead participant; multiple projects awarded. LH2 storage equipment and liquefaction technology development qualify under IPCEI scope.",
+          "ipcei_hy2use_status": "Industrial hydrogen use including LH2 supply chains covered.",
+          "grant_nature": "IPCEI grants are CapEx contributions, not revenue support. Revenue from the facility is determined by tolling contracts with offtakers.",
+          "legal_basis": "IPCEI EC Decision SA.54625 (Hy2Tech) and associated decisions; state aid cover for IPCEI funding confirmed by EC",
+          "source": "BMWK, IPCEI Hy2Tech project list — bmwk.de; EC State Aid Register"
+        },
+        "klimaschutzvertrag_kcfd": {
+          "applicable": "Potentially — for LH2 integrated with industrial decarbonisation offtaker",
+          "description": "Two-way CfD covering the cost difference between fossil fuel production and green hydrogen/LH2 supply. Generator receives top-up when green premium exceeds market price; pays back when green premium is below market. Term: up to 15 years.",
+          "legal_basis": "BMWK Klimaschutzverträge programme; EC State Aid clearance under CEEAG",
+          "staleness_warning": "First KCfD pilot tender launched 2023. Programme parameters evolving rapidly. Verify current round status with BMWK before use.",
+          "source": "BMWK, Klimaschutzverträge — bmwk.de"
+        },
+        "bmdv_national_hydrogen_programme": {
+          "applicable": true,
+          "description": "BMDV National Hydrogen Programme provides direct CapEx grants for hydrogen infrastructure including LH2 bunkering hubs (Hamburg, Bremen), refuelling infrastructure, and pilot-scale liquefaction.",
+          "grant_rate_indicative": "Project-specific; up to 40–60% of eligible CapEx for pilot projects. Verify current programme prospectus.",
+          "staleness_warning": "BMDV programme parameters change with budget cycles — verify current availability at NOW GmbH (Nationale Organisation Wasserstoff- und Brennstoffzellentechnologie)"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage on a merchant tolling basis for transport hubs, industrial offtakers, and aviation fuel supply.",
+          "credit_risk_note": "Tolling revenues are entirely contract-dependent. No state backstop. Minimum investment-grade offtaker credit recommended."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Degressive AfA (§7 Abs. 2 EStG, Wachstumschancengesetz 2024) applies to LH2 liquefaction plant and cryogenic storage equipment as moveable plant and machinery acquired between 1 April 2024 and 31 December 2028. This is a CapEx TIMING benefit — not a permanent tax rate reduction.",
+        "degressive_afa_applicable": true,
+        "qualifying_assets": "Cryogenic storage tanks, liquefaction compressors and heat exchangers, boil-off gas management systems, dispensing infrastructure — all qualify as moveable plant and machinery (bewegliche Wirtschaftsgüter) under §7 Abs. 2 EStG",
+        "degressive_afa_rate_pct_max": 25,
+        "legal_basis": "§7 Abs. 2 EStG as amended by Wachstumschancengesetz (Growth Opportunities Act) 2024, in force 28 March 2024",
+        "qualifying_period": "Assets acquired or manufactured between 1 April 2024 and 31 December 2028",
+        "sunset_date": "2028-12-31",
+        "npv_timing_benefit": "At 30% combined effective tax rate (KSt + Soli + GewSt) and 10% WACC: NPV of tax shield under 25% degressive AfA for LH2 plant (20-year life) ≈ 25.1% of qualifying CapEx. Under standard straight-line AfA (5% p.a.): NPV ≈ 16.8%. Timing benefit ≈ 8.3ppts per €1 of qualifying CapEx.",
+        "gewerbesteuer_note": "GewSt (trade tax) applies at host municipality Hebesatz — typically 14% effective rate. For planning, use 29–31% combined effective rate (KSt 15% + Soli 0.825% + GewSt ~14%). Project-specific — verify host municipality Hebesatz."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "DIN EN 1251 (German adoption of BS EN 1251 — Cryogenic vessels — static vacuum-insulated vessels); also Druckgeräterichtlinie (2014/68/EU) for pressure equipment",
+        "atex_zone_classification": "ATEX Zone 1 or Zone 2 around hydrogen release sources; classification must be documented in accordance with Betriebssicherheitsverordnung (BetrSichV) and TRBS 2152 (Technische Regeln Betriebssicherheit)",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (Rückverflüssigung) — capital-intensive but zero loss", "Catalytic combustion or flare — requires regulatory approval under BImSchG", "On-site use as fuel or process gas"],
+          "regulatory_basis": "BOG must be addressed as a major accident scenario in the 12. BImSchV Sicherheitsbericht; atmospheric releases subject to BImSchG TA Luft (Air Quality Technical Instructions — 1. BImSchVwV) conditions",
+          "environmental_note": "Vented hydrogen is not classified as a GHG under TA Luft but is an explosive hazard. Immissionsschutzbehörde may impose conditions on vent frequency and rate."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. Figures are indicative benchmarks only. Engineering study required before financial commitment.",
+        "_rule_3c_note": "Germany is EUR-denominated. No FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000,
+            "notes": "Vacuum-insulated Type C cryogenic tank; cost per tonne decreases with scale"
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Highly site-dependent. Excludes grid connection reinforcement and Netzentgelt-related infrastructure."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_ref": 0.12,
+            "electricity_opex_eur_per_kg_lh2": 1.32,
+            "netzentgelt_included": true,
+            "source": "BDEW Strompreisanalyse — verify current year edition",
+            "note": "Germany's industrial electricity price (including Netzentgelt) is among Europe's highest. This is the primary LH2 cost driver. §19 StromNEV relief for large consumers may reduce effective Netzentgelt component — specialist regulatory advice required."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "degressive_afa_npv_benefit_pct_of_capex": 8.3,
+          "note": "Illustrative inputs only. Actual costs depend on technology vendor, site location (south vs. north Germany electricity pricing), electricity procurement strategy, and supply chain lead times."
+        }
+      },
+
+      "market_context": {
+        "de_policy_position": "Nationale Wasserstoffstrategie (NWS 2023 update) targets 10 GW domestic electrolysis by 2030 and positions Germany as a major hydrogen importer via H2-Global import auction mechanism. LH2 is identified alongside ammonia and LOHC (liquid organic hydrogen carriers) as a priority import vector for industrial decarbonisation. Hamburg Port is designated Germany's primary LH2 import gateway.",
+        "key_de_lh2_projects_indicative": [
+          {
+            "project": "HH2-Project Hamburg Port LH2 Bunkering Hub",
+            "status": "Development/pilot stage",
+            "operator": "Hamburg Port Authority / consortium",
+            "note": "Targeting maritime LH2 bunkering for zero-emission shipping entering Port of Hamburg. Supported by BMDV National Hydrogen Programme."
+          },
+          {
+            "project": "Leuna Hydrogenation / Air Liquide Leuna LH2 Production",
+            "status": "Air Liquide operates LH2 production at Leuna chemical complex; capacity expansion under consideration",
+            "operator": "Air Liquide Deutschland",
+            "note": "One of the largest existing LH2 production facilities in continental Europe. Green hydrogen integration under NWS framework."
+          },
+          {
+            "project": "SALCOS Salzgitter Green Steel H2 Supply",
+            "status": "Phase 1 under development (Salzgitter Flachstahl AG / Salzgitter Low CO2 Steelmaking)",
+            "note": "Primarily compressed hydrogen for direct reduction steelmaking. LH2 not primary delivery mode but demonstrates industrial H2 supply chain development in Germany."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Industrial decarbonisation — green hydrogen for ammonia, methanol, steel, and chemical feedstocks; LH2 relevant for logistics",
+          "Maritime bunkering — Hamburg, Bremen, and Kiel ports targeting LH2 supply for zero-emission shipping under IMO 2030/2050 targets",
+          "Aviation — Lufthansa SAF programme; LH2 propulsion development for future aircraft (Airbus ZEROe programme based in Germany)",
+          "H2-Global import arbitrage — LH2 import as complementary supply vector to pipeline hydrogen (European Hydrogen Backbone)"
+        ],
+        "h2_global_note": "H2-Global is a BMDV-backed import auction platform awarding long-term import contracts for green hydrogen and derivatives (including LH2). H2-Global provides a price reference for international LH2 trade and may establish a benchmark tolling return for German LH2 infrastructure. Verify current H2-Global auction round results at h2global.de."
+      },
+
+      "notes": "Germany is Europe's most substantial hydrogen economy by national investment but LH2 storage infrastructure faces a specific commercial challenge: Netzentgelte (grid charges) are the highest in Europe, making liquefaction electricity cost a primary competitiveness barrier. IPCEI grants and BMDV programme funding can offset CapEx but do not address the ongoing OpEx burden. Degressive AfA (Wachstumschancengesetz 2024) provides the best CapEx timing benefit in this knowledge base (8.3ppts NPV delta at 30% combined tax rate). All IPCEI, BMDV, and KCfD parameters must be verified with BMWK/NOW before use as programme terms evolve rapidly."
     }
   }
 }

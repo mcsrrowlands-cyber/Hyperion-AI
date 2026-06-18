@@ -521,6 +521,235 @@
       "coal_phase_out_commitment": "2032 coal phase-out commitment under Just Transition Fund agreements.",
       "source": null,
       "notes": "Romania has coal capacity in Oltenia region. Just Transition Fund support for coal region transition — not for new coal build. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Romania is an emerging hydrogen market with ambitions as a Black Sea H2 export hub, leveraging offshore wind and nuclear-H2 coupling at Cernavodă. The primary regulatory gate is the SEVESO III safety regime administered by ANPM and the National Environmental Guard. Electricity cost for liquefaction is the dominant OpEx risk; Dobrogea grid congestion constrains co-location with wind assets. RON FX risk applies to all EUR-denominated cost and revenue modelling.",
+
+      "permitting_p50_months": 30,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism. Standalone facilities operate on a tolling or merchant basis. PNRR (Planul Național de Redresare și Reziliență — National Recovery and Resilience Plan) allocates approximately EUR 480 million for hydrogen, including storage-enabling infrastructure; CapEx grants are available via the Ministerul Energiei (Ministry of Energy) grant competitions. Fondul de Modernizare (Modernisation Fund, EU ETS-funded) is an additional CapEx grant route. EU Hydrogen Bank competitive funding rounds are available to Romanian projects. Source: PNRR Romania (Official Government Publication); European Commission DG ENER.",
+      "revenue_floor_description": null,
+      "source": "pnrr_romania; anpm_ro; iea_hydrogen",
+      "staleness_warning": "PNRR grant competition parameters, Modernisation Fund call conditions, and industrial electricity prices are time-sensitive. Verify at Ministerul Energiei (energie.gov.ro) and Fondul de Modernizare before use. RON/EUR rate must be verified at ECB Reference Rate on analysis date (ecb.europa.eu).",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Legea nr. 59/2016 privind controlul asupra pericolelor de accident major în care sunt implicate substanțe periculoase",
+            "relevance": "Romanian transposition of SEVESO III Directive (2012/18/EU). Mandatory safety regime for LH2 storage at or above threshold quantities. Lower tier (≥10 t flammable gas, including LH2): notify ANPM, prepare MAPP (plan de prevenire a accidentelor majore) and on-site emergency plan. Upper tier (≥50 t): detailed raport de securitate (safety report), external emergency plan, public information duty, periodic inspection."
+          },
+          {
+            "instrument": "Hotărârea Guvernului nr. 804/2007 privind controlul asupra pericolelor de accident major (as superseded and updated by Legea 59/2016 implementing measures)",
+            "relevance": "Subsidiary regulations implementing SEVESO safety report content requirements and competent authority inspection procedures."
+          },
+          {
+            "instrument": "Legea nr. 307/2006 privind apărarea împotriva incendiilor (Fire Protection Law), as amended",
+            "relevance": "Fire safety requirements for cryogenic hydrogen storage; IGSU (Inspectoratul General pentru Situații de Urgență — General Inspectorate for Emergency Situations) approval required for LH2 facility construction and operation."
+          },
+          {
+            "instrument": "HG nr. 1425/2006 — Norme metodologice de aplicare a Legii 319/2006 (Labour Safety Framework)",
+            "relevance": "Occupational safety at LH2 facilities; ITM (Inspectoratul Teritorial de Muncă — Labour Inspectorate) has inspection competence."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Legea nr. 50/1991 privind autorizarea executării lucrărilor de construcții (Building Permits Law), as amended",
+            "relevance": "Construction authorisation (Autorizație de Construire) required for LH2 storage tanks, liquefaction plant buildings, and ancillary infrastructure."
+          },
+          {
+            "instrument": "Legea nr. 292/2018 — EIA legislation (transposing Directive 2011/92/EU as amended)",
+            "relevance": "Environmental Impact Assessment required for LH2 facilities above threshold scale. ANPM (Agenția Națională pentru Protecția Mediului) is the competent EIA authority."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Strategia Națională pentru Hidrogen 2023 (National Hydrogen Strategy)",
+            "relevance": "Sets Romania's hydrogen production and storage ambitions; identifies Black Sea offshore wind-to-H2, nuclear-H2 coupling (Cernavodă), and Neptun Deep blue hydrogen as strategic vectors. Positions LH2 storage as enabling infrastructure for export and mobility."
+          },
+          {
+            "instrument": "PNRR Romania (Planul Național de Redresare și Reziliență) — Component C6 Energy",
+            "relevance": "Allocates approximately EUR 480m for hydrogen investments including green hydrogen production, storage enabling infrastructure, and the Cernavodă nuclear-H2 coupling concept study. Primary CapEx grant source."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — Competitive Grant Rounds (European Commission)",
+            "relevance": "Romanian LH2 projects are eligible to compete for EU Hydrogen Bank funding. First auction concluded 2024. Verify current round at European Hydrogen Bank portal."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "Legea nr. 59/2016 privind controlul asupra pericolelor de accident major în care sunt implicate substanțe periculoase (Romanian SEVESO III transposition)",
+        "competent_authority_primary": "ANPM — Agenția Națională pentru Protecția Mediului (National Environmental Protection Agency)",
+        "competent_authority_enforcement": "Garda Națională de Mediu (National Environmental Guard) — inspection and enforcement; ITM (Inspectoratul Teritorial de Muncă — Labour Inspectorate) for occupational safety aspects",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lower_tier_obligations": "Notify ANPM; prepare and implement Plan de Prevenire a Accidentelor Majore (MAPP); on-site emergency plan only; ANPM inspection programme applies",
+        "upper_tier_obligations": "Prepare detailed Raport de Securitate (safety report) acceptable to ANPM; external emergency plan prepared by local emergency authority (IGSU); public information duty; periodic ANPM/Garda inspection",
+        "legal_basis": "Legea nr. 59/2016, Anexa 1 (Annex 1) — hydrogen (inclusiv GHL — liquefied flammable gases) listed as a dangerous substance in Category 2 (flammable gases); SEVESO III flammable gas thresholds apply",
+        "safety_report_preparation_months_estimate": 6,
+        "anpm_assessment_months_estimate": 4,
+        "notes": "ANPM is the primary competent authority. Pre-application engagement with ANPM regional agencies (ARPM — Agenția Regională pentru Protecția Mediului) is strongly recommended. Romanian SEVESO implementation follows EU thresholds exactly: lower tier 10t, upper tier 50t for flammable gases including liquefied hydrogen. Novel technology facilities may require extended assessment periods."
+      },
+
+      "permitting": {
+        "planning_authority": "Local/County Council (Consiliul Județean) for construction authorisation; ANPM for EIA and SEVESO safety report; IGSU for fire safety approval",
+        "timeline_p50_months": 30,
+        "timeline_range_months": { "min": 18, "max": 54 },
+        "parallel_consent_tracks": [
+          "ANPM SEVESO notification and safety report assessment (upper tier) — 6–10 months post-submission",
+          "Environmental Impact Assessment (EIA — Acord de mediu) via ANPM — 6–12 months",
+          "Urban Planning Certificate (Certificat de Urbanism) → Building Permit (Autorizație de Construire) via local/county council — 9–18 months",
+          "IGSU fire safety approval — concurrent with building permit"
+        ],
+        "multi_agency_complexity": "HIGH — Romania's multi-agency permitting structure (ANPM, Garda Națională de Mediu, local councils, IGSU, ITM) creates meaningful coordination complexity. Experienced Romanian development consultancy strongly recommended.",
+        "appeal_risk": "medium-high",
+        "notes": "P50 of 30 months assumes a greenfield lower-tier SEVESO facility. Upper-tier sites (≥50t LH2) add 6–12 months for safety report preparation and ANPM assessment. Romanian bureaucratic friction (operational drag score 78) is a material risk multiplier for novel technology installations where case officers lack familiarity with LH2. Pre-application engagement with ANPM is essential. Corruption risk in local planning administration (noted in operational drag assessment) adds uncertainty — specialist Romanian legal support is required."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Grid connection for the liquefaction plant is the primary infrastructure interface.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Transelectrica S.A. (TSO) for transmission-connected loads; regional DSOs for distribution-connected",
+        "dobrogea_constraint_note": "CRITICAL: The primary renewable energy resource region (Dobrogea — offshore wind and solar) is the most congested grid zone in Romania. A co-located LH2 liquefaction facility in Dobrogea would compete for the same constrained grid capacity as existing and queued wind/solar projects. Grid connection wait times of 5–8+ years apply to new large consumers in Dobrogea. Sites outside Dobrogea face shorter queues but lower renewable energy resource quality.",
+        "electricity_price_risk": "HIGH — Romanian industrial electricity prices are moderate by EU standards but RON-denominated prices are subject to FX risk for EUR investors. Liquefaction OpEx is dominated by electricity cost.",
+        "renewable_ppa_strategy": "A dedicated PPA from Romanian wind or solar (Dobrogea or offshore) supports green credentials for ESG-sensitive LH2 offtakers. However, Dobrogea grid constraints may prevent physical co-location — virtual PPA structures referencing OPCOM market price may be required.",
+        "fx_electricity_cost_note": "Industrial electricity price in Romania approximately RON 400–700/MWh for large consumers (indicative 2024–2025). At RON 550/MWh (approximately EUR 111/MWh at 1 EUR = 4.97 RON) and 11 kWh/kg: electricity cost approximately EUR 1.22/kg LH2. Verify current industrial electricity price at ANRE (anre.ro) and ECB Reference Rate before use."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Romania. Revenue is primarily via tolling contracts with no state commodity floor, unless integrated with an upstream grant-funded production project (PNRR, EU Hydrogen Bank).",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing services; no state commodity price floor",
+        "pnrr_capex_grant": {
+          "applicable": true,
+          "description": "PNRR Component C6 (Energy) provides CapEx grants for hydrogen production and enabling infrastructure including storage. Romanian Ministry of Energy administers grant competitions. Eligible costs include liquefaction plant, cryogenic storage tanks, and associated civil works.",
+          "indicative_grant_rate": "Subject to competition; aid intensity limits apply under CEEAG / GBER Article 41 energy project rules. Indicative range: 30–50% of eligible CapEx for qualifying projects — verify current call parameters at energie.gov.ro.",
+          "staleness_warning": "PNRR grant call parameters are time-sensitive and subject to revision. Do not rely on indicative rates without verifying the current open call at Ministerul Energiei (energie.gov.ro).",
+          "eu_state_aid_compliance": "PNRR grants are EU-funded and subject to CEEAG compatibility assessment. Verify EC clearance status before project commitment."
+        },
+        "modernisation_fund": {
+          "applicable": true,
+          "description": "Fondul de Modernizare (Modernisation Fund — EU ETS revenue-funded) provides investment support for energy sector decarbonisation including hydrogen. Romania is a designated Modernisation Fund beneficiary state.",
+          "legal_basis": "EU ETS Directive 2003/87/EC Article 10d; Romanian implementing legislation",
+          "staleness_warning": "Verify current Modernisation Fund call parameters at Ministerul Energiei and EIB platform."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Romanian LH2 projects producing renewable hydrogen are eligible for EU Hydrogen Bank competitive grants. First auction (2024) cleared. Verify current round at European Hydrogen Bank portal.",
+          "source": "European Commission DG ENER"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a fully merchant basis, charging industrial off-takers, export terminals, and transport hubs. Romanian Black Sea export hub ambitions create potential long-dated offtake.",
+          "credit_risk_note": "Merchant tolling revenues entirely contract-dependent. Romanian corporate credit market is thin — investment-grade or internationally-guaranteed offtakers required for project finance."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Romanian accelerated depreciation (50% Year 1 for qualifying moveable assets under Fiscal Code §28(3)) is a CapEx TIMING benefit — not a permanent CIT rate reduction. NPV timing benefit at 16% CIT is modest in absolute terms given the low base rate.",
+        "cit_rate_pct": 16.0,
+        "legal_basis": "Fiscal Code Law 227/2015 (Codul fiscal) §17 — 16% flat CIT",
+        "accelerated_depreciation_applicable": true,
+        "qualifying_assets": "Cryogenic storage tanks, liquefaction equipment, boil-off gas management systems, dispensing infrastructure — qualify as utilaje și instalații (machinery and installations) under Fiscal Code §28(3) if properly classified",
+        "accelerated_rate_year_1_pct": 50,
+        "legal_basis_depreciation": "Fiscal Code Law 227/2015 §28(3) — accelerated method with 50% Year 1 deduction for qualifying moveable assets",
+        "npv_timing_benefit": "At 16% CIT and 10% WACC: accelerated (50% Year 1 + remaining straight-line) vs. standard straight-line over 20 years: NPV of tax shield under accelerated ≈ 14.1% vs. 11.1% standard. Timing benefit ≈ 3ppts per RON 1 of qualifying CapEx. Low absolute benefit given 16% base rate.",
+        "construction_tax_note": "Impozit specific pe construcții (1% p.a. on accounting value of qualifying construction assets under GEO 16/2022) applies to fixed LH2 infrastructure. This is a recurring annual burden — model explicitly as a separate cost line.",
+        "ron_fx_note": "All CIT calculations are in RON. EUR-denominated CapEx and revenue models must apply ECB Reference Rate RON/EUR on the relevant dates. Verify rate at ecb.europa.eu."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "SR EN 1251 (Romanian adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "Zone classification per SR EN 60079 (ATEX — Romanian adoption); explosive atmosphere risk assessment mandatory under HG 1058/2006 (Romanian transposition of ATEX Directive 1999/92/EC)",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (capital-intensive but zero loss)", "Catalytic combustion / controlled flare (ANPM environmental permit condition governs)", "Use as on-site fuel"],
+          "regulatory_basis": "BOG must be addressed as a major accident scenario in the MAPP or Raport de Securitate under Legea nr. 59/2016. ANPM environmental permit (Autorizație de Mediu) conditions govern atmospheric releases.",
+          "environmental_note": "Vented hydrogen is not a greenhouse gas of concern (GWP ≈ 0) but is a safety hazard; ANPM may impose vent frequency conditions in the environmental permit."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, and DSCR modelling. Figures are indicative benchmarks only; project-specific engineering estimates required before commitment.",
+        "_rule_3c_note": "Primary currency is RON. EUR equivalents shown at indicative rate of 1 EUR = 4.97 RON (ECB Reference Rate, mid-2025 indicative). Verify at ECB Reference Rate (ecb.europa.eu) on analysis date. FX risk must be explicitly modelled — Romania is not in the Eurozone.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_ron": {
+            "per_tonne_per_day_range_low_ron": 9940000,
+            "per_tonne_per_day_range_high_ron": 24850000,
+            "per_tonne_per_day_midpoint_ron": 17395000,
+            "eur_midpoint_approx": 3500000,
+            "fx_rate_used": "1 EUR = 4.97 RON (indicative — verify at ECB)",
+            "fx_rate_date": "Mid-2025 indicative",
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023 — EUR midpoint converted at indicative rate"
+          },
+          "storage_tank_capex_ron": {
+            "per_tonne_range_low_ron": 2485000,
+            "per_tonne_range_high_ron": 9940000,
+            "per_tonne_midpoint_ron": 4970000,
+            "eur_midpoint_approx": 1000000,
+            "fx_rate_used": "1 EUR = 4.97 RON (indicative)"
+          },
+          "illustrative_total_project_capex": {
+            "liquefaction_2tpd_ron": 34790000,
+            "storage_50t_ron": 248500000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative_ron": 340548000,
+            "eur_equivalent_approx": 68520000,
+            "fx_rate_used": "1 EUR = 4.97 RON (indicative — verify at ECB on analysis date)",
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Romanian civil construction costs are lower than western EU peers — local contractor market well-developed. Excludes grid connection reinforcement costs."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_ron_per_kwh_indicative": 0.55,
+            "eur_per_kwh_indicative": 0.111,
+            "electricity_opex_ron_per_kg_lh2": 6.05,
+            "electricity_opex_eur_per_kg_lh2_indicative": 1.22,
+            "fx_rate_used": "1 EUR = 4.97 RON (indicative)",
+            "source": "ANRE (anre.ro) — verify current industrial tariff. IEA, The Future of Hydrogen, 2019 for energy intensity figure."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative inputs only. Construction cost advantage vs. western EU partially offset by higher financing cost (Romanian sovereign risk discount). Engineering study required before financial modelling. RON FX sensitivity analysis mandatory for all EUR-denominated funding and debt structures."
+        }
+      },
+
+      "market_context": {
+        "romania_policy_position": "Romania's National Hydrogen Strategy 2023 positions the country as a potential Black Sea H2 export hub, leveraging: (1) offshore wind from the Black Sea (Neptun Deep area) for green H2; (2) Cernavodă nuclear plant-H2 coupling study for low-carbon hydrogen; (3) Neptun Deep offshore gas for blue H2 with CCS.",
+        "key_romania_lh2_projects_indicative": [
+          {
+            "project": "Cernavodă Nuclear-H2 Coupling Study",
+            "status": "Concept/study stage — Nuclearelectrica + Ministry of Energy collaboration; PNRR-funded study",
+            "operator": "Nuclearelectrica S.A.",
+            "note": "Cernavodă CANDU reactor provides low-carbon electricity base for electrolysis. LH2 storage would be enabling infrastructure for export. No FID as of 2025."
+          },
+          {
+            "project": "OMV Petrom H2 Concept (Petrobrazi Refinery)",
+            "status": "Early concept — green/blue H2 for refinery decarbonisation; LH2 storage not primary delivery mode at site level",
+            "operator": "OMV Petrom S.A.",
+            "note": "Primarily pipeline/compressed H2 model; LH2 relevant for export if scale achieved"
+          },
+          {
+            "project": "Romgaz-Neptun Deep Blue H2 Concept",
+            "status": "Early concept — Neptun Deep offshore gas production + potential CCS + blue H2; LH2 export via Black Sea shipping is a long-term scenario",
+            "operator": "Romgaz S.A. / OMV Petrom S.A.",
+            "note": "Neptun Deep FID achieved 2023; gas production expected 2027+. Blue H2 with LH2 storage is a post-2030 scenario."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Black Sea H2 export — Romania positioned as transit/production hub for H2 export to Central/Western Europe",
+          "Industrial decarbonisation — Romanian steel, chemicals, refining sectors with H2 requirements",
+          "Heavy transport — nascent H2 mobility market; Transelectrica and Transgaz infrastructure studies",
+          "Nuclear-H2 coupling — Cernavodă as baseload low-carbon electricity source for electrolysis"
+        ],
+        "supply_chain_note": "Romania has no domestic LH2 production capacity as of 2025. Domestic supply chain for cryogenic equipment is limited; European suppliers (Linde, Air Liquide, Chart Industries) would be primary equipment vendors. Romanian civil construction capacity is adequate and cost-competitive."
+      },
+
+      "notes": "Romania is an emerging hydrogen market with genuine strategic assets (Black Sea offshore wind potential, Cernavodă nuclear, Neptun Deep gas) but a challenging development environment for LH2 infrastructure. The SEVESO III regime under Legea nr. 59/2016 provides a structured — if bureaucratically complex — safety pathway. The multi-agency permitting structure and operational drag score of 78 mean that novel technology installations face material process risk. PNRR grants and Modernisation Fund support are genuine CapEx subsidies, but competition is high and grant conditions must be verified before project commitment. The absence of a dedicated LH2 revenue mechanism means investors must rely on tolling contracts. RON FX risk is a structural consideration for all EUR-denominated returns. The Dobrogea grid constraint is critical — LH2 liquefaction co-located with wind must account for connection queue realities. All financial parameters must be verified with current ECB Reference Rate and ANRE industrial tariff data before use."
     }
   }
 }

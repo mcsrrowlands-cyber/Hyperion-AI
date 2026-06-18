@@ -495,6 +495,221 @@
       "coal_phase_out_commitment": "Austria has no coal-fired power generation.",
       "source": null,
       "notes": "Austria does not operate coal power stations. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Austria is a landlocked Central European state with a well-developed hydrogen strategy (Österreichische Wasserstoffstrategie 2021) and strong policy commitment to electrolysis expansion. The primary safety regulatory gate is the Austrian transposition of SEVESO III (Störfall-Verordnung). Austria's grid is among the best in Central Europe for securing renewable electricity for liquefaction, and the Klima- und Energiefonds provides competitive grant support. Electricity cost for liquefaction is the dominant OpEx variable.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage operating support mechanism. Standalone LH2 storage facilities operate on a tolling or merchant basis. Where LH2 storage is integral to a hydrogen production facility, Klima- und Energiefonds Förderanrufe (competitive grant calls) may provide CapEx support of up to 40% of eligible investment. EU Hydrogen Bank eligibility applies. Source: Klima- und Energiefonds; iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "klima_energiefonds; iea_hydrogen; bmdw_seveso",
+      "staleness_warning": "Klima- und Energiefonds Förderanrufe are issued periodically — grant rates and eligible CapEx components change with each call. EU Hydrogen Bank terms subject to revision. Verify current call prospectus before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Störfall-Verordnung (StrfVO) — BGBl. II Nr. 354/2015",
+            "relevance": "Austrian transposition of SEVESO III Directive (2012/18/EU). Mandatory notification, safety management system, and — for upper-tier establishments — a Sicherheitsbericht (safety report) are required. Competent authority at lower-tier: Bezirksverwaltungsbehörde (district administration). Upper-tier: Landeshauptmann (Länder level). LH2 classified as a flammable gas: lower-tier threshold 10 t, upper-tier 50 t."
+          },
+          {
+            "instrument": "Gewerbeordnung 1994 (GewO) — BGBl. Nr. 194/1994 as amended",
+            "relevance": "Trade regulation licence (Betriebsanlagengenehmigung) required for industrial plant including hydrogen storage and liquefaction facilities. Administered by Bezirksverwaltungsbehörde."
+          },
+          {
+            "instrument": "Umweltverträglichkeitsprüfungsgesetz (UVP-G) 2000 — BGBl Nr. 697/1993 as amended",
+            "relevance": "EIA may be triggered for large-scale LH2 infrastructure depending on total throughput and associated generation plant. Full UVP procedure adds 12–24 months if triggered."
+          },
+          {
+            "instrument": "Wasserrechtsgesetz (WRG) 1959 — BGBl Nr. 215/1959 as amended",
+            "relevance": "Water use permit required if electrolysis or liquefaction processes involve significant water abstraction from groundwater or surface water bodies."
+          },
+          {
+            "instrument": "Druckgeräteverordnung (DGVO) — BGBl. II Nr. 426/1999 (transposing PED 2014/68/EU)",
+            "relevance": "Design, manufacture, conformity assessment, and operation of cryogenic pressure vessels, vacuum-insulated storage tanks, and associated pipework."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Österreichische Wasserstoffstrategie 2021 (Austrian Hydrogen Strategy) — BMKOES/BMK",
+            "relevance": "National policy framework targeting 1 GW electrolyser capacity by 2030; identifies LH2 as transport and export vector; underpins Klima- und Energiefonds grant programme design."
+          },
+          {
+            "instrument": "Klima- und Energiefonds Förderanrufe (Competitive Grant Calls)",
+            "relevance": "Primary public funding mechanism for hydrogen infrastructure CapEx in Austria. Competitive calls issue grants of up to 40% eligible CapEx for H2 production, storage, and distribution infrastructure. Specific calls may designate LH2 as eligible. Source: klimafonds.gv.at."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — European Commission",
+            "relevance": "Austria is eligible for EU Hydrogen Bank auction funding for green hydrogen production. LH2 storage integrated with EU Hydrogen Bank-funded production may attract co-funding. Verify current auction round status."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "Störfall-Verordnung (StrfVO) — BGBl. II Nr. 354/2015 (SEVESO III transposition)",
+        "competent_authority_lower_tier": "Bezirksverwaltungsbehörde (district administrative authority)",
+        "competent_authority_upper_tier": "Landeshauptmann (Governor of the relevant Bundesland) — Länder-level authority",
+        "lower_tier_threshold_flammable_gas_tonnes": 10,
+        "upper_tier_threshold_flammable_gas_tonnes": 50,
+        "lower_tier_obligations": "Notify competent authority; prepare and implement Sicherheitsmanagementprogramm (safety management programme) / MAPP equivalent; internal emergency plan (Notfallplan)",
+        "upper_tier_obligations": "Prepare Sicherheitsbericht (safety report) for assessment by Landeshauptmann; external emergency plan coordinated with Bundesland civil protection authority; public information duty; periodic inspection by authority",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 6,
+        "authority_assessment_months": 4,
+        "notes": "Austrian SEVESO III implementation requires Bundesland-level authority assessment for upper-tier sites. Pre-application engagement with the relevant Landeshauptmann office is strongly recommended. Novel technology (LH2) assessments may take longer than for established chemical processes. Parallel-tracking the GewO trade regulation permit with the SEVESO notification process is standard practice."
+      },
+
+      "permitting": {
+        "planning_authority": "Bezirksverwaltungsbehörde (GewO Betriebsanlagengenehmigung); Landeshauptmann for upper-tier SEVESO; UVP-Behörde (usually Bundesland) if EIA triggered",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 15, "max": 42 },
+        "parallel_consent_tracks": [
+          "GewO Betriebsanlagengenehmigung (trade facility permit) — 12–18 months",
+          "SEVESO StrfVO notification / Sicherheitsbericht assessment — 3–10 months post-submission",
+          "WRG water use permit (if water abstraction involved) — 6–12 months",
+          "UVP/EIA if triggered — 12–24 months (dominant timeline driver if triggered)",
+          "Building permit (Baubewilligung) under Bundesland Bauordnung — concurrent with GewO"
+        ],
+        "uvp_trigger_note": "UVP-G Anhang 1 should be checked for the specific project configuration — large H2 production and storage complexes may trigger mandatory EIA depending on capacity and location proximity to sensitive areas.",
+        "appeal_risk": "low-medium",
+        "appeal_mechanism": "Landesverwaltungsgericht (Bundesland Administrative Court); Bundesverwaltungsgericht (Federal Administrative Court); VwGH (Supreme Administrative Court)",
+        "notes": "P50 assumes a greenfield lower-tier SEVESO facility without UVP trigger. Upper-tier sites and UVP-triggering projects extend significantly to 36–42 months. The GewO permitting framework is well-understood by Austrian industrial operators. Pre-application consultation with the Bezirksverwaltungsbehörde is advisable for LH2 as a novel industrial activity."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Grid connection for the liquefaction plant drives the primary infrastructure interface with the Austrian electricity system.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Austrian Power Grid (APG) for transmission; local DSO (EVN Netz, Netz Burgenland, Energie Steiermark Netz, etc.) for distribution-level connection",
+        "regulatory_authority": "E-Control (Energie-Control Austria) regulates grid connection tariffs under ElWOG 2010",
+        "connection_type": "High-voltage industrial connection; voltage level determined by liquefaction plant MW rating and DSO network conditions",
+        "grid_queue_risk": "LOW-MEDIUM — Austrian grid is relatively well-invested by Central European standards; connection timelines are shorter than Germany",
+        "electricity_price_risk": "MEDIUM — Austrian industrial electricity prices are competitive relative to German peers; significant renewable surplus in alpine hydro and wind periods creates low-cost windows for liquefaction scheduling",
+        "renewable_ppa_strategy": "Austria's one-way EAG Marktprämie mechanism and active corporate PPA market (EFET framework; VIAC arbitration) facilitate co-location or dedicated renewable PPA structuring for LH2 liquefaction load. Verbund-OMV Austrian H2 backbone project and Wien Energie H2 storage concept indicate significant industrial hydrogen demand.",
+        "industrial_electricity_cost_note": "Austrian industrial electricity prices for large consumers were approximately EUR 80–130/MWh in 2024 (excluding network charges; verify current APCS/E-Control data). At EUR 0.10/kWh and 11 kWh/kg, electricity cost alone is approximately EUR 1.10/kg LH2. A dedicated renewable PPA targeting EUR 0.05–0.07/kWh can reduce to EUR 0.55–0.77/kg. Verify E-Control industrial price statistics before use.",
+        "key_projects_note": "HyWest (Salzburg H2 mobility corridor), Linz gas grid H2 blending, Verbund-OMV Austrian H2 backbone, and Wien Energie H2 storage concept all indicate growing LH2 demand in Austria."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way operating tariff in Austria. Revenue is primarily via tolling contracts or integrated with Klima- und Energiefonds-funded hydrogen production facilities. No state commodity price floor for storage services.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for storage, liquefaction, and dispensing services; no commodity price floor from the state",
+        "primary_mechanism_integrated": "Where LH2 storage is integral to a Klima- und Energiefonds-funded H2 production project, the CapEx grant (up to 40% eligible CapEx) provides indirect investment support; storage tolling revenue is separately market-determined",
+        "klimafonds_capex_grant": {
+          "applicable": true,
+          "description": "Klima- und Energiefonds Förderanrufe (competitive grant calls) — CapEx grants for H2 production, storage, and distribution infrastructure. Competitive application process; grant rate up to 40% eligible CapEx for qualifying H2 infrastructure projects.",
+          "administrator": "Klima- und Energiefonds (klimafonds.gv.at)",
+          "staleness_warning": "Grant rates, eligible cost categories, and call timing change with each Förderanruf. Do not rely on any figure without verifying the current call prospectus at klimafonds.gv.at.",
+          "eu_hydrogen_bank": "Austria is eligible for EU Hydrogen Bank auction support for green hydrogen production. Co-stacking Klima- und Energiefonds and EU Hydrogen Bank funding is potentially permissible — verify de minimis and cumulation rules with advisers."
+        },
+        "ipcei_hy2tech": {
+          "applicable": true,
+          "description": "Austria participates in IPCEI Hy2Tech (2022) — Important Projects of Common European Interest for hydrogen technology. IPCEI participants may receive state aid above GBER thresholds for first-of-kind infrastructure. Verify Austrian IPCEI beneficiary projects at EC State Aid register.",
+          "source": "European Commission, IPCEI Hy2Tech State Aid Decision, July 2022"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a fully merchant basis, charging H2 mobility operators, industrial off-takers, and export logistics operators for storage and dispensing. HyWest corridor and Wien Energie H2 concept represent indicative demand.",
+          "credit_risk_note": "Merchant tolling revenues are entirely contract-dependent with no state backstop. Investment-grade offtaker credit recommended."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Austrian Investitionsfreibetrag (IFB) at 15% ecological rate on qualifying CapEx (up to €1m qualifying base per year) is a CapEx TIMING benefit creating an additional Year 1 deduction — not a permanent effective tax rate reduction. Evaluate as NPV of timing benefit.",
+        "cit_rate_pct": 23,
+        "legal_basis_cit": "KStG 1988 §22 as amended by Steuerreformgesetz 2022 (BGBl I Nr. 108/2022): 23% from 2024",
+        "ifb_applicable": true,
+        "ifb_ecological_rate_pct": 15,
+        "ifb_qualifying_assets": "Qualifying new moveable assets — liquefaction plant, cryogenic storage tanks, boil-off gas management systems, heat exchangers, dispensing infrastructure — subject to classification as moveable machinery. Real property excluded.",
+        "ifb_qualifying_base_cap_eur": 1000000,
+        "legal_basis_ifb": "EStG 1988 §11 as amended by Steuerreformgesetz 2022 (BGBl I Nr. 108/2022)",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 23% CIT and 10% WACC: 15% ecological IFB on €1m qualifying CapEx = €150,000 additional deduction × 23% CIT = €34,500 Year 1 tax saving. NPV = €34,500 (realised in acquisition year — no further discounting). As % of first €1m qualifying CapEx: 3.45ppts. Large LH2 projects (>€1m CapEx) are constrained by the €1m IFB base cap — factor explicitly in financial model.",
+          "note": "For LH2 projects with CapEx in the tens of millions, the €1m IFB base cap means the IFB benefit is proportionally small. Standard straight-line depreciation applies to the remainder under EStG §7."
+        },
+        "standard_depreciation": "Straight-line (lineare Abschreibung) under EStG §7 — typical useful life for H2 plant: 15–20 years"
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "ÖNORM EN 1251 (Austrian adoption of BS EN 1251 — Cryogenic vessels, static vacuum-insulated vessels); compliance required for LH2 storage tanks",
+        "electrical_hazardous_area": "ATEX zones (Zone 1/Zone 2) around H2 release sources; classified per ÖNORM EN 60079 series; documented in Explosionsschutzdokument (explosion protection document) required under ElexV (Explosionsschutzverordnung)",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (capital-intensive but zero loss)", "Catalytic combustion with regulatory approval", "Use as on-site fuel or feed gas"],
+          "regulatory_basis": "BOG must be addressed in the SEVESO Sicherheitsbericht for upper-tier sites; air emissions from combustion require Gewerbeordnung permit condition and any applicable Luftreinhalteverordnung (air quality regulation) compliance"
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. All figures are indicative benchmarks from published sources; project-specific engineering estimates required before financial commitment.",
+        "_rule_3c_note": "Austria is EUR-denominated — no FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000,
+            "notes": "Vacuum-insulated Type C cryogenic tank; cost per tonne decreases with scale"
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Highly site-dependent. Excludes grid connection and any required UVP process cost."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_ref": 0.10,
+            "electricity_opex_eur_per_kg_lh2": 1.10,
+            "source": "IEA, The Future of Hydrogen, 2019; E-Control industrial price statistics (verify current)"
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative inputs only. Actual costs depend on technology vendor, site, electricity procurement, scale economies, and Klima- und Energiefonds grant outcome. Engineering study required before financial modelling."
+        }
+      },
+
+      "market_context": {
+        "austria_policy_position": "Österreichische Wasserstoffstrategie 2021 targets 1 GW electrolyser by 2030. Austria positions itself as a Central European H2 hub, leveraging alpine hydro-dominated electricity and strong transit infrastructure. LH2 is relevant for mobility (HGV, bus, rail) and export logistics.",
+        "key_at_lh2_projects_indicative": [
+          {
+            "project": "HyWest (Salzburg H2 mobility corridor)",
+            "status": "Development stage; H2 refuelling infrastructure for HGV and bus fleet along the A1 motorway corridor",
+            "note": "LH2 dispensing relevant for HGV refuelling at scale"
+          },
+          {
+            "project": "Verbund-OMV Austrian H2 backbone",
+            "status": "Feasibility and development stage; electrolysis-to-pipeline integration; LH2 storage as potential complementary technology",
+            "operator": "Verbund AG / OMV AG",
+            "note": "Verify current project status directly with Verbund and OMV"
+          },
+          {
+            "project": "Wien Energie H2 storage concept",
+            "status": "Concept/feasibility stage; seasonal H2 storage using existing Vienna infrastructure",
+            "note": "Storage technology (LH2 vs. LOHC vs. compressed) not yet determined — verify"
+          }
+        ],
+        "primary_demand_drivers": [
+          "HGV and bus H2 refuelling (HyWest corridor and broader Austrian motorway network)",
+          "Industrial off-take (steel, chemicals — Austrian Steel / Voestalpine DRI project is primary industrial H2 demand)",
+          "Rail — ÖBB exploring H2 traction for non-electrified branch lines",
+          "H2 export via pipeline or LH2 logistics to neighbouring Germany/Italy markets"
+        ],
+        "supply_chain_note": "Austrian LH2 production supply chain is nascent. Air Liquide and Linde (BOC) are the primary industrial gas suppliers. Domestic liquefaction capacity does not yet exist at commercial scale. Imports from industrial gas producers or co-location with electrolysis-linked liquefaction plant are the development pathway."
+      },
+
+      "notes": "Austria is a strong mid-tier LH2 development environment in Central Europe. The SEVESO III StrfVO framework provides a structured (if demanding) safety-regulatory pathway with clear thresholds. Klima- und Energiefonds grants of up to 40% eligible CapEx are the primary public funding mechanism — but these are competitive calls with finite budgets. The 23% CIT with 15% ecological IFB provides some tax efficiency, though the €1m IFB cap limits the benefit for large-scale LH2 CapEx. Electricity cost is the primary commercial risk: Austria's alpine hydro and wind resources create low-cost procurement windows that should be incorporated into liquefaction scheduling strategy. All Klima- und Energiefonds grant parameters must be verified at the time of application as call conditions change. EU Hydrogen Bank co-stacking eligibility should be confirmed with advisers on a project-specific basis."
     }
   }
 }

@@ -538,6 +538,247 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "Switzerland has no coal-fired electricity generation. Nuclear and hydro dominant. EU Taxonomy does not apply directly (non-EU). No coal support mechanism."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Switzerland is a non-EU, non-EEA country. EU State Aid rules do NOT apply (eu_state_aid_applicable: false). Switzerland has its own industrial safety regime — the Störfallverordnung (StFV, SR 814.012) — which is the Swiss equivalent of SEVESO III but is a distinct Swiss ordinance, NOT SEVESO III itself. LH2 storage in Switzerland is primarily relevant for: heavy road transport (Hyundai H2 fuel cell trucks — Hydrospider/H2 Energy consortium); high-value industrial applications (chemical, pharmaceutical, semiconductor); and potential export/transit via Alpine road/rail corridors. Hydrospider AG (ALPIQ) and H2 Energy AG are established domestic H2 players. All financial figures quoted in CHF first with EUR equivalent at 1 EUR = 0.94 CHF (FX date 2026-06-15 — verify at SNB snb.ch before use).",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "eu_state_aid_applicable": false,
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism in Switzerland. SFOE (Swiss Federal Office of Energy — sfoe.admin.ch) administers Energiegesetz (EnG, SR 730.0) support schemes focused on electricity generation, not H2 infrastructure. Innosuisse (innosuisse.ch) provides R&D grants for qualifying innovation projects including H2 technology. EU Hydrogen Bank: NOT eligible (non-EU/non-EEA). Cantons (e.g., Aargau, Zurich, Zug) may offer additional R&D or industrial promotion incentives. Source: SFOE; Innosuisse; iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "sfoe_ch; innosuisse_ch; iea_hydrogen",
+      "staleness_warning": "Swiss CHF/EUR rate must be verified at SNB (snb.ch) on analysis date — 1 EUR = 0.94 CHF / 1 CHF = 1.064 EUR as of 2026-06-15 is indicative only. Swiss H2 support programme parameters may be updated. Innosuisse programme calls change annually. EU Hydrogen Bank participation requires explicit confirmation of non-eligibility for each round.",
+
+      "eu_hydrogen_bank_status": {
+        "eligible": false,
+        "reason": "Switzerland is NOT an EU member state or EEA member. EU Hydrogen Bank auction rounds are open to EU member states only. Switzerland does not participate as of mid-2025. Swiss H2 projects may not apply for EU Hydrogen Bank support. Source: innovation-fund.ec.europa.eu — verify current eligibility criteria."
+      },
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Störfallverordnung (StFV) — Ordinance on Major Accidents, SR 814.012 — dated 27 February 1991, as amended",
+            "relevance": "Swiss major accident prevention ordinance — the Swiss functional equivalent of SEVESO III (EU Directive 2012/18/EU) BUT a DISTINCT Swiss instrument. NOT SEVESO III itself. Scope: LH2 storage above threshold quantities. Lower tier (≥10 t flammable gas in certain plant categories): notification to cantonal authority; Kurzbericht (brief report). Upper tier (≥20 t or per Annex 1.2/4 thresholds for specific plant categories): full Risikoermittlung (risk assessment / safety report acceptable to BAFU and Canton); public risk assessment; inspection.",
+            "important_distinction": "StFV thresholds differ from SEVESO III. For flammable gases: consult StFV Anhang 1 (Annex 1) for the relevant installation category. The upper-tier trigger under StFV may differ from SEVESO III's 50t. Project-specific Annex 1 analysis is required."
+          },
+          {
+            "instrument": "Gewässerschutzgesetz (GSchG, SR 814.20) — Waters Protection Act and Luftreinhalte-Verordnung (LRV, SR 814.318.142.1) — Air Pollution Control Ordinance",
+            "relevance": "Environmental permits for site drainage and BOG atmospheric emissions; BAFU (Bundesamt für Umwelt / Federal Office for the Environment) and cantonal authority administer."
+          },
+          {
+            "instrument": "Raumplanungsgesetz (RPG, SR 700) — Spatial Planning Act and cantonal Baugesetze (Building Acts)",
+            "relevance": "Building permit (Baubewilligung) from cantonal and communal authority required for LH2 storage and liquefaction plant construction."
+          },
+          {
+            "instrument": "ATEX-Umsetzung (Swiss ATEX): Explosionsschutzverordnung (ExSchV, SR 832.312.22) implementing Directive 1999/92/EC",
+            "relevance": "Workplace explosion protection; ATEX zone documentation for LH2 storage and dispensing; SUVA (Swiss national accident insurance) oversight."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Raumplanungsgesetz (RPG, SR 700) + Kantone Richtpläne (Cantonal Structure Plans)",
+            "relevance": "Spatial planning; industrial zone classification. BAFU consultation required for sites above StFV thresholds. Cantonal variation in planning efficiency is significant — Aargau, Zug, and Zurich cantons have more streamlined processes than Alpine or rural cantons."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Energiestrategie 2050 (Energy Strategy 2050 — Swiss Federal Council) + Mantelerlass (Bundesgesetz über eine sichere Stromversorgung mit erneuerbaren Energien, approved by referendum June 2024)",
+            "relevance": "Framework for Swiss renewable electricity development. H2 as storage and transport vector is referenced in SFOE publications but has no dedicated LH2 infrastructure support instrument as of mid-2025."
+          },
+          {
+            "instrument": "Hydrospider AG (ALPIQ) — Green H2 Production, Gösgau/Gösgen",
+            "relevance": "Hydrospider (ALPIQ + H2 Energy + Hyundai) operates a 2 MW electrolyser at Gösgen, Aargau, supplying compressed H2 to Hyundai fuel cell trucks. This is the key proof-of-concept for Swiss H2 supply infrastructure. LH2 (liquid) not currently produced by Hydrospider — compressed gas only as of mid-2025. Verify at hydrospider.com."
+          },
+          {
+            "instrument": "H2 Energy AG + Hyundai Hydrogen Mobility — Fuel Cell Truck Deployment",
+            "relevance": "H2 Energy AG and Hyundai Hydrogen Mobility (JV) deploying 1,600 Hyundai XCIENT fuel cell trucks across Switzerland. This creates distributed H2 demand infrastructure and is the primary near-term commercial market for Swiss H2 — including potential future LH2 supply as volumes scale. Verify at h2energy.ch and hyundaihm.ch."
+          }
+        ]
+      },
+
+      "safety_regime_equivalent": {
+        "regime_type": "Störfallverordnung (StFV) — Swiss equivalent of SEVESO",
+        "competent_authority_federal": "BAFU (Bundesamt für Umwelt — Schweizerische Eidgenossenschaft Federal Office for the Environment — bafu.admin.ch); SECO (Staatssekretariat für Wirtschaft — State Secretariat for Economic Affairs) for specific installation types",
+        "competent_authority_cantonal": "Cantonal environmental and building authority (varies by Canton — e.g., Amt für Umwelt in Aargau; AWEL in Zurich; AfU in Zug)",
+        "stfv_threshold_notes": "StFV thresholds for flammable gases are in Anhang 1 (Annex 1) of the Ordinance — they are NOT identical to SEVESO III thresholds. SEVESO III EU lower tier = 10t / upper tier = 50t flammable gas. StFV uses different installation categories and trigger thresholds (Annex 1.2 for cryogenic flammable liquids). Project-specific StFV Annex 1 analysis required to determine applicable tier. Reference: SR 814.012 Anhang 1.",
+        "kurzbericht_obligation": "Above the StFV Anhang 1 threshold: prepare Kurzbericht (brief report/notification) submitted to BAFU and cantonal authority within a statutory period before commencement of operations.",
+        "risikoermittlung_upper_tier": "For sites above the upper-tier threshold (project-specific per Annex 1): full Risikoermittlung (risk assessment) acceptable to BAFU and cantonal authority required. This is functionally equivalent to a SEVESO III upper-tier safety report but is a distinct Swiss instrument.",
+        "pre_notification_lead_time_months": 4,
+        "safety_report_preparation_months": 7,
+        "bafu_and_canton_assessment_months": 5,
+        "legal_basis": "Störfallverordnung (StFV), SR 814.012, as amended. Reference: admin.ch/opc/de/classified-compilation/91005.",
+        "not_seveso_iii_warning": "IMPORTANT: Switzerland is NOT bound by SEVESO III (EU Directive 2012/18/EU). Any output comparing Switzerland to EU SEVESO III jurisdictions must make clear that StFV is a distinct Swiss instrument — not SEVESO III. Per Rule 2B: jurisdictional attribution must be individual."
+      },
+
+      "permitting": {
+        "planning_authority": "Cantonal building authority (Baubehörde) for building permit; BAFU for StFV; cantonal environmental authority for environmental permit. Federal level: ENSI if nuclear proximity; ElCom for electricity grid aspects.",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 14, "max": 42 },
+        "parallel_consent_tracks": [
+          "Baubewilligung (building permit) from commune/Canton — 10–18 months (Canton-dependent; Aargau, Zug streamlined)",
+          "StFV notification / Risikoermittlung (BAFU + Canton) — 4–12 months post-submission",
+          "Cantonal environmental permit (LRV/GSchG basis) — 3–5 months",
+          "SUVA ATEX/explosion protection review — concurrent with building permit"
+        ],
+        "cantonal_variation": "Cantonal variation in permitting efficiency is material. Aargau (Hydrospider/Gösgen precedent), Zug (business-friendly, H2 Energy AG base), and Zurich (EMPA/PSI research proximity) are the most favourable Canton choices for an LH2 facility. Alpine or rural cantons add material timeline and cost uncertainty.",
+        "appeal_risk": "low",
+        "notes": "P50 of 24 months reflects Swiss thoroughness (quality permitting, multi-level consultation) not bureaucratic obstruction. Switzerland has an excellent rule-of-law environment and highly predictable permitting outcomes once a qualified cantonal permit consultant is engaged. German, French, and Italian are all relevant depending on Canton."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Connection from Swissgrid (TSO) or cantonal DSO (e.g., AEW Energie in Aargau; EKZ in Zurich) for the liquefaction plant.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Swissgrid AG (TSO — swissgrid.ch); cantonal DSOs vary by location",
+        "electricity_price_note": "Swiss industrial electricity prices are competitive but in CHF — FX exposure must be modelled for EUR-reporting investors. Hydropower produces ~60% of Swiss electricity (very low marginal cost at high water years). Alpine hydro PPA is viable and well-precedented.",
+        "eu_electricity_market_integration": "Switzerland's electricity grid is physically integrated with the EU (CE synchronous area) but not legally integrated into the EU Internal Energy Market following breakdown of CH-EU electricity market agreement negotiations. This creates practical cross-border electricity trading restrictions. Swissgrid relies on bilateral capacity allocations — not full market coupling with EPEX Spot.",
+        "green_credentials_note": "Swiss hydropower-backed PPA (ALPIQ, Axpo, BKW) provides excellent carbon-free credentials consistent with Swiss environmental standards but is NOT necessarily compliant with EU Delegated Regulation 2023/1184 (additionality) for EU green H2 certification. If producing H2 for EU export with EU green certification, an additionality-compliant renewable PPA structure is needed.",
+        "renewable_ppa_strategy": "Alpine hydro PPA (ALPIQ/Axpo run-of-river) or Swiss solar PPA (southern cantons — Valais, Ticino, 20–30% higher irradiation than Germany) are the primary options. Swiss hydro PPA is the most established and contract-standard option.",
+        "notes": "Swissgrid is a professional TSO. Grid connection timelines (15–24 months) are reasonable. Cantonal DSO quality varies. For LH2 at industrial scale, direct Swissgrid transmission connection may be required — discuss with Swissgrid pre-application."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Switzerland. No state commodity floor. EU Hydrogen Bank NOT eligible. Revenue via tolling contracts only.",
+        "_eu_state_aid_note": "eu_state_aid_applicable: false — Swiss support schemes are governed by Swiss federal law and WTO subsidy rules, NOT EU CEEAG/GBER/TCTF. State aid rules analysis is irrelevant for Swiss projects.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing to Hyundai/H2 Energy truck fleet, industrial customers, and potential export; no state commodity floor.",
+        "innosuisse_grants": {
+          "applicable": "Innosuisse (innosuisse.ch) provides innovation grants for R&D and first deployment of novel technologies including H2 liquefaction and storage. Verify current programme calls.",
+          "staleness_warning": "Innosuisse programme terms and open calls change annually. Verify at innosuisse.ch."
+        },
+        "sfoe_energy_programme": {
+          "applicable": "SFOE Energie-Förderprogramm (energy support programme) under Energiegesetz (EnG) focuses on electricity generation support — not H2 infrastructure directly. Pilot and demonstration grants may be available for novel H2 technology. Verify at sfoe.admin.ch/de/foerderprogramme.",
+          "staleness_warning": "Programme parameters change. Verify at SFOE."
+        },
+        "cantonal_incentives": {
+          "applicable": "Individual cantons (particularly Aargau, Zug, Zurich) may offer investment promotion grants, tax holidays, or R&D subsidies for H2 industrial investment. Contact cantonal wirtschaftsförderung (economic development) agency.",
+          "note": "Cantonal tax competition in Switzerland is significant — CIT rate varies materially by Canton (see tax section)."
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Primary Swiss LH2 demand: Hyundai XCIENT fuel cell truck fleet (H2 Energy/Hyundai Hydrogen Mobility — 1,600 trucks), high-value industrial H2 consumers (chemical, pharmaceutical, semiconductor), and potential Alpine transit for LH2 ISO container exports to Germany/France/Italy.",
+          "h2_energy_hyundai_note": "H2 Energy AG + Hyundai Hydrogen Mobility is the most credible near-term Swiss LH2 offtaker as compressed H2 demand from fuel cell trucks scales toward LH2 liquefaction economics (~300+ t/year at which liquefaction becomes competitive vs. tube trailer compressed)."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Swiss CIT is cantonal-variable. Federal CIT = 7.83% (unchanged). Total effective CIT varies from ~11.9% (Zug, Nidwalden) to ~24.4% (Bern, Zurich canton and city combined). Accelerated depreciation under Swiss tax rules analysed as NPV of timing benefit. All CHF figures shown with EUR equivalent at 1 EUR = 0.94 CHF (FX date 2026-06-15 — verify at SNB).",
+        "_rule_3c_note": "Rule 3C: Swiss currency is CHF — native. EUR equivalent at 1 EUR = 0.94 CHF / 1 CHF = 1.064 EUR. FX date: 2026-06-15. Verify at SNB (snb.ch) before use.",
+        "cit_federal_pct": 7.83,
+        "cit_cantonal_communal_range_total_pct": {
+          "lowest_total": 11.9,
+          "canton_lowest": "Zug (Kanton Zug: ~11.85% combined federal + cantonal + communal)",
+          "typical_range_low": 14.0,
+          "typical_range_high": 21.0,
+          "highest_total": 24.4,
+          "canton_highest_example": "Bern / Zurich city (federal + cantonal + communal ~24.4%)",
+          "legal_basis": "Bundesgesetz über die direkte Bundessteuer (DBG, SR 642.11) for federal CIT at 7.83%; Kantonale Steuergesetze for cantonal/communal rates",
+          "note": "For H2 industrial infrastructure: Aargau (~18–19% total), Zug (~11.9% total), and Zurich (~21% total) are the most likely cantonal locations. Verify exact rate with cantonal Steueramt."
+        },
+        "capex_incentives": {
+          "accelerated_depreciation": {
+            "description": "Swiss federal tax law (DBG §28) allows immediate write-down of qualifying new equipment in the year of purchase OR accelerated declining-balance depreciation at up to 2× the straight-line rate. Cantons typically follow federal depreciation rules.",
+            "legal_basis": "Bundesgesetz über die direkte Bundessteuer (DBG, SR 642.11) §28",
+            "_rule_3b_analysis_chf_and_eur": "Illustrative: liquefaction plant CapEx CHF 52.5m (EUR 50m at 1 EUR = 0.94 CHF, FX date 2026-06-15). At Zug CIT (~11.9%), immediate write-down: NPV of tax shield at 7% WACC = ~10.1% of CapEx = CHF 5.3m (EUR 5.6m at FX date 2026-06-15). At Aargau CIT (~18.5%): NPV ≈ 15.7% = CHF 8.2m (EUR 8.7m). At immediate write-down, timing advantage is maximised vs. straight-line.",
+            "fx_date": "2026-06-15 — verify CHF/EUR at SNB before use"
+          },
+          "canton_tax_competition": "Swiss cantonal CIT competition is structural. Zug (~11.9% total) is the most competitive. However, Aargau (Hydrospider precedent, Swissgrid proximity) and Zurich (EMPA/PSI research, Schiphol-equivalent infrastructure) may justify slightly higher CIT for operational advantages."
+        },
+        "vat": {
+          "rate_pct": 8.1,
+          "legal_basis": "Mehrwertsteuergesetz (MWSTG, SR 641.20) — Swiss VAT Act; standard rate 8.1% (effective 1 January 2024, increased from 7.7%)",
+          "input_vat_recovery": "Full input VAT recovery for registered businesses making taxable supplies"
+        },
+        "no_withholding_tax_for_qualifying_structures": "Switzerland imposes 35% Verrechnungssteuer (withholding tax on dividends) at source. However, under bilateral DTAs (e.g., CH-DE: 0–5%; CH-NL: 0–5%; CH-UK: 0–15%) and via notification procedure under certain conditions, WHT may be substantially reduced. Structural planning required. Verify with Swiss tax counsel."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "SN EN 1251 (Swiss Standards Association adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels). CE-equivalent Swiss marking required.",
+        "electrical_hazardous_area": "ATEX zones per Explosionsschutzverordnung (ExSchV, SR 832.312.22); documented in StFV Risikoermittlung. SUVA (Schweizerische Unfallversicherungsanstalt) oversight of workplace safety.",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (cantonal LRV environmental permit required)", "On-site fuel use (process heat)"],
+          "regulatory_basis": "BOG management addressed in StFV Risikoermittlung. Cantonal environmental authority (LRV basis) governs atmospheric emissions.",
+          "environmental_note": "Swiss cantonal environmental standards are among the most stringent in Europe. BOG venting minimisation is expected. Reliquefaction or catalytic combustion strongly preferred."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: indicative inputs for IRR, NPV, CapEx payback, and DSCR modelling.",
+        "_rule_3c_note": "CRITICAL Rule 3C: All CHF figures shown first in native currency (CHF) with EUR equivalent at 1 EUR = 0.94 CHF / 1 CHF = 1.064 EUR. FX date: 2026-06-15. Verify at SNB (snb.ch) before use. CHF/EUR rate fluctuates — model FX sensitivity explicitly.",
+        "_eu_state_aid_note": "eu_state_aid_applicable: false. No GBER/CEEAG analysis required. No EU Hydrogen Bank eligibility.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_native_chf": {
+            "per_tonne_per_day_midpoint_chf": 3290000,
+            "eur_equivalent": 3500000,
+            "fx_rate_used": "1 EUR = 0.94 CHF / 1 CHF = 1.064 EUR (date: 2026-06-15 — verify at SNB)"
+          },
+          "storage_tank_capex_native_chf": {
+            "per_tonne_midpoint_chf": 940000,
+            "eur_equivalent": 1000000,
+            "fx_rate_used": "1 EUR = 0.94 CHF / 1 CHF = 1.064 EUR (date: 2026-06-15)"
+          },
+          "illustrative_total_project_capex": {
+            "total_indicative_chf": 64296000,
+            "total_indicative_eur_equivalent": 68400000,
+            "fx_rate_used": "1 EUR = 0.94 CHF (date: 2026-06-15 — verify at SNB)",
+            "notes": "20% BOP and civil works. Excludes grid connection."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "hydro_ppa_price_chf_per_kwh_indicative": 0.06,
+            "hydro_ppa_price_eur_per_kwh_equivalent": 0.064,
+            "electricity_opex_chf_per_kg_lh2_hydro_ppa": 0.66,
+            "electricity_opex_eur_per_kg_lh2_equivalent": 0.70,
+            "fx_rate_used": "1 EUR = 0.94 CHF (date: 2026-06-15 — verify at SNB)",
+            "source": "IEA, The Future of Hydrogen, 2019; SFOE reference (verify at sfoe.admin.ch)",
+            "staleness_warning": "Swiss industrial electricity prices in CHF change. Verify current ALPIQ/Axpo hydro PPA prices before use."
+          },
+          "cit_range_by_canton": {
+            "zug_effective_cit_pct": 11.9,
+            "aargau_effective_cit_pct_approx": 18.5,
+            "zurich_effective_cit_pct_approx": 21.0,
+            "note": "Model at Canton-specific rate. Zug optimal for tax efficiency. Aargau has operational H2 precedent (Hydrospider)."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative only. All CHF/EUR conversions at 2026-06-15 FX rate — verify at SNB."
+        }
+      },
+
+      "market_context": {
+        "ch_hydrogen_context": "Switzerland has a uniquely developed H2 mobility ecosystem: Hydrospider AG (ALPIQ), H2 Energy AG, and Hyundai Hydrogen Mobility have deployed compressed H2 at commercial scale for fuel cell trucks (1,600 XCIENT trucks target). The PSI (Paul Scherrer Institut) and EMPA are world-class H2 research institutions. Liquefaction would be the next scale-up step as truck numbers grow beyond the economic threshold for compressed tube trailer delivery (~300+ t/year). Alpine transit via LH2 ISO tank containers to Germany/France/Italy is a secondary corridor opportunity.",
+        "key_ch_lh2_projects_indicative": [
+          {
+            "project": "Hydrospider AG — Green H2 Production (Gösgen, Aargau)",
+            "status": "Operational — 2 MW electrolyser at Gösgen producing compressed green H2 from ALPIQ hydropower PPA. Compressed gas only (not LH2) as of mid-2025. Verify at hydrospider.com.",
+            "note": "Hydrospider is the proof-of-concept for Swiss green H2 supply. Liquefaction at Gösgen would be the logical scale-up step as truck demand increases."
+          },
+          {
+            "project": "H2 Energy AG + Hyundai Hydrogen Mobility — XCIENT Fuel Cell Truck Deployment",
+            "status": "Active commercial deployment — verify current fleet size and H2 consumption at h2energy.ch and hyundaihm.ch.",
+            "note": "As fleet scales toward 1,600 trucks, annual H2 consumption approaches LH2 liquefaction economic threshold (~300+ t/year). This is the primary demand-pull for Swiss LH2 infrastructure."
+          },
+          {
+            "project": "EMPA and PSI H2 Research (Dübendorf / Villigen)",
+            "status": "Active research — PSI and EMPA are conducting world-class H2 materials, safety, and systems research including LH2 storage optimisation. Collaboration opportunity for novel LH2 technology deployment.",
+            "note": "Swiss research excellence creates IP partnership opportunities for LH2 technology developers entering the Swiss market."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Hyundai XCIENT fuel cell truck fleet — primary near-term Swiss H2 demand (~300t+ p.a. at full deployment)",
+          "Industrial H2 — chemical, pharmaceutical, semiconductor industries in Central Switzerland",
+          "Alpine transit — LH2 ISO container export to Germany, France, Italy via Gotthard/Simplon corridors",
+          "H2 aviation research — Swiss airport ground handling (Zurich Airport exploring H2 vehicles)"
+        ]
+      },
+
+      "notes": "Switzerland's LH2 investment case is driven by a genuine and growing compressed H2 mobility market (Hydrospider/H2 Energy/Hyundai) approaching the scale at which LH2 liquefaction becomes economically viable over tube trailer compressed gas delivery. Key differentiators from EU jurisdictions: (1) eu_state_aid_applicable: false — EU rules do NOT apply; StFV not SEVESO III; EU Hydrogen Bank NOT eligible; (2) CHF currency — all EUR equivalent figures at 1 EUR = 0.94 CHF (FX date 2026-06-15 — verify at SNB); (3) cantonal CIT variation is material — Zug at ~11.9% total is optimal, Aargau (~18.5%) offers operational precedent with Hydrospider; (4) Swiss regulatory environment is thorough, highly predictable, and professional — StFV Risikoermittlung is demanding but outcome is reliable. BAFU and cantonal authorities are well-resourced. All parameters must be verified with SFOE (sfoe.admin.ch), Innosuisse (innosuisse.ch), and relevant cantonal Steueramt and Wirtschaftsförderung before project commitment. CHF/EUR FX rate must be re-verified at SNB (snb.ch) on analysis date."
     }
   }
 }

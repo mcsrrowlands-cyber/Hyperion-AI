@@ -444,6 +444,250 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "Bulgaria has significant coal capacity (Maritsa East complex). No formal phase-out commitment. EU Taxonomy-excluded. Wholesale merchant revenue only."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Bulgaria is an emerging hydrogen market with ambitions linked to Maritsa East coal region decarbonisation and Black Sea offshore wind development. Bulgaria participates in IPCEI Hy2Tech. The primary regulatory gate is the SEVESO III safety regime administered by РИОСВ (Regional Inspectorates of Environment and Water) with enforcement by ГД Пожарна безопасност. CRITICAL FX NOTE: BGN is fixed to EUR at 1.95583 BGN = 1 EUR under Bulgaria's Currency Board Arrangement — this is a legally fixed rate, not a market rate. For operational cashflows, EUR investors face negligible FX risk. No FX hedging cost applies. This is a material cost advantage for EUR-denominated project finance structures.",
+
+      "permitting_p50_months": 30,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism. Standalone facilities operate on a tolling or merchant basis. НПВП (НПВ — Национален план за възстановяване и устойчивост / Bulgarian National Recovery and Resilience Plan) includes an H2 investment component; ОПИК 2021–2027 (Operational Programme Innovation and Competitiveness, EU Structural Funds) and ОПОС (Operational Programme Environment) provide CapEx grant routes for energy infrastructure. Bulgaria participates in IPCEI Hy2Tech — integrated projects may access IPCEI funding. EU Hydrogen Bank competitive funding rounds are available. Source: МИКОВ (Ministry of Innovation and Growth); European Commission DG ENER.",
+      "revenue_floor_description": null,
+      "source": "ewrc_bg; ipcei_hy2tech; iea_hydrogen",
+      "staleness_warning": "НПВП grant competition parameters, ОПИК programme call conditions, and industrial electricity prices are time-sensitive. Verify at Ministry of Energy (me.government.bg) and EWRC (dker.bg) before use. BGN/EUR rate is FIXED at 1.95583 — verify Eurozone accession status at BNB (bnb.bg) as Euro adoption would affect regulatory framework.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Наредба за предотвратяване на големи аварии с опасни вещества (Ordinance on Prevention of Major Accidents with Dangerous Substances), implementing Directive 2012/18/EU (SEVESO III)",
+            "relevance": "Bulgarian transposition of SEVESO III. Mandatory safety regime for LH2 storage at or above threshold quantities. Lower tier (≥10 t flammable gas, including LH2): notify РИОСВ (Regional Inspectorate of Environment and Water), prepare план за предотвратяване на аварии (MAPP equivalent) and on-site emergency plan. Upper tier (≥50 t): detailed доклад за безопасност (safety report), external emergency plan, public information duty, periodic РИОСВ inspection."
+          },
+          {
+            "instrument": "Закон за опазване на околната среда (ЗООС — Environmental Protection Act) and Наредба за условията и реда за извършване на оценка на въздействието върху околната среда",
+            "relevance": "Environmental Impact Assessment (ОВОС — оценка на въздействието върху околната среда) required for LH2 facilities above threshold scale. РИОСВ is the competent EIA authority at regional level; МОСВ (Ministry of Environment and Water) for nationally significant installations."
+          },
+          {
+            "instrument": "Закон за защита при бедствия (ZZB — Disaster Protection Act) and implementing regulations",
+            "relevance": "Emergency planning framework; ГД Пожарна безопасност и защита на населението (General Directorate Fire Safety and Civil Protection, Ministry of Interior) has inspection and enforcement competence for fire safety at LH2 installations."
+          },
+          {
+            "instrument": "Наредба № 7 от 2004 г. за изисквания за здравословни и безопасни условия на труд — АТЕХ implementation",
+            "relevance": "Explosive atmosphere requirements; zone classification around LH2 storage and dispensing areas."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Закон за устройство на територията (ЗУТ — Spatial Planning Act)",
+            "relevance": "Зонирование (zoning) and spatial plan amendments; строително разрешение (building permit) required for LH2 tanks, liquefaction plant, and associated structures."
+          },
+          {
+            "instrument": "Закон за инвестиционното проектиране (Investment Projects Act)",
+            "relevance": "Design standards and technical approvals for industrial structures including cryogenic installations."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Национална стратегия за развитие на водородни технологии (National Hydrogen Strategy — roadmap adopted 2020+)",
+            "relevance": "Sets Bulgaria's hydrogen production and storage ambitions; identifies Maritsa East coal region decarbonisation, Black Sea offshore wind H2, and Kozloduy nuclear-H2 as strategic vectors. Published by Ministry of Energy."
+          },
+          {
+            "instrument": "НПВП (Национален план за възстановяване и устойчивост — Bulgarian National Recovery and Resilience Plan)",
+            "relevance": "EU-funded investment plan; includes H2 technology investment component. Ministry of Innovation and Growth (МИКОВ) administers grant competitions."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech — Bulgaria as participating Member State",
+            "relevance": "Bulgaria participates in IPCEI Hy2Tech (EC clearance 2022). Bulgarian industrial partners may access IPCEI funding for integrated hydrogen projects."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — Competitive Grant Rounds (European Commission)",
+            "relevance": "Bulgarian LH2 projects producing renewable hydrogen are eligible. First auction concluded 2024. Verify current round at European Hydrogen Bank portal."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "Наредба за предотвратяване на големи аварии с опасни вещества (Bulgarian SEVESO III Ordinance)",
+        "competent_authority_primary": "РИОСВ — Регионална инспекция по околната среда и водите (Regional Inspectorates of Environment and Water — 15 regional offices covering Bulgarian territory)",
+        "competent_authority_enforcement": "ГД Пожарна безопасност и защита на населението — Главна дирекция Пожарна безопасност и защита на населението (General Directorate Fire Safety and Civil Protection, Ministry of Interior) — fire safety inspection and enforcement",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lower_tier_obligations": "Notify regional РИОСВ; prepare план за предотвратяване на аварии (major accident prevention plan); on-site emergency plan; periodic РИОСВ inspection",
+        "upper_tier_obligations": "Prepare detailed Доклад за безопасност (safety report) acceptable to regional РИОСВ and МОСВ; external emergency plan by local civil protection authority; public information duty; periodic РИОСВ inspection",
+        "legal_basis": "Наредбата, Приложение 1 (Annex 1) — запалими газове (flammable gases) including hydrogen; SEVESO III thresholds (10t lower, 50t upper) apply",
+        "safety_report_preparation_months_estimate": 6,
+        "authority_assessment_months_estimate": 4,
+        "notes": "РИОСВ is the primary competent authority — 15 regional offices with varying capacity. Projects in Sofia Region (РИОСВ-София), Plovdiv, and Varna regions have better-resourced inspectorates. Corruption risk in local administration (flagged at operational drag score 78) is a real consideration — experienced Bulgarian legal counsel and technical advisers are essential. ГД Пожарна безопасност has a separate approval track that must run in parallel with РИОСВ."
+      },
+
+      "permitting": {
+        "planning_authority": "Municipal council (Общински съвет) for spatial plan amendments; regional РИОСВ for EIA and SEVESO safety report; ГД Пожарна безопасност for fire safety; ДКЕВР (EWRC) for operational registration",
+        "timeline_p50_months": 30,
+        "timeline_range_months": { "min": 20, "max": 54 },
+        "parallel_consent_tracks": [
+          "РИОСВ SEVESO safety report (Доклад за безопасност) assessment — 6–10 months post-submission",
+          "EIA (ОВОС — оценка на въздействието върху околната среда) via regional РИОСВ — 9–15 months",
+          "Spatial plan amendment (ЗУТ) and building permit (строително разрешение) via municipal council — 12–24 months (spatial plan amendment can be very slow)",
+          "ГД Пожарна безопасност fire safety approval — concurrent with building permit"
+        ],
+        "spatial_plan_risk": "HIGH — Bulgarian spatial plan amendment process at municipal level is frequently slow and subject to local political dynamics and corruption risk. This is the dominant permitting timeline driver for greenfield LH2 sites outside established industrial zones. Industrial zone (промишлена зона) siting avoids spatial plan amendment requirement.",
+        "appeal_risk": "medium-high",
+        "appeal_mechanism": "Административни съдилища (Administrative Courts); Върховен административен съд (VAS — Supreme Administrative Court)",
+        "notes": "P50 of 30 months assumes a greenfield lower-tier SEVESO facility in an established industrial zone (avoiding spatial plan amendment). Sites requiring spatial plan amendment add 6–18 months. Upper-tier sites (≥50t LH2) add 6–10 months for safety report. Corruption risk in local permitting is a material uncertainty — established industrial zone (e.g., Maritsa East industrial complex, Varna Free Trade Zone) siting dramatically reduces this exposure."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Grid connection for the liquefaction plant is the primary infrastructure interface.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "ЕСО EAD (Електроенергиен системен оператор — ESO EAD, Bulgarian TSO) for transmission-connected; regional DSOs for distribution-connected",
+        "grid_queue_risk": "MEDIUM-HIGH — northeastern Bulgaria (Dobrudzha — best wind resource) faces grid constraints from existing wind installations. Southern Bulgaria (best solar resource) faces DSO capacity limits in some areas. ESO reinforcement programme is underway but behind demand.",
+        "electricity_price_risk": "MEDIUM — Bulgarian electricity prices are among the lowest in the EU by absolute EUR terms. However, market reform (IBEX price formation) and coal phase-out transition may increase industrial electricity prices over the project lifetime. BGN/EUR fixed peg means no FX risk on electricity costs.",
+        "bgn_eur_fixed_rate_advantage": "CRITICAL ADVANTAGE: BGN is fixed to EUR at exactly 1.95583 BGN/EUR under Bulgaria's Currency Board Arrangement (Law on Bulgarian National Bank, Article 29). Industrial electricity tariffs are BGN-denominated but translate to EUR at a fixed, known rate with zero FX uncertainty. This eliminates electricity cost FX risk for EUR-denominated project financing.",
+        "renewable_ppa_strategy": "Bulgarian solar PPA (southern Bulgaria, 1,400–1,600 kWh/kWp) or wind PPA (Dobrudzha, 30–38% capacity factors) provides green credentials. At EUR-equivalent electricity cost of approximately BGN 0.18–0.25/kWh (EUR 0.092–0.128/kWh at fixed rate) from a solar PPA: electricity opex ≈ EUR 1.01–1.41/kg LH2. Lower than UK/Germany but higher than Greece.",
+        "fx_note": "All electricity cost calculations at fixed BGN/EUR rate of 1.95583. No FX sensitivity required for BGN-denominated costs."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated one-way premium or two-way CfD in Bulgaria. Revenue is via tolling contracts with no state commodity floor. НПВП/ОПИК grants are capital subsidies, not revenue mechanisms.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing; no state commodity price floor",
+        "npvp_opik_capex_grant": {
+          "applicable": true,
+          "description": "НПВП (National Recovery and Resilience Plan) H2 component and ОПИК 2021–2027 (Operational Programme Innovation and Competitiveness, EU Structural Funds) provide CapEx grants for qualifying hydrogen infrastructure. Eligible costs include liquefaction plant, cryogenic storage tanks, and civil works.",
+          "indicative_grant_rate": "Aid intensity limits under CEEAG / GBER Article 41. Bulgaria qualifies as a less-developed region (GDP per capita < 75% EU average) — maximum aid intensity of up to 55–70% of eligible CapEx may apply. Verify at МИКОВ (mikov.government.bg) for current call parameters.",
+          "staleness_warning": "НПВП and ОПИК call parameters are time-sensitive. Verify current open calls at Ministry of Innovation and Growth (mikov.government.bg)."
+        },
+        "ipcei_hy2tech": {
+          "applicable": true,
+          "description": "Bulgaria participates in IPCEI Hy2Tech (EC clearance 2022). Bulgarian participants may access IPCEI funding for integrated hydrogen projects.",
+          "legal_basis": "Commission Decision on IPCEI Hy2Tech, C(2022) 5358 final, 15 July 2022",
+          "staleness_warning": "Verify current Bulgarian IPCEI national implementation parameters with Ministry of Innovation and Growth."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Bulgarian LH2 projects producing renewable hydrogen are eligible for EU Hydrogen Bank competitive grants.",
+          "source": "European Commission DG ENER"
+        },
+        "retroactive_levy_risk_flag": {
+          "WARNING": "SOVEREIGN RISK FLAG — 2014 RETROACTIVE LEVY PRECEDENT: Bulgaria enacted a 20% levy on FiT revenues for commissioned RES generators in 2014, retroactively modifying contracted revenues. While this was a RES-specific measure and not directly applicable to LH2 tolling revenue, the precedent demonstrates Bulgarian government willingness to impose sectoral revenue levies by legislative action. All investor materials for Bulgarian LH2 projects should disclose the 2014 retroactive RES levy precedent as a political risk factor, even though it does not directly govern LH2 revenues. Legal basis: amendments to ZEVI and subsidiary legislation enacted 2014.",
+          "severity": "MEDIUM — indirect precedent for LH2 tolling; direct applicability to LH2 is limited; disclosed as political risk context"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a fully merchant basis. Maritsa East industrial complex and Black Sea coastal industrial zones provide potential offtake from decarbonising industrial consumers.",
+          "credit_risk_note": "Bulgarian corporate credit market is thin. International parent guarantees or investment-grade offtakers required for project finance. NEK/Enel (Maritsa East) and Black Sea port operators are potential institutional counterparties."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Bulgarian CIT is 10% — one of the lowest in the EU. Standard depreciation over 10 years for equipment provides modest timing benefit at this low rate. The 10% CIT rate itself is the primary tax incentive — not depreciation acceleration.",
+        "cit_rate_pct": 10.0,
+        "legal_basis": "Закон за корпоративното подоходно облагане (ЗКПО — Corporate Income Tax Act); 10% flat CIT rate",
+        "depreciation": {
+          "method": "Declining balance (намаляваща стойност — данъчен амортизационен план) under ЗКПО §§55–62",
+          "category_iv_rate_pct": 25,
+          "applies_to": "Machinery and equipment (машини, съоръжения, апарати) — Category IV under ЗКПО Annex II. LH2 liquefaction equipment, cryogenic storage vessels, and associated machinery should qualify as Category IV assets at 25% declining balance.",
+          "legal_basis": "ЗКПО Annex II (данъчен амортизационен план / Tax Depreciation Schedule) — Category IV: машини, съоръжения, апарати, транспортни средства (machines, installations, apparatus) — 25% declining balance (намаляваща стойност — DDB method)",
+          "npv_timing_benefit": "At 10% CIT and 10% WACC: 25% declining balance over useful life vs. straight-line 10 years (10% p.a.): NPV of tax shield under 25% DDB ≈ 7.4% of qualifying CapEx vs. 6.1% under straight-line. Timing benefit ≈ 1.3ppts per BGN 1 of qualifying CapEx. Small absolute benefit given 10% base CIT rate — primary advantage is the 10% rate itself, not depreciation method.",
+          "note": "Category IV 25% declining balance is the ZКПО prescribed rate for equipment. Verify classification of LH2-specific assets (vacuum-insulated storage vessels, liquefaction compressors) with Bulgarian tax adviser."
+        },
+        "bgn_eur_fixed_advantage": "BGN fixed to EUR at 1.95583 — all CIT calculations translate to EUR at a known, stable rate. No FX uncertainty on tax shield NPV calculations. This simplifies EUR-denominated financial modelling materially.",
+        "no_local_trade_tax": "Bulgaria has no municipal trade/business tax equivalent to Hungary's HIPA or Germany's Gewerbesteuer. 10% CIT is the primary tax burden.",
+        "vat": {
+          "standard_rate_pct": 20,
+          "input_vat_recovery": "Available for VAT-registered businesses",
+          "legal_basis": "ЗДДС (Закон за данък върху добавената стойност — VAT Act)"
+        }
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "БДС EN 1251 (Bulgarian adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "Zone classification per БДС EN 60079 (ATEX — Bulgarian adoption); Наредба № 7/2004 explosive atmosphere safety",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion / controlled flare (РИОСВ permit condition governs)", "Use as on-site fuel"],
+          "regulatory_basis": "BOG must be addressed as a major accident scenario in the Доклад за безопасност under the SEVESO III Ordinance. РИОСВ environmental permit conditions (Решение по ОВОС — EIA decision) govern atmospheric releases."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, and DSCR modelling. Figures are indicative benchmarks only.",
+        "_rule_3c_note": "Primary currency is BGN. EUR equivalents at FIXED Currency Board rate of 1 EUR = 1.95583 BGN. NO FX risk for EUR investors — this is a legally fixed rate under the Bulgarian National Bank Law (Article 29). This simplifies financial modelling: all BGN cashflows convert to EUR at a known, stable rate. Verify Eurozone accession status at BNB (bnb.bg).",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_bgn": {
+            "per_tonne_per_day_midpoint_bgn": 6839015,
+            "eur_midpoint_approx": 3500000,
+            "fx_rate_used": "Fixed: 1 EUR = 1.95583 BGN",
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023 — EUR midpoint converted at fixed BGN rate"
+          },
+          "storage_tank_capex_bgn": {
+            "per_tonne_midpoint_bgn": 1955830,
+            "eur_midpoint_approx": 1000000,
+            "fx_rate_used": "Fixed: 1 EUR = 1.95583 BGN"
+          },
+          "illustrative_total_project_capex": {
+            "total_indicative_bgn": 133759500,
+            "eur_equivalent_fixed": 68400000,
+            "fx_rate_used": "Fixed: 1 EUR = 1.95583 BGN — NO FX RISK",
+            "notes": "Balance of plant 20% of equipment. Bulgarian civil construction costs are competitive — among the lowest in the EU. Excludes grid connection. No FX uncertainty in EUR conversion."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_bgn_per_kwh_indicative": 0.22,
+            "eur_per_kwh_fixed": 0.112,
+            "electricity_opex_bgn_per_kg_lh2": 2.42,
+            "electricity_opex_eur_per_kg_lh2_fixed": 1.24,
+            "fx_rate_used": "Fixed: 1 EUR = 1.95583 BGN",
+            "source": "Indicative Bulgarian industrial tariff — verify current EWRC regulated price before use. IEA energy intensity figure.",
+            "note": "No FX risk on electricity cost calculation — BGN fixed to EUR. Industrial electricity price in Bulgaria is among the lowest in the EU."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "tax_model_note": "At 10% CIT and 25% declining balance depreciation on Category IV assets: modest timing benefit (NPV delta ≈ 1.3ppts). Primary tax benefit is the 10% base rate itself. No HIPA-equivalent revenue tax. Model CIT as straightforward 10% on taxable profit.",
+          "construction_cost_advantage": "Bulgarian civil construction costs are among the lowest in the EU (general construction cost index: approximately 50–60% of western European average). This provides a real CapEx advantage for greenfield LH2 infrastructure relative to UK, Germany, or Netherlands sites.",
+          "note": "Illustrative inputs only. Engineering study required before financial modelling. EUR equivalents are exact (no FX uncertainty) given BGN Currency Board fixed rate."
+        }
+      },
+
+      "market_context": {
+        "bulgaria_policy_position": "Bulgaria's National Hydrogen Strategy links H2 development to: (1) Maritsa East coal region decarbonisation (Just Transition Fund); (2) Black Sea offshore wind as feedstock for green H2; (3) Kozloduy NPP as baseload electricity for electrolysis; (4) transit infrastructure for SE European H2 export.",
+        "key_bulgaria_lh2_projects_indicative": [
+          {
+            "project": "Maritsa East TPP H2 Conversion Concept",
+            "status": "Concept/early study — NEK (Национална Електрическа Компания) and Enel exploring H2 co-firing at Maritsa East thermal plant as decarbonisation pathway; LH2 storage would be enabling infrastructure",
+            "operator": "НЕК EAD (National Electricity Company) / Enel",
+            "note": "Maritsa East is Bulgaria's largest coal power complex; Just Transition Fund supports industrial repurposing; H2 co-firing is a transition concept"
+          },
+          {
+            "project": "Black Sea Offshore Wind + H2 (concept stage)",
+            "status": "Early concept — multiple developers exploring Black Sea offshore wind development with H2 production; LH2 storage and export are long-term scenarios",
+            "note": "Black Sea offshore regulatory framework is nascent; projects pre-2030 are unlikely"
+          },
+          {
+            "project": "Kozloduy NPP H2 Production Concept",
+            "status": "Early study — Козлодуй АД (Kozloduy NPP) exploring H2 production from surplus nuclear generation",
+            "operator": "АЕЦ Козлодуй ЕАД",
+            "note": "Nuclear-powered H2 production would be low-carbon; LH2 storage relevant for export or industrial supply"
+          },
+          {
+            "project": "Sofia H2 Bus Trial",
+            "status": "Pilot — compressed H2; LH2 format not current priority at pilot scale",
+            "note": "Primarily compressed H2; LH2 relevant if fleet significantly expands"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Industrial decarbonisation — Maritsa East heavy industry transition; Devnya chemical complex H2 demand",
+          "Black Sea transit hub — Bulgaria as H2 production and transit route for SE European H2 exports",
+          "Heavy transport — growing HGV and bus fleet H2 demand on Trans-European transport corridors",
+          "Kozloduy nuclear-H2 coupling — low-carbon electricity for electrolysis"
+        ],
+        "supply_chain_note": "Bulgaria has no domestic LH2 production as of 2025. European suppliers (Linde, Air Liquide, Chart Industries) are primary equipment vendors. Bulgarian civil construction capacity is adequate and cost-competitive (lowest construction cost base of the five jurisdictions in this analysis)."
+      },
+
+      "notes": "Bulgaria offers a distinctive combination for LH2 infrastructure: the lowest CIT in this five-jurisdiction group (10%), the BGN/EUR fixed peg eliminating all FX risk for EUR investors, and among the lowest civil construction costs in the EU. The SEVESO III regime under the Bulgarian Наредба provides a structured safety pathway administered by РИОСВ. The primary development risks are: (1) high bureaucratic friction (operational drag score 72) and corruption risk in local permitting — mitigated by established industrial zone siting; (2) the 2014 retroactive RES levy precedent, which must be disclosed to investors as a political risk context for any Bulgarian energy investment; (3) thin corporate credit market requiring international-grade offtakers. The BGN fixed peg to EUR at 1.95583 (Currency Board — legally irrevocable; Law on BNB Article 29) means EUR-denominated project finance faces zero FX uncertainty on domestic cost items — a material advantage over RON (Romania) and HUF (Hungary). Eurozone accession would further strengthen this position. All grant parameters must be verified at mikov.government.bg and ewrc before project commitment."
     }
   }
 }

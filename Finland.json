@@ -497,6 +497,243 @@
       "coal_phase_out_commitment": "Finland legislated a ban on coal use in energy production by 2029 (Coal Ban Act 2019).",
       "source": null,
       "notes": "Coal Ban Act (2019) prohibits coal energy production from 2029. New coal investment illegal post-2029. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Finland is a structurally advantaged LH2 development environment: Europe's cheapest industrial electricity in high-wind/hydro periods (Nord Pool FI area), a mature SEVESO III regime via Tukes (Turvallisuus- ja kemikaalivirasto), an efficient permitting framework, and a deep base of energy-intensive industrial demand (pulp/paper, steel, chemicals) that represents natural anchor offtake for green H2. Finland's 2035 100% renewable electricity target drives electrolyser deployment, and Business Finland and the Finnish Climate Fund (Ilmastorahasto) provide CapEx support pathways.",
+
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage operating support mechanism in Finland. Standalone LH2 storage operates on a tolling or merchant basis. Business Finland grants (typically 25–50% for R&D/innovation phase; lower for commercial projects) and Finnish Climate Fund (Ilmastorahasto) support large H2 projects. IPCEI Hy2Tech participant. EU Hydrogen Bank eligible. Source: iea_hydrogen; businessfinland.fi; ilmastorahasto.fi.",
+      "revenue_floor_description": null,
+      "source": "tukes_fi; iea_hydrogen; businessfinland_fi",
+      "staleness_warning": "Business Finland grant rates, Finnish Climate Fund call conditions, and Nord Pool FI electricity prices are time-sensitive. Verify current Business Finland H2 programme call prospectus and Nord Pool FI price data before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Laki vaarallisten kemikaalien ja räjähteiden käsittelyn turvallisuudesta (390/2005, muutoksineen) — Finnish Chemicals and Explosives Safety Act",
+            "relevance": "Finnish SEVESO III transposition. Primary safety legislation for hazardous chemical storage including LH2. Tukes (Turvallisuus- ja kemikaalivirasto — Safety and Chemicals Agency) is the competent authority for upper-tier SEVESO establishments. Mandatory safety permit (lupa) from Tukes for large-scale H2 storage. Lower-tier: notify Tukes, prepare MAPP equivalent (major accident prevention policy). Upper-tier: detailed safety report (turvallisuusselvitys) assessed by Tukes."
+          },
+          {
+            "instrument": "Valtioneuvoston asetus vaarallisten kemikaalien teollisesta käsittelystä ja varastoinnista (VNa 856/2012) — Government Decree on Industrial Handling and Storage of Hazardous Chemicals",
+            "relevance": "Implementing decree under Act 390/2005. Sets specific requirements for industrial handling and storage of dangerous chemicals including cryogenic substances. Tukes issues the operating licence (lupa) under this Decree."
+          },
+          {
+            "instrument": "Ympäristönsuojelulaki (527/2014) — Environmental Protection Act",
+            "relevance": "Environmental permit (ympäristölupa) required from AVI (Aluehallintovirasto — Regional State Administrative Agency) for industrial activities with significant environmental impact, including large-scale LH2 facilities. BOG management and water discharge permitting."
+          },
+          {
+            "instrument": "Painelaitelaki (1144/2016) — Pressure Equipment Act",
+            "relevance": "Finnish transposition of PED Directive (2014/68/EU). Governs design, manufacture, conformity assessment, and periodic inspection of cryogenic pressure vessels, pipework, and LH2 storage tanks."
+          },
+          {
+            "instrument": "Pelastuslaki (379/2011) — Rescue Act",
+            "relevance": "External emergency plan (pelastussuunnitelma) coordination with regional rescue authority (alueellinen pelastuslaitos) required for upper-tier SEVESO sites. Public information duty."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Maankäyttö- ja rakennuslaki (132/1999) — Land Use and Building Act (MRL)",
+            "relevance": "Building permit (rakennuslupa) and potentially master plan amendment (yleiskaava) required for LH2 facility construction. Municipal authority (kunta) competent for planning and building permit."
+          },
+          {
+            "instrument": "Laki ympäristövaikutusten arviointimenettelystä (252/2017 — YVA) — EIA Act",
+            "relevance": "EIA may be triggered for large LH2 facilities depending on capacity and location. Coordinated by ELY Centre (Centre for Economic Development, Transport and the Environment)."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "TEM (Työ- ja elinkeinoministeriö) Hydrogen Roadmap 2022 — Ministry of Economic Affairs and Employment",
+            "relevance": "National hydrogen policy framework: target 2 GW+ electrolyser capacity by 2030; positions Finland as a green H2 producer for Nordic and European markets; identifies industrial demand (steel, chemicals, pulp/paper) as primary H2 offtake sectors."
+          },
+          {
+            "instrument": "Finnish Climate Fund (Ilmastorahasto Oy) — state-owned special purpose vehicle",
+            "relevance": "Invests in and provides financing for large-scale climate projects including industrial H2 in Finland. Mandate includes accelerating large H2 projects above Business Finland scale thresholds."
+          },
+          {
+            "instrument": "Business Finland — Innovation Funding",
+            "relevance": "Provides grants and loans for H2 technology R&D and demonstration projects. Typical grant rates: 25–50% for R&D; lower for near-commercial deployment. Source: businessfinland.fi."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "Laki vaarallisten kemikaalien ja räjähteiden käsittelyn turvallisuudesta (390/2005) + VNa 856/2012 (SEVESO III transposition)",
+        "competent_authority": "Tukes (Turvallisuus- ja kemikaalivirasto — Safety and Chemicals Agency) for upper-tier SEVESO establishments and operating licences",
+        "supporting_authority": "AVI (Aluehallintovirasto — Regional State Administrative Agency) for environmental permits (ympäristölupa); regional rescue authority (pelastuslaitos) for external emergency plans",
+        "lower_tier_threshold_flammable_gas_tonnes": 10,
+        "upper_tier_threshold_flammable_gas_tonnes": 50,
+        "lower_tier_obligations": "Notify Tukes; prepare and implement MAPP equivalent (suuronnettomuuden vaaran torjuntapolitiikka — major accident prevention policy); internal emergency plan (sisäinen pelastussuunnitelma)",
+        "upper_tier_obligations": "Prepare detailed turvallisuusselvitys (safety report) assessed by Tukes; external emergency plan (ulkoinen pelastussuunnitelma) prepared by regional rescue authority; public information duty; periodic Tukes inspection",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 5,
+        "authority_assessment_months": 4,
+        "notes": "Tukes is widely regarded as one of the most competent and efficient SEVESO regulatory authorities in the Nordic/Baltic region. Pre-application engagement with Tukes is standard practice and strongly recommended. Finland's efficient public administration (digital processes, clear timelines) reduces bureaucratic friction compared to many Central/Eastern European peers. English-language engagement with Tukes is generally possible for major foreign-investor projects."
+      },
+
+      "permitting": {
+        "planning_authority": "Municipal authority (kunta) for building permit (rakennuslupa) and any required master plan amendment; Tukes for chemical safety licence; AVI for environmental permit; ELY Centre for EIA coordination",
+        "timeline_p50_months": 18,
+        "timeline_range_months": { "min": 12, "max": 30 },
+        "parallel_consent_tracks": [
+          "Tukes chemical safety licence (lupa) — 6–12 months from complete application",
+          "Ympäristölupa environmental permit (AVI) — 6–12 months",
+          "Rakennuslupa building permit (municipal) — 3–6 months",
+          "EIA if triggered (ELY Centre) — 9–15 months (dominant timeline driver if triggered)"
+        ],
+        "appeal_risk": "low-medium",
+        "appeal_mechanism": "Hallinto-oikeudet (Administrative Courts); Korkein hallinto-oikeus (KHO — Supreme Administrative Court)",
+        "notes": "Finland's permitting environment for industrial facilities is among the most efficient in the EU. P50 of 18 months reflects the lower-tier SEVESO scenario without EIA trigger. Tukes licensing process is digitalised and well-structured. The primary timeline risk is the ympäristölupa (environmental permit) from AVI if the site is near sensitive water bodies or nature areas. Sámi consultation requirements apply in northernmost Lapland — generally not relevant for industrial LH2 hub locations, which are more likely in coastal Ostrobothnia or Häme near industrial demand centres."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Finland's electricity is structurally among the cheapest in Europe in high-wind/hydro periods — this is the single most important competitive advantage for Finnish LH2 economics.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Fingrid Oyj (TSO) for transmission; local DSO (Caruna, Elenia, Helen Sähköverkko, etc.) for distribution",
+        "regulatory_authority": "Energy Authority (Energiavirasto) regulates connection tariffs and grid access",
+        "connection_type": "High-voltage industrial connection; Fingrid-connected for large installations; DSO-connected for smaller",
+        "grid_queue_risk": "LOW — Finnish grid connection timelines are among the shortest in the EU for industrial consumers; Fingrid is well-invested and has capacity available",
+        "electricity_price_risk": "LOW — Finnish electricity price in the Nord Pool FI area is structurally among Europe's lowest in high-wind and high-hydro periods. Industrial energy tax refund (Teollisuuden energiaveronpalautus) further reduces effective electricity cost for large industrial consumers.",
+        "industrial_electricity_cost_note": "Finnish large industrial electricity price approximately EUR 50–80/MWh for conventional procurement in 2024 (verify Energiavirasto statistics). During high-wind/high-hydro periods, Nord Pool FI spot can fall to EUR 0–20/MWh. Targeted liquefaction scheduling to low-price windows can drive electricity cost below EUR 0.05/kWh = EUR 0.55/kg LH2. Combined with Teollisuuden energiaveronpalautus industrial tax refund (refund of energy tax for large industrials), effective electricity cost can be materially lower.",
+        "teollisuuden_energiaveronpalautus": {
+          "description": "Industrial energy tax refund scheme — large industrial electricity consumers can claim a partial refund of electricity tax paid. This reduces the effective electricity cost for LH2 liquefaction plant, improving unit economics.",
+          "legal_basis": "Act on Excise Duty on Electricity and Certain Fuels (1260/1996) §8a as amended",
+          "staleness_warning": "Tax refund rates and eligibility criteria change with annual Finance Acts — verify current refund amount with Finnish Tax Administration (Vero)."
+        },
+        "renewable_ppa_strategy": "Finland's one of Europe's most active corporate PPA markets. A dedicated corporate PPA with a Finnish onshore wind project (capacity factors 35–42% in Lapland, 30–38% in Ostrobothnia) provides both price certainty and green credentials for LH2 offtakers. Near-zero reference prices in recent Finnish wind auctions mean LH2 projects effectively access near-merchant wind electricity through PPAs."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Finland. Revenue is primarily via tolling contracts with no state commodity floor for storage services. Business Finland and Finnish Climate Fund provide CapEx grants only.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for storage, liquefaction, and dispensing services; no commodity price floor from the state",
+        "business_finland_grant": {
+          "applicable": true,
+          "description": "Business Finland grants for H2 technology development and demonstration. Grant rates typically 25–50% for R&D and demonstration phases; lower for near-commercial deployment. Project-specific grant negotiation required.",
+          "administrator": "Business Finland (businessfinland.fi)",
+          "staleness_warning": "Business Finland programme priorities and grant rates change periodically. Verify current H2 programme call prospectus at businessfinland.fi."
+        },
+        "ilmastorahasto": {
+          "applicable": true,
+          "description": "Finnish Climate Fund (Ilmastorahasto Oy) — state-owned company mandated to accelerate large-scale climate projects. Provides equity investment, loans, and grants for H2 projects above Business Finland scale. Key contact for very large LH2 hub developments.",
+          "administrator": "Ilmastorahasto Oy (ilmastorahasto.fi)"
+        },
+        "ipcei_hy2tech": {
+          "applicable": true,
+          "description": "Finland participates in IPCEI Hy2Tech (2022). IPCEI designation enables state aid above GBER thresholds for first-of-kind H2 infrastructure. Verify Finnish beneficiary project list at EC State Aid register.",
+          "source": "European Commission, IPCEI Hy2Tech State Aid Decision, July 2022"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate fully merchant — Finland's deep industrial base (UPM, Stora Enso, SSAB, Kemira) creates natural H2 demand. Direct offtake agreement with a Finnish industrial decarbonisation user is the primary commercial route.",
+          "credit_risk_note": "Finnish industrial counterparties are generally investment-grade or near-investment-grade. SSAB green steel (HYBRIT) is the flagship industrial H2 demand project — verify current procurement strategy."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Finnish 25% declining balance depreciation for machinery (EVL §34) is a CapEx TIMING benefit affecting NPV of the tax shield — not a permanent effective tax rate reduction.",
+        "cit_rate_pct": 20,
+        "legal_basis_cit": "EVL 360/1968 §22; stable at 20% since 2014",
+        "declining_balance_depreciation_applicable": true,
+        "rate_pct_machinery": 25,
+        "qualifying_assets": "Liquefaction plant, cryogenic storage tanks, boil-off gas management systems, heat exchangers, dispensing and loading infrastructure — all qualify as koneet ja laitteet (machinery and equipment) under EVL §34",
+        "legal_basis_depreciation": "EVL 360/1968 §34",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 20% CIT and 10% WACC: 25% declining balance depreciation for H2 plant (20-year life): NPV of tax shield ≈ 18.5% of qualifying CapEx. Under standard straight-line (5% p.a. over 20 years): NPV ≈ 14.1%. Timing benefit (NPV delta) ≈ 4.4ppts per €1 of qualifying CapEx.",
+          "note": "Timing benefit only. Total gross deduction over asset life is identical — declining balance front-loads the cash flow benefit."
+        },
+        "teollisuuden_energiaveronpalautus_note": "Industrial energy tax refund on electricity consumption by large industrial operators reduces effective electricity OpEx — a significant P&L benefit for electricity-intensive liquefaction operations. Not a capital allowance but an ongoing operational tax relief."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "SFS-EN 1251 (Finnish adoption of EN 1251 — Cryogenic vessels, static vacuum-insulated vessels); Tukes periodic inspection required for pressure equipment under Painelaitelaki 1144/2016",
+        "electrical_hazardous_area": "ATEX zones per SFS-EN 60079 series; zone classification documented in räjähdyssuojausasiakirja (explosion protection document) required under VNa 576/2003 (ATEX transposition)",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (preferred for large sites)", "Catalytic combustion with Tukes/AVI approval", "Use as on-site fuel or process gas"],
+          "regulatory_basis": "BOG management addressed in turvallisuusselvitys (safety report) for upper-tier SEVESO sites; atmospheric emissions controlled under ympäristölupa (environmental permit) conditions issued by AVI"
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. Finland's electricity price advantage is a structural differentiator — model low-price scenario explicitly. All figures are indicative from published sources.",
+        "_rule_3c_note": "Finland is EUR-denominated — no FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Finnish remote site logistics (particularly Lapland) add construction cost premium for sites far from established industrial infrastructure."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_ref": 0.065,
+            "electricity_opex_eur_per_kg_lh2": 0.72,
+            "low_price_scenario_eur_per_kwh": 0.02,
+            "low_price_opex_eur_per_kg_lh2": 0.22,
+            "note": "Reference price reflects Finnish large industrial average. Low-price scenario reflects Nord Pool FI spot during high-wind/hydro periods — liquefaction scheduling optimised to these windows substantially improves economics. Verify current Fingrid/Nord Pool FI prices and Energiavirasto industrial price statistics.",
+            "source": "IEA, The Future of Hydrogen, 2019; Nord Pool FI market data"
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative inputs only. Actual project figures depend on technology vendor, site location (coastal Ostrobothnia vs. Lapland), Business Finland/Ilmastorahasto grant outcome, electricity scheduling strategy, and supply chain. Engineering study required before financial modelling."
+        }
+      },
+
+      "market_context": {
+        "finland_policy_position": "TEM Hydrogen Roadmap (2022) targets 2 GW+ electrolyser by 2030. Finland's competitive electricity prices and deep industrial base (pulp/paper, steel, chemicals) make it one of Europe's most credible near-term LH2 production markets for domestic industrial decarbonisation.",
+        "key_fi_lh2_projects_indicative": [
+          {
+            "project": "P2X Solutions (Harjavalta)",
+            "status": "20 MW electrolyser operational — Finland's largest power-to-X facility",
+            "operator": "P2X Solutions Oy",
+            "note": "Compressed H2; LH2 liquefaction not yet included — but scale-up may incorporate LH2 for transport logistics"
+          },
+          {
+            "project": "SSAB / HYBRIT Green Steel",
+            "status": "Demonstration and commercial scale-up; H2 for direct reduction iron (DRI)",
+            "operator": "SSAB / LKAB / Vattenfall (also Swedish dimension)",
+            "note": "Largest single H2 demand driver in Nordic region; compressed/pipeline H2 primary delivery mode but LH2 relevant for distribution to satellite DRI sites"
+          },
+          {
+            "project": "Hy2gen Finland",
+            "status": "Development stage; large-scale green H2 and derivatives production in Finland",
+            "note": "Verify current project status"
+          },
+          {
+            "project": "Flexens (Åland Islands)",
+            "status": "Power-to-X concept leveraging high Åland wind resource",
+            "note": "Island location may require LH2 logistics for export; verify current status"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Industrial decarbonisation: pulp/paper (UPM, Stora Enso, Metsä Group), chemicals (Kemira), steel (SSAB HYBRIT)",
+          "Export: Finnish green H2 to Germany/Netherlands via pipeline or LH2 carrier (Arctic/Baltic shipping routes)",
+          "Heavy road transport: H2 fuel cell HGVs on major Finnish freight corridors",
+          "Maritime: LH2 bunkering at Helsinki, Turku, and Oulu ports for H2-fuelled vessels"
+        ],
+        "electricity_cost_advantage": "Finland's structural electricity cost advantage — driven by high-wind Lapland and nuclear base (Olkiluoto 1, 2, 3) with low-price periods during high renewable output — is the defining competitive differentiator for Finnish LH2. No other EU market of comparable scale consistently achieves this electricity price profile."
+      },
+
+      "notes": "Finland is among Europe's most structurally advantaged LH2 development environments. The Tukes SEVESO regulatory framework is efficient and well-resourced; the 18-month P50 permitting timeline is among the fastest in the EU for industrial chemical facilities. The electricity cost advantage — structural low prices in Nord Pool FI, further reduced by Teollisuuden energiaveronpalautus — is the primary differentiator for LH2 unit economics. Business Finland and Ilmastorahasto provide meaningful CapEx grant support. The 20% CIT with 25% declining balance depreciation provides front-loaded tax benefits. The primary commercial risk is the absence of a state revenue floor for storage services — investors must rely on industrial offtake agreements (SSAB/HYBRIT, UPM, Kemira, etc.) as anchor contracts. All Business Finland and Ilmastorahasto grant parameters must be verified at the time of application. Electricity prices are directionally favourable but volatile — model low-price and base-price scenarios explicitly."
     }
   }
 }

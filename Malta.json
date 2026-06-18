@@ -385,6 +385,198 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Malta's LH2 investment case is almost exclusively as a TRANSIT and BUNKERING hub for the Central Mediterranean shipping corridor. The island's extremely small geography (316 km², ~530,000 population) and single HVDC interconnector to Sicily (Enemalta — 200 MW) limit domestic electricity-intensive LH2 production capacity severely. LH2 IMPORT for maritime bunkering at Marsaxlokk (Freeport of Malta) or Valletta Grand Harbour is the viable near-term model. Tax structure is uniquely distinctive: nominal 35% CIT with a 6/7 imputation refund for non-resident shareholders producing an effective ~5% tax rate. Safety regime: SEVESO III via Industrial Accidents (Control of Major Hazards) Regulations 2016 (L.N. 205/2016).",
+
+      "permitting_p50_months": 26,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or FiT in Malta. Standalone LH2 facilities operate on a tolling or merchant basis. Malta Enterprise (maltaenterprise.com) provides Business Development and InvisionMT grants for qualifying industrial investments. EU cohesion funds (ERDF) via Malta Ministry for Energy may provide CapEx support. EU Hydrogen Bank eligible as EU member state. Source: MERA; Malta Enterprise; iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "mera_mt; malta_enterprise; iea_hydrogen",
+      "staleness_warning": "Malta Enterprise and ERDF grant programme parameters are time-sensitive. Verify current open calls at maltaenterprise.com. MedWind offshore wind development and MedH2 corridor status are critical variables — verify independently before committing to LH2 investment thesis.",
+
+      "island_grid_constraint_for_lh2": {
+        "critical_note": "CRITICAL: Malta's island electricity grid (Enemalta plc, single 200 MW HVDC interconnector to Sicily) imposes very tight instantaneous RES penetration caps. Without grid reinforcement, large-scale electrolysis for LH2 production is not viable. LH2 IMPORT for maritime bunkering (via ISO cryogenic tanker) bypasses this constraint and is the recommended near-term pathway.",
+        "medwind_offshore_wind": "The MedWind offshore wind consortium (RWE + partners) has explored large-scale Maltese EEZ offshore wind (~3 GW potential). If developed, this would transform Malta's LH2 production case. Verify current project status and MERA licensing — this is a key variable.",
+        "interconnector_expansion": "Malta is exploring an expanded HVDC interconnector to Italy (Enemalta). Progress should be monitored at enemalta.com.mt. A larger interconnector would expand both renewable import capacity and potential LH2 electrolysis feasibility."
+      },
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Industrial Accidents (Control of Major Hazards) Regulations 2016 — Legal Notice 205/2016 (L.N. 205 of 2016) — SEVESO III Malta",
+            "relevance": "Maltese SEVESO III transposition. Lower tier (≥10 t flammable gas including LH2): notify OHSA (Occupational Health and Safety Authority) and MERA; prepare MAPP and internal emergency plan. Upper tier (≥50 t flammable gas): detailed safety report, external emergency plan prepared by Civil Protection Department, public information duty, periodic inspection."
+          },
+          {
+            "instrument": "Environment and Development Planning Act (Cap. 504) 2010, as amended; Environment Protection Act (Cap. 549)",
+            "relevance": "Environmental permit for LH2 facility; administered by Environment and Resources Authority (ERA). EIA may be required above screening thresholds."
+          },
+          {
+            "instrument": "Civil Protection Act (Cap. 411) and Civil Protection Department regulations",
+            "relevance": "External emergency planning for upper-tier SEVESO III sites; Civil Protection Department prepares external emergency plan."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Development Planning Act (Cap. 552) 2016 + Planning Authority (PA) — Maltese Planning System",
+            "relevance": "Full development permission (PA permit) required for LH2 industrial facility; industrial zone designation required (Marsaxlokk freeport area or Ħal Far industrial zone most appropriate). English-language planning system — familiar to international investors."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Malta National Energy and Climate Plan (NECP) 2021–2030",
+            "relevance": "Includes offshore wind and H2 component; Marsaxlokk Free Port identified as potential clean fuel hub for Mediterranean shipping."
+          },
+          {
+            "instrument": "MedWind Offshore Wind Consortium (RWE + partners) — Maltese EEZ potential",
+            "relevance": "~3 GW potential offshore wind in Maltese and Sicilian Channel EEZ. If developed, would transform Maltese LH2 electrolysis capacity. Verify project status independently before using in investment model."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — tender rounds (EC Regulation)",
+            "relevance": "Malta is eligible as EU member state. LH2 production/storage may qualify. Verify at innovation-fund.ec.europa.eu."
+          }
+        ]
+      },
+
+      "seveso_iii_regime": {
+        "competent_authority": "MERA (Malta Energy and Water Agency — https://energywateragency.gov.mt) jointly with OHSA (Occupational Health and Safety Authority — ohsa.org.mt)",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lh2_classification": "LH2 classified as flammable gas (Category 2, Annex I Part 1 of SEVESO III as transposed by L.N. 205/2016). Thresholds apply to total site quantity.",
+        "lower_tier_obligations": "Notify MERA and OHSA; prepare Major Accident Prevention Policy (MAPP); internal emergency plan.",
+        "upper_tier_obligations": "Prepare detailed safety report acceptable to MERA/OHSA; external emergency plan prepared by Civil Protection Department; public information duty; periodic joint inspection.",
+        "legal_basis": "L.N. 205/2016 (Industrial Accidents — Control of Major Hazards Regulations), Annex I — dangerous substance thresholds.",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 8,
+        "authority_assessment_months": 6,
+        "notes": "MERA/OHSA are professional but have limited experience with large-scale cryogenic LH2 facilities. English is the language of administration — favourable for international investors. Small island regulatory capacity creates timeline uncertainty for novel technology. Engage early with OHSA and MERA pre-application. Civil Protection Department external emergency plan preparation will require site-specific local emergency response planning."
+      },
+
+      "permitting": {
+        "planning_authority": "Planning Authority (PA — pa.org.mt) for development permission; MERA and OHSA for SEVESO III; Environment and Resources Authority (ERA) for environmental permit",
+        "timeline_p50_months": 26,
+        "timeline_range_months": { "min": 16, "max": 48 },
+        "parallel_consent_tracks": [
+          "Planning Authority development permission — 10–20 months (English-language system; industrial zone required)",
+          "SEVESO III notification / safety report (MERA/OHSA) — 3–14 months post-submission",
+          "ERA environmental permit — 4–8 months",
+          "Civil Protection Department external emergency plan — concurrent with upper-tier SEVESO III"
+        ],
+        "appeal_risk": "medium",
+        "notes": "P50 of 26 months assumes lower-tier SEVESO III site at Marsaxlokk Freeport or Ħal Far industrial zone. Upper-tier adds 6–10 months. English-language PA system is accessible. Limited regulatory capacity for novel technology is the primary timeline risk. Planning approval for industrial energy facilities at Marsaxlokk is well-precedented given Enemalta's Delimara power station."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). LH2 IMPORT bunkering model avoids large-scale electricity connection requirement.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Enemalta plc (vertically integrated utility — TSO/DSO function; privatised 2014 with Shanghai Electric Power)",
+        "island_grid_critical_constraint": "Enemalta's 200 MW HVDC interconnector to Sicily is the only physical electricity link. Instantaneous RES penetration cap is very low. Large-scale electrolysis for LH2 production is NOT feasible without (a) MedWind offshore wind development + grid reinforcement, or (b) expanded Italy interconnector. LH2 IMPORT bunkering bypasses this constraint.",
+        "electricity_price_note": "Maltese residential and SME electricity is subsidised by government. Large industrial consumers pay closer to market rates — verify current Enemalta large consumer tariff before modelling LH2 OpEx.",
+        "notes": "LH2 import and bunkering at Marsaxlokk Freeport does not require grid connection beyond lighting/auxiliary power. This is the recommended near-term pathway."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Malta. Revenue is via tolling/bunkering contracts with no state commodity floor. No state backstop.",
+        "primary_mechanism_standalone": "Tolling arrangement — import receipt, storage, and dispensing to maritime vessels at Marsaxlokk Freeport; no state commodity floor.",
+        "malta_enterprise_grants": {
+          "applicable": "Malta Enterprise (maltaenterprise.com) provides Business Development Scheme and InvisionMT grants for qualifying industrial capital investment. Verify current calls.",
+          "staleness_warning": "Programme terms change. Verify at maltaenterprise.com."
+        },
+        "eu_cohesion_funds": {
+          "applicable": "ERDF cohesion funds via Ministry for Energy and Ministry for Economy may provide CapEx support for qualifying H2 infrastructure.",
+          "staleness_warning": "Verify open calls at eufunds.gov.mt."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": "Malta is eligible as EU member state for EU Hydrogen Bank auction rounds.",
+          "source": "innovation-fund.ec.europa.eu — verify current round"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "LH2 bunkering at Marsaxlokk Freeport serving Mediterranean shipping corridor (container liners, cruise ships, ferry operators increasingly exploring H2/NH3 fuel).",
+          "shipping_context": "Marsaxlokk Freeport is one of the Mediterranean's busiest container ports. LH2 bunkering revenue depends on maritime decarbonisation timetable — IMO GHG Strategy 2023 (net zero by ~2050) is the demand driver. Verify current shipping fuel transition pace."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Malta's nominal 35% CIT is misleading. For non-resident shareholders, a 6/7 imputation refund of CIT paid by the company produces an effective ~5% tax rate. CRITICAL: Pillar Two (OECD BEPS 2.0) GloBE rules impose a global minimum 15% effective CIT on large multinationals — this overrides Malta's refund mechanism for qualifying groups from 2024.",
+        "cit_rate_nominal_pct": 35.0,
+        "imputation_refund_mechanism": {
+          "description": "Malta operates a full imputation system under Income Tax Act Cap. 123. Corporate CIT of 35% is paid at company level. Non-resident shareholders receiving dividends are entitled to a 6/7 refund of the CIT paid by the company (6/7 × 35% = 30%) — reducing net CIT retained by the Maltese state to 5% (35% - 30% = 5%). The shareholder receives both the dividend and the refund.",
+          "effective_cit_pct_for_non_resident_shareholders": 5.0,
+          "legal_basis": "Income Tax Act, Cap. 123, Laws of Malta, §§48–59 (imputation credit and refund provisions)",
+          "pillar_two_critical_warning": "CRITICAL — GloBE Pillar Two (OECD BEPS 2.0, effective for Malta-domiciled groups with €750m+ consolidated turnover from 2024): GloBE Top-Up Tax may apply if the Maltese effective CIT rate falls below 15%. For large multinational groups, the 5% effective rate may trigger GloBE Top-Up in the parent jurisdiction. For smaller investors/SPVs below the €750m threshold, the 5% effective rate continues to apply. Verify applicable GloBE status before modelling tax burden."
+        },
+        "dividend_withholding_tax_pct": 0.0,
+        "dividend_wht_note": "Zero dividend WHT for non-resident shareholders when imputation refund is utilised. Net refund is paid directly to the non-resident shareholder.",
+        "capex_depreciation": {
+          "rate_industrial_plant_pct_pa": 10.0,
+          "method": "straight-line",
+          "legal_basis": "Income Tax Act Cap. 123, Schedules — standard depreciation rates",
+          "_rule_3b_analysis": "At 5% effective CIT (non-resident shareholder, below GloBE threshold), the absolute NPV of depreciation timing benefit is very small. E.g., EUR 50m liquefaction plant, 10% p.a. straight-line, 7% WACC: NPV of tax shield at 5% CIT ≈ 3.6% of qualifying CapEx ≈ EUR 1.8m. Negligible vs. projects in higher-CIT jurisdictions. The primary Malta tax advantage is the low effective rate itself, not the timing of depreciation."
+        },
+        "holding_structure_note": "Malta is widely used as a holding jurisdiction for Mediterranean and pan-European energy projects — 5% effective CIT + 0% WHT + English common law + EU member state benefits + DTA network. For LH2 project finance: a Malta holding company (MFSA-registered) may be appropriate for Mediterranean basin projects."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "MSA (Malta Standards Authority) adoption of EN 1251 (Cryogenic vessels — static vacuum-insulated vessels). CE marking required.",
+        "electrical_hazardous_area": "ATEX zone classification per Maltese implementation of Directive 2014/34/EU; documented in safety report for SEVESO III",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (ERA environmental permit required)", "On-site fuel use or ship fuel use"],
+          "regulatory_basis": "BOG management addressed in safety report. ERA environmental permit governs atmospheric releases.",
+          "port_context": "At Marsaxlokk Freeport: BOG may be used as auxiliary fuel for port operations or dispensed to vessels — creating additional revenue stream in a port environment."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: indicative inputs for IRR, NPV, CapEx payback, and DSCR modelling.",
+        "_rule_3c_note": "Malta is EUR-denominated — no FX conversion required.",
+        "_cit_modelling_note": "Model at 5% effective CIT (non-resident shareholder, below GloBE threshold) OR 15% if GloBE Pillar Two applies to the investor group. Do NOT model at 35% nominal unless investor structure precludes 6/7 refund.",
+        "illustrative_bunkering_hub": {
+          "description": "LH2 import terminal and bunkering hub at Marsaxlokk Freeport — the recommended Maltese LH2 model",
+          "scale": "Import receipt jetty + 50–100 tonne vacuum-insulated storage + dispensing to maritime vessels",
+          "storage_tank_capex_eur": {
+            "per_tonne_midpoint": 1200000,
+            "notes": "Port/maritime environment may require higher-spec containment. Source: IEA, The Future of Hydrogen, 2019"
+          },
+          "jetty_and_bop_capex_eur_indicative": 12000000,
+          "effective_cit_pct_non_resident": 5.0,
+          "effective_cit_pct_globe_pillar_two_group": 15.0,
+          "note": "LH2 import terminal at Marsaxlokk avoids island grid constraint. Revenue from maritime bunkering. 5% effective CIT (below GloBE threshold) materially enhances equity IRR on distribution vs. most EU peers."
+        }
+      },
+
+      "market_context": {
+        "mt_hydrogen_context": "Malta's H2 investment case centres on Central Mediterranean maritime bunkering. Marsaxlokk Freeport is one of the Mediterranean's principal container transhipment hubs. IMO GHG Strategy 2023 (net zero ~2050) and EU FuelEU Maritime Regulation (2025+) drive demand for zero-carbon marine fuels — LH2 is a candidate alongside ammonia and e-methanol.",
+        "key_mt_lh2_projects_indicative": [
+          {
+            "project": "Marsaxlokk Freeport LH2 Bunkering Concept",
+            "status": "No confirmed private investment as of mid-2025. Conceptual — based on port's geographic position and EU maritime decarbonisation policy. Verify any Port Authority (TM — tm.gov.mt) publications.",
+            "note": "The primary near-term LH2 opportunity in Malta. Demand dependent on maritime decarbonisation pace."
+          },
+          {
+            "project": "MedWind Offshore Wind (Maltese EEZ)",
+            "status": "In development/licensing — verify current status at MERA (https://energywateragency.gov.mt). ~3 GW potential if fully developed.",
+            "note": "CONDITIONAL — MedWind development would be transformational for Malta's LH2 electrolysis potential but is not yet confirmed. Do not include in base case model without confirming licensing progress."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Marsaxlokk Freeport — Central Mediterranean container transhipment and maritime bunkering",
+          "Cruise and ferry operators — Valletta Grand Harbour green fuel demand",
+          "EU FuelEU Maritime Regulation compliance demand from 2025 onwards",
+          "Holding company structures for Mediterranean H2 projects (5% effective CIT)"
+        ],
+        "fueleu_maritime_note": "EU FuelEU Maritime Regulation (Regulation EU 2023/1805) mandates progressive reduction in GHG intensity of energy used by large ships calling at EU ports from 2025. This creates structural demand growth for zero-carbon marine fuels including LH2 at Maltese ports. Staleness: verify current FuelEU thresholds and compliance timeline."
+      },
+
+      "notes": "Malta's LH2 investment case is limited but real for the bunkering/transit model: (1) Marsaxlokk Freeport's Central Mediterranean position creates genuine maritime decarbonisation demand context; (2) 5% effective CIT (below GloBE threshold) + 0% WHT makes Malta extremely attractive for equity return on distribution from bunkering revenue; (3) English common law, PA planning system, and MFSA regulatory environment are familiar to international investors. The SEVESO III regime (L.N. 205/2016) provides the legal framework but limited Maltese regulatory experience with large-scale LH2 creates timeline risk. CRITICAL CAVEAT: Large multinational groups (€750m+ consolidated turnover) face GloBE Pillar Two 15% minimum effective CIT — the 5% effective rate is only available to investors below this threshold. All parameters must be verified with MERA (energywateragency.gov.mt) and Malta Enterprise (maltaenterprise.com) before project commitment."
     }
   }
 }

@@ -394,6 +394,256 @@
       "coal_phase_out_commitment": "Denmark is targeting coal phase-out by 2030 under Danish Energy Agreement.",
       "source": null,
       "notes": "Denmark is phasing out coal in district heating and power. No coal support mechanism. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Denmark is among Europe's most advanced Power-to-X (PtX) markets, with the Green Fuels for Denmark (GF4D) project (1.3 GW electrolyser, Copenhagen Airport) serving as the flagship LH2 for aviation initiative. The national electricity mix is approximately 80% renewable — giving Danish LH2 strong green credentials without requiring a dedicated PPA, though a PPA is recommended to fix electricity cost. The safety regime is administered by Arbejdstilsynet and Beredskabsstyrelsen under the Risikobekendtgørelsen (SEVESO III transposing regulation). DKK/EUR quasi-peg minimises currency risk.",
+
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD. Standalone LH2 storage facilities operate on a tolling basis. Production-linked support may apply where LH2 storage is integral to a GBT (Grønt brændstof til transport) scheme-funded Power-to-X project: the GBT CfD-type support covers green fuel production (including hydrogen/LH2 as a green fuel feedstock). Innovationsfonden (Innovation Fund Denmark) provides grant support for pilot and demonstration projects. Source: Energistyrelsen; Innovationsfonden.",
+      "revenue_floor_description": null,
+      "source": "energistyrelsen; innovationsfonden; iea_hydrogen",
+      "staleness_warning": "GBT (Grønt brændstof til transport) scheme parameters, Innovationsfonden call terms, and Energistyrelsen PtX auction round details are time-sensitive. Verify current round documentation with Energistyrelsen (ens.dk) before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Bekendtgørelse om kontrol med risikoen for større uheld med farlige stoffer — Risikobekendtgørelsen (Bekendtgørelse nr. 372 af 25. april 2016 as amended)",
+            "relevance": "Danish SEVESO III transposing regulation. Operators of establishments handling dangerous substances at or above threshold quantities must notify Arbejdstilsynet and Beredskabsstyrelsen and prepare a Sikkerhedsrapport (Safety Report) and Beredskabsplan (emergency plan). Liquid hydrogen is classified as an extremely flammable gas triggering SEVESO thresholds."
+          },
+          {
+            "instrument": "Lov om kemiske stoffer og produkter — Lovbekendtgørelse nr. 878 af 14. juni 2022 (Chemicals Act)",
+            "relevance": "Underlying legislative framework for dangerous substance regulation; provides enforcement basis for Risikobekendtgørelsen requirements."
+          },
+          {
+            "instrument": "Beredskabsloven — Lov nr. 660 af 10. juni 1997 (Emergency Management Act as amended)",
+            "relevance": "Beredskabsstyrelsen (Emergency Management Agency) powers; external emergency plan coordination for upper-tier SEVESO establishments."
+          },
+          {
+            "instrument": "Bekendtgørelse om indretning af tekniske hjælpemidler — various product safety regulations",
+            "relevance": "Cryogenic pressure vessel standards and equipment conformity under Danish implementation of EU Pressure Equipment Directive."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Miljøbeskyttelsesloven — Lovbekendtgørelse nr. 100 af 19. januar 2022 (Environmental Protection Act)",
+            "relevance": "Godkendelse (environmental authorisation/permit) required for listed industrial activities including chemical and gas handling facilities above qualifying thresholds."
+          },
+          {
+            "instrument": "Bekendtgørelse om vurdering af virkninger på miljøet (VVM) af internationale naturbeskyttelsesområder — VVM Bekendtgørelse",
+            "relevance": "Environmental Impact Assessment (VVM — vurdering af virkninger på miljøet) required for major industrial facilities. LH2 terminals above qualifying capacity thresholds will require full VVM procedure."
+          },
+          {
+            "instrument": "Planloven — Lovbekendtgørelse nr. 287 af 16. april 2018 (Planning Act)",
+            "relevance": "Kommuneplantillæg (municipal plan supplement) and lokalplan (local plan) required for new industrial facility uses not already designated in existing plans."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Energiaftale 2018 (Energy Agreement 2018) — Danish political agreement committing DKK 5 bn to Power-to-X development",
+            "relevance": "Primary political commitment enabling Denmark's PtX market; positions Denmark as European PtX leader; includes LH2 as a key green fuel vector."
+          },
+          {
+            "instrument": "Lov om fremme af vedvarende energi — VE-loven §§ 35–50 (VE-loven, as amended to include PtX support)",
+            "relevance": "Legislative framework for support scheme including GBT (Grønt brændstof til transport) mechanism; provides legal basis for PtX/LH2 production support via CfD-type contract."
+          },
+          {
+            "instrument": "GBT (Grønt brændstof til transport) scheme — Energistyrelsen tender",
+            "relevance": "Danish CfD-type production support for green fuels for transport (including green hydrogen and LH2-derived fuels). Support for production unit — storage may be included in project scope. First tender: 2022/2023. Verify current round parameters with Energistyrelsen."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech and Hy2Infra — Denmark as participant",
+            "relevance": "Denmark is an IPCEI Hy2Tech and Hy2Infra participant. IPCEI Important Projects of Common European Interest status allows state aid above normal thresholds for qualifying H2 technology and infrastructure projects."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "regime_name": "SEVESO III — implemented via Risikobekendtgørelsen",
+        "competent_authority_primary": "Arbejdstilsynet (Danish Working Environment Authority) — primary notification, inspection, and Safety Report assessment authority",
+        "competent_authority_secondary": "Beredskabsstyrelsen (Emergency Management Agency) — external emergency plan and major accident response coordination",
+        "lower_tier_threshold_tonnes_lh2": 10,
+        "upper_tier_threshold_tonnes_lh2": 50,
+        "lower_tier_obligations": "Notify Arbejdstilsynet; prepare and implement Sikkerhedsledelsessystem (safety management system) and Forebyggelsespolitik (major accident prevention policy); internal emergency plan (beredskabsplan)",
+        "upper_tier_obligations": "Submit Sikkerhedsrapport (Safety Report) to Arbejdstilsynet; external beredskabsplan coordinated by Beredskabsstyrelsen; public information duty; periodic Arbejdstilsynet inspection",
+        "legal_basis": "Risikobekendtgørelsen — Bekendtgørelse nr. 372 af 25. april 2016 (as amended). Liquid hydrogen classified as extremely flammable gas; lower tier 10 t, upper tier 50 t — identical to EU SEVESO III Annex I Part 1 thresholds.",
+        "pre_notification_lead_time_months": 2,
+        "safety_report_preparation_months": 5,
+        "at_assessment_months": 3,
+        "notes": "Arbejdstilsynet is an experienced and efficient authority — Danish administration generally operates with shorter turnaround times than Central/Eastern European peers. Pre-application engagement with Arbejdstilsynet and Beredskabsstyrelsen is recommended for novel LH2 facility designs."
+      },
+
+      "permitting": {
+        "planning_authority": "Kommunalbestyrelse (Municipal Council) for lokalplan and VVM; Arbejdstilsynet for SEVESO Safety Report; Miljøstyrelsen for environmental authorisation",
+        "timeline_p50_months": 18,
+        "timeline_range_months": { "min": 12, "max": 30 },
+        "parallel_consent_tracks": [
+          "VVM screening / VVM-redegørelse (EIA) — 4–8 months",
+          "Kommuneplantillæg + lokalplan adoption — 8–18 months (can run in parallel with VVM)",
+          "Miljøbeskyttelsesloven godkendelse (environmental authorisation) — 3–6 months",
+          "Risikobekendtgørelsen SEVESO notification / Sikkerhedsrapport — 2–8 months",
+          "Beredskabsstyrelsen external emergency plan coordination — concurrent with Arbejdstilsynet"
+        ],
+        "appeal_risk": "low",
+        "appeal_mechanism": "Miljø- og Fødevareklagenævnet (Environment and Food Appeals Board) → Østre Landsret / Vestre Landsret (High Court)",
+        "notes": "P50 assumes a lower-tier SEVESO facility (10–50 t LH2) in or near an existing industrial zone (e.g., Copenhagen Airport industrial zone for GF4D, port of Fredericia, Esbjerg energy hub). Denmark's efficient administration and low community opposition culture supports the shorter P50 timeline. Upper-tier sites (>50 t) add approximately 4–8 months for Sikkerhedsrapport preparation and Arbejdstilsynet assessment."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is electricity-intensive (~10–12 kWh per kg H2 liquefied). Denmark's electricity mix is approximately 80% renewable (dominated by wind) — this provides strong green credentials for LH2 produced from grid electricity WITHOUT requiring a dedicated PPA, subject to additionality requirements under EU Delegated Regulation 2023/1184.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Energinet (integrated TSO and gas system operator; state-owned)",
+        "grid_carbon_intensity": "Approximately 100–200 gCO2e/kWh (variable by hour — wind-dominated; Energinet.dk datahub provides real-time intensity data). This is among the lowest in Europe. Subject to EU hourly matching requirement for renewable hydrogen qualification — verify current Delegated Regulation 2023/1184 implementation timeline.",
+        "electricity_price_for_ptx": "Denmark offers specific electricity tax exemption (elafgiftslempelse) for electricity consumed in PtX/electrolysis. Verify current exemption under Elafgiftsloven (Electricity Duty Act). Industrial electricity prices in Denmark are among the higher in Europe for non-PtX users (~EUR 100–140/MWh for large consumers) but PtX-specific exemptions significantly reduce effective cost.",
+        "ptx_electricity_exemption": {
+          "applicable": true,
+          "description": "Electricity used in Power-to-X (electrolysis) is exempt from the Danish electricity tax (elafgift) under Elafgiftsloven. This is a significant cost reduction for electrolysis-linked LH2 projects.",
+          "legal_basis": "Elafgiftsloven (Electricity Duty Act) — Lovbekendtgørelse nr. 1321 af 24. november 2017 as amended",
+          "staleness_warning": "PtX electricity tax exemption parameters should be verified against current Elafgiftsloven provisions — Danish tax legislation is revised annually via Finansloven."
+        },
+        "bidzone_consideration": "DK1 (Jutland/Funen) and DK2 (Zealand) have different spot price dynamics. DK1 has better wind resource and lower average prices — preferred for electrolysis-linked LH2 liquefaction. Key hubs: Esbjerg (offshore wind gateway), Fredericia (energy industrial zone), Copenhagen Airport (GF4D project site).",
+        "notes": "At EUR 0.08/kWh (estimated PtX-exempt industrial rate in DK1) and 11 kWh/kg: electricity cost EUR 0.88/kg LH2. High-wind surplus hours in DK1 can yield prices below EUR 0.04/kWh, reducing to EUR 0.44/kg — among the lowest liquefaction costs in Europe."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: No dedicated two-way CfD or one-way FiT exists for LH2 storage specifically. The GBT (Grønt brændstof til transport) scheme provides CfD-type support for GREEN FUEL PRODUCTION — if LH2 storage is integral to a GBT-funded production project, production revenue support applies indirectly. Standalone storage is tolling only. Rule 3A requires explicit statement: GBT production support is a CfD-TYPE mechanism for the production unit — verify whether it is one-way or two-way in the specific tender contract documentation.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, cryogenic storage, and dispensing; no commodity price floor from the state",
+        "gbt_scheme": {
+          "applicable": "Indirectly — GBT covers green fuel production; LH2 storage may be integral to project scope",
+          "description": "Grønt brændstof til transport (GBT — Green Fuel for Transport) scheme. Administered by Energistyrelsen. Provides production support for green fuels for transport including hydrogen and hydrogen-derived e-fuels. Where LH2 storage is part of a GBT-supported electrolyser project, production revenue support provides indirect revenue certainty.",
+          "mechanism_type_note": "GBT tender documentation determines whether this is a one-way or two-way mechanism — VERIFY with Energistyrelsen before modelling. Do not assume mechanism type.",
+          "source": "Energistyrelsen, GBT tender documentation — ens.dk",
+          "staleness_warning": "GBT round parameters change. Verify current tender status and contract terms with Energistyrelsen before use."
+        },
+        "ipcei_participation": {
+          "applicable": true,
+          "description": "Denmark's IPCEI Hy2Tech and Hy2Infra participation allows state aid above standard thresholds for qualifying H2 technology projects. LH2 liquefaction and storage infrastructure may qualify under Hy2Infra (infrastructure focus).",
+          "source": "European Commission, IPCEI Hy2Tech Decision SA.62671; IPCEI Hy2Infra"
+        },
+        "innovationsfonden": {
+          "applicable": true,
+          "description": "Innovationsfonden (Innovation Fund Denmark) provides R&D and demonstration grants. LH2 liquefaction and cryogenic storage technology development may qualify under PtX innovation programmes.",
+          "source": "Innovationsfonden — innofond.dk"
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Denmark is an EU member — EU Hydrogen Bank competitive grants available for green hydrogen production projects. LH2 storage may be included in qualifying project scope.",
+          "source": "European Commission, EU Hydrogen Bank — ec.europa.eu/hydrogen-bank"
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Danish saldoafskrivning (25% declining balance) applies to LH2 plant and equipment providing a meaningful CapEx timing benefit. The PtX electricity tax exemption (elafgiftslempelse) is a permanent structural benefit reducing OpEx — not a timing benefit. Model separately.",
+        "selskabsskat_rate_pct": 22,
+        "legal_basis": "Selskabsskatteloven § 17",
+        "depreciation_applicable": {
+          "method": "Saldoafskrivning (declining balance) — up to 25% per annum on machinery and equipment under Afskrivningsloven § 5",
+          "rate_pct_max": 25,
+          "qualifying_assets": "Cryogenic storage tanks, liquefaction equipment, heat exchangers, compressors, dispensing infrastructure — all qualify as driftsmidler (machinery and equipment)",
+          "legal_basis": "Afskrivningsloven § 5 — Lovbekendtgørelse nr. 1146 af 22. september 2020",
+          "npv_timing_benefit": "At 22% selskabsskat and 10% WACC: NPV of tax shield under 25% saldoafskrivning ≈ 16.4% of qualifying CapEx. Under straight-line (20-year life): NPV ≈ 12.0%. Timing benefit ≈ 4.4ppts."
+        },
+        "ptx_electricity_tax_exemption": {
+          "description": "Electricity used for electrolysis (and by extension, for liquefaction where integral to PtX project) is exempt from Danish elafgift under Elafgiftsloven. This permanently reduces electricity OpEx — distinguish from CIT depreciation timing benefit.",
+          "legal_basis": "Elafgiftsloven — Lovbekendtgørelse nr. 1321 af 24. november 2017 as amended",
+          "annual_saving_indicative": "DKK ~0.90/kWh elafgift exemption (verify current rate). For 2 t/day LH2 facility consuming ~8,030 MWh/year electricity: saving ~DKK 7.2m/year (EUR ~965,000/year at DKK 7.46 = EUR 1 as of 2026-06-15).",
+          "eur_equivalent_note": "DKK/EUR FX rate used: DKK 1 = EUR 0.134 (EUR 1 = DKK 7.46) as of 2026-06-15. DKK pegged to EUR via ERM II — minimal FX risk.",
+          "staleness_warning": "Elafgift rate subject to annual revision via Finansloven. Verify current rate before modelling."
+        },
+        "vat": {
+          "standard_rate_pct": 25,
+          "recovery": "Input moms recoverable by momsregistrerede virksomheder (VAT-registered businesses)"
+        }
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "DS/EN 1251 (Cryogenic vessels — static vacuum-insulated vessels) — Danish implementation of European harmonised standard; mandatory for cryogenic storage equipment sold/operated in Denmark",
+        "electrical_hazardous_area": "ATEX zone classification per Bekendtgørelse om indretning af tekniske hjælpemidler — Maskindirektivet; ATEX Directive 2014/34/EU implemented in Danish law; zone 1 and zone 2 areas around LH2 release points must be documented and physically demarcated",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (krav om miljøgodkendelse — requires environmental authorisation from Miljøstyrelsen)", "Use as fuel for on-site generation"],
+          "regulatory_basis": "BOG must be addressed in Sikkerhedsrapport as a major accident scenario. Atmospheric release volumes subject to Miljøbeskyttelsesloven godkendelse conditions. Energinet rules govern any hydrogen injection into gas grid.",
+          "environmental_note": "Denmark's ambitious Klimalov (Climate Act) targets (70% GHG reduction by 2030) mean that Danish regulators will scrutinise any unnecessary atmospheric release of hydrogen as a safety, if not a GHG, concern."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: these inputs are for IRR, NPV, CapEx payback, and DSCR modelling. All figures shown first in DKK then EUR at DKK 1 = EUR 0.134 (EUR 1 = DKK 7.46) as of 2026-06-15. DKK/EUR FX risk is minimal due to ERM II peg.",
+        "_rule_3c_note": "FX rate: DKK 1 = EUR 0.134 as of 2026-06-15. DKK pegged to EUR (ERM II ±2.25% band); treat as quasi-EUR for modelling purposes.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_dkk": {
+            "per_tonne_per_day_midpoint": 26100000,
+            "eur_midpoint_approx": 3497400,
+            "fx_rate": 0.134,
+            "fx_rate_date": "2026-06-15",
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_dkk": {
+            "per_tonne_midpoint": 7460000,
+            "eur_midpoint_approx": 999640,
+            "fx_rate": 0.134,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Vacuum-insulated Type C cryogenic tank; cost per tonne decreases with scale"
+          },
+          "illustrative_total_project_capex_dkk": {
+            "liquefaction_2tpd_dkk": 52200000,
+            "storage_50t_dkk": 373000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative_dkk": 510840000,
+            "eur_equivalent_approx": 68452560,
+            "fx_rate": 0.134,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Highly site-dependent. Excludes grid connection and port/road civil infrastructure."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_ptx_exempt_dkk_per_kwh_ref": 0.60,
+            "eur_equivalent_per_kwh": 0.080,
+            "electricity_opex_eur_per_kg_lh2": 0.88,
+            "fx_rate": 0.134,
+            "fx_rate_date": "2026-06-15",
+            "source": "Energinet / Energistyrelsen industrial electricity pricing data — verify current PtX-exempt rate under Elafgiftsloven",
+            "note": "Electricity OpEx assumes PtX elafgift exemption applies. Without exemption: electricity OpEx would be approximately EUR 1.30–1.50/kg LH2. High-wind surplus periods in DK1 may offer spot prices <EUR 0.03/kWh — model with price scenario analysis."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative only. All DKK figures converted at DKK 1 = EUR 0.134 (2026-06-15). DKK/EUR sensitivity analysis is minimal given ERM II peg. Engineering study required before financial commitment."
+        }
+      },
+
+      "market_context": {
+        "denmark_policy_position": "Denmark is among Europe's most advanced PtX markets, driven by a 80% renewable electricity mix, a committed Klimalov (70% GHG reduction by 2030), and the Energiaftale 2018 committing DKK 5 bn to PtX. The Green Fuels for Denmark (GF4D) project (1.3 GW electrolyser at Copenhagen Airport — Ørsted, A.P. Møller-Mærsk, DSV Panalpina, SAS, Copenhagen Airports) is the flagship LH2-for-aviation project in Europe.",
+        "key_danish_lh2_projects_indicative": [
+          {
+            "project": "Green Fuels for Denmark (GF4D)",
+            "status": "Development — 1.3 GW electrolyser; LH2 for aviation at Copenhagen Airport; e-methanol and ammonia as co-products",
+            "operator": "Ørsted, A.P. Møller-Mærsk, Copenhagen Airports (consortium)",
+            "note": "Europe's largest announced PtX-to-LH2-for-aviation project. If constructed, would be among world's largest LH2 liquefaction facilities. GBT scheme support sought. Source: Green Fuels for Denmark project documentation."
+          },
+          {
+            "project": "Hydrogen Denmark — industry association H2 hub concepts",
+            "status": "Multiple pre-FEED concepts for LH2 export terminals at Esbjerg and Fredericia",
+            "operator": "Various members — Everfuel, Nel, Coop, others",
+            "note": "Esbjerg designated as Danish energy hub for North Sea offshore wind and hydrogen export"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Aviation — GF4D supplies Copenhagen Airport with LH2 for sustainable aviation fuel (SAF) precursor and direct LH2 propulsion future-proofing",
+          "Shipping — Mærsk e-methanol pathway (H2 feedstock); future LH2 bunkering at Copenhagen and Aarhus ports",
+          "Export — Denmark as LH2 export hub to Germany, Netherlands, and UK via Viking Link",
+          "Heavy transport — fuel cell HGV and bus fleets; Everfuel LH2 refuelling network"
+        ],
+        "supply_chain_note": "Denmark has a developing LH2 supply chain. Nel Hydrogen (Norwegian, but active in Denmark) and Hydrogen Denmark members are key technology suppliers. Air Liquide and Linde operate Danish industrial gas networks. Esbjerg port infrastructure is being expanded for offshore wind and hydrogen export.",
+        "import_export_note": "Denmark's ambition is to be a net LH2 exporter. The DKK/EUR quasi-peg significantly reduces currency risk for EUR-denominated import/export contracts."
+      },
+
+      "notes": "Denmark presents one of the most compelling European LH2 investment environments. The 80% renewable electricity mix provides near-automatic green credentials, the GBT scheme creates production revenue support for integrated projects, and the elafgift PtX exemption substantially reduces electricity OpEx. Arbejdstilsynet and Beredskabsstyrelsen provide an efficient SEVESO regulatory pathway. The primary commercial risk is the absence of a dedicated LH2 storage CfD — standalone storage must rely on tolling contracts with creditworthy offtakers. The GF4D project provides a visible demand anchor for the Danish LH2 market. All GBT tender parameters, elafgift rates, and DKK/EUR peg status must be verified with Energistyrelsen before use."
     }
   }
 }

@@ -443,6 +443,285 @@
       "coal_phase_out_commitment": "Belgium closed its last coal plant in 2016.",
       "source": null,
       "notes": "No coal-fired power in Belgium. No support mechanism exists. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Belgium has a unique and distinguishing advantage in this knowledge base: it is the site of Europe's first commercial LH2 import operation. The Zeebrugge LH2 import terminal (Fluxys) received liquid hydrogen from Australia via the Kawasaki Suiso Frontier vessel in 2022–2023, establishing the world's first international LH2 supply chain demonstration. Belgium's ports of Antwerp and Zeebrugge are positioned as Europe's primary H2 import hubs. The SEVESO III safety regime is implemented via the Arrêté royal du 29 mai 2016 under a complex federal/regional competence split. Belgium's industrial electricity prices are among the highest in Europe — a material OpEx risk for liquefaction; offshore wind PPA is recommended. Currency: EUR (native) — no FX risk.",
+
+      "permitting_p50_months": 30,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or FiT. Standalone LH2 storage and import terminals operate on a tolling/regulated tariff basis. CapEx support available via: (i) VLAIO (Agentschap Innoveren & Ondernemen) — Flanders innovation/investment grants; (ii) Wallonie Entreprendre — Walloon investment support; (iii) SFPIM / Invest.Brussels — federal and Brussels investment body co-funding; (iv) EU Hydrogen Bank (as EU member); (v) IPCEI Hy2Infra — Belgium's port LH2 infrastructure may qualify. Zeebrugge terminal was co-funded under bilateral Japan-Belgium government cooperation. Source: VLAIO; Fluxys; EC IPCEI documentation.",
+      "revenue_floor_description": null,
+      "source": "vlaio; fluxys_be; iea_hydrogen; ec_state_aid",
+      "staleness_warning": "VLAIO and regional grant call parameters change per programme cycle. IPCEI Hy2Infra project lists and funding terms are time-sensitive. Industrial electricity prices in Belgium are volatile. Verify all programme documentation with relevant regional authority before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Arrêté royal du 29 mai 2016 relatif à la prévention des accidents majeurs impliquant des substances dangereuses (Belgian SEVESO III implementing Royal Decree)",
+            "relevance": "Primary Belgian SEVESO III transposing instrument at federal level. Sets threshold quantities for dangerous substances including liquid hydrogen. Lower tier: 10 tonnes LH2. Upper tier: 50 tonnes LH2. Applies to all three regions (Flanders, Wallonia, Brussels) with regional competent authority for supervision differing by region."
+          },
+          {
+            "instrument": "SEVESO III federal/regional competence split",
+            "relevance": "CRITICAL: In Belgium, SEVESO III implementation is constitutionally split. The FEDERAL GOVERNMENT sets the framework (Royal Decree above). REGIONAL GOVERNMENTS supervise compliance: Flanders (OVAM — Openbare Vlaamse Afvalstoffenmaatschappij and Departement Omgeving), Wallonia (SPAQuE — Société Publique d'Aide à la Qualité de l'Environnement and DGO3 Département des Permis et Autorisations), Brussels Capital Region (Bruxelles Environnement/Leefmilieu Brussel). LH2 projects in Zeebrugge (Flanders) fall under Flemish SEVESO supervision."
+          },
+          {
+            "instrument": "Loi du 2 août 2002 relative à l'information et à la protection des travailleurs / Welzijnswet — Loi du 4 août 1996 sur le bien-être des travailleurs (Worker Safety Act)",
+            "relevance": "FOD Werkgelegenheid/FOD Emploi (Federal Public Service Employment) and Toezicht op het Welzijn op het Werk (Wellbeing at Work Inspectorate) are competent for worker safety at SEVESO establishments."
+          },
+          {
+            "instrument": "ARAB/AREI — Algemeen Reglement op de Elektrische Installaties / Règlement Général sur les Installations Électriques (General Electrical Installations Regulation)",
+            "relevance": "ATEX zone classification and hazardous area electrical installations; Belgian implementation of ATEX Directive 2014/34/EU."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument_flanders": "Omgevingsvergunningdecreet — Decreet van 25 april 2014 (Flanders Integrated Environment Permit Decree)",
+            "relevance_flanders": "Consolidated environmental and planning permit (omgevingsvergunning) for Flanders. LH2 facilities in Flanders (Zeebrugge, Antwerp, Ghent) require omgevingsvergunning from Departement Omgeving or Deputatie depending on project scale. This is the most relevant instrument for Belgium's LH2 port hub ambitions."
+          },
+          {
+            "instrument_wallonia": "Code du Développement Territorial (CoDT) — Décret du 20 juillet 2016 (Wallonia Planning Code)",
+            "relevance_wallonia": "Planning and environmental permits in Wallonia via Permis unique procedure."
+          },
+          {
+            "instrument_federal": "Loi du 12 juillet 1985 relative à la protection de l'homme et de l'environnement contre les effets nocifs et les nuisances provoquées par les rayonnements ionisants (Federal environmental framework)",
+            "relevance_federal": "Supplementary federal environmental obligations."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Belgian Federal and Regional Hydrogen Strategies (2021–2030)",
+            "relevance": "Federal and regional governments have adopted coordinated hydrogen strategies targeting: 3.5 GW H2 imports by 2030; 0.5 GW domestic electrolysis by 2030; positioning Antwerp and Zeebrugge as European H2 import hubs. Coordinated via Federal Energy Minister and Regional competent ministers."
+          },
+          {
+            "instrument": "IPCEI Hy2Infra — Belgium as participant",
+            "relevance": "Belgium participates in IPCEI Hy2Infra (hydrogen infrastructure). Port of Antwerp-Bruges and Zeebrugge LH2 import infrastructure may qualify for IPCEI Hy2Infra state aid above normal GBER thresholds.",
+            "source": "European Commission, IPCEI Hy2Infra decision"
+          },
+          {
+            "instrument": "Belgian National Recovery and Resilience Plan (Plan National pour la Reprise et la Résilience — PNRR)",
+            "relevance": "Belgium's PNRR includes hydrogen investment components. Federal H2 importation support. Verify current PNRR H2 disbursement status with relevant federal authority."
+          },
+          {
+            "instrument": "Zeebrugge LH2 terminal — Suiso Frontier / Kawasaki pilot project (2022–2023)",
+            "relevance": "CRITICAL PRECEDENT: World's first international LH2 import demonstration completed at Zeebrugge in 2022–2023. Kawasaki Heavy Industries Suiso Frontier vessel transported LH2 from Australia to Zeebrugge. Fluxys operates the Zeebrugge LH2 terminal. This operational precedent significantly de-risks the regulatory and operational pathway for new LH2 import infrastructure in Belgium. Source: Kawasaki Heavy Industries / Fluxys, 'World's First Liquid Hydrogen Supply Chain Demonstration Project', 2022."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "regime_name": "SEVESO III — implemented via Arrêté royal du 29 mai 2016; federal framework with regional supervision",
+        "competent_authority_federal": "Federal SEVESO Taskforce — coordinating body under FPS Economy and FPS Employment (FOD Economie / FOD Werkgelegenheid). Sets national framework; coordinates cross-regional consistency.",
+        "competent_authority_flanders": "Departement Omgeving (for environmental compliance) + Toezicht Welzijn op het Werk (worker safety) — for Flanders-based LH2 facilities including Zeebrugge, Antwerp, Ghent port zones",
+        "competent_authority_wallonia": "DGO3 / SPAQuE — for Wallonia-based facilities",
+        "competent_authority_brussels": "Bruxelles Environnement / Leefmilieu Brussel — for Brussels Capital Region facilities (rare for LH2 given industrial land requirements)",
+        "lower_tier_threshold_tonnes_lh2": 10,
+        "upper_tier_threshold_tonnes_lh2": 50,
+        "lower_tier_obligations": "Notify regional competent authority; prepare Preventiebeleid voor zware ongevallen / Politique de prévention des accidents majeurs (PPZOA/PPAM — major accident prevention policy); prepare intern noodplan (internal emergency plan)",
+        "upper_tier_obligations": "Submit Veiligheidsrapport / Rapport de sécurité (Safety Report) to regional authority for assessment; extern noodplan (external emergency plan) coordinated by municipal/provincial civil protection authorities; public information duty; periodic regional inspection",
+        "legal_basis": "Arrêté royal du 29 mai 2016 (federal SEVESO III Royal Decree); regional implementing decisions. Liquid hydrogen classified as extreem ontvlambaar gas / gaz extrêmement inflammable. Lower tier 10 t, upper tier 50 t — identical to EU SEVESO III Annex I.",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 6,
+        "regional_assessment_months": 4,
+        "notes": "The federal/regional SEVESO competence split in Belgium adds complexity vs. single-authority regimes (UK, Denmark, Sweden). For Zeebrugge / Antwerp LH2 projects (Flanders), Departement Omgeving is the primary SEVESO supervisor — this authority has direct experience with the existing Fluxys Zeebrugge LH2 pilot terminal, which significantly reduces regulatory unfamiliarity risk. For new applicants, Fluxys' existing operational experience at Zeebrugge is a material de-risking factor for the regulatory pathway."
+      },
+
+      "permitting": {
+        "planning_authority_flanders": "Deputatie (Provincial Council) or Departement Omgeving for omgevingsvergunning for large industrial facilities; OVAM for soil; Departement Omgeving for SEVESO",
+        "planning_authority_wallonia": "Fonctionnaire délégué (DGO4) for Permis unique; SPAQuE/DGO3 for SEVESO",
+        "timeline_p50_months": 30,
+        "timeline_range_months": { "min": 20, "max": 48 },
+        "regional_variation_note": "Flanders (Zeebrugge, Antwerp) is typically faster than Wallonia. P50 of 30 months reflects Flemish location. Wallonia may add 6–12 months for Permis unique process.",
+        "parallel_consent_tracks_flanders": [
+          "Omgevingsvergunning application to Departement Omgeving / Deputatie (including project-MER / EIA): 12–24 months",
+          "SEVESO Veiligheidsrapport notification and submission to Departement Omgeving: 3–10 months",
+          "Federal SEVESO Taskforce coordination: concurrent",
+          "Fire service (brandweer) technical advice: concurrent with omgevingsvergunning",
+          "ELIA grid connection for liquefaction plant: 12–36 months (see grid_connection)"
+        ],
+        "appeal_risk": "medium-high",
+        "appeal_mechanism": "Raad voor Vergunningsbetwistingen (Flanders Permit Dispute Council) → Raad van State/Conseil d'État (administrative supreme court). Raad van State is active in Belgian environmental and planning matters.",
+        "notes": "Belgium's six-government federal structure adds procedural complexity. For Flanders (Zeebrugge, Antwerp): the Omgevingsvergunning is a consolidated permit covering planning, environment, and SEVESO elements — reducing the number of separate procedures vs. other EU member states. The existing Fluxys LH2 pilot terminal at Zeebrugge provides a regulatory precedent that should facilitate faster assessment of subsequent LH2 terminal applications. P50 of 30 months is the Flemish estimate — Wallonia will be longer."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is electricity-intensive (~10–12 kWh per kg H2 liquefied). CRITICAL: Belgian industrial electricity prices are among the highest in Europe (EUR 120–180/MWh for large consumers including network charges — CREG data; verify current). Electricity cost is a significant OpEx risk for Belgian LH2 liquefaction. An offshore wind PPA (Belgium's mature offshore wind market) or imported green electricity via Nemo Link is strongly recommended.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "Elia Group (TSO, Belgium-wide) — note Belgium uses Modular Offshore Grid (MOG) for offshore wind collective connection",
+        "electricity_price_risk": "HIGH — Belgian industrial electricity prices are elevated due to nuclear closure costs, grid tariffs (nettarief/tarif réseau), and energy taxes. CREG (regulator) data on industrial prices: approximately EUR 120–180/MWh all-in for large consumers (verify current CREG statistics). At EUR 0.14/kWh and 11 kWh/kg: electricity cost EUR 1.54/kg LH2 — among the highest in this knowledge base.",
+        "offshore_ppa_strategy": "Belgium's mature offshore wind market (Norther, Rentel, Princess Elisabeth Zone) provides the optimal electricity procurement route for green LH2. A long-term PPA with a Belgian offshore wind operator (Ørsted, RWE, Engie, Belectric) referenced to EPEX SPOT BE would: (a) reduce electricity cost below all-in grid tariff; (b) provide green additionality credentials for EU green hydrogen classification; (c) support REC/GO certificate issuance. Indicative offshore wind PPA price: EUR 60–90/MWh (2025–2026 market — verify current EPEX SPOT BE forward curves).",
+        "elia_mog_note": "For LH2 facilities located at or near Belgian offshore wind grid landing points (Zeebrugge — Stevin substation; Elia Modular Offshore Grid), direct connection to the MOG offshore wind feed is possible, potentially at preferential grid arrangements. Engage Elia early on connection options.",
+        "notes": "The combination of high Belgian industrial electricity price and a mature offshore wind market makes a dedicated offshore wind PPA near-essential for Belgian LH2 project viability. Zeebrugge benefits from proximity to multiple offshore wind landing points. At EUR 0.07/kWh (offshore PPA) vs EUR 0.14/kWh (grid): electricity OpEx falls from EUR 1.54/kg to EUR 0.77/kg LH2 — a near-doubling of margin."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: No dedicated two-way CfD or one-way FiT exists for LH2 storage in Belgium. Regional green certificate schemes (Wallonia CVs, Flanders GSCs) are NOT applicable to LH2 storage — they apply to electricity generation, not hydrogen production or storage. IPCEI Hy2Infra provides state aid above GBER thresholds — this is a CapEx grant, NOT a revenue mechanism. Standalone LH2 storage is TOLLING only.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for LH2 import, cryogenic storage, and dispensing; no commodity price floor from the state. Zeebrugge terminal operated by Fluxys on a TPA (Third Party Access) regulated tariff basis.",
+        "vlaio_flanders": {
+          "applicable": true,
+          "description": "VLAIO (Agentschap Innoveren & Ondernemen) — Flemish investment and innovation support agency. Provides strategic transformation support (strategische transformatiesteun — STS) and innovation grants for qualifying industrial projects including LH2 port infrastructure.",
+          "administrator": "VLAIO",
+          "grant_rate_indicative": "STS: up to 15–25% of eligible CapEx for large enterprises; higher for SMEs (verify current VLAIO call parameters)",
+          "staleness_warning": "VLAIO grant rates and call schedules change annually. Verify at vlaio.be before use.",
+          "source": "VLAIO — vlaio.be"
+        },
+        "wallonie_entreprendre": {
+          "applicable": "Conditional — for Wallonia-based facilities only",
+          "description": "Wallonie Entreprendre provides business investment support including grants and subordinated loans for qualifying projects in Wallonia.",
+          "source": "Wallonie Entreprendre — wallonie-entreprendre.be"
+        },
+        "sfpim_invest_brussels": {
+          "applicable": true,
+          "description": "SFPIM (Société Fédérale de Participations et d'Investissement) provides federal co-investment support. Invest.Brussels for Brussels-based activities. Relevant for LH2 infrastructure with pan-Belgian or EU strategic significance.",
+          "source": "SFPIM — sfpim.be"
+        },
+        "ipcei_hy2infra": {
+          "applicable": true,
+          "description": "Belgium's participation in IPCEI Hy2Infra (hydrogen infrastructure). Port of Antwerp-Bruges and Zeebrugge LH2 infrastructure may qualify for IPCEI Hy2Infra state aid above standard GBER thresholds. IPCEI status enables state aid intensity up to 100% of funding gap for qualifying projects.",
+          "legal_basis": "Commission Communication C(2021) 8724 final on Important Projects of Common European Interest; IPCEI Hy2Infra EC Decision",
+          "note": "IPCEI participation requires multi-Member State coordination and EC notification. Verify current Belgian IPCEI Hy2Infra project roster with relevant federal ministry (FOD Economie).",
+          "source": "European Commission, IPCEI Hy2Infra"
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Belgium is an EU member — EU Hydrogen Bank competitive grants available for green hydrogen production and infrastructure including LH2 import terminals.",
+          "source": "European Commission, EU Hydrogen Bank — ec.europa.eu/hydrogen-bank"
+        },
+        "fluxys_regulated_tariff": {
+          "description": "Fluxys Belgium (TSO for gas infrastructure) operates the Zeebrugge LH2 terminal on a regulated third-party-access (TPA) basis. CREG sets tariff methodology for regulated infrastructure. For future LH2 infrastructure classified as regulated energy infrastructure, CREG-regulated tariffs provide revenue predictability equivalent to a regulated asset base model.",
+          "regulator": "CREG (Commission de Régulation de l'Électricité et du Gaz)",
+          "note": "The regulated TPA model provides revenue certainty approaching infrastructure-equivalent returns — superior to purely merchant tolling. Qualification for CREG-regulated status requires formal regulatory classification. Engage CREG early for new LH2 infrastructure projects."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Belgium's NID (Notional Interest Deduction) is a distinctive structural incentive reducing effective IS/VPB rate for equity-financed companies. For LH2 project vehicles with significant equity bases, NID provides a PERMANENT reduction in effective tax rate — not merely a timing benefit. Model NID separately from depreciation timing benefit. Investment deduction (déduction pour investissement / investeringsaftrek) at 20% for qualifying CapEx provides an additional timing-related benefit.",
+        "vpb_is_rate_pct": 25,
+        "legal_basis": "CIR92 Art. 215 (WIB92)",
+        "nid_applicable": {
+          "description": "NID (Notional Interest Deduction / Aftrek voor risicokapitaal) — Belgium allows deduction of notional return on adjusted equity from taxable income. For LH2 project SPV with, say, EUR 100m equity: NID deduction ~EUR 1.5m/year (at indicative 1.5% NID rate for large companies); IS saving ~EUR 375,000/year. This is a PERMANENT structural benefit.",
+          "rate_large_company_pct_approx": 1.5,
+          "legal_basis": "CIR92 Art. 205bis–205novies; Loi du 22 juin 2005",
+          "staleness_warning": "NID rate is set annually by Royal Decree based on 10-year OLO bond yield. Verify current NID rate with FOD Financiën before use."
+        },
+        "investment_deduction": {
+          "description": "Investeringsaftrek / Déduction pour investissement — additional % deduction on qualifying energy-efficient investments. LH2 infrastructure qualifying as environmentally positive investment may attract 20% investment deduction.",
+          "rate_pct": 20,
+          "qualifying_assets": "Verify current qualifying list with FOD Financiën — categories change annually via Wet diverse bepalingen",
+          "legal_basis": "CIR92 Art. 68–77",
+          "npv_benefit": "At 25% IS and 10% WACC: investment deduction of 20% on EUR 100m qualifying CapEx generates IS saving of EUR 5m in year 1. NPV of this saving ≈ EUR 4.5m at 10% WACC. This is a meaningful CapEx timing benefit."
+        },
+        "standard_depreciation": {
+          "method": "Declining balance (degressieve afschrijving / amortissement dégressif) at 2× linear rate, or straight-line",
+          "cryogenic_equipment_useful_life_years": 20,
+          "linear_rate_pct": 5,
+          "declining_balance_rate_pct_max": 10,
+          "legal_basis": "WIB92 Art. 61–65; K.B./A.R. implementing depreciation rates",
+          "npv_timing_benefit": "At 25% IS and 10% WACC: NPV of tax shield under 2× declining balance (10% year 1 on cryogenic equipment) ≈ 17.1% of qualifying CapEx. Under straight-line 5% (20-year life): NPV ≈ 14.7%. Timing benefit ≈ 2.4ppts."
+        },
+        "vat": {
+          "standard_rate_pct": 21,
+          "recovery": "Input BTW/TVA recoverable by BTW/TVA-registered ondernemingen/entreprises (Wetboek BTW / Code TVA)"
+        },
+        "registratierechten_note": "Registration duties on real property in Belgium: Flanders 12%, Wallonia 12.5%, Brussels 12.5%. Share deal structures preferred (0.2% on share transfers)."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "NBN EN 1251 (Belgian implementation of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels); mandatory for cryogenic storage equipment in Belgium; enforced by FPS Economy / Bureau de Normalisation (NBN)",
+        "electrical_hazardous_area": "ATEX zone classification per Belgian AREI (Algemeen Reglement op de Elektrische Installaties / Règlement Général sur les Installations Électriques); ATEX Directive 2014/34/EU implemented in Belgian law; zone 1 and zone 2 areas must be documented and physically demarcated around LH2 release points",
+        "zeebrugge_operational_precedent": {
+          "description": "The Fluxys Zeebrugge LH2 terminal has operational SEVESO compliance experience from the Kawasaki Suiso Frontier import in 2022–2023. This is the most directly applicable regulatory precedent in Europe for LH2 import terminal SEVESO compliance.",
+          "source": "Kawasaki Heavy Industries / Fluxys, 'World's First Liquid Hydrogen Supply Chain Demonstration Project', 2022",
+          "note": "Engage Fluxys Belgium directly for operational data on cryogenic tank design, BOG management, SEVESO compliance approach, and site safety case — their experience is unique in Europe."
+        },
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (capital-intensive)", "Catalytic combustion (subject to omgevingsvergunning / Permis unique emission conditions)", "Feed to local gas grid (subject to Fluxys gas grid connection terms)"],
+          "regulatory_basis": "BOG management must be addressed in Veiligheidsrapport / Rapport de sécurité (SEVESO upper-tier). Atmospheric releases subject to omgevingsvergunning (Flanders) or Permis unique (Wallonia) emission conditions. Fluxys has existing BOG management infrastructure at Zeebrugge (from LNG terminal) — potential for cross-asset BOG utilisation.",
+          "environmental_note": "Belgium's climate targets (55% GHG reduction by 2030 per Belgian NECP) mean regional authorities will impose stringent BOG conditions. BOG reliquefaction or gas grid integration is expected to be required for upper-tier permits."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: these inputs are for IRR, NPV, CapEx payback, and DSCR modelling. All figures in EUR (native currency — no FX risk). NID benefit must be modelled as a function of the project equity base — not a fixed rate. Investment deduction 20% for qualifying CapEx provides additional benefit.",
+        "_rule_3c_note": "EUR native currency — no FX conversion required. Belgian electricity price risk is the primary financial variable.",
+        "illustrative_medium_scale_import_terminal": {
+          "scale": "20 tonne/day LH2 import and storage capacity (port terminal scale); 500 tonne vacuum-insulated storage (import terminal scale, modelled on Zeebrugge precedent)",
+          "siting_assumption": "Zeebrugge (Flanders) port location — proximity to Fluxys existing LH2 infrastructure, offshore wind MOG landing point, maritime access",
+          "import_terminal_capex_eur": {
+            "receiving_and_storage_per_tonne_midpoint": 1200000,
+            "storage_500t_total": 600000000,
+            "regasification_and_dispensing": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative_eur": 780000000,
+            "source": "Indicative from Hydrogen Council infrastructure cost estimates and IEA Future of Hydrogen 2019. Large import terminals benefit from economies of scale vs. small hubs. Zeebrugge existing LNG infrastructure provides cost-sharing potential.",
+            "notes": "Port-scale import terminal CapEx is significantly higher than a 2 t/day production hub. This illustrative model reflects the scale of Belgium's ambition (3.5 GW H2 imports by 2030). Sub-scale (2 t/day liquefaction) model: CapEx approximately EUR 65–70m per UK.json structure."
+          },
+          "opex_electricity_liquefaction": {
+            "note": "For imported LH2 (no Belgian liquefaction required): primary OpEx is regasification/dispensing (minor electricity). For Belgian LH2 production + liquefaction (export focus): electricity is dominant OpEx.",
+            "specific_energy_kwh_per_kg_h2_liquefaction": 11,
+            "offshore_wind_ppa_rate_eur_per_kwh": 0.07,
+            "electricity_opex_eur_per_kg_lh2_liquefaction": 0.77,
+            "grid_electricity_rate_eur_per_kwh": 0.14,
+            "electricity_opex_eur_per_kg_lh2_grid": 1.54,
+            "source": "CREG Belgian industrial electricity prices (verify current); Belgian offshore wind PPA indicative market rates",
+            "note": "Offshore wind PPA at EUR 0.07/kWh vs grid at EUR 0.14/kWh halves electricity OpEx for Belgian liquefaction. Import terminal receiving LH2 from abroad avoids this entirely — competitiveness depends on LH2 shipping cost vs European price arbitrage."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "nid_benefit_illustrative": {
+            "equity_base_eur_m": 300,
+            "nid_rate_pct": 1.5,
+            "annual_nid_deduction_eur": 4500000,
+            "annual_is_saving_eur": 1125000,
+            "note": "Illustrative. NID rate set annually by Royal Decree. Verify current rate with FOD Financiën. NID benefit is a permanent annual saving proportional to equity base."
+          },
+          "note": "Illustrative only. Large port-scale import terminal economics are highly sensitive to LH2 shipping cost, regasification margins, and toll revenue per unit. Zeebrugge Fluxys operational data provides the most relevant benchmarks in Europe. Engage Fluxys Belgium for operational cost data."
+        }
+      },
+
+      "market_context": {
+        "belgium_policy_position": "Belgium's 2030 hydrogen strategy targets 3.5 GW of H2 imports and 0.5 GW of domestic electrolysis. Ports of Antwerp-Bruges and Zeebrugge are designated as Europe's primary H2 import hubs. The Fluxys Zeebrugge LH2 terminal is operationally proven via the Kawasaki Suiso Frontier project (2022–2023).",
+        "zeebrugge_critical_precedent": {
+          "description": "World's First Liquid Hydrogen Supply Chain Demonstration: The Kawasaki Suiso Frontier vessel transported liquefied hydrogen produced from Australian brown coal (with CCS) from Hastings, Victoria (Australia) to Zeebrugge, Belgium in January 2022. This was the world's first international LH2 shipment. The Zeebrugge terminal (Fluxys) successfully received, stored, and sampled the LH2 cargo.",
+          "source": "Kawasaki Heavy Industries / Suiso Frontier / Fluxys, 'World's First Liquid Hydrogen Supply Chain Demonstration Project — Global Hydrogen Supply Chain Demonstration', February 2022",
+          "significance": "This gives Belgium a unique first-mover advantage in LH2 import infrastructure. Fluxys has operational experience no other European terminal operator can match. The regulatory pathway through SEVESO and omgevingsvergunning for LH2 import terminals in Flanders has been established via this project."
+        },
+        "key_belgian_lh2_projects_indicative": [
+          {
+            "project": "Fluxys Zeebrugge LH2 Import Terminal",
+            "status": "Pilot operational (Suiso Frontier import 2022); scale-up to commercial import terminal under development",
+            "operator": "Fluxys Belgium NV (50.0% Publigas / Belgian municipalities; listed on Euronext Brussels)",
+            "note": "Fluxys is the strategic Belgian H2 infrastructure operator. Zeebrugge terminal expansion is central to Belgian 2030 H2 import ambition."
+          },
+          {
+            "project": "Port of Antwerp-Bruges H2 Hub",
+            "status": "Development — Europe's largest H2 import hub ambition; multiple industrial users (BASF, Borealis, Ineos) as anchor offtakers; HydrogenPro and other projects",
+            "operator": "Port of Antwerp-Bruges NV (municipal entity); various private developers",
+            "note": "Antwerp chemical cluster is Europe's largest; H2 demand for ammonia, methanol, and direct industrial use is established."
+          },
+          {
+            "project": "HydrogenPro Belgium / European H2 Exchange Antwerp",
+            "status": "Development — H2 trading and storage concept at Antwerp",
+            "operator": "HydrogenPro and Port of Antwerp-Bruges",
+            "note": "Concept for H2 trading hub analogous to LNG trading at Zeebrugge/NBP"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Chemical industry (BASF Belgium, Borealis, Ineos, Solvay) — largest industrial H2 demand cluster in Europe; existing H2 pipeline network in Antwerp-Ruhr corridor",
+          "Aviation — Brussels Airport sustainable aviation fuel (SAF) gateway; Air Belgium/Brussels Airlines decarbonisation targets",
+          "Maritime shipping — Antwerp is Europe's second-largest port; LH2/NH3 bunkering for zero-emission shipping (IMO 2050)",
+          "H2 transit to Germany and Netherlands — Belgium as H2 transit hub via Fluxys gas network and new H2 pipeline (Hyway27 / European H2 Backbone)"
+        ],
+        "supply_chain_note": "Belgium's industrial gas infrastructure (Air Liquide Belgium, Linde Gas Belgium) provides existing cryogenic logistics. Fluxys LNG experience at Zeebrugge is directly transferable to LH2 terminal operations. The Antwerp-Rotterdam-Rhine H2 backbone corridor (Hyway27) positions Belgium as the entry point for imported H2 to the European industrial heartland.",
+        "import_export_dynamics": "Belgium's net position is as an LH2 importer and transit hub — not a major domestic producer. The Suiso Frontier project sourced H2 from Australian coal with CCS; future supply is expected from Australia (renewable), Chile (solar), and Middle East (solar/wind). Belgian domestic electrolysis is targeted at 0.5 GW — insufficient to meet 3.5 GW import target, confirming Belgium's import hub strategy."
+      },
+
+      "notes": "Belgium is the only jurisdiction in this knowledge base with proven, operational LH2 import experience (Fluxys/Suiso Frontier, Zeebrugge 2022). This first-mover advantage, combined with the Antwerp-Zeebrugge port complex, existing BASF/INEOS/Borealis chemical cluster demand, and Fluxys regulated infrastructure model, makes Belgium the strongest European LH2 IMPORT hub investment case. The primary investment risks are: (1) High Belgian industrial electricity prices — offshore wind PPA is mandatory for any Belgian liquefaction; (2) Federal/regional permitting complexity — six-government structure adds overhead; (3) CREG tariff regulation for Fluxys-operated infrastructure — returns are regulated rather than merchant. For investors focused on LH2 IMPORT infrastructure (not production), Belgium's Zeebrugge location, Fluxys partnership potential, and EU H2 import subsidy access represent a compelling, de-risked entry point. NID benefit is a distinctive Belgian tax advantage for equity-financed SPV structures. All VLAIO/IPCEI grant parameters and industrial electricity prices must be verified before use."
     }
   }
 }

@@ -437,6 +437,258 @@
       "coal_phase_out_commitment": "Coal ban for electricity generation from 2030 (Dutch Climate Agreement).",
       "source": null,
       "notes": "Netherlands legislated coal-fired electricity ban by 2030. New coal investment incompatible with Dutch climate law. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at −253°C and associated liquefaction plant. The Netherlands is Europe's premier LH2 import and distribution hub by geographic and infrastructure positioning: Rotterdam is the largest seaport in Europe, with the Delta Rhine Corridor (DRC) providing a dedicated hydrogen pipeline corridor to Germany. The primary regulatory gate is BRZO 2015 (Besluit risico's zware ongevallen 2015), which implements SEVESO III and is administered by a tri-partite competent authority (Omgevingsdienst, Veiligheidsregio, Inspectie SZW). CRITICAL OPERATIONAL RISK: Netcongestie (grid congestion) declared by TenneT NL in multiple provinces from 2023 means new large industrial electricity connections (>1MW) may be refused or face multi-year delays in congested areas. This is the primary operational risk for LH2 liquefaction electricity supply.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage SDE++ subsidy. Standalone facilities operate on a tolling basis. MEI-Regeling (Milieu-investeringsaftrek, 45% additional tax deduction on qualifying environmental investments) provides significant CapEx tax benefit. OWE (Opslag Waterstof en Energie) national programme funding and IPCEI Hy2Tech grants provide CapEx support for qualifying projects. Source: RVO.nl; IPCEI EC Decision.",
+      "revenue_floor_description": null,
+      "source": "rvo_hydrogen; iea_hydrogen; brzo_authority",
+      "staleness_warning": "MEI/MIA rates updated annually — verify current Milieu-lijst at RVO.nl. IPCEI project list and OWE programme parameters are time-sensitive. TenneT netcongestie map changes dynamically — always verify current grid availability at TenneT.eu before modelling electricity connection.",
+      "eu_state_aid_applicable": true,
+
+      "netcongestie_critical_warning": {
+        "severity": "HIGH",
+        "description": "Dutch TSO TenneT declared netcongestie (grid congestion) in multiple provinces from 2023. New large industrial connections (>1 MW) in congested areas are placed on waiting lists that can span 3–7+ years, or may be refused entirely. LH2 liquefaction requires a stable, high-load electricity supply. Facilities in congested areas face material risk of connection refusal or excessive delay.",
+        "affected_areas": "Noord-Holland (Amsterdam area), Flevoland, Zuid-Holland (Rotterdam area — partial), Brabant (partial). Verify current TenneT netcongestie kaart before site selection.",
+        "mitigation_options": ["Site selection in non-congested grid areas (Groningen port area, some Zeeland locations)", "Co-located offshore wind connection (kavels with own offshore grid infrastructure)", "Demand flexibility agreement (flexibiliteitsdienst) with TenneT to enable connection in congested areas with load flexibility commitment", "Energy storage buffer to smooth peak liquefaction load"],
+        "legal_basis": "Elektriciteitswet Art. 16c; TenneT/RNB congestion management protocols; MAR (Maatregelen Netcongestie) government action plan",
+        "staleness_warning": "Netcongestie map changes quarterly. Always verify current status at TenneT.eu."
+      },
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Besluit risico's zware ongevallen 2015 (BRZO 2015) — Dutch implementation of SEVESO III Directive 2012/18/EU",
+            "relevance": "Mandatory major accident hazard regime for LH2 facilities at or above SEVESO III threshold quantities. BRZO lower tier (≥10 t LH2 / ≥50 t liquefied flammable gas): veiligheidsbeheerssysteem (VBS — safety management system); noodplan intern (internal emergency plan); BRZO notification to competent authority. BRZO upper tier (≥50 t / ≥200 t): veiligheidsrapport (safety report — equivalent to UK Safety Report, German Sicherheitsbericht); extern noodplan (external emergency plan) prepared by Veiligheidsregio; openbare informatieplicht (public information duty); periodic inspection by tri-partite competent authority."
+          },
+          {
+            "instrument": "Arbeidsomstandighedenwet (Arbowet) and Besluit risico's zware ongevallen 2015 — safety management obligations",
+            "relevance": "Employer occupational safety obligations for BRZO establishments. VGM (Veiligheid, Gezondheid, Milieu) management system required at BRZO sites."
+          },
+          {
+            "instrument": "Wet milieubeheer (Environmental Management Act) — omgevingsvergunning milieu",
+            "relevance": "Environmental permit (omgevingsvergunning, onderdeel milieu) required for LH2 facilities — issued under Omgevingswet (from 1 January 2024) by bevoegd gezag (competent authority, typically Omgevingsdienst on behalf of Provincie)."
+          },
+          {
+            "instrument": "Omgevingswet — in force 1 January 2024",
+            "relevance": "New consolidated planning and environmental permit framework replacing former Wabo, WRO, and 25 other acts. All consents (omgevingsvergunning) for LH2 facilities now issued under Omgevingswet. Implementation still bedding in — specialist Dutch environmental law advice essential."
+          },
+          {
+            "instrument": "Besluit activiteiten leefomgeving (BAL) — implementing decree under Omgevingswet",
+            "relevance": "Technical requirements for BRZO establishments under new Omgevingswet framework. BAL Afdeling 4.1 (BRZO-inrichtingen) sets specific obligations for SEVESO-threshold facilities."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Omgevingswet — omgevingsplan (environment plan) at gemeente level",
+            "relevance": "Bestemmingsplan (former land use plan) is replaced by omgevingsplan under Omgevingswet. LH2 facility land use classification must be consistent with omgevingsplan. For Rotterdam port and industrial zones (Maasvlakte, Europoort), the Havenbedrijf Rotterdam N.V. is the relevant port authority."
+          },
+          {
+            "instrument": "Wet Milieu-effectrapportage (MER) — Dutch Environmental Impact Assessment",
+            "relevance": "MER (milieu-effectrapportage) required for large industrial installations including BRZO upper-tier LH2 facilities. MER is integrated into the omgevingsvergunning procedure under Omgevingswet."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Nationaal Waterstofprogramma (NWP) — Ministerie van Economische Zaken en Klimaat (EZK)",
+            "relevance": "National hydrogen programme targeting 3–4 GW domestic electrolysis by 2030 and 4 Mt green hydrogen import. Positions Rotterdam as Europe's primary hydrogen import gateway. LH2 identified alongside ammonia and LOHC as priority import vectors."
+          },
+          {
+            "instrument": "Delta Rhine Corridor (DRC) — dedicated hydrogen pipeline infrastructure project",
+            "relevance": "Repurposed gas infrastructure creating a dedicated H2 pipeline from Rotterdam port to the German Ruhr/Rhine industrial heartland. DRC enables Rotterdam to serve as the primary LH2 and hydrogen import gateway for both Dutch and German industrial consumers. Operated by Gasunie/HyTransport. Verify current DRC completion timeline."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech — Important Project of Common European Interest (EC Decision 2022)",
+            "relevance": "Netherlands is an IPCEI Hy2Tech participant. Shell NL, Nouryon, Air Liquide NL, and HyTransPort are among Dutch IPCEI participants. Rotterdam-based LH2 import terminal and bunkering infrastructure is within IPCEI scope."
+          },
+          {
+            "instrument": "OWE — Opslag Waterstof en Energie (Hydrogen and Energy Storage National Programme)",
+            "relevance": "National programme funding for hydrogen and energy storage infrastructure. LH2 storage at port import terminals and inland distribution hubs qualifies as eligible infrastructure."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "instrument": "BRZO 2015 (Besluit risico's zware ongevallen 2015) — Dutch implementation of SEVESO III Directive 2012/18/EU",
+        "competent_authority": "Tri-partite (driehoek) of: (1) Omgevingsdienst (Regional Environmental Service — Omgevingsdienst DCMR in Rotterdam area); (2) Veiligheidsregio (Regional Safety Authority — for external emergency plan); (3) Inspectie SZW (Labour Inspectorate — for occupational safety). Coordination via BRZO+ programme.",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "lower_tier_threshold_tonnes_liquefied_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "upper_tier_threshold_tonnes_liquefied_flammable_gas": 200,
+        "seveso_iii_note": "SEVESO III thresholds for flammable gases (including hydrogen): lower tier 10 t / upper tier 50 t. For liquefied flammable gases: lower tier 50 t / upper tier 200 t. These differ from UK COMAH (5 t / 50 t for flammable gases). Rotterdam port is already home to numerous BRZO upper-tier chemical establishments — DCMR (Omgevingsdienst) and the Rotterdam Veiligheidsregio have substantial BRZO expertise.",
+        "veiligheidsrapport_obligations": "BRZO upper-tier: veiligheidsrapport (safety report) submitted to and reviewed by Omgevingsdienst and Inspectie SZW; extern noodplan (PEE equivalent) prepared by Veiligheidsregio; openbare informatieplicht (public information); BRZO inspection every 3 years",
+        "rotterdam_advantage": "The Maasvlakte/Europoort area has extensive BRZO expertise and an established emergency response framework (Gemeenschappelijke Meldkamer Rotterdam, port fire brigade). Novel LH2 facilities will face a more experienced competent authority than most other European locations.",
+        "notes": "Netherlands BRZO competent authority is genuinely tri-partite — all three bodies (Omgevingsdienst, Veiligheidsregio, Inspectie SZW) must be engaged in parallel. The BRZO+ programme provides a coordinated inspection and review service. Pre-application engagement with DCMR (Rotterdam) or the relevant regional Omgevingsdienst is strongly recommended."
+      },
+
+      "permitting": {
+        "primary_authority": "Omgevingsdienst (on behalf of Provincie or Gemeente) for omgevingsvergunning; Veiligheidsregio for extern noodplan; Inspectie SZW for occupational safety",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 14, "max": 42 },
+        "parallel_consent_tracks": [
+          "Omgevingsvergunning (Omgevingswet) — integrated planning, environmental, and building consent: 18–30 months",
+          "BRZO veiligheidsrapport review (Omgevingsdienst + Inspectie SZW) — 6–10 months, runs parallel to omgevingsvergunning",
+          "Extern noodplan (Veiligheidsregio) — prepared after omgevingsvergunning grant; prerequisite for operations",
+          "MER (milieu-effectrapportage) — integrated into omgevingsvergunning procedure",
+          "Elektriciteitsaansluiting (grid connection) — submit to TenneT/DNO concurrently — NETCONGESTIE CHECK CRITICAL at this stage"
+        ],
+        "appeal_risk": "medium",
+        "appeal_mechanism": "Bestuursrechter (administrative court): Rechtbank → Raad van State (Afdeling Bestuursrechtspraak — ABRvS) for major infrastructure. Dutch administrative courts are efficient by European standards.",
+        "stikstof_note": "Stikstof (nitrogen) deposition assessment (AERIUS calculator) required for LH2 facilities near Natura 2000 areas. Construction phase vehicle movements may trigger assessment. Rotterdam port area has specific stikstof protocols.",
+        "omgevingswet_note": "Omgevingswet (in force 1 January 2024) consolidates the permitting framework. Practical implementation is still bedding in — specialist Dutch environmental law advice essential for permit preparation under the new framework.",
+        "notes": "Netherlands has a relatively streamlined permitting process for industrial infrastructure in designated port and industrial zones. Rotterdam port area (Maasvlakte, Europoort) is specifically designated for hazardous industrial operations — LH2 facilities in these zones face the most experienced BRZO competent authority in Europe."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Netcongestie (grid congestion) is the primary electricity supply risk for LH2 facilities in the Netherlands — see netcongestie_critical_warning above.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "illustrative_electrical_load_kw_per_tonne_day": { "range_low": 420, "range_high": 500 },
+        "grid_operator": "TenneT TSO B.V. for transmission (110kV+); Enexis, Stedin, Liander (Alliander) for distribution",
+        "netcongestie_electricity_risk": "CRITICAL — see separate netcongestie_critical_warning. Rotterdam port area (Maasvlakte) connections are via Stedin distribution in some areas and TenneT transmission in others. Verify current congestion status with TenneT/Stedin before site selection.",
+        "renewable_ppa_strategy": "Co-located or dedicated offshore wind PPA is the preferred electricity supply strategy for Rotterdam-area LH2 facilities — particularly kavel-adjacent locations. Dutch offshore wind PPA market is highly liquid. At EUR 0.05–0.07/kWh offshore PPA and 11 kWh/kg: electricity cost ≈ EUR 0.55–0.77/kg LH2.",
+        "industrial_electricity_price_eur_kwh_ref": "EUR 0.09–0.13/kWh for large industrial consumers (including netwerktarief/nettarief) in Netherlands in 2024 reference period. Verify with ACM published tariff data.",
+        "notes": "For Rotterdam LH2 import terminal operators sourcing LH2 via ship (not liquefying domestically), electricity connection risk is lower — the primary electricity need is for cryogenic pump operation and BOG management rather than liquefaction. LH2 import terminal model avoids the electricity supply risk."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated SDE++ sliding premium or tolling contract with state price floor. Revenue is purely via tolling contracts with commercial offtakers.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for import receipt, storage, dispensing, and regasification. No state commodity price floor.",
+        "mia_regeling": {
+          "description": "MIA-Regeling (Milieu-investeringsaftrek) — additional 36% tax deduction on qualifying environmental investments under Wet IB 2001 Art. 3.42a. Note: distinct from EIA (Energie-investeringsaftrek). MIA focuses on environmental benefit; EIA on energy efficiency. LH2 storage infrastructure may qualify under the MIA milieu-lijst as a zero-emission energy infrastructure investment.",
+          "rate_pct": 36,
+          "legal_basis": "Art. 3.42a Wet inkomstenbelasting 2001; Milieu-lijst (published annually by RVO)",
+          "staleness_warning": "Milieu-lijst updated annually. Verify LH2 storage equipment qualification at RVO.nl before use.",
+          "interaction_with_eia": "MIA and EIA cannot be combined for the same investment. For LH2 storage, MIA (36%) may apply if EIA (45.5%) does not cover the specific asset category — verify current Energielijst and Milieu-lijst."
+        },
+        "eia_eligibility": {
+          "applicable": "Potentially — verify whether LH2 liquefaction plant and cryogenic storage qualify under the current Energielijst (list of qualifying assets under Energie-investeringsaftrek). If qualifying, EIA provides additional 45.5% deduction on top of normal depreciation.",
+          "eia_rate_pct": 45.5,
+          "legal_basis": "Art. 3.42 Wet inkomstenbelasting 2001; Energielijst published annually by RVO",
+          "staleness_warning": "Energielijst updated annually. Verify at RVO.nl. EIA rate has been adjusted in recent years."
+        },
+        "ipcei_support": {
+          "applicable": "Yes — for projects qualifying under IPCEI Hy2Tech or Hy2Use",
+          "nl_ipcei_projects": "HyTransPort (Rotterdam port LH2 bunkering), H2ercules Rotterdam (LH2 import terminal concept), Shell NL hydrogen projects.",
+          "grant_nature": "IPCEI grants are CapEx contributions with EC state aid coverage.",
+          "legal_basis": "IPCEI EC Decision (Hy2Tech) — state aid clearance covers Dutch participant awards"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Rotterdam LH2 import terminal on a merchant tolling basis — primary end-markets are industrial offtakers (BASF, Shell, AkzoNobel), maritime bunkering (Port of Rotterdam bunker market), and pipeline supply to Germany via DRC.",
+          "credit_risk_note": "Tolling revenues are contract-dependent. Rotterdam location provides access to deep pool of investment-grade industrial offtakers."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Netherlands EIA (Energie-investeringsaftrek, 45.5% additional deduction) or MIA (Milieu-investeringsaftrek, 36% additional deduction) provides a PERMANENT CapEx benefit for qualifying LH2 infrastructure — applied in the year of investment. This is both a timing benefit and a partial permanent benefit. It is the strongest CapEx incentive in this knowledge base for qualifying investments.",
+        "vpb_rate_pct_high_bracket": 25.8,
+        "vpb_rate_pct_low_bracket": 19,
+        "low_bracket_limit_eur": 200000,
+        "legal_basis_vpb": "Wet op de vennootschapsbelasting 1969",
+        "eia_for_lh2_plant": {
+          "description": "EIA (Energie-investeringsaftrek) — additional 45.5% deduction on qualifying energy-efficient investments. Applied in the year of investment on top of normal depreciation. Verify whether LH2 liquefaction and cryogenic storage equipment qualifies under current Energielijst.",
+          "rate_pct": 45.5,
+          "legal_basis": "Art. 3.42 Wet inkomstenbelasting 2001",
+          "npv_benefit": "At 25.8% Vpb and 10% WACC: EIA additional deduction provides a permanent additional tax shield of 45.5% × 25.8% = 11.7% of qualifying CapEx in year of investment. This is the highest CapEx tax incentive in this knowledge base for qualifying investments.",
+          "staleness_warning": "Energielijst and EIA rate reviewed annually. Verify at RVO.nl."
+        },
+        "mia_for_lh2_plant": {
+          "description": "MIA (Milieu-investeringsaftrek) — alternative 36% additional deduction for qualifying environmental investments if EIA does not apply.",
+          "rate_pct": 36,
+          "legal_basis": "Art. 3.42a Wet inkomstenbelasting 2001",
+          "staleness_warning": "Milieu-lijst reviewed annually. Verify at RVO.nl."
+        },
+        "vamil": {
+          "description": "VAMIL (Vrije afschrijving milieu-investeringen) — free timing of depreciation for qualifying environmental investments. Allows front-loading of depreciation timing.",
+          "legal_basis": "Art. 3.31 Wet inkomstenbelasting 2001",
+          "note": "VAMIL can be combined with MIA but not with EIA. For LH2 assets qualifying under MIA, VAMIL provides additional timing benefit."
+        }
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "NEN-EN 1251 (Dutch adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels); Besluit drukapparatuur 2016 (Pressure Equipment Regulation implementing Directive 2014/68/EU)",
+        "atex_zone_classification": "ATEX Zones (Ex-zones) — Zone 1 or Zone 2 around hydrogen release sources; classification under Besluit arbeidsomstandighedenwet (ATEX Arbowet implementing regulation). Ex-zone classification documented in BRZO veiligheidsbeheerssysteem (VBS).",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (her-vloeibaarmaking) — capital-intensive but zero loss", "Catalytic combustion or controlled flare — subject to omgevingsvergunning conditions on atmospheric emissions", "On-site use as process fuel for utilities"],
+          "regulatory_basis": "BOG must be addressed in BRZO veiligheidsrapport as major accident scenario; atmospheric releases subject to Omgevingsdienst inspection conditions via omgevingsvergunning",
+          "environmental_note": "Rotterdam port area has specific atmospheric emission protocols. DCMR enforces omgevingsvergunning conditions on hydrogen venting and BOG management."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. EIA/MIA additional deduction significantly improves project economics for qualifying assets. Netcongestie grid risk must be modelled in electricity cost assumptions.",
+        "_rule_3c_note": "Netherlands is EUR-denominated. No FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "Rotterdam LH2 import terminal: 50 tonne cryogenic storage; LNG-style ship unloading capability (no domestic liquefaction assumed — LH2 imported pre-liquefied)",
+          "import_terminal_vs_liquefaction_note": "Netherlands' primary LH2 infrastructure model is import terminal (receiving pre-liquefied LH2 from Norway, Chile, or Australia) rather than domestic liquefaction. This avoids the electricity connection risk entirely for the storage asset itself.",
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000,
+            "notes": "Vacuum-insulated Type C cryogenic tank at Rotterdam port scale; cost per tonne decreases with scale"
+          },
+          "illustrative_import_terminal_capex_eur": {
+            "storage_50t": 50000000,
+            "ship_unloading_and_cryogenic_pumps": 15000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 78000000,
+            "notes": "Import terminal model for Rotterdam — no liquefaction CapEx. Liquefaction CapEx (EUR 2–5m per tonne/day) would apply for domestic production model."
+          },
+          "opex_electricity_import_terminal": {
+            "note": "Import terminal electricity demand is dominated by cryogenic pump operation and BOG management — significantly lower than liquefaction. Netcongestie risk is lower for import terminal than for liquefaction plant.",
+            "indicative_electricity_demand_kwh_per_tonne_stored": "Low — primarily pump and BOG management; order of magnitude lower than 10-12 kWh/kg for liquefaction"
+          },
+          "eia_mia_tax_benefit": {
+            "qualifying_capex_eur": 78000000,
+            "eia_additional_deduction_45_5pct_eur": 35490000,
+            "tax_shield_at_25_8pct_vpb_eur": 9156420,
+            "note": "Illustrative EIA benefit on import terminal CapEx — subject to Energielijst qualification verification."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative inputs only. Rotterdam import terminal model avoids liquefaction electricity connection risk. Actual costs depend on terminal scale, berth infrastructure, and ISO tank vs. cryogenic tanker ship interface."
+        }
+      },
+
+      "market_context": {
+        "nl_policy_position": "Netherlands positions Rotterdam as Europe's primary hydrogen import gateway. Nationaal Waterstofprogramma targets 4 Mt green hydrogen import by 2030 via Rotterdam. Delta Rhine Corridor (DRC) pipeline will connect Rotterdam to the German Ruhr — the largest industrial hydrogen consumer in Europe. LH2 is one of three priority import vectors alongside ammonia and LOHC.",
+        "key_nl_lh2_projects_indicative": [
+          {
+            "project": "HyTransPort — Rotterdam Port LH2 Bunkering Hub",
+            "status": "IPCEI Hy2Tech participant; development stage",
+            "operator": "Port of Rotterdam Authority / HyTransPort consortium",
+            "note": "Targeting maritime LH2 bunkering for zero-emission shipping entering Rotterdam. Projected 2–10 tonne/day scale."
+          },
+          {
+            "project": "H2ercules Rotterdam — LH2 Import Terminal Concept",
+            "status": "Feasibility/pre-development",
+            "note": "Large-scale LH2 import terminal concept at Rotterdam Maasvlakte. Would receive LH2 by cryogenic tanker from overseas producers (Norway, Chile, Australia)."
+          },
+          {
+            "project": "Port of Amsterdam H2 Hub",
+            "status": "Development stage — green hydrogen from offshore wind (IJmuiden Ver kavels)",
+            "note": "Primarily compressed and pipeline hydrogen; LH2 relevant for aviation supply to Schiphol Airport."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Maritime bunkering — Rotterdam is Europe's largest port; zero-emission shipping mandates (IMO 2030/2050) drive LH2 demand for fuel cell vessels",
+          "Industrial export — DRC pipeline enables Rotterdam to supply German industrial hydrogen consumers (BASF, ThyssenKrupp, RWE)",
+          "Aviation — Schiphol Airport LH2 supply for SAF/hydrogen aircraft (Royal Dutch Airlines partnership)",
+          "Industrial decarbonisation — AkzoNobel, Shell NL, and chemical complex at Chemelot/Limburg"
+        ],
+        "drc_pipeline_note": "Delta Rhine Corridor is a repurposed gas pipeline from Rotterdam to the German border/Ruhr, targeting completion 2028–2030. For pipeline-compatible hydrogen forms (compressed, ammonia, LOHC), DRC provides the primary export route. LH2 must be regasified or delivered by road/rail for DRC-compatible transport — this creates a specific role for Rotterdam LH2 terminals in regasification and distribution."
+      },
+
+      "notes": "Netherlands offers the strongest LH2 investment case in this knowledge base from an infrastructure and market positioning perspective: Rotterdam's port infrastructure, BRZO-experienced competent authorities, deep PPA market, EIA/MIA tax incentives (best CapEx tax stack in this knowledge base for qualifying assets), and DRC pipeline access to German demand make it uniquely positioned as a European LH2 import hub. The primary risk is acute netcongestie for domestic liquefaction facilities — mitigated by the import terminal model (no domestic liquefaction required). All EIA/MIA rates, OWE programme parameters, and netcongestie grid status must be verified with RVO.nl and TenneT before use."
     }
   }
 }

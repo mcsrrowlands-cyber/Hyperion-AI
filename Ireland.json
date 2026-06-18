@@ -424,6 +424,234 @@
       "coal_phase_out_commitment": "Ireland targets coal phase-out by 2025 (Moneypoint station).",
       "source": null,
       "notes": "Ireland's last coal station (Moneypoint) is targeting conversion or closure by 2025. No coal support mechanism. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Ireland is an emerging LH2 opportunity driven by world-class Atlantic wind resource (offshore capacity factors 48%+), a National Hydrogen Strategy (2023) targeting 2 GW offshore electrolysis by 2030, and the Shannon Estuary strategic LH2 hub potential (former Moneypoint coal site). The COMAH regime in Ireland is implemented by SI 209/2015 — distinct from UK COMAH (SI 2015/483) but transposing the same SEVESO III Directive. Joint competent authority: HSA (Health and Safety Authority) and EPA. Ireland's 12.5% CT rate (lowest in this knowledge base) and ACA 100% first-year allowance are significant financial advantages for LH2 project economics.",
+
+      "permitting_p50_months": 30,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage operating support mechanism in Ireland. Standalone LH2 storage operates on a tolling or merchant basis. Enterprise Ireland and IDA Ireland support H2 investment through grant programmes. Offshore Renewable Energy Development Plan (OREDP II) positions Ireland for H2 export to Europe. EU Hydrogen Bank eligible. Source: iea_hydrogen; enterprise_ireland; dccae_ie.",
+      "revenue_floor_description": null,
+      "source": "hsa_ie; epa_ie; iea_hydrogen; enterprise_ireland",
+      "staleness_warning": "Enterprise Ireland and IDA Ireland H2 grant programme terms change periodically. EU Hydrogen Bank auction parameters evolve. Shannon Estuary H2 cluster and OREDP II are in development — verify current status with DCCAE (Department of the Environment, Climate and Communications) before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "European Union (Control of Major Accident Hazards involving Dangerous Substances) Regulations 2015 — SI 209/2015",
+            "relevance": "Irish SEVESO III transposition. NOTE: This regime is called 'COMAH' in Ireland — the same acronym as the UK COMAH regime — but it is implemented under a different legislative instrument (SI 209/2015 vs. UK SI 2015/483) and administered by a different competent authority. The underlying obligations are derived from the same EU SEVESO III Directive (2012/18/EU) and are materially equivalent. Joint competent authority: HSA (Health and Safety Authority) and EPA (Environmental Protection Agency).",
+            "lower_tier_threshold_flammable_gas_tonnes": 10,
+            "upper_tier_threshold_flammable_gas_tonnes": 50
+          },
+          {
+            "instrument": "Safety, Health and Welfare at Work Act 2005 (as amended)",
+            "relevance": "General duty of care; primary legislative basis for HSA enforcement at LH2 facilities. Workplace safety regulations apply to LH2 storage, dispensing, and liquefaction operations."
+          },
+          {
+            "instrument": "European Union (Pressure Equipment) Regulations 2018 (SI 144/2018) — PED 2014/68/EU transposition",
+            "relevance": "Design, manufacture, conformity assessment, and periodic inspection of cryogenic pressure vessels, pipework, and LH2 storage tanks."
+          },
+          {
+            "instrument": "European Communities (Explosive Atmospheres) Regulations 2003 (SI 258/2003) — ATEX Directive transposition",
+            "relevance": "ATEX zone classification around H2 release sources; Explosion Protection Document (EPD) required; explosion-protected equipment in classified zones."
+          },
+          {
+            "instrument": "Environmental Protection Agency Act 1992 (as amended); Industrial Emissions Directive Regulations 2013 (SI 137/2013)",
+            "relevance": "IPC/IPPC licence or Industrial Emissions (IE) licence required from EPA for large chemical processing/storage facilities with significant emissions, including BOG management systems."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Planning and Development Act 2000 (as amended)",
+            "relevance": "Planning permission for LH2 storage facility. Large facilities may qualify as Strategic Infrastructure Development (SID) via An Coimisiún Pleanála. HSA is a statutory consultee for planning applications within COMAH land use planning consultation zones."
+          },
+          {
+            "instrument": "Maritime Area Planning Act 2021 (MAP Act)",
+            "relevance": "Relevant if LH2 storage is associated with offshore wind electrolysis infrastructure — Maritime Area Consent (MAC) from MARA required for offshore components."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "National Hydrogen Strategy (Ireland) 2023 — Department of the Environment, Climate and Communications (DECC)",
+            "relevance": "Sets target of 2 GW offshore electrolysis by 2030; identifies Shannon Estuary as strategic H2 cluster site; positions Ireland as H2 exporter to mainland Europe via Celtic Interconnector and LH2 shipping."
+          },
+          {
+            "instrument": "Offshore Renewable Energy Development Plan II (OREDP II) — DECC 2023",
+            "relevance": "Offshore wind development plan identifying H2 production from offshore wind as a key strategic objective. Positions Ireland's Atlantic offshore resource for power-to-H2 export."
+          },
+          {
+            "instrument": "Climate Action Plan 2024 — Government of Ireland",
+            "relevance": "Legally binding framework under Climate Action and Low Carbon Development (Amendment) Act 2021; drives 80% renewable electricity by 2030 and positions H2 as a key decarbonisation tool for industry and heavy transport."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "SI 209/2015 — European Union (Control of Major Accident Hazards involving Dangerous Substances) Regulations 2015",
+        "terminology_note": "IMPORTANT: Ireland uses the term 'COMAH' for its SEVESO III regime — the same acronym as the UK COMAH Regulations (SI 2015/483). However, Irish COMAH is a separate legislative instrument transposing SEVESO III independently. Irish COMAH is administered by HSA + EPA (joint competent authority), NOT by HSE + EA (the UK equivalents). Do not conflate Irish COMAH with UK COMAH in cross-border analysis.",
+        "competent_authority": "Joint: HSA (Health and Safety Authority) and EPA (Environmental Protection Agency) — joint COMAH competent authority under SI 209/2015",
+        "lower_tier_threshold_flammable_gas_tonnes": 10,
+        "upper_tier_threshold_flammable_gas_tonnes": 50,
+        "lower_tier_obligations": "Notify HSA + EPA; prepare and implement Major Accident Prevention Policy (MAPP); internal emergency plan only",
+        "upper_tier_obligations": "Prepare detailed Safety Report assessed by HSA + EPA jointly; external emergency plan prepared by local authority emergency services; public information duty under Regulation 22 SI 209/2015; periodic HSA/EPA inspection",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 6,
+        "authority_assessment_months": 5,
+        "notes": "The joint HSA/EPA competent authority structure means both agencies must assess the Safety Report — coordination between the two can extend assessment timelines. Pre-application engagement with both HSA (chemical safety) and EPA (environmental aspects) in parallel is strongly recommended. HSA has a pre-consultation service for major hazard establishments. LH2 is a novel technology in Irish industrial context — allow additional time for regulator familiarisation."
+      },
+
+      "permitting": {
+        "planning_authority": "An Coimisiún Pleanála (strategic infrastructure) or Local Planning Authority (sub-threshold); HSA as statutory COMAH consultee in planning; EPA for IE licence",
+        "timeline_p50_months": 30,
+        "timeline_range_months": { "min": 18, "max": 48 },
+        "parallel_consent_tracks": [
+          "Planning consent — An Coimisiún Pleanála (SID) or LPA — 18–36 months (JR risk — see note)",
+          "COMAH notification / Safety Report (HSA + EPA joint) — 3–11 months post-submission",
+          "IE Licence from EPA (if above Industrial Emissions threshold) — 6–12 months",
+          "IDA Ireland / Enterprise Ireland grant agreement — concurrent with other consents",
+          "Grid connection agreement with ESB Networks / EirGrid — concurrent"
+        ],
+        "judicial_review_risk": "HIGH — Irish planning system has an active judicial review (JR) culture, particularly for large industrial facilities. An Taisce and environmental NGOs are active challengers. JR via the Irish High Court (Commercial Division) can add 12–24 months to the planning consent timeline.",
+        "shannon_estuary_note": "Shannon Estuary H2 cluster (former Moneypoint coal site) would additionally require EPA IE licence for the converted industrial site, consultation with Shannon Foynes Port Company, and potentially foreshore consent for any marine infrastructure elements under MAP Act.",
+        "appeal_risk": "high",
+        "appeal_mechanism": "Judicial Review — Irish High Court (Commercial Division) → Court of Appeal → Supreme Court (on leave). Common law JR doctrine applies.",
+        "notes": "P50 of 30 months reflects the typical complexity of large industrial facility permitting in Ireland combined with the COMAH safety report process. The judicial review risk is the primary upside risk to this timeline — JR challenge by community or environmental groups can extend significantly. Shannon Estuary projects should factor in the complexity of the former Moneypoint industrial site and any residual environmental legacy issues."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Ireland's offshore wind RESS programme will generate large volumes of renewable electricity — the strategic rationale for power-to-LH2 is that renewable surplus periods can be absorbed by liquefaction load, improving project economics.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "EirGrid (TSO); ESB Networks (DSO); I-SEM (all-island Single Electricity Market)",
+        "regulatory_authority": "CRU (Commission for Regulation of Utilities) regulates grid connection tariffs",
+        "connection_type": "High-voltage industrial connection; EirGrid for transmission-connected large industrial load; ESB Networks for distribution",
+        "grid_queue_risk": "MEDIUM-HIGH — Irish grid is constrained (limited UK interconnection at 1 GW Moyle + East-West); wind curtailment at 10–15% means co-locating LH2 electrolysis with curtailed offshore wind is both a commercial mitigation and a grid services opportunity",
+        "electricity_price_risk": "MEDIUM — I-SEM prices can be volatile; wind curtailment events produce low/zero marginal cost electricity ideal for H2 electrolysis; long-term renewable PPA from RESS-contracted projects provides price certainty for LH2 production cost",
+        "data_centre_competition_note": "Irish grid faces competing large-load demand from data centres (forecast 70% of Irish electricity by 2030 without intervention per ESB). LH2 load competes with data centres for grid capacity. Early grid connection reservation is advisable.",
+        "renewable_ppa_strategy": "Ireland's RESS two-way CfD mechanism means offshore wind generators are settled against I-SEM reference price — LH2 electrolysis operators should pursue long-term physical PPAs with RESS-contracted offshore wind projects for both price certainty and green credentials."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Ireland. Revenue is primarily via tolling contracts with no state commodity floor for storage services. Enterprise Ireland / IDA Ireland grants provide CapEx support. RESS mechanism is not applicable to standalone LH2 storage.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for storage, liquefaction, and dispensing services; no commodity price floor",
+        "enterprise_ireland_ida": {
+          "applicable": true,
+          "description": "Enterprise Ireland (for Irish-based companies) and IDA Ireland (for foreign direct investors) both provide capital grant support for H2 infrastructure investment in Ireland. Grant rates project-specific and negotiated.",
+          "administrator": "Enterprise Ireland (enterprise-ireland.com); IDA Ireland (idaireland.com)",
+          "staleness_warning": "Grant rates and programme terms change. Contact Enterprise Ireland or IDA Ireland directly for current H2 investment incentive terms."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Ireland is eligible for EU Hydrogen Bank auction funding for green hydrogen production. Integrated LH2 production and storage facilities may attract co-funding. Verify current auction round status."
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate fully merchant — Ireland's data centre operators (investment-grade: Google, Meta, Amazon, Microsoft) represent potential anchor H2 offtakers for cooling or backup power applications. Shannon Estuary industrial cluster provides alternative industrial demand.",
+          "credit_risk_note": "Irish data centre counterparties are investment-grade hyperscalers — among the highest-quality offtakers available in any European market."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Irish Accelerated Capital Allowances (ACAs) under TCA97 s.285 provide 100% first-year deduction for qualifying assets — a CapEx TIMING benefit, not a permanent effective tax rate reduction. At 12.5% CT, the absolute shield is lower than UK (25%) but the relative timing benefit is equally powerful.",
+        "cit_trading_rate_pct": 12.5,
+        "legal_basis_cit": "TCA97 s. 21A (12.5% trading rate)",
+        "pillar_2_note": "Large multinationals (global revenues >€750m) are subject to QDMTT (Qualified Domestic Minimum Top-up Tax) from 1 January 2024 — effective minimum rate of 15% for in-scope entities. Legal basis: Finance (No. 2) Act 2023. LH2 investors should confirm whether their entity qualifies as an in-scope MNE.",
+        "aca_applicable": true,
+        "aca_rate_pct": 100,
+        "aca_qualifying_assets": "Plant and machinery on the SEAI ACA qualifying products list — LH2 liquefaction equipment, cryogenic storage tanks, heat exchangers, dispensing infrastructure — likely qualifying as energy-efficient equipment. Verify against current SEAI ACA list.",
+        "legal_basis_aca": "TCA97 s. 285 as amended; Finance Act 2018",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 12.5% CT and 10% WACC: ACA 100% Year 1 deduction NPV of tax shield ≈ 12.1% of qualifying CapEx. Under standard 8-year plant life (12.5% p.a.): NPV ≈ 9.3%. Timing benefit ≈ 2.8ppts. For Pillar 2 in-scope entities (15% CT): ACA NPV ≈ 14.5% vs. 11.1% standard = timing benefit ≈ 3.4ppts.",
+          "note": "Despite the lower absolute CT rate, ACA timing benefit is proportionally significant. The 12.5% CT rate (or 15% Pillar 2) is the dominant financial attraction — the lowest combined CT and OpEx burden in this knowledge base for large industrial projects."
+        }
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "I.S. EN 1251 (Irish Standard adopting EN 1251 — Cryogenic vessels, static vacuum-insulated vessels); CE marking under SI 144/2018 (PED)",
+        "electrical_hazardous_area": "ATEX zones per I.S. EN 60079 series; Explosion Protection Document (EPD) required under SI 258/2003; HSA is the enforcement authority for ATEX compliance at LH2 facilities",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (preferred for large facilities)", "Catalytic combustion with EPA licence condition", "Use as on-site fuel"],
+          "regulatory_basis": "BOG must be addressed in the COMAH Safety Report for upper-tier sites (SI 209/2015); atmospheric emissions controlled under EPA IE licence; National Emission Ceilings Regulations apply to ambient air quality impact assessment"
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. Wind curtailment integration with LH2 electrolysis must be modelled explicitly — curtailment creates low/zero marginal cost electricity windows for H2 production cost optimisation. ACA timing benefit must be shown separately.",
+        "_rule_3c_note": "Ireland is EUR-denominated — no FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Shannon Estuary site conversion of former Moneypoint coal plant would entail additional site remediation and repurposing costs."
+          },
+          "aca_year_1_tax_shield": {
+            "at_12_5_pct_ct": "ACA 100% Year 1 deduction on €68.4m qualifying CapEx = €8.55m tax shield in Year 1 (at 12.5% CT)",
+            "at_15_pct_ct_pillar2": "€10.26m tax shield in Year 1 (at 15% Pillar 2 effective rate)",
+            "note": "Year 1 shield is the primary timing benefit. Verify SEAI ACA qualifying product list for specific LH2 equipment."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_ref": 0.11,
+            "electricity_opex_eur_per_kg_lh2": 1.21,
+            "curtailment_opportunity_note": "During curtailment events (10–15% of annual Irish wind output), I-SEM prices fall toward zero or negative. Electrolysis/liquefaction scheduled to curtailment periods can reduce effective electricity cost substantially — model explicitly.",
+            "source": "IEA, The Future of Hydrogen, 2019; CRU/EirGrid I-SEM market data (verify current)"
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative inputs only. Actual project costs depend on Shannon Estuary site conditions, technology vendor, IDA/Enterprise Ireland grant outcome, renewable PPA structuring, and electricity scheduling strategy."
+        }
+      },
+
+      "market_context": {
+        "ireland_policy_position": "National Hydrogen Strategy (2023) targets 2 GW offshore electrolysis by 2030. OREDP II positions Ireland's Atlantic offshore resource for power-to-H2. Shannon Estuary identified as primary strategic H2 cluster. Celtic Interconnector (France) and potential Hydrogen Interconnector are long-term export route enablers.",
+        "key_ie_lh2_projects_indicative": [
+          {
+            "project": "Shannon Estuary H2 Cluster (former Moneypoint)",
+            "status": "Strategic development stage; ESB (Electricity Supply Board) exploring Moneypoint conversion to H2 and offshore wind hub",
+            "operator": "ESB / Ørsted (potential partners)",
+            "note": "Shannon Estuary deep-water port access, existing HV infrastructure, and decommissioning timeline create favourable conditions for H2 hub. Verify current ESB Moneypoint transition plans."
+          },
+          {
+            "project": "Celtic Hydrogen / Celtic Interconnector coupling",
+            "status": "Conceptual — Celtic Interconnector (Ireland-France 700 MW HVDC) enables Irish renewable power export; H2 production from surplus wind as complementary value chain",
+            "note": "LH2 as maritime export mode from Shannon for markets not accessible by interconnector"
+          },
+          {
+            "project": "ESB / Ørsted Offshore Wind + H2",
+            "status": "Development stage — large-scale offshore wind with power-to-H2 component in Celtic Sea",
+            "note": "Verify current project status with ESB and Ørsted Ireland"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Data centre backup and cooling — investment-grade hyperscaler demand (Google, Meta, Amazon, Microsoft)",
+          "Industrial decarbonisation — pharmaceutical and chemical sectors (Pfizer, Eli Lilly, Roche) in Cork and Dublin",
+          "LH2 export to mainland Europe (France via Celtic Interconnector route, or maritime via Shannon Estuary)",
+          "Aviation — LH2 propulsion studies for short-haul Ireland-UK routes; Dublin Airport proximity considerations"
+        ],
+        "strategic_risk_note": "Ireland's grid curtailment (10–15% of wind output in some years) is simultaneously a commercial risk (lost generation revenue for wind farms) and a strategic opportunity for LH2 (zero/near-zero marginal electricity cost during curtailment). LH2 electrolysis as a curtailment absorption mechanism aligns grid, H2 economics, and renewable policy objectives — a compelling combined value proposition."
+      },
+
+      "notes": "Ireland presents a structurally compelling LH2 development proposition: world-class offshore wind resource for electrolysis feedstock, the lowest CT rate in this knowledge base (12.5% / 15% Pillar 2), ACA 100% Year 1 deduction, investment-grade data centre offtake demand, and Shannon Estuary as a strategic LH2 hub site. The Irish COMAH regime (SI 209/2015 — HSA + EPA joint authority) is a clear but demanding safety regulatory pathway. The critical caveat is the permitting risk: Irish planning JR culture (High Court accessible; An Taisce active) means large industrial facilities face a meaningful probability of judicial review challenge, potentially extending timelines by 12–24 months. The absence of a state revenue floor for LH2 storage means investors must underwrite tolling contracts with investment-grade counterparties. Pillar 2 15% floor for large MNC investors must be factored in CIT modelling. All Enterprise Ireland / IDA Ireland grant terms must be verified directly as programme terms evolve."
     }
   }
 }

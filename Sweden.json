@@ -401,6 +401,263 @@
       "coal_phase_out_commitment": "Sweden has no coal-fired power generation. Coal phase-out complete.",
       "source": null,
       "notes": "Sweden does not operate coal-fired power stations. No relevant support mechanism. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Sweden's defining LH2 advantage is electricity cost: in the SE1 (Luleå/north) and SE2 bidding zones, wholesale electricity prices can be below EUR 30/MWh — potentially the lowest liquefaction electricity cost in Europe outside Norway. Sweden's landmark LH2-linked projects (HYBRIT steel-hydrogen with SSAB/LKAB/Vattenfall; H2 Green Steel, Boden) demonstrate industrial-scale LH2 demand already developing in northern Sweden. The SEVESO III safety regime is implemented via Förordning (2015:236) and administered by MSB and Länsstyrelsen. New LH2 projects are MERCHANT — no state revenue floor exists. A co-located or dedicated PPA is required for revenue certainty. SEK currency risk must be modelled for EUR-base investors.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or FiT. Standalone facilities operate on a tolling basis. CapEx support may be available via: (i) Energimyndigheten (Swedish Energy Agency) investment grants for hydrogen infrastructure; (ii) Klimatklivet (Climate Investment Programme) — grants for green investments including hydrogen; (iii) Industriklivet (Industrial Leap) — grants for H2-based industrial decarbonisation; (iv) EU Hydrogen Bank (as EU member). Source: Energimyndigheten; Naturvårdsverket (Klimatklivet).",
+      "revenue_floor_description": null,
+      "source": "energimyndigheten; naturvardsverket; iea_hydrogen",
+      "staleness_warning": "Klimatklivet call parameters, Industriklivet grant terms, Energimyndigheten programme specifications, and SEK/EUR exchange rate are time-sensitive. Verify current call documentation with respective agencies before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Förordning (2015:236) om åtgärder för att förebygga och begränsa följderna av allvarliga kemikalieolyckor (SEVESO III implementing regulation)",
+            "relevance": "Primary Swedish SEVESO III transposing instrument. Sets threshold quantities for dangerous substances including liquid hydrogen (vätska under högt tryck / extremt brandfarlig gas). Lower tier: 10 tonnes. Upper tier: 50 tonnes. Operators above thresholds must notify MSB and Länsstyrelsen."
+          },
+          {
+            "instrument": "Lag (1999:381) om åtgärder för att förebygga och begränsa följderna av allvarliga kemikalieolyckor (Major Accident Prevention Act)",
+            "relevance": "Primary legislative basis for SEVESO III obligations in Sweden. Operators must maintain Säkerhetsrapport (Safety Report, upper tier), Säkerhetsledningssystem (safety management system), and internal och extern räddningsplan (internal and external emergency plans)."
+          },
+          {
+            "instrument": "Miljöbalken (SFS 1998:808) Chapter 9 (miljöfarlig verksamhet — environmentally hazardous operations)",
+            "relevance": "Environmental permitting — LH2 facilities above qualifying thresholds require tillstånd (permit) from Mark- och miljödomstol (MMD) or Länsstyrelse depending on category. Permit includes conditions on BOG management, containment, and emergency response."
+          },
+          {
+            "instrument": "Förordning (1998:899) om miljöfarlig verksamhet och hälsoskydd",
+            "relevance": "Classification of environmentally hazardous operations; determines whether a Mark- och miljödomstol tillstånd (A-category) or Länsstyrelse tillstång (B-category) is required for the LH2 facility."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Plan- och bygglagen (PBL, SFS 2010:900) (Planning and Building Act)",
+            "relevance": "Bygglov (building permit) from Byggnadsnämnd for cryogenic storage structures. LH2 facility locations must be compatible with Detaljplan (detailed development plan) or Översiktsplan (comprehensive plan) land use designations."
+          },
+          {
+            "instrument": "Miljöbalken Chapter 6 (miljöbedömning — environmental assessment)",
+            "relevance": "Miljökonsekvensbeskrivning (MKB — environmental impact assessment) required in the tillstånd application for LH2 facilities requiring MMD or Länsstyrelse permits."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Handlingsplan för vätgas (Swedish Hydrogen Action Plan)",
+            "relevance": "National policy framework for hydrogen including LH2 storage and transport. Energimyndigheten coordinates implementation."
+          },
+          {
+            "instrument": "Industriklivet (Industrial Leap) — Naturvårdsverket programme",
+            "relevance": "CapEx grant support for industrial decarbonisation projects including hydrogen-based steel, chemicals, and process industry. H2 Green Steel (Boden) and HYBRIT are funded Industriklivet beneficiaries. LH2 storage integral to such projects is eligible."
+          },
+          {
+            "instrument": "Klimatklivet (Climate Investment Programme) — Naturvårdsverket",
+            "relevance": "Investment grants for climate projects; hydrogen infrastructure (including LH2 dispensing for transport) is eligible. Competitive grant rounds administered regionally via Länsstyrelse.",
+            "source": "Naturvårdsverket — klimatklivet.se"
+          },
+          {
+            "instrument": "IPCEI Hy2Tech and Hy2Infra — Sweden as participant",
+            "relevance": "Sweden participates in IPCEI Hy2Tech (hydrogen technology) and Hy2Infra (hydrogen infrastructure). HYBRIT (SSAB/LKAB/Vattenfall) is the primary Swedish IPCEI project. LH2 storage infrastructure may qualify under Hy2Infra."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "regime_name": "SEVESO III — implemented via Lag (1999:381) and Förordning (2015:236)",
+        "competent_authority_primary": "MSB — Myndigheten för samhällsskydd och beredskap (Civil Contingencies Agency) — coordinates SEVESO compliance; receives Safety Report notifications; maintains establishment register",
+        "competent_authority_secondary": "Länsstyrelsen (County Administrative Board) — local supervisory authority; coordinates external emergency plan (extern räddningsplan) with kommunal räddningstjänst (municipal fire service)",
+        "lower_tier_threshold_tonnes_lh2": 10,
+        "upper_tier_threshold_tonnes_lh2": 50,
+        "lower_tier_obligations": "Notify MSB and Länsstyrelse; prepare Säkerhetsledningssystem and Handlingsprogram (major accident prevention policy); internal räddningsplan",
+        "upper_tier_obligations": "Submit Säkerhetsrapport to MSB/Länsstyrelse for assessment; extern räddningsplan coordinated by Länsstyrese and kommunal räddningstjänst; public information duty; periodic MSB inspection",
+        "legal_basis": "Lag (1999:381) §§4–20 (operator obligations); Förordning (2015:236) (threshold quantities). Liquid hydrogen is classified as extremt brandfarlig gas — lower tier 10 t, upper tier 50 t.",
+        "pre_notification_lead_time_months": 2,
+        "safety_report_preparation_months": 5,
+        "msb_assessment_months": 4,
+        "notes": "MSB is an experienced and technically capable authority. Sweden has a number of SEVESO-registered industrial facilities. Pre-application consultation with MSB and the relevant Länsstyrelse is recommended — MSB publishes guidance (vägledning) on SEVESO implementation for LH2 and other novel technologies. Länsstyrese in northern Sweden (Norrbotten — relevant for H2 Green Steel/HYBRIT) is building expertise in LH2 facility oversight."
+      },
+
+      "permitting": {
+        "planning_authority": "Mark- och miljödomstol (MMD) or Länsstyrelse for Miljöbalken tillstånd (determined by facility category); Byggnadsnämnd for bygglov; MSB/Länsstyrelse for SEVESO",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 18, "max": 42 },
+        "parallel_consent_tracks": [
+          "Miljöbalken tillstånd from MMD or Länsstyrelse (including MKB): 12–24 months",
+          "Bygglov (building permit) from Byggnadsnämnd: 3–6 months (follows detailed plan compliance confirmation)",
+          "SEVESO notification / Säkerhetsrapport submission to MSB: 2–9 months",
+          "Länsstyrese extern räddningsplan coordination: concurrent with MSB",
+          "Grid connection to SvK or local elnätsbolag: timelines per grid_connection section"
+        ],
+        "northern_sweden_advantage": "Industrial zone sites in Norrbotten and Västernorrland (SE1/SE2 zone) already have Miljöbalken tillstånd frameworks for heavy industry (LKAB, SSAB, Boliden). LH2 integrated into existing permitted industrial sites (e.g., H2 Green Steel Boden, HYBRIT Oxelösund) may benefit from faster permitting via amendment to existing tillstånd rather than greenfield application.",
+        "appeal_risk": "low-medium",
+        "appeal_mechanism": "Mark- och miljödomstol (MMD) → Mark- och miljööverdomstolen (MÖD) → Högsta domstolen (on leave to appeal); MSB/Länsstyrelse decisions via förvaltningsdomstol",
+        "notes": "P50 assumes a lower-tier SEVESO facility (10–50 t LH2) co-located with or adjacent to existing industrial infrastructure in northern Sweden. Greenfield sites without existing tillstånd or industrial designation will be at the longer end of the range. The MMD court-based permitting system, while unusual, is well-understood by Swedish industry and typically provides clear procedural timelines."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is electricity-intensive (~10–12 kWh per kg H2 liquefied). Sweden's SE1 (Luleå) and SE2 (Sundsvall) bidding zones offer some of the lowest wholesale electricity prices in Europe — driven by abundant hydro and growing wind. This is the single most significant competitive advantage for Swedish LH2 relative to Western European peers.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "bidzone_electricity_cost": {
+          "se1_luleaa": {
+            "typical_wholesale_eur_mwh": "EUR 15–40/MWh in low-demand/high-wind/high-hydro periods; EUR 50–100/MWh in peak periods (EPEX Nord Pool SE1 data — verify current)",
+            "implication": "At EUR 0.025/kWh and 11 kWh/kg: electricity cost EUR 0.275/kg LH2 — among the lowest in Europe. At EUR 0.08/kWh: EUR 0.88/kg LH2.",
+            "note": "SE1 prices are the most competitive in Scandinavia for electrolysis and liquefaction. H2 Green Steel (Boden) chose SE1 specifically for electricity cost advantage."
+          },
+          "se3_se4_stockholm_malmoe": {
+            "typical_wholesale_eur_mwh": "EUR 60–130/MWh (higher demand zones); coupled more closely to continental European prices",
+            "note": "Southern Sweden zones are less attractive for electricity-intensive LH2 liquefaction than SE1/SE2."
+          }
+        },
+        "grid_operator": "Svenska kraftnät (SvK — TSO) for transmission; local elnätsbolag (Ellevio, Vattenfall Eldistribution, E.ON) for distribution",
+        "ns_constraint": "SE1/SE2 to SE3/SE4 north-south transmission constraint means that cheap SE1 electricity may not be fully exportable south — reinforces the advantage of locating liquefaction in SE1/SE2 near the electricity source rather than transporting hydrogen south.",
+        "renewable_credentials": "Sweden's electricity mix is approximately 65% hydro + 17% nuclear + 16% wind (Energimyndigheten data — verify current). Grid carbon intensity is among the lowest in Europe (estimated 30–60 gCO2e/kWh). LH2 produced from Swedish grid electricity has strong but not automatic green credentials — hourly additionality requirements under EU Delegated Regulation 2023/1184 must be verified.",
+        "notes": "The SE1 electricity price advantage is the dominant driver for LH2 project siting in Sweden. HYBRIT (SSAB/LKAB/Vattenfall) and H2 Green Steel (Boden) both leverage this advantage. A long-term PPA with a Swedish renewable generator in SE1/SE2 is the optimal electricity procurement strategy — provides price certainty AND green credentials."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: No dedicated two-way CfD or one-way FiT exists for LH2 storage in Sweden. Standalone LH2 storage is MERCHANT — tolling revenue only. Integrated projects may access Klimatklivet or Industriklivet CapEx grants. No commodity price floor from the state for LH2 storage.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, cryogenic storage, and dispensing; no commodity price floor from the state",
+        "klimatklivet": {
+          "applicable": true,
+          "description": "Klimatklivet (Climate Investment Programme). Naturvårdsverket competitive grant for climate investments. LH2 storage and dispensing infrastructure for transport has been funded in prior rounds.",
+          "administrator": "Naturvårdsverket; applications assessed via Länsstyrelse",
+          "grant_rate_indicative": "Up to 50–70% of eligible CapEx for qualifying projects (competition-based — verify current prospectus)",
+          "staleness_warning": "Klimatklivet call schedule and grant rates change annually. Verify current round with Naturvårdsverket (klimatklivet.naturvardsverket.se).",
+          "source": "Naturvårdsverket, Klimatklivet — naturvardsverket.se"
+        },
+        "industriklivet": {
+          "applicable": true,
+          "description": "Industriklivet (Industrial Leap). Energimyndigheten grant programme for large-scale industrial decarbonisation. Hydrogen (including LH2 supply chain) for steel, paper, chemicals, and minerals industries is a core eligible use.",
+          "administrator": "Energimyndigheten",
+          "grant_rate_indicative": "Project-specific; major projects (HYBRIT, H2 Green Steel) have received substantial grants. Verify current call at Energimyndigheten.",
+          "staleness_warning": "Industriklivet programme terms are revised per call. Verify current eligibility and budget with Energimyndigheten before use.",
+          "source": "Energimyndigheten — energimyndigheten.se"
+        },
+        "ipcei_participation": {
+          "applicable": true,
+          "description": "Sweden is an IPCEI Hy2Tech and Hy2Infra participant. HYBRIT project (SSAB/LKAB/Vattenfall) is the primary Swedish IPCEI beneficiary. LH2 storage integral to IPCEI projects may access above-normal state aid intensity.",
+          "source": "European Commission, IPCEI Hy2Tech Decision SA.62671"
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Sweden is an EU member — EU Hydrogen Bank competitive grants available for green hydrogen production including LH2 production. LH2 storage may be included in qualifying project scope.",
+          "source": "European Commission, EU Hydrogen Bank"
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Sweden has no Full Expensing equivalent. The 30% declining balance (skattemässig avskrivning under IL 18 kap.) applies to LH2 plant and equipment, providing a timing benefit. Fastighetsskatt (0.5% of assessed value) applies to LH2 storage structures as fixed real property. Model both.",
+        "bolagsskatt_rate_pct": 20.6,
+        "legal_basis": "Inkomstskattelagen (IL) 65 kap. 10 §",
+        "depreciation_applicable": {
+          "method": "Declining balance (skattemässig avskrivning) — 30% per annum on tax value under IL 18 kap.",
+          "rate_pct": 30,
+          "qualifying_assets": "Liquefaction equipment, heat exchangers, compressors, dispensing infrastructure — classified as maskiner och inventarier (machinery and equipment). Cryogenic storage tanks may be classified differently if embedded in building structure.",
+          "legal_basis": "Inkomstskattelagen (IL, SFS 1999:1229) 18 kap.",
+          "npv_timing_benefit": "At 20.6% bolagsskatt and 10% WACC: NPV of tax shield under 30% declining balance ≈ 17.8% of qualifying CapEx. Under straight-line (20-year life): NPV ≈ 12.8%. Timing benefit ≈ 5ppts."
+        },
+        "fastighetsskatt_note": "Cryogenic storage tanks classified as fixed structures (byggnader) would attract fastighetsskatt at 0.5% of assessed value. For a 50 t storage tank with SEK 25m assessed value: SEK 125,000/year (EUR ~10,800/year at SEK 11.6 = EUR 1 as of 2026-06-15). Verify classification with Skatteverket.",
+        "sek_eur_note": "SEK figures converted at SEK 1 = EUR 0.086 (EUR 1 = SEK 11.6) as of 2026-06-15. Verify current rate — SEK floats freely.",
+        "vat": {
+          "standard_rate_pct": 25,
+          "recovery": "Input moms recoverable by momsregistrerade (VAT-registered) businesses under Mervärdesskattelagen (ML, SFS 2023:200)"
+        }
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "SS-EN 1251 (Swedish Standards Institute implementation of EN 1251 — Cryogenic vessels); mandatory for cryogenic equipment used in Sweden",
+        "electrical_hazardous_area": "ATEX zone classification required per MSB ATEX guidance and Förordning (2016:25) om explosiv atmosfär; zone 1 and zone 2 areas must be documented and physically demarcated around LH2 release points",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (subject to Miljöbalken tillstånd condition on atmospheric releases)", "On-site generation fuel"],
+          "regulatory_basis": "BOG management must be addressed in the Säkerhetsrapport (upper tier) or Säkerhetsledningssystem (lower tier) as a major accident scenario. Atmospheric releases subject to Miljöbalken emission conditions.",
+          "environmental_note": "Sweden's Klimatlag (2017:720) net-zero by 2045 target means regulators are focused on minimising all emission streams. BOG reliquefaction will be favoured in new tillstånd conditions."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: these inputs are for IRR, NPV, CapEx payback, and DSCR modelling. All figures shown first in SEK then EUR at SEK 1 = EUR 0.086 (EUR 1 = SEK 11.6) as of 2026-06-15. SEK/EUR FX sensitivity analysis is required.",
+        "_rule_3c_note": "FX rate: SEK 1 = EUR 0.086 (EUR 1 = SEK 11.6) as of 2026-06-15. SEK floats freely vs EUR. Apply minimum SEK/EUR sensitivity range of SEK 10.5–12.5 per EUR in scenario analysis.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "siting_assumption": "SE1 zone (Norrbotten/Luleå area) — lowest electricity cost. Co-located with H2 Green Steel or HYBRIT industrial complex.",
+          "liquefaction_capex_sek": {
+            "per_tonne_per_day_midpoint": 40600000,
+            "eur_midpoint_approx": 3491600,
+            "fx_rate": 0.086,
+            "fx_rate_date": "2026-06-15",
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_sek": {
+            "per_tonne_midpoint": 11600000,
+            "eur_midpoint_approx": 997600,
+            "fx_rate": 0.086,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Vacuum-insulated Type C cryogenic tank; cost per tonne decreases with scale"
+          },
+          "illustrative_total_project_capex_sek": {
+            "liquefaction_2tpd_sek": 81200000,
+            "storage_50t_sek": 580000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative_sek": 793440000,
+            "eur_equivalent_approx": 68235840,
+            "fx_rate": 0.086,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Balance of plant and civil works at 20% of equipment cost. Northern Sweden civil works may have higher costs due to permafrost/sub-arctic conditions. Excludes grid reinforcement."
+          },
+          "opex_electricity_se1": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "se1_electricity_price_sek_per_kwh_ref": 0.35,
+            "eur_equivalent_per_kwh": 0.030,
+            "electricity_opex_eur_per_kg_lh2": 0.33,
+            "fx_rate": 0.086,
+            "fx_rate_date": "2026-06-15",
+            "source": "Nord Pool SE1 average wholesale price data — verify current at nordpoolgroup.com",
+            "note": "EUR 0.030/kWh is indicative SE1 wholesale rate. This assumes a P50 SE1 spot price — volatile. At EUR 0.06/kWh (P50 se3 equivalent): OpEx EUR 0.66/kg. Northern Sweden offers materially better electricity cost than any other European LH2 market outside Norway. PPA with local wind/hydro generator locks in cost and provides green credentials."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "All SEK figures converted at EUR 1 = SEK 11.6 (2026-06-15). Verify FX rate. SEK/EUR sensitivity: ±10% FX = ±10% on SEK-denominated OpEx items. Engineering study required before financial commitment."
+        }
+      },
+
+      "market_context": {
+        "sweden_policy_position": "Sweden has the most advanced industrial LH2 demand pipeline in this knowledge base, driven by HYBRIT (world's first hydrogen-reduced steel, SSAB/LKAB/Vattenfall) and H2 Green Steel (Boden — integrated LH2 supply chain for green steel export). The SE1 electricity price advantage makes Sweden the lowest-cost LH2 liquefaction location in continental Europe.",
+        "key_swedish_lh2_projects_indicative": [
+          {
+            "project": "HYBRIT (Hydrogen Breakthrough Iron-making Technology)",
+            "status": "Pilot operational at LKAB's Luleå iron ore plant; scale-up to full commercial production from 2026–2030",
+            "operator": "SSAB, LKAB, Vattenfall",
+            "note": "World's first hydrogen-reduced steel; uses compressed H2 for direct reduction. LH2 storage relevant for distribution of produced H2. HYBRIT is an IPCEI Hy2Tech beneficiary. Source: SSAB/LKAB/Vattenfall HYBRIT project documentation."
+          },
+          {
+            "project": "H2 Green Steel (Boden)",
+            "status": "Development — 2.5 GW electrolyser; integrated LH2 supply chain for green steel export; financing secured (2023); targeting production from 2025/2026",
+            "operator": "H2 Green Steel AB",
+            "note": "Integrated LH2 supply chain for green steel; Boden (SE1 zone) chosen specifically for low electricity costs. Among Europe's largest announced green steel hydrogen projects. Source: H2 Green Steel project documentation."
+          },
+          {
+            "project": "Oxelösund LH2 Port Concept",
+            "status": "Concept — LH2 export terminal at SSAB's Oxelösund steel plant for maritime and export",
+            "note": "Oxelösund is in SE3 zone (higher electricity price) but benefits from existing SSAB industrial infrastructure and Baltic Sea port access"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Green steel production (HYBRIT, H2 Green Steel) — dominant near-term industrial hydrogen demand in Sweden",
+          "Chemicals and process industry — Paper/pulp, mining (LKAB), Boliden smelters",
+          "Heavy transport — fuel cell HGV in Norrland logistics corridors",
+          "Export — Sweden as LH2 export hub to Germany/Netherlands via Baltic Sea ISO tanker"
+        ],
+        "supply_chain_note": "Northern Sweden's industrial base (SSAB, LKAB, Boliden, SCA) provides an established offtake community for LH2. Nel Hydrogen and ITM Power are active in Swedish electrolyser projects. Air Liquide and Linde provide industrial gas infrastructure. Lulea and Skellefteå ports are developing H2 logistics capability.",
+        "sek_currency_note": "OpEx costs in Sweden are SEK-denominated. For EUR-reporting investors: SEK/EUR volatility (range SEK 10.5–12.5 per EUR over recent years) translates to approximately ±8–10% variance in EUR-equivalent OpEx. Revenue from LH2 export contracts may be EUR-denominated — model currency matching carefully."
+      },
+
+      "notes": "Sweden presents a uniquely compelling LH2 investment case centred on SE1 electricity cost advantage and established industrial LH2 demand (HYBRIT, H2 Green Steel). The SEVESO III regulatory pathway via MSB and Länsstyrelse is clear and competently administered. The primary commercial risks are: (1) MERCHANT revenue — no state LH2 storage floor; tolling or corporate offtake required; (2) SEK currency risk for EUR-base investors; (3) Northern Sweden sub-arctic civil works complexity. For investors with access to long-term industrial LH2 offtake from SSAB, LKAB, or similar, Sweden's electricity cost advantage creates a potentially transformative project economics case. All Klimatklivet/Industriklivet grant parameters, SEK/EUR rate, and SE1 electricity prices must be verified before use."
     }
   }
 }

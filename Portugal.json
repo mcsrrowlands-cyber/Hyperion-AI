@@ -408,6 +408,230 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Portugal is uniquely positioned in Europe for LH2 as a strategic export hub, leveraging world-class solar and wind resources (Alentejo/Algarve: 1,700–2,100+ kWh/kWp) for low-cost green electrolysis, proximity to North African H2 production corridors, and the Sines deep-water port as a potential LH2 import/export terminal. The Estratégia Nacional para o Hidrogénio (EN-H2) and Plano de Recuperação e Resiliência (PRR) provide the policy and funding framework. SEVESO III applies via Decreto-Lei n.º 150/2015.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage operating support mechanism. Standalone LH2 storage operates on a tolling or merchant basis. PRR (Plano de Recuperação e Resiliência — Portugal's EU recovery plan) allocates €785m for hydrogen including LH2 infrastructure; IAPMEI and Fundo Ambiental administer grant programmes. IPCEI Hy2Tech and Hy2Infra participant. EU Hydrogen Bank eligible. Source: ec_state_aid; iea_hydrogen; Portuguese DRAP/DGEG.",
+      "revenue_floor_description": null,
+      "source": "apa_pt; iea_hydrogen; ec_state_aid; dgeg_pt",
+      "staleness_warning": "PRR grant call conditions and available funding envelopes change as programmes are drawn down. IPCEI Hy2Tech and Hy2Infra funding terms evolve. EU Hydrogen Bank auction parameters change per round. Verify current programme status with IAPMEI, DGEG, and European Commission before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Decreto-Lei n.º 150/2015, de 5 de agosto (transposição da Diretiva SEVESO III — 2012/18/UE)",
+            "relevance": "Portuguese SEVESO III transposition. Mandatory for LH2 storage at or above threshold quantities. Lower tier (flammable gases ≥10 t LH2): notify APA, prepare PMAPAS (Política de Prevenção de Acidentes Graves) and internal emergency plan. Upper tier (≥50 t LH2): detailed EIRS (Estudo de Impacte e Risco de Acidente Grave — Safety Report) submitted to APA; external emergency plan; public information duty."
+          },
+          {
+            "instrument": "Decreto-Lei n.º 102-D/2020, de 10 de dezembro (transposição da Diretiva IED 2010/75/EU — Industrial Emissions Directive)",
+            "relevance": "Industrial emissions permit (Licença Ambiental) required from APA for facilities with significant emissions, including large H2 processing plant. Boil-off gas (BOG) management plans required."
+          },
+          {
+            "instrument": "Decreto-Lei n.º 169/2012, de 1 de agosto (REAI — Regime de Exercício da Atividade Industrial)",
+            "relevance": "Industrial licensing framework. LH2 liquefaction and storage facilities require Autorização de Instalação (AI) and Autorização de Exploração (AE) under REAI. Classified as Type 1 (highest-impact) industrial facilities at commercial scale."
+          },
+          {
+            "instrument": "Regulamento de Segurança de Instalações de Armazenagem de Produtos Inflamáveis e Combustíveis (Portaria n.º 131/2002)",
+            "relevance": "Safety regulation for flammable product storage installations; applies to H2 storage areas alongside SEVESO III requirements."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Decreto-Lei n.º 151-B/2013 (AIA — Avaliação de Impacte Ambiental)",
+            "relevance": "Environmental impact assessment for projects above threshold — large LH2 facilities in sensitive areas will trigger AIA. Competent authority: APA (Agência Portuguesa do Ambiente)."
+          },
+          {
+            "instrument": "Decreto-Lei n.º 15/2022 (Licença Única — Aceleração das energias renováveis)",
+            "relevance": "Single permit process. Where LH2 storage is co-located with or integral to a renewable energy production facility, DL 15/2022 single permit may apply, potentially streamlining coordination."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Estratégia Nacional para o Hidrogénio (EN-H2) — Resolução do Conselho de Ministros n.º 63/2020, de 14 de agosto",
+            "relevance": "National hydrogen strategy: 2–2.5 GW electrolysis by 2030; 10% green H2 in industry; Sines LH2 export hub identified as strategic priority; European H2 backbone interconnection target."
+          },
+          {
+            "instrument": "Plano de Recuperação e Resiliência (PRR) — Componente C15 (Hidrogénio)",
+            "relevance": "Portugal's EU recovery plan commits €785m to hydrogen, including LH2 production, storage, and export infrastructure. Missão H2 programme administered by IAPMEI with DGEG oversight."
+          },
+          {
+            "instrument": "IPCEI Hy2Tech (Commission Decision SA.63325) and IPCEI Hy2Infra (Commission Decision SA.102558)",
+            "relevance": "Portugal is a participating member state in both IPCEI Hy2Tech (2022) and Hy2Infra (2024). IPCEI designation permits state aid above GBER thresholds for first-of-kind LH2 infrastructure. Source: EC State Aid register."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "Decreto-Lei n.º 150/2015 (transposição SEVESO III)",
+        "competent_authority": "APA (Agência Portuguesa do Ambiente) — primary SEVESO III competent authority; IGAMAOT (Inspeção-Geral da Agricultura, do Mar, do Ambiente e do Ordenamento do Território) — inspection authority",
+        "lower_tier_threshold_flammable_gas_tonnes": 10,
+        "upper_tier_threshold_flammable_gas_tonnes": 50,
+        "lower_tier_obligations": "Notify APA; prepare and implement PMAPAS (Política de Prevenção de Acidentes Graves equivalente); internal emergency plan (Plano de Emergência Interno)",
+        "upper_tier_obligations": "Prepare EIRS (Estudo de Impacte e Risco de Acidente Grave — full safety report); APA assessment required before operation; external emergency plan (Plano de Emergência Externo) coordinated with ANPC (Autoridade Nacional de Emergência e Proteção Civil); public information duty; periodic IGAMAOT inspection",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 6,
+        "authority_assessment_months": 4,
+        "notes": "APA is the single competent authority for SEVESO III — a simpler structure than some EU peers with split competence. Pre-application engagement with APA's DSERA division is recommended for novel LH2 facilities. The AIA (environmental impact assessment) process and the SEVESO EIRS may be coordinated — discuss procedural integration with APA at pre-application stage."
+      },
+
+      "permitting": {
+        "planning_authority": "DGEG (grid and energy licence); APA (SEVESO III and AIA); CCDR (regional planning consent); municipal planning authority for construction",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 15, "max": 42 },
+        "parallel_consent_tracks": [
+          "REAI industrial licence (AI/AE) from DGEG — 12–18 months",
+          "SEVESO DL 150/2015 notification / EIRS assessment by APA — 3–10 months",
+          "AIA environmental assessment (if triggered) — 9–18 months",
+          "Licença de construção (building licence) from municipal authority — concurrent",
+          "Grid connection agreement with REN or E-REDES — concurrent"
+        ],
+        "sines_note": "Sines LH2 export hub development would additionally require port authority (APS — Administração dos Portos de Sines e do Algarve) maritime infrastructure consent and potentially DGRM maritime licensing. Factor additional 6–12 months for port-related consents.",
+        "appeal_risk": "medium",
+        "appeal_mechanism": "Tribunais Administrativos (Administrative Courts); Supremo Tribunal Administrativo",
+        "notes": "P50 assumes a greenfield lower-tier SEVESO facility without AIA trigger, away from port infrastructure. Sines-related LH2 port hub development requires additional maritime consents and significantly extends the timeline. ZVER-equivalent designation does not currently apply to H2 facilities — this may change as EN-H2 policy matures."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Portugal's exceptional renewable electricity penetration (~55–65% of generation) means grid electricity has strong green credentials — an important differentiator for ESG-sensitive LH2 export markets.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "REN (Redes Energéticas Nacionais S.A.) for transmission; E-REDES for distribution",
+        "regulatory_authority": "ERSE (Entidade Reguladora dos Serviços Energéticos) regulates connection tariffs",
+        "grid_queue_risk": "MEDIUM-HIGH — grid saturation in high-renewable areas (Alentejo/Algarve) affects solar projects and creates basis risk for LH2 facilities co-located with generation. Transmission reinforcement plans by REN are underway.",
+        "electricity_price_risk": "MEDIUM — Iberian market (MIBEL/OMIE) price cannibalization during high-solar periods actually reduces LH2 OpEx when liquefaction is scheduled to coincide with low-price/high-generation periods; smart scheduling can exploit this systematically",
+        "renewable_ppa_strategy": "Portugal's high renewable penetration and strong solar resource create excellent conditions for a dedicated renewable PPA or co-located electrolysis-liquefaction configuration. The MIBEL Iberian market provides deep reference pricing. Physical PPAs under Código Civil with OMIE PT price reference are standard.",
+        "sines_strategic_position": "Sines port is strategically positioned for LH2 import from North Africa (Morocco green H2) and Brazil H2 export projects, as well as domestic production-to-export hub functions. GALP H2 Sines refinery project and EDP/REN hydrogen valleys confirm industrial pipeline.",
+        "industrial_electricity_cost_note": "Portuguese industrial electricity prices for large consumers approximately EUR 75–120/MWh in 2024 (verify current ERSE statistics). During high-solar periods in Alentejo, MIBEL PT prices can fall to EUR 20–40/MWh — liquefaction scheduling optimised to these windows significantly improves economics."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Portugal. Revenue is primarily via tolling contracts with no state commodity floor for storage services. PRR grants provide CapEx support only.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for storage, liquefaction, and dispensing or export services; no commodity price floor from the state",
+        "prr_capex_grant": {
+          "applicable": true,
+          "description": "Plano de Recuperação e Resiliência (PRR) — Componente C15 Hidrogénio. €785m allocated to hydrogen infrastructure including LH2. Grants administered by IAPMEI with DGEG oversight. Competitive application process.",
+          "administrator": "IAPMEI (Agência para a Competitividade e Inovação) with DGEG oversight",
+          "staleness_warning": "PRR funding is time-limited (EU NextGenerationEU deadline) and envelopes are drawn down progressively. Verify remaining available funding and current call conditions at IAPMEI before use."
+        },
+        "rfai_interaction": {
+          "note": "RFAI (Regime Fiscal de Apoio ao Investimento — 25% tax credit on first €15m eligible CapEx in interior Portugal) may apply to LH2 infrastructure co-located with qualifying industrial activities in eligible regions. Sines (Alentejo) is likely an eligible region. Verify RFAI eligibility for H2 infrastructure with Portuguese tax advisers.",
+          "legal_basis": "Código Fiscal do Investimento Art. 22 et seq.; CFI — DL 162/2014"
+        },
+        "ipcei_hy2tech_hy2infra": {
+          "applicable": true,
+          "description": "Portugal participates in IPCEI Hy2Tech (2022) and Hy2Infra (2024). LH2 storage infrastructure potentially qualifies under Hy2Infra. IPCEI designation allows state aid above GBER thresholds for first-of-kind infrastructure. Source: European Commission State Aid register."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": true,
+          "description": "Portugal is eligible for EU Hydrogen Bank auction funding for green hydrogen production. Integrated LH2 production and storage facilities may attract co-funding. Verify current auction round status and eligibility criteria."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Portuguese reintegração (depreciation) is a timing benefit. RFAI is a PERMANENT CapEx credit (not merely timing) — model accordingly as permanent offset, not just accelerated deduction.",
+        "irc_rate_pct": 21,
+        "legal_basis_irc": "Código do IRC Art. 87",
+        "derrama_note": "Combined IRC + derrama municipal (up to 1.5%) + derrama estadual (3–9% on profits above €1.5m) gives effective rate of 21–31.5% for large profitable projects",
+        "rfai_applicable": true,
+        "rfai_rate_pct_first_15m": 25,
+        "rfai_rate_pct_above_15m": 10,
+        "rfai_legal_basis": "CFI Art. 22 et seq. (DL 162/2014)",
+        "rfai_note": "RFAI is potentially applicable to LH2 infrastructure investment in eligible interior Portugal regions (Alentejo — where Sines is located — is typically eligible). 25% permanent tax credit on first €15m qualifying CapEx is a significant incentive. Verify current CFI eligible region list and activity classification.",
+        "depreciation_lh2_assets": "Reintegração e amortização under Decreto Regulamentar n.º 25/2009: H2 plant and equipment typically 10–12.5% p.a. straight-line; declining balance available",
+        "npv_rfai_benefit": {
+          "_rule_3b_compliance": true,
+          "description": "RFAI at 25% on first €15m qualifying LH2 CapEx = €3.75m permanent tax credit. Applied against IRC liability over up to 10 years. NPV at 10% WACC: approximately 22% of first €15m qualifying CapEx. This is a permanent reduction — not a timing benefit. Model explicitly as permanent CapEx offset distinct from depreciation."
+        }
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "NP EN 1251 (Portuguese adoption of EN 1251 — Cryogenic vessels, static vacuum-insulated vessels); CE marking under PED Directive (2014/68/EU)",
+        "electrical_hazardous_area": "ATEX zones (Zone 1/Zone 2) per NP EN 60079 series; zone classification documented in Documento de Proteção Contra Explosões (DPCE — explosion protection document) required under DL 236/2003 (ATEX transposition)",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (capital-intensive but zero loss)", "Catalytic combustion with Licença Ambiental condition", "Use as on-site fuel"],
+          "regulatory_basis": "BOG must be addressed in the EIRS for upper-tier SEVESO sites; atmospheric emissions controlled under Licença Ambiental (IED transposition DL 102-D/2020); DL 39/2018 (air quality) governs emissions limits"
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. RFAI must be modelled as a permanent CapEx offset (not timing). All figures are indicative from published sources.",
+        "_rule_3c_note": "Portugal is EUR-denominated — no FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Sines port infrastructure connection (jetty, marine loading arm) would add materially."
+          },
+          "rfai_benefit_on_first_15m": {
+            "rfai_credit_eur": 3750000,
+            "note": "25% RFAI credit on first €15m qualifying CapEx = €3.75m permanent credit if project qualifies in Sines/Alentejo eligible region. Model as permanent CapEx offset in year of first IRC liability."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_ref": 0.09,
+            "electricity_opex_eur_per_kg_lh2": 0.99,
+            "high_solar_period_price_note": "During Alentejo/Algarve high-solar periods, MIBEL PT price can fall to EUR 0.02–0.04/kWh — scheduled liquefaction at these times reduces electricity cost per kg LH2 to EUR 0.22–0.44. Smart scheduling is a key OpEx lever.",
+            "source": "IEA, The Future of Hydrogen, 2019; OMIE market data (verify current)"
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative inputs only. Actual project figures depend on technology vendor, Sines-specific infrastructure, PRR grant outcome, RFAI eligibility confirmation, and electricity procurement. Engineering study required before financial modelling."
+        }
+      },
+
+      "market_context": {
+        "portugal_policy_position": "EN-H2 (2020) and PRR C15 position Portugal as a major European green H2 producer and exporter. Sines is identified as Portugal's strategic LH2 export hub — leveraging deep-water port infrastructure, North Africa proximity, and Brazil trade routes. EDP, REN, and Galp have active H2 projects anchored in Sines and the Alentejo hydrogen valley.",
+        "key_pt_lh2_projects_indicative": [
+          {
+            "project": "Sines LH2 Export Hub",
+            "status": "Strategic planning and feasibility stage; identified in EN-H2 and PRR as priority infrastructure",
+            "operators": "Multiple — Galp, EDP, REN, EMEF",
+            "note": "Sines deep-water port provides direct access for LH2 carrier vessels. Strategic position for North Africa H2 import (Morocco, Algeria) and Brazil-to-Europe H2 trade routes. Verify current project status with port authority APS."
+          },
+          {
+            "project": "Galp H2 Sines Refinery",
+            "status": "Feasibility — green H2 for Sines refinery decarbonisation",
+            "operator": "Galp Energia",
+            "note": "Industrial H2 demand from refinery creates anchor offtake for H2 production and potentially LH2 logistics"
+          },
+          {
+            "project": "EDP/REN Hydrogen Valleys",
+            "status": "Multiple regional H2 valley concepts under PRR funding; Alentejo and Ribatejo valleys most advanced",
+            "note": "Verify current status with EDP and REN; PRR funding timelines apply"
+          }
+        ],
+        "primary_demand_drivers": [
+          "LH2 export to Germany/Netherlands via cryogenic tanker — EU H2 import diversification drive",
+          "Industrial decarbonisation — Sines refinery and Setubal industrial cluster",
+          "H2 import from Morocco/Algeria (Portuguese as gateway for North African H2)",
+          "Heavy road transport — fuel cell HGV on A2 corridor south"
+        ],
+        "competitive_advantage": "Portugal's combination of world-class solar resource for electrolysis (LCOE of green H2 among Europe's lowest), Sines deep-water port for LH2 vessel logistics, and PRR/IPCEI funding creates a credible export hub proposition. Key risk: high renewable electricity interconnection to rest of Europe is limited, creating export route dependency on maritime LH2 rather than pipeline."
+      },
+
+      "notes": "Portugal is one of Europe's most compelling LH2 development environments due to its unique combination of solar/wind resource quality (supporting low-cost green electrolysis), Sines port strategic position, and PRR/IPCEI public funding. The SEVESO III DL 150/2015 framework provides a clear (if demanding) safety-regulatory pathway via APA. The RFAI 25% permanent tax credit is a significant CapEx incentive for projects in the Alentejo/Sines eligible region — this should be confirmed with Portuguese tax advisers as a priority in project development. The primary commercial risks are grid saturation in high-resource areas (creating connection delay risk) and the absence of an operating revenue floor for storage services. All PRR and IPCEI funding parameters must be verified at the time of application as envelopes and conditions evolve. The 2013-2014 retroactive FiT adjustment precedent is relevant background for sovereign risk assessment though it does not directly apply to LH2 storage revenue."
     }
   }
 }

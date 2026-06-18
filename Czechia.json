@@ -486,6 +486,260 @@
       "coal_phase_out_commitment": "2033 target per Coal Commission recommendation (2020). Lignite-heavy sector.",
       "source": null,
       "notes": "Czechia is coal-dependent (Sokolov, North Bohemian Basin). No dedicated coal support beyond wholesale market. Phase-out targeted 2033. EU Taxonomy-excluded."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Czechia has a National Hydrogen Strategy (2021) and participates in IPCEI Hy2Tech, with UNIPETROL (Orlen CZ) and CEZ Group as primary industrial H2 actors. However, Czech LH2 development faces three structural challenges that distinguish it from Western European peers: (1) the retroactive policy risk established by the 2010 solar levy (zákon č. 402/2010) creates elevated sovereign risk for any state-supported H2 infrastructure; (2) the electricity grid mix (~50% nuclear + ~40% coal in transition) means grid electricity-derived H2 is not inherently 'green' without a dedicated renewable PPA — requiring additional structuring cost; and (3) CZK currency risk applies to EUR-denominated investors. SEVESO III applies via zákon č. 224/2015 Sb. The primary safety regulatory gate is ČIŽP (Czech Environmental Inspectorate) and Regional Authority (KÚ).",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage operating support mechanism in Czechia. Standalone LH2 storage operates on a tolling or merchant basis. OP TAK (Operační program Technologie a aplikace pro konkurenceschopnost — EU structural funds for H2 and technology) and Czech Modernisation Fund provide CapEx grant pathways. MPO (Ministry of Industry and Trade) administers H2 grants. IPCEI Hy2Tech participant. EU Hydrogen Bank eligible. Source: ec_state_aid; mpo_cz; iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "cizp_cz; iea_hydrogen; ec_state_aid; mpo_cz",
+      "staleness_warning": "OP TAK call conditions and available funding envelopes change as EU structural fund programmes are drawn down. Modernisation Fund H2 call terms evolve. CZK/EUR exchange rate must be verified at ECB Reference Rate on date of analysis. Czech retroactive policy risk context requires ongoing monitoring of legislative developments.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Zákon č. 224/2015 Sb. o prevenci závažných havárií (Zákon o prevenci závažných havárií — Prevention of Major Accidents Act)",
+            "relevance": "Czech SEVESO III transposition. Primary safety legislation for major accident prevention including LH2 storage. Competent authority: ČIŽP (Česká inspekce životního prostředí — Czech Environmental Inspectorate) + KÚ (Krajský úřad — Regional Authority). Upper-tier establishments require bezpečnostní zpráva (safety report) submitted to ČIŽP. LH2 classified as a flammable gas: lower-tier threshold 10 t, upper-tier 50 t."
+          },
+          {
+            "instrument": "Zákon č. 258/2000 Sb. o ochraně veřejného zdraví (Public Health Protection Act) — relevant provisions on chemical hazards",
+            "relevance": "Public health aspects of industrial chemical handling; Krajská hygienická stanice (Regional Hygiene Station) as consultee for major chemical storage installations near residential areas."
+          },
+          {
+            "instrument": "Zákon č. 201/2012 Sb. o ochraně ovzduší (Air Protection Act)",
+            "relevance": "Air emissions permit (povolení k provozu) required from ČIŽP for facilities generating air emissions including BOG combustion or venting."
+          },
+          {
+            "instrument": "Nařízení vlády č. 116/2016 Sb. (transposing ATEX Directives 2014/34/EU and 1999/92/EC)",
+            "relevance": "ATEX zone classification around LH2 storage and release sources; Dokumentace o ochraně před výbuchem (Explosion Protection Document — DOPV) required."
+          },
+          {
+            "instrument": "Zákon č. 22/1997 Sb. o technických požadavcích na výrobky (Product Requirements Act) — PED transposition",
+            "relevance": "Design, manufacture, conformity assessment, and periodic inspection of cryogenic pressure vessels, pipework, and LH2 storage tanks under PED 2014/68/EU."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Zákon č. 100/2001 Sb. o posuzování vlivů na životní prostředí (EIA Act)",
+            "relevance": "EIA may be triggered for large-scale LH2 facilities. Ministry of Environment or Regional Authority competent depending on project category."
+          },
+          {
+            "instrument": "Zákon č. 283/2021 Sb. — nový stavební zákon (New Building Act 2021, in force 2024)",
+            "relevance": "Construction permitting for LH2 facility buildings and structures. The 2021 Building Act reform (entering force in stages from 2024) aims to streamline construction permitting — verify current procedural status with Czech advisers."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Národní vodíková strategie (National Hydrogen Strategy) — MPO 2021",
+            "relevance": "Sets target of 0.5 GW electrolysis by 2030; identifies industrial H2 demand (steel, chemicals, refining) as primary end-use; UNIPETROL/Orlen CZ refinery decarbonisation as flagship project. Administered by MPO (Ministerstvo průmyslu a obchodu — Ministry of Industry and Trade)."
+          },
+          {
+            "instrument": "Operační program Technologie a aplikace pro konkurenceschopnost (OP TAK) — EU Structural Funds 2021–2027",
+            "relevance": "EU structural fund programme including H2 technology development and LH2 infrastructure investment. Czech national co-financing applies. Administered by MPO."
+          },
+          {
+            "instrument": "Modernisation Fund (CZ component) — EC Decision C(2021)7906",
+            "relevance": "EU Modernisation Fund supports low-carbon investments in coal-dependent member states including Czechia. H2 projects are eligible investments. Administered via SFŽP (State Environmental Fund)."
+          }
+        ]
+      },
+
+      "comah_equivalent_regime": {
+        "national_instrument": "Zákon č. 224/2015 Sb. o prevenci závažných havárií (SEVESO III transposition)",
+        "competent_authority_primary": "ČIŽP (Česká inspekce životního prostředí — Czech Environmental Inspectorate) — primary SEVESO III competent authority for safety report assessment",
+        "competent_authority_secondary": "KÚ (Krajský úřad — Regional Authority) for lower-tier establishments and coordination of external emergency plans",
+        "lower_tier_threshold_flammable_gas_tonnes": 10,
+        "upper_tier_threshold_flammable_gas_tonnes": 50,
+        "lower_tier_obligations": "Notify KÚ; prepare and implement Politika prevence závažné havárie (PPZH — Major Accident Prevention Policy); internal emergency plan (vnitřní havarijní plán)",
+        "upper_tier_obligations": "Prepare bezpečnostní zpráva (safety report) assessed by ČIŽP; external emergency plan (vnější havarijní plán) prepared by KÚ/IZS (Integrated Rescue System); public information duty; periodic ČIŽP inspection",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 6,
+        "authority_assessment_months": 5,
+        "notes": "Czech SEVESO competence is split between ČIŽP (safety report assessment — national inspectorate) and KÚ (regional authority for lower-tier sites and emergency planning coordination). The split-authority structure requires coordinated engagement with both bodies. Pre-application consultation with ČIŽP is advisable for novel technology (LH2). ČIŽP assessment quality is generally competent but timelines can extend for novel industrial activities."
+      },
+
+      "permitting": {
+        "planning_authority": "Regional Authority (KÚ) for EIA coordination; municipal/regional building authority for construction; ČIŽP for SEVESO; ČIŽP/SFŽP for air emissions permit",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 18, "max": 42 },
+        "parallel_consent_tracks": [
+          "EIA process under zákon č. 100/2001 (if triggered) — 9–18 months",
+          "Stavební zákon building permit (zákon č. 283/2021) — 6–12 months",
+          "SEVESO zákon č. 224/2015 notification / bezpečnostní zpráva — 3–11 months",
+          "Air emissions permit (zákon č. 201/2012) — 3–6 months",
+          "ERU energy licence (if applicable to H2 production component) — 3–6 months"
+        ],
+        "building_act_reform_note": "The new Building Act (zákon č. 283/2021) entered force in stages from 2024, aiming to consolidate permitting and reduce delays. Verify current procedural framework with Czech legal advisers as transition to new Act may create procedural uncertainty during implementation phase.",
+        "appeal_risk": "medium",
+        "appeal_mechanism": "Správní soudy (Administrative courts); Nejvyšší správní soud (NSS — Supreme Administrative Court)",
+        "notes": "Czech permitting for industrial facilities is more burdensome than Western EU peers but significantly more straightforward than Czech onshore wind permitting. P50 of 24 months reflects a typical industrial chemical facility without EIA trigger. The primary permitting risk is EIA — triggered for larger H2 facilities — which extends the timeline substantially. Building Act reform may improve timelines but creates transition uncertainty."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). CRITICAL: Czech grid mix (~50% nuclear + ~40% coal declining + renewables) means grid electricity-derived H2 does NOT automatically qualify as 'green' hydrogen. A dedicated renewable PPA or co-located renewable generation is essential for H2 produced to meet EU taxonomy green hydrogen standards.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "ČEPS a.s. (TSO); ČEZ Distribuce a.s., E.ON Distribuce, PREdistribuce (DSOs)",
+        "regulatory_authority": "ERU (Energetický regulační úřad — Energy Regulatory Office) regulates grid connection tariffs",
+        "grid_mix_warning": "CRITICAL — Czech electricity mix in 2024–2026 is approximately 50% nuclear, 35–40% coal (declining), 10–15% renewables. Grid electricity-derived LH2 DOES NOT meet the EU Delegated Act on green hydrogen carbon intensity thresholds (< 3.4 kg CO2e/kg H2) without a certified renewable PPA. Investors must structure a dedicated renewable electricity supply chain — either via physical PPA with Czech solar/wind generator or via additionality-compliant GoO (záruky původu) arrangement. Failure to do so undermines green H2 commercial premium and EU taxonomy eligibility.",
+        "connection_cost_czk_per_mw": {
+          "range_low_czk": 800000,
+          "range_high_czk": 4000000,
+          "range_low_eur_indicative": 31746,
+          "range_high_eur_indicative": 158730,
+          "fx_note": "CZK/EUR conversion at indicative rate of 1 EUR = 25.20 CZK. Verify at ECB Reference Rate on analysis date.",
+          "source": "ERU regulated connection tariffs"
+        },
+        "grid_queue_risk": "MEDIUM — Czech grid connection capacity constrained in solar-heavy southern regions; H2 load in industrial centres (Pardubice H2 Valley, North Bohemia, Prague area) likely more manageable",
+        "electricity_price_risk": "MEDIUM — Czech wholesale electricity (PXE) tracks Central European market prices; industrial prices EUR 80–120/MWh range (verify current); no structural low-price advantage equivalent to Nordic markets",
+        "renewable_ppa_strategy": "Given Czech grid mix, a dedicated renewable PPA with a Czech solar or wind generator (or cross-border PPA from Austria/Germany) is essential for green H2 certification. The zelený bonus (Act 165/2012) mechanism means Czech RES generators sell on market independently — corporate PPAs are structurally compatible. OTE (Energy Market Operator) issues Záruky původu (Guarantees of Origin) for certification."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Czechia. Revenue is primarily via tolling contracts with no state commodity floor. OP TAK and Modernisation Fund provide CapEx grants only.",
+        "sovereign_risk_warning": "CRITICAL DISCLOSURE — RETROACTIVE POLICY PRECEDENT: Zákon č. 402/2010 Sb. (solar levy) demonstrates Czech willingness to retroactively modify contracted energy project revenues. Any Czech H2 infrastructure project must factor this precedent into the investor risk disclosure and lender due diligence process. The National Hydrogen Strategy (2021) is a policy statement, not a binding revenue commitment — no Czech equivalent of HAR or EAG Marktprämie exists for H2 storage.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for storage, liquefaction, and dispensing services; no commodity price floor",
+        "op_tak_grant": {
+          "applicable": true,
+          "description": "OP TAK (Operační program Technologie a aplikace pro konkurenceschopnost) — EU structural funds 2021–2027. H2 technology development and infrastructure eligible. Grants administered by MPO. Competitive call process.",
+          "administrator": "MPO (Ministerstvo průmyslu a obchodu — mpo.cz)",
+          "staleness_warning": "OP TAK call conditions and available funding envelopes change as the programme progresses. Verify current call prospectus at mpo.cz/op-tak."
+        },
+        "modernisation_fund": {
+          "applicable": true,
+          "description": "EU Modernisation Fund Czech component — supports low-carbon investments in coal-dependent member states. H2 projects potentially eligible under energy transformation strand. Administered via SFŽP (Státní fond životního prostředí — State Environmental Fund).",
+          "staleness_warning": "Modernisation Fund Czech allocation and call terms evolve. Verify current eligible H2 investment categories with SFŽP."
+        },
+        "ipcei_hy2tech": {
+          "applicable": true,
+          "description": "Czechia participates in IPCEI Hy2Tech (2022). IPCEI designation allows state aid above GBER thresholds for first-of-kind H2 infrastructure. Verify Czech beneficiary projects at EC State Aid register.",
+          "source": "European Commission, IPCEI Hy2Tech State Aid Decision, July 2022"
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Czech accelerated depreciation under zákon č. 586/1992 §26–32 is a CapEx TIMING benefit — not a permanent effective tax rate reduction. NPV of the timing benefit must be shown separately.",
+        "cit_rate_pct": 21,
+        "cit_rate_czk_note": "CIT applies to CZK-denominated taxable income. EUR-denominated investors must account for CZK translation effects on tax base.",
+        "legal_basis_cit": "Zákon č. 586/1992 Sb. §21 as amended by zákon č. 349/2023 Sb. (Consolidation Package — increased from 19% to 21% effective tax year 2024)",
+        "prior_rate_warning": "CIT rate was 19% from 2010–2023, increased to 21% from 2024. This rate change is an example of Czech willingness to alter investment return parameters — flag in sovereign risk disclosure.",
+        "accelerated_depreciation": {
+          "group_2_year1_pct": 35.5,
+          "group_3_year1_pct": 20,
+          "qualifying_lh2_assets_group": "H2 plant and equipment likely classified in Group 2 (inverters, smaller machinery) or Group 3 (turbines, large plant, storage tanks). Verify classification for specific LH2 assets with Czech tax adviser.",
+          "legal_basis": "Zákon č. 586/1992 Sb. §26–32 (accelerated depreciation under §32)"
+        },
+        "czk_fx_risk_note": "CZK is the domestic currency — not in the EUR zone. EUR-denominated investors (lenders and equity) face CZK/EUR FX risk. 10-year range approximately 23–27 CZK/EUR. FX hedging strategy is material to project structuring. Czech Republic has ERM2 entry ambitions but no confirmed timeline.",
+        "npv_benefit_analysis": {
+          "_rule_3b_compliance": true,
+          "description": "At 21% CIT and 10% WACC: Group 3 accelerated depreciation (Year 1 = 20% declining balance): NPV of tax shield ≈ 17.8% of qualifying CapEx. Standard straight-line (10% p.a. over 10 years): NPV ≈ 13.1%. Timing benefit (NPV delta) ≈ 4.7ppts per CZK 1 of qualifying CapEx. EUR-equivalent at 1 EUR = 25.20 CZK (verify at ECB Reference Rate on analysis date).",
+          "note": "Timing benefit only. Total gross tax deduction over asset life is identical under both methods."
+        },
+        "real_estate_transfer_tax": {
+          "status": "ABOLISHED",
+          "legal_basis": "Act 386/2020 Coll. — abolished from December 2020",
+          "notes": "No real estate transfer tax applies to Czech asset deals. Share deal structure (1% stamp duty equivalent does not apply in Czechia — no equivalent) also avoids transfer costs."
+        }
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "ČSN EN 1251 (Czech adoption of EN 1251 — Cryogenic vessels, static vacuum-insulated vessels); CE marking under zákon č. 22/1997 Sb. (PED transposition); ČIŽP periodic inspection of pressure equipment",
+        "electrical_hazardous_area": "ATEX zones per ČSN EN 60079 series; Dokumentace o ochraně před výbuchem (DOPV — Explosion Protection Document) required under Nařízení vlády č. 116/2016 Sb.",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (preferred)", "Catalytic combustion with air emissions permit (zákon č. 201/2012)", "Use as on-site fuel"],
+          "regulatory_basis": "BOG must be addressed in bezpečnostní zpráva for upper-tier SEVESO sites (zákon č. 224/2015); air emissions from BOG combustion require povolení k provozu (operating permit) from ČIŽP under zákon č. 201/2012"
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: These inputs are for IRR, NPV, CapEx payback, and DSCR modelling. CZK/EUR FX risk must be explicitly modelled. Renewable PPA cost required for green H2 certification must be added to OpEx. All figures are indicative from published sources.",
+        "_rule_3c_note": "CZK is the domestic currency. All CZK figures shown first; EUR equivalent at indicative rate of 1 EUR = 25.20 CZK (verify at ECB Reference Rate on analysis date).",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex": {
+            "per_tonne_per_day_range_low_czk": 50400000,
+            "per_tonne_per_day_range_high_czk": 126000000,
+            "per_tonne_per_day_midpoint_czk": 88200000,
+            "per_tonne_per_day_range_low_eur": 2000000,
+            "per_tonne_per_day_range_high_eur": 5000000,
+            "per_tonne_per_day_midpoint_eur": 3500000,
+            "fx_rate_used": 25.20,
+            "fx_rate_date": "Indicative — verify at ECB Reference Rate on analysis date",
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex": {
+            "per_tonne_range_low_czk": 12600000,
+            "per_tonne_range_high_czk": 50400000,
+            "per_tonne_midpoint_czk": 25200000,
+            "per_tonne_range_low_eur": 500000,
+            "per_tonne_range_high_eur": 2000000,
+            "per_tonne_midpoint_eur": 1000000,
+            "fx_rate_used": 25.20,
+            "fx_rate_date": "Indicative — verify at ECB Reference Rate on analysis date"
+          },
+          "illustrative_total_project_capex": {
+            "liquefaction_2tpd_czk": 176400000,
+            "storage_50t_czk": 1260000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative_czk": 1723680000,
+            "total_indicative_eur": 68400000,
+            "fx_rate_used": 25.20,
+            "fx_rate_date": "Indicative — verify at ECB Reference Rate on analysis date",
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_ref": 0.10,
+            "electricity_opex_eur_per_kg_lh2": 1.10,
+            "electricity_opex_czk_per_kg_lh2": 27.72,
+            "renewable_ppa_premium_note": "If green H2 certification required (EU taxonomy / offtaker ESG requirement), add cost of renewable PPA premium over baseload grid price. Estimated EUR 0.02–0.04/kWh additional cost for dedicated green electricity.",
+            "fx_rate_used": 25.20,
+            "fx_rate_date": "Indicative — verify at ECB Reference Rate on analysis date",
+            "source": "IEA, The Future of Hydrogen, 2019; ERU industrial price statistics (verify current)"
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative inputs only. CZK/EUR FX conversion is indicative — verify at ECB Reference Rate. Renewable PPA cost must be added for green H2 certification. Actual project costs depend on technology vendor, site location, OP TAK/Modernisation Fund grant outcome, and CZK FX strategy."
+        }
+      },
+
+      "market_context": {
+        "czechia_policy_position": "National Hydrogen Strategy (2021) targets 80 MW electrolysis by 2025 and 0.5 GW by 2030 — modest by EU standards. Industrial demand from UNIPETROL (Orlen CZ) Litvínov refinery, ČEZ industrial H2 initiatives, and Hydrogen Valley Pardubice are the primary demand anchors. Czech H2 strategy is primarily focused on industrial decarbonisation rather than large-scale export.",
+        "key_cz_lh2_projects_indicative": [
+          {
+            "project": "UNIPETROL (Orlen CZ) Litvínov Refinery H2 Decarbonisation",
+            "status": "Active feasibility — green H2 to replace grey H2 at Litvínov refinery; compressed H2 primary delivery mode",
+            "operator": "UNIPETROL a.s. (subsidiary of Orlen group)",
+            "note": "Refinery H2 demand is industrial (not transport); LH2 relevant if liquefaction needed for distribution to satellite demand sites"
+          },
+          {
+            "project": "Hydrogen Valley Pardubice",
+            "status": "Regional H2 mobility and industry hub concept; H2 refuelling for bus and HGV fleet",
+            "note": "Compressed H2 primary delivery mode for mobility; LH2 potential for long-haul HGV refuelling at scale"
+          },
+          {
+            "project": "ČEZ Group H2 Initiatives",
+            "status": "Multiple feasibility and concept studies; ČEZ exploring H2 for peaking, storage, and industrial supply",
+            "operator": "ČEZ a.s.",
+            "note": "Verify current ČEZ H2 programme status at cez.cz"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Industrial decarbonisation: UNIPETROL refinery (Litvínov), chemicals (Spolana, Lovochemie), steel (Liberty Ostrava — verify)",
+          "H2 mobility: Pardubice H2 Valley bus/HGV fleet; Prague area H2 refuelling network",
+          "Potential export: Central European H2 backbone connection to Germany/Austria — Czech Republic is geographically positioned as a transit state"
+        ],
+        "grid_mix_risk_explicit": "Repeated for emphasis: Czech electricity grid mix means that any investor claiming 'green LH2' from Czech-grid electricity MUST structure a certified renewable PPA or additionality-compliant GoO arrangement. Failure to do so creates EU taxonomy non-compliance, ESG reputational risk, and potential offtaker contract breach for any green H2 supply agreement. This is a non-negotiable structuring requirement for Czech LH2 projects targeting the green H2 premium."
+      },
+
+      "notes": "Czechia is a secondary LH2 development market relative to Western European peers, with a smaller policy ambition (0.5 GW electrolysis by 2030 vs. Finland/Portugal/Ireland 2 GW+), higher retroactive policy risk (zákon č. 402/2010 solar levy precedent — mandatory investor disclosure item), CZK FX exposure, and a grid mix requiring dedicated renewable PPA structuring for green H2 certification. The positive features are: a structured SEVESO III pathway via ČIŽP/KÚ, OP TAK and Modernisation Fund CapEx grant access, 21% CIT (below many EU peers), accelerated depreciation, and IPCEI Hy2Tech participation. The solar levy retroactive precedent (zákon č. 402/2010) is the most significant political risk item and must be disclosed in all investor materials and lender due diligence — it remains the clearest example of retroactive contracted revenue modification in EU energy sector history. For LH2 specifically, the sovereign risk is less acute (tolling revenues rather than contracted state-backstopped FiT) but the broader investment environment score (74/100 political risk) reflects a meaningful discount versus Austria (87) or Finland (88). Best suited to industrial-anchor LH2 projects (UNIPETROL, ČEZ, Pardubice Valley) with investment-grade Czech industrial offtake and robust FX hedging strategy."
     }
   }
 }

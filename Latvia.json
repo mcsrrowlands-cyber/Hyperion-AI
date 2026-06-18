@@ -393,6 +393,216 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Latvia shares Estonia's unique 0% CIT on retained profits model (adopted 2018 under UIN likums), making it structurally advantageous for capital-intensive LH2 projects with long payback periods. Baltic ENTSO-E synchronization (February 2025) materially improved energy security and market integration. Riga port LH2 bunkering concept and Nordic-Baltic H2 corridor ambitions are the primary investment contexts. Latvenergo H2 pilot is an early indicator of institutional interest. Safety regime: SEVESO III implemented via Ķīmisko vielu un ķīmisko produktu likums (Chemical Substances and Chemical Products Law) + Cabinet Regulation No. 532 (2016). Electricity cost for liquefaction is the primary OpEx risk.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage CfD or FiT in Latvia. Standalone LH2 facilities operate on a tolling or merchant basis. Investment and Development Agency of Latvia (LIAA — liaa.gov.lv) provides CapEx grants for clean technology industrial projects. REACT-EU and ERDF cohesion funds administered via Latvian Ministry of Climate and Energy may provide CapEx support for qualifying H2 infrastructure. EU Hydrogen Bank eligible as EU member state. Source: LIAA; AST; iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "liaa_latvia; ast_latvia; iea_hydrogen",
+      "staleness_warning": "LIAA grant parameters and EU cohesion fund programme calls are time-sensitive. Verify current open calls at liaa.gov.lv and esfondi.lv. Nord Pool LV electricity prices change continuously — verify before use.",
+
+      "unique_tax_advantage": {
+        "headline": "UNIQUE (shared with Estonia): Latvia's 0% CIT on retained profits is the defining financial advantage for LH2 investment",
+        "description": "Latvian CIT of 20% applies ONLY to distributed profits (dividends) — NOT to retained or reinvested earnings (Corporate Income Tax Law UIN likums 2017, effective 1 January 2018, §§8–12). Adopted from Estonian model. For a capital-intensive LH2 project: ZERO CIT on operating cash flows that are retained. Model as 0% CIT during operational period for retained profit scenarios; 20% (gross) only at dividend distribution.",
+        "investor_implication": "Identical to Estonian model — significantly improves DSCR, IRR, and payback vs. annual-CIT EU jurisdictions. For LH2 projects with 15+ year payback, the advantage is compounded: investor captures full operating surplus without annual CIT drag throughout the investment recovery period.",
+        "legal_basis": "Uzņēmumu ienākuma nodokļa likums (UIN likums) 2017, §§8–12; effective from 1 January 2018. likumi.lv."
+      },
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Ķīmisko vielu un ķīmisko produktu likums (Chemical Substances and Chemical Products Law) + Cabinet Regulation No. 532 (2016) — Noteikumi par rūpniecisko avāriju riska novērtēšanu un rūpniecisko avāriju novēršanu un to seku ierobežošanu (Rules on Industrial Accident Risk Assessment, Prevention and Limitation of Consequences) — SEVESO III Latvia",
+            "relevance": "Latvian SEVESO III transposition. Lower tier (≥10 t flammable gas including LH2): notify Valsts vides dienests (VVD) and VSAA; prepare MAPP and internal emergency plan. Upper tier (≥50 t flammable gas): detailed drošības pārskats (safety report), ārkārtas rīcības plāns (emergency plan), public information duty, periodic inspection."
+          },
+          {
+            "instrument": "Ugunsdrošības un ugunsdzēsības likums (Fire Safety and Fire Fighting Law) — Latvijas Vēstnesis 94, 2002",
+            "relevance": "Fire safety classification and protection requirements for LH2 storage; VUGD (Valsts ugunsdzēsības un glābšanas dienests — State Fire and Rescue Service) administers."
+          },
+          {
+            "instrument": "Gaisa aizsardzības likums (Air Protection Law) and Vides aizsardzības likums (Environmental Protection Law)",
+            "relevance": "Environmental permits for BOG atmospheric emissions; Valsts vides dienests (VVD) administers."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Būvniecības likums (Construction Law) 2013, as amended",
+            "relevance": "Building permits (būvatļauja) for LH2 storage and liquefaction plant construction; State Construction Inspectorate (BVKB) supervision."
+          },
+          {
+            "instrument": "Teritorijas attīstības plānošanas likums (TAP likums — Spatial Development Planning Law) 2011",
+            "relevance": "Municipal and national spatial planning; industrial zone designation required for LH2 facility."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Latvijas Nacionālais enerģētikas un klimata plāns (NECP Latvia 2021–2030)",
+            "relevance": "Includes H2 component; targets 80% renewable electricity by 2030; H2 identified as storage and transport vector; Baltic H2 corridor concept."
+          },
+          {
+            "instrument": "Nordic-Baltic H2 Corridor Concept",
+            "relevance": "Baltic states (including Latvia) and Nordic partners exploring H2 trade corridor. Riga port positioned as potential H2 import/transit hub."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — tender rounds (EC Regulation)",
+            "relevance": "Latvia is eligible as EU member state. LH2 production and storage may qualify. Verify at innovation-fund.ec.europa.eu."
+          }
+        ]
+      },
+
+      "seveso_iii_regime": {
+        "competent_authority": "Valsts vides dienests (VVD — State Environmental Service — vvd.gov.lv) jointly with VSAA (Valsts darba inspekcija — State Labour Inspectorate)",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lh2_classification": "LH2 classified as flammable gas (Category 2, Annex I Part 1 of SEVESO III as transposed by Cabinet Regulation No. 532 (2016)). Thresholds apply to total quantity on site.",
+        "lower_tier_obligations": "Notify VVD; prepare drošības politikas deklarācija (MAPP); internal emergency plan only.",
+        "upper_tier_obligations": "Prepare detailed drošības pārskats (safety report) acceptable to VVD; ārkārtas rīcības plāns (external emergency plan); public information duty; periodic VVD/VSAA inspection.",
+        "legal_basis": "Cabinet Regulation No. 532 (2016), Annex 1 — dangerous substance thresholds; Ķīmisko vielu un ķīmisko produktu likums.",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 7,
+        "vvd_assessment_months": 5,
+        "notes": "VVD is the primary SEVESO III competent authority in Latvia. Upper-tier sites may not operate until drošības pārskats is accepted. Pre-application engagement with VVD is recommended. Latvian language administration — local legal and regulatory advisers essential. Novel LH2 technology may require additional review time."
+      },
+
+      "permitting": {
+        "planning_authority": "Local municipality for spatial plan compliance; BVKB for construction supervision; VVD for environmental and SEVESO III permits",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 15, "max": 42 },
+        "parallel_consent_tracks": [
+          "Building permit (Būvniecības likums) — 12–20 months",
+          "SEVESO III notification / drošības pārskats (VVD) — 3–12 months post-submission",
+          "Environmental permit (VVD) for BOG emissions — 3–5 months",
+          "VUGD fire safety permit — concurrent with building permit"
+        ],
+        "vvd_consultation_in_planning": true,
+        "appeal_risk": "medium",
+        "notes": "P50 of 24 months assumes lower-tier SEVESO III site. Upper-tier adds 5–10 months. Latvia's digital public services (e-Latvia) are less advanced than Estonia but improving. Latvian language administration is the primary friction point for international investors. Local legal advisers essential."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Connection from AST (TSO) or Sadales tīkls (primary DSO — Latvenergo subsidiary) for the liquefaction plant.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "AS Augstsprieguma tīkls (AST — TSO) or AS Sadales tīkls (DSO — Latvenergo subsidiary; dominant DSO)",
+        "green_credentials_note": "Latvian grid has significant wind and growing solar but does NOT automatically qualify as green H2 feedstock under EU Delegated Regulation 2023/1184. A dedicated onshore wind PPA (Kurzeme coastal — 30–38% capacity factor) provides green credentials and competitive electricity cost.",
+        "electricity_price_risk": "MEDIUM-LOW — Nord Pool LV area connected to CE markets post-synchronization (February 2025). Kurzeme onshore wind PPA at competitive reference price levels provides good electricity cost management.",
+        "baltic_synchronization_advantage": "Post-synchronization, AST operates in CE synchronous area. FCR/aFRR revenues for co-located BESS improve project economics. Growing offshore wind pipeline in Latvian EEZ provides long-term perspective for low-cost renewable electricity.",
+        "renewable_ppa_strategy": "Pairing liquefaction with a Kurzeme onshore wind PPA (SPRK competitive tender) achieves best combination of green credentials and cost.",
+        "notes": "Kurzeme coastal area has developing wind grid infrastructure from existing wind development. AST is a competent TSO. Skulte LNG terminal (planned) would add gas import capability relevant to H2 infrastructure context."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Latvia. Revenue is via tolling contracts with no state commodity floor. The 0% CIT on retained profits is a structural financial advantage, not a revenue support mechanism.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing; no commodity price floor.",
+        "liaa_grants": {
+          "applicable": "LIAA (Investment and Development Agency of Latvia — liaa.gov.lv) provides CapEx grants for qualifying industrial and clean technology investments. Verify current programme parameters at liaa.gov.lv.",
+          "staleness_warning": "Grant programme terms and open calls change. Verify current availability."
+        },
+        "eu_cohesion_funds": {
+          "applicable": "REACT-EU and ERDF cohesion funds may provide CapEx support for qualifying H2 infrastructure. Verify open calls at esfondi.lv.",
+          "staleness_warning": "Programme calls are time-limited and competitive."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": "Latvia is eligible as EU member state for EU Hydrogen Bank auction rounds.",
+          "source": "innovation-fund.ec.europa.eu — verify current round"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a merchant basis serving Riga port bunkering, Latvenergo industrial H2 demand, heavy transport, and Nordic-Baltic corridor H2 trade.",
+          "credit_risk_note": "Merchant revenues are contract-dependent. Latvenergo AS is the most creditworthy domestic counterparty."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Latvia's 0% CIT on retained profits (identical to Estonian model, adopted 2018) eliminates annual CIT drag during long-payback LH2 project life. The traditional 'NPV of depreciation tax shield' calculation is irrelevant during the operational period. Model CIT as a terminal distribution tax only.",
+        "unique_cit_system": "DISTRIBUTED PROFIT TAXATION — 0% CIT on retained/reinvested profits; 20% only on distributed profits (dividends)",
+        "cit_rate_on_retained_profits_pct": 0.0,
+        "cit_rate_on_distributions_pct": 20.0,
+        "legal_basis": "Uzņēmumu ienākuma nodokļa likums (UIN likums) 2017, §§8–12 — effective 1 January 2018",
+        "lh2_specific_advantage": {
+          "description": "Identical to Estonian advantage. For a EUR 70m LH2 project: 0% CIT on retained operating surplus throughout 15–20 year payback period. DSCR improves materially vs. annual-CIT jurisdictions. IRR: model CIT as terminal distribution event.",
+          "comparison_to_annual_cit_jurisdictions": "0% retained profit CIT is uniquely advantageous vs. Lithuania (15% annual), Slovakia (21% annual), Slovenia (19% annual), and most EU peers."
+        },
+        "dividend_withholding_tax_pct": 0.0,
+        "eu_parent_subsidiary": "0% WHT for qualifying EU parent companies (Parent-Subsidiary Directive)"
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "LVS EN 1251 (Latvian adoption of EN 1251 — Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "ATEX zone classification per Latvian implementation of Directive 2014/34/EU; documented in drošības pārskats",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction", "Catalytic combustion (VVD environmental permit required)", "On-site fuel use"],
+          "regulatory_basis": "BOG management addressed in drošības pārskats. VVD environmental permit governs atmospheric releases.",
+          "environmental_note": "Vented hydrogen is not a GHG (GWP ≈ 0). VVD permit may impose vent frequency conditions."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: indicative inputs for IRR, NPV, CapEx payback, and DSCR modelling.",
+        "_rule_3c_note": "Latvia is EUR-denominated — no FX conversion required.",
+        "_unique_cit_modelling_note": "CRITICAL: Model 0% CIT on operating cash flows during project life (retained profit scenario — UIN likums 2017). CIT payable only at dividend distribution. This materially increases DSCR and IRR vs. standard EU CIT jurisdictions.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_midpoint": 1000000
+          },
+          "illustrative_total_project_capex_eur": {
+            "total_indicative": 68400000,
+            "notes": "20% BOP and civil works. Excludes grid connection reinforcement."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "wind_ppa_price_eur_per_kwh_indicative": 0.04,
+            "electricity_opex_eur_per_kg_lh2_wind_ppa": 0.44,
+            "source": "IEA, The Future of Hydrogen, 2019; SPRK tender reference (verify at sprk.gov.lv)",
+            "staleness_warning": "Latvian industrial electricity prices and PPA reference rates are time-sensitive. Verify at SPRK before use."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "cit_advantage_illustrative_eur": "Approx EUR 8–12m NPV saving vs. 21% annual-CIT jurisdiction over 15-year project life at 7% WACC (retained profit scenario — illustrative)",
+          "note": "Illustrative only. Kurzeme onshore wind PPA combined with 0% retained profit CIT may provide competitive unit LH2 production cost."
+        }
+      },
+
+      "market_context": {
+        "lv_hydrogen_policy": "Latvia's NECP includes H2 component. Latvenergo AS H2 pilot is an early institutional signal. Riga port green fuel hub concept (Freeport of Riga) would accommodate LH2 import/bunkering. Gas supply chain decarbonisation (Latvijas Gāze H2 blending) indicates industrial readiness. Nordic-Baltic H2 corridor positions Latvia as a potential transit node between Scandinavian H2 production and Central European demand.",
+        "key_lv_lh2_projects_indicative": [
+          {
+            "project": "Latvenergo AS H2 Electrolysis Pilot",
+            "status": "Early pilot/exploration stage — verify current status at latvenergo.lv",
+            "note": "Latvia's dominant utility exploring H2 as part of energy transition."
+          },
+          {
+            "project": "Riga Port Green Fuel Hub",
+            "status": "Conceptual — Freeport of Riga exploring green fuel handling including LH2 bunkering. Verify at rop.lv.",
+            "note": "Maritime bunkering is the primary near-term demand driver for Riga port LH2 infrastructure."
+          },
+          {
+            "project": "Skulte LNG Terminal (planned)",
+            "status": "In development — planned LNG import terminal that could accommodate future H2 (NH3 or LH2) import/storage. Verify at skulte-lng.lv.",
+            "note": "LNG terminal infrastructure could provide model for LH2 bunkering facility development."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Maritime bunkering — Riga port Baltic shipping (ferry operators, cargo vessels)",
+          "Nordic-Baltic H2 corridor transit — potential H2 trade between Scandinavia and Central Europe",
+          "Industrial transition — Latvenergo energy system decarbonisation",
+          "Heavy road transport — HGV and bus fleet operators in Latvian logistics sector"
+        ]
+      },
+
+      "notes": "Latvia's LH2 storage investment case is structurally attractive for the same reasons as Estonia: (1) 0% CIT on retained profits (UIN likums 2017) eliminates annual CIT drag — uniquely advantageous for capital-intensive, long-payback LH2 projects; (2) Kurzeme onshore wind PPA (30–38% capacity factors) provides competitive green electricity for liquefaction; and (3) Riga port maritime demand context. The SEVESO III regime via Cabinet Regulation No. 532 (2016) provides a structured pathway administered by VVD. Compared to Estonia, Latvia has lower digital governance maturity (more paper-based administration) and slightly more bureaucratic friction, but the financial structure (0% retained CIT) is identical. All grant parameters must be verified with LIAA (liaa.gov.lv) before project commitment."
     }
   }
 }

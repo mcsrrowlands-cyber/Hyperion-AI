@@ -395,6 +395,225 @@
       "coal_phase_out_commitment": null,
       "source": null,
       "notes": "No major coal-fired power generation sector. EU Taxonomy-excluded. No coal support mechanism identified."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. Slovakia's hydrogen strategy (Vodíková stratégia SR 2021) identifies green and low-carbon hydrogen as a priority for decarbonising the industrial sector, including the MOL/Slovnaft Bratislava refinery. The dominant electricity mix (nuclear ~55%) means dedicated green H2 requires a renewable PPA — grid electricity does not qualify as green by default. Electricity cost for liquefaction is the primary OpEx risk. The safety regime is the SEVESO III equivalent administered by SIŽP and RÚVZ.",
+
+      "permitting_p50_months": 30,
+      "permitting_confidence": "low",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism in Slovakia. Standalone LH2 facilities operate on a tolling or merchant basis. Ministry of Economy investment grants (under Act No. 57/2018 Coll. on Regional Investment Aid) may provide CapEx support of up to 25% of eligible CapEx in standard areas, higher in less-developed regions. EU OPII 2021–2027 cohesion funding may be available for qualifying H2 infrastructure via SIEA (Slovak Innovation and Energy Agency). Verify current programme availability at siea.gov.sk. Source: Ministerstvo hospodárstva SR; SIEA.",
+      "revenue_floor_description": null,
+      "source": "ministerstvo_hospodarstva_sr; sizp; iea_hydrogen",
+      "staleness_warning": "Investment aid thresholds, OPII programme parameters, and electricity prices are time-sensitive. Verify current values at siea.gov.sk and mhsr.sk. Fico government policy direction may affect H2 support availability — monitor energia.gov.sk.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Zákon č. 261/2002 Z.z. o prevencii závažných priemyselných havárií (Prevention of Major Industrial Accidents Act) as amended by Zákon č. 256/2015 Z.z.",
+            "relevance": "Slovak SEVESO III transposition. Mandatory safety regime for LH2 storage at or above threshold quantities. Lower tier (≥10 t flammable gas including LH2): MAPP and notify SIŽP. Upper tier (≥50 t flammable gas): detailed bezpečnostná správa (safety report), external emergency plan (vonkajší havarijný plán), public information duty."
+          },
+          {
+            "instrument": "Zákon č. 314/2001 Z.z. o ochrane pred požiarmi (Fire Protection Act) and implementing regulations",
+            "relevance": "Fire safety permits and inspections for LH2 storage and dispensing areas; administered by Hasičský a záchranný zbor (Fire and Rescue Service)."
+          },
+          {
+            "instrument": "Zákon č. 355/2007 Z.z. o ochrane, podpore a rozvoji verejného zdravia (Public Health Act)",
+            "relevance": "Public health risk assessment for LH2 facilities; administered by RÚVZ (Regional Public Health Offices)."
+          },
+          {
+            "instrument": "Zákon č. 79/2015 Z.z. o odpadoch (Waste Act) and Zákon č. 137/2010 Z.z. o ovzduší (Air Quality Act)",
+            "relevance": "Environmental permits for boil-off gas (BOG) management; atmospheric emissions from LH2 storage venting; administered by SIŽP."
+          }
+        ],
+        "planning_and_construction_legislation": [
+          {
+            "instrument": "Zákon č. 200/2022 Z.z. o výstavbe (Construction Act 2022) — new Construction Act replacing Stavebný zákon",
+            "relevance": "Building permits (stavebné povolenie / notifikácia under new Act); significant procedural reform — verify current rules with Slovak legal adviser at mvrr.gov.sk as transitional provisions are still bedding in."
+          },
+          {
+            "instrument": "Zákon č. 24/2006 Z.z. o posudzovaní vplyvov na životné prostredie (EIA Act)",
+            "relevance": "EIA for LH2 facilities classified as hazardous industrial installations; Ministry of Environment as EIA authority."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "Vodíková stratégia Slovenskej republiky 2021 (Slovak Hydrogen Strategy to 2030)",
+            "relevance": "National policy commitment targeting 0.4 GW electrolysis capacity by 2030; identifies industrial decarbonisation (refining, steel, chemicals) as primary H2 demand driver; positions Slovakia for EU Hydrogen Bank participation."
+          },
+          {
+            "instrument": "EU Hydrogen Bank — tender rounds (EC Regulation)",
+            "relevance": "Slovakia is eligible as EU member state. LH2 production and enabling storage infrastructure may qualify for EU Hydrogen Bank auction support. Verify current round at innovation-fund.ec.europa.eu."
+          },
+          {
+            "instrument": "Operačný program Integrovaná infraštruktúra (OPII) 2021–2027",
+            "relevance": "EU cohesion funds administered via SIEA — potential CapEx grant source for H2 infrastructure; verify current calls at siea.gov.sk."
+          }
+        ]
+      },
+
+      "seveso_iii_regime": {
+        "competent_authority": "SIŽP (Slovenská inšpekcia životného prostredia — Slovak Environmental Inspectorate) jointly with RÚVZ (Regional Public Health Offices)",
+        "lower_tier_threshold_tonnes_flammable_gas": 10,
+        "upper_tier_threshold_tonnes_flammable_gas": 50,
+        "lh2_classification": "LH2 is classified as a flammable gas under Annex I, Part 1, Category 2 of SEVESO III (Directive 2012/18/EU) as transposed by Zákon č. 261/2002 Z.z. as amended. Thresholds apply to the quantity present on site.",
+        "lower_tier_obligations": "Notify SIŽP; prepare and implement hlavný plán prevencie závažných priemyselných havárií (MAPP — Major Accident Prevention Policy); internal emergency plan only.",
+        "upper_tier_obligations": "Prepare detailed bezpečnostná správa (safety report) acceptable to SIŽP; vonkajší havarijný plán (external emergency plan) prepared by regional crisis management authority; public information duty; periodic SIŽP inspection.",
+        "legal_basis": "Zákon č. 261/2002 Z.z. as amended by Zákon č. 256/2015 Z.z.; Príloha 1 (Schedule 1 — dangerous substance thresholds).",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 8,
+        "sizp_assessment_months": 5,
+        "notes": "SIŽP is the primary SEVESO III competent authority in Slovakia. Upper-tier sites may not commence operations until SIŽP has accepted the bezpečnostná správa. The Construction Act 2022 transition means parallel-tracking construction permit and SIŽP notification processes requires careful coordination with current procedural rules. Pre-application engagement with SIŽP is strongly recommended. Novel LH2 technology assessments may require longer review periods."
+      },
+
+      "permitting": {
+        "planning_authority": "District Office Construction Departments (odbor výstavby) under new Act 200/2022; SIŽP as statutory consultee for SEVESO III sites",
+        "timeline_p50_months": 30,
+        "timeline_range_months": { "min": 18, "max": 54 },
+        "parallel_consent_tracks": [
+          "Construction permit under Act 200/2022 — 15–24 months (verify current procedure)",
+          "SEVESO III notification / bezpečnostná správa (SIŽP) — 3–13 months post-submission",
+          "EIA (if required under Act 24/2006) — 6–12 months",
+          "Environmental permit (SIŽP) for BOG emissions — 3–5 months",
+          "Fire protection permit (Hasičský a záchranný zbor) — concurrent with construction"
+        ],
+        "sizp_consultation_in_planning": true,
+        "appeal_risk": "medium",
+        "construction_act_transition_note": "The new Construction Act 2022 (Zákon č. 200/2022 Z.z.) was intended to streamline permitting but implementation has been problematic. Transitional provisions are still active. Verify current effective procedural rules with Slovak legal adviser before modelling timelines — do not assume the prior Stavebný zákon process applies.",
+        "notes": "P50 of 30 months assumes a lower-tier SEVESO III site. Upper-tier sites (≥50 t LH2) add significant time for safety report preparation and SIŽP assessment. Construction Act transition uncertainty adds risk to timeline modelling. Language of administration is Slovak — local legal and regulatory advisers are essential."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Grid connection for the liquefaction plant must be secured from the relevant DSO (ZSD in western Slovakia, SSD in central, VSD in eastern) or from SEPS for transmission-connected facilities.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "grid_operator": "SEPS (TSO — Slovenská elektrizačná prenosová sústava a.s.) for transmission; ZSD/SSD/VSD DSOs for distribution",
+        "electricity_price_risk": "HIGH — Slovak industrial electricity prices were among the lower in the CEE region but have been volatile post-2021 energy crisis. Verify current large-user prices at ÚRSO (urso.gov.sk).",
+        "green_credentials_note": "Slovakia's electricity mix is nuclear-dominant (~55%) with significant hydro. Grid electricity does NOT qualify as green hydrogen feedstock under EU Delegated Regulation 2023/1184 (additionality and renewable hourly matching requirements). Green LH2 production requires a dedicated renewable PPA.",
+        "renewable_ppa_strategy": "Pairing liquefaction with a dedicated solar PPA from southern Slovakia (Podunajská nížina — ÚRSO doplatky mechanism) or a virtual PPA is required to qualify output as green hydrogen under EU definitions.",
+        "notes": "Southern Slovakia grid (ZSD) is experiencing growing queue pressure from the solar development pipeline. Industrial connection for a large liquefaction plant should be scoped with ZSD at an early stage to identify reinforcement requirements and timeline."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Slovakia. Revenue is via tolling contracts (infrastructure fee) with no state commodity floor, unless integrated with an upstream investment aid-supported electrolyser.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for liquefaction, storage, and dispensing services; no commodity price floor from the state.",
+        "investment_aid": {
+          "applicable": "Potentially — large LH2 facility may qualify as a major investment under Act No. 57/2018 Coll. on Regional Investment Aid",
+          "description": "Qualifying investments (above minimum threshold — verify at sario.sk) may receive a combination of: (a) cash grant; (b) daňová úľava (tax credit) reducing CIT liability by 25–35% of eligible CapEx over 10 years; (c) contribution to employee training costs. Tax credit provides a timing benefit (see tax section). Less developed Slovak regions (majority of territory outside Bratislava region) qualify for higher aid intensity.",
+          "legal_basis": "Zákon č. 57/2018 Z.z. o regionálnej investičnej pomoci; EU GBER (Commission Regulation (EU) 651/2014) for block-exempt amounts",
+          "staleness_warning": "Investment aid thresholds and regional aid maps are updated periodically. Verify current parameters at sario.sk (Slovak Investment and Trade Development Agency) and mhsr.sk.",
+          "ec_state_aid_compliance": "Investment aid for individual projects above GBER thresholds requires individual EC notification — verify clearance status with Slovak adviser before project commitment."
+        },
+        "eu_hydrogen_bank": {
+          "applicable": "Slovakia is eligible as EU member state for EU Hydrogen Bank auction rounds. LH2 production may qualify directly; storage may qualify as enabling infrastructure in integrated project scope.",
+          "source": "innovation-fund.ec.europa.eu — verify current round parameters"
+        },
+        "opii_cohesion_funds": {
+          "applicable": "OPII 2021–2027 administered by SIEA may provide CapEx grants for qualifying H2 infrastructure. Verify current programme calls at siea.gov.sk.",
+          "staleness_warning": "OPII programme calls are time-limited and competitive. Do not rely on availability without verifying current open calls."
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage operating on a fully merchant basis, charging industrial off-takers (MOL/Slovnaft refinery, US Steel Košice, chemical sector) for storage and dispensing services.",
+          "credit_risk_note": "Merchant tolling revenues are contract-dependent with no state backstop. Industrial off-taker credit quality (MOL, US Steel) should be assessed."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: Slovak CIT is 21% (standard, for taxable income ≥ EUR 100,000). Investment aid tax credit (25–35% of qualifying CapEx claimed over 10 years) is a CapEx TIMING benefit affecting the NPV of the tax shield, not a permanent rate reduction. Model as annual CIT reduction during the credit period.",
+        "cit_rate_pct": 21.0,
+        "investment_aid_tax_credit": {
+          "description": "Investment aid tax credit under Act No. 57/2018 Coll. reduces CIT liability by 25–35% of qualifying CapEx, claimed over a maximum 10-year period from project approval. Credit cannot exceed CIT otherwise payable in any given year — carry-forward to subsequent years within the 10-year window.",
+          "legal_basis": "Zákon č. 57/2018 Z.z. §§14–18",
+          "_rule_3b_analysis": "NPV of timing benefit: For a EUR 30m LH2 project qualifying for 25% tax credit (EUR 7.5m): Annual CIT due (assuming EBIT ~EUR 3m) ≈ EUR 630k/year. Tax credit eliminates CIT for approximately 10+ years. NPV of CIT savings at 7% WACC over 10 years ≈ EUR 4.4m vs. no credit. Model as elimination of CIT during credit period rather than as a reduced headline rate.",
+          "note": "Investment aid availability for LH2 projects is not automatic — requires Ministry of Economy approval and EC State Aid clearance for larger projects. Engage Slovak legal adviser before modelling."
+        },
+        "standard_depreciation_fallback": {
+          "method": "declining_balance",
+          "rate_pct_machinery": "Determined by Zákon o dani z príjmov (ZDP) Annex — typically 6.67–20% p.a. for industrial machinery; verify applicable category for liquefaction equipment",
+          "legal_basis": "Zákon č. 595/2003 Z.z. §22 and Annex on depreciation rates"
+        },
+        "vat_rate_pct": 23.0,
+        "vat_note": "Slovak VAT increased from 20% to 23% from 1 January 2025. Input VAT recovery available for VAT-registered entities. Significant construction-phase cash flow consideration."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "EN 1251 (Cryogenic vessels — static vacuum-insulated vessels) as adopted in Slovak technical norms (STN EN 1251)",
+        "electrical_hazardous_area": "ATEX zone classification required per Slovak implementation of Directive 2014/34/EU; DSEAR equivalent applies under Slovak chemicals/hazardous materials legislation",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (capital-intensive but zero loss)", "Catalytic combustion (regulatory approval via SIŽP environmental permit required)", "Use as fuel for on-site generation"],
+          "regulatory_basis": "BOG must be addressed in the SIŽP bezpečnostná správa / MAPP as a major accident scenario; environmental permit from SIŽP governs atmospheric releases under Act č. 137/2010 Z.z. (Air Quality Act).",
+          "environmental_note": "Vented hydrogen is not a GHG of concern (GWP ≈ 0) but is a safety hazard; SIŽP environmental permit may impose vent frequency conditions."
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: indicative inputs for IRR, NPV, CapEx payback, and DSCR modelling. Project-specific engineering estimates required before financial commitment.",
+        "_rule_3c_note": "Slovakia is EUR-denominated — no FX conversion required.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_eur": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_eur": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000,
+            "notes": "Vacuum-insulated Type C cryogenic tank; cost per tonne decreases with scale"
+          },
+          "illustrative_total_project_capex_eur": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Highly site-dependent. Excludes grid connection reinforcement."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_eur_per_kwh_ref": 0.09,
+            "electricity_opex_eur_per_kg_lh2": 0.99,
+            "source": "IEA, The Future of Hydrogen, 2019; ÚRSO industrial price reference (verify at urso.gov.sk)",
+            "staleness_warning": "Slovak industrial electricity prices are time-sensitive. Verify current large-user prices at ÚRSO before use."
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "investment_aid_tax_credit_benefit_indicative_eur": 4400000,
+          "investment_aid_note": "Tax credit benefit is indicative — assumes EUR 30m qualifying CapEx at 25% aid intensity, 21% CIT, claimed over 10 years at 7% WACC. Subject to Ministry of Economy approval and EC State Aid clearance.",
+          "note": "Illustrative inputs only. Actual costs depend on technology vendor, site, electricity procurement strategy, and supply chain lead times."
+        }
+      },
+
+      "market_context": {
+        "sk_hydrogen_policy": "Vodíková stratégia SR 2021 targets 0.4 GW electrolysis capacity by 2030. Industrial demand from MOL/Slovnaft Bratislava refinery (one of central Europe's largest refineries) and US Steel Košice is the primary near-term H2 demand driver. Eastern Slovakia H2 valley concept is at early exploration stage.",
+        "key_sk_lh2_projects_indicative": [
+          {
+            "project": "MOL/Slovnaft Bratislava Refinery H2 transition",
+            "status": "Feasibility and investment planning stage — scope and LH2 component to be verified",
+            "note": "Slovnaft is the primary Slovak refinery; refinery H2 demand (currently from grey H2) is the largest near-term decarbonisation target. Verify current project status at mol.com and slovnaft.sk."
+          },
+          {
+            "project": "Eastern Slovakia H2 Valley",
+            "status": "Concept/early exploration — no confirmed investment commitment as of mid-2025",
+            "note": "Eastern Slovakia (Košice region) is exploring H2 cluster development leveraging US Steel presence. Verify at relevant Slovak industrial association publications."
+          }
+        ],
+        "primary_demand_drivers": [
+          "Refinery decarbonisation — MOL/Slovnaft Bratislava (grey H2 displacement)",
+          "Heavy industry — US Steel Košice (DRI/steelmaking H2 transition concept)",
+          "H2 mobility — heavy road transport (HGV, bus); automotive OEM supply chain (VW, Stellantis, Kia plants in Slovakia) logistics sector",
+          "Chemical sector — fertilizers, specialty chemicals"
+        ],
+        "supply_chain_note": "Slovak LH2 production supply chain is nascent. Domestic liquefaction capacity does not yet exist at commercial scale. H2 import via pipeline or cryogenic tanker from Austrian or Czech hub facilities is the near-term supply route for most end-users."
+      },
+
+      "notes": "Slovakia's LH2 storage investment case is primarily industrial (refinery/steel/chemical sector decarbonisation) rather than transport-led. The SEVESO III regime (Zákon č. 261/2002 Z.z. as amended) provides a defined but demanding safety-regulatory pathway. The absence of a dedicated LH2 revenue mechanism means investors must rely on tolling contracts, investment aid tax credits (Act No. 57/2018), or EU/OPII cohesion funding. Electricity cost is the primary OpEx risk — green H2 qualification requires a dedicated renewable PPA given Slovakia's nuclear-dominant grid mix. The Fico government's political unpredictability adds a layer of policy risk that should be monitored at energia.gov.sk. Construction Act 2022 transition uncertainty adds permitting timeline risk. All support scheme parameters must be verified with SIEA (siea.gov.sk) and legal advisers before project commitment."
     }
   }
 }
