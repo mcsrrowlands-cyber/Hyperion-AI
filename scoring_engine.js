@@ -26,6 +26,7 @@ export const TECHNOLOGIES = [
   "solar", "onshore_wind", "offshore_wind",
   "bess", "green_hydrogen", "floating_solar", "nuclear_smr", "lng_gas",
   "data_centre", "natural_gas_lng", "biowaste_energy", "coal_energy",
+  "lh2_storage",
 ];
 
 /**
@@ -93,6 +94,12 @@ export const TECHNOLOGY_WEIGHTS = {
     // Stranded-asset political risk and permitting hostility dominate; no state support in most EU markets.
     political: 0.35, operational: 0.15, mechanism_quality: 0.15,
     permitting: 0.25, tax: 0.10, ppa: 0.00, state_aid: 0.00, esg_alignment: 0.00,
+  },
+  lh2_storage: {
+    // COMAH safety regime and electricity cost for liquefaction are the primary gates.
+    // Permitting and mechanism quality dominate; ESG secondary to commercial viability.
+    political: 0.20, operational: 0.20, mechanism_quality: 0.25,
+    permitting: 0.25, tax: 0.05, ppa: 0.00, state_aid: 0.00, esg_alignment: 0.05,
   },
 };
 
@@ -263,12 +270,14 @@ function scorePermitting(jdata, technology) {
     natural_gas_lng: [12,  96],   // Environmental permitting for gas plant
     biowaste_energy: [12,  84],   // Waste/environmental permits — complex but bounded
     coal_energy:     [24,  180],  // New coal faces extreme environmental opposition and public inquiry risk
+    lh2_storage:     [12,   60],  // COMAH lower-tier (12 mo) to upper-tier Safety Report + HSE assessment (60 mo)
   };
 
   const DEFAULTS = {
     bess: 18, green_hydrogen: 48, floating_solar: 24,
     nuclear_smr: 180, lng_gas: 36,
     data_centre: 24, natural_gas_lng: 36, biowaste_energy: 30, coal_energy: 60,
+    lh2_storage: 24,
   };
 
   let months;
@@ -289,6 +298,7 @@ function scorePermitting(jdata, technology) {
     case "natural_gas_lng":
     case "biowaste_energy":
     case "coal_energy":
+    case "lh2_storage":
       months = ntd?.permitting_p50_months;
       if (months == null) months = DEFAULTS[technology];
       break;
@@ -365,6 +375,7 @@ function scoreEsg(jdata, technology = null) {
   if (rag.political_risk?.rag === "GREEN") score += 10;
 
   if (technology === "green_hydrogen")  score += 15;  // Strong additionality signal
+  if (technology === "lh2_storage")     score += 10;  // Clean energy carrier; enables H2 mobility and seasonal storage
   if (technology === "biowaste_energy") score += 10;  // Circular economy; waste diversion
   if (technology === "nuclear_smr")     score -= 20;  // ESG-divisive; EU taxonomy excluded
   if (technology === "lng_gas")         score -= 35;  // Fossil fuel; stranded-asset risk

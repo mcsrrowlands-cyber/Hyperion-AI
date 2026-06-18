@@ -521,6 +521,243 @@
       "coal_phase_out_commitment": "Last coal power station (Ratcliffe-on-Soar) closed September 2024. New coal build is effectively prohibited.",
       "source": null,
       "notes": "UK coal power sector ended in 2024. No support mechanism available. New coal build would face insuperable planning and policy barriers. EU Taxonomy does not apply (non-EU) but UK Green Taxonomy equivalently excludes coal."
+    },
+
+    "lh2_storage": {
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253°C and associated liquefaction plant. UK is among Europe's most active markets for hydrogen policy, with HAR auction rounds and the Net Zero Hydrogen Fund. The primary regulatory gate is the COMAH safety regime administered by HSE. Electricity cost for liquefaction is the dominant OpEx risk.",
+
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "tolling_arrangement",
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism. Standalone facilities operate on a tolling or merchant basis. Where LH2 storage is integral to a HAR-funded electrolyser, the HAR production contract provides indirect revenue support. Net Zero Hydrogen Fund (NZHF) may provide CapEx grants for enabling infrastructure. Source: DESNZ/iea_hydrogen.",
+      "revenue_floor_description": null,
+      "source": "desnz_hydrogen; hse_comah; iea_hydrogen",
+      "staleness_warning": "HAR round parameters, NZHF grant rates, and industrial electricity prices are time-sensitive. Verify current values with DESNZ before use.",
+
+      "regulatory_framework": {
+        "primary_safety_legislation": [
+          {
+            "instrument": "Control of Major Accident Hazards (COMAH) Regulations 2015 (SI 2015/483)",
+            "relevance": "Mandatory safety regime for LH2 storage at or above threshold quantities. Lower tier (≥5 t LH2): notify HSE, prepare MAPP and on-site emergency plan. Upper tier (≥50 t LH2): detailed Safety Report, external emergency plan, public information duty, periodic HSE inspection."
+          },
+          {
+            "instrument": "Dangerous Substances and Explosive Atmospheres Regulations 2002 (DSEAR) (SI 2002/2776)",
+            "relevance": "Classification and risk assessment of flammable and explosive atmospheres around LH2 storage and dispensing areas; ATEX zone determination."
+          },
+          {
+            "instrument": "Health and Safety at Work etc. Act 1974",
+            "relevance": "General duty of care; primary legislative basis for HSE enforcement at LH2 facilities."
+          },
+          {
+            "instrument": "Pressure Equipment (Safety) Regulations 2016 (SI 2016/1105)",
+            "relevance": "Design, manufacture, and operation of cryogenic pressure vessels, pipework, and storage tanks."
+          },
+          {
+            "instrument": "Environmental Permitting (England and Wales) Regulations 2016 (SI 2016/1154)",
+            "relevance": "Environmental permit required from Environment Agency for emissions and cryogenic waste streams including boil-off gas (BOG) management."
+          }
+        ],
+        "planning_legislation": [
+          {
+            "instrument": "Town and Country Planning Act 1990",
+            "relevance": "Planning permission via LPA; most LH2 storage facilities fall below the 50MW NSIP threshold and are consented by the local authority."
+          },
+          {
+            "instrument": "Planning Act 2008",
+            "relevance": "NSIP threshold applies only if associated power generation exceeds 50MW — rare for standalone LH2 storage."
+          }
+        ],
+        "hydrogen_strategy_instruments": [
+          {
+            "instrument": "UK Hydrogen Strategy, August 2021 (DESNZ)",
+            "relevance": "National policy commitment targeting 10GW hydrogen production capacity by 2030; positions LH2 storage as enabling infrastructure for transport and export."
+          },
+          {
+            "instrument": "UK Hydrogen Net Zero Investment Roadmap, November 2022 (DESNZ)",
+            "relevance": "Identifies LH2 as a key technology for heavy transport, aviation, and long-duration seasonal storage; maps investment pipeline."
+          },
+          {
+            "instrument": "Hydrogen Production Business Model (HPBM) — Energy Act 2023",
+            "relevance": "Legislative basis for HAR contracts; provides indirect revenue support for integrated LH2 production and storage facilities."
+          },
+          {
+            "instrument": "BS EN ISO 14687:2019",
+            "relevance": "Hydrogen fuel quality specification; relevant to purity requirements in LH2 offtake contracts for transport and industrial end-uses."
+          }
+        ]
+      },
+
+      "comah_regime": {
+        "competent_authority": "Health and Safety Executive (HSE) and Environment Agency (EA) — joint competent authority under COMAH 2015",
+        "lower_tier_threshold_tonnes_lh2": 5,
+        "upper_tier_threshold_tonnes_lh2": 50,
+        "lower_tier_obligations": "Notify HSE; prepare and implement Major Accident Prevention Policy (MAPP); internal emergency plan only",
+        "upper_tier_obligations": "Prepare detailed Safety Report acceptable to HSE; external emergency plan prepared by local authority; public information duty under Regulation 22; periodic HSE inspection",
+        "legal_basis": "COMAH Regulations 2015 (SI 2015/483), Schedule 1 — liquid hydrogen listed as a dangerous substance",
+        "pre_notification_lead_time_months": 3,
+        "safety_report_preparation_months": 6,
+        "hse_assessment_months": 4,
+        "notes": "COMAH is the primary permitting risk gate for large-scale LH2 storage. Upper-tier sites must not commence operations until HSE has assessed the Safety Report. Pre-application engagement with HSE is strongly recommended; the HSE Chemicals Regulation Division (CRD) has a pre-submission consultation service. Timeline estimates are indicative; novel technology assessments may take longer."
+      },
+
+      "permitting": {
+        "planning_authority": "Local Planning Authority (LPA) for sub-NSIP facilities; HSE is a statutory consultee",
+        "timeline_p50_months": 24,
+        "timeline_range_months": { "min": 12, "max": 48 },
+        "parallel_consent_tracks": [
+          "Planning consent (LPA) — 12–18 months",
+          "COMAH notification / Safety Report (HSE) — 3–10 months post-submission",
+          "Environmental permit (Environment Agency) — 3–4 months",
+          "Building regulations approval for cryogenic structures — concurrent with planning"
+        ],
+        "hse_consultation_in_planning": true,
+        "dsear_assessment_required": true,
+        "appeal_risk": "low-medium",
+        "notes": "P50 assumes a greenfield lower-tier COMAH facility. Upper-tier sites add 6–12 months for Safety Report preparation and HSE assessment. Parallel-tracking all consent streams is essential to minimise elapsed time. LH2 is a novel land use in most LPA jurisdictions — pre-application consultation is advisable to avoid delays from unfamiliar case officers."
+      },
+
+      "electricity_connection": {
+        "relevance": "Liquefaction is highly electricity-intensive (~10–12 kWh per kg H2 liquefied). Grid connection for the liquefaction plant is the primary infrastructure interface with the electricity system.",
+        "liquefaction_specific_energy_kwh_per_kg_h2": {
+          "range_low": 10,
+          "range_high": 12,
+          "source": "IEA, The Future of Hydrogen, 2019, p.52"
+        },
+        "illustrative_electrical_load_kw_per_tonne_day": { "range_low": 420, "range_high": 500 },
+        "grid_operator": "National Energy System Operator (NESO) / local Distribution Network Operator (DNO)",
+        "connection_type": "High-voltage industrial connection; voltage level determined by liquefaction plant MW rating and DNO network conditions",
+        "grid_queue_risk": "HIGH — same connection queue constraints as renewable generation apply to large industrial consumers",
+        "electricity_price_risk": "HIGH — liquefaction OpEx is dominated by electricity cost; industrial electricity price volatility directly affects LH2 unit cost",
+        "renewable_ppa_strategy": "Pairing liquefaction with a dedicated renewable PPA or co-located generation minimises electricity cost and maximises green credentials for ESG-sensitive offtakers",
+        "notes": "Industrial electricity price in the UK was approximately £80–120/MWh for large consumers in 2024–25 (BEIS Industrial Electricity Prices Q3 2024). At £0.10/kWh and 11 kWh/kg, electricity cost alone is approximately £1.10/kg LH2. A co-located or dedicated renewable PPA can reduce this to £0.05–0.07/kWh in favourable market conditions, reducing to £0.55–0.77/kg. Verify current electricity prices before use."
+      },
+
+      "support_mechanisms": {
+        "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT. Revenue is primarily via tolling contracts (infrastructure fee) with no state commodity floor, unless integrated with an upstream HAR production contract.",
+        "primary_mechanism_standalone": "Tolling arrangement — infrastructure fee for storage, regasification, and dispensing services; no commodity price floor from the state",
+        "primary_mechanism_integrated": "HAR hydrogen production contract (Energy Act 2023) if LH2 storage is integral to a HAR-funded electrolyser project — provides indirect revenue support via the hydrogen production strike price",
+        "har_applicability": {
+          "applicable": "Indirectly — HAR contracts cover hydrogen production; LH2 storage may be included in project scope",
+          "har1_status": "HAR1 concluded 2023; 11 projects awarded; predominantly electrolytic (green) hydrogen production; verify whether LH2 storage was a funded component in any awarded project via DESNZ",
+          "har2_status": "HAR2 in progress as of June 2026 — verify current round parameters with DESNZ before use",
+          "strike_price_note": "HAR strike prices are for hydrogen production (£/kg H2 produced), not for storage services. Storage tolling revenue is separate and market-determined.",
+          "legal_basis": "Hydrogen Production Business Model (HPBM); Energy Act 2023, Part 2",
+          "source": "DESNZ, HAR1 Results, 2023 — verify HAR2 at DESNZ website"
+        },
+        "nzhf_capex_grant": {
+          "applicable": true,
+          "description": "Net Zero Hydrogen Fund provides capital grants for hydrogen production and enabling infrastructure. LH2 liquefaction plant and storage tanks may qualify as enabling infrastructure.",
+          "grant_rate_indicative": "Up to 30–40% of eligible CapEx (indicative; subject to competition and assessment — verify current round prospectus with DESNZ)",
+          "staleness_warning": "NZHF terms are revised periodically. Do not rely on indicative rates without verifying the current prospectus.",
+          "source": "DESNZ, Net Zero Hydrogen Fund — verify current edition"
+        },
+        "merchant_route": {
+          "available": true,
+          "description": "Standalone LH2 storage may operate on a fully merchant basis, charging transport hubs, industrial off-takers, and aviation fuel suppliers for storage and dispensing.",
+          "credit_risk_note": "Merchant tolling revenues are entirely contract-dependent; no state backstop. Minimum investment-grade offtaker credit recommended."
+        }
+      },
+
+      "tax": {
+        "_rule_3b_note": "Rule 3B: UK Full Expensing applies to LH2 storage plant and equipment as qualifying plant and machinery, providing a NPV timing benefit — not a permanent tax rate reduction.",
+        "full_expensing_applicable": true,
+        "qualifying_assets": "Cryogenic storage tanks, liquefaction equipment, boil-off gas management systems, heat exchangers, dispensing infrastructure — all qualify as plant and machinery under Finance Act 2023",
+        "full_expensing_rate_pct": 100,
+        "legal_basis": "Finance Act 2023 (s.45F CAA 2001); Capital Allowances Act 2001 as amended",
+        "npv_timing_benefit": "At 25% CIT and 10% WACC: NPV of tax shield under Full Expensing ≈ 23.8% of qualifying CapEx (year-1 deduction) vs 17.5% under 25% WDA declining balance. Timing benefit ≈ 6.3ppts per £1 of qualifying CapEx.",
+        "rdec_note": "Research and Development Expenditure Credit (RDEC) at 20% may be available if the operator is undertaking novel LH2 technology development. Legal basis: Corporation Tax Act 2009, Part 3."
+      },
+
+      "safety_standards": {
+        "cryogenic_vessel_standard": "BS EN 1251 (Cryogenic vessels — static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "ATEX/DSEAR Zone 1 or Zone 2 around hydrogen release sources; zone classification must be documented in DSEAR assessment",
+        "boil_off_gas_management": {
+          "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
+          "management_options": ["Reliquefaction (capital-intensive but zero loss)", "Catalytic combustion / flare (regulatory approval required)", "Use as fuel for on-site generation"],
+          "regulatory_basis": "BOG must be addressed as a major accident scenario in the COMAH MAPP or Safety Report; EA environmental permit condition governs atmospheric releases",
+          "environmental_note": "Vented hydrogen is not a GHG of concern (GWP ≈ 0) but is a safety hazard and may attract EA conditions limiting vent frequency"
+        }
+      },
+
+      "financial_model_inputs": {
+        "_rule_3d_note": "Rule 3D: these inputs are for IRR, NPV, CapEx payback, and DSCR modelling. Figures are indicative benchmarks from published sources only; project-specific engineering estimates are required before financial commitment.",
+        "_rule_3c_note": "All figures shown first in native currency (GBP). EUR equivalent at GBP 1 = EUR 1.175 as of 2026-06-15.",
+        "illustrative_medium_scale_hub": {
+          "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
+          "liquefaction_capex_gbp": {
+            "per_tonne_per_day_range_low": 2000000,
+            "per_tonne_per_day_range_high": 5000000,
+            "per_tonne_per_day_midpoint": 3500000,
+            "eur_midpoint_approx": 4112500,
+            "fx_rate": 1.175,
+            "fx_rate_date": "2026-06-15",
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
+          },
+          "storage_tank_capex_gbp": {
+            "per_tonne_range_low": 500000,
+            "per_tonne_range_high": 2000000,
+            "per_tonne_midpoint": 1000000,
+            "eur_midpoint_approx": 1175000,
+            "fx_rate": 1.175,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Vacuum-insulated Type C cryogenic tank; cost per tonne decreases with scale"
+          },
+          "illustrative_total_project_capex_gbp": {
+            "liquefaction_2tpd": 7000000,
+            "storage_50t": 50000000,
+            "bop_and_civil_est_pct": 20,
+            "total_indicative": 68400000,
+            "eur_equivalent_approx": 80370000,
+            "fx_rate": 1.175,
+            "fx_rate_date": "2026-06-15",
+            "notes": "Balance of plant and civil works estimated at 20% of equipment cost. Highly site-dependent. Excludes grid connection reinforcement costs."
+          },
+          "opex_electricity": {
+            "specific_energy_kwh_per_kg_h2": 11,
+            "industrial_electricity_price_gbp_per_kwh_ref": 0.10,
+            "electricity_opex_gbp_per_kg_lh2": 1.10,
+            "eur_per_kg_lh2": 1.29,
+            "fx_rate": 1.175,
+            "fx_rate_date": "2026-06-15",
+            "source": "IEA, The Future of Hydrogen, 2019; BEIS Industrial Electricity Prices Q3 2024 (verify current)"
+          },
+          "boil_off_loss_pct_per_day": 0.5,
+          "note": "Illustrative inputs only. Actual costs depend on technology vendor, site, electricity procurement strategy, scale economies, and supply chain lead times. Engineering study required before financial modelling."
+        }
+      },
+
+      "market_context": {
+        "uk_policy_position": "UK Hydrogen Strategy (2021) targets 10GW by 2030 (5GW electrolytic + 5GW CCUS-enabled). LH2 is identified as the preferred storage and transport vector for heavy mobility and aviation end-uses.",
+        "key_uk_lh2_projects_indicative": [
+          {
+            "project": "Aberdeen Hydrogen Hub",
+            "status": "Operational — LH2 refuelling for fuel cell buses at approximately 0.2 tonne/day scale",
+            "operator": "BOC (Linde Group) / Aberdeen City Council",
+            "note": "First commercial-scale LH2 dispensing operation in the UK"
+          },
+          {
+            "project": "H2 Teesside / HyScale",
+            "status": "Development stage; large-scale green hydrogen production with storage component",
+            "operator": "bp",
+            "note": "Primarily compressed H2 and pipeline delivery — verify LH2 storage component status"
+          },
+          {
+            "project": "Zero Carbon Humber / HyNet North West",
+            "status": "Phase 1 development; primarily blue hydrogen via CCUS — LH2 not primary delivery mode",
+            "note": "Pipeline-based distribution model; LH2 may be relevant for off-pipeline export"
+          }
+        ],
+        "primary_demand_drivers": [
+          "Heavy road transport (HGV, refuse, bus) — fuel cell vehicles require LH2 for range",
+          "Aviation — UK Jet Zero Strategy (2022) targets LH2 propulsion; Heathrow/Gatwick infrastructure studies underway",
+          "Maritime — LH2 bunkering for short-sea shipping; Orkney and Aberdeen harbour projects",
+          "Industrial export — UK as potential LH2 export hub from North Sea offshore wind"
+        ],
+        "supply_chain_note": "UK LH2 production supply chain is nascent. BOC (Linde) is the dominant commercial LH2 producer in the UK. Import via ISO cryogenic tanker from EU producers (Air Liquide, Linde) remains the primary supply route for most end-users in 2026. Domestic liquefaction capacity is expected to scale with HAR production.",
+        "import_route_note": "ISO cryogenic tank containers (40-foot, ~4 t LH2 capacity) can be transported by road or rail to end-user facilities. BOG loss during transport is typically 0.5–1% per 24 hours of transit."
+      },
+
+      "notes": "UK is among Europe's most advanced markets for hydrogen infrastructure policy. The COMAH regime provides a structured (if demanding) safety-regulatory pathway with clear thresholds. The absence of a dedicated LH2 storage revenue mechanism means investors must rely on tolling contracts, integrated HAR revenue, or NZHF capital grants — a merchant/infrastructure model rather than a state-backed CfD. Electricity cost is the primary commercial risk: a dedicated renewable PPA or co-located generation is strongly recommended to control unit cost of LH2 and support green credentials. All HAR/NZHF parameters must be verified with DESNZ before use as scheme terms evolve rapidly."
     }
   },
 

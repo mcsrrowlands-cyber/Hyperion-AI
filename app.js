@@ -51,6 +51,7 @@ const TECH_LABELS = {
   natural_gas_lng: '⚡ Natural Gas & LNG',
   biowaste_energy: '♻️ Biowaste to Energy',
   coal_energy:     '⛏️ Coal Energy',
+  lh2_storage:     '🧊 Liquid Hydrogen Storage (LH2)',
 };
 
 const REGION_GROUPS = {
@@ -123,6 +124,11 @@ const SUGGESTIONS = {
     'Which European jurisdictions still operate capacity markets where coal-fired generation can participate?',
     'Compare coal phase-out timelines and stranded-asset risk across my target markets',
     'What are the EU Taxonomy and CBAM implications for coal power investment in each jurisdiction?',
+  ],
+  lh2_storage: [
+    'Which markets have a clear COMAH-equivalent safety regime and active hydrogen infrastructure policy for LH2?',
+    'Compare liquefaction CapEx benchmarks and electricity cost risk for LH2 storage across my target jurisdictions',
+    'Which countries have active hydrogen allocation rounds or capital grant schemes covering LH2 enabling infrastructure?',
   ],
 };
 const COMMON_SUGGESTIONS = [
