@@ -132,6 +132,70 @@ const COMMON_SUGGESTIONS = [
 ];
 
 // ---------------------------------------------------------------------------
+// Selective context injection — jurisdiction data enrichment
+// ---------------------------------------------------------------------------
+
+const MAX_INJECT = 5;
+
+// Common aliases not covered by the official jurisdiction names
+const JURISDICTION_ALIASES = {
+  'GB': ['uk', 'u.k.', 'britain', 'british', 'england', 'english', 'scotland', 'welsh'],
+  'DE': ['german', 'deutsch'],
+  'FR': ['french'],
+  'ES': ['spanish'],
+  'IT': ['italian'],
+  'NL': ['dutch', 'holland'],
+  'GR': ['greek', 'hellenic'],
+  'PL': ['polish'],
+  'PT': ['portuguese'],
+  'SE': ['swedish'],
+  'NO': ['norwegian'],
+  'DK': ['danish'],
+  'FI': ['finnish'],
+  'AT': ['austrian'],
+  'BE': ['belgian'],
+  'CH': ['swiss'],
+  'CZ': ['czech'],
+  'HU': ['hungarian'],
+  'RO': ['romanian'],
+  'BG': ['bulgarian'],
+};
+
+// Returns up to MAX_INJECT ISO codes mentioned in a text string.
+function detectMentionedJurisdictions(text) {
+  const lower = text.toLowerCase();
+  const matched = new Set();
+  for (const j of ALL_JURISDICTIONS) {
+    if (lower.includes(j.name.toLowerCase())) matched.add(j.iso);
+  }
+  for (const [iso, aliases] of Object.entries(JURISDICTION_ALIASES)) {
+    if (aliases.some(a => lower.includes(a))) matched.add(iso);
+  }
+  return [...matched].slice(0, MAX_INJECT);
+}
+
+// Serialises the raw JSON for the given ISO codes into a system prompt section.
+// Strips template/meta-only fields that waste tokens without adding analytical value.
+function buildJurisdictionDataSection(isoCodes) {
+  if (!agent._jurisdictions || isoCodes.length === 0) return '';
+  const sections = isoCodes
+    .map(iso => agent._jurisdictions.find(
+      j => j.jurisdiction.iso_code.toUpperCase() === iso.toUpperCase()
+    ))
+    .filter(Boolean)
+    .map(jdata => {
+      const {
+        _schema, _template_version, _scoring_convention,
+        _field_guide_for_other_jurisdictions,
+        ...clean
+      } = jdata;
+      return `=== ${jdata.jurisdiction.name.toUpperCase()} (${jdata.jurisdiction.iso_code}) ===\n${JSON.stringify(clean, null, 2)}`;
+    });
+  if (sections.length === 0) return '';
+  return `\n\n---\nDETAILED JURISDICTION DATA — cite specific figures, legal instruments, and dates from this data:\n\n${sections.join('\n\n')}`;
+}
+
+// ---------------------------------------------------------------------------
 // State
 // ---------------------------------------------------------------------------
 
@@ -385,6 +449,7 @@ function postBotHtml(html) {
 async function initScopeChat() {
   // Reset
   chatHistory.length = 0;
+  chatInScopeIsos    = new Set();
   document.getElementById('chat-messages').innerHTML    = '';
   document.getElementById('chat-suggestions').innerHTML = '';
   state.scope = 'all';
@@ -426,8 +491,10 @@ async function initScopeChat() {
     $resultsPanel.classList.remove('hidden');
     renderRanked(result);
 
-    // Update system prompt with full results context
-    chatSystemPrompt = buildSystemPrompt(result);
+    // Update system prompt with full results context — inject top-5 jurisdiction data
+    const top5Isos = (result.rankedSummary ?? []).slice(0, MAX_INJECT).map(r => r.isoCode);
+    chatInScopeIsos  = new Set(top5Isos);
+    chatSystemPrompt = buildSystemPrompt(result, top5Isos);
 
     loadingDiv.remove();
 
@@ -661,8 +728,12 @@ async function triggerAnalysis() {
 
     typing.remove();
 
-    // Switch to full results-aware system prompt
-    chatSystemPrompt = buildSystemPrompt(lastResult);
+    // Switch to full results-aware system prompt and inject in-scope jurisdiction data
+    const scopeIsos = state.scope !== 'all'
+      ? [...state.selected]
+      : (lastResult.rankedSummary ?? []).slice(0, MAX_INJECT).map(r => r.isoCode);
+    chatInScopeIsos  = new Set(scopeIsos);
+    chatSystemPrompt = buildSystemPrompt(lastResult, scopeIsos);
     chatHistory.length = 0;
 
     // Summary bot message
@@ -695,12 +766,13 @@ async function triggerAnalysis() {
 
 const chatHistory = [];
 let chatSystemPrompt  = '';
+let chatInScopeIsos   = new Set(); // ISOs whose raw data is already in chatSystemPrompt
 
 // ---------------------------------------------------------------------------
 // Chat — system prompt builder
 // ---------------------------------------------------------------------------
 
-function buildSystemPrompt(queryResult) {
+function buildSystemPrompt(queryResult, inScopeIsoCodes = []) {
   const profile  = PROFILES[state.profile]      || state.profile  || 'Not set';
   const tech     = TECH_LABELS[state.technology] || state.technology || 'Not set';
   const budget   = state.budget?.label           || 'Not specified';
@@ -736,7 +808,7 @@ MANDATORY ANALYTICAL RULES:
 6. Flag retroactive policy risk, EU State Aid clawback risk, and non-EUR currency risk explicitly.
 7. Close every substantive response with: "Source: Hyperion AI scoring engine — verify all parameters against primary sources before committing capital."
 
-Respond as a precise, data-driven energy CapEx analyst. Be specific, cite scores, flag risks clearly.`;
+Respond as a precise, data-driven energy CapEx analyst. Be specific, cite scores, flag risks clearly.${buildJurisdictionDataSection(inScopeIsoCodes.slice(0, MAX_INJECT))}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -828,7 +900,8 @@ function renderTyping() {
 // Chat — Claude API call
 // ---------------------------------------------------------------------------
 
-async function callClaudeApi(messages) {
+async function callClaudeApi(messages, systemOverride = null) {
+  const effectiveSystem = systemOverride ?? chatSystemPrompt;
   console.log('[Hyperion] fetch POST /api/chat', { messageCount: messages.length });
   let resp;
   try {
@@ -838,7 +911,7 @@ async function callClaudeApi(messages) {
         'Content-Type':    'application/json',
         'x-access-token':  window.HYPERION_ACCESS_TOKEN ?? '',
       },
-      body: JSON.stringify({ system: chatSystemPrompt, messages }),
+      body: JSON.stringify({ system: effectiveSystem, messages }),
     });
   } catch {
     throw new Error('Cannot reach the Hyperion server. Run server.ps1 first, then open http://localhost:8000');
@@ -898,8 +971,17 @@ async function sendChatMessage(text) {
   chatHistory.push({ role: 'user', content: text });
   document.getElementById('chat-suggestions').innerHTML = '';
   const typing = renderTyping();
+
+  // Detect any jurisdictions mentioned in this message that aren't already
+  // covered by the in-scope data embedded in chatSystemPrompt, and inject
+  // their full JSON for this call only.
+  const extraIsos = detectMentionedJurisdictions(text).filter(iso => !chatInScopeIsos.has(iso));
+  const callSystem = extraIsos.length > 0
+    ? chatSystemPrompt + buildJurisdictionDataSection(extraIsos)
+    : null;
+
   try {
-    const reply = await callClaudeApi(chatHistory);
+    const reply = await callClaudeApi(chatHistory, callSystem);
     typing.remove();
     renderMessage('assistant', reply);
     chatHistory.push({ role: 'assistant', content: reply });
