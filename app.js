@@ -141,7 +141,7 @@ const COMMON_SUGGESTIONS = [
 // Selective context injection — jurisdiction data enrichment
 // ---------------------------------------------------------------------------
 
-const MAX_INJECT = 5;
+const MAX_INJECT = 3;
 
 // Common aliases not covered by the official jurisdiction names
 const JURISDICTION_ALIASES = {
@@ -910,7 +910,6 @@ function renderTyping() {
 
 async function callClaudeApi(messages, systemOverride = null) {
   const effectiveSystem = systemOverride ?? chatSystemPrompt;
-  console.log('[Hyperion] fetch POST /api/chat', { messageCount: messages.length });
   let resp;
   try {
     resp = await fetch('/api/chat', {
@@ -931,6 +930,37 @@ async function callClaudeApi(messages, systemOverride = null) {
     const err = await resp.json().catch(() => ({}));
     throw new Error(err?.detail ?? `Server error ${resp.status}`);
   }
+
+  // Handle streaming SSE response — accumulate tokens and return full text
+  const contentType = resp.headers.get('Content-Type') ?? '';
+  if (contentType.includes('text/event-stream')) {
+    const reader  = resp.body.getReader();
+    const decoder = new TextDecoder();
+    let fullText  = '';
+    let buf       = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      const lines = buf.split('\n');
+      buf = lines.pop() ?? '';
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        try {
+          const evt = JSON.parse(line.slice(6).trim());
+          if (evt.error) throw new Error(evt.error);
+          if (evt.delta) fullText += evt.delta;
+          if (evt.done)  return evt.content ?? fullText;
+        } catch (e) {
+          if (e.message && !e.message.startsWith('JSON')) throw e;
+        }
+      }
+    }
+    return fullText;
+  }
+
+  // Fallback: JSON response (local dev server)
   const data = await resp.json();
   return data.content ?? '';
 }
@@ -1034,6 +1064,177 @@ document.getElementById('ctx-edit-btn').addEventListener('click', () => {
 });
 
 // ---------------------------------------------------------------------------
+// Radar chart — Chart.js multi-jurisdiction overlay (Rule 4D)
+// ---------------------------------------------------------------------------
+
+function renderRadarChart(canvasId, items) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas || typeof Chart === 'undefined' || !items?.length) return;
+  const existing = Chart.getChart(canvas);
+  if (existing) existing.destroy();
+
+  const labels   = Object.values(COMPONENT_LABELS);
+  const PALETTE  = ['#5C50CC', '#16a34a', '#d97706', '#b91c1c', '#0891b2'];
+  const datasets = items.slice(0, 5).map((item, i) => {
+    const c = PALETTE[i] ?? '#888';
+    return {
+      label:                item.name,
+      data:                 Object.keys(COMPONENT_LABELS).map(k => item.components?.[k] ?? 0),
+      borderColor:          c,
+      backgroundColor:      c + '18',
+      borderWidth:          2.5,
+      pointBackgroundColor: c,
+      pointRadius:          4,
+      pointHoverRadius:     6,
+    };
+  });
+
+  new Chart(canvas, {
+    type: 'radar',
+    data: { labels, datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      scales: {
+        r: {
+          min: 0, max: 100,
+          ticks: {
+            stepSize: 25, font: { size: 10 }, color: '#94a3b8',
+            backdropColor: 'transparent',
+          },
+          grid:        { color: 'rgba(0,0,0,0.07)' },
+          angleLines:  { color: 'rgba(0,0,0,0.09)' },
+          pointLabels: { font: { size: 11, weight: '600' }, color: '#475569' },
+        },
+      },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { font: { size: 12 }, padding: 16, usePointStyle: true, pointStyleWidth: 14 },
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}/100`,
+          },
+        },
+      },
+    },
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Report download — Rule 5B table + Rule 4D breakdown + Rule 6 disclaimer
+// ---------------------------------------------------------------------------
+
+function downloadReport(queryResult) {
+  if (!queryResult) return;
+  const { meta, rankedSummary } = queryResult;
+  const profile  = escHtml(PROFILES[meta.profile]      || meta.profile      || 'N/A');
+  const tech     = escHtml(TECH_LABELS[meta.technology] || meta.technology   || 'N/A');
+  const budget   = escHtml(state.budget?.label          || 'Not specified');
+  const dateStr  = new Date().toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+  const compKeys = Object.keys(COMPONENT_LABELS);
+
+  const ragClass = r => r === 'GREEN' ? 'rg' : r === 'AMBER' ? 'ra' : 'rr';
+  const ragTxt   = r => r === 'GREEN' ? '✅ PROCEED' : r === 'AMBER' ? '⚠️ CONDITIONS' : '🛑 DO NOT PROCEED';
+
+  const rankRows = (rankedSummary ?? []).map(r => `
+    <tr>
+      <td style="font-weight:700">#${r.rank}</td>
+      <td>${escHtml(r.name)}</td>
+      <td><span class="${ragClass(r.rag)}">${ragTxt(r.rag)}</span></td>
+      <td style="font-weight:800;font-size:14px">${r.composite.toFixed(1)}/100</td>
+      <td style="color:#64748b;font-size:11px">${escHtml(r.alerts?.[0] ?? '—')}</td>
+    </tr>`).join('');
+
+  const topItems  = (rankedSummary ?? []).slice(0, 15);
+  const compHeads = topItems.map(r => `<th>${escHtml(r.name)}</th>`).join('');
+  const compRows  = compKeys.map(k => {
+    const cells = topItems.map(r => {
+      const s   = r.components?.[k] ?? 0;
+      const col = s >= 72 ? '#16a34a' : s >= 52 ? '#b45309' : '#b91c1c';
+      return `<td style="font-weight:700;color:${col}">${s}</td>`;
+    }).join('');
+    return `<tr><td style="font-weight:600">${escHtml(COMPONENT_LABELS[k])}</td>${cells}</tr>`;
+  }).join('');
+
+  const allAlerts  = (rankedSummary ?? []).filter(r => r.alerts?.length);
+  const alertsHtml = allAlerts.length === 0
+    ? '<p>No alerts generated for this analysis.</p>'
+    : allAlerts.map(r => `
+        <p style="font-weight:700;margin:12px 0 4px">${escHtml(r.name)}</p>
+        ${r.alerts.map(a => `<div class="alert">${escHtml(a)}</div>`).join('')}
+      `).join('');
+
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hyperion AI Report — ${tech} — ${escHtml(dateStr)}</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:Arial,sans-serif;font-size:13px;color:#1e293b;max-width:1200px;margin:32px auto;padding:0 24px}
+h1{font-size:22px;color:#5C50CC;border-bottom:3px solid #5C50CC;padding-bottom:10px;margin-bottom:6px}
+.sub{color:#64748b;font-size:12px;margin-bottom:20px}
+h2{font-size:15px;color:#5C50CC;margin-top:32px;border-bottom:1px solid #e2e8f0;padding-bottom:6px}
+.meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.mp{background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:5px 12px;font-size:12px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
+th{background:#5C50CC;color:#fff;padding:8px 10px;text-align:left;font-size:11px}
+td{padding:7px 10px;border-bottom:1px solid #e2e8f0;vertical-align:middle}
+tr:nth-child(even) td{background:#f8fafc}
+.rg{color:#16a34a;font-weight:700}.ra{color:#b45309;font-weight:700}.rr{color:#b91c1c;font-weight:700}
+.alert{background:#fffbeb;border-left:3px solid #b45309;padding:5px 10px;margin:4px 0;font-size:11px;border-radius:0 4px 4px 0}
+.disc{font-size:11px;color:#64748b;border-top:1px solid #e2e8f0;margin-top:48px;padding-top:12px;font-style:italic;line-height:1.6}
+@media print{body{margin:0;padding:16px}}
+</style>
+</head>
+<body>
+<h1>Hyperion AI — Jurisdiction Analysis Report</h1>
+<div class="sub">Generated ${escHtml(dateStr)} &nbsp;·&nbsp; Indicative screening only — not legal or financial advice</div>
+<div class="meta">
+  <div class="mp"><strong>Investment Profile:</strong> ${profile}</div>
+  <div class="mp"><strong>Technology:</strong> ${tech}</div>
+  <div class="mp"><strong>Budget Envelope:</strong> ${budget}</div>
+  <div class="mp"><strong>Jurisdictions Scored:</strong> ${meta.jurisdictionCount ?? rankedSummary?.length ?? '—'}</div>
+</div>
+
+<h2>1. Ranked Summary</h2>
+<table>
+  <thead><tr><th>Rank</th><th>Jurisdiction</th><th>Recommendation</th><th>Score /100</th><th>Primary Alert</th></tr></thead>
+  <tbody>${rankRows}</tbody>
+</table>
+
+<h2>2. Component Score Breakdown — All 8 Dimensions (Rule 4D)</h2>
+<p style="font-size:11px;color:#64748b">All scores 0–100 where 100 = best outcome. Political Risk and Operational Drag are never blended (Rule 4A). Revenue Floor reflects support mechanism quality (Rule 3A). Tax = NPV timing benefit (Rule 3B).</p>
+<table>
+  <thead><tr><th>Dimension</th>${compHeads}</tr></thead>
+  <tbody>${compRows}</tbody>
+</table>
+
+<h2>3. Alerts</h2>
+${alertsHtml}
+
+<div class="disc">
+<strong>Disclaimer (Rule 6):</strong> This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).
+<br><br>
+<strong>Scoring methodology:</strong> Scores produced by the Hyperion AI scoring engine applying profile-weighted blends of 8 dimensions derived from hand-curated jurisdiction data sourced from primary legislative instruments (EU Directives, national energy legislation, Statutory Instruments, published government guidance). Verify all parameters against current primary sources before committing capital.
+</div>
+</body>
+</html>`;
+
+  const blob = new Blob([html], { type: 'text/html' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href     = url;
+  a.download = `Hyperion-AI-${(meta.technology || 'report').replace(/[^\w-]/g, '-')}-${dateStr.replace(/ /g, '-')}.html`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// ---------------------------------------------------------------------------
 // Render: Ranked (all 30 or filtered)
 // ---------------------------------------------------------------------------
 
@@ -1057,12 +1258,19 @@ function renderRanked(queryResult) {
       <div>
         <div class="results-title">Jurisdiction Ranking</div>
       </div>
-      <div class="results-meta-pills">
-        ${metaPill('Profile', PROFILES[meta.profile])}
-        ${metaPill('Technology', TECH_LABELS[meta.technology])}
-        ${metaPill('Jurisdictions', meta.jurisdictionCount)}
-        ${metaPill('Date', meta.timestamp)}
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="results-meta-pills">
+          ${metaPill('Profile', PROFILES[meta.profile])}
+          ${metaPill('Technology', TECH_LABELS[meta.technology])}
+          ${metaPill('Jurisdictions', meta.jurisdictionCount)}
+          ${metaPill('Date', meta.timestamp)}
+        </div>
+        <button class="download-btn" id="download-report-btn">📄 Download Report</button>
       </div>
+    </div>
+    <div class="radar-section">
+      <div class="section-header">Score Comparison — Top 5 Jurisdictions · All 8 Dimensions (Rule 4D)</div>
+      <div class="radar-wrap"><canvas id="radar-main"></canvas></div>
     </div>
   `;
 
@@ -1079,6 +1287,8 @@ function renderRanked(queryResult) {
   html += buildNewAnalysisBtn();
   $resultsContent.innerHTML = html;
   attachRankedCardListeners();
+  renderRadarChart('radar-main', rankedSummary.slice(0, 5));
+  document.getElementById('download-report-btn')?.addEventListener('click', () => downloadReport(lastQueryResult));
 }
 
 function buildRankedCardHtml(item) {
@@ -1209,11 +1419,18 @@ function renderCompare(queryResult) {
       <div>
         <div class="results-title">Jurisdiction Comparison</div>
       </div>
-      <div class="results-meta-pills">
-        ${metaPill('Profile', PROFILES[meta.profile])}
-        ${metaPill('Technology', TECH_LABELS[meta.technology])}
-        ${metaPill('Comparing', `${columns.length} jurisdictions`)}
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="results-meta-pills">
+          ${metaPill('Profile', PROFILES[meta.profile])}
+          ${metaPill('Technology', TECH_LABELS[meta.technology])}
+          ${metaPill('Comparing', `${columns.length} jurisdictions`)}
+        </div>
+        <button class="download-btn" id="download-report-btn">📄 Download Report</button>
       </div>
+    </div>
+    <div class="radar-section">
+      <div class="section-header">Score Comparison · All Dimensions (Rule 4D)</div>
+      <div class="radar-wrap"><canvas id="radar-main"></canvas></div>
     </div>
     <div class="section-header">Standardised Comparison (Rule 5B)</div>
     ${tableHtml}
@@ -1222,6 +1439,8 @@ function renderCompare(queryResult) {
     ${buildAlertsForAll(rankedSummary)}
     ${buildNewAnalysisBtn()}
   `;
+  renderRadarChart('radar-main', rankedSummary);
+  document.getElementById('download-report-btn')?.addEventListener('click', () => downloadReport(lastQueryResult));
 }
 
 function buildAlertsForAll(rankedSummary) {
