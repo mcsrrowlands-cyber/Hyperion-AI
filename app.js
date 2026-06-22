@@ -220,6 +220,7 @@ const state = {
 // ---------------------------------------------------------------------------
 
 const agent = new HyperionAgent();
+let lastQueryResult = null; // most recent analysis result — used by downloadReport()
 
 // ---------------------------------------------------------------------------
 // DOM refs
@@ -491,7 +492,8 @@ async function initScopeChat() {
       includeFinancials: false,
     });
 
-    state.top10 = (result.rankedSummary || []).slice(0, 10);
+    state.top10     = (result.rankedSummary || []).slice(0, 10);
+    lastQueryResult = result;
 
     // Render full 30-jurisdiction ranking in the results panel immediately
     $resultsPanel.classList.remove('hidden');
@@ -731,7 +733,7 @@ async function triggerAnalysis() {
       if (state.scope === 'compare') renderCompare(lastResult);
       else                           renderRanked(lastResult);
     }
-
+    lastQueryResult = lastResult;
     typing.remove();
 
     // Switch to full results-aware system prompt and inject in-scope jurisdiction data

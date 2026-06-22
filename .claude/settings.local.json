@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "PowerShell(netstat -ano)"
+      "PowerShell(netstat -ano)",
+      "Bash(git push *)"
     ]
   }
 }

@@ -5,7 +5,7 @@
 
 const RATE_LIMIT   = 20;   // max requests per IP per window
 const WINDOW_MS    = 60 * 60 * 1000; // 1 hour
-const MAX_TOKENS   = 1024; // max tokens per response
+const MAX_TOKENS   = 3500; // max tokens per response
 const ipStore      = new Map(); // ip -> { count, windowStart }
 
 function isRateLimited(ip) {
