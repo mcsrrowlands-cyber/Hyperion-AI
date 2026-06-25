@@ -17,6 +17,7 @@
     "currency_eur_rate_source": "Slovakia adopted the Euro on 1 January 2009.",
     "region": "Europe",
     "eu_member": true,
+    "landlocked": true,
     "eu_state_aid_applicable": true,
     "last_updated": "2026-06-16",
     "data_staleness_warning": "Slovak energy policy has been volatile under the Fico government (Smer-SSD/Smer-SD) — verify all support scheme parameters at the Regulatory Office for Network Industries (Úrad pre reguláciu sieťových odvetví — ÚRSO at urso.gov.sk) and the market operator (OKTE a.s. at okte.sk). The political context following the assassination attempt on Robert Fico (May 2024) and subsequent government changes must be independently assessed before investment decisions.",

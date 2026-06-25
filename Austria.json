@@ -17,6 +17,7 @@
     "currency_eur_rate_source": "No conversion required. All figures are native EUR.",
     "region": "Europe",
     "eu_member": true,
+    "landlocked": true,
     "eu_state_aid_applicable": true,
     "last_updated": "2026-06-16",
     "data_staleness_warning": "Austrian EAG auction clearing prices are published by OeMAG and E-Control after each tender. Verify against current OeMAG/E-Control publications at e-control.at before relying on figures below."

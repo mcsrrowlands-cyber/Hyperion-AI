@@ -18,6 +18,7 @@
     "currency_eur_rate_source": "SNB (Swiss National Bank) reference rate indicative. Switzerland is NOT in the EU or Eurozone. CHF appreciates in risk-off environments — FX risk must be explicitly modelled.",
     "region": "Europe",
     "eu_member": false,
+    "landlocked": true,
     "eu_state_aid_applicable": false,
     "non_eu_note": "Switzerland is NOT an EU member state. EU State Aid rules (CEEAG, GBER) do NOT apply. EU FDI Screening Regulation (EU) 2019/452 does NOT apply. Switzerland has its own WTO-compliant subsidy framework and bilateral agreements with the EU. EU-Switzerland electricity market integration is incomplete — see grid_connection section.",
     "last_updated": "2026-06-16",

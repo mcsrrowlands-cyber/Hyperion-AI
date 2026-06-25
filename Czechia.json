@@ -17,6 +17,7 @@
     "currency_eur_rate_source": "ECB Reference Rate indicative. All CZK figures must be converted at the rate prevailing on the date of analysis.",
     "region": "Europe",
     "eu_member": true,
+    "landlocked": true,
     "eu_state_aid_applicable": true,
     "last_updated": "2026-06-16",
     "data_staleness_warning": "Czech ERO (Energetický regulační úřad) publishes annual reference price updates. CIT rate was increased to 21% from 2024 under Consolidation Package (zákon č. 349/2023 Sb.) — verify current rate. All CZK/EUR conversions are indicative and must be updated to the analysis date."

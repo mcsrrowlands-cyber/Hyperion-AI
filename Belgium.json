@@ -91,8 +91,9 @@
         "timeline_min_months": 24,
         "timeline_max_months": 60
       },
+      "timeline_p50_months": 27,
       "appeal_risk": "medium-high",
-      "notes": "Belgium's small size and high population density make wind energy siting challenging — communities are close to all potential sites. Legal challenges are common. Walloon wind energy has faced significant legal challenges in Conseil d'État proceedings."
+      "notes": "Belgium's small size and high population density make wind energy siting challenging — communities are close to all potential sites. Legal challenges are common. Walloon wind energy has faced significant legal challenges in Conseil d'État proceedings. P50 of 27 months represents the national average of Flanders (24 mo) and Wallonia (30 mo) P50 estimates."
     },
     "offshore_wind": {
       "primary_authority": "Federal: Direction générale Énergie (DGE/FOD Economie) for concessions; UGMM (Unité de Gestion du Modèle mathématique de la mer du Nord) for marine environmental assessment",

@@ -66,7 +66,8 @@
     "onshore_wind": {
       "effective_status": "Very limited — turbine noise and visual impact concerns; small island population density; planning authority resistance",
       "installed_capacity_mw_approx": 7,
-      "notes": "Malta has very limited onshore wind capacity. The island geography and high population density make new turbine siting extremely difficult. Wind is not a meaningful technology pathway in Malta.",
+      "timeline_p50_months": 90,
+      "notes": "Malta has very limited onshore wind capacity. The island geography and high population density make new turbine siting extremely difficult. Wind is not a meaningful technology pathway in Malta. P50 of 90 months reflects the near-prohibitive planning environment; treat as effectively unavailable at utility scale.",
       "rag_assessment": "RED — effectively unavailable technology at utility scale in Malta"
     },
     "offshore_wind": {

@@ -282,13 +282,32 @@ function scorePermitting(jdata, technology) {
 
   let months;
   switch (technology) {
-    case "solar":
-      months = ct["1_permitting_window_solar_p50_months"];
+    case "solar": {
+      months = Number(ct["1_permitting_window_solar_p50_months"]);
+      if (!isFinite(months)) {
+        const sp = jdata.permitting?.solar_utility?.timeline_p50_months;
+        months = typeof sp === 'number' ? sp : 36;
+      }
       break;
-    case "offshore_wind":
-      months = jdata.permitting?.offshore_wind?.timeline_p50_months
-            ?? ct["1_permitting_window_months_p50"];
+    }
+    case "onshore_wind": {
+      const raw = jdata.permitting?.onshore_wind?.timeline_p50_months;
+      months = typeof raw === 'number' ? raw : parseFloat(String(raw ?? ''));
+      if (!isFinite(months)) months = 84; // N/A or missing → near-worst
       break;
+    }
+    case "offshore_wind": {
+      // Exclude landlocked and explicitly ineligible jurisdictions immediately.
+      const owp = jdata.permitting?.offshore_wind;
+      const ineligible =
+        jdata.jurisdiction.landlocked === true ||
+        owp?.applicable === false ||
+        /^N\/A|^Very limited/i.test(owp?.effective_status ?? '');
+      if (ineligible) return 0;
+      months = Number(owp?.timeline_p50_months);
+      if (!isFinite(months)) months = 96; // no data → worst-case in range
+      break;
+    }
     case "bess":
     case "green_hydrogen":
     case "floating_solar":
@@ -303,11 +322,11 @@ function scorePermitting(jdata, technology) {
       if (months == null) months = DEFAULTS[technology];
       break;
     default:
-      months = ct["1_permitting_window_months_p50"];
+      months = ct["1_permitting_window_months_p50"] ?? 36;
   }
 
-  if (months == null) months = 36;
   months = Number(months);
+  if (!isFinite(months)) months = 36;
 
   const [minM, maxM] = RANGES[technology] ?? [6, 96];
   return Math.max(0, Math.min(100, 100 - ((months - minM) / (maxM - minM)) * 100));
@@ -576,11 +595,22 @@ export function scoreJurisdiction(jdata, profile, technology) {
  * @param {string[]} [filterIsoCodes] — if provided, only score these codes
  * @returns {object[]}
  */
+function offshoreWindEligible(jdata) {
+  if (jdata.jurisdiction.landlocked === true) return false;
+  const owp = jdata.permitting?.offshore_wind;
+  if (owp?.applicable === false) return false;
+  if (/^N\/A|^Very limited/i.test(owp?.effective_status ?? '')) return false;
+  return true;
+}
+
 export function rankJurisdictions(jurisdictionsData, profile, technology, filterIsoCodes = null) {
   let data = jurisdictionsData;
   if (filterIsoCodes && filterIsoCodes.length > 0) {
     const codes = new Set(filterIsoCodes.map((c) => c.toUpperCase()));
     data = data.filter((j) => codes.has(j.jurisdiction.iso_code.toUpperCase()));
+  }
+  if (technology === 'offshore_wind') {
+    data = data.filter(offshoreWindEligible);
   }
   return data
     .map((j) => scoreJurisdiction(j, profile, technology))

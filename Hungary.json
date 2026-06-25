@@ -17,6 +17,7 @@
     "currency_eur_rate_source": "European Central Bank (ecb.europa.eu). IMPORTANT: HUF is highly volatile — verify current rate before use. EUR/HUF has traded in a wide range (360–420) in recent years.",
     "region": "Europe",
     "eu_member": true,
+    "landlocked": true,
     "eu_state_aid_applicable": true,
     "last_updated": "2026-06-16",
     "data_staleness_warning": "Hungarian energy policy has been subject to frequent modification under the Orbán government (Fidesz). Verify all support scheme parameters at the Hungarian Energy and Public Utility Regulatory Authority (MEKH — mekh.hu) and the MAVIR TSO (mavir.hu). Government decree instruments (Korm. rendelet) may modify framework at short notice."
@@ -69,7 +70,7 @@
       "installed_capacity_mw_approx": 329,
       "latest_addition_year": 2011,
       "policy_note": "Hungary essentially stopped new onshore wind development in 2011. The 12km setback rule has no equivalent in any other EU member state. The Orbán government has shown no indication of relaxing this restriction. Onshore wind in Hungary must be treated as an unavailable technology.",
-      "timeline_p50_months": "N/A — effectively unavailable",
+      "timeline_p50_months": null,
       "rag_assessment": "RED — unavailable technology"
     },
     "offshore_wind": {

@@ -17,6 +17,7 @@
     "currency_eur_rate_source": "Luxembourg is a founding member of the Eurozone (1999).",
     "region": "Europe",
     "eu_member": true,
+    "landlocked": true,
     "eu_state_aid_applicable": true,
     "last_updated": "2026-06-16",
     "data_staleness_warning": "Luxembourg's utility-scale RES sector is very limited. Verify current tender parameters at the Luxembourg Energy Regulatory Institute (Institut Luxembourgeois de Régulation — ILR at ilr.lu). Luxembourg's primary relevance to energy CapEx investors is as a holding company / finance jurisdiction, not a project development location.",
