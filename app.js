@@ -1073,19 +1073,32 @@ function renderRadarChart(canvasId, items) {
   const existing = Chart.getChart(canvas);
   if (existing) existing.destroy();
 
-  const labels   = Object.values(COMPONENT_LABELS);
-  const PALETTE  = ['#5C50CC', '#16a34a', '#d97706', '#b91c1c', '#0891b2'];
+  const labels = Object.values(COMPONENT_LABELS);
+
+  // High-contrast, perceptually distinct palette — solid color + subtle fill per country.
+  const PALETTE = [
+    { line: '#2563eb', fill: 'rgba(37,99,235,0.08)',  dash: []        },  // Blue   — solid
+    { line: '#dc2626', fill: 'rgba(220,38,38,0.08)',  dash: []        },  // Red    — solid
+    { line: '#16a34a', fill: 'rgba(22,163,74,0.08)',  dash: [6, 3]    },  // Green  — dashed
+    { line: '#ea580c', fill: 'rgba(234,88,12,0.08)',  dash: [6, 3]    },  // Orange — dashed
+    { line: '#7c3aed', fill: 'rgba(124,58,237,0.08)', dash: [2, 2]    },  // Purple — dotted
+  ];
+
   const datasets = items.slice(0, 5).map((item, i) => {
-    const c = PALETTE[i] ?? '#888';
+    const p = PALETTE[i] ?? { line: '#888', fill: 'rgba(136,136,136,0.08)', dash: [] };
     return {
       label:                item.name,
       data:                 Object.keys(COMPONENT_LABELS).map(k => item.components?.[k] ?? 0),
-      borderColor:          c,
-      backgroundColor:      c + '18',
-      borderWidth:          2.5,
-      pointBackgroundColor: c,
-      pointRadius:          4,
-      pointHoverRadius:     6,
+      borderColor:          p.line,
+      backgroundColor:      p.fill,
+      borderWidth:          3,
+      borderDash:           p.dash,
+      pointBackgroundColor: p.line,
+      pointBorderColor:     '#fff',
+      pointBorderWidth:     2,
+      pointRadius:          6,
+      pointHoverRadius:     9,
+      pointHoverBackgroundColor: p.line,
     };
   });
 
@@ -1099,22 +1112,35 @@ function renderRadarChart(canvasId, items) {
         r: {
           min: 0, max: 100,
           ticks: {
-            stepSize: 25, font: { size: 10 }, color: '#94a3b8',
+            stepSize: 25,
+            font: { size: 10 },
+            color: '#94a3b8',
             backdropColor: 'transparent',
           },
-          grid:        { color: 'rgba(0,0,0,0.07)' },
-          angleLines:  { color: 'rgba(0,0,0,0.09)' },
-          pointLabels: { font: { size: 11, weight: '600' }, color: '#475569' },
+          grid:        { color: 'rgba(0,0,0,0.10)' },
+          angleLines:  { color: 'rgba(0,0,0,0.12)' },
+          pointLabels: { font: { size: 12, weight: '700' }, color: '#334155' },
         },
       },
       plugins: {
         legend: {
           position: 'bottom',
-          labels: { font: { size: 12 }, padding: 16, usePointStyle: true, pointStyleWidth: 14 },
+          labels: {
+            font: { size: 13, weight: '600' },
+            padding: 20,
+            usePointStyle: true,
+            pointStyle: 'circle',
+            pointStyleWidth: 16,
+            color: '#1e293b',
+          },
         },
         tooltip: {
+          backgroundColor: 'rgba(15,23,42,0.9)',
+          titleFont: { size: 13, weight: '700' },
+          bodyFont: { size: 12 },
+          padding: 10,
           callbacks: {
-            label: ctx => ` ${ctx.dataset.label}: ${ctx.raw}/100`,
+            label: ctx => `  ${ctx.dataset.label}: ${ctx.raw.toFixed(1)} / 100`,
           },
         },
       },
