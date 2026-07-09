@@ -414,20 +414,28 @@ function scoreEsg(jdata, technology = null) {
  * @param {string} profile
  * @returns {string[]}
  */
-function generateAlerts(jdata, profile) {
+function generateAlerts(jdata, profile, technology = null) {
   const alerts = [];
   const ct = jdata.comparison_table;
-  const mechanism = ct["3_mechanism_type_code"] || "";
   const name = jdata.jurisdiction.name;
 
-  // Rule 3A — merchant exposure conflict for low_risk_core
-  if (profile === "low_risk_core" &&
-      mechanism !== "two_way_cfd" &&
-      mechanism !== "one_way_market_premium") {
-    alerts.push(
-      "ALERT [Rule 3A]: No state-backed revenue floor identified. " +
-      "Merchant exposure conflicts with Low Risk Core Infrastructure profile — heavily penalised."
-    );
+  // Rule 3A — resolve mechanism for the actual technology being scored.
+  // New technologies store their mechanism in new_technology_data, not the comparison table.
+  const isNewTech = technology != null && TECHNOLOGY_WEIGHTS[technology] != null;
+  const mechanism = isNewTech
+    ? (jdata.new_technology_data?.[technology]?.mechanism_type_code ?? "merchant")
+    : (ct["3_mechanism_type_code"] || "");
+
+  if (profile === "low_risk_core") {
+    const merchantExposure = isNewTech
+      ? (mechanism === "merchant")
+      : (mechanism !== "two_way_cfd" && mechanism !== "one_way_market_premium");
+    if (merchantExposure) {
+      alerts.push(
+        "ALERT [Rule 3A]: No state-backed revenue floor identified. " +
+        "Merchant exposure conflicts with Low Risk Core Infrastructure profile — heavily penalised."
+      );
+    }
   }
 
   // Rule 4A(i) — retroactive policy incidents
@@ -544,7 +552,7 @@ export function scoreJurisdiction(jdata, profile, technology) {
   );
 
   const rag = compositeToRag(composite);
-  const alerts = generateAlerts(jdata, profile);
+  const alerts = generateAlerts(jdata, profile, technology);
 
   let recommendation;
   if (rag === "GREEN") {
@@ -642,10 +650,13 @@ export function estimateLcoe({
   const wacc = waccPct / 100;
   const hoursPerYear = 8_760;
   const annualOutputMwh = (capacityFactorPct / 100) * hoursPerYear;
+  if (annualOutputMwh <= 0) return Infinity;
 
-  // Capital recovery factor
-  const crf = (wacc * Math.pow(1 + wacc, projectLifeYears)) /
-              (Math.pow(1 + wacc, projectLifeYears) - 1);
+  // Capital recovery factor — limit as wacc→0 is 1/n (straight amortisation)
+  const crf = wacc === 0
+    ? 1 / projectLifeYears
+    : (wacc * Math.pow(1 + wacc, projectLifeYears)) /
+      (Math.pow(1 + wacc, projectLifeYears) - 1);
 
   const annualisedCapex = capexEurPerMw * crf;
   const totalAnnualCost = annualisedCapex + opexEurPerMwYear;

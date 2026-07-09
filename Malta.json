@@ -252,12 +252,12 @@
     "support_mechanism_availability": { "rag": "AMBER", "rationale": "Mechanism exists and is functional; however, very limited volume and grid absorption capacity limits render it largely academic for utility-scale projects" },
     "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way; no clawback; A2 sovereign counterparty" },
     "tax_efficiency": { "rag": "GREEN", "rationale": "5% effective CIT after 6/7 imputation refund for qualifying non-resident shareholders — among the most competitive in the EU. Primary attraction for Malta holding structures in other jurisdictions." },
-    "ppa_enforceability": { "rag": "MEDIUM", "rationale": "English-language courts; MAC arbitration; but market is tiny and PPA counterparty depth is very limited" },
+    "ppa_enforceability": { "rag": "AMBER", "rationale": "English-language courts; MAC arbitration; but market is tiny and PPA counterparty depth is very limited" },
     "political_risk": { "rag": "AMBER", "rationale": "A2/A- sovereign; EU member; NATO partner; rule-of-law concerns (FATF grey list history; Caruana Galizia inquiry); FATF de-listed 2022 — improved but requires monitoring" },
     "operational_drag": { "rag": "RED", "rationale": "Score 88 — near-maximum drag; grid saturation and land scarcity create hard physical constraints on development" },
     "fdi_restrictions": { "rag": "GREEN", "rationale": "No FDI screening; pro-FDI environment; Malta Enterprise active" },
     "eu_state_aid_risk": { "rag": "GREEN", "rationale": "CEEAG-compliant; no retroactive history; very small market reduces State Aid significance" },
-    "overall_stop_go": "RED (for project development) / GREEN (for holding structure)",
+    "overall_stop_go": "RED",
     "overall_rationale": "As a PROJECT DEVELOPMENT jurisdiction, Malta is RED — hard physical constraints (316 km² territory, single 200 MW HVDC interconnector, near-complete grid saturation) make utility-scale RES development effectively impossible. Rooftop solar remains the practical pathway. As a HOLDING COMPANY / TAX STRUCTURE jurisdiction, Malta's 5% effective CIT (after 6/7 imputation refund) is highly competitive for investors seeking an EU-domiciled vehicle for European RES portfolios. The primary competition is Luxembourg's participation exemption — Malta's advantage is lower effective tax rate; Luxembourg's advantage is broader treaty network and established AIFM framework. Investors should clearly separate these two distinct roles."
   },
 

@@ -560,6 +560,7 @@ async function initScopeChat() {
     loadingDiv.remove();
     postBotHtml(`<p style="color:var(--red)">Analysis failed: ${escHtml(err.message)}</p>`);
     $inp.disabled    = false;
+    $send.disabled   = false;
     $inp.placeholder = 'Type a question…';
   }
 }
@@ -676,13 +677,22 @@ function wireInspectChips() {
       state.selected.clear();
       state.selected.add(chip.dataset.iso);
 
-      if (!document.getElementById('chat-run-btn')) {
-        const name = ALL_JURISDICTIONS.find(j => j.iso === chip.dataset.iso)?.name ?? chip.dataset.iso;
+      const name       = ALL_JURISDICTIONS.find(j => j.iso === chip.dataset.iso)?.name ?? chip.dataset.iso;
+      const existingBtn = document.getElementById('chat-run-btn');
+      if (!existingBtn) {
         postBotHtml(`
-          <p>Ready to deep-dive into <strong>${flag(chip.dataset.iso)} ${escHtml(name)}</strong>.</p>
+          <p id="inspect-ready-msg">Ready to deep-dive into <strong>${flag(chip.dataset.iso)} ${escHtml(name)}</strong>.</p>
           <button class="chat-run-btn" id="chat-run-btn">▶&nbsp; Run Analysis</button>
         `);
         document.getElementById('chat-run-btn').addEventListener('click', triggerAnalysis, { once: true });
+      } else {
+        // Update in place — don't append a duplicate message
+        const msgP = document.getElementById('inspect-ready-msg');
+        if (msgP) msgP.innerHTML = `Ready to deep-dive into <strong>${flag(chip.dataset.iso)} ${escHtml(name)}</strong>.`;
+        // Re-wire: clone removes the consumed { once: true } listener
+        const fresh = existingBtn.cloneNode(true);
+        existingBtn.replaceWith(fresh);
+        fresh.addEventListener('click', triggerAnalysis, { once: true });
       }
     });
   });
@@ -1455,7 +1465,7 @@ function renderCompare(queryResult) {
       </div>
     </div>
     <div class="radar-section">
-      <div class="section-header">Score Comparison · All Dimensions (Rule 4D)</div>
+      <div class="section-header">Score Comparison · All Dimensions (Rule 4D)${rankedSummary.length > 5 ? `<span style="font-weight:400;font-size:11px;margin-left:8px;opacity:0.6">(top 5 of ${rankedSummary.length} shown)</span>` : ''}</div>
       <div class="radar-wrap"><canvas id="radar-main"></canvas></div>
     </div>
     <div class="section-header">Standardised Comparison (Rule 5B)</div>

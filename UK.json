@@ -366,6 +366,7 @@
       "typical_capex_gbp_per_mw": 2500000,
       "typical_capex_eur_per_mw": 2937500,
       "opex_gbp_per_mw_per_year": 75000,
+      "opex_eur_per_mw_per_year": 88125,
       "corporation_tax_rate_pct": 25,
       "full_expensing_available": true,
       "note": "Illustrative inputs only. Actual project figures will vary materially by site, technology vintage, and supply chain."
@@ -400,8 +401,9 @@
 
   "comparison_table": {
     "_rule_5b_note": "Rule 5B: Standardised comparison categories. These must be reproduced identically across all jurisdiction JSONs to enable side-by-side output.",
-    "1_permitting_window_months_p50": 24,
-    "1_permitting_window_scope": "Solar >50MW via DCO",
+    "1_permitting_window_months_p50": 30,
+    "1_permitting_window_solar_p50_months": 24,
+    "1_permitting_window_scope": "Onshore wind: 30 months P50 (EIA + planning). Solar >50MW via DCO: 24 months P50.",
     "2_grid_connection_cost_native": "GBP 50,000–300,000 per MW",
     "2_grid_connection_cost_eur": "EUR 58,750–352,500 per MW",
     "2_grid_connection_cost_fx_date": "2026-06-15",

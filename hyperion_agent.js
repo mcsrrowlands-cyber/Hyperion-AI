@@ -14,6 +14,7 @@ import {
   PROFILES,
   TECHNOLOGIES,
   PROFILE_WEIGHTS,
+  TECHNOLOGY_WEIGHTS,
   DISCLAIMER,
   loadAllJurisdictions,
   rankJurisdictions,
@@ -178,7 +179,7 @@ export function formatRagMatrix(result) {
       rag:       thresholdRag(componentScores.mechanism_quality, 72, 52),
       rationale: (() => {
         const tech = result.technologyApplied;
-        const isNew = ["bess","green_hydrogen","floating_solar","nuclear_smr","lng_gas","data_centre","natural_gas_lng","biowaste_energy","coal_energy"].includes(tech);
+        const isNew = TECHNOLOGY_WEIGHTS[tech] != null;
         const code  = isNew
           ? (result.rawNewTechData?.mechanism_type_code ?? "merchant")
           : result.comparisonTable["3_mechanism_type_code"];
@@ -205,8 +206,17 @@ export function formatRagMatrix(result) {
       score:     componentScores.permitting,
       weight:    pct(weights.permitting),
       rag:       thresholdRag(componentScores.permitting, 72, 52),
-      rationale: `P50 permitting: ${result.comparisonTable["1_permitting_window_months_p50"] ?? "—"} months (onshore wind). ` +
-                 `Solar: ${result.comparisonTable["1_permitting_window_solar_p50_months"] ?? "—"} months.`,
+      rationale: (() => {
+        const tech = result.technologyApplied;
+        const ct   = result.comparisonTable;
+        if (TECHNOLOGY_WEIGHTS[tech] != null) {
+          const m = result.rawNewTechData?.permitting_p50_months;
+          return `${tech.replace(/_/g,' ')} P50: ${m != null ? m + ' months' : '— (estimate; verify locally)'}.`;
+        }
+        if (tech === 'solar') return `Solar P50: ${ct["1_permitting_window_solar_p50_months"] ?? "—"} months.`;
+        if (tech === 'offshore_wind') return `Offshore wind P50: ${result.rawNewTechData?.permitting_p50_months ?? ct["1_permitting_window_months_p50"] ?? "—"} months.`;
+        return `Onshore wind P50: ${ct["1_permitting_window_months_p50"] ?? "—"} months. Solar: ${ct["1_permitting_window_solar_p50_months"] ?? "—"} months.`;
+      })(),
     },
     {
       category:  "Tax Efficiency",
@@ -312,17 +322,16 @@ export function formatComparisonTable(results) {
  * @returns {object[]}
  */
 export function formatRankedSummary(ranked, profile) {
-  const weights = PROFILE_WEIGHTS[profile];
   return ranked.map((r, idx) => ({
-    rank:          idx + 1,
-    isoCode:       r.isoCode,
-    name:          r.name,
-    rag:           r.ragOverall,
-    composite:     r.compositeScore,
-    components:    r.componentScores,
-    weights,
-    alerts:        r.alerts,
-    recommendation:r.recommendation,
+    rank:           idx + 1,
+    isoCode:        r.isoCode,
+    name:           r.name,
+    rag:            r.ragOverall,
+    composite:      r.compositeScore,
+    components:     r.componentScores,
+    weights:        r.weights,  // effective blended weights used for scoring (Rule 4D)
+    alerts:         r.alerts,
+    recommendation: r.recommendation,
   }));
 }
 
@@ -350,11 +359,31 @@ export function formatFinancials(results, technology, rawData = null) {
       };
     }
 
-    const fmi = jdata.financial_model_inputs || {};
-    let modelKey;
-    if (technology === "solar")         modelKey = Object.keys(fmi).find((k) => /solar/i.test(k));
-    else if (technology === "offshore_wind") modelKey = Object.keys(fmi).find((k) => /offshore/i.test(k));
-    else                                modelKey = Object.keys(fmi).find((k) => /onshore_wind|wind/i.test(k) && !/offshore/i.test(k));
+    // For new technologies, financial inputs live under new_technology_data[tech]
+    const isNewTech = TECHNOLOGY_WEIGHTS[technology] != null;
+    const fmi = (isNewTech && jdata.new_technology_data?.[technology]?.financial_model_inputs)
+      ? jdata.new_technology_data[technology].financial_model_inputs
+      : (jdata.financial_model_inputs || {});
+
+    const keys = Object.keys(fmi);
+    const modelKey = (() => {
+      switch (technology) {
+        case 'solar':           return keys.find(k => /solar/i.test(k));
+        case 'offshore_wind':   return keys.find(k => /offshore/i.test(k));
+        case 'onshore_wind':    return keys.find(k => /onshore_wind|wind/i.test(k) && !/offshore/i.test(k));
+        case 'bess':            return keys.find(k => /bess|battery|storage/i.test(k));
+        case 'green_hydrogen':  return keys.find(k => /hydrogen|h2/i.test(k));
+        case 'floating_solar':  return keys.find(k => /floating/i.test(k));
+        case 'nuclear_smr':     return keys.find(k => /nuclear|smr/i.test(k));
+        case 'lng_gas':         return keys.find(k => /lng/i.test(k) && !/natural/i.test(k));
+        case 'data_centre':     return keys.find(k => /data.?cent/i.test(k));
+        case 'natural_gas_lng': return keys.find(k => /natural.?gas|ccgt/i.test(k));
+        case 'biowaste_energy': return keys.find(k => /biowaste|bioenergy|bio/i.test(k));
+        case 'coal_energy':     return keys.find(k => /coal/i.test(k));
+        case 'lh2_storage':     return keys[0]; // single illustrative model
+        default:                return keys[0];
+      }
+    })();
 
     const model = modelKey ? fmi[modelKey] : null;
 
