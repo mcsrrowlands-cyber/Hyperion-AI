@@ -1085,13 +1085,13 @@ function renderRadarChart(canvasId, items) {
 
   const labels = Object.values(COMPONENT_LABELS);
 
-  // High-contrast, perceptually distinct palette — solid color + subtle fill per country.
+  // High-contrast palette — distinct hue + dash pattern per country.
   const PALETTE = [
-    { line: '#2563eb', fill: 'rgba(37,99,235,0.08)',  dash: []        },  // Blue   — solid
-    { line: '#dc2626', fill: 'rgba(220,38,38,0.08)',  dash: []        },  // Red    — solid
-    { line: '#16a34a', fill: 'rgba(22,163,74,0.08)',  dash: [6, 3]    },  // Green  — dashed
-    { line: '#ea580c', fill: 'rgba(234,88,12,0.08)',  dash: [6, 3]    },  // Orange — dashed
-    { line: '#7c3aed', fill: 'rgba(124,58,237,0.08)', dash: [2, 2]    },  // Purple — dotted
+    { line: '#2563eb', fill: 'rgba(37,99,235,0.08)',   dash: []        },  // Blue   — solid
+    { line: '#dc2626', fill: 'rgba(220,38,38,0.08)',   dash: []        },  // Red    — solid
+    { line: '#16a34a', fill: 'rgba(22,163,74,0.08)',   dash: [8, 4]    },  // Green  — dashed
+    { line: '#d97706', fill: 'rgba(217,119,6,0.08)',   dash: [4, 4]    },  // Amber  — dashed
+    { line: '#0891b2', fill: 'rgba(8,145,178,0.08)',   dash: [2, 3]    },  // Cyan   — dotted
   ];
 
   const datasets = items.slice(0, 5).map((item, i) => {
