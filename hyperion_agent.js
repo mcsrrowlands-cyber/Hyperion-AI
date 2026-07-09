@@ -103,7 +103,7 @@ export class HyperionAgent {
       ragMatrix:       ranked.length === 1 ? formatRagMatrix(ranked[0]) : null,
       comparisonTable: ranked.length > 1  ? formatComparisonTable(ranked) : null,
       rankedSummary:   formatRankedSummary(ranked, profile),
-      financials:      includeFinancials ? formatFinancials(ranked, technology) : null,
+      financials:      includeFinancials ? formatFinancials(ranked, technology, this._jurisdictions) : null,
       disclaimer:      DISCLAIMER,
     };
 
@@ -214,7 +214,7 @@ export function formatRagMatrix(result) {
           return `${tech.replace(/_/g,' ')} P50: ${m != null ? m + ' months' : '— (estimate; verify locally)'}.`;
         }
         if (tech === 'solar') return `Solar P50: ${ct["1_permitting_window_solar_p50_months"] ?? "—"} months.`;
-        if (tech === 'offshore_wind') return `Offshore wind P50: ${result.rawNewTechData?.permitting_p50_months ?? ct["1_permitting_window_months_p50"] ?? "—"} months.`;
+        if (tech === 'offshore_wind') return `Offshore wind P50: ${result.offshorePermittingMonths ?? "—"} months.`;
         return `Onshore wind P50: ${ct["1_permitting_window_months_p50"] ?? "—"} months. Solar: ${ct["1_permitting_window_solar_p50_months"] ?? "—"} months.`;
       })(),
     },
@@ -348,9 +348,13 @@ export function formatRankedSummary(ranked, profile) {
  * @param {object}   [rawData] — only provided for single-jurisdiction inspect()
  * @returns {object[]}
  */
-export function formatFinancials(results, technology, rawData = null) {
+export function formatFinancials(results, technology, rawDataOrArray = null) {
+  const jdataByIso = Array.isArray(rawDataOrArray)
+    ? Object.fromEntries(rawDataOrArray.map(j => [j.jurisdiction.iso_code, j]))
+    : null;
+
   return results.map((r) => {
-    const jdata = rawData;
+    const jdata = jdataByIso ? jdataByIso[r.isoCode] : rawDataOrArray;
     if (!jdata) {
       return {
         isoCode:  r.isoCode,

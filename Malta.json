@@ -271,7 +271,7 @@
     "2_grid_connection_timeline_months": "18–42 (grid saturation risk for larger projects — Enemalta may decline)",
     "3_primary_support_mechanism": "MRA competitive tender / feed-in tariff; one-way; severely volume-constrained by island grid saturation",
     "3_mechanism_type_code": "one_way_market_premium",
-    "4_effective_corporation_tax_rate_pct": "35% statutory; ~5% effective after 6/7 imputation refund for qualifying non-resident shareholders",
+    "4_effective_corporation_tax_rate_pct": 5,
     "4_effective_tax_rate_note": "Full imputation system: 35% CIT at company level; 6/7 refund to qualifying non-resident shareholders reduces effective burden to ~5%. GloBE/Pillar Two minimum 15% applies for large groups (EUR 750m+ revenue). Verify with Maltese tax adviser.",
     "4_key_incentive": "6/7 imputation refund (Income Tax Act Cap. 123) — ~5% effective CIT for qualifying non-resident shareholders; 0% dividend WHT; extensive double tax treaty network",
     "5_ppa_enforceability_rating": "Medium",

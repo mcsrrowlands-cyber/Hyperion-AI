@@ -322,7 +322,7 @@
     "2_grid_connection_cost_fx_date": "N/A — EUR domestic",
     "2_grid_connection_timeline_months": "24–84 (netcongestie areas at upper end)",
     "3_primary_support_mechanism": "SDE++ (Stimulering Duurzame Energieproductie en Klimaattransitie) — biannual rounds",
-    "3_mechanism_type_code": "one_way_production_subsidy",
+    "3_mechanism_type_code": "one_way_market_premium",
     "4_effective_corporation_tax_rate_pct": 25.8,
     "4_key_incentive": "EIA (Energie-investeringsaftrek) — additional 45.5% deduction on qualifying energy investments (on top of normal depreciation). Verify current rate at RVO.nl Energielijst.",
     "5_ppa_enforceability_rating": "High",

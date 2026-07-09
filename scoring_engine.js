@@ -427,9 +427,13 @@ function generateAlerts(jdata, profile, technology = null) {
     : (ct["3_mechanism_type_code"] || "");
 
   if (profile === "low_risk_core") {
+    const STATE_BACKED_MECHANISMS = new Set([
+      "two_way_cfd", "one_way_market_premium", "quota_certificate_with_minimum_price",
+      "feed_in_tariff", "biowaste_auction_cfd", "hydrogen_contract", "government_contract",
+    ]);
     const merchantExposure = isNewTech
       ? (mechanism === "merchant")
-      : (mechanism !== "two_way_cfd" && mechanism !== "one_way_market_premium");
+      : !STATE_BACKED_MECHANISMS.has(mechanism);
     if (merchantExposure) {
       alerts.push(
         "ALERT [Rule 3A]: No state-backed revenue floor identified. " +
@@ -582,7 +586,8 @@ export function scoreJurisdiction(jdata, profile, technology) {
     // Rule 5B — standardised comparison data
     comparisonTable:    jdata.comparison_table,
     // New technology raw data (null for legacy tech types)
-    rawNewTechData:     jdata.new_technology_data?.[technology] ?? null,
+    rawNewTechData:         jdata.new_technology_data?.[technology] ?? null,
+    offshorePermittingMonths: jdata.permitting?.offshore_wind?.timeline_p50_months ?? null,
     alerts,
     recommendation,
   };

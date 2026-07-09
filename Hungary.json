@@ -310,7 +310,7 @@
     "2_grid_connection_timeline_months": "18–48",
     "3_primary_support_mechanism": "METÁR competitive tender premium (Megújuló Energia Termelők Akkreditált Rendszere); HUPX market reference",
     "3_mechanism_type_code": "one_way_market_premium",
-    "4_effective_corporation_tax_rate_pct": "9% CIT (EU minimum) + HIPA up to 2% of net revenue (revenue-based, not profit-based — unique to Hungary)",
+    "4_effective_corporation_tax_rate_pct": 11,
     "4_effective_tax_rate_note": "9% CIT is EU's lowest. Development Tax Allowance (DTA) may reduce CIT by up to 80% over 12 years (NPV benefit: approx EUR 2.8–4.0m on EUR 50m project at 7% WACC). HIPA is a separate revenue-based burden — must be modelled independently.",
     "4_key_incentive": "9% CIT flat rate (Tao.tv. §19, effective 2017); Development Tax Allowance (DTA) up to 80% CIT reduction for qualifying CapEx (Tao.tv. §22/B)",
     "5_ppa_enforceability_rating": "Medium-High",
