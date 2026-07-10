@@ -305,13 +305,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
+      "permitting_p50_months": 24,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "primary_support_mechanism": "Cyprus operates an isolated island grid not synchronized with the Continental European synchronous area. TSOC (Transmission System Operator Cyprus) procures limited ancillary services (spinning reserve, frequency regulation) but there is no formal FCR/aFRR market comparable to CE standards. BESS revenue in Cyprus is primarily merchant — wholesale price arbitrage and co-location with solar PV under TSOC grid stability agreements.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "tsoc_cyprus",
+      "notes": "Cyprus is an island grid with no AC interconnection to the EU mainland. TSOC operates frequency regulation under Κανονισμός Λειτουργίας Συστήματος Μεταφοράς (Transmission System Operation Regulations) but not to ENTSO-E CE standards. The EuroAsia Interconnector project (Cyprus-Greece-Israel HVDC cable, ~2 GW) may eventually provide CE market access but no completion date is confirmed. Until interconnection, BESS revenue in Cyprus is merchant/arbitrage only. Source: TSOC (tsoc.org.cy); CERA (Cyprus Energy Regulatory Authority); EuroAsia Interconnector project documentation."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

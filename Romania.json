@@ -426,13 +426,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "Transelectrica (Romanian TSO) Servicii de sistem (ancillary services): FCR (Reglaj primar de frecvență), aFRR (Reglaj secundar de frecvență și putere), and mFRR (Reglaj terțiar de putere). Romania procures all ancillary service categories under ANRE (Autoritatea Națională de Reglementare în domeniul Energiei) supervision. BESS eligible to participate.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "transelectrica_grid_code",
+      "notes": "Transelectrica is the Romanian TSO, part of the Continental European synchronous area. Ancillary services procured under Codul tehnic al rețelei electrice de transport (Grid Code) and ANRE Order 59/2013 as amended. CEP implemented via amendments to Legea energiei electrice și a gazelor naturale nr. 123/2012. Romania is one of the more active Eastern European BESS markets with GW-scale projects in development (Black Sea grid integration, Dobrogea solar/BESS clusters). Source: Transelectrica Grid Code; ANRE Order 59/2013; Legea 123/2012."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

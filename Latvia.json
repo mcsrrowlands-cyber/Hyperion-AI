@@ -299,13 +299,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "AST (Augstsprieguma tīkls — Latvian TSO) FCR and aFRR ancillary services markets, now operating within the Continental European synchronous area following Baltic synchronization completed February 2025. BESS eligible to participate in FCR-N, FCR-D, and aFRR procurement.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "ast_grid_code",
+      "notes": "Critical context: Latvia desynchronized from BRELL (Russia/Belarus power ring) and synchronized with the Continental European grid on 8 February 2025 alongside Estonia and Lithuania. AST now participates in CE FCR cooperation framework. BESS can access CE ancillary markets from Q2 2025. Source: ENTSO-E Baltic Synchronization Project (BEMIP); AST Sistēmas pakalpojumu iepirkuma noteikumi (ancillary service procurement rules); Elektroenerģijas tirgus likums (Electricity Market Law)."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

@@ -314,13 +314,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "HOPS (Hrvatski operator prijenosnog sustava — Croatian TSO) Usluge regulacije i uravnoteženja (regulation and balancing services): FCR (Primarna regulacija frekvencije), aFRR (Sekundarna regulacija frekvencije), and mFRR (Tercijarna regulacija frekvencije). BESS eligible to participate under Clean Energy Package implementation in Croatian law.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "hops_grid_code",
+      "notes": "HOPS is the Croatian TSO, part of the Continental European synchronous area. Ancillary services procured under Opće uvjete za korištenje prijenosne mreže (General Conditions for Transmission System Use) and Kodeks prijenosne mreže (Grid Code) implementing EU SOGL Regulation 2017/1485. CEP implemented via Zakon o tržištu električne energije (ZTEE) amendments. BESS prequalification for FCR/aFRR is available. Permitting 24 months reflects Croatia's more complex grid connection environment and Natura 2000 screening obligations. Source: HOPS Kodeks prijenosne mreže; HERA (Hrvatska energetska regulatorna agencija) implementing decrees."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

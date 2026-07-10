@@ -292,13 +292,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
+      "permitting_p50_months": 18,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "primary_support_mechanism": "Malta operates a micro-island grid not synchronized with the Continental European synchronous area. Enemalta is the vertically integrated utility; there is no independent TSO or formal FCR/aFRR market. The Malta-Sicily Interconnector (200 MW HVDC, MITA) connects Malta to the Italian grid and provides some frequency stability via Italy, but Malta does not participate in formal CE ancillary service tendering. BESS revenue is merchant — primarily wholesale price arbitrage and grid stability support under bilateral agreements with Enemalta.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "enemalta_mra",
+      "notes": "Malta's installed generation capacity is approximately 570 MW. Enemalta (state utility) operates the grid under MRA (Malta Resources Authority) oversight. The 200 MW HVDC Malta-Sicily Interconnector (MITA-EleMalta / Terna) provides an import route but not CE ancillary market access for local BESS. BESS is used primarily for solar integration and grid stability support. No formal BESS ancillary services procurement process exists as of 2025. Source: MRA (mra.org.mt); Enemalta Grid Code; MITA Interconnector documentation."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

@@ -330,13 +330,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "MAVIR (Magyar Villamosenergia-ipari Rendszerirányító Zrt — Hungarian TSO) Rendszeregyensúly-szabályozási szolgáltatások (system balancing services): FCR (Primer frekvenciabeállítás), aFRR (Szekunder frekvencia- és teljesítményszabályozás), and mFRR (Tercier teljesítményszabályozás). BESS eligible under CEP implementation via VET amendments.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "mavir_grid_code",
+      "notes": "MAVIR is the Hungarian TSO, part of the Continental European synchronous area. Ancillary services are procured under the MAVIR Átviteli Rendszerirányítási Szabályzat (Transmission System Operator Code) implementing EU SOGL Regulation 2017/1485. Clean Energy Package implemented via amendments to Villamos energiáról szóló 2007. évi LXXXVI. törvény (VET). BESS participation in FCR/aFRR is enabled. Source: MAVIR Rendszerszabályzat; Magyar Energia és Közmű-szabályozási Hivatal (MEKH) implementing decrees."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

@@ -291,13 +291,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
+      "permitting_p50_months": 18,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "primary_support_mechanism": "Luxembourg has no independent national TSO and no standalone BESS ancillary services market. The Luxembourg grid is integrated into and operated by Creos Luxembourg, connected to both Amprion (Germany) and Elia (Belgium). Cross-border access to German or Belgian FCR/aFRR markets is theoretically possible but requires bilateral market access arrangements. No formal CE FCR market access for Luxembourg-sited BESS has been established. Revenue is therefore primarily merchant / wholesale arbitrage.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "ilr_luxembourg",
+      "notes": "Luxembourg has no independent TSO operating an ENTSO-E-style ancillary services market. Creos Luxembourg is the DSO/TSO hybrid operating under ILR (Institut Luxembourgeois de Régulation) oversight. The grid integrates into the Amprion (DE) and Elia (BE) zones. BESS at scale is a very small market opportunity given Luxembourg's limited grid capacity. Source: ILR (ilr.lu); Loi du 1er août 2007 relative à l'organisation du marché de l'électricité."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

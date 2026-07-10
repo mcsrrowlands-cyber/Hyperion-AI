@@ -295,13 +295,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "ELES (Elektro-Slovenija, d. o. o. — Slovenian TSO) Sistemske storitve (ancillary services): FCR (Primarna regulacija frekvence), aFRR (Sekundarna regulacija frekvence), and mFRR (Terciarna regulacija frekvence). BESS eligible to participate directly in ancillary service markets under CEP implementation.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "eles_grid_code",
+      "notes": "ELES is the Slovenian TSO, operating within the Continental European synchronous area. Ancillary services are procured under Splošni akti ELES (ELES General Acts) implementing EU Regulation 2017/1485 (SOGL) and the Clean Energy Package (Energetski zakon EZ-1 amendments). BESS can be prequalified for FCR and aFRR. Source: ELES Navodila za dostop do prenosnega sistema (Grid Access Rules); Energetski zakon (EZ-1); Agencija za energijo (Energy Agency) implementing decrees."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

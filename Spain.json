@@ -349,11 +349,11 @@
     "bess": {
       "permitting_p50_months": 24,
       "permitting_confidence": "medium",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": "No standalone BESS support mechanism as of 2025. REER scheme covers co-located storage only. Merchant/ancillary services market. Source: REE/national_tso.",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "REE (Red Eléctrica de España, now Redeia) operates Servicios de ajuste del sistema — formal FCR, aFRR, and mFRR ancillary service markets under Royal Decree 1955/2000 and Circular CNMC 1/2020. No standalone BESS subsidy; co-located storage may qualify under REER renewable auction if paired with renewable generation.",
       "revenue_floor_description": null,
-      "source": "national_tso",
-      "notes": "Spain has no standalone battery storage subsidy. Co-located storage may qualify under REER auction if paired with renewable generation. Ancillary services via REE (Red Eléctrica de España). High curtailment and price cannibalisation risk in zones with high solar penetration."
+      "source": "ree_ascc",
+      "notes": "Spain has no standalone BESS subsidy but operates one of the most liquid ancillary services markets in Southern Europe via REE/Redeia. FCR (Regulación Primaria), aFRR (Regulación Secundaria), and mFRR (Regulación Terciaria) are open to standalone BESS under Clean Energy Package (Directive 2019/944) implementation via Real Decreto-ley 23/2020. High curtailment and price cannibalisation risk in solar-saturated zones (Andalucía, Extremadura) should be modelled explicitly. Source: Circular CNMC 1/2020; Real Decreto-ley 23/2020."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

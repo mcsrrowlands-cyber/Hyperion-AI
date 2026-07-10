@@ -302,13 +302,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "SEPS (Slovenská elektrizačná prenosová sústava — Slovak TSO) Podporné služby (ancillary services) markets: FCR (Primárna regulácia frekvencie), aFRR (Sekundárna regulácia výkonu a frekvencie), and mFRR (Terciárna regulácia výkonu). BESS eligible to participate as CEP (EU Directive 2019/944) is implemented in Slovak law.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "seps_grid_code",
+      "notes": "SEPS procures ancillary services under its Prevádzkový poriadok (Grid Code) implementing Clean Energy Package rules. Slovakia is part of the Continental European synchronous area. BESS can participate in FCR/aFRR tendering alongside generation assets. Source: SEPS Prevádzkový poriadok prenosovej sústavy; Zákon č. 251/2012 Z. z. o energetike (Slovak Energy Act) as amended by Zákon č. 488/2021 Z. z. implementing CEP."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

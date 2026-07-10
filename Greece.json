@@ -410,13 +410,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "ADMIE/IPTO (ΑΔΜΗΕ — Ανεξάρτητος Διαχειριστής Μεταφοράς Ηλεκτρικής Ενέργειας — Greek TSO) Υπηρεσίες Συστήματος (ancillary services): FCR (Πρωτεύουσα ρύθμιση συχνότητας), aFRR (Δευτερεύουσα ρύθμιση ισχύος-συχνότητας), mFRR. Greece is one of the most active BESS markets in Europe — RAE has fast-tracked large-scale BESS licensing.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "admie_grid_code",
+      "notes": "ADMIE is the Greek TSO, part of the Continental European synchronous area. Greece is among the leading European markets for BESS deployment in 2024-2026, with RAE (Ρυθμιστική Αρχή Ενέργειας) having issued numerous large-scale BESS licenses (multi-GWh scale in Attica, Thessaly, and island interconnector projects). Ancillary services governed by Κώδικας Διαχείρισης Ελληνικού Συστήματος Μεταφοράς Ηλεκτρικής Ενέργειας (Grid Management Code) implementing EU Regulation 2017/1485. CEP implemented via Νόμος 4001/2011 as amended by N. 4414/2016, N. 4685/2020. Source: ADMIE Grid Code; RAE license database; Law 4685/2020 (fast-track licensing)."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

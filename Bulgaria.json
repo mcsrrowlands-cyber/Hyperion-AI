@@ -2,8 +2,8 @@
   "_schema": "hyperion-jurisdiction-v1",
   "_template_version": "1.0",
   "_scoring_convention": {
-    "political_risk_score": "0ñ100 where 100 = zero political risk (higher is better)",
-    "operational_drag_score": "0ñ100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "political_risk_score": "0ÔøΩ100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0ÔøΩ100 where 100 = maximum drag / worst efficiency (higher is worse)",
     "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
   },
 
@@ -13,9 +13,9 @@
     "iso_code": "BG",
     "currency_native": "BGN",
     "currency_eur_rate": 1.95583,
-    "currency_eur_rate_note": "1 EUR = 1.95583 BGN ó FIXED rate under Bulgaria's Currency Board Arrangement (CBA), in force since 1 July 1999. This is a legally fixed rate, not a market rate. The CBA pegs the BGN to the EUR at an irrevocable rate set by the Bulgarian National Bank (BNB). FX risk is negligible for operational cashflows. Eurozone accession: Bulgaria has been pursuing Euro adoption ó verify current accession status with BNB / ECB as of analysis date.",
-    "currency_eur_rate_date": "Fixed ó Currency Board rate unchanged since 1 July 1999",
-    "currency_eur_rate_source": "Bulgarian National Bank (BNB) ó bnb.bg; Law on the Bulgarian National Bank (Article 29 ó currency board provisions)",
+    "currency_eur_rate_note": "1 EUR = 1.95583 BGN ÔøΩ FIXED rate under Bulgaria's Currency Board Arrangement (CBA), in force since 1 July 1999. This is a legally fixed rate, not a market rate. The CBA pegs the BGN to the EUR at an irrevocable rate set by the Bulgarian National Bank (BNB). FX risk is negligible for operational cashflows. Eurozone accession: Bulgaria has been pursuing Euro adoption ÔøΩ verify current accession status with BNB / ECB as of analysis date.",
+    "currency_eur_rate_date": "Fixed ÔøΩ Currency Board rate unchanged since 1 July 1999",
+    "currency_eur_rate_source": "Bulgarian National Bank (BNB) ÔøΩ bnb.bg; Law on the Bulgarian National Bank (Article 29 ÔøΩ currency board provisions)",
     "region": "Europe",
     "eu_member": true,
     "eu_state_aid_applicable": true,
@@ -25,25 +25,25 @@
 
   "regulatory_framework": {
     "primary_energy_legislation": [
-      { "instrument": "Law on Energy from Renewable Sources (????? ?? ????????? ?? ???????????? ????????? ó ZEVI), promulgated 2011, as amended", "relevance": "Primary RES support law; establishes competitive auction framework; defines feed-in premium mechanism; transposes EU Renewable Energy Directives" },
-      { "instrument": "Energy Act (????? ?? ???????????? ó ZE) 2003, as amended", "relevance": "Framework energy law; licensing; grid connection rights; EWRC regulatory authority powers" },
-      { "instrument": "National Recovery and Resilience Plan (NRRP) ó Bulgaria 2021ñ2026", "relevance": "EU-funded investment framework; includes RES capacity targets and permitting reform commitments" }
+      { "instrument": "Law on Energy from Renewable Sources (????? ?? ????????? ?? ???????????? ????????? ÔøΩ ZEVI), promulgated 2011, as amended", "relevance": "Primary RES support law; establishes competitive auction framework; defines feed-in premium mechanism; transposes EU Renewable Energy Directives" },
+      { "instrument": "Energy Act (????? ?? ???????????? ÔøΩ ZE) 2003, as amended", "relevance": "Framework energy law; licensing; grid connection rights; EWRC regulatory authority powers" },
+      { "instrument": "National Recovery and Resilience Plan (NRRP) ÔøΩ Bulgaria 2021ÔøΩ2026", "relevance": "EU-funded investment framework; includes RES capacity targets and permitting reform commitments" }
     ],
     "permitting_legislation": [
-      { "instrument": "Spatial Planning Act (????? ?? ?????????? ?? ??????????? ó ZUT)", "relevance": "Zoning and spatial planning; construction permits; primary permitting framework for RES projects" },
-      { "instrument": "Environmental Protection Act (????? ?? ???????? ?? ???????? ????? ó ZOOOS) and EIA Ordinance", "relevance": "EIA requirements; Natura 2000 assessment; mandatory for RES projects above threshold" }
+      { "instrument": "Spatial Planning Act (????? ?? ?????????? ?? ??????????? ÔøΩ ZUT)", "relevance": "Zoning and spatial planning; construction permits; primary permitting framework for RES projects" },
+      { "instrument": "Environmental Protection Act (????? ?? ???????? ?? ???????? ????? ÔøΩ ZOOOS) and EIA Ordinance", "relevance": "EIA requirements; Natura 2000 assessment; mandatory for RES projects above threshold" }
     ],
     "tax_legislation": [
-      { "instrument": "Corporate Income Tax Act (????? ?? ?????????????? ????????? ???????? ó ZKPO) ó 10% flat rate", "relevance": "10% flat CIT rate ó one of the lowest in the EU; standard depreciation provisions" },
-      { "instrument": "Value Added Tax Act (????? ?? ????? ????? ?????????? ???????? ó ZDDS)", "relevance": "20% standard VAT rate" }
+      { "instrument": "Corporate Income Tax Act (????? ?? ?????????????? ????????? ???????? ÔøΩ ZKPO) ÔøΩ 10% flat rate", "relevance": "10% flat CIT rate ÔøΩ one of the lowest in the EU; standard depreciation provisions" },
+      { "instrument": "Value Added Tax Act (????? ?? ????? ????? ?????????? ???????? ÔøΩ ZDDS)", "relevance": "20% standard VAT rate" }
     ],
     "subsidy_control_legislation": [
-      { "instrument": "CEEAG ó Commission Notice 2022/C 80/01", "relevance": "EU framework for assessing Bulgarian RES support compatibility" },
-      { "instrument": "GBER ó Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES measures" }
+      { "instrument": "CEEAG ÔøΩ Commission Notice 2022/C 80/01", "relevance": "EU framework for assessing Bulgarian RES support compatibility" },
+      { "instrument": "GBER ÔøΩ Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES measures" }
     ],
     "fdi_legislation": [
-      { "instrument": "Investment Promotion Act (????? ?? ??????????? ?? ???????????? ó ZNI)", "relevance": "Investment promotion; Class A/B/C certification for prioritised investments; InvestBulgaria Agency" },
-      { "instrument": "EU FDI Screening Regulation (EU) 2019/452 ó implemented via Ministry of Economy", "relevance": "Bulgaria has implemented basic FDI screening under EU Regulation 2019/452; energy critical infrastructure included" }
+      { "instrument": "Investment Promotion Act (????? ?? ??????????? ?? ???????????? ÔøΩ ZNI)", "relevance": "Investment promotion; Class A/B/C certification for prioritised investments; InvestBulgaria Agency" },
+      { "instrument": "EU FDI Screening Regulation (EU) 2019/452 ÔøΩ implemented via Ministry of Economy", "relevance": "Bulgaria has implemented basic FDI screening under EU Regulation 2019/452; energy critical infrastructure included" }
     ]
   },
 
@@ -58,8 +58,8 @@
       "timeline_max_months": 48,
       "pre_application_months_typical": 12,
       "appeal_risk": "medium-high",
-      "appeal_mechanism": "Administrative Courts (??????????????? ????????); Supreme Administrative Court (???????? ??????????????? ??? ó VAS)",
-      "notes": "Bulgaria has strong solar resource (1,400ñ1,600 kWh/kWp p.a. in southern regions). Grid connection capacity is constrained particularly in southwestern and southeastern regions."
+      "appeal_mechanism": "Administrative Courts (??????????????? ????????); Supreme Administrative Court (???????? ??????????????? ??? ÔøΩ VAS)",
+      "notes": "Bulgaria has strong solar resource (1,400ÔøΩ1,600 kWh/kWp p.a. in southern regions). Grid connection capacity is constrained particularly in southwestern and southeastern regions."
     },
     "onshore_wind": {
       "primary_authority": "EWRC; RIEW for EIA; Municipal authorities; Ministry of Defence for aviation/radar clearances",
@@ -72,10 +72,10 @@
       "appeal_risk": "high",
       "appeal_mechanism": "Administrative Courts; VAS",
       "setback_rules": "500m from residential areas typical; Natura 2000 constraints material (significant bird migration routes through Bulgaria)",
-      "notes": "Bulgaria has good wind resource in northern coastal areas (Dobrudzha) and in the Rhodope Mountains. Natura 2000 is a significant permitting constraint ó Bulgaria has one of the largest Natura 2000 networks in the EU by territory percentage. Bird migration routes (Via Pontica, Via Aristotelis) create species protection constraints for wind sites."
+      "notes": "Bulgaria has good wind resource in northern coastal areas (Dobrudzha) and in the Rhodope Mountains. Natura 2000 is a significant permitting constraint ÔøΩ Bulgaria has one of the largest Natura 2000 networks in the EU by territory percentage. Bird migration routes (Via Pontica, Via Aristotelis) create species protection constraints for wind sites."
     },
     "offshore_wind": {
-      "applicable_note": "Bulgaria has Black Sea coastline. Offshore wind framework is nascent ó no projects commissioned. Black Sea offshore development faces specific regulatory gaps. Not a viable near-term market.",
+      "applicable_note": "Bulgaria has Black Sea coastline. Offshore wind framework is nascent ÔøΩ no projects commissioned. Black Sea offshore development faces specific regulatory gaps. Not a viable near-term market.",
       "timeline_p50_months": 144,
       "notes": "Black Sea offshore wind is a long-term aspiration. Regulatory framework under development. Not material for near-term capital deployment."
     },
@@ -89,11 +89,11 @@
 
   "grid_connection": {
     "transmission_operators": [
-      { "name": "ESO EAD (??????????????? ???????? ???????? ó Electricity System Operator)", "region": "Bulgarian national transmission system (state-owned)" }
+      { "name": "ESO EAD (??????????????? ???????? ???????? ÔøΩ Electricity System Operator)", "region": "Bulgarian national transmission system (state-owned)" }
     ],
-    "distribution_operators": "Electrorazpredelenie Yug AD (EVN ó southern Bulgaria); Electrorazpredelenie Sever AD (EON / Chez ó northern Bulgaria); Electrorazpredelenie Sofia Oblast AD (Energo-Pro); CEZ Razpredelenie Bulgaria AD (western Bulgaria, Prague-owned being divested)",
-    "regulatory_authority": "EWRC (??????? ?? ????????? ? ????? ?????????? ó Energy and Water Regulatory Commission)",
-    "legal_basis": "Energy Act ZE ßß82ñ92 (grid connection rights); ZEVI ßß42ñ50 (priority access for RES); EWRC Network Codes",
+    "distribution_operators": "Electrorazpredelenie Yug AD (EVN ÔøΩ southern Bulgaria); Electrorazpredelenie Sever AD (EON / Chez ÔøΩ northern Bulgaria); Electrorazpredelenie Sofia Oblast AD (Energo-Pro); CEZ Razpredelenie Bulgaria AD (western Bulgaria, Prague-owned being divested)",
+    "regulatory_authority": "EWRC (??????? ?? ????????? ? ????? ?????????? ÔøΩ Energy and Water Regulatory Commission)",
+    "legal_basis": "Energy Act ZE ÔøΩÔøΩ82ÔøΩ92 (grid connection rights); ZEVI ÔøΩÔøΩ42ÔøΩ50 (priority access for RES); EWRC Network Codes",
     "priority_access": {
       "applicable": true,
       "mechanism": "Priority dispatch for RES under ZEVI and EU Electricity Directive 2019/944 (transposed)",
@@ -104,8 +104,8 @@
       "notes": "Dobrudzha (northeastern Bulgaria) has best wind resource but faces grid capacity constraints from existing wind installations. Solar development in southern Bulgaria faces DSO capacity limits in some areas. ESO reinforcement programme underway but slow."
     },
     "connection_wait_time_months": {
-      "transmission_connected": { "p50": 36, "range": "24ñ60" },
-      "distribution_connected": { "p50": 24, "range": "18ñ42" }
+      "transmission_connected": { "p50": 36, "range": "24ÔøΩ60" },
+      "distribution_connected": { "p50": 24, "range": "18ÔøΩ42" }
     },
     "connection_cost_bgn_per_mw": {
       "range_low_bgn": 60000,
@@ -115,27 +115,27 @@
       "fx_note": "BGN/EUR at fixed Currency Board rate of 1 EUR = 1.95583 BGN",
       "notes": "Connection costs regulated by EWRC. Reinforcement costs socialised via regulated tariffs."
     },
-    "operational_drag_assessment": "MEDIUM-HIGH ó grid constraints in wind/solar resource regions; ESO reinforcement behind demand"
+    "operational_drag_assessment": "MEDIUM-HIGH ÔøΩ grid constraints in wind/solar resource regions; ESO reinforcement behind demand"
   },
 
   "support_mechanisms": {
-    "_rule_3a_note": "Rule 3A: The Bulgarian RES auction premium under ZEVI (as amended to comply with CEEAG) is a ONE-WAY market premium. Premium = max(0, reference price - market price). When market price exceeds the reference price, premium is zero ó generators retain full merchant upside with NO clawback. NOTE: Verify current mechanism structure with Bulgarian legal counsel ó Bulgaria has undergone multiple legislative reforms and the precise mechanism structure should be confirmed against the current ZEVI text and EWRC decisions.",
-    "primary_mechanism": "Feed-in Premium (?????? ?? ???????????? ?? ???????????? ???????) ó competitive auction",
+    "_rule_3a_note": "Rule 3A: The Bulgarian RES auction premium under ZEVI (as amended to comply with CEEAG) is a ONE-WAY market premium. Premium = max(0, reference price - market price). When market price exceeds the reference price, premium is zero ÔøΩ generators retain full merchant upside with NO clawback. NOTE: Verify current mechanism structure with Bulgarian legal counsel ÔøΩ Bulgaria has undergone multiple legislative reforms and the precise mechanism structure should be confirmed against the current ZEVI text and EWRC decisions.",
+    "primary_mechanism": "Feed-in Premium (?????? ?? ???????????? ?? ???????????? ???????) ÔøΩ competitive auction",
     "mechanism_type": "one_way_market_premium",
     "administrator": "EWRC (sets parameters); ESO (administers premium payments to generators)",
-    "legal_basis": "ZEVI ßß32ñ38 (as amended); EWRC Decisions on auction parameters",
+    "legal_basis": "ZEVI ÔøΩÔøΩ32ÔøΩ38 (as amended); EWRC Decisions on auction parameters",
     "mechanism_description": {
       "summary": "Generator wins competitive auction and receives a reference price. Sells power on IBEX (Bulgarian Energy Exchange) day-ahead market. Premium = max(0, reference price - market price). No clawback when market exceeds reference price.",
-      "upside_treatment": "UNCAPPED ó premium is zero when market price exceeds reference price; generator retains full market revenue",
-      "downside_treatment": "PROTECTED ó ESO pays the shortfall when market price falls below reference price",
+      "upside_treatment": "UNCAPPED ÔøΩ premium is zero when market price exceeds reference price; generator retains full market revenue",
+      "downside_treatment": "PROTECTED ÔøΩ ESO pays the shortfall when market price falls below reference price",
       "contract_term_years": 15,
       "verification_note": "Bulgarian RES support legislation has been amended multiple times. Confirm current mechanism type (one-way vs. two-way), contract term, and reference price with EWRC and local legal counsel before project commitment."
     },
     "auction": {
       "administrator": "EWRC",
-      "frequency": "Limited ó Bulgarian auction programme has been slow to develop; verify current auction calendar at dker.bg",
+      "frequency": "Limited ÔøΩ Bulgarian auction programme has been slow to develop; verify current auction calendar at dker.bg",
       "reference_price_bgn_mwh_approx": {
-        "_staleness_warning": "Bulgarian reference prices are set per auction round. Very limited public auction history. Figures are indicative only ó verify at EWRC official publications (dker.bg).",
+        "_staleness_warning": "Bulgarian reference prices are set per auction round. Very limited public auction history. Figures are indicative only ÔøΩ verify at EWRC official publications (dker.bg).",
         "onshore_wind": {
           "bgn_mwh_range_low": 120,
           "bgn_mwh_range_high": 160,
@@ -157,17 +157,17 @@
         "description": "Bulgaria imposed a 20% levy (??????) on revenues from FiT contracts for RES generators commissioned before 2014 under Law on Energy from Renewable Sources. The levy applied retroactively to already-contracted FiT revenues.",
         "legal_basis": "Amendments to ZEVI and subsidiary legislation enacted 2014",
         "impact": "Material financial losses; multiple ICSID and ad hoc arbitration proceedings against Bulgaria; severe chilling effect on FDI in Bulgarian renewables",
-        "severity": "HIGH ó retroactive modification of contracted FiT revenues; one of the most significant retroactive RES interventions in the EU alongside Czech solar levy and Greek FiT haircuts",
+        "severity": "HIGH ÔøΩ retroactive modification of contracted FiT revenues; one of the most significant retroactive RES interventions in the EU alongside Czech solar levy and Greek FiT haircuts",
         "current_status": "Levy was later modified and some relief granted following arbitration outcomes. Post-2014 framework is more stable but legacy risk discount applies."
       }
     }
   },
 
   "tax": {
-    "_rule_3b_note": "Rule 3B: Bulgarian depreciation timing benefit must be calculated on 10% CIT base ó low rate means smaller absolute timing benefit vs. higher-tax EU peers.",
+    "_rule_3b_note": "Rule 3B: Bulgarian depreciation timing benefit must be calculated on 10% CIT base ÔøΩ low rate means smaller absolute timing benefit vs. higher-tax EU peers.",
     "corporation_tax_structure": {
       "rate_pct": 10.0,
-      "legal_basis": "Corporate Income Tax Act (ZKPO) ó 10% flat CIT rate; one of the lowest in the EU alongside Ireland (12.5%) and Hungary (9%)",
+      "legal_basis": "Corporate Income Tax Act (ZKPO) ÔøΩ 10% flat CIT rate; one of the lowest in the EU alongside Ireland (12.5%) and Hungary (9%)",
       "dividend_withholding_tax_pct": 5.0,
       "eu_parent_subsidiary_exemption": "0% WHT for qualifying EU parent companies under EU Parent-Subsidiary Directive"
     },
@@ -180,17 +180,17 @@
         "method": "straight-line as standard; accelerated available for certain qualifying assets",
         "wind_turbines_years": 10,
         "solar_pv_years": 10,
-        "legal_basis": "ZKPO ßß55ñ62 (depreciation provisions)",
+        "legal_basis": "ZKPO ÔøΩÔøΩ55ÔøΩ62 (depreciation provisions)",
         "npv_benefit_analysis": {
           "_rule_3b_compliance": true,
-          "description": "At 10% CIT and 10% WACC: straight-line over 10 years (10% p.a.) NPV of tax shield ò 6.1% of qualifying CapEx. Low CIT rate limits the absolute timing benefit ó primary CapEx incentive is the low 10% rate itself, not depreciation acceleration.",
-          "note": "For Bulgaria, the 10% flat CIT rate is the dominant tax incentive ó not specific depreciation acceleration."
+          "description": "At 10% CIT and 10% WACC: straight-line over 10 years (10% p.a.) NPV of tax shield ÔøΩ 6.1% of qualifying CapEx. Low CIT rate limits the absolute timing benefit ÔøΩ primary CapEx incentive is the low 10% rate itself, not depreciation acceleration.",
+          "note": "For Bulgaria, the 10% flat CIT rate is the dominant tax incentive ÔøΩ not specific depreciation acceleration."
         }
       },
       "investment_incentive_class_a": {
         "description": "Class A certified investments under Investment Promotion Act (ZNI) may receive accelerated administrative procedures, customised infrastructure support, and potential employment subsidies",
         "legal_basis": "Investment Promotion Act (ZNI); InvestBulgaria Agency regulations",
-        "threshold_for_certification": "Large qualifying investments ó thresholds vary by project type and region"
+        "threshold_for_certification": "Large qualifying investments ÔøΩ thresholds vary by project type and region"
       }
     },
     "vat": {
@@ -204,14 +204,14 @@
   "ppa_market": {
     "enforceability_rating": "Medium",
     "bankability_rating": "Medium-Low",
-    "legal_basis": "Obligations and Contracts Act (????? ?? ???????????? ? ?????????? ó ZZD); contractual freedom; no bespoke PPA statute",
-    "jurisdiction_enforcement": "Bulgarian courts are functional but slower than western European peers. Commercial disputes: 2ñ5 years. Sofia Arbitration Court (SAC) available. ICC/Vienna arbitration recommended for international transactions.",
-    "market_liquidity": "Limited ó corporate PPA market in early development",
+    "legal_basis": "Obligations and Contracts Act (????? ?? ???????????? ? ?????????? ÔøΩ ZZD); contractual freedom; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Bulgarian courts are functional but slower than western European peers. Commercial disputes: 2ÔøΩ5 years. Sofia Arbitration Court (SAC) available. ICC/Vienna arbitration recommended for international transactions.",
+    "market_liquidity": "Limited ÔøΩ corporate PPA market in early development",
     "active_corporate_buyers": true,
-    "prominent_corporate_offtakers": "Limited pool ó Bulgarian industrial companies, regional manufacturers, international corporations with Bulgarian operations",
+    "prominent_corporate_offtakers": "Limited pool ÔøΩ Bulgarian industrial companies, regional manufacturers, international corporations with Bulgarian operations",
     "typical_contract_term_years": { "min": 3, "max": 10 },
     "credit_risk_note": "Bulgarian corporate credit market is thin. International corporate offtakers or parent guarantee strongly recommended for debt financing.",
-    "cross_border_enforceability": "Medium ó EU enforcement regime applies; NY Convention signatory; practical enforcement speed is a concern"
+    "cross_border_enforceability": "Medium ÔøΩ EU enforcement regime applies; NY Convention signatory; practical enforcement speed is a concern"
   },
 
   "sovereign_risk": {
@@ -222,20 +222,20 @@
       "sp": "BBB",
       "fitch": "BBB",
       "source_note": "Bulgaria maintains solid investment-grade ratings. Verify current ratings at agency websites.",
-      "_staleness_warning": "Ratings subject to ongoing review ó verify before use."
+      "_staleness_warning": "Ratings subject to ongoing review ÔøΩ verify before use."
     },
-    "political_stability": "Medium ó Bulgaria has experienced significant political instability with multiple elections and short-lived governments since 2021; anti-corruption reform demands have created governing coalition fragility",
+    "political_stability": "Medium ÔøΩ Bulgaria has experienced significant political instability with multiple elections and short-lived governments since 2021; anti-corruption reform demands have created governing coalition fragility",
     "government_structure": "Parliamentary republic; unicameral National Assembly (??????? ????????); Constitutional Court",
-    "regulatory_track_record": "Poor for RES sector ó 2014 retroactive levy is defining legacy risk event; improving under EU NRRP commitments",
+    "regulatory_track_record": "Poor for RES sector ÔøΩ 2014 retroactive levy is defining legacy risk event; improving under EU NRRP commitments",
     "retroactive_policy_incidents": [
       {
         "year": "2014",
-        "description": "20% levy imposed on FiT revenues for commissioned RES projects ó retroactive modification of contracted revenues",
-        "severity": "HIGH ó among the most significant retroactive RES interventions in EU history"
+        "description": "20% levy imposed on FiT revenues for commissioned RES projects ÔøΩ retroactive modification of contracted revenues",
+        "severity": "HIGH ÔøΩ among the most significant retroactive RES interventions in EU history"
       }
     ],
-    "expropriation_risk": "Low ó EU member state; property rights under ECHR and Bulgarian Constitution",
-    "currency_risk": "Negligible ó BGN is fixed to EUR via Currency Board at 1.95583 BGN/EUR since 1999. For all practical purposes equivalent to EUR-denominated until formal Eurozone accession.",
+    "expropriation_risk": "Low ÔøΩ EU member state; property rights under ECHR and Bulgarian Constitution",
+    "currency_risk": "Negligible ÔøΩ BGN is fixed to EUR via Currency Board at 1.95583 BGN/EUR since 1999. For all practical purposes equivalent to EUR-denominated until formal Eurozone accession.",
     "political_notes": "Bulgaria's political instability is the primary near-term sovereign concern. Multiple elections since 2021 have made sustained policy reform difficult. EU accession to Eurozone and Schengen (border controls element achieved December 2024) represent positive structural progress. Anti-corruption reform progress is a condition for continued EU funds release.",
     "score_rationale": "Deductions from 100: 2014 retroactive RES levy (-20), political instability / frequent elections (-10), corruption risk in local administration (-6), slower judiciary (-4). Score 60 reflects improving trajectory but significant legacy discount."
   },
@@ -244,18 +244,18 @@
     "_scoring_direction": "Higher score = more drag = worse",
     "operational_drag_score_out_of_100": 72,
     "component_scores": {
-      "grid_connection_drag": { "score": 65, "assessment": "MEDIUM-HIGH ó northeastern grid constrained by existing wind; solar grid limits in some regions; ESO reinforcement programme slow" },
-      "permitting_drag_solar": { "score": 58, "assessment": "MEDIUM ó multi-agency process; corruption risk in local planning adds uncertainty; manageable with experienced Bulgarian development team" },
-      "permitting_drag_onshore_wind": { "score": 75, "assessment": "HIGH ó Natura 2000 (large network); Via Pontica bird migration; multi-agency process; 4ñ6 year realistic P50" },
-      "bureaucratic_friction": { "score": 78, "assessment": "HIGH ó Bulgarian public administration capacity limited; corruption risk in local permitting is a material consideration (Bulgaria remains under EU EPPO monitoring)" },
-      "judicial_appeal_risk": { "score": 68, "assessment": "MEDIUM-HIGH ó administrative courts functional; challenge risk from environmental NGOs increasing; Natura 2000 challenges are primary judicial risk" }
+      "grid_connection_drag": { "score": 65, "assessment": "MEDIUM-HIGH ÔøΩ northeastern grid constrained by existing wind; solar grid limits in some regions; ESO reinforcement programme slow" },
+      "permitting_drag_solar": { "score": 58, "assessment": "MEDIUM ÔøΩ multi-agency process; corruption risk in local planning adds uncertainty; manageable with experienced Bulgarian development team" },
+      "permitting_drag_onshore_wind": { "score": 75, "assessment": "HIGH ÔøΩ Natura 2000 (large network); Via Pontica bird migration; multi-agency process; 4ÔøΩ6 year realistic P50" },
+      "bureaucratic_friction": { "score": 78, "assessment": "HIGH ÔøΩ Bulgarian public administration capacity limited; corruption risk in local permitting is a material consideration (Bulgaria remains under EU EPPO monitoring)" },
+      "judicial_appeal_risk": { "score": 68, "assessment": "MEDIUM-HIGH ÔøΩ administrative courts functional; challenge risk from environmental NGOs increasing; Natura 2000 challenges are primary judicial risk" }
     },
     "primary_bottleneck": "Multi-agency permitting complexity combined with corruption risk in local administration; Natura 2000 bird migration constraints for wind",
     "score_rationale": "Score 72 reflects a high-drag jurisdiction where experienced local development partnerships are essential to navigate administrative complexity."
   },
 
   "fdi_restrictions": {
-    "screening_regime": "EU FDI Screening Regulation (EU) 2019/452 ó Bulgaria has implemented basic notification framework",
+    "screening_regime": "EU FDI Screening Regulation (EU) 2019/452 ÔøΩ Bulgaria has implemented basic notification framework",
     "energy_sector_mandatory_notification": true,
     "critical_infrastructure_threshold_pct": 10,
     "reviewing_ministry": "Ministry of Economy and Industry",
@@ -265,11 +265,11 @@
 
   "eu_state_aid": {
     "applicable": true,
-    "primary_framework": "CEEAG ó Commission Notice 2022/C 80/01",
+    "primary_framework": "CEEAG ÔøΩ Commission Notice 2022/C 80/01",
     "zevi_state_aid_status": {
       "instrument": "ZEVI competitive auction framework",
-      "status": "Bulgarian RES auction scheme under CEEAG framework ó competitive auction mechanism satisfies proportionality. Verify current EC clearance status at EC State Aid register (competition.ec.europa.eu).",
-      "retroactive_levy_note": "The 2014 retroactive levy was a domestic fiscal measure ó NOT an EC State Aid recovery order. Domestic retroactivity risk and EC State Aid recovery risk are distinct vectors."
+      "status": "Bulgarian RES auction scheme under CEEAG framework ÔøΩ competitive auction mechanism satisfies proportionality. Verify current EC clearance status at EC State Aid register (competition.ec.europa.eu).",
+      "retroactive_levy_note": "The 2014 retroactive levy was a domestic fiscal measure ÔøΩ NOT an EC State Aid recovery order. Domestic retroactivity risk and EC State Aid recovery risk are distinct vectors."
     },
     "retrospective_clawback_risk": {
       "assessment": "Low for post-2014 auction-based projects under cleared framework"
@@ -278,7 +278,7 @@
 
   "financial_model_inputs": {
     "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
-    "_rule_3c_note": "BGN is the domestic currency. All BGN figures converted to EUR at FIXED Currency Board rate of 1 EUR = 1.95583 BGN. No FX rate risk for EUR investors given currency board ó but Eurozone accession status must be verified.",
+    "_rule_3c_note": "BGN is the domestic currency. All BGN figures converted to EUR at FIXED Currency Board rate of 1 EUR = 1.95583 BGN. No FX rate risk for EUR investors given currency board ÔøΩ but Eurozone accession status must be verified.",
     "illustrative_solar_fip": {
       "reference_price_bgn_mwh_approx": 120,
       "reference_price_eur_mwh_fixed": 61.36,
@@ -298,36 +298,36 @@
       "typical_capex_eur_per_mw": 1250000,
       "opex_eur_per_mw_per_year": 38000,
       "effective_tax_rate_pct": 10,
-      "note": "Dobrudzha northeastern sites have best wind resource (30ñ38% capacity factors)."
+      "note": "Dobrudzha northeastern sites have best wind resource (30ÔøΩ38% capacity factors)."
     }
   },
 
   "rag_matrix": {
     "_rule_5a_note": "Rule 5A: RAG matrix mandatory.",
-    "permitting_window_solar": { "rag": "AMBER", "rationale": "Manageable but multi-agency complexity and corruption risk require experienced local team; 24ñ48 month P50" },
-    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "Natura 2000 (Via Pontica migration) and multi-agency process create real constraints; 4ñ6 year P50; feasible but complex" },
+    "permitting_window_solar": { "rag": "AMBER", "rationale": "Manageable but multi-agency complexity and corruption risk require experienced local team; 24ÔøΩ48 month P50" },
+    "permitting_window_onshore_wind": { "rag": "AMBER", "rationale": "Natura 2000 (Via Pontica migration) and multi-agency process create real constraints; 4ÔøΩ6 year P50; feasible but complex" },
     "grid_connection": { "rag": "AMBER", "rationale": "Grid capacity constrained in primary resource regions; ESO reinforcement behind demand; manageable with advance planning" },
     "support_mechanism_availability": { "rag": "AMBER", "rationale": "ZEVI auction framework improving; limited auction history; reference price verification essential; mechanism type confirmation with local counsel required" },
     "tax_efficiency": { "rag": "GREEN", "rationale": "10% CIT is among the lowest in EU; negligible FX risk given BGN/EUR currency board; very competitive tax environment" },
     "ppa_enforceability": { "rag": "AMBER", "rationale": "ZZD provides contractual framework; courts slower than western Europe; thin corporate offtaker market; ICC arbitration recommended" },
     "political_risk": { "rag": "RED", "rationale": "2014 retroactive levy precedent is material; political instability ongoing; corruption risk; improving under EU accountability frameworks" },
     "retroactive_policy_risk": { "rag": "RED", "rationale": "2014 retroactive RES levy is a mandatory investor disclosure item; while post-2014 framework is more stable, the precedent is severe" },
-    "operational_drag": { "rag": "AMBER", "rationale": "Score 72 ó high bureaucratic friction and Natura 2000 constraints are real; solar more viable than wind" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Score 72 ÔøΩ high bureaucratic friction and Natura 2000 constraints are real; solar more viable than wind" },
     "fdi_restrictions": { "rag": "GREEN", "rationale": "Basic FDI screening applies; low prohibition risk for OECD investors; InvestBulgaria Agency provides support" },
     "eu_state_aid_risk": { "rag": "GREEN", "rationale": "ZEVI auction framework EC-cleared; low formal State Aid recovery risk" },
     "overall_stop_go": "AMBER",
-    "overall_rationale": "Bulgaria offers the lowest CIT rate of the 11 notable absences (10%), an effectively EUR-pegged currency, and good solar resource (1,400ñ1,600 kWh/kWp). The combination of the 2014 retroactive RES levy precedent (mandatory disclosure), political instability, corruption risk in local administration, and multi-agency permitting complexity means this is a jurisdiction requiring experienced local development partnerships and higher return expectations. Best suited to Value-Add / Development risk profiles."
+    "overall_rationale": "Bulgaria offers the lowest CIT rate of the 11 notable absences (10%), an effectively EUR-pegged currency, and good solar resource (1,400ÔøΩ1,600 kWh/kWp). The combination of the 2014 retroactive RES levy precedent (mandatory disclosure), political instability, corruption risk in local administration, and multi-agency permitting complexity means this is a jurisdiction requiring experienced local development partnerships and higher return expectations. Best suited to Value-Add / Development risk profiles."
   },
 
   "comparison_table": {
     "1_permitting_window_months_p50": 48,
     "1_permitting_window_scope": "Onshore wind",
     "1_permitting_window_solar_p50_months": 30,
-    "2_grid_connection_cost_native": "BGN 60,000ñ400,000 per MW",
-    "2_grid_connection_cost_eur": "EUR 30,679ñ204,581 per MW (at fixed 1 EUR = 1.95583 BGN)",
-    "2_grid_connection_cost_fx_date": "Fixed Currency Board rate ó no FX risk",
-    "2_grid_connection_timeline_months": "24ñ60",
-    "3_primary_support_mechanism": "Feed-in Premium (competitive auction) ó ZEVI",
+    "2_grid_connection_cost_native": "BGN 60,000ÔøΩ400,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 30,679ÔøΩ204,581 per MW (at fixed 1 EUR = 1.95583 BGN)",
+    "2_grid_connection_cost_fx_date": "Fixed Currency Board rate ÔøΩ no FX risk",
+    "2_grid_connection_timeline_months": "24ÔøΩ60",
+    "3_primary_support_mechanism": "Feed-in Premium (competitive auction) ÔøΩ ZEVI",
     "3_mechanism_type_code": "one_way_market_premium",
     "4_effective_corporation_tax_rate_pct": 10,
     "4_effective_tax_rate_note": "10% flat CIT (ZKPO). No regional trade tax. Lowest CIT among the 11 notable absences.",
@@ -338,7 +338,7 @@
     "6_political_risk_direction": "Higher = lower risk",
     "7_operational_drag_score": 72,
     "7_operational_drag_direction": "Higher = more drag / worse",
-    "8_revenue_floor_native": "BGN 120/MWh approx. (solar, indicative reference price ó very limited auction history)",
+    "8_revenue_floor_native": "BGN 120/MWh approx. (solar, indicative reference price ÔøΩ very limited auction history)",
     "8_revenue_floor_eur": "EUR 61.36/MWh (at fixed 1 EUR = 1.95583 BGN)",
     "8_revenue_floor_fx_date": "Fixed Currency Board rate",
     "8_revenue_floor_mechanism": "one_way_market_premium",
@@ -349,13 +349,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "ESO (–ï–ª–µ–∫—Ç—Ä–æ–µ–Ω–µ—Ä–≥–∏–µ–Ω –°–∏—Å—Ç–µ–º–µ–Ω –û–ø–µ—Ä–∞—Ç–æ—Ä –ï–ê–î ‚Äî Bulgarian TSO/System Operator) –î–æ–ø—ä–ª–Ω–∏—Ç–µ–ª–Ω–∏ —É—Å–ª—É–≥–∏ (ancillary services): FCR (–ü—ä—Ä–≤–∏—á–Ω–∞ —Ä–µ–≥—É–ª–∞—Ü–∏—è –Ω–∞ —á–µ—Å—Ç–æ—Ç–∞), aFRR (–í—Ç–æ—Ä–∏—á–Ω–∞ —Ä–µ–≥—É–ª–∞—Ü–∏—è –Ω–∞ —á–µ—Å—Ç–æ—Ç–∞ –∏ –º–æ—â–Ω–æ—Å—Ç), and mFRR (–¢—Ä–µ—Ç–∏—á–Ω–∞ —Ä–µ–≥—É–ª–∞—Ü–∏—è –Ω–∞ –º–æ—â–Ω–æ—Å—Ç). BESS eligible to participate under CEP implementation in Bulgarian law.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "eso_bg_grid_code",
+      "notes": "ESO EAD is the Bulgarian TSO, part of the Continental European synchronous area. Ancillary services procured under –ü—Ä–∞–≤–∏–ª–∞ –∑–∞ —É–ø—Ä–∞–≤–ª–µ–Ω–∏–µ –Ω–∞ –µ–ª–µ–∫—Ç—Ä–æ–µ–Ω–µ—Ä–≥–∏–π–Ω–∞—Ç–∞ —Å–∏—Å—Ç–µ–º–∞ (Rules for Power System Management) and implementing –ö–ï–í–† (Energy and Water Regulatory Commission) decisions. CEP implemented via amendments to –ó–∞–∫–æ–Ω –∑–∞ –µ–Ω–µ—Ä–≥–µ—Ç–∏–∫–∞—Ç–∞ (Law on Energy, 2003 as amended). BESS prequalification for FCR/aFRR is available but the ancillary services market is less developed than Western European peers. Source: ESO –ü—Ä–∞–≤–∏–ª–∞ –∑–∞ —É–ø—Ä–∞–≤–ª–µ–Ω–∏–µ –Ω–∞ –µ–ª–µ–∫—Ç—Ä–æ–µ–Ω–µ—Ä–≥–∏–π–Ω–∞—Ç–∞ —Å–∏—Å—Ç–µ–º–∞; –ö–ï–í–† decisions; –ó–∞–∫–æ–Ω –∑–∞ –µ–Ω–µ—Ä–≥–µ—Ç–∏–∫–∞—Ç–∞."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,
@@ -374,7 +374,7 @@
       "mechanism_type_code": "one_way_market_premium",
       "eligible_under_existing_solar_auction": true,
       "water_body_consent_required": true,
-      "primary_support_mechanism": "Market premium under Zakon za energiata ot vaznobnovyaemi iztochnitsi (ZEVI) ó Renewable Energy Sources Act.",
+      "primary_support_mechanism": "Market premium under Zakon za energiata ot vaznobnovyaemi iztochnitsi (ZEVI) ÔøΩ Renewable Energy Sources Act.",
       "revenue_floor_description": null,
       "source": "jrc_pvgis",
       "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
@@ -448,15 +448,15 @@
     },
 
     "lh2_storage": {
-      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253∞C and associated liquefaction plant. Bulgaria is an emerging hydrogen market with ambitions linked to Maritsa East coal region decarbonisation and Black Sea offshore wind development. Bulgaria participates in IPCEI Hy2Tech. The primary regulatory gate is the SEVESO III safety regime administered by ????? (Regional Inspectorates of Environment and Water) with enforcement by ?? ??????? ???????????. CRITICAL FX NOTE: BGN is fixed to EUR at 1.95583 BGN = 1 EUR under Bulgaria's Currency Board Arrangement ó this is a legally fixed rate, not a market rate. For operational cashflows, EUR investors face negligible FX risk. No FX hedging cost applies. This is a material cost advantage for EUR-denominated project finance structures.",
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253ÔøΩC and associated liquefaction plant. Bulgaria is an emerging hydrogen market with ambitions linked to Maritsa East coal region decarbonisation and Black Sea offshore wind development. Bulgaria participates in IPCEI Hy2Tech. The primary regulatory gate is the SEVESO III safety regime administered by ????? (Regional Inspectorates of Environment and Water) with enforcement by ?? ??????? ???????????. CRITICAL FX NOTE: BGN is fixed to EUR at 1.95583 BGN = 1 EUR under Bulgaria's Currency Board Arrangement ÔøΩ this is a legally fixed rate, not a market rate. For operational cashflows, EUR investors face negligible FX risk. No FX hedging cost applies. This is a material cost advantage for EUR-denominated project finance structures.",
 
       "permitting_p50_months": 30,
       "permitting_confidence": "low",
       "mechanism_type_code": "tolling_arrangement",
-      "primary_support_mechanism": "No dedicated LH2 storage support mechanism. Standalone facilities operate on a tolling or merchant basis. ???? (??? ó ?????????? ???? ?? ?????????????? ? ??????????? / Bulgarian National Recovery and Resilience Plan) includes an H2 investment component; ???? 2021ñ2027 (Operational Programme Innovation and Competitiveness, EU Structural Funds) and ???? (Operational Programme Environment) provide CapEx grant routes for energy infrastructure. Bulgaria participates in IPCEI Hy2Tech ó integrated projects may access IPCEI funding. EU Hydrogen Bank competitive funding rounds are available. Source: ????? (Ministry of Innovation and Growth); European Commission DG ENER.",
+      "primary_support_mechanism": "No dedicated LH2 storage support mechanism. Standalone facilities operate on a tolling or merchant basis. ???? (??? ÔøΩ ?????????? ???? ?? ?????????????? ? ??????????? / Bulgarian National Recovery and Resilience Plan) includes an H2 investment component; ???? 2021ÔøΩ2027 (Operational Programme Innovation and Competitiveness, EU Structural Funds) and ???? (Operational Programme Environment) provide CapEx grant routes for energy infrastructure. Bulgaria participates in IPCEI Hy2Tech ÔøΩ integrated projects may access IPCEI funding. EU Hydrogen Bank competitive funding rounds are available. Source: ????? (Ministry of Innovation and Growth); European Commission DG ENER.",
       "revenue_floor_description": null,
       "source": "ewrc_bg; ipcei_hy2tech; iea_hydrogen",
-      "staleness_warning": "???? grant competition parameters, ???? programme call conditions, and industrial electricity prices are time-sensitive. Verify at Ministry of Energy (me.government.bg) and EWRC (dker.bg) before use. BGN/EUR rate is FIXED at 1.95583 ó verify Eurozone accession status at BNB (bnb.bg) as Euro adoption would affect regulatory framework.",
+      "staleness_warning": "???? grant competition parameters, ???? programme call conditions, and industrial electricity prices are time-sensitive. Verify at Ministry of Energy (me.government.bg) and EWRC (dker.bg) before use. BGN/EUR rate is FIXED at 1.95583 ÔøΩ verify Eurozone accession status at BNB (bnb.bg) as Euro adoption would affect regulatory framework.",
 
       "regulatory_framework": {
         "primary_safety_legislation": [
@@ -465,21 +465,21 @@
             "relevance": "Bulgarian transposition of SEVESO III. Mandatory safety regime for LH2 storage at or above threshold quantities. Lower tier (=10 t flammable gas, including LH2): notify ????? (Regional Inspectorate of Environment and Water), prepare ???? ?? ??????????????? ?? ?????? (MAPP equivalent) and on-site emergency plan. Upper tier (=50 t): detailed ?????? ?? ??????????? (safety report), external emergency plan, public information duty, periodic ????? inspection."
           },
           {
-            "instrument": "????? ?? ???????? ?? ???????? ????? (???? ó Environmental Protection Act) and ??????? ?? ????????? ? ???? ?? ?????????? ?? ?????? ?? ????????????? ????? ???????? ?????",
-            "relevance": "Environmental Impact Assessment (???? ó ?????? ?? ????????????? ????? ???????? ?????) required for LH2 facilities above threshold scale. ????? is the competent EIA authority at regional level; ???? (Ministry of Environment and Water) for nationally significant installations."
+            "instrument": "????? ?? ???????? ?? ???????? ????? (???? ÔøΩ Environmental Protection Act) and ??????? ?? ????????? ? ???? ?? ?????????? ?? ?????? ?? ????????????? ????? ???????? ?????",
+            "relevance": "Environmental Impact Assessment (???? ÔøΩ ?????? ?? ????????????? ????? ???????? ?????) required for LH2 facilities above threshold scale. ????? is the competent EIA authority at regional level; ???? (Ministry of Environment and Water) for nationally significant installations."
           },
           {
-            "instrument": "????? ?? ?????? ??? ???????? (ZZB ó Disaster Protection Act) and implementing regulations",
+            "instrument": "????? ?? ?????? ??? ???????? (ZZB ÔøΩ Disaster Protection Act) and implementing regulations",
             "relevance": "Emergency planning framework; ?? ??????? ??????????? ? ?????? ?? ??????????? (General Directorate Fire Safety and Civil Protection, Ministry of Interior) has inspection and enforcement competence for fire safety at LH2 installations."
           },
           {
-            "instrument": "??????? ? 7 ?? 2004 ?. ?? ?????????? ?? ???????????? ? ????????? ??????? ?? ???? ó ???? implementation",
+            "instrument": "??????? ? 7 ?? 2004 ?. ?? ?????????? ?? ???????????? ? ????????? ??????? ?? ???? ÔøΩ ???? implementation",
             "relevance": "Explosive atmosphere requirements; zone classification around LH2 storage and dispensing areas."
           }
         ],
         "planning_legislation": [
           {
-            "instrument": "????? ?? ?????????? ?? ??????????? (??? ó Spatial Planning Act)",
+            "instrument": "????? ?? ?????????? ?? ??????????? (??? ÔøΩ Spatial Planning Act)",
             "relevance": "??????????? (zoning) and spatial plan amendments; ?????????? ?????????? (building permit) required for LH2 tanks, liquefaction plant, and associated structures."
           },
           {
@@ -489,19 +489,19 @@
         ],
         "hydrogen_strategy_instruments": [
           {
-            "instrument": "?????????? ????????? ?? ???????? ?? ????????? ?????????? (National Hydrogen Strategy ó roadmap adopted 2020+)",
+            "instrument": "?????????? ????????? ?? ???????? ?? ????????? ?????????? (National Hydrogen Strategy ÔøΩ roadmap adopted 2020+)",
             "relevance": "Sets Bulgaria's hydrogen production and storage ambitions; identifies Maritsa East coal region decarbonisation, Black Sea offshore wind H2, and Kozloduy nuclear-H2 as strategic vectors. Published by Ministry of Energy."
           },
           {
-            "instrument": "???? (?????????? ???? ?? ?????????????? ? ??????????? ó Bulgarian National Recovery and Resilience Plan)",
+            "instrument": "???? (?????????? ???? ?? ?????????????? ? ??????????? ÔøΩ Bulgarian National Recovery and Resilience Plan)",
             "relevance": "EU-funded investment plan; includes H2 technology investment component. Ministry of Innovation and Growth (?????) administers grant competitions."
           },
           {
-            "instrument": "IPCEI Hy2Tech ó Bulgaria as participating Member State",
+            "instrument": "IPCEI Hy2Tech ÔøΩ Bulgaria as participating Member State",
             "relevance": "Bulgaria participates in IPCEI Hy2Tech (EC clearance 2022). Bulgarian industrial partners may access IPCEI funding for integrated hydrogen projects."
           },
           {
-            "instrument": "EU Hydrogen Bank ó Competitive Grant Rounds (European Commission)",
+            "instrument": "EU Hydrogen Bank ÔøΩ Competitive Grant Rounds (European Commission)",
             "relevance": "Bulgarian LH2 projects producing renewable hydrogen are eligible. First auction concluded 2024. Verify current round at European Hydrogen Bank portal."
           }
         ]
@@ -509,16 +509,16 @@
 
       "comah_equivalent_regime": {
         "national_instrument": "??????? ?? ??????????????? ?? ?????? ?????? ? ?????? ???????? (Bulgarian SEVESO III Ordinance)",
-        "competent_authority_primary": "????? ó ?????????? ????????? ?? ???????? ????? ? ?????? (Regional Inspectorates of Environment and Water ó 15 regional offices covering Bulgarian territory)",
-        "competent_authority_enforcement": "?? ??????? ??????????? ? ?????? ?? ??????????? ó ?????? ???????? ??????? ??????????? ? ?????? ?? ??????????? (General Directorate Fire Safety and Civil Protection, Ministry of Interior) ó fire safety inspection and enforcement",
+        "competent_authority_primary": "????? ÔøΩ ?????????? ????????? ?? ???????? ????? ? ?????? (Regional Inspectorates of Environment and Water ÔøΩ 15 regional offices covering Bulgarian territory)",
+        "competent_authority_enforcement": "?? ??????? ??????????? ? ?????? ?? ??????????? ÔøΩ ?????? ???????? ??????? ??????????? ? ?????? ?? ??????????? (General Directorate Fire Safety and Civil Protection, Ministry of Interior) ÔøΩ fire safety inspection and enforcement",
         "lower_tier_threshold_tonnes_flammable_gas": 10,
         "upper_tier_threshold_tonnes_flammable_gas": 50,
         "lower_tier_obligations": "Notify regional ?????; prepare ???? ?? ??????????????? ?? ?????? (major accident prevention plan); on-site emergency plan; periodic ????? inspection",
         "upper_tier_obligations": "Prepare detailed ?????? ?? ??????????? (safety report) acceptable to regional ????? and ????; external emergency plan by local civil protection authority; public information duty; periodic ????? inspection",
-        "legal_basis": "?????????, ?????????? 1 (Annex 1) ó ???????? ?????? (flammable gases) including hydrogen; SEVESO III thresholds (10t lower, 50t upper) apply",
+        "legal_basis": "?????????, ?????????? 1 (Annex 1) ÔøΩ ???????? ?????? (flammable gases) including hydrogen; SEVESO III thresholds (10t lower, 50t upper) apply",
         "safety_report_preparation_months_estimate": 6,
         "authority_assessment_months_estimate": 4,
-        "notes": "????? is the primary competent authority ó 15 regional offices with varying capacity. Projects in Sofia Region (?????-?????), Plovdiv, and Varna regions have better-resourced inspectorates. Corruption risk in local administration (flagged at operational drag score 78) is a real consideration ó experienced Bulgarian legal counsel and technical advisers are essential. ?? ??????? ??????????? has a separate approval track that must run in parallel with ?????."
+        "notes": "????? is the primary competent authority ÔøΩ 15 regional offices with varying capacity. Projects in Sofia Region (?????-?????), Plovdiv, and Varna regions have better-resourced inspectorates. Corruption risk in local administration (flagged at operational drag score 78) is a real consideration ÔøΩ experienced Bulgarian legal counsel and technical advisers are essential. ?? ??????? ??????????? has a separate approval track that must run in parallel with ?????."
       },
 
       "permitting": {
@@ -526,39 +526,39 @@
         "timeline_p50_months": 30,
         "timeline_range_months": { "min": 20, "max": 54 },
         "parallel_consent_tracks": [
-          "????? SEVESO safety report (?????? ?? ???????????) assessment ó 6ñ10 months post-submission",
-          "EIA (???? ó ?????? ?? ????????????? ????? ???????? ?????) via regional ????? ó 9ñ15 months",
-          "Spatial plan amendment (???) and building permit (?????????? ??????????) via municipal council ó 12ñ24 months (spatial plan amendment can be very slow)",
-          "?? ??????? ??????????? fire safety approval ó concurrent with building permit"
+          "????? SEVESO safety report (?????? ?? ???????????) assessment ÔøΩ 6ÔøΩ10 months post-submission",
+          "EIA (???? ÔøΩ ?????? ?? ????????????? ????? ???????? ?????) via regional ????? ÔøΩ 9ÔøΩ15 months",
+          "Spatial plan amendment (???) and building permit (?????????? ??????????) via municipal council ÔøΩ 12ÔøΩ24 months (spatial plan amendment can be very slow)",
+          "?? ??????? ??????????? fire safety approval ÔøΩ concurrent with building permit"
         ],
-        "spatial_plan_risk": "HIGH ó Bulgarian spatial plan amendment process at municipal level is frequently slow and subject to local political dynamics and corruption risk. This is the dominant permitting timeline driver for greenfield LH2 sites outside established industrial zones. Industrial zone (?????????? ????) siting avoids spatial plan amendment requirement.",
+        "spatial_plan_risk": "HIGH ÔøΩ Bulgarian spatial plan amendment process at municipal level is frequently slow and subject to local political dynamics and corruption risk. This is the dominant permitting timeline driver for greenfield LH2 sites outside established industrial zones. Industrial zone (?????????? ????) siting avoids spatial plan amendment requirement.",
         "appeal_risk": "medium-high",
-        "appeal_mechanism": "??????????????? ???????? (Administrative Courts); ???????? ??????????????? ??? (VAS ó Supreme Administrative Court)",
-        "notes": "P50 of 30 months assumes a greenfield lower-tier SEVESO facility in an established industrial zone (avoiding spatial plan amendment). Sites requiring spatial plan amendment add 6ñ18 months. Upper-tier sites (=50t LH2) add 6ñ10 months for safety report. Corruption risk in local permitting is a material uncertainty ó established industrial zone (e.g., Maritsa East industrial complex, Varna Free Trade Zone) siting dramatically reduces this exposure."
+        "appeal_mechanism": "??????????????? ???????? (Administrative Courts); ???????? ??????????????? ??? (VAS ÔøΩ Supreme Administrative Court)",
+        "notes": "P50 of 30 months assumes a greenfield lower-tier SEVESO facility in an established industrial zone (avoiding spatial plan amendment). Sites requiring spatial plan amendment add 6ÔøΩ18 months. Upper-tier sites (=50t LH2) add 6ÔøΩ10 months for safety report. Corruption risk in local permitting is a material uncertainty ÔøΩ established industrial zone (e.g., Maritsa East industrial complex, Varna Free Trade Zone) siting dramatically reduces this exposure."
       },
 
       "electricity_connection": {
-        "relevance": "Liquefaction is highly electricity-intensive (~10ñ12 kWh per kg H2 liquefied). Grid connection for the liquefaction plant is the primary infrastructure interface.",
+        "relevance": "Liquefaction is highly electricity-intensive (~10ÔøΩ12 kWh per kg H2 liquefied). Grid connection for the liquefaction plant is the primary infrastructure interface.",
         "liquefaction_specific_energy_kwh_per_kg_h2": {
           "range_low": 10,
           "range_high": 12,
           "source": "IEA, The Future of Hydrogen, 2019, p.52"
         },
-        "grid_operator": "??? EAD (??????????????? ???????? ???????? ó ESO EAD, Bulgarian TSO) for transmission-connected; regional DSOs for distribution-connected",
-        "grid_queue_risk": "MEDIUM-HIGH ó northeastern Bulgaria (Dobrudzha ó best wind resource) faces grid constraints from existing wind installations. Southern Bulgaria (best solar resource) faces DSO capacity limits in some areas. ESO reinforcement programme is underway but behind demand.",
-        "electricity_price_risk": "MEDIUM ó Bulgarian electricity prices are among the lowest in the EU by absolute EUR terms. However, market reform (IBEX price formation) and coal phase-out transition may increase industrial electricity prices over the project lifetime. BGN/EUR fixed peg means no FX risk on electricity costs.",
+        "grid_operator": "??? EAD (??????????????? ???????? ???????? ÔøΩ ESO EAD, Bulgarian TSO) for transmission-connected; regional DSOs for distribution-connected",
+        "grid_queue_risk": "MEDIUM-HIGH ÔøΩ northeastern Bulgaria (Dobrudzha ÔøΩ best wind resource) faces grid constraints from existing wind installations. Southern Bulgaria (best solar resource) faces DSO capacity limits in some areas. ESO reinforcement programme is underway but behind demand.",
+        "electricity_price_risk": "MEDIUM ÔøΩ Bulgarian electricity prices are among the lowest in the EU by absolute EUR terms. However, market reform (IBEX price formation) and coal phase-out transition may increase industrial electricity prices over the project lifetime. BGN/EUR fixed peg means no FX risk on electricity costs.",
         "bgn_eur_fixed_rate_advantage": "CRITICAL ADVANTAGE: BGN is fixed to EUR at exactly 1.95583 BGN/EUR under Bulgaria's Currency Board Arrangement (Law on Bulgarian National Bank, Article 29). Industrial electricity tariffs are BGN-denominated but translate to EUR at a fixed, known rate with zero FX uncertainty. This eliminates electricity cost FX risk for EUR-denominated project financing.",
-        "renewable_ppa_strategy": "Bulgarian solar PPA (southern Bulgaria, 1,400ñ1,600 kWh/kWp) or wind PPA (Dobrudzha, 30ñ38% capacity factors) provides green credentials. At EUR-equivalent electricity cost of approximately BGN 0.18ñ0.25/kWh (EUR 0.092ñ0.128/kWh at fixed rate) from a solar PPA: electricity opex ò EUR 1.01ñ1.41/kg LH2. Lower than UK/Germany but higher than Greece.",
+        "renewable_ppa_strategy": "Bulgarian solar PPA (southern Bulgaria, 1,400ÔøΩ1,600 kWh/kWp) or wind PPA (Dobrudzha, 30ÔøΩ38% capacity factors) provides green credentials. At EUR-equivalent electricity cost of approximately BGN 0.18ÔøΩ0.25/kWh (EUR 0.092ÔøΩ0.128/kWh at fixed rate) from a solar PPA: electricity opex ÔøΩ EUR 1.01ÔøΩ1.41/kg LH2. Lower than UK/Germany but higher than Greece.",
         "fx_note": "All electricity cost calculations at fixed BGN/EUR rate of 1.95583. No FX sensitivity required for BGN-denominated costs."
       },
 
       "support_mechanisms": {
         "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated one-way premium or two-way CfD in Bulgaria. Revenue is via tolling contracts with no state commodity floor. ????/???? grants are capital subsidies, not revenue mechanisms.",
-        "primary_mechanism_standalone": "Tolling arrangement ó infrastructure fee for liquefaction, storage, and dispensing; no state commodity price floor",
+        "primary_mechanism_standalone": "Tolling arrangement ÔøΩ infrastructure fee for liquefaction, storage, and dispensing; no state commodity price floor",
         "npvp_opik_capex_grant": {
           "applicable": true,
-          "description": "???? (National Recovery and Resilience Plan) H2 component and ???? 2021ñ2027 (Operational Programme Innovation and Competitiveness, EU Structural Funds) provide CapEx grants for qualifying hydrogen infrastructure. Eligible costs include liquefaction plant, cryogenic storage tanks, and civil works.",
-          "indicative_grant_rate": "Aid intensity limits under CEEAG / GBER Article 41. Bulgaria qualifies as a less-developed region (GDP per capita < 75% EU average) ó maximum aid intensity of up to 55ñ70% of eligible CapEx may apply. Verify at ????? (mikov.government.bg) for current call parameters.",
+          "description": "???? (National Recovery and Resilience Plan) H2 component and ???? 2021ÔøΩ2027 (Operational Programme Innovation and Competitiveness, EU Structural Funds) provide CapEx grants for qualifying hydrogen infrastructure. Eligible costs include liquefaction plant, cryogenic storage tanks, and civil works.",
+          "indicative_grant_rate": "Aid intensity limits under CEEAG / GBER Article 41. Bulgaria qualifies as a less-developed region (GDP per capita < 75% EU average) ÔøΩ maximum aid intensity of up to 55ÔøΩ70% of eligible CapEx may apply. Verify at ????? (mikov.government.bg) for current call parameters.",
           "staleness_warning": "???? and ???? call parameters are time-sensitive. Verify current open calls at Ministry of Innovation and Growth (mikov.government.bg)."
         },
         "ipcei_hy2tech": {
@@ -573,8 +573,8 @@
           "source": "European Commission DG ENER"
         },
         "retroactive_levy_risk_flag": {
-          "WARNING": "SOVEREIGN RISK FLAG ó 2014 RETROACTIVE LEVY PRECEDENT: Bulgaria enacted a 20% levy on FiT revenues for commissioned RES generators in 2014, retroactively modifying contracted revenues. While this was a RES-specific measure and not directly applicable to LH2 tolling revenue, the precedent demonstrates Bulgarian government willingness to impose sectoral revenue levies by legislative action. All investor materials for Bulgarian LH2 projects should disclose the 2014 retroactive RES levy precedent as a political risk factor, even though it does not directly govern LH2 revenues. Legal basis: amendments to ZEVI and subsidiary legislation enacted 2014.",
-          "severity": "MEDIUM ó indirect precedent for LH2 tolling; direct applicability to LH2 is limited; disclosed as political risk context"
+          "WARNING": "SOVEREIGN RISK FLAG ÔøΩ 2014 RETROACTIVE LEVY PRECEDENT: Bulgaria enacted a 20% levy on FiT revenues for commissioned RES generators in 2014, retroactively modifying contracted revenues. While this was a RES-specific measure and not directly applicable to LH2 tolling revenue, the precedent demonstrates Bulgarian government willingness to impose sectoral revenue levies by legislative action. All investor materials for Bulgarian LH2 projects should disclose the 2014 retroactive RES levy precedent as a political risk factor, even though it does not directly govern LH2 revenues. Legal basis: amendments to ZEVI and subsidiary legislation enacted 2014.",
+          "severity": "MEDIUM ÔøΩ indirect precedent for LH2 tolling; direct applicability to LH2 is limited; disclosed as political risk context"
         },
         "merchant_route": {
           "available": true,
@@ -584,46 +584,46 @@
       },
 
       "tax": {
-        "_rule_3b_note": "Rule 3B: Bulgarian CIT is 10% ó one of the lowest in the EU. Standard depreciation over 10 years for equipment provides modest timing benefit at this low rate. The 10% CIT rate itself is the primary tax incentive ó not depreciation acceleration.",
+        "_rule_3b_note": "Rule 3B: Bulgarian CIT is 10% ÔøΩ one of the lowest in the EU. Standard depreciation over 10 years for equipment provides modest timing benefit at this low rate. The 10% CIT rate itself is the primary tax incentive ÔøΩ not depreciation acceleration.",
         "cit_rate_pct": 10.0,
-        "legal_basis": "????? ?? ?????????????? ????????? ???????? (???? ó Corporate Income Tax Act); 10% flat CIT rate",
+        "legal_basis": "????? ?? ?????????????? ????????? ???????? (???? ÔøΩ Corporate Income Tax Act); 10% flat CIT rate",
         "depreciation": {
-          "method": "Declining balance (?????????? ???????? ó ??????? ?????????????? ????) under ???? ßß55ñ62",
+          "method": "Declining balance (?????????? ???????? ÔøΩ ??????? ?????????????? ????) under ???? ÔøΩÔøΩ55ÔøΩ62",
           "category_iv_rate_pct": 25,
-          "applies_to": "Machinery and equipment (??????, ??????????, ???????) ó Category IV under ???? Annex II. LH2 liquefaction equipment, cryogenic storage vessels, and associated machinery should qualify as Category IV assets at 25% declining balance.",
-          "legal_basis": "???? Annex II (??????? ?????????????? ???? / Tax Depreciation Schedule) ó Category IV: ??????, ??????????, ???????, ??????????? ???????? (machines, installations, apparatus) ó 25% declining balance (?????????? ???????? ó DDB method)",
-          "npv_timing_benefit": "At 10% CIT and 10% WACC: 25% declining balance over useful life vs. straight-line 10 years (10% p.a.): NPV of tax shield under 25% DDB ò 7.4% of qualifying CapEx vs. 6.1% under straight-line. Timing benefit ò 1.3ppts per BGN 1 of qualifying CapEx. Small absolute benefit given 10% base CIT rate ó primary advantage is the 10% rate itself, not depreciation method.",
+          "applies_to": "Machinery and equipment (??????, ??????????, ???????) ÔøΩ Category IV under ???? Annex II. LH2 liquefaction equipment, cryogenic storage vessels, and associated machinery should qualify as Category IV assets at 25% declining balance.",
+          "legal_basis": "???? Annex II (??????? ?????????????? ???? / Tax Depreciation Schedule) ÔøΩ Category IV: ??????, ??????????, ???????, ??????????? ???????? (machines, installations, apparatus) ÔøΩ 25% declining balance (?????????? ???????? ÔøΩ DDB method)",
+          "npv_timing_benefit": "At 10% CIT and 10% WACC: 25% declining balance over useful life vs. straight-line 10 years (10% p.a.): NPV of tax shield under 25% DDB ÔøΩ 7.4% of qualifying CapEx vs. 6.1% under straight-line. Timing benefit ÔøΩ 1.3ppts per BGN 1 of qualifying CapEx. Small absolute benefit given 10% base CIT rate ÔøΩ primary advantage is the 10% rate itself, not depreciation method.",
           "note": "Category IV 25% declining balance is the Z??? prescribed rate for equipment. Verify classification of LH2-specific assets (vacuum-insulated storage vessels, liquefaction compressors) with Bulgarian tax adviser."
         },
-        "bgn_eur_fixed_advantage": "BGN fixed to EUR at 1.95583 ó all CIT calculations translate to EUR at a known, stable rate. No FX uncertainty on tax shield NPV calculations. This simplifies EUR-denominated financial modelling materially.",
+        "bgn_eur_fixed_advantage": "BGN fixed to EUR at 1.95583 ÔøΩ all CIT calculations translate to EUR at a known, stable rate. No FX uncertainty on tax shield NPV calculations. This simplifies EUR-denominated financial modelling materially.",
         "no_local_trade_tax": "Bulgaria has no municipal trade/business tax equivalent to Hungary's HIPA or Germany's Gewerbesteuer. 10% CIT is the primary tax burden.",
         "vat": {
           "standard_rate_pct": 20,
           "input_vat_recovery": "Available for VAT-registered businesses",
-          "legal_basis": "???? (????? ?? ????? ????? ?????????? ???????? ó VAT Act)"
+          "legal_basis": "???? (????? ?? ????? ????? ?????????? ???????? ÔøΩ VAT Act)"
         }
       },
 
       "safety_standards": {
-        "cryogenic_vessel_standard": "??? EN 1251 (Bulgarian adoption of EN 1251 ó Cryogenic vessels ó static vacuum-insulated vessels)",
-        "electrical_hazardous_area": "Zone classification per ??? EN 60079 (ATEX ó Bulgarian adoption); ??????? ? 7/2004 explosive atmosphere safety",
+        "cryogenic_vessel_standard": "??? EN 1251 (Bulgarian adoption of EN 1251 ÔøΩ Cryogenic vessels ÔøΩ static vacuum-insulated vessels)",
+        "electrical_hazardous_area": "Zone classification per ??? EN 60079 (ATEX ÔøΩ Bulgarian adoption); ??????? ? 7/2004 explosive atmosphere safety",
         "boil_off_gas_management": {
           "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
           "management_options": ["Reliquefaction", "Catalytic combustion / controlled flare (????? permit condition governs)", "Use as on-site fuel"],
-          "regulatory_basis": "BOG must be addressed as a major accident scenario in the ?????? ?? ??????????? under the SEVESO III Ordinance. ????? environmental permit conditions (??????? ?? ???? ó EIA decision) govern atmospheric releases."
+          "regulatory_basis": "BOG must be addressed as a major accident scenario in the ?????? ?? ??????????? under the SEVESO III Ordinance. ????? environmental permit conditions (??????? ?? ???? ÔøΩ EIA decision) govern atmospheric releases."
         }
       },
 
       "financial_model_inputs": {
         "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, and DSCR modelling. Figures are indicative benchmarks only.",
-        "_rule_3c_note": "Primary currency is BGN. EUR equivalents at FIXED Currency Board rate of 1 EUR = 1.95583 BGN. NO FX risk for EUR investors ó this is a legally fixed rate under the Bulgarian National Bank Law (Article 29). This simplifies financial modelling: all BGN cashflows convert to EUR at a known, stable rate. Verify Eurozone accession status at BNB (bnb.bg).",
+        "_rule_3c_note": "Primary currency is BGN. EUR equivalents at FIXED Currency Board rate of 1 EUR = 1.95583 BGN. NO FX risk for EUR investors ÔøΩ this is a legally fixed rate under the Bulgarian National Bank Law (Article 29). This simplifies financial modelling: all BGN cashflows convert to EUR at a known, stable rate. Verify Eurozone accession status at BNB (bnb.bg).",
         "illustrative_medium_scale_hub": {
           "scale": "2 tonne/day liquefaction capacity; 50 tonne vacuum-insulated storage",
           "liquefaction_capex_bgn": {
             "per_tonne_per_day_midpoint_bgn": 6839015,
             "eur_midpoint_approx": 3500000,
             "fx_rate_used": "Fixed: 1 EUR = 1.95583 BGN",
-            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023 ó EUR midpoint converted at fixed BGN rate"
+            "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023 ÔøΩ EUR midpoint converted at fixed BGN rate"
           },
           "storage_tank_capex_bgn": {
             "per_tonne_midpoint_bgn": 1955830,
@@ -633,8 +633,8 @@
           "illustrative_total_project_capex": {
             "total_indicative_bgn": 133759500,
             "eur_equivalent_fixed": 68400000,
-            "fx_rate_used": "Fixed: 1 EUR = 1.95583 BGN ó NO FX RISK",
-            "notes": "Balance of plant 20% of equipment. Bulgarian civil construction costs are competitive ó among the lowest in the EU. Excludes grid connection. No FX uncertainty in EUR conversion."
+            "fx_rate_used": "Fixed: 1 EUR = 1.95583 BGN ÔøΩ NO FX RISK",
+            "notes": "Balance of plant 20% of equipment. Bulgarian civil construction costs are competitive ÔøΩ among the lowest in the EU. Excludes grid connection. No FX uncertainty in EUR conversion."
           },
           "opex_electricity": {
             "specific_energy_kwh_per_kg_h2": 11,
@@ -643,12 +643,12 @@
             "electricity_opex_bgn_per_kg_lh2": 2.42,
             "electricity_opex_eur_per_kg_lh2_fixed": 1.24,
             "fx_rate_used": "Fixed: 1 EUR = 1.95583 BGN",
-            "source": "Indicative Bulgarian industrial tariff ó verify current EWRC regulated price before use. IEA energy intensity figure.",
-            "note": "No FX risk on electricity cost calculation ó BGN fixed to EUR. Industrial electricity price in Bulgaria is among the lowest in the EU."
+            "source": "Indicative Bulgarian industrial tariff ÔøΩ verify current EWRC regulated price before use. IEA energy intensity figure.",
+            "note": "No FX risk on electricity cost calculation ÔøΩ BGN fixed to EUR. Industrial electricity price in Bulgaria is among the lowest in the EU."
           },
           "boil_off_loss_pct_per_day": 0.5,
-          "tax_model_note": "At 10% CIT and 25% declining balance depreciation on Category IV assets: modest timing benefit (NPV delta ò 1.3ppts). Primary tax benefit is the 10% base rate itself. No HIPA-equivalent revenue tax. Model CIT as straightforward 10% on taxable profit.",
-          "construction_cost_advantage": "Bulgarian civil construction costs are among the lowest in the EU (general construction cost index: approximately 50ñ60% of western European average). This provides a real CapEx advantage for greenfield LH2 infrastructure relative to UK, Germany, or Netherlands sites.",
+          "tax_model_note": "At 10% CIT and 25% declining balance depreciation on Category IV assets: modest timing benefit (NPV delta ÔøΩ 1.3ppts). Primary tax benefit is the 10% base rate itself. No HIPA-equivalent revenue tax. Model CIT as straightforward 10% on taxable profit.",
+          "construction_cost_advantage": "Bulgarian civil construction costs are among the lowest in the EU (general construction cost index: approximately 50ÔøΩ60% of western European average). This provides a real CapEx advantage for greenfield LH2 infrastructure relative to UK, Germany, or Netherlands sites.",
           "note": "Illustrative inputs only. Engineering study required before financial modelling. EUR equivalents are exact (no FX uncertainty) given BGN Currency Board fixed rate."
         }
       },
@@ -658,37 +658,37 @@
         "key_bulgaria_lh2_projects_indicative": [
           {
             "project": "Maritsa East TPP H2 Conversion Concept",
-            "status": "Concept/early study ó NEK (?????????? ???????????? ????????) and Enel exploring H2 co-firing at Maritsa East thermal plant as decarbonisation pathway; LH2 storage would be enabling infrastructure",
+            "status": "Concept/early study ÔøΩ NEK (?????????? ???????????? ????????) and Enel exploring H2 co-firing at Maritsa East thermal plant as decarbonisation pathway; LH2 storage would be enabling infrastructure",
             "operator": "??? EAD (National Electricity Company) / Enel",
             "note": "Maritsa East is Bulgaria's largest coal power complex; Just Transition Fund supports industrial repurposing; H2 co-firing is a transition concept"
           },
           {
             "project": "Black Sea Offshore Wind + H2 (concept stage)",
-            "status": "Early concept ó multiple developers exploring Black Sea offshore wind development with H2 production; LH2 storage and export are long-term scenarios",
+            "status": "Early concept ÔøΩ multiple developers exploring Black Sea offshore wind development with H2 production; LH2 storage and export are long-term scenarios",
             "note": "Black Sea offshore regulatory framework is nascent; projects pre-2030 are unlikely"
           },
           {
             "project": "Kozloduy NPP H2 Production Concept",
-            "status": "Early study ó ???????? ?? (Kozloduy NPP) exploring H2 production from surplus nuclear generation",
+            "status": "Early study ÔøΩ ???????? ?? (Kozloduy NPP) exploring H2 production from surplus nuclear generation",
             "operator": "??? ???????? ???",
             "note": "Nuclear-powered H2 production would be low-carbon; LH2 storage relevant for export or industrial supply"
           },
           {
             "project": "Sofia H2 Bus Trial",
-            "status": "Pilot ó compressed H2; LH2 format not current priority at pilot scale",
+            "status": "Pilot ÔøΩ compressed H2; LH2 format not current priority at pilot scale",
             "note": "Primarily compressed H2; LH2 relevant if fleet significantly expands"
           }
         ],
         "primary_demand_drivers": [
-          "Industrial decarbonisation ó Maritsa East heavy industry transition; Devnya chemical complex H2 demand",
-          "Black Sea transit hub ó Bulgaria as H2 production and transit route for SE European H2 exports",
-          "Heavy transport ó growing HGV and bus fleet H2 demand on Trans-European transport corridors",
-          "Kozloduy nuclear-H2 coupling ó low-carbon electricity for electrolysis"
+          "Industrial decarbonisation ÔøΩ Maritsa East heavy industry transition; Devnya chemical complex H2 demand",
+          "Black Sea transit hub ÔøΩ Bulgaria as H2 production and transit route for SE European H2 exports",
+          "Heavy transport ÔøΩ growing HGV and bus fleet H2 demand on Trans-European transport corridors",
+          "Kozloduy nuclear-H2 coupling ÔøΩ low-carbon electricity for electrolysis"
         ],
         "supply_chain_note": "Bulgaria has no domestic LH2 production as of 2025. European suppliers (Linde, Air Liquide, Chart Industries) are primary equipment vendors. Bulgarian civil construction capacity is adequate and cost-competitive (lowest construction cost base of the five jurisdictions in this analysis)."
       },
 
-      "notes": "Bulgaria offers a distinctive combination for LH2 infrastructure: the lowest CIT in this five-jurisdiction group (10%), the BGN/EUR fixed peg eliminating all FX risk for EUR investors, and among the lowest civil construction costs in the EU. The SEVESO III regime under the Bulgarian ??????? provides a structured safety pathway administered by ?????. The primary development risks are: (1) high bureaucratic friction (operational drag score 72) and corruption risk in local permitting ó mitigated by established industrial zone siting; (2) the 2014 retroactive RES levy precedent, which must be disclosed to investors as a political risk context for any Bulgarian energy investment; (3) thin corporate credit market requiring international-grade offtakers. The BGN fixed peg to EUR at 1.95583 (Currency Board ó legally irrevocable; Law on BNB Article 29) means EUR-denominated project finance faces zero FX uncertainty on domestic cost items ó a material advantage over RON (Romania) and HUF (Hungary). Eurozone accession would further strengthen this position. All grant parameters must be verified at mikov.government.bg and ewrc before project commitment."
+      "notes": "Bulgaria offers a distinctive combination for LH2 infrastructure: the lowest CIT in this five-jurisdiction group (10%), the BGN/EUR fixed peg eliminating all FX risk for EUR investors, and among the lowest civil construction costs in the EU. The SEVESO III regime under the Bulgarian ??????? provides a structured safety pathway administered by ?????. The primary development risks are: (1) high bureaucratic friction (operational drag score 72) and corruption risk in local permitting ÔøΩ mitigated by established industrial zone siting; (2) the 2014 retroactive RES levy precedent, which must be disclosed to investors as a political risk context for any Bulgarian energy investment; (3) thin corporate credit market requiring international-grade offtakers. The BGN fixed peg to EUR at 1.95583 (Currency Board ÔøΩ legally irrevocable; Law on BNB Article 29) means EUR-denominated project finance faces zero FX uncertainty on domestic cost items ÔøΩ a material advantage over RON (Romania) and HUF (Hungary). Eurozone accession would further strengthen this position. All grant parameters must be verified at mikov.government.bg and ewrc before project commitment."
     }
   }
 }
