@@ -318,6 +318,7 @@ function buildCellHtml(catKey, cell, technology = null) {
       const solar = cell.solar ?? null;
       const windLabel = technology === 'offshore_wind' ? 'Offshore wind P50'
                       : technology === 'solar'         ? 'Wind / generic P50'
+                      : cell.isNewTech                 ? `${(TECH_LABELS[technology] ?? technology).replace(/^.*?\s/, '')} P50`
                       : 'Onshore wind P50';
       return `<div class="cell-primary">${wind}<span class="cell-unit"> mo</span></div>
               <div class="cell-detail">${windLabel}</div>

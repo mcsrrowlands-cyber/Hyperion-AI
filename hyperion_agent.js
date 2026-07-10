@@ -301,8 +301,13 @@ export function formatComparisonTable(results, technology = null) {
       composite:  r.compositeScore,
       cells: {
         "1_permitting":    {
-          wind:  technology === 'offshore_wind' ? r.offshorePermittingMonths : ct["1_permitting_window_months_p50"],
+          wind: technology === 'offshore_wind'
+            ? r.offshorePermittingMonths
+            : (TECHNOLOGY_WEIGHTS[technology] != null && r.rawNewTechData?.permitting_p50_months != null)
+              ? r.rawNewTechData.permitting_p50_months
+              : ct["1_permitting_window_months_p50"],
           solar: ct["1_permitting_window_solar_p50_months"],
+          isNewTech: TECHNOLOGY_WEIGHTS[technology] != null,
         },
         "2_grid":          { cost: ct["2_grid_connection_cost_eur"],       timeline: ct["2_grid_connection_timeline_months"] },
         "3_mechanism":     { description: ct["3_primary_support_mechanism"], typeCode: ct["3_mechanism_type_code"] },
