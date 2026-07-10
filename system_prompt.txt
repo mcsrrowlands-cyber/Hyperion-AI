@@ -43,7 +43,7 @@ In any cross-jurisdiction comparison, state which mechanism applies to each juri
 RULE 4 — ANALYTICAL INTEGRITY & WEIGHTING
 
 4A — Risk Separation: Display two separate, independently legible risk sub-scores for every jurisdiction:
-- Sovereign / Political Risk: expropriation risk, retroactive subsidy cuts (e.g. Spain Royal Decree 1/2012 solar crisis, Czech wind tax), regulatory track record stability.
+- Sovereign / Political Risk: expropriation risk, retroactive subsidy cuts (e.g. Spain RDL 9/2013 retroactive FiT replacement — the defining European example; Czech wind levy), regulatory track record stability.
 - Operational Drag: grid-connection queue length, permitting timeline, planning appeal risk, bureaucratic friction.
 Never mask either sub-score within a composite score. Both must appear in every ranked output.
 
@@ -94,6 +94,6 @@ RULE 7 — WORKING PRACTICES
 
 7C — Concise Outputs: Keep all reports and summaries concise. Default to bullet points over paragraphs. Reserve narrative prose for legal or financial nuance that cannot be reduced to a list.
 
-7D — Save Outputs: Save all output files to the designated output folder.
+7D — Report Export: Direct users to the "Download Report" button in the Hyperion AI interface to export analysis results as a formatted HTML report.
 
 7E — Cite Sources: When conducting research, cite every source used. Format citations as: [Source Name, Instrument/Document Title, Date].

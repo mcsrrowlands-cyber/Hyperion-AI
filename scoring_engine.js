@@ -367,16 +367,22 @@ function scorePpa(jdata) {
 function scoreStateAid(jdata) {
   if (!jdata.jurisdiction.eu_member) return 88;
 
-  const riskStr = jdata.eu_state_aid?.retrospective_clawback_risk?.assessment || "Medium";
+  // JSON files use two formats: string "Low — note" or object { assessment: "Low — note" }
+  const risk = jdata.eu_state_aid?.retrospective_clawback_risk;
+  const rawRisk = (typeof risk === 'string' ? risk : risk?.assessment) ?? '';
+  // Extract rating prefix before " — " or " for " (e.g. "Low — SDE++" → "Low")
+  const riskStr = (rawRisk.split(/\s+(?:—|for\b)/)[0] ?? '').trim();
+
   const mapping = {
-    "Very Low":   95,
-    "Low":        88,
-    "Low-Medium": 75,
-    "Medium":     55,
-    "High":       25,
-    "Very High":  10,
+    "very low":    95,
+    "low":         88,
+    "low-medium":  75,
+    "medium":      55,
+    "medium-high": 40,
+    "high":        25,
+    "very high":   10,
   };
-  return mapping[riskStr] ?? 55;
+  return mapping[riskStr.toLowerCase()] ?? 55;
 }
 
 /**
@@ -389,7 +395,11 @@ function scoreEsg(jdata, technology = null) {
   if (jdata.jurisdiction.eu_member) score += 15;
   const rag = jdata.rag_matrix || {};
   if (rag.support_mechanism_availability?.rag === "GREEN") score += 10;
-  if (rag.permitting_window_solar?.rag === "GREEN") score += 10;
+  // Award permitting bonus if ANY permitting signal is GREEN (solar, onshore wind, or generic)
+  const permGreen = rag.permitting_window_solar?.rag       === "GREEN"
+                 || rag.permitting_window_onshore_wind?.rag === "GREEN"
+                 || rag.permitting_window?.rag              === "GREEN";
+  if (permGreen) score += 10;
   if (rag.political_risk?.rag === "GREEN") score += 10;
 
   if (technology === "green_hydrogen")  score += 15;  // Strong additionality signal
@@ -444,11 +454,13 @@ function generateAlerts(jdata, profile, technology = null) {
   // Rule 4A(i) — retroactive policy incidents
   const retroactive = jdata.sovereign_risk?.retroactive_policy_incidents || [];
   const highSev = retroactive.filter(
-    (i) => String(i.severity || "").toLowerCase().startsWith("high")
+    (i) => /^(high|critical)/i.test(String(i.severity || ""))
   );
   if (highSev.length > 0) {
+    const hasCritical = highSev.some(i => /^critical/i.test(String(i.severity || "")));
+    const label = hasCritical ? 'CRITICAL / HIGH' : 'HIGH';
     alerts.push(
-      `ALERT [Rule 4A(i)]: ${highSev.length} HIGH-severity retroactive policy incident(s) ` +
+      `ALERT [Rule 4A(i)]: ${highSev.length} ${label}-severity retroactive policy incident(s) ` +
       `recorded for ${name}. Review sovereign_risk section before committing capital.`
     );
   }
