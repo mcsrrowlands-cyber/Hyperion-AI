@@ -504,13 +504,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "quota_certificate_with_minimum_price",
+      "primary_support_mechanism": "Certificate verzi (green certificates) system under Legea nr. 220/2008 pentru stabilirea sistemului de promovare a producerii energiei din surse regenerabile (as repeatedly amended). ANRE (Autoritatea Națională de Reglementare în domeniul Energiei) sets minimum certificate prices by technology. Biowaste/biogas generators earn green certificates sold to suppliers. RETROACTIVE RISK: Romania's green certificate scheme has been retroactively modified multiple times — see political risk alert. Source: ANRE (anre.ro); Legea 220/2008.",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Retroactive policy precedent (Green Certificate scheme) means additional diligence required on support mechanism stability. Verify current Romanian bioenergy support at ANRE before use."
+      "source": "anre_ro; legea_220_2008",
+      "notes": "Romanian biowaste/biogas qualifies for green certificates with ANRE minimum price floor. RETROACTIVE POLICY RISK: Romania's green certificate scheme has been modified retroactively multiple times — suspension of green certificates (2013-2017) is a critical precedent. EU RED III compliance and feedstock sustainability criteria apply. Verify current ANRE certificate parameters, biowaste green certificate multiplier, and scheme stability before committing capital."
     },
     "coal_energy": {
       "policy_status": "phase_out",

@@ -425,13 +425,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "one_way_market_premium",
+      "primary_support_mechanism": "Régimen Económico de Energías Renovables (REER) — retribución a la operación (Ro) market premium under Real Decreto 960/2020 (Ministerio para la Transición Ecológica). CNMC (Comisión Nacional de Mercados y la Competencia) administers settlement. Biomass/biowaste installations qualify under REER competitive auction rounds (subastas IDAE). One-way premium (retribución de la operación). Source: CNMC (cnmc.es); RD 960/2020.",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Spanish bioenergy support under REER framework (MITECO/CNMC) before use."
+      "source": "cnmc_es; rd_960_2020",
+      "notes": "Spanish biomass/biowaste qualifies for REER market premium (retribución a la operación) under RD 960/2020. EU RED III compliance and feedstock sustainability criteria apply. Verify current CNMC reference values and biowaste basket eligibility before use — REER auction parameters change with each auction round (subastas IDAE)."
     },
     "coal_energy": {
       "policy_status": "exited",

@@ -432,13 +432,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "two_way_cfd",
+      "primary_support_mechanism": "OZE aukcje (renewable energy auctions) — Two-Way CfD (kontrakt różnicowy) under Ustawa OZE (Ustawa z dnia 20 lutego 2015 r. o odnawialnych źródłach energii), administered by URE. Biomass/biowaste generators compete in dedicated auction baskets (Basket 5 — biogas; general biomass baskets). TWO-WAY: excess above clearing price (cena aukcyjna) is paid back to URE settlement system. 15-year contract term. Source: URE (ure.gov.pl); Ustawa OZE Arts. 72-98.",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Polish bioenergy support under OZE auction framework (URE) before use."
+      "source": "ure_pl; ustawa_oze_2015",
+      "notes": "Polish biowaste/biomass generators qualify for OZE aukcje (TWO-WAY CfD). EU RED III compliance and feedstock sustainability criteria apply. PLN-denominated auction prices — EUR investors face FX risk. Verify current URE auction clearing prices (ceny aukcyjne) for biowaste/biogas baskets before use — auction prices are set competitively and change annually. Staleness risk: HIGH for specific price figures."
     },
     "coal_energy": {
       "policy_status": "transitional",

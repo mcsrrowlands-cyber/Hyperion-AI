@@ -380,13 +380,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "one_way_market_premium",
+      "primary_support_mechanism": "Doplatky (price supplement) under Zákon č. 309/2009 Z.z. o podpore obnoviteľných zdrojov energie (OZE zákon), administered by ÚRSO (Úrad pre reguláciu sieťových odvetví) with settlement by OKTE a.s. ONE-WAY: supplement paid when market price falls below ÚRSO reference price; no clawback above. Biowaste/biogas installations qualify for support under OZE zákon. Source: ÚRSO (urso.gov.sk); OKTE (okte.sk).",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Slovak bioenergy support under Zákon č. 309/2009 Z.z. framework before use."
+      "source": "urso_sk; oze_zakon_309_2009",
+      "notes": "Slovak biowaste/biogas receives doplatky (one-way market premium) under OZE zákon. EU RED III compliance and feedstock sustainability criteria apply. ÚRSO sets reference prices annually — staleness risk HIGH for specific rates. Verify current ÚRSO reference prices for biowaste basket at urso.gov.sk before use."
     },
     "coal_energy": {
       "policy_status": "no_sector",

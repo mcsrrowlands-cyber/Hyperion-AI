@@ -373,13 +373,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "one_way_market_premium",
+      "primary_support_mechanism": "Operational support (obratovalna podpora) market premium under Zakon o spodbujanju rabe obnovljivih virov energije (ZSROVE). Borzen (market operator) administers premium settlement for qualifying biowaste/biogas installations. One-way premium mechanism. Source: Borzen (borzen.si); ZSROVE.",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Slovenian bioenergy support under ZSROVE framework before use."
+      "source": "borzen_si; zsrove",
+      "notes": "Slovenian biowaste/biogas qualifies for obratovalna podpora market premium under ZSROVE. EU RED III compliance and feedstock sustainability criteria apply. Verify current Borzen reference prices and biowaste basket eligibility before use."
     },
     "coal_energy": {
       "policy_status": "no_sector",

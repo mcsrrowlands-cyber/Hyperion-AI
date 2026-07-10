@@ -377,13 +377,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "feed_in_tariff",
+      "primary_support_mechanism": "Guaranteed purchase price (fiksuotosios kainos) feed-in tariff under Atsinaujinančių išteklių energetikos įstatymas (Renewable Energy Resources Act). Litgrid (TSO) and VERT (National Energy Regulatory Council) administer support for qualifying biowaste/biogas installations. Source: VERT (regula.lt); Atsinaujinančių išteklių energetikos įstatymas.",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Lithuanian bioenergy support under Atsinaujinančių išteklių energetikos įstatymas before use."
+      "source": "vert_lt; atsinaujinanciu_istekliu_istatymas",
+      "notes": "Lithuanian biowaste/biogas qualifies for guaranteed purchase price (FiT) under the Renewable Energy Resources Act. EU RED III compliance and feedstock sustainability criteria apply. Verify current VERT tariff rates and biowaste category eligibility before use."
     },
     "coal_energy": {
       "policy_status": "no_sector",

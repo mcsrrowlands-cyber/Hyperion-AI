@@ -383,13 +383,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "feed_in_tariff",
+      "primary_support_mechanism": "Feed-in tariff (εγγυημένη τιμή εξαγοράς) under the Regulatory Authority for Energy, Commerce and Industry (ΡΑΕΚ — CERA) scheme for renewable energy sources. Biowaste/biogas installations may qualify for guaranteed purchase price for electricity. Source: CERA (cera.org.cy); Cyprus RES law.",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Small island market limits biowaste-to-energy scale. Verify current Cypriot bioenergy support framework before use."
+      "source": "cera_cy; cyprus_res_law",
+      "notes": "Cyprus has a feed-in tariff scheme for qualifying RES including biowaste/biogas. SMALL ISLAND MARKET: limited biowaste feedstock availability and scale constraints. EU RED III compliance and feedstock sustainability criteria apply. Verify current CERA tariff rates and biowaste category eligibility before use."
     },
     "coal_energy": {
       "policy_status": "no_sector",

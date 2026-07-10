@@ -391,13 +391,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "one_way_market_premium",
+      "primary_support_mechanism": "Market premium (bonificação sobre o preço de mercado) under Decreto-Lei n.º 76/2019 (simplified licensing for renewable energy) and SEMD auction framework (Leilões SEMD). DGEG (Direção-Geral de Energia e Geologia) administers RES support. Qualifying biowaste/biogas installations receive market premium. One-way mechanism. Source: DGEG (dgeg.gov.pt); DL 76/2019.",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Portuguese bioenergy support under DGEG/DL 76/2019 framework before use."
+      "source": "dgeg_pt; dl_76_2019",
+      "notes": "Portuguese biowaste/biogas qualifies for market premium under the SEMD/DL 76/2019 framework. EU RED III compliance and feedstock sustainability criteria apply. Verify current DGEG reference prices and biowaste basket eligibility before use."
     },
     "coal_energy": {
       "policy_status": "exited",

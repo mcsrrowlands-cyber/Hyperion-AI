@@ -399,13 +399,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "one_way_market_premium",
+      "primary_support_mechanism": "Renewable energy support (taastuvenergia toetussüsteem) under Elektrituruseadus (Electricity Market Act). Biowaste/biogas generators receive a market premium (turutoetusmäär) via Elering (TSO) settlement. One-way premium mechanism. Source: Elering (elering.ee); Elektrituruseadus.",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Estonian bioenergy support under Elektrituruseadus framework before use."
+      "source": "elering_ee; elektrituruseadus",
+      "notes": "Estonian biowaste/biogas qualifies for renewable energy market premium under Elektrituruseadus. EU RED III compliance and feedstock sustainability criteria apply. Verify current Elering premium rates and biowaste basket eligibility before use."
     },
     "coal_energy": {
       "policy_status": "no_sector",

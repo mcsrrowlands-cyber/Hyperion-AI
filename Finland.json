@@ -480,13 +480,13 @@
     "biowaste_energy": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "one_way_market_premium",
+      "primary_support_mechanism": "Competitive bidding premium (tuotantotuki) under Laki uusiutuvilla energialähteillä tuotetun sähkön tuotantotuesta (1396/2010, as amended). Administered by Energy Authority (Energiavirasto). One-way premium paid to qualifying biowaste/biogas installations. Source: Energiavirasto; IEA country review.",
       "eu_red_iii_compliance_required": true,
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
-      "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Strong biomass/bioenergy industry (forest sector). Verify current Finnish bioenergy support under competitive bidding framework before use."
+      "source": "energiavirasto_fi; iea_country",
+      "notes": "Finnish biowaste/biogas receives competitive bidding premium (tuotantotuki) under the renewable energy production support law. Finland has a strong biomass/bioenergy industry (forest sector). EU RED III compliance and feedstock sustainability criteria apply. Verify current Energiavirasto premium rates and biowaste basket eligibility before use."
     },
     "coal_energy": {
       "policy_status": "prohibited",
