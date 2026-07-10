@@ -377,13 +377,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "Statnett FCR-N/FCR-D/aFRR ancillary services markets — BESS eligible under Nordic FCR cooperation framework (Norway participates alongside Sweden/Finland/Denmark via Statnett). FCR procurement published annually at Statnett.no.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "statnett_fcr",
+      "notes": "Norway participates in the Nordic FCR cooperation — the same framework that supports BESS in Sweden (SvK) and Finland (Fingrid). FCR-N and FCR-D markets are actively procured by Statnett. BESS capacity sizing typically 1–20 MW for FCR-N; larger for aFRR. Grid connection via NVE/Statnett — no queue constraint at BESS scale. Hydro-dominated system (>90% hydro) means BESS role is frequency regulation, not energy arbitrage. Verify current FCR tender parameters with Statnett before use. (Source: Statnett AS, Reguleringsenergimarkedet/FCR procurement rules; ENTSO-E Nordic FCR cooperation agreement)"
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

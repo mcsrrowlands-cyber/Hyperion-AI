@@ -444,13 +444,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "Swissgrid FCR/aFRR ancillary services markets — Switzerland participates in the Central European FCR Cooperation (with Germany, Austria, France, Belgium, Netherlands). BESS eligible for FCR-N/FCR-D procurement. Swissgrid publishes annual procurement volumes at swissgrid.ch.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "swissgrid_fcr",
+      "notes": "Switzerland participates in the Central European FCR Cooperation framework — the same market structure as Austria (already classified as ancillary_services). Swissgrid procures FCR and aFRR services from eligible providers including BESS. Unique consideration: Switzerland is not in the EU internal electricity market, but FCR cooperation operates bilaterally with ENTSO-E members. Alpine hydro-dominated system creates frequency regulation demand. Grid connection via Swissgrid — permitting via federal and cantonal building permit process. (Source: Swissgrid AG, Systemdienstleistungen/SDL procurement rules; ENTSO-E Central European FCR Cooperation agreement)"
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

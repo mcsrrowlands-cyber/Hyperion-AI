@@ -354,13 +354,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "PSE (Polskie Sieci Elektroenergetyczne) ancillary services — FCR and aFRR (Usługi systemowe) markets; BESS eligible as storage units under Polish grid code (IRiESP). PSE publishes annual procurement volumes at pse.pl.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "pse_iriespf",
+      "notes": "PSE operates formal ancillary services procurement for primary reserves (FCR) and secondary reserves (aFRR). BESS units registered as 'Jednostki wytwórcze/magazynujące' are eligible per Instrukcja Ruchu i Eksploatacji Sieci Przesyłowej (IRiESP). Polish grid code updated post-Clean Energy Package transposition to enable storage participation. RES auction law (Ustawa o odnawialnych źródłach energii) does not cover BESS separately — ancillary services remains the primary revenue route. Permitting: building permit + potentially EIA for large installations; 24 months P50 estimate. (Source: PSE IRiESP; URE regulatory framework for storage units)"
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

@@ -313,13 +313,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "REN (Redes Energeticas Nacionais) Servicos de Sistema — FCR and aFRR markets; BESS eligible under Portuguese grid code (RTIEBT/RQS). ERSE (regulator) oversees ancillary services; REN publishes procurement volumes at ren.pt.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "ren_rtiebt",
+      "notes": "REN operates formal Servicos de Sistema (ancillary services) procurement for FCR (Reserva de Frequencia Primaria) and aFRR (Reserva de Frequencia Secundaria). BESS units are eligible as Unidades de Gestao de Carga (UGC) under the Portuguese grid code (Regulamento das Redes de Transporte/Distribuicao). Portugal has one of the highest variable RES penetration rates in Europe, creating strong ancillary services demand. Leilao-co-located BESS is growing. (Source: ERSE Regulamento de Relacoes Comerciais; REN Prescricoes Tecnicas de Instalacoes de Armazenamento)"
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

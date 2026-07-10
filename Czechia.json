@@ -1,88 +1,88 @@
-Ôªø{
+{
   "_schema": "hyperion-jurisdiction-v1",
   "_template_version": "1.0",
   "_scoring_convention": {
-    "political_risk_score": "0‚Äì100 where 100 = zero political risk (higher is better)",
-    "operational_drag_score": "0‚Äì100 where 100 = maximum drag / worst efficiency (higher is worse)",
+    "political_risk_score": "0ñ100 where 100 = zero political risk (higher is better)",
+    "operational_drag_score": "0ñ100 where 100 = maximum drag / worst efficiency (higher is worse)",
     "rag_convention": "GREEN = proceed, AMBER = proceed with conditions, RED = material concern"
   },
 
   "jurisdiction": {
     "name": "Czechia",
-    "local_name": "ƒåesk√° republika",
+    "local_name": "Cesk· republika",
     "iso_code": "CZ",
     "currency_native": "CZK",
     "currency_eur_rate": 25.20,
-    "currency_eur_rate_date": "Indicative ‚Äî approximately mid-2025. VERIFY at ECB Reference Rate (ecb.europa.eu/stats/policy_and_exchange_rates) before use.",
+    "currency_eur_rate_date": "Indicative ó approximately mid-2025. VERIFY at ECB Reference Rate (ecb.europa.eu/stats/policy_and_exchange_rates) before use.",
     "currency_eur_rate_source": "ECB Reference Rate indicative. All CZK figures must be converted at the rate prevailing on the date of analysis.",
     "region": "Europe",
     "eu_member": true,
     "landlocked": true,
     "eu_state_aid_applicable": true,
     "last_updated": "2026-06-16",
-    "data_staleness_warning": "Czech ERO (Energetick√Ω regulaƒçn√≠ √∫≈ôad) publishes annual reference price updates. CIT rate was increased to 21% from 2024 under Consolidation Package (z√°kon ƒç. 349/2023 Sb.) ‚Äî verify current rate. All CZK/EUR conversions are indicative and must be updated to the analysis date."
+    "data_staleness_warning": "Czech ERO (Energetick˝ regulacnÌ ˙rad) publishes annual reference price updates. CIT rate was increased to 21% from 2024 under Consolidation Package (z·kon c. 349/2023 Sb.) ó verify current rate. All CZK/EUR conversions are indicative and must be updated to the analysis date."
   },
 
   "regulatory_framework": {
     "primary_energy_legislation": [
-      { "instrument": "Act No. 165/2012 Coll. on Promoted Sources of Energy (z√°kon o podporovan√Ωch zdroj√≠ch energie)", "relevance": "Primary RES support law since 2012; establishes the sliding feed-in premium (zelen√Ω bonus / green bonus) framework; replaced Act 180/2005; administered by ERO and OTE" },
-      { "instrument": "Act No. 458/2000 Coll. ‚Äî Energy Act (energetick√Ω z√°kon)", "relevance": "Framework law governing electricity and gas markets; grid connection rights; licensing of energy activities; ERU regulatory authority powers" },
-      { "instrument": "Act No. 406/2000 Coll. on Energy Management (z√°kon o hospoda≈ôen√≠ energi√≠)", "relevance": "Energy efficiency requirements; links to RES project design standards" },
-      { "instrument": "State Energy Policy (St√°tn√≠ energetick√° koncepce) ‚Äî updated 2023", "relevance": "National energy policy framework; sets 2030 and 2050 decarbonisation targets; drives auction volume planning" }
+      { "instrument": "Act No. 165/2012 Coll. on Promoted Sources of Energy (z·kon o podporovan˝ch zdrojÌch energie)", "relevance": "Primary RES support law since 2012; establishes the sliding feed-in premium (zelen˝ bonus / green bonus) framework; replaced Act 180/2005; administered by ERO and OTE" },
+      { "instrument": "Act No. 458/2000 Coll. ó Energy Act (energetick˝ z·kon)", "relevance": "Framework law governing electricity and gas markets; grid connection rights; licensing of energy activities; ERU regulatory authority powers" },
+      { "instrument": "Act No. 406/2000 Coll. on Energy Management (z·kon o hospodarenÌ energiÌ)", "relevance": "Energy efficiency requirements; links to RES project design standards" },
+      { "instrument": "State Energy Policy (St·tnÌ energetick· koncepce) ó updated 2023", "relevance": "National energy policy framework; sets 2030 and 2050 decarbonisation targets; drives auction volume planning" }
     ],
     "permitting_legislation": [
-      { "instrument": "Act No. 183/2006 Coll. ‚Äî Building Act (stavebn√≠ z√°kon)", "relevance": "Primary construction permitting law for energy infrastructure; spatial planning (√∫zemn√≠ pl√°n); building permit procedures" },
-      { "instrument": "Act No. 100/2001 Coll. ‚Äî EIA Act (z√°kon o posuzov√°n√≠ vliv≈Ø na ≈æivotn√≠ prost≈ôed√≠)", "relevance": "Environmental impact assessment procedure for RES projects above threshold sizes" },
-      { "instrument": "Act No. 114/1992 Coll. ‚Äî Nature and Landscape Protection Act", "relevance": "Protected areas restrictions; bird and bat protection requirements for wind projects" }
+      { "instrument": "Act No. 183/2006 Coll. ó Building Act (stavebnÌ z·kon)", "relevance": "Primary construction permitting law for energy infrastructure; spatial planning (˙zemnÌ pl·n); building permit procedures" },
+      { "instrument": "Act No. 100/2001 Coll. ó EIA Act (z·kon o posuzov·nÌ vlivu na ûivotnÌ prostredÌ)", "relevance": "Environmental impact assessment procedure for RES projects above threshold sizes" },
+      { "instrument": "Act No. 114/1992 Coll. ó Nature and Landscape Protection Act", "relevance": "Protected areas restrictions; bird and bat protection requirements for wind projects" }
     ],
     "tax_legislation": [
-      { "instrument": "Act No. 586/1992 Coll. ‚Äî Income Taxes Act (z√°kon o dan√≠ch z p≈ô√≠jm≈Ø)", "relevance": "21% corporate income tax rate (as of 2024); standard and accelerated depreciation provisions (¬ß26‚Äì¬ß32)" },
-      { "instrument": "Consolidation Package ‚Äî Act No. 349/2023 Coll.", "relevance": "Increased CIT from 19% to 21% effective from tax year 2024; also increased personal income tax thresholds" },
-      { "instrument": "Act No. 235/2004 Coll. ‚Äî VAT Act (z√°kon o dani z p≈ôidan√© hodnoty)", "relevance": "21% standard VAT rate; 12% reduced rate for certain energy services" }
+      { "instrument": "Act No. 586/1992 Coll. ó Income Taxes Act (z·kon o danÌch z prÌjmu)", "relevance": "21% corporate income tax rate (as of 2024); standard and accelerated depreciation provisions (ß26ñß32)" },
+      { "instrument": "Consolidation Package ó Act No. 349/2023 Coll.", "relevance": "Increased CIT from 19% to 21% effective from tax year 2024; also increased personal income tax thresholds" },
+      { "instrument": "Act No. 235/2004 Coll. ó VAT Act (z·kon o dani z pridanÈ hodnoty)", "relevance": "21% standard VAT rate; 12% reduced rate for certain energy services" }
     ],
     "subsidy_control_legislation": [
-      { "instrument": "CEEAG ‚Äî Commission Notice 2022/C 80/01", "relevance": "EU framework for assessing Czech RES support scheme compatibility with internal market" },
-      { "instrument": "GBER ‚Äî Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES aid" },
-      { "instrument": "Act No. 402/2010 Coll. ‚Äî Solar Levy Act", "relevance": "CRITICAL RETROACTIVE RISK REFERENCE: Imposed a 26% levy on FiT revenues for solar PV projects commissioned in 2009‚Äì2010. Retroactively amended Act 180/2005. Primary political risk precedent for this jurisdiction." }
+      { "instrument": "CEEAG ó Commission Notice 2022/C 80/01", "relevance": "EU framework for assessing Czech RES support scheme compatibility with internal market" },
+      { "instrument": "GBER ó Commission Regulation (EU) 651/2014 as amended", "relevance": "Block exemptions for smaller RES aid" },
+      { "instrument": "Act No. 402/2010 Coll. ó Solar Levy Act", "relevance": "CRITICAL RETROACTIVE RISK REFERENCE: Imposed a 26% levy on FiT revenues for solar PV projects commissioned in 2009ñ2010. Retroactively amended Act 180/2005. Primary political risk precedent for this jurisdiction." }
     ],
     "fdi_legislation": [
-      { "instrument": "Act No. 34/2021 Coll. ‚Äî Foreign Investment Screening Act (z√°kon o p≈ôezkoum√°v√°n√≠ zahraniƒçn√≠ch investic)", "relevance": "National FDI screening mechanism implementing EU Regulation 2019/452; energy is designated critical infrastructure; reviewed by MIT (Ministry of Industry and Trade)" },
+      { "instrument": "Act No. 34/2021 Coll. ó Foreign Investment Screening Act (z·kon o prezkoum·v·nÌ zahranicnÌch investic)", "relevance": "National FDI screening mechanism implementing EU Regulation 2019/452; energy is designated critical infrastructure; reviewed by MIT (Ministry of Industry and Trade)" },
       { "instrument": "EU FDI Screening Regulation (EU) 2019/452", "relevance": "EU-level cooperation mechanism; Czech Republic must notify EC and other member states of covered FDI proceedings" }
     ]
   },
 
   "permitting": {
-    "_notes": "Czech permitting is among the more complex in the EU, particularly for onshore wind. The Building Act and EIA process create multi-stage procedures with significant appeal risk. P50 timelines run from formal application. Pre-application adds 12‚Äì24 months. Wind projects face strong local opposition in many regions.",
+    "_notes": "Czech permitting is among the more complex in the EU, particularly for onshore wind. The Building Act and EIA process create multi-stage procedures with significant appeal risk. P50 timelines run from formal application. Pre-application adds 12ñ24 months. Wind projects face strong local opposition in many regions.",
     "solar_utility": {
       "threshold_mw_national_process": null,
-      "primary_authority": "Municipal/regional authorities for spatial planning (√∫zemn√≠ ≈ô√≠zen√≠) and building permit (stavebn√≠ povolen√≠); Ministry of Environment for EIA above thresholds",
-      "primary_process": "Territorial Decision (√∫zemn√≠ rozhodnut√≠) ‚Üí EIA (if required) ‚Üí Building Permit (stavebn√≠ povolen√≠) ‚Üí Licence from ERU",
+      "primary_authority": "Municipal/regional authorities for spatial planning (˙zemnÌ rÌzenÌ) and building permit (stavebnÌ povolenÌ); Ministry of Environment for EIA above thresholds",
+      "primary_process": "Territorial Decision (˙zemnÌ rozhodnutÌ) ? EIA (if required) ? Building Permit (stavebnÌ povolenÌ) ? Licence from ERU",
       "legal_basis": "Act 183/2006 (Building Act); Act 100/2001 (EIA Act); Act 165/2012 (support scheme eligibility)",
       "timeline_p50_months": 24,
       "timeline_min_months": 18,
       "timeline_max_months": 42,
       "pre_application_months_typical": 12,
       "appeal_risk": "medium",
-      "appeal_mechanism": "Administrative courts (spr√°vn√≠ soudy); Supreme Administrative Court (Nejvy≈°≈°√≠ spr√°vn√≠ soud) as final instance",
-      "notes": "Solar PV permitting in Czechia is more straightforward than wind. Czech solar capacity was overbuild in 2009‚Äì2010 (solar bubble), which created the retroactive levy precedent. New large-scale solar development has resumed but faces grid connection constraints in some regions."
+      "appeal_mechanism": "Administrative courts (spr·vnÌ soudy); Supreme Administrative Court (NejvyööÌ spr·vnÌ soud) as final instance",
+      "notes": "Solar PV permitting in Czechia is more straightforward than wind. Czech solar capacity was overbuild in 2009ñ2010 (solar bubble), which created the retroactive levy precedent. New large-scale solar development has resumed but faces grid connection constraints in some regions."
     },
     "onshore_wind": {
       "threshold_mw_national_process": null,
-      "primary_authority": "Regional Authorities (krajsk√© √∫≈ôady) for EIA and building permit; Ministry of Environment for larger projects",
-      "primary_process": "EIA (mandatory for wind farms, typically any size with turbines >150m hub+blade) ‚Üí Territorial Decision ‚Üí Building Permit ‚Üí ERU Licence",
+      "primary_authority": "Regional Authorities (krajskÈ ˙rady) for EIA and building permit; Ministry of Environment for larger projects",
+      "primary_process": "EIA (mandatory for wind farms, typically any size with turbines >150m hub+blade) ? Territorial Decision ? Building Permit ? ERU Licence",
       "legal_basis": "Act 100/2001 (EIA Act); Act 183/2006 (Building Act); Act 458/2000 (Energy Act)",
       "timeline_p50_months": 60,
       "timeline_min_months": 48,
       "timeline_max_months": 96,
       "pre_application_months_typical": 24,
       "appeal_risk": "high",
-      "appeal_mechanism": "Administrative courts; Supreme Administrative Court; Constitutional Court (√östavn√≠ soud) in extreme cases",
-      "setback_rules": "No binding national minimum setback law ‚Äî governed by municipal spatial plans (√∫zemn√≠ pl√°ny); typical plan provisions result in effective setbacks of 500‚Äì700m from residential buildings; many municipalities have blocked wind development in their plans entirely",
-      "notes": "Onshore wind permitting is the primary operational drag in Czechia. Czech installed wind capacity is amongst the lowest per capita in the EU (approximately 340 MW total as of 2024) ‚Äî reflecting the extreme difficulty of obtaining permits. Strong local opposition combined with fragmented municipal planning authority means many projects fail at spatial plan stage. The Czech wind development pipeline significantly exceeds buildable capacity under current rules."
+      "appeal_mechanism": "Administrative courts; Supreme Administrative Court; Constitutional Court (⁄stavnÌ soud) in extreme cases",
+      "setback_rules": "No binding national minimum setback law ó governed by municipal spatial plans (˙zemnÌ pl·ny); typical plan provisions result in effective setbacks of 500ñ700m from residential buildings; many municipalities have blocked wind development in their plans entirely",
+      "notes": "Onshore wind permitting is the primary operational drag in Czechia. Czech installed wind capacity is amongst the lowest per capita in the EU (approximately 340 MW total as of 2024) ó reflecting the extreme difficulty of obtaining permits. Strong local opposition combined with fragmented municipal planning authority means many projects fail at spatial plan stage. The Czech wind development pipeline significantly exceeds buildable capacity under current rules."
     },
     "offshore_wind": {
       "applicable": false,
-      "notes": "Czechia is a landlocked country ‚Äî no offshore wind applicable."
+      "notes": "Czechia is a landlocked country ó no offshore wind applicable."
     },
     "battery_storage_utility": {
       "primary_process": "Building permit under Act 183/2006; EIA if above threshold; ERU licence for electricity storage activity",
@@ -96,11 +96,11 @@
 
   "grid_connection": {
     "transmission_operators": [
-      { "name": "ƒåEPS a.s.", "region": "Czech national transmission system" }
+      { "name": "CEPS a.s.", "region": "Czech national transmission system" }
     ],
-    "distribution_operators": "ƒåEZ Distribuce a.s. (largest, approx. 70% of territory); E.ON Distribuce a.s. (South Bohemia/Moravia); PREdistribuce a.s. (Prague region)",
-    "regulatory_authority": "ERU (Energetick√Ω regulaƒçn√≠ √∫≈ôad ‚Äî Energy Regulatory Office)",
-    "legal_basis": "Act 458/2000 (Energy Act) ¬ß¬ß24‚Äì26 (grid connection rights); ERU Decree No. 16/2016 (grid code); Act 165/2012 (priority dispatch)",
+    "distribution_operators": "CEZ Distribuce a.s. (largest, approx. 70% of territory); E.ON Distribuce a.s. (South Bohemia/Moravia); PREdistribuce a.s. (Prague region)",
+    "regulatory_authority": "ERU (Energetick˝ regulacnÌ ˙rad ó Energy Regulatory Office)",
+    "legal_basis": "Act 458/2000 (Energy Act) ßß24ñ26 (grid connection rights); ERU Decree No. 16/2016 (grid code); Act 165/2012 (priority dispatch)",
     "priority_access": {
       "applicable": true,
       "mechanism": "Priority dispatch for RES under Act 458/2000 and EU Electricity Directive 2019/944 (transposed)",
@@ -108,11 +108,11 @@
     },
     "grid_connection_backlog": {
       "assessment": "MODERATE-HIGH for solar in some regions",
-      "notes": "Czech grid connection capacity is constrained particularly in South Bohemia and Moravia for new solar. ƒåEPS and DSOs have implemented queue management. Wind projects (where they can be permitted) typically face shorter connection queues due to the low volume of consented projects."
+      "notes": "Czech grid connection capacity is constrained particularly in South Bohemia and Moravia for new solar. CEPS and DSOs have implemented queue management. Wind projects (where they can be permitted) typically face shorter connection queues due to the low volume of consented projects."
     },
     "connection_wait_time_months": {
-      "transmission_connected": { "p50": 30, "range": "24‚Äì48" },
-      "distribution_connected": { "p50": 18, "range": "12‚Äì36" }
+      "transmission_connected": { "p50": 30, "range": "24ñ48" },
+      "distribution_connected": { "p50": 18, "range": "12ñ36" }
     },
     "connection_cost_czk_per_mw": {
       "range_low_czk": 800000,
@@ -122,51 +122,51 @@
       "fx_note": "CZK/EUR conversion at indicative rate of 1 EUR = 25.20 CZK. Verify at ECB Reference Rate on analysis date.",
       "notes": "Connection costs regulated by ERU. Network reinforcement costs above connection point partially socialised."
     },
-    "operational_drag_assessment": "MEDIUM-HIGH ‚Äî grid constraints are real in some regions; wind projects (where permittable) face shorter queues but the permitting barrier is the primary bottleneck"
+    "operational_drag_assessment": "MEDIUM-HIGH ó grid constraints are real in some regions; wind projects (where permittable) face shorter queues but the permitting barrier is the primary bottleneck"
   },
 
   "support_mechanisms": {
-    "_rule_3a_note": "Rule 3A: The Czech zelen√Ω bonus (green bonus) under Act 165/2012 is a ONE-WAY sliding premium. The bonus = max(0, reference price ‚àí market price). When market price exceeds the reference price, the bonus is zero ‚Äî generators retain full merchant upside with NO clawback. This is different from a two-way CfD. Return modelling must reflect uncapped upside when market prices are high.",
-    "primary_mechanism": "Zelen√Ω bonus na elekt≈ôinu (Green Bonus on Electricity) ‚Äî sliding feed-in premium",
+    "_rule_3a_note": "Rule 3A: The Czech zelen˝ bonus (green bonus) under Act 165/2012 is a ONE-WAY sliding premium. The bonus = max(0, reference price - market price). When market price exceeds the reference price, the bonus is zero ó generators retain full merchant upside with NO clawback. This is different from a two-way CfD. Return modelling must reflect uncapped upside when market prices are high.",
+    "primary_mechanism": "Zelen˝ bonus na elektrinu (Green Bonus on Electricity) ó sliding feed-in premium",
     "mechanism_type": "one_way_market_premium",
-    "administrator": "OTE a.s. (Oper√°tor trhu s energi√≠ ‚Äî Energy Market Operator) administers premium payments; ERO sets reference prices",
-    "legal_basis": "Act 165/2012 Coll. ¬ß¬ß5‚Äì11; ERO annual decisions on reference prices (cenov√© rozhodnut√≠ ERU)",
+    "administrator": "OTE a.s. (Oper·tor trhu s energiÌ ó Energy Market Operator) administers premium payments; ERO sets reference prices",
+    "legal_basis": "Act 165/2012 Coll. ßß5ñ11; ERO annual decisions on reference prices (cenovÈ rozhodnutÌ ERU)",
     "mechanism_description": {
-      "summary": "Generator sells electricity on the wholesale market (PXE / OTE short-term). ERO sets an annual reference price (referenƒçn√≠ cena). Bonus = max(0, reference price ‚àí annual average market price). If annual average market price exceeds reference price, bonus is zero and generator retains full market revenue. No clawback.",
-      "upside_treatment": "UNCAPPED ‚Äî when market price exceeds reference price, the bonus is zero and the generator retains all market revenue. No clawback applies.",
-      "downside_treatment": "PROTECTED ‚Äî when market price falls below reference price, OTE pays the shortfall up to the reference price level",
-      "merchant_exposure_during_term": "Partial ‚Äî annual average price indexation means some intra-year price risk",
+      "summary": "Generator sells electricity on the wholesale market (PXE / OTE short-term). ERO sets an annual reference price (referencnÌ cena). Bonus = max(0, reference price - annual average market price). If annual average market price exceeds reference price, bonus is zero and generator retains full market revenue. No clawback.",
+      "upside_treatment": "UNCAPPED ó when market price exceeds reference price, the bonus is zero and the generator retains all market revenue. No clawback applies.",
+      "downside_treatment": "PROTECTED ó when market price falls below reference price, OTE pays the shortfall up to the reference price level",
+      "merchant_exposure_during_term": "Partial ó annual average price indexation means some intra-year price risk",
       "contract_term_years": 20,
-      "reference_price_mechanism": "ERO issues annual Cenov√© rozhodnut√≠ (price decision) setting reference prices for each technology. Reference prices for existing plants are set to ensure a reasonable return on historical investment ‚Äî ERO methodology is published."
+      "reference_price_mechanism": "ERO issues annual CenovÈ rozhodnutÌ (price decision) setting reference prices for each technology. Reference prices for existing plants are set to ensure a reasonable return on historical investment ó ERO methodology is published."
     },
     "auction": {
-      "status": "Limited competitive bidding for new projects; ERO administrative reference prices remain the primary support route for most project types as of 2024‚Äì2025",
+      "status": "Limited competitive bidding for new projects; ERO administrative reference prices remain the primary support route for most project types as of 2024ñ2025",
       "administrator": "MIT (Ministry of Industry and Trade) for auction framework; ERO for reference prices",
       "note": "Czech auction programme for new RES capacity has been limited in volume and frequency compared to Germany or France. The support system has historically relied on administrative reference price setting rather than competitive clearing. Market reform to introduce larger auction volumes is under policy discussion.",
-      "_staleness_warning": "Czech support scheme parameters are set annually by ERO. Verify current reference prices in ERO annual Cenov√© rozhodnut√≠ before use."
+      "_staleness_warning": "Czech support scheme parameters are set annually by ERO. Verify current reference prices in ERO annual CenovÈ rozhodnutÌ before use."
     },
     "retroactive_risk_historical": {
       "solar_levy": {
         "year": "2010",
-        "description": "Act No. 402/2010 Coll. imposed a 26% levy (odvod z elekt≈ôiny ze sluneƒçn√≠ho z√°≈ôen√≠) on FiT revenues for solar PV projects commissioned in 2009‚Äì2010 that received guaranteed FiT rates under Act 180/2005. Levy was applied retroactively to projects already in operation under contracted terms.",
+        "description": "Act No. 402/2010 Coll. imposed a 26% levy (odvod z elektriny ze slunecnÌho z·renÌ) on FiT revenues for solar PV projects commissioned in 2009ñ2010 that received guaranteed FiT rates under Act 180/2005. Levy was applied retroactively to projects already in operation under contracted terms.",
         "impact": "Material financial losses to solar investors; extensive litigation including ICSID arbitration proceedings against Czech Republic; scheme was later found partially constitutional by Czech Constitutional Court but investor losses were substantial",
-        "severity": "HIGH ‚Äî explicitly retroactive modification of contracted FiT revenues; most significant retroactive intervention in Czech energy sector",
-        "solar_bubble_context": "Czech solar installations grew from approx. 465 MW in 2009 to over 2,000 MW in 2011 due to high guaranteed FiT rates and falling panel costs. Government response was the retroactive levy ‚Äî a textbook case of support scheme design failure."
+        "severity": "HIGH ó explicitly retroactive modification of contracted FiT revenues; most significant retroactive intervention in Czech energy sector",
+        "solar_bubble_context": "Czech solar installations grew from approx. 465 MW in 2009 to over 2,000 MW in 2011 due to high guaranteed FiT rates and falling panel costs. Government response was the retroactive levy ó a textbook case of support scheme design failure."
       },
-      "wind_note": "CLAUDE.md references 'Czech wind tax' ‚Äî this refers to the broader retroactive intervention risk established by the solar levy precedent and analogous discussions about potential retroactive measures on wind revenues during the 2011‚Äì2013 energy policy crisis. No binding retroactive wind-specific levy was enacted at national level, but the precedent from the solar sector is directly relevant to wind investor risk assessment."
+      "wind_note": "CLAUDE.md references 'Czech wind tax' ó this refers to the broader retroactive intervention risk established by the solar levy precedent and analogous discussions about potential retroactive measures on wind revenues during the 2011ñ2013 energy policy crisis. No binding retroactive wind-specific levy was enacted at national level, but the precedent from the solar sector is directly relevant to wind investor risk assessment."
     }
   },
 
   "tax": {
-    "_rule_3b_note": "Rule 3B: Czech accelerated depreciation under Act 586/1992 ¬ß26‚Äì32 is a CapEx TIMING benefit ‚Äî not a permanent reduction. NPV of the timing benefit must be shown separately from headline depreciation rates.",
+    "_rule_3b_note": "Rule 3B: Czech accelerated depreciation under Act 586/1992 ß26ñ32 is a CapEx TIMING benefit ó not a permanent reduction. NPV of the timing benefit must be shown separately from headline depreciation rates.",
     "corporation_tax_structure": {
       "rate_pct": 21.0,
-      "legal_basis": "Act 586/1992 Coll. ¬ß21; increased from 19% to 21% by Consolidation Package ‚Äî Act 349/2023 Coll., effective from tax year 2024",
+      "legal_basis": "Act 586/1992 Coll. ß21; increased from 19% to 21% by Consolidation Package ó Act 349/2023 Coll., effective from tax year 2024",
       "previous_rate_pct": 19.0,
-      "previous_rate_period": "2010‚Äì2023",
+      "previous_rate_period": "2010ñ2023",
       "dividend_withholding_tax_pct": 15.0,
-      "eu_parent_subsidiary_exemption": "0% WHT on dividends to EU parent companies (holding ‚â•10% for 12 months) under EU Parent-Subsidiary Directive",
-      "notes": "21% rate represents a meaningful increase from 19% ‚Äî a retroactivity-adjacent policy change that affected investor return expectations for projects underwritten at 19%. Verify current rate in Act 586/1992 ¬ß21 before use."
+      "eu_parent_subsidiary_exemption": "0% WHT on dividends to EU parent companies (holding =10% for 12 months) under EU Parent-Subsidiary Directive",
+      "notes": "21% rate represents a meaningful increase from 19% ó a retroactivity-adjacent policy change that affected investor return expectations for projects underwritten at 19%. Verify current rate in Act 586/1992 ß21 before use."
     },
     "combined_effective_tax_rate_range_pct": {
       "standard": 21.0,
@@ -175,25 +175,25 @@
     "capex_incentives": {
       "accelerated_depreciation": {
         "type": "accelerated_declining_balance",
-        "mechanism": "Act 586/1992 ¬ß26 defines depreciation groups (odpisov√© skupiny). Energy production assets are generally in Group 2 (5-year accelerated) or Group 3 (10-year). Accelerated method available under ¬ß32: Group 2 Year 1 deduction = 35.5% of cost; subsequent years via declining formula.",
-        "group_2_assets": "Certain machinery and equipment ‚Äî may include inverters, transformers, BESS components",
-        "group_3_assets": "Turbines, solar PV panels, large plant ‚Äî 10-year accelerated depreciation",
-        "legal_basis": "Act 586/1992 Coll. ¬ß26‚Äì32",
+        "mechanism": "Act 586/1992 ß26 defines depreciation groups (odpisovÈ skupiny). Energy production assets are generally in Group 2 (5-year accelerated) or Group 3 (10-year). Accelerated method available under ß32: Group 2 Year 1 deduction = 35.5% of cost; subsequent years via declining formula.",
+        "group_2_assets": "Certain machinery and equipment ó may include inverters, transformers, BESS components",
+        "group_3_assets": "Turbines, solar PV panels, large plant ó 10-year accelerated depreciation",
+        "legal_basis": "Act 586/1992 Coll. ß26ñ32",
         "permanent": true,
         "npv_benefit_analysis": {
           "_rule_3b_compliance": true,
-          "description": "At 21% CIT and 10% WACC: Accelerated depreciation (Group 3 ‚Äî 10-year declining balance, Year 1: 20% of cost) vs. standard straight-line (10% p.a. over 10 years): NPV of tax shield under accelerated = approx. 17.8% of qualifying CapEx. Under standard straight-line over 20 years: approx. 13.1%. Timing benefit (NPV delta) ‚âà 4.7ppts per CZK 1 of qualifying CapEx.",
+          "description": "At 21% CIT and 10% WACC: Accelerated depreciation (Group 3 ó 10-year declining balance, Year 1: 20% of cost) vs. standard straight-line (10% p.a. over 10 years): NPV of tax shield under accelerated = approx. 17.8% of qualifying CapEx. Under standard straight-line over 20 years: approx. 13.1%. Timing benefit (NPV delta) ò 4.7ppts per CZK 1 of qualifying CapEx.",
           "note": "Timing benefit only. Accelerated depreciation front-loads the cash flow benefit without reducing total lifetime tax deductions."
         }
       },
       "investment_incentives": {
-        "scheme": "Investment Incentives Act (Act 72/2000 Coll., as amended) ‚Äî CIT relief for qualifying investments in selected sectors and regions",
-        "relevance_to_renewables": "Limited ‚Äî investment incentives primarily targeted at manufacturing; RES projects in standard categories may not qualify without specific Ministerial designation",
+        "scheme": "Investment Incentives Act (Act 72/2000 Coll., as amended) ó CIT relief for qualifying investments in selected sectors and regions",
+        "relevance_to_renewables": "Limited ó investment incentives primarily targeted at manufacturing; RES projects in standard categories may not qualify without specific Ministerial designation",
         "legal_basis": "Act 72/2000 Coll. on Investment Incentives"
       }
     },
     "standard_depreciation": {
-      "method": "straight-line or declining balance election under Act 586/1992 ¬ß26",
+      "method": "straight-line or declining balance election under Act 586/1992 ß26",
       "group_3_straight_line_years": 10,
       "group_4_straight_line_years": 20,
       "notes": "RES project assets typically classified in Group 3 (10-year) or Group 4 (20-year). Verify classification with Czech tax adviser for specific asset types."
@@ -207,28 +207,28 @@
     },
     "real_estate_transfer_tax": {
       "status": "ABOLISHED",
-      "notes": "Czech real estate transfer tax (da≈à z nabyt√≠ nemovit√Ωch vƒõc√≠) was abolished from December 2020 (Act 386/2020 Coll.). No transfer tax applies to asset deals involving real property.",
-      "land_lease_note": "Wind and solar projects typically use long-term lease arrangements (pacht, n√°jemn√≠ smlouva) for land rather than freehold acquisition."
+      "notes": "Czech real estate transfer tax (dan z nabytÌ nemovit˝ch vecÌ) was abolished from December 2020 (Act 386/2020 Coll.). No transfer tax applies to asset deals involving real property.",
+      "land_lease_note": "Wind and solar projects typically use long-term lease arrangements (pacht, n·jemnÌ smlouva) for land rather than freehold acquisition."
     }
   },
 
   "ppa_market": {
     "enforceability_rating": "Medium-High",
     "bankability_rating": "Medium",
-    "legal_basis": "Act 89/2012 Coll. ‚Äî Czech Civil Code (nov√Ω obƒçansk√Ω z√°kon√≠k); contractual freedom under ¬ß1 et seq.; no bespoke PPA statute",
-    "jurisdiction_enforcement": "Czech courts are reliable and generally efficient by regional standards. Commercial disputes: 1‚Äì3 years in first instance. Prague Arbitration Court (Rozhodƒç√≠ soud p≈ôi HK ƒåR) is a well-regarded regional arbitration centre.",
+    "legal_basis": "Act 89/2012 Coll. ó Czech Civil Code (nov˝ obcansk˝ z·konÌk); contractual freedom under ß1 et seq.; no bespoke PPA statute",
+    "jurisdiction_enforcement": "Czech courts are reliable and generally efficient by regional standards. Commercial disputes: 1ñ3 years in first instance. Prague Arbitration Court (RozhodcÌ soud pri HK CR) is a well-regarded regional arbitration centre.",
     "market_liquidity": "Growing but less developed than Germany/UK",
     "active_corporate_buyers": true,
     "prominent_corporate_offtakers": "Industrial manufacturers, automotive supply chain (Volkswagen/Skoda suppliers), retail chains, data centres, Czech-domiciled multinationals",
     "typical_contract_term_years": { "min": 5, "max": 12 },
     "standard_frameworks": ["Bespoke bilateral under Czech Civil Code", "EFET Master Agreement (growing adoption for cross-border transactions)", "Virtual / financial PPA"],
-    "green_bonus_interaction_note": "RES projects receiving the zelen√Ω bonus sell power at market price independently from the premium. Corporate PPAs (physical) are structurally compatible with the zelen√Ω bonus. Virtual PPAs referencing PXE market prices are increasingly common. No direct conflict equivalent to German Direktvermarktung requirement.",
+    "green_bonus_interaction_note": "RES projects receiving the zelen˝ bonus sell power at market price independently from the premium. Corporate PPAs (physical) are structurally compatible with the zelen˝ bonus. Virtual PPAs referencing PXE market prices are increasingly common. No direct conflict equivalent to German Direktvermarktung requirement.",
     "guarantees_of_origin": {
-      "regulator": "OTE a.s. ‚Äî administers Czech Guarantees of Origin (z√°ruky p≈Øvodu)",
+      "regulator": "OTE a.s. ó administers Czech Guarantees of Origin (z·ruky puvodu)",
       "note": "Czech RES projects receiving support under Act 165/2012 can issue Guarantees of Origin. GoOs provide additional revenue stream from corporate green power claims."
     },
-    "credit_risk_note": "Czech corporate credit market is reasonably developed. Industrial and automotive sector offers investment-grade counterparties. State utilities (ƒåEZ) are also active offtakers.",
-    "cross_border_enforceability": "High ‚Äî Czech courts respected; NY Convention signatory; EU enforcement regime applies"
+    "credit_risk_note": "Czech corporate credit market is reasonably developed. Industrial and automotive sector offers investment-grade counterparties. State utilities (CEZ) are also active offtakers.",
+    "cross_border_enforceability": "High ó Czech courts respected; NY Convention signatory; EU enforcement regime applies"
   },
 
   "sovereign_risk": {
@@ -239,28 +239,28 @@
       "sp": "AA-",
       "fitch": "AA-",
       "source_note": "Czech Republic maintains strong investment-grade ratings. Verify current ratings at agency websites.",
-      "_staleness_warning": "Ratings subject to review ‚Äî verify before relying on this data."
+      "_staleness_warning": "Ratings subject to review ó verify before relying on this data."
     },
-    "political_stability": "Medium-High ‚Äî coalition government politics can create policy uncertainty; stable democratic institutions",
-    "government_structure": "Parliamentary republic; bicameral Parliament (Poslaneck√° snƒõmovna + Sen√°t); Constitutional Court provides rule-of-law backstop",
-    "regulatory_track_record": "Mixed ‚Äî strong sovereign fundamentals undermined by the 2010 solar levy precedent; Act 165/2012 zelen√Ω bonus framework has been more stable since 2012",
+    "political_stability": "Medium-High ó coalition government politics can create policy uncertainty; stable democratic institutions",
+    "government_structure": "Parliamentary republic; bicameral Parliament (Poslaneck· snemovna + Sen·t); Constitutional Court provides rule-of-law backstop",
+    "regulatory_track_record": "Mixed ó strong sovereign fundamentals undermined by the 2010 solar levy precedent; Act 165/2012 zelen˝ bonus framework has been more stable since 2012",
     "retroactive_policy_incidents": [
       {
         "year": "2010",
-        "description": "Act 402/2010 Coll. imposed a 26% retroactive levy on FiT revenues for solar PV projects commissioned in 2009‚Äì2010 under Act 180/2005 guaranteed FiT rates.",
+        "description": "Act 402/2010 Coll. imposed a 26% retroactive levy on FiT revenues for solar PV projects commissioned in 2009ñ2010 under Act 180/2005 guaranteed FiT rates.",
         "impact": "Material investor losses; extensive ICSID arbitration; chilling effect on Czech renewables investment for several years",
-        "severity": "HIGH ‚Äî core retroactive modification of contracted FiT revenues; most significant political risk event in Czech energy sector history"
+        "severity": "HIGH ó core retroactive modification of contracted FiT revenues; most significant political risk event in Czech energy sector history"
       },
       {
-        "year": "2011‚Äì2013",
+        "year": "2011ñ2013",
         "description": "Broader Czech government discussions about retroactive measures on wind and other RES following the solar bubble crisis. No national wind-specific retroactive levy was enacted, but regulatory uncertainty was high.",
         "impact": "Development pipeline freeze; lender hesitation; materially delayed Czech wind deployment",
-        "severity": "Medium ‚Äî no levy enacted but the precedent-setting environment created significant investor uncertainty"
+        "severity": "Medium ó no levy enacted but the precedent-setting environment created significant investor uncertainty"
       }
     ],
-    "expropriation_risk": "Very Low ‚Äî EU member state; NATO member; rule-of-law protections robust",
-    "currency_risk": "Medium ‚Äî CZK is domestic currency; not in EUR zone. CZK/EUR rate has been broadly stable (23‚Äì27 range over past decade) but FX risk must be modelled for EUR-denominated investors and debt",
-    "political_notes": "Czechia has strong institutional fundamentals. The solar levy precedent is the primary legacy risk factor. Post-2012 Act 165/2012 framework has been more stable. Current government (coalition under PM Fiala 2021‚Äì) is broadly pro-investment. Czech Republic has target to significantly increase RES capacity but wind development faces structural permitting barriers.",
+    "expropriation_risk": "Very Low ó EU member state; NATO member; rule-of-law protections robust",
+    "currency_risk": "Medium ó CZK is domestic currency; not in EUR zone. CZK/EUR rate has been broadly stable (23ñ27 range over past decade) but FX risk must be modelled for EUR-denominated investors and debt",
+    "political_notes": "Czechia has strong institutional fundamentals. The solar levy precedent is the primary legacy risk factor. Post-2012 Act 165/2012 framework has been more stable. Current government (coalition under PM Fiala 2021ñ) is broadly pro-investment. Czech Republic has target to significantly increase RES capacity but wind development faces structural permitting barriers.",
     "score_rationale": "Deductions from 100: solar levy retroactive precedent (-15), CIT increase from 19% to 21% without transition (-4), CZK FX risk (-4), permitting hostility to wind as quasi-policy position (-3). Score of 74 reflects strong sovereign fundamentals discounted by the unique retroactive precedent."
   },
 
@@ -268,137 +268,137 @@
     "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
     "operational_drag_score_out_of_100": 70,
     "component_scores": {
-      "grid_connection_drag": { "score": 52, "assessment": "MEDIUM ‚Äî grid capacity constrained in some regions for solar; wind projects face shorter queues but the permitting barrier is the more material constraint" },
-      "permitting_drag_onshore_wind": { "score": 88, "assessment": "VERY HIGH ‚Äî Czech installed wind capacity (~340 MW) is among the lowest per capita in the EU; fragmented municipal planning authority means many projects blocked at spatial plan stage; 5‚Äì8 year realistic P50" },
-      "permitting_drag_solar": { "score": 45, "assessment": "MEDIUM-LOW ‚Äî solar permitting more straightforward; grid connection constraints are more binding than permitting for solar" },
-      "permitting_drag_offshore": { "score": null, "assessment": "N/A ‚Äî landlocked country" },
-      "bureaucratic_friction": { "score": 58, "assessment": "MEDIUM ‚Äî Czech public administration is functional; multi-agency EIA coordination required; Building Act reform (new Act 283/2021 Coll.) partially streamlines procedures" },
-      "judicial_appeal_risk": { "score": 75, "assessment": "HIGH ‚Äî well-developed administrative court system; organised citizen/municipality opposition to wind is prolific; injunctions available and commonly used; Supreme Administrative Court challenges are frequent" }
+      "grid_connection_drag": { "score": 52, "assessment": "MEDIUM ó grid capacity constrained in some regions for solar; wind projects face shorter queues but the permitting barrier is the more material constraint" },
+      "permitting_drag_onshore_wind": { "score": 88, "assessment": "VERY HIGH ó Czech installed wind capacity (~340 MW) is among the lowest per capita in the EU; fragmented municipal planning authority means many projects blocked at spatial plan stage; 5ñ8 year realistic P50" },
+      "permitting_drag_solar": { "score": 45, "assessment": "MEDIUM-LOW ó solar permitting more straightforward; grid connection constraints are more binding than permitting for solar" },
+      "permitting_drag_offshore": { "score": null, "assessment": "N/A ó landlocked country" },
+      "bureaucratic_friction": { "score": 58, "assessment": "MEDIUM ó Czech public administration is functional; multi-agency EIA coordination required; Building Act reform (new Act 283/2021 Coll.) partially streamlines procedures" },
+      "judicial_appeal_risk": { "score": 75, "assessment": "HIGH ó well-developed administrative court system; organised citizen/municipality opposition to wind is prolific; injunctions available and commonly used; Supreme Administrative Court challenges are frequent" }
     },
-    "primary_bottleneck": "Onshore wind permitting ‚Äî fragmented municipal spatial planning authority, strong local opposition, and multi-stage appeals create effective development barriers that have suppressed Czech wind capacity to a fraction of its resource potential",
+    "primary_bottleneck": "Onshore wind permitting ó fragmented municipal spatial planning authority, strong local opposition, and multi-stage appeals create effective development barriers that have suppressed Czech wind capacity to a fraction of its resource potential",
     "secondary_bottleneck": "Grid connection capacity in solar-heavy southern regions",
-    "offshore_note": "N/A ‚Äî landlocked",
-    "score_rationale": "Onshore wind drag is extreme (score 88) ‚Äî the dominant contributor. Solar drag is manageable. No offshore wind dimension. Combined score 70 reflects the functional impossibility of large-scale wind development under current conditions."
+    "offshore_note": "N/A ó landlocked",
+    "score_rationale": "Onshore wind drag is extreme (score 88) ó the dominant contributor. Solar drag is manageable. No offshore wind dimension. Combined score 70 reflects the functional impossibility of large-scale wind development under current conditions."
   },
 
   "fdi_restrictions": {
     "screening_regime": "Act 34/2021 Coll. (Foreign Investment Screening); EU FDI Screening Regulation (EU) 2019/452",
     "energy_sector_mandatory_notification": true,
     "critical_infrastructure_threshold_pct": 10,
-    "reviewing_ministry": "MIT (Ministerstvo pr≈Ømyslu a obchodu ‚Äî Ministry of Industry and Trade)",
+    "reviewing_ministry": "MIT (Ministerstvo prumyslu a obchodu ó Ministry of Industry and Trade)",
     "legal_basis": "Act 34/2021 Coll.; EU Regulation 2019/452 Article 4",
-    "energy_as_critical_infrastructure": "Yes ‚Äî energy production and distribution designated critical infrastructure",
+    "energy_as_critical_infrastructure": "Yes ó energy production and distribution designated critical infrastructure",
     "clearance_timeline": {
       "initial_screening_working_days": 30,
       "formal_review_if_opened_calendar_days": 90,
       "extension_possible": true
     },
     "practical_risk": "Low for OECD investors; elevated for non-EU/non-OECD acquirers",
-    "notes": "Czech FDI screening is active but not prohibitive for EU/OECD investors in renewables. Czech Republic is a NATO and EU member with open investment environment. Chinese-connected investors face heightened scrutiny following ƒåEZ strategic partner discussions."
+    "notes": "Czech FDI screening is active but not prohibitive for EU/OECD investors in renewables. Czech Republic is a NATO and EU member with open investment environment. Chinese-connected investors face heightened scrutiny following CEZ strategic partner discussions."
   },
 
   "eu_state_aid": {
     "applicable": true,
-    "primary_framework": "CEEAG ‚Äî Commission Notice 2022/C 80/01",
-    "secondary_framework": "GBER ‚Äî Commission Regulation (EU) 651/2014 as amended",
+    "primary_framework": "CEEAG ó Commission Notice 2022/C 80/01",
+    "secondary_framework": "GBER ó Commission Regulation (EU) 651/2014 as amended",
     "zeleny_bonus_state_aid_status": {
-      "instrument": "Act 165/2012 Coll. zelen√Ω bonus framework",
-      "status": "EC has reviewed Czech RES support under successive frameworks. Current zelen√Ω bonus under Act 165/2012 operates under notified and cleared framework. Verify current clearance status via EC State Aid register (competition.ec.europa.eu).",
-      "solar_levy_note": "The 2010 solar levy (Act 402/2010) was a domestic fiscal measure ‚Äî NOT an EC State Aid recovery order. Distinction is important: EC State Aid recovery risk and Czech domestic retroactivity risk are separate vectors."
+      "instrument": "Act 165/2012 Coll. zelen˝ bonus framework",
+      "status": "EC has reviewed Czech RES support under successive frameworks. Current zelen˝ bonus under Act 165/2012 operates under notified and cleared framework. Verify current clearance status via EC State Aid register (competition.ec.europa.eu).",
+      "solar_levy_note": "The 2010 solar levy (Act 402/2010) was a domestic fiscal measure ó NOT an EC State Aid recovery order. Distinction is important: EC State Aid recovery risk and Czech domestic retroactivity risk are separate vectors."
     },
     "retrospective_clawback_risk": {
       "assessment": "Low for current Act 165/2012 framework projects",
-      "notes": "Post-2012 zelen√Ω bonus framework operates under EC-cleared structure. The historical solar levy precedent arose from domestic over-support (design failure) rather than EC State Aid incompatibility. Low formal State Aid clawback risk for projects receiving cleared support."
+      "notes": "Post-2012 zelen˝ bonus framework operates under EC-cleared structure. The historical solar levy precedent arose from domestic over-support (design failure) rather than EC State Aid incompatibility. Low formal State Aid clawback risk for projects receiving cleared support."
     }
   },
 
   "financial_model_inputs": {
     "_rule_3d_note": "Rule 3D: Inputs for IRR, NPV, CapEx payback, DSCR, and LCOE modelling.",
     "_rule_3c_note": "CZK is the domestic currency. All CZK figures converted to EUR at indicative rate of 1 EUR = 25.20 CZK. Verify at ECB Reference Rate on analysis date.",
-    "_rule_3a_note": "ONE-WAY mechanism: premium is floored at zero ‚Äî generators retain full market upside when prices exceed reference. Model uncapped upside scenario in addition to floor scenario.",
+    "_rule_3a_note": "ONE-WAY mechanism: premium is floored at zero ó generators retain full market upside when prices exceed reference. Model uncapped upside scenario in addition to floor scenario.",
     "illustrative_onshore_wind_zeleny_bonus": {
       "reference_price_czk_mwh_approx": 1850,
       "reference_price_eur_mwh_indicative": 73.41,
-      "fx_note": "CZK 1,850 / 25.20 = EUR 73.41 indicative. Verify ERO annual Cenov√© rozhodnut√≠ for current reference price, and ECB rate on analysis date.",
+      "fx_note": "CZK 1,850 / 25.20 = EUR 73.41 indicative. Verify ERO annual CenovÈ rozhodnutÌ for current reference price, and ECB rate on analysis date.",
       "mechanism_type": "one_way_market_premium",
       "contract_term_years": 20,
       "p50_capacity_factor_pct": 26,
       "typical_capex_eur_per_mw": 1400000,
       "opex_eur_per_mw_per_year": 42000,
       "effective_tax_rate_pct": 21,
-      "note": "Czech wind resource is moderate (lower than coastal/northern Europe). The greater risk is permitting ‚Äî not economics. Very few large onshore wind projects currently under development given permitting barriers."
+      "note": "Czech wind resource is moderate (lower than coastal/northern Europe). The greater risk is permitting ó not economics. Very few large onshore wind projects currently under development given permitting barriers."
     },
     "illustrative_solar_pv_zeleny_bonus": {
       "reference_price_czk_mwh_approx": 1450,
       "reference_price_eur_mwh_indicative": 57.54,
-      "fx_note": "CZK 1,450 / 25.20 = EUR 57.54 indicative. Verify ERO annual Cenov√© rozhodnut√≠ and ECB rate.",
+      "fx_note": "CZK 1,450 / 25.20 = EUR 57.54 indicative. Verify ERO annual CenovÈ rozhodnutÌ and ECB rate.",
       "mechanism_type": "one_way_market_premium",
       "contract_term_years": 20,
       "p50_capacity_factor_pct_dc": 12,
       "typical_capex_eur_per_mw_dc": 580000,
       "opex_eur_per_mw_per_year": 14000,
-      "note": "Czech solar irradiation (950‚Äì1,100 kWh/kWp p.a.) is moderate. Solar economics are less compelling than southern European peers but improving with cost reductions."
+      "note": "Czech solar irradiation (950ñ1,100 kWh/kWp p.a.) is moderate. Solar economics are less compelling than southern European peers but improving with cost reductions."
     }
   },
 
   "rag_matrix": {
-    "_rule_5a_note": "Rule 5A: RAG matrix mandatory ‚Äî Stop/Go signal before detailed narrative.",
+    "_rule_5a_note": "Rule 5A: RAG matrix mandatory ó Stop/Go signal before detailed narrative.",
     "permitting_window_solar": { "rag": "AMBER", "rationale": "Solar permitting manageable; grid capacity constraints in some southern regions are a real but surmountable constraint" },
-    "permitting_window_onshore_wind": { "rag": "RED", "rationale": "Czech wind permitting is functionally prohibitive ‚Äî fragmented municipal authority, strong opposition, 5‚Äì8 year realistic P50; Czech installed wind base remains <400 MW reflecting structural development failure" },
-    "permitting_window_offshore": { "rag": "N/A", "rationale": "Landlocked ‚Äî offshore wind not applicable" },
+    "permitting_window_onshore_wind": { "rag": "RED", "rationale": "Czech wind permitting is functionally prohibitive ó fragmented municipal authority, strong opposition, 5ñ8 year realistic P50; Czech installed wind base remains <400 MW reflecting structural development failure" },
+    "permitting_window_offshore": { "rag": "N/A", "rationale": "Landlocked ó offshore wind not applicable" },
     "grid_connection": { "rag": "AMBER", "rationale": "Moderate constraints for solar in some regions; wind projects (few as they are) face shorter queues" },
     "support_mechanism_availability": { "rag": "AMBER", "rationale": "Act 165/2012 framework provides 20-year one-way premium; ERO annual reference price updates create re-setting risk; limited competitive auction volume is a constraint on new project development" },
-    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way mechanism retains merchant upside ‚Äî better return profile than a two-way CfD for high-price scenarios" },
-    "tax_efficiency": { "rag": "AMBER", "rationale": "21% CIT (increased from 19% in 2024 ‚Äî negative surprise); no regional trade tax; real estate transfer tax abolished; CZK FX risk for EUR investors" },
+    "mechanism_type_risk": { "rag": "GREEN", "rationale": "One-way mechanism retains merchant upside ó better return profile than a two-way CfD for high-price scenarios" },
+    "tax_efficiency": { "rag": "AMBER", "rationale": "21% CIT (increased from 19% in 2024 ó negative surprise); no regional trade tax; real estate transfer tax abolished; CZK FX risk for EUR investors" },
     "ppa_enforceability": { "rag": "AMBER", "rationale": "Czech Civil Code provides solid framework; Prague Arbitration Court well-regarded; growing corporate buyer market; GoOs available" },
     "political_risk": { "rag": "AMBER", "rationale": "2010 solar levy retroactive precedent is the dominant legacy risk; strong sovereign fundamentals (Aa3/AA-) partially offset; 2024 CIT increase demonstrates willingness to change investment parameters" },
     "operational_drag": { "rag": "RED", "rationale": "Onshore wind drag is extreme; solar drag manageable; landlocked geography means wind is the only scalable resource with development barriers" },
     "fdi_restrictions": { "rag": "GREEN", "rationale": "Low prohibition risk for OECD investors; FDI screening applies but process is manageable" },
     "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Act 165/2012 framework EC-cleared; low formal State Aid recovery risk" },
-    "retroactive_policy_risk": { "rag": "RED", "rationale": "2010 solar levy is one of the clearest retroactive RES support modifications in the EU ‚Äî a mandatory disclosure risk factor for any investor; 2024 CIT increase adds to the pattern" },
-    "currency_risk": { "rag": "AMBER", "rationale": "CZK not in EUR zone; 10-year range 23‚Äì27 CZK/EUR; moderate FX risk for EUR-denominated investors and lenders; Czech Republic has ERM2 entry ambitions but no confirmed timeline" },
+    "retroactive_policy_risk": { "rag": "RED", "rationale": "2010 solar levy is one of the clearest retroactive RES support modifications in the EU ó a mandatory disclosure risk factor for any investor; 2024 CIT increase adds to the pattern" },
+    "currency_risk": { "rag": "AMBER", "rationale": "CZK not in EUR zone; 10-year range 23ñ27 CZK/EUR; moderate FX risk for EUR-denominated investors and lenders; Czech Republic has ERM2 entry ambitions but no confirmed timeline" },
     "overall_stop_go": "AMBER",
-    "overall_rationale": "Czechia presents a bifurcated opportunity. Solar development is feasible with manageable permitting, competitive economics, and a stable (if annually reset) one-way premium framework. Onshore wind is functionally off-limits for most developers under current conditions ‚Äî Czech wind permitting is among the most difficult in the EU. The 2010 solar levy retroactive precedent is a mandatory investor disclosure item and drives a meaningful political risk discount. CZK FX exposure requires hedging strategy for EUR-denominated transactions. Best suited to solar-focused investors comfortable with CZK FX risk and the legacy political risk discount."
+    "overall_rationale": "Czechia presents a bifurcated opportunity. Solar development is feasible with manageable permitting, competitive economics, and a stable (if annually reset) one-way premium framework. Onshore wind is functionally off-limits for most developers under current conditions ó Czech wind permitting is among the most difficult in the EU. The 2010 solar levy retroactive precedent is a mandatory investor disclosure item and drives a meaningful political risk discount. CZK FX exposure requires hedging strategy for EUR-denominated transactions. Best suited to solar-focused investors comfortable with CZK FX risk and the legacy political risk discount."
   },
 
   "comparison_table": {
-    "_rule_5b_note": "Rule 5B: Standardised comparison categories ‚Äî identical across all jurisdiction JSONs.",
+    "_rule_5b_note": "Rule 5B: Standardised comparison categories ó identical across all jurisdiction JSONs.",
     "1_permitting_window_months_p50": 60,
-    "1_permitting_window_scope": "Onshore wind (P50 ‚Äî where permittable at all; many projects fail at spatial plan stage)",
+    "1_permitting_window_scope": "Onshore wind (P50 ó where permittable at all; many projects fail at spatial plan stage)",
     "1_permitting_window_solar_p50_months": 24,
-    "2_grid_connection_cost_native": "CZK 800,000‚Äì4,000,000 per MW",
-    "2_grid_connection_cost_eur": "EUR 31,746‚Äì158,730 per MW (indicative at 1 EUR = 25.20 CZK)",
-    "2_grid_connection_cost_fx_date": "Indicative mid-2025 rate ‚Äî verify at ECB Reference Rate on analysis date",
-    "2_grid_connection_timeline_months": "18‚Äì48 (depending on technology and region)",
-    "3_primary_support_mechanism": "Zelen√Ω bonus na elekt≈ôinu (Green Bonus) ‚Äî Act 165/2012 Coll., one-way sliding premium",
+    "2_grid_connection_cost_native": "CZK 800,000ñ4,000,000 per MW",
+    "2_grid_connection_cost_eur": "EUR 31,746ñ158,730 per MW (indicative at 1 EUR = 25.20 CZK)",
+    "2_grid_connection_cost_fx_date": "Indicative mid-2025 rate ó verify at ECB Reference Rate on analysis date",
+    "2_grid_connection_timeline_months": "18ñ48 (depending on technology and region)",
+    "3_primary_support_mechanism": "Zelen˝ bonus na elektrinu (Green Bonus) ó Act 165/2012 Coll., one-way sliding premium",
     "3_mechanism_type_code": "one_way_market_premium",
     "4_effective_corporation_tax_rate_pct": 21,
-    "4_effective_tax_rate_note": "21% CIT (Act 586/1992 ¬ß21 as amended by Act 349/2023 Consolidation Package ‚Äî increased from 19% effective tax year 2024). No regional trade tax.",
-    "4_key_incentive": "Accelerated depreciation under Act 586/1992 ¬ß32 (Group 3 assets: Year 1 = 20% declining balance); real estate transfer tax abolished (Act 386/2020)",
+    "4_effective_tax_rate_note": "21% CIT (Act 586/1992 ß21 as amended by Act 349/2023 Consolidation Package ó increased from 19% effective tax year 2024). No regional trade tax.",
+    "4_key_incentive": "Accelerated depreciation under Act 586/1992 ß32 (Group 3 assets: Year 1 = 20% declining balance); real estate transfer tax abolished (Act 386/2020)",
     "5_ppa_enforceability_rating": "Medium-High",
     "5_ppa_legal_basis": "Czech Civil Code (Act 89/2012 Coll.); Prague Arbitration Court; EFET framework growing",
     "6_political_risk_score": 74,
     "6_political_risk_direction": "Higher = lower risk",
     "7_operational_drag_score": 70,
     "7_operational_drag_direction": "Higher = more drag / worse",
-    "8_revenue_floor_native": "CZK 1,850/MWh approx. (onshore wind, indicative ERO reference price ‚Äî verify at current ERO Cenov√© rozhodnut√≠)",
-    "8_revenue_floor_eur": "EUR 73.41/MWh indicative (at 1 EUR = 25.20 CZK ‚Äî verify at ECB Reference Rate)",
-    "8_revenue_floor_fx_date": "Indicative mid-2025 CZK/EUR rate ‚Äî verify before use",
+    "8_revenue_floor_native": "CZK 1,850/MWh approx. (onshore wind, indicative ERO reference price ó verify at current ERO CenovÈ rozhodnutÌ)",
+    "8_revenue_floor_eur": "EUR 73.41/MWh indicative (at 1 EUR = 25.20 CZK ó verify at ECB Reference Rate)",
+    "8_revenue_floor_fx_date": "Indicative mid-2025 CZK/EUR rate ó verify before use",
     "8_revenue_floor_mechanism": "one_way_market_premium",
-    "8_revenue_floor_staleness_warning": "ERO sets reference prices annually via Cenov√© rozhodnut√≠. Verify current reference price at eru.cz before use."
+    "8_revenue_floor_staleness_warning": "ERO sets reference prices annually via CenovÈ rozhodnutÌ. Verify current reference price at eru.cz before use."
   },
 
   "disclaimer": "This output is produced by Hyperion AI for indicative jurisdiction-screening purposes only. It does not constitute legal or financial advice. Users should obtain qualified local legal and financial counsel before committing capital. Hyperion AI complies with SRA Standards and Regulations (15/12/24 edition).",
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
+      "permitting_p50_months": 24,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "CEPS podpurne sluzby (ancillary services) ó FCR and aFRR markets; BESS eligible under Czech grid code as storage units. CEPS publishes annual procurement volumes.",
       "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "source": "ceps_grid_code",
+      "notes": "CEPS (Czech TSO) operates formal ancillary services procurement for primary (FCR) and secondary (aFRR) reserves. BESS registered as storage units are eligible per Pravidla provozovani prenosove soustavy (Grid Code). Post-REPowerEU, Czech storage regulations have been updated to explicitly enable BESS participation. Czech BESS permitting via EIA + building permit process; similar to neighbouring Austria. (Source: CEPS Grid Code; ERSE-equivalent CEPS technical requirements for storage participation)"
     },
     "green_hydrogen": {
       "permitting_p50_months": null,
@@ -417,7 +417,7 @@
       "mechanism_type_code": "one_way_market_premium",
       "eligible_under_existing_solar_auction": true,
       "water_body_consent_required": true,
-      "primary_support_mechanism": "Market premium (zelen√Ω bonus) under Z√°kon ƒç. 165/2012 Sb. o podporovan√Ωch zdroj√≠ch energie administered by ERO.",
+      "primary_support_mechanism": "Market premium (zelen˝ bonus) under Z·kon c. 165/2012 Sb. o podporovan˝ch zdrojÌch energie administered by ERO.",
       "revenue_floor_description": null,
       "source": "jrc_pvgis",
       "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
@@ -432,7 +432,7 @@
       "active_smr_programmes": ["EDF/NUWARD discussions; Dukovany 5 large unit (not SMR) primary focus"],
       "constitutional_or_legislative_ban": false,
       "source": "iea_country",
-      "notes": "Czechia operates Dukovany and Temelin NPPs. Dukovany 5 new large unit (EDU II) is primary nuclear expansion focus ‚Äî EDF selected as preferred vendor 2024. SMR exploration is secondary to large unit expansion. Source: IEA country review."
+      "notes": "Czechia operates Dukovany and Temelin NPPs. Dukovany 5 new large unit (EDU II) is primary nuclear expansion focus ó EDF selected as preferred vendor 2024. SMR exploration is secondary to large unit expansion. Source: IEA country review."
     },
     "lng_gas": {
       "has_existing_lng_infrastructure": false,
@@ -476,7 +476,7 @@
       "feedstock_sustainability_criteria_applicable": true,
       "revenue_floor_description": null,
       "source": null,
-      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Czech bioenergy support under national RES law (Z√°kon ƒç. 165/2012 Sb.) before use."
+      "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Czech bioenergy support under national RES law (Z·kon c. 165/2012 Sb.) before use."
     },
     "coal_energy": {
       "policy_status": "phase_out",
@@ -491,12 +491,12 @@
     },
 
     "lh2_storage": {
-      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253¬∞C and associated liquefaction plant. Czechia has a National Hydrogen Strategy (2021) and participates in IPCEI Hy2Tech, with UNIPETROL (Orlen CZ) and CEZ Group as primary industrial H2 actors. However, Czech LH2 development faces three structural challenges that distinguish it from Western European peers: (1) the retroactive policy risk established by the 2010 solar levy (z√°kon ƒç. 402/2010) creates elevated sovereign risk for any state-supported H2 infrastructure; (2) the electricity grid mix (~50% nuclear + ~40% coal in transition) means grid electricity-derived H2 is not inherently 'green' without a dedicated renewable PPA ‚Äî requiring additional structuring cost; and (3) CZK currency risk applies to EUR-denominated investors. SEVESO III applies via z√°kon ƒç. 224/2015 Sb. The primary safety regulatory gate is ƒåI≈ΩP (Czech Environmental Inspectorate) and Regional Authority (K√ö).",
+      "_overview": "Liquid hydrogen (LH2) storage infrastructure: cryogenic storage at -253∞C and associated liquefaction plant. Czechia has a National Hydrogen Strategy (2021) and participates in IPCEI Hy2Tech, with UNIPETROL (Orlen CZ) and CEZ Group as primary industrial H2 actors. However, Czech LH2 development faces three structural challenges that distinguish it from Western European peers: (1) the retroactive policy risk established by the 2010 solar levy (z·kon c. 402/2010) creates elevated sovereign risk for any state-supported H2 infrastructure; (2) the electricity grid mix (~50% nuclear + ~40% coal in transition) means grid electricity-derived H2 is not inherently 'green' without a dedicated renewable PPA ó requiring additional structuring cost; and (3) CZK currency risk applies to EUR-denominated investors. SEVESO III applies via z·kon c. 224/2015 Sb. The primary safety regulatory gate is CIéP (Czech Environmental Inspectorate) and Regional Authority (K⁄).",
 
       "permitting_p50_months": 24,
       "permitting_confidence": "medium",
       "mechanism_type_code": "tolling_arrangement",
-      "primary_support_mechanism": "No dedicated LH2 storage operating support mechanism in Czechia. Standalone LH2 storage operates on a tolling or merchant basis. OP TAK (Operaƒçn√≠ program Technologie a aplikace pro konkurenceschopnost ‚Äî EU structural funds for H2 and technology) and Czech Modernisation Fund provide CapEx grant pathways. MPO (Ministry of Industry and Trade) administers H2 grants. IPCEI Hy2Tech participant. EU Hydrogen Bank eligible. Source: ec_state_aid; mpo_cz; iea_hydrogen.",
+      "primary_support_mechanism": "No dedicated LH2 storage operating support mechanism in Czechia. Standalone LH2 storage operates on a tolling or merchant basis. OP TAK (OperacnÌ program Technologie a aplikace pro konkurenceschopnost ó EU structural funds for H2 and technology) and Czech Modernisation Fund provide CapEx grant pathways. MPO (Ministry of Industry and Trade) administers H2 grants. IPCEI Hy2Tech participant. EU Hydrogen Bank eligible. Source: ec_state_aid; mpo_cz; iea_hydrogen.",
       "revenue_floor_description": null,
       "source": "cizp_cz; iea_hydrogen; ec_state_aid; mpo_cz",
       "staleness_warning": "OP TAK call conditions and available funding envelopes change as EU structural fund programmes are drawn down. Modernisation Fund H2 call terms evolve. CZK/EUR exchange rate must be verified at ECB Reference Rate on date of analysis. Czech retroactive policy risk context requires ongoing monitoring of legislative developments.",
@@ -504,93 +504,93 @@
       "regulatory_framework": {
         "primary_safety_legislation": [
           {
-            "instrument": "Z√°kon ƒç. 224/2015 Sb. o prevenci z√°va≈æn√Ωch hav√°ri√≠ (Z√°kon o prevenci z√°va≈æn√Ωch hav√°ri√≠ ‚Äî Prevention of Major Accidents Act)",
-            "relevance": "Czech SEVESO III transposition. Primary safety legislation for major accident prevention including LH2 storage. Competent authority: ƒåI≈ΩP (ƒåesk√° inspekce ≈æivotn√≠ho prost≈ôed√≠ ‚Äî Czech Environmental Inspectorate) + K√ö (Krajsk√Ω √∫≈ôad ‚Äî Regional Authority). Upper-tier establishments require bezpeƒçnostn√≠ zpr√°va (safety report) submitted to ƒåI≈ΩP. LH2 classified as a flammable gas: lower-tier threshold 10 t, upper-tier 50 t."
+            "instrument": "Z·kon c. 224/2015 Sb. o prevenci z·vaûn˝ch hav·riÌ (Z·kon o prevenci z·vaûn˝ch hav·riÌ ó Prevention of Major Accidents Act)",
+            "relevance": "Czech SEVESO III transposition. Primary safety legislation for major accident prevention including LH2 storage. Competent authority: CIéP (Cesk· inspekce ûivotnÌho prostredÌ ó Czech Environmental Inspectorate) + K⁄ (Krajsk˝ ˙rad ó Regional Authority). Upper-tier establishments require bezpecnostnÌ zpr·va (safety report) submitted to CIéP. LH2 classified as a flammable gas: lower-tier threshold 10 t, upper-tier 50 t."
           },
           {
-            "instrument": "Z√°kon ƒç. 258/2000 Sb. o ochranƒõ ve≈ôejn√©ho zdrav√≠ (Public Health Protection Act) ‚Äî relevant provisions on chemical hazards",
-            "relevance": "Public health aspects of industrial chemical handling; Krajsk√° hygienick√° stanice (Regional Hygiene Station) as consultee for major chemical storage installations near residential areas."
+            "instrument": "Z·kon c. 258/2000 Sb. o ochrane verejnÈho zdravÌ (Public Health Protection Act) ó relevant provisions on chemical hazards",
+            "relevance": "Public health aspects of industrial chemical handling; Krajsk· hygienick· stanice (Regional Hygiene Station) as consultee for major chemical storage installations near residential areas."
           },
           {
-            "instrument": "Z√°kon ƒç. 201/2012 Sb. o ochranƒõ ovzdu≈°√≠ (Air Protection Act)",
-            "relevance": "Air emissions permit (povolen√≠ k provozu) required from ƒåI≈ΩP for facilities generating air emissions including BOG combustion or venting."
+            "instrument": "Z·kon c. 201/2012 Sb. o ochrane ovzduöÌ (Air Protection Act)",
+            "relevance": "Air emissions permit (povolenÌ k provozu) required from CIéP for facilities generating air emissions including BOG combustion or venting."
           },
           {
-            "instrument": "Na≈ô√≠zen√≠ vl√°dy ƒç. 116/2016 Sb. (transposing ATEX Directives 2014/34/EU and 1999/92/EC)",
-            "relevance": "ATEX zone classification around LH2 storage and release sources; Dokumentace o ochranƒõ p≈ôed v√Ωbuchem (Explosion Protection Document ‚Äî DOPV) required."
+            "instrument": "NarÌzenÌ vl·dy c. 116/2016 Sb. (transposing ATEX Directives 2014/34/EU and 1999/92/EC)",
+            "relevance": "ATEX zone classification around LH2 storage and release sources; Dokumentace o ochrane pred v˝buchem (Explosion Protection Document ó DOPV) required."
           },
           {
-            "instrument": "Z√°kon ƒç. 22/1997 Sb. o technick√Ωch po≈æadavc√≠ch na v√Ωrobky (Product Requirements Act) ‚Äî PED transposition",
+            "instrument": "Z·kon c. 22/1997 Sb. o technick˝ch poûadavcÌch na v˝robky (Product Requirements Act) ó PED transposition",
             "relevance": "Design, manufacture, conformity assessment, and periodic inspection of cryogenic pressure vessels, pipework, and LH2 storage tanks under PED 2014/68/EU."
           }
         ],
         "planning_legislation": [
           {
-            "instrument": "Z√°kon ƒç. 100/2001 Sb. o posuzov√°n√≠ vliv≈Ø na ≈æivotn√≠ prost≈ôed√≠ (EIA Act)",
+            "instrument": "Z·kon c. 100/2001 Sb. o posuzov·nÌ vlivu na ûivotnÌ prostredÌ (EIA Act)",
             "relevance": "EIA may be triggered for large-scale LH2 facilities. Ministry of Environment or Regional Authority competent depending on project category."
           },
           {
-            "instrument": "Z√°kon ƒç. 283/2021 Sb. ‚Äî nov√Ω stavebn√≠ z√°kon (New Building Act 2021, in force 2024)",
-            "relevance": "Construction permitting for LH2 facility buildings and structures. The 2021 Building Act reform (entering force in stages from 2024) aims to streamline construction permitting ‚Äî verify current procedural status with Czech advisers."
+            "instrument": "Z·kon c. 283/2021 Sb. ó nov˝ stavebnÌ z·kon (New Building Act 2021, in force 2024)",
+            "relevance": "Construction permitting for LH2 facility buildings and structures. The 2021 Building Act reform (entering force in stages from 2024) aims to streamline construction permitting ó verify current procedural status with Czech advisers."
           }
         ],
         "hydrogen_strategy_instruments": [
           {
-            "instrument": "N√°rodn√≠ vod√≠kov√° strategie (National Hydrogen Strategy) ‚Äî MPO 2021",
-            "relevance": "Sets target of 0.5 GW electrolysis by 2030; identifies industrial H2 demand (steel, chemicals, refining) as primary end-use; UNIPETROL/Orlen CZ refinery decarbonisation as flagship project. Administered by MPO (Ministerstvo pr≈Ømyslu a obchodu ‚Äî Ministry of Industry and Trade)."
+            "instrument": "N·rodnÌ vodÌkov· strategie (National Hydrogen Strategy) ó MPO 2021",
+            "relevance": "Sets target of 0.5 GW electrolysis by 2030; identifies industrial H2 demand (steel, chemicals, refining) as primary end-use; UNIPETROL/Orlen CZ refinery decarbonisation as flagship project. Administered by MPO (Ministerstvo prumyslu a obchodu ó Ministry of Industry and Trade)."
           },
           {
-            "instrument": "Operaƒçn√≠ program Technologie a aplikace pro konkurenceschopnost (OP TAK) ‚Äî EU Structural Funds 2021‚Äì2027",
+            "instrument": "OperacnÌ program Technologie a aplikace pro konkurenceschopnost (OP TAK) ó EU Structural Funds 2021ñ2027",
             "relevance": "EU structural fund programme including H2 technology development and LH2 infrastructure investment. Czech national co-financing applies. Administered by MPO."
           },
           {
-            "instrument": "Modernisation Fund (CZ component) ‚Äî EC Decision C(2021)7906",
-            "relevance": "EU Modernisation Fund supports low-carbon investments in coal-dependent member states including Czechia. H2 projects are eligible investments. Administered via SF≈ΩP (State Environmental Fund)."
+            "instrument": "Modernisation Fund (CZ component) ó EC Decision C(2021)7906",
+            "relevance": "EU Modernisation Fund supports low-carbon investments in coal-dependent member states including Czechia. H2 projects are eligible investments. Administered via SFéP (State Environmental Fund)."
           }
         ]
       },
 
       "comah_equivalent_regime": {
-        "national_instrument": "Z√°kon ƒç. 224/2015 Sb. o prevenci z√°va≈æn√Ωch hav√°ri√≠ (SEVESO III transposition)",
-        "competent_authority_primary": "ƒåI≈ΩP (ƒåesk√° inspekce ≈æivotn√≠ho prost≈ôed√≠ ‚Äî Czech Environmental Inspectorate) ‚Äî primary SEVESO III competent authority for safety report assessment",
-        "competent_authority_secondary": "K√ö (Krajsk√Ω √∫≈ôad ‚Äî Regional Authority) for lower-tier establishments and coordination of external emergency plans",
+        "national_instrument": "Z·kon c. 224/2015 Sb. o prevenci z·vaûn˝ch hav·riÌ (SEVESO III transposition)",
+        "competent_authority_primary": "CIéP (Cesk· inspekce ûivotnÌho prostredÌ ó Czech Environmental Inspectorate) ó primary SEVESO III competent authority for safety report assessment",
+        "competent_authority_secondary": "K⁄ (Krajsk˝ ˙rad ó Regional Authority) for lower-tier establishments and coordination of external emergency plans",
         "lower_tier_threshold_flammable_gas_tonnes": 10,
         "upper_tier_threshold_flammable_gas_tonnes": 50,
-        "lower_tier_obligations": "Notify K√ö; prepare and implement Politika prevence z√°va≈æn√© hav√°rie (PPZH ‚Äî Major Accident Prevention Policy); internal emergency plan (vnit≈ôn√≠ havarijn√≠ pl√°n)",
-        "upper_tier_obligations": "Prepare bezpeƒçnostn√≠ zpr√°va (safety report) assessed by ƒåI≈ΩP; external emergency plan (vnƒõj≈°√≠ havarijn√≠ pl√°n) prepared by K√ö/IZS (Integrated Rescue System); public information duty; periodic ƒåI≈ΩP inspection",
+        "lower_tier_obligations": "Notify K⁄; prepare and implement Politika prevence z·vaûnÈ hav·rie (PPZH ó Major Accident Prevention Policy); internal emergency plan (vnitrnÌ havarijnÌ pl·n)",
+        "upper_tier_obligations": "Prepare bezpecnostnÌ zpr·va (safety report) assessed by CIéP; external emergency plan (vnejöÌ havarijnÌ pl·n) prepared by K⁄/IZS (Integrated Rescue System); public information duty; periodic CIéP inspection",
         "pre_notification_lead_time_months": 3,
         "safety_report_preparation_months": 6,
         "authority_assessment_months": 5,
-        "notes": "Czech SEVESO competence is split between ƒåI≈ΩP (safety report assessment ‚Äî national inspectorate) and K√ö (regional authority for lower-tier sites and emergency planning coordination). The split-authority structure requires coordinated engagement with both bodies. Pre-application consultation with ƒåI≈ΩP is advisable for novel technology (LH2). ƒåI≈ΩP assessment quality is generally competent but timelines can extend for novel industrial activities."
+        "notes": "Czech SEVESO competence is split between CIéP (safety report assessment ó national inspectorate) and K⁄ (regional authority for lower-tier sites and emergency planning coordination). The split-authority structure requires coordinated engagement with both bodies. Pre-application consultation with CIéP is advisable for novel technology (LH2). CIéP assessment quality is generally competent but timelines can extend for novel industrial activities."
       },
 
       "permitting": {
-        "planning_authority": "Regional Authority (K√ö) for EIA coordination; municipal/regional building authority for construction; ƒåI≈ΩP for SEVESO; ƒåI≈ΩP/SF≈ΩP for air emissions permit",
+        "planning_authority": "Regional Authority (K⁄) for EIA coordination; municipal/regional building authority for construction; CIéP for SEVESO; CIéP/SFéP for air emissions permit",
         "timeline_p50_months": 24,
         "timeline_range_months": { "min": 18, "max": 42 },
         "parallel_consent_tracks": [
-          "EIA process under z√°kon ƒç. 100/2001 (if triggered) ‚Äî 9‚Äì18 months",
-          "Stavebn√≠ z√°kon building permit (z√°kon ƒç. 283/2021) ‚Äî 6‚Äì12 months",
-          "SEVESO z√°kon ƒç. 224/2015 notification / bezpeƒçnostn√≠ zpr√°va ‚Äî 3‚Äì11 months",
-          "Air emissions permit (z√°kon ƒç. 201/2012) ‚Äî 3‚Äì6 months",
-          "ERU energy licence (if applicable to H2 production component) ‚Äî 3‚Äì6 months"
+          "EIA process under z·kon c. 100/2001 (if triggered) ó 9ñ18 months",
+          "StavebnÌ z·kon building permit (z·kon c. 283/2021) ó 6ñ12 months",
+          "SEVESO z·kon c. 224/2015 notification / bezpecnostnÌ zpr·va ó 3ñ11 months",
+          "Air emissions permit (z·kon c. 201/2012) ó 3ñ6 months",
+          "ERU energy licence (if applicable to H2 production component) ó 3ñ6 months"
         ],
-        "building_act_reform_note": "The new Building Act (z√°kon ƒç. 283/2021) entered force in stages from 2024, aiming to consolidate permitting and reduce delays. Verify current procedural framework with Czech legal advisers as transition to new Act may create procedural uncertainty during implementation phase.",
+        "building_act_reform_note": "The new Building Act (z·kon c. 283/2021) entered force in stages from 2024, aiming to consolidate permitting and reduce delays. Verify current procedural framework with Czech legal advisers as transition to new Act may create procedural uncertainty during implementation phase.",
         "appeal_risk": "medium",
-        "appeal_mechanism": "Spr√°vn√≠ soudy (Administrative courts); Nejvy≈°≈°√≠ spr√°vn√≠ soud (NSS ‚Äî Supreme Administrative Court)",
-        "notes": "Czech permitting for industrial facilities is more burdensome than Western EU peers but significantly more straightforward than Czech onshore wind permitting. P50 of 24 months reflects a typical industrial chemical facility without EIA trigger. The primary permitting risk is EIA ‚Äî triggered for larger H2 facilities ‚Äî which extends the timeline substantially. Building Act reform may improve timelines but creates transition uncertainty."
+        "appeal_mechanism": "Spr·vnÌ soudy (Administrative courts); NejvyööÌ spr·vnÌ soud (NSS ó Supreme Administrative Court)",
+        "notes": "Czech permitting for industrial facilities is more burdensome than Western EU peers but significantly more straightforward than Czech onshore wind permitting. P50 of 24 months reflects a typical industrial chemical facility without EIA trigger. The primary permitting risk is EIA ó triggered for larger H2 facilities ó which extends the timeline substantially. Building Act reform may improve timelines but creates transition uncertainty."
       },
 
       "electricity_connection": {
-        "relevance": "Liquefaction is highly electricity-intensive (~10‚Äì12 kWh per kg H2 liquefied). CRITICAL: Czech grid mix (~50% nuclear + ~40% coal declining + renewables) means grid electricity-derived H2 does NOT automatically qualify as 'green' hydrogen. A dedicated renewable PPA or co-located renewable generation is essential for H2 produced to meet EU taxonomy green hydrogen standards.",
+        "relevance": "Liquefaction is highly electricity-intensive (~10ñ12 kWh per kg H2 liquefied). CRITICAL: Czech grid mix (~50% nuclear + ~40% coal declining + renewables) means grid electricity-derived H2 does NOT automatically qualify as 'green' hydrogen. A dedicated renewable PPA or co-located renewable generation is essential for H2 produced to meet EU taxonomy green hydrogen standards.",
         "liquefaction_specific_energy_kwh_per_kg_h2": {
           "range_low": 10,
           "range_high": 12,
           "source": "IEA, The Future of Hydrogen, 2019, p.52"
         },
-        "grid_operator": "ƒåEPS a.s. (TSO); ƒåEZ Distribuce a.s., E.ON Distribuce, PREdistribuce (DSOs)",
-        "regulatory_authority": "ERU (Energetick√Ω regulaƒçn√≠ √∫≈ôad ‚Äî Energy Regulatory Office) regulates grid connection tariffs",
-        "grid_mix_warning": "CRITICAL ‚Äî Czech electricity mix in 2024‚Äì2026 is approximately 50% nuclear, 35‚Äì40% coal (declining), 10‚Äì15% renewables. Grid electricity-derived LH2 DOES NOT meet the EU Delegated Act on green hydrogen carbon intensity thresholds (< 3.4 kg CO2e/kg H2) without a certified renewable PPA. Investors must structure a dedicated renewable electricity supply chain ‚Äî either via physical PPA with Czech solar/wind generator or via additionality-compliant GoO (z√°ruky p≈Øvodu) arrangement. Failure to do so undermines green H2 commercial premium and EU taxonomy eligibility.",
+        "grid_operator": "CEPS a.s. (TSO); CEZ Distribuce a.s., E.ON Distribuce, PREdistribuce (DSOs)",
+        "regulatory_authority": "ERU (Energetick˝ regulacnÌ ˙rad ó Energy Regulatory Office) regulates grid connection tariffs",
+        "grid_mix_warning": "CRITICAL ó Czech electricity mix in 2024ñ2026 is approximately 50% nuclear, 35ñ40% coal (declining), 10ñ15% renewables. Grid electricity-derived LH2 DOES NOT meet the EU Delegated Act on green hydrogen carbon intensity thresholds (< 3.4 kg CO2e/kg H2) without a certified renewable PPA. Investors must structure a dedicated renewable electricity supply chain ó either via physical PPA with Czech solar/wind generator or via additionality-compliant GoO (z·ruky puvodu) arrangement. Failure to do so undermines green H2 commercial premium and EU taxonomy eligibility.",
         "connection_cost_czk_per_mw": {
           "range_low_czk": 800000,
           "range_high_czk": 4000000,
@@ -599,25 +599,25 @@
           "fx_note": "CZK/EUR conversion at indicative rate of 1 EUR = 25.20 CZK. Verify at ECB Reference Rate on analysis date.",
           "source": "ERU regulated connection tariffs"
         },
-        "grid_queue_risk": "MEDIUM ‚Äî Czech grid connection capacity constrained in solar-heavy southern regions; H2 load in industrial centres (Pardubice H2 Valley, North Bohemia, Prague area) likely more manageable",
-        "electricity_price_risk": "MEDIUM ‚Äî Czech wholesale electricity (PXE) tracks Central European market prices; industrial prices EUR 80‚Äì120/MWh range (verify current); no structural low-price advantage equivalent to Nordic markets",
-        "renewable_ppa_strategy": "Given Czech grid mix, a dedicated renewable PPA with a Czech solar or wind generator (or cross-border PPA from Austria/Germany) is essential for green H2 certification. The zelen√Ω bonus (Act 165/2012) mechanism means Czech RES generators sell on market independently ‚Äî corporate PPAs are structurally compatible. OTE (Energy Market Operator) issues Z√°ruky p≈Øvodu (Guarantees of Origin) for certification."
+        "grid_queue_risk": "MEDIUM ó Czech grid connection capacity constrained in solar-heavy southern regions; H2 load in industrial centres (Pardubice H2 Valley, North Bohemia, Prague area) likely more manageable",
+        "electricity_price_risk": "MEDIUM ó Czech wholesale electricity (PXE) tracks Central European market prices; industrial prices EUR 80ñ120/MWh range (verify current); no structural low-price advantage equivalent to Nordic markets",
+        "renewable_ppa_strategy": "Given Czech grid mix, a dedicated renewable PPA with a Czech solar or wind generator (or cross-border PPA from Austria/Germany) is essential for green H2 certification. The zelen˝ bonus (Act 165/2012) mechanism means Czech RES generators sell on market independently ó corporate PPAs are structurally compatible. OTE (Energy Market Operator) issues Z·ruky puvodu (Guarantees of Origin) for certification."
       },
 
       "support_mechanisms": {
         "_rule_3a_note": "Rule 3A: LH2 storage has no dedicated two-way CfD or one-way FiT in Czechia. Revenue is primarily via tolling contracts with no state commodity floor. OP TAK and Modernisation Fund provide CapEx grants only.",
-        "sovereign_risk_warning": "CRITICAL DISCLOSURE ‚Äî RETROACTIVE POLICY PRECEDENT: Z√°kon ƒç. 402/2010 Sb. (solar levy) demonstrates Czech willingness to retroactively modify contracted energy project revenues. Any Czech H2 infrastructure project must factor this precedent into the investor risk disclosure and lender due diligence process. The National Hydrogen Strategy (2021) is a policy statement, not a binding revenue commitment ‚Äî no Czech equivalent of HAR or EAG Marktpr√§mie exists for H2 storage.",
-        "primary_mechanism_standalone": "Tolling arrangement ‚Äî infrastructure fee for storage, liquefaction, and dispensing services; no commodity price floor",
+        "sovereign_risk_warning": "CRITICAL DISCLOSURE ó RETROACTIVE POLICY PRECEDENT: Z·kon c. 402/2010 Sb. (solar levy) demonstrates Czech willingness to retroactively modify contracted energy project revenues. Any Czech H2 infrastructure project must factor this precedent into the investor risk disclosure and lender due diligence process. The National Hydrogen Strategy (2021) is a policy statement, not a binding revenue commitment ó no Czech equivalent of HAR or EAG Marktpr‰mie exists for H2 storage.",
+        "primary_mechanism_standalone": "Tolling arrangement ó infrastructure fee for storage, liquefaction, and dispensing services; no commodity price floor",
         "op_tak_grant": {
           "applicable": true,
-          "description": "OP TAK (Operaƒçn√≠ program Technologie a aplikace pro konkurenceschopnost) ‚Äî EU structural funds 2021‚Äì2027. H2 technology development and infrastructure eligible. Grants administered by MPO. Competitive call process.",
-          "administrator": "MPO (Ministerstvo pr≈Ømyslu a obchodu ‚Äî mpo.cz)",
+          "description": "OP TAK (OperacnÌ program Technologie a aplikace pro konkurenceschopnost) ó EU structural funds 2021ñ2027. H2 technology development and infrastructure eligible. Grants administered by MPO. Competitive call process.",
+          "administrator": "MPO (Ministerstvo prumyslu a obchodu ó mpo.cz)",
           "staleness_warning": "OP TAK call conditions and available funding envelopes change as the programme progresses. Verify current call prospectus at mpo.cz/op-tak."
         },
         "modernisation_fund": {
           "applicable": true,
-          "description": "EU Modernisation Fund Czech component ‚Äî supports low-carbon investments in coal-dependent member states. H2 projects potentially eligible under energy transformation strand. Administered via SF≈ΩP (St√°tn√≠ fond ≈æivotn√≠ho prost≈ôed√≠ ‚Äî State Environmental Fund).",
-          "staleness_warning": "Modernisation Fund Czech allocation and call terms evolve. Verify current eligible H2 investment categories with SF≈ΩP."
+          "description": "EU Modernisation Fund Czech component ó supports low-carbon investments in coal-dependent member states. H2 projects potentially eligible under energy transformation strand. Administered via SFéP (St·tnÌ fond ûivotnÌho prostredÌ ó State Environmental Fund).",
+          "staleness_warning": "Modernisation Fund Czech allocation and call terms evolve. Verify current eligible H2 investment categories with SFéP."
         },
         "ipcei_hy2tech": {
           "applicable": true,
@@ -627,37 +627,37 @@
       },
 
       "tax": {
-        "_rule_3b_note": "Rule 3B: Czech accelerated depreciation under z√°kon ƒç. 586/1992 ¬ß26‚Äì32 is a CapEx TIMING benefit ‚Äî not a permanent effective tax rate reduction. NPV of the timing benefit must be shown separately.",
+        "_rule_3b_note": "Rule 3B: Czech accelerated depreciation under z·kon c. 586/1992 ß26ñ32 is a CapEx TIMING benefit ó not a permanent effective tax rate reduction. NPV of the timing benefit must be shown separately.",
         "cit_rate_pct": 21,
         "cit_rate_czk_note": "CIT applies to CZK-denominated taxable income. EUR-denominated investors must account for CZK translation effects on tax base.",
-        "legal_basis_cit": "Z√°kon ƒç. 586/1992 Sb. ¬ß21 as amended by z√°kon ƒç. 349/2023 Sb. (Consolidation Package ‚Äî increased from 19% to 21% effective tax year 2024)",
-        "prior_rate_warning": "CIT rate was 19% from 2010‚Äì2023, increased to 21% from 2024. This rate change is an example of Czech willingness to alter investment return parameters ‚Äî flag in sovereign risk disclosure.",
+        "legal_basis_cit": "Z·kon c. 586/1992 Sb. ß21 as amended by z·kon c. 349/2023 Sb. (Consolidation Package ó increased from 19% to 21% effective tax year 2024)",
+        "prior_rate_warning": "CIT rate was 19% from 2010ñ2023, increased to 21% from 2024. This rate change is an example of Czech willingness to alter investment return parameters ó flag in sovereign risk disclosure.",
         "accelerated_depreciation": {
           "group_2_year1_pct": 35.5,
           "group_3_year1_pct": 20,
           "qualifying_lh2_assets_group": "H2 plant and equipment likely classified in Group 2 (inverters, smaller machinery) or Group 3 (turbines, large plant, storage tanks). Verify classification for specific LH2 assets with Czech tax adviser.",
-          "legal_basis": "Z√°kon ƒç. 586/1992 Sb. ¬ß26‚Äì32 (accelerated depreciation under ¬ß32)"
+          "legal_basis": "Z·kon c. 586/1992 Sb. ß26ñ32 (accelerated depreciation under ß32)"
         },
-        "czk_fx_risk_note": "CZK is the domestic currency ‚Äî not in the EUR zone. EUR-denominated investors (lenders and equity) face CZK/EUR FX risk. 10-year range approximately 23‚Äì27 CZK/EUR. FX hedging strategy is material to project structuring. Czech Republic has ERM2 entry ambitions but no confirmed timeline.",
+        "czk_fx_risk_note": "CZK is the domestic currency ó not in the EUR zone. EUR-denominated investors (lenders and equity) face CZK/EUR FX risk. 10-year range approximately 23ñ27 CZK/EUR. FX hedging strategy is material to project structuring. Czech Republic has ERM2 entry ambitions but no confirmed timeline.",
         "npv_benefit_analysis": {
           "_rule_3b_compliance": true,
-          "description": "At 21% CIT and 10% WACC: Group 3 accelerated depreciation (Year 1 = 20% declining balance): NPV of tax shield ‚âà 17.8% of qualifying CapEx. Standard straight-line (10% p.a. over 10 years): NPV ‚âà 13.1%. Timing benefit (NPV delta) ‚âà 4.7ppts per CZK 1 of qualifying CapEx. EUR-equivalent at 1 EUR = 25.20 CZK (verify at ECB Reference Rate on analysis date).",
+          "description": "At 21% CIT and 10% WACC: Group 3 accelerated depreciation (Year 1 = 20% declining balance): NPV of tax shield ò 17.8% of qualifying CapEx. Standard straight-line (10% p.a. over 10 years): NPV ò 13.1%. Timing benefit (NPV delta) ò 4.7ppts per CZK 1 of qualifying CapEx. EUR-equivalent at 1 EUR = 25.20 CZK (verify at ECB Reference Rate on analysis date).",
           "note": "Timing benefit only. Total gross tax deduction over asset life is identical under both methods."
         },
         "real_estate_transfer_tax": {
           "status": "ABOLISHED",
-          "legal_basis": "Act 386/2020 Coll. ‚Äî abolished from December 2020",
-          "notes": "No real estate transfer tax applies to Czech asset deals. Share deal structure (1% stamp duty equivalent does not apply in Czechia ‚Äî no equivalent) also avoids transfer costs."
+          "legal_basis": "Act 386/2020 Coll. ó abolished from December 2020",
+          "notes": "No real estate transfer tax applies to Czech asset deals. Share deal structure (1% stamp duty equivalent does not apply in Czechia ó no equivalent) also avoids transfer costs."
         }
       },
 
       "safety_standards": {
-        "cryogenic_vessel_standard": "ƒåSN EN 1251 (Czech adoption of EN 1251 ‚Äî Cryogenic vessels, static vacuum-insulated vessels); CE marking under z√°kon ƒç. 22/1997 Sb. (PED transposition); ƒåI≈ΩP periodic inspection of pressure equipment",
-        "electrical_hazardous_area": "ATEX zones per ƒåSN EN 60079 series; Dokumentace o ochranƒõ p≈ôed v√Ωbuchem (DOPV ‚Äî Explosion Protection Document) required under Na≈ô√≠zen√≠ vl√°dy ƒç. 116/2016 Sb.",
+        "cryogenic_vessel_standard": "CSN EN 1251 (Czech adoption of EN 1251 ó Cryogenic vessels, static vacuum-insulated vessels); CE marking under z·kon c. 22/1997 Sb. (PED transposition); CIéP periodic inspection of pressure equipment",
+        "electrical_hazardous_area": "ATEX zones per CSN EN 60079 series; Dokumentace o ochrane pred v˝buchem (DOPV ó Explosion Protection Document) required under NarÌzenÌ vl·dy c. 116/2016 Sb.",
         "boil_off_gas_management": {
           "bog_rate_pct_per_day": { "typical": 0.5, "range_low": 0.3, "range_high": 1.0 },
-          "management_options": ["Reliquefaction (preferred)", "Catalytic combustion with air emissions permit (z√°kon ƒç. 201/2012)", "Use as on-site fuel"],
-          "regulatory_basis": "BOG must be addressed in bezpeƒçnostn√≠ zpr√°va for upper-tier SEVESO sites (z√°kon ƒç. 224/2015); air emissions from BOG combustion require povolen√≠ k provozu (operating permit) from ƒåI≈ΩP under z√°kon ƒç. 201/2012"
+          "management_options": ["Reliquefaction (preferred)", "Catalytic combustion with air emissions permit (z·kon c. 201/2012)", "Use as on-site fuel"],
+          "regulatory_basis": "BOG must be addressed in bezpecnostnÌ zpr·va for upper-tier SEVESO sites (z·kon c. 224/2015); air emissions from BOG combustion require povolenÌ k provozu (operating permit) from CIéP under z·kon c. 201/2012"
         }
       },
 
@@ -674,7 +674,7 @@
             "per_tonne_per_day_range_high_eur": 5000000,
             "per_tonne_per_day_midpoint_eur": 3500000,
             "fx_rate_used": 25.20,
-            "fx_rate_date": "Indicative ‚Äî verify at ECB Reference Rate on analysis date",
+            "fx_rate_date": "Indicative ó verify at ECB Reference Rate on analysis date",
             "source": "IEA, The Future of Hydrogen, 2019; Hydrogen Council, Hydrogen Insights 2023"
           },
           "storage_tank_capex": {
@@ -685,7 +685,7 @@
             "per_tonne_range_high_eur": 2000000,
             "per_tonne_midpoint_eur": 1000000,
             "fx_rate_used": 25.20,
-            "fx_rate_date": "Indicative ‚Äî verify at ECB Reference Rate on analysis date"
+            "fx_rate_date": "Indicative ó verify at ECB Reference Rate on analysis date"
           },
           "illustrative_total_project_capex": {
             "liquefaction_2tpd_czk": 176400000,
@@ -694,7 +694,7 @@
             "total_indicative_czk": 1723680000,
             "total_indicative_eur": 68400000,
             "fx_rate_used": 25.20,
-            "fx_rate_date": "Indicative ‚Äî verify at ECB Reference Rate on analysis date",
+            "fx_rate_date": "Indicative ó verify at ECB Reference Rate on analysis date",
             "notes": "Balance of plant and civil works estimated at 20% of equipment cost."
           },
           "opex_electricity": {
@@ -702,22 +702,22 @@
             "industrial_electricity_price_eur_per_kwh_ref": 0.10,
             "electricity_opex_eur_per_kg_lh2": 1.10,
             "electricity_opex_czk_per_kg_lh2": 27.72,
-            "renewable_ppa_premium_note": "If green H2 certification required (EU taxonomy / offtaker ESG requirement), add cost of renewable PPA premium over baseload grid price. Estimated EUR 0.02‚Äì0.04/kWh additional cost for dedicated green electricity.",
+            "renewable_ppa_premium_note": "If green H2 certification required (EU taxonomy / offtaker ESG requirement), add cost of renewable PPA premium over baseload grid price. Estimated EUR 0.02ñ0.04/kWh additional cost for dedicated green electricity.",
             "fx_rate_used": 25.20,
-            "fx_rate_date": "Indicative ‚Äî verify at ECB Reference Rate on analysis date",
+            "fx_rate_date": "Indicative ó verify at ECB Reference Rate on analysis date",
             "source": "IEA, The Future of Hydrogen, 2019; ERU industrial price statistics (verify current)"
           },
           "boil_off_loss_pct_per_day": 0.5,
-          "note": "Illustrative inputs only. CZK/EUR FX conversion is indicative ‚Äî verify at ECB Reference Rate. Renewable PPA cost must be added for green H2 certification. Actual project costs depend on technology vendor, site location, OP TAK/Modernisation Fund grant outcome, and CZK FX strategy."
+          "note": "Illustrative inputs only. CZK/EUR FX conversion is indicative ó verify at ECB Reference Rate. Renewable PPA cost must be added for green H2 certification. Actual project costs depend on technology vendor, site location, OP TAK/Modernisation Fund grant outcome, and CZK FX strategy."
         }
       },
 
       "market_context": {
-        "czechia_policy_position": "National Hydrogen Strategy (2021) targets 80 MW electrolysis by 2025 and 0.5 GW by 2030 ‚Äî modest by EU standards. Industrial demand from UNIPETROL (Orlen CZ) Litv√≠nov refinery, ƒåEZ industrial H2 initiatives, and Hydrogen Valley Pardubice are the primary demand anchors. Czech H2 strategy is primarily focused on industrial decarbonisation rather than large-scale export.",
+        "czechia_policy_position": "National Hydrogen Strategy (2021) targets 80 MW electrolysis by 2025 and 0.5 GW by 2030 ó modest by EU standards. Industrial demand from UNIPETROL (Orlen CZ) LitvÌnov refinery, CEZ industrial H2 initiatives, and Hydrogen Valley Pardubice are the primary demand anchors. Czech H2 strategy is primarily focused on industrial decarbonisation rather than large-scale export.",
         "key_cz_lh2_projects_indicative": [
           {
-            "project": "UNIPETROL (Orlen CZ) Litv√≠nov Refinery H2 Decarbonisation",
-            "status": "Active feasibility ‚Äî green H2 to replace grey H2 at Litv√≠nov refinery; compressed H2 primary delivery mode",
+            "project": "UNIPETROL (Orlen CZ) LitvÌnov Refinery H2 Decarbonisation",
+            "status": "Active feasibility ó green H2 to replace grey H2 at LitvÌnov refinery; compressed H2 primary delivery mode",
             "operator": "UNIPETROL a.s. (subsidiary of Orlen group)",
             "note": "Refinery H2 demand is industrial (not transport); LH2 relevant if liquefaction needed for distribution to satellite demand sites"
           },
@@ -727,21 +727,22 @@
             "note": "Compressed H2 primary delivery mode for mobility; LH2 potential for long-haul HGV refuelling at scale"
           },
           {
-            "project": "ƒåEZ Group H2 Initiatives",
-            "status": "Multiple feasibility and concept studies; ƒåEZ exploring H2 for peaking, storage, and industrial supply",
-            "operator": "ƒåEZ a.s.",
-            "note": "Verify current ƒåEZ H2 programme status at cez.cz"
+            "project": "CEZ Group H2 Initiatives",
+            "status": "Multiple feasibility and concept studies; CEZ exploring H2 for peaking, storage, and industrial supply",
+            "operator": "CEZ a.s.",
+            "note": "Verify current CEZ H2 programme status at cez.cz"
           }
         ],
         "primary_demand_drivers": [
-          "Industrial decarbonisation: UNIPETROL refinery (Litv√≠nov), chemicals (Spolana, Lovochemie), steel (Liberty Ostrava ‚Äî verify)",
+          "Industrial decarbonisation: UNIPETROL refinery (LitvÌnov), chemicals (Spolana, Lovochemie), steel (Liberty Ostrava ó verify)",
           "H2 mobility: Pardubice H2 Valley bus/HGV fleet; Prague area H2 refuelling network",
-          "Potential export: Central European H2 backbone connection to Germany/Austria ‚Äî Czech Republic is geographically positioned as a transit state"
+          "Potential export: Central European H2 backbone connection to Germany/Austria ó Czech Republic is geographically positioned as a transit state"
         ],
         "grid_mix_risk_explicit": "Repeated for emphasis: Czech electricity grid mix means that any investor claiming 'green LH2' from Czech-grid electricity MUST structure a certified renewable PPA or additionality-compliant GoO arrangement. Failure to do so creates EU taxonomy non-compliance, ESG reputational risk, and potential offtaker contract breach for any green H2 supply agreement. This is a non-negotiable structuring requirement for Czech LH2 projects targeting the green H2 premium."
       },
 
-      "notes": "Czechia is a secondary LH2 development market relative to Western European peers, with a smaller policy ambition (0.5 GW electrolysis by 2030 vs. Finland/Portugal/Ireland 2 GW+), higher retroactive policy risk (z√°kon ƒç. 402/2010 solar levy precedent ‚Äî mandatory investor disclosure item), CZK FX exposure, and a grid mix requiring dedicated renewable PPA structuring for green H2 certification. The positive features are: a structured SEVESO III pathway via ƒåI≈ΩP/K√ö, OP TAK and Modernisation Fund CapEx grant access, 21% CIT (below many EU peers), accelerated depreciation, and IPCEI Hy2Tech participation. The solar levy retroactive precedent (z√°kon ƒç. 402/2010) is the most significant political risk item and must be disclosed in all investor materials and lender due diligence ‚Äî it remains the clearest example of retroactive contracted revenue modification in EU energy sector history. For LH2 specifically, the sovereign risk is less acute (tolling revenues rather than contracted state-backstopped FiT) but the broader investment environment score (74/100 political risk) reflects a meaningful discount versus Austria (87) or Finland (88). Best suited to industrial-anchor LH2 projects (UNIPETROL, ƒåEZ, Pardubice Valley) with investment-grade Czech industrial offtake and robust FX hedging strategy."
+      "notes": "Czechia is a secondary LH2 development market relative to Western European peers, with a smaller policy ambition (0.5 GW electrolysis by 2030 vs. Finland/Portugal/Ireland 2 GW+), higher retroactive policy risk (z·kon c. 402/2010 solar levy precedent ó mandatory investor disclosure item), CZK FX exposure, and a grid mix requiring dedicated renewable PPA structuring for green H2 certification. The positive features are: a structured SEVESO III pathway via CIéP/K⁄, OP TAK and Modernisation Fund CapEx grant access, 21% CIT (below many EU peers), accelerated depreciation, and IPCEI Hy2Tech participation. The solar levy retroactive precedent (z·kon c. 402/2010) is the most significant political risk item and must be disclosed in all investor materials and lender due diligence ó it remains the clearest example of retroactive contracted revenue modification in EU energy sector history. For LH2 specifically, the sovereign risk is less acute (tolling revenues rather than contracted state-backstopped FiT) but the broader investment environment score (74/100 political risk) reflects a meaningful discount versus Austria (87) or Finland (88). Best suited to industrial-anchor LH2 projects (UNIPETROL, CEZ, Pardubice Valley) with investment-grade Czech industrial offtake and robust FX hedging strategy."
     }
   }
 }
+
