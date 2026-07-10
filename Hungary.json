@@ -301,7 +301,7 @@
   },
 
   "comparison_table": {
-    "1_permitting_window_months_p50": null,
+    "1_permitting_window_months_p50": 18,
     "1_permitting_window_scope": "Utility solar via NBI fast-track (Ministry of Technology and Industry; single authority). WIND: DE FACTO MORATORIUM.",
     "1_permitting_window_solar_p50_months": 18,
     "2_grid_connection_cost_native": "HUF 40–250 million per MW",

@@ -646,6 +646,15 @@ function generateAlerts(jdata, profile, technology = null) {
         `ALERT [Coal Policy]: ${name} does not operate a coal power generation sector. ` +
         "No viable coal investment market exists in this jurisdiction."
       );
+    } else if (/^transitional$/.test(ctd?.policy_status ?? '')) {
+      alerts.push(
+        `ALERT [Coal Policy / Rule 2]: ${name} coal sector is in active transition under EU pressure. ` +
+        "New coal investment carries severe stranded-asset risk: EU ETS carbon price exposure, " +
+        "EU Taxonomy exclusion (no sustainable finance access), CBAM exposure for coal-intensive industrial offtakers, " +
+        "and progressive coal phase-out commitments. Capacity market contracts have fixed terms — verify " +
+        "termination provisions and remaining contract duration before modelling returns. " +
+        `Phase-out commitment: ${ctd?.coal_phase_out_commitment ?? 'verify in jurisdiction data'}.`
+      );
     }
   }
 
