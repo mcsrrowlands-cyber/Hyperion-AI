@@ -310,7 +310,7 @@
 
   "operational_drag": {
     "_scoring_direction": "Higher score = more drag = worse (0 = frictionless, 100 = maximum drag)",
-    "operational_drag_score_out_of_100": 68,
+    "operational_drag_score_out_of_100": 82,
     "component_scores": {
       "grid_connection_drag": { "score": 80, "assessment": "HIGH — queue backlog is a primary CapEx risk; reform ongoing but not yet resolved" },
       "permitting_drag_onshore": { "score": 60, "assessment": "MEDIUM-HIGH — DCO process is lengthy; England onshore wind still uncertain" },
@@ -392,7 +392,7 @@
     "tax_efficiency": { "rag": "GREEN", "rationale": "Full Expensing provides strong first-year tax shield; 25% CIT is competitive in European context" },
     "ppa_enforceability": { "rag": "GREEN", "rationale": "English law contracts highly bankable; deep corporate PPA market" },
     "political_risk": { "rag": "GREEN", "rationale": "Stable sovereign (Aa3/AA-); no retroactive renewables clawback history" },
-    "operational_drag": { "rag": "AMBER", "rationale": "Grid queue is RED-level concern captured above; permitting complexity adds AMBER drag" },
+    "operational_drag": { "rag": "RED", "rationale": "Composite drag 82/100 — dominated by the 5–10 year grid connection queue. Permitting complexity and judicial review exposure add further drag. Classified RED consistent with the severity of the grid queue barrier." },
     "fdi_restrictions": { "rag": "AMBER", "rationale": "NSI Act mandatory notification adds process overhead; low prohibition risk for OECD investors" },
     "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Not applicable — UK operates under Subsidy Control Act 2022; no EC clearance required" },
     "overall_stop_go": "AMBER",

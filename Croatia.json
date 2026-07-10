@@ -279,6 +279,7 @@
     "tax_efficiency": { "rag": "AMBER", "rationale": "18% CIT competitive; 25% VAT is highest in EU (input recoverable); no enhanced CapEx incentive; Euro adoption removes FX risk" },
     "ppa_enforceability": { "rag": "AMBER", "rationale": "ZOO provides contractual framework; courts slower than western Europe; growing corporate buyer market" },
     "political_risk": { "rag": "GREEN", "rationale": "Baa2/BBB+ sovereign; EU/NATO member; Eurozone January 2023; no retroactive RES incidents; improving administrative trajectory" },
+    "operational_drag": { "rag": "AMBER", "rationale": "Drag score 60/100 — manageable for solar with careful Natura 2000 site screening; wind requires experienced local team given 37% Natura 2000 territory coverage and griffon vulture constraints. Island submarine cable capacity is the main grid bottleneck." },
     "overall_stop_go": "AMBER",
     "overall_rationale": "Croatia offers solid solar and wind resource (particularly Dalmatian coast), no retroactive RES incidents, Eurozone membership since 2023, and a functioning one-way market premium framework. Natura 2000 coverage (37% of territory) is the defining permitting constraint. The 25% VAT rate is the highest standard rate in the EU — unusual and worth noting in CapEx cash flow models. Suitable for all investor profiles with appropriate Natura 2000 site selection diligence."
   },
