@@ -316,7 +316,7 @@
     "tax_efficiency": { "rag": "AMBER", "rationale": "IRES 24% + IRAP 3.9% combined is competitive; Credito d'imposta for beni strumentali is a meaningful incentive but changes annually — verify current availability" },
     "ppa_enforceability": { "rag": "AMBER", "rationale": "Italian contract law is sound; market is growing; Italian courts can be slow — Milan arbitration preferred. PPA market is less deep than UK/Germany." },
     "political_risk": { "rag": "AMBER", "rationale": "Baa3/BBB rating; frequent government changes; Robin Hood Tax and Conto Energia retroactive component are precedents; EU membership and ECB TPI are stabilisers" },
-    "operational_drag": { "rag": "RED", "rationale": "Highest composite operational drag score in EU coverage. South Italy grid and wind permitting are simultaneously RED-level. Solar and north Italy are better." },
+    "operational_drag": { "rag": "RED", "rationale": "Among the highest operational drag scores in EU coverage (72/100). South Italy grid saturation and wind permitting complexity are simultaneously RED-level. Solar and north Italy are better positioned." },
     "fdi_restrictions": { "rag": "RED", "rationale": "Golden Power (post-2022) is the broadest EU FDI screening regime — covers energy; both EU and non-EU investors must notify; processing times are variable and can delay deal execution" },
     "eu_state_aid_risk": { "rag": "GREEN", "rationale": "FER1/FER2 auction mechanism cleared under CEEAG; competitive bidding satisfies proportionality; no EC recovery risk for current framework" },
     "overall_stop_go": "AMBER",
