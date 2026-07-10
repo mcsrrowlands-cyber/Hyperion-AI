@@ -185,7 +185,11 @@ function detectMentionedJurisdictions(text) {
     if (lower.includes(j.name.toLowerCase())) matched.add(j.iso);
   }
   for (const [iso, aliases] of Object.entries(JURISDICTION_ALIASES)) {
-    if (aliases.some(a => lower.includes(a))) matched.add(iso);
+    if (aliases.some(a => {
+      // Word-boundary guard: avoid 'uk' matching inside 'ukraine', etc.
+      const esc = a.replace(/[.+*?^${}()|[\]\\]/g, '\\$&');
+      return new RegExp(`(?<![a-z])${esc}(?![a-z])`).test(lower);
+    })) matched.add(iso);
   }
   return [...matched].slice(0, MAX_INJECT);
 }
