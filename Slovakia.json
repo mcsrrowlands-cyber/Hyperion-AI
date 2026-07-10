@@ -272,7 +272,7 @@
   },
 
   "comparison_table": {
-    "1_permitting_window_months_p50": 24,
+    "1_permitting_window_months_p50": 60,
     "1_permitting_window_scope": "Utility solar (southern Slovakia — Podunajská nížina). WIND: effectively RED (~3 MW installed nationally).",
     "1_permitting_window_solar_p50_months": 24,
     "2_grid_connection_cost_native": "EUR 20,000–150,000 per MW",

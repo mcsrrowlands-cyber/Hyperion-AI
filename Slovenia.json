@@ -265,7 +265,7 @@
   },
 
   "comparison_table": {
-    "1_permitting_window_months_p50": 18,
+    "1_permitting_window_months_p50": 60,
     "1_permitting_window_scope": "Solar within designated RES development zones (Pannonian plain — Prekmurje/Pomurje). Outside RES zones: 30 months P50. Onshore wind: 60 months P50.",
     "1_permitting_window_solar_p50_months": 18,
     "2_grid_connection_cost_native": "EUR 18,000–120,000 per MW",

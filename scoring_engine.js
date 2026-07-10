@@ -291,7 +291,13 @@ function scorePermitting(jdata, technology) {
       break;
     }
     case "onshore_wind": {
-      const raw = jdata.permitting?.onshore_wind?.timeline_p50_months;
+      const owp = jdata.permitting?.onshore_wind;
+      // Return 0 for de facto / legal moratoriums (e.g. Hungary 12km setback decree)
+      if (owp?.applicable === false ||
+          /moratorium|unavailable/i.test(owp?.effective_status ?? '')) {
+        return 0;
+      }
+      const raw = owp?.timeline_p50_months;
       months = typeof raw === 'number' ? raw : parseFloat(String(raw ?? ''));
       if (!isFinite(months)) months = 84; // N/A or missing → near-worst
       break;
