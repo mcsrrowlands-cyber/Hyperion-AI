@@ -455,13 +455,13 @@
     "green_hydrogen": {
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
+      "mechanism_type_code": "merchant",
       "ipcei_participant": false,
       "eu_hydrogen_bank_eligible": true,
-      "primary_support_mechanism": null,
+      "primary_support_mechanism": "MERCHANT — no dedicated hydrogen CfD, FiT, or auction regime. SFOE (Swiss Federal Office of Energy) provides technology R&D support under Energiegesetz (EnG); no committed revenue floor for commercial green hydrogen producers. EU Hydrogen Bank eligibility as non-EU member requires bilateral Switzerland-EU electricity agreement conclusion — verify current status. Source: SFOE (bfe.admin.ch); IEA Hydrogen.",
       "revenue_floor_description": null,
-      "source": "iea_hydrogen",
-      "notes": "Switzerland is not an EU member and not an IPCEI participant. Bundesrat hydrogen strategy under development. Electricity Agreement with EU would improve hydrogen cooperation. SFOE administers renewable and hydrogen technology support. Limited domestic renewable generation capacity for large-scale electrolysis."
+      "source": "sfoe_ch; iea_hydrogen",
+      "notes": "Switzerland has no dedicated green hydrogen CfD or auction regime as of 2026. SFOE supports technology development but provides no committed revenue floor. Swiss Bundesrat Wasserstoffstrategie (hydrogen strategy) is under development. Switzerland-EU bilateral electricity agreement not concluded as of mid-2025 — limits access to EU Hydrogen Bank. Limited domestic renewable generation capacity for large-scale electrolysis. Merchant classification reflects absence of state revenue floor."
     },
     "floating_solar": {
       "permitting_p50_months": 33,
