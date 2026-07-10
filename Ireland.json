@@ -416,6 +416,7 @@
       "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Irish bioenergy support under RESS framework before use."
     },
     "coal_energy": {
+      "policy_status": "exited",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

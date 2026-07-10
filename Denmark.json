@@ -386,6 +386,7 @@
       "notes": "Denmark has an established biogas support framework under the Danish Energy Agency. Feedstock sustainability criteria apply per EU RED III. Verify current subsidy parameters with Energistyrelsen before use."
     },
     "coal_energy": {
+      "policy_status": "phase_out",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

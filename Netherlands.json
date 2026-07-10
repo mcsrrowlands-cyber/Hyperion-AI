@@ -429,6 +429,8 @@
       "notes": "SDE++ subsidy scheme covers biowaste-to-energy and biogas upgrading. EU RED III compliance and feedstock sustainability criteria apply. Verify current SDE++ open round parameters and biowaste categories at RVO.nl before use."
     },
     "coal_energy": {
+      "policy_status": "prohibited",
+      "constitutional_or_legislative_ban": true,
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

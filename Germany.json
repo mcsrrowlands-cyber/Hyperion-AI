@@ -604,6 +604,8 @@
       "notes": "Germany's EEG 2023 provides a Marktprämie for biomethane and biowaste-to-energy plants. Biomasseverordnung (BiomasseV) governs feedstock sustainability criteria. EU RED III compliance required. Verify current EEG auction parameters at BNetzA before use."
     },
     "coal_energy": {
+      "policy_status": "prohibited",
+      "constitutional_or_legislative_ban": true,
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

@@ -382,6 +382,7 @@
       "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Slovenian bioenergy support under ZSROVE framework before use."
     },
     "coal_energy": {
+      "policy_status": "no_sector",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

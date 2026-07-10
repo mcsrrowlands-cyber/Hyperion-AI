@@ -400,6 +400,7 @@
       "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Portuguese bioenergy support under DGEG/DL 76/2019 framework before use."
     },
     "coal_energy": {
+      "policy_status": "exited",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

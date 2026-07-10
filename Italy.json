@@ -439,6 +439,7 @@
       "notes": "Italy's Decreto Bioenergy 2022 provides feed-in tariffs for small biowaste plants (under 5MW) and auction-based CfD contracts for larger installations. EU RED III compliance and feedstock sustainability criteria apply. Verify current GSE bioenergy auction parameters before use."
     },
     "coal_energy": {
+      "policy_status": "phase_out",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "capacity_market",

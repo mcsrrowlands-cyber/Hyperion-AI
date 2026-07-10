@@ -531,6 +531,7 @@
       "notes": "Insufficient published data for medium-confidence assessment. Switzerland is not an EU member but RED III sustainability criteria apply in practice through bilateral trade arrangements. SFOE provides technology support for bioenergy. Verify current Swiss bioenergy support under Energiegesetz (EnG) framework before use."
     },
     "coal_energy": {
+      "policy_status": "no_sector",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

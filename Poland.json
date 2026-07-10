@@ -441,6 +441,7 @@
       "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Polish bioenergy support under OZE auction framework (URE) before use."
     },
     "coal_energy": {
+      "policy_status": "transitional",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "capacity_market",

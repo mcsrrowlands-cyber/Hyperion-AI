@@ -515,6 +515,7 @@
       "notes": "UK biowaste-to-energy plants with CHP can compete in CfD allocation rounds. EU RED III does not formally apply post-Brexit, but UK Renewable Transport Fuel Obligation and Biomass Sustainability Criteria apply analogously. Feedstock sustainability criteria under UK Biomass Strategy 2023."
     },
     "coal_energy": {
+      "policy_status": "exited",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

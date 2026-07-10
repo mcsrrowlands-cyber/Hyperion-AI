@@ -393,6 +393,7 @@
       "notes": "Sweden's Elcertifikat scheme covers biomass-based electricity generation. EU RED III compliance and feedstock sustainability criteria apply. Scheme closing to new entrants from 2035 — verify current eligibility window with Energimyndigheten before use."
     },
     "coal_energy": {
+      "policy_status": "exited",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

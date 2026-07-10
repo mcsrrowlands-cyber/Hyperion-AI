@@ -408,6 +408,7 @@
       "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Estonian bioenergy support under Elektrituruseadus framework before use."
     },
     "coal_energy": {
+      "policy_status": "no_sector",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

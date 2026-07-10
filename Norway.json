@@ -457,6 +457,7 @@
       "notes": "Insufficient published data for medium-confidence assessment. Norway is an EEA member — EU RED III sustainability criteria apply in practice. Enova SF provides technology support for bioenergy projects. Verify current Norwegian bioenergy support framework before use."
     },
     "coal_energy": {
+      "policy_status": "no_sector",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

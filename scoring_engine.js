@@ -223,6 +223,13 @@ function scoreMechanism(jdata, profile, technology) {
     return 0;
   }
 
+  // Coal policy gate: prohibited, exited market, no-sector, or committed phase-out = no viable revenue mechanism
+  if (technology === "coal_energy" &&
+      (ntd?.constitutional_or_legislative_ban === true ||
+       /^(prohibited|exited|no_sector|phase_out)$/.test(ntd?.policy_status ?? ''))) {
+    return 0;
+  }
+
   const mechanism = isNewTech
     ? (ntd?.mechanism_type_code ?? "merchant")
     : (jdata.comparison_table["3_mechanism_type_code"] || "");
@@ -331,6 +338,16 @@ function scorePermitting(jdata, technology) {
       if (months == null) months = DEFAULTS[technology];
       break;
     }
+    case "coal_energy": {
+      // Policy gate: statutory prohibition, full market exit, no-sector, or committed phase-out = zero viable permitting path
+      if (ntd?.constitutional_or_legislative_ban === true ||
+          /^(prohibited|exited|no_sector|phase_out)$/.test(ntd?.policy_status ?? '')) {
+        return 0;
+      }
+      months = ntd?.permitting_p50_months;
+      if (months == null) months = DEFAULTS[technology];
+      break;
+    }
     case "bess":
     case "green_hydrogen":
     case "floating_solar":
@@ -338,7 +355,6 @@ function scorePermitting(jdata, technology) {
     case "data_centre":
     case "natural_gas_lng":
     case "biowaste_energy":
-    case "coal_energy":
     case "lh2_storage":
       months = ntd?.permitting_p50_months;
       if (months == null) months = DEFAULTS[technology];
@@ -541,6 +557,33 @@ function generateAlerts(jdata, profile, technology = null) {
       alerts.push(
         `ALERT [Nuclear Policy]: ${name} has active phase-out legislation prohibiting new nuclear ` +
         "plant construction. Nuclear SMR scored zero — verify legislative position before engaging."
+      );
+    }
+  }
+
+  // Coal energy policy gate — flag if jurisdiction prohibits, has exited coal, or has committed phase-out
+  if (technology === "coal_energy") {
+    const ctd = jdata.new_technology_data?.coal_energy;
+    if (ctd?.constitutional_or_legislative_ban === true ||
+        /^prohibited$/.test(ctd?.policy_status ?? '')) {
+      alerts.push(
+        `CRITICAL [Coal Policy]: ${name} has statutory legislation prohibiting new coal energy investment ` +
+        "(constitutional_or_legislative_ban = true). New coal development is not legally viable in this jurisdiction."
+      );
+    } else if (/^exited$/.test(ctd?.policy_status ?? '')) {
+      alerts.push(
+        `ALERT [Coal Policy]: ${name} — coal power has fully exited the electricity market. ` +
+        "No viable new coal investment pathway. Permitting and mechanism scores set to zero."
+      );
+    } else if (/^phase_out$/.test(ctd?.policy_status ?? '')) {
+      alerts.push(
+        `ALERT [Coal Policy]: ${name} has committed coal phase-out legislation or policy. ` +
+        "New coal investment has no viable long-term pathway. Permitting and mechanism scores set to zero."
+      );
+    } else if (/^no_sector$/.test(ctd?.policy_status ?? '')) {
+      alerts.push(
+        `ALERT [Coal Policy]: ${name} does not operate a coal power generation sector. ` +
+        "No viable coal investment market exists in this jurisdiction."
       );
     }
   }

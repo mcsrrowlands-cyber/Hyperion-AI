@@ -479,6 +479,7 @@
       "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Verify current Czech bioenergy support under national RES law (Zákon č. 165/2012 Sb.) before use."
     },
     "coal_energy": {
+      "policy_status": "phase_out",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",

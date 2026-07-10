@@ -513,6 +513,7 @@
       "notes": "Insufficient published data for medium-confidence assessment. EU RED III compliance and feedstock sustainability criteria apply. Retroactive policy precedent (Green Certificate scheme) means additional diligence required on support mechanism stability. Verify current Romanian bioenergy support at ANRE before use."
     },
     "coal_energy": {
+      "policy_status": "phase_out",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": "merchant",
