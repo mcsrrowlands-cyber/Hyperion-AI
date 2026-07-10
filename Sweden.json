@@ -220,7 +220,7 @@
     },
     "primary_bottleneck": "For new projects: absence of state support mechanism (elcertifikat closed) means merchant/PPA pricing is the primary risk, not regulatory drag. Permitting and grid are genuinely low-drag.",
     "support_mechanism_absence_note": "The lack of a new state support scheme is the primary investment risk for Sweden — not regulatory or permitting drag. This is a revenue risk, not an operational drag, and is reflected in the support mechanism RAG.",
-    "score_rationale": "Sweden has the lowest operational drag score in this knowledge base (42/100). Excellent administration, efficient courts, well-maintained grid. Municipal veto abolition (2025) further improved the picture. The primary investment risk is revenue certainty, not process."
+    "score_rationale": "Sweden has the second-lowest operational drag score in this knowledge base (42/100), after Denmark (38/100). Excellent administration, efficient courts, well-maintained grid. Municipal veto abolition (2025) further improved the picture. The primary investment risk is revenue certainty, not process."
   },
 
   "fdi_restrictions": {
@@ -270,7 +270,7 @@
     "tax_efficiency": { "rag": "GREEN", "rationale": "Bolagsskatt 20.6% is one of the lowest in this knowledge base. 30% declining balance depreciation available. Fastighetsskatt is moderate. No IVPEE or IFER equivalent." },
     "ppa_enforceability": { "rag": "GREEN", "rationale": "Swedish contract law is robust; SCC Arbitration is internationally respected; active Nordic PPA market with creditworthy industrial and tech offtakers; GO system liquid" },
     "political_risk": { "rag": "GREEN", "rationale": "Aaa/AAA sovereign; no retroactive incidents; NATO member (2024); most stable political environment in this knowledge base" },
-    "operational_drag": { "rag": "GREEN", "rationale": "Lowest operational drag in this knowledge base. Efficient administration, courts, and grid. Municipal veto abolition (2025) was the last major drag item." },
+    "operational_drag": { "rag": "GREEN", "rationale": "Second-lowest operational drag in this knowledge base (42/100, after Denmark at 38/100). Efficient administration, courts, and grid. Municipal veto abolition (2025) was the last major drag item." },
     "fdi_restrictions": { "rag": "GREEN", "rationale": "2023 FDI screening act is proportionate; energy sector covered but process is efficient; OECD investors face low prohibition risk" },
     "eu_state_aid_risk": { "rag": "GREEN", "rationale": "Elcertifikat scheme cleared; no new scheme risk; no windfall levy applied" },
     "overall_stop_go": "AMBER",
@@ -288,7 +288,7 @@
     "3_primary_support_mechanism": "NONE for new projects — merchant / corporate PPA only. Historical: Elcertifikat (closed to new entrants post-2022).",
     "3_mechanism_type_code": "merchant",
     "4_effective_corporation_tax_rate_pct": 20.6,
-    "4_key_incentive": "30% declining balance depreciation (skattemässig avskrivning) under IL 18 kap. Lowest bolagsskatt in this knowledge base.",
+    "4_key_incentive": "30% declining balance depreciation (skattemässig avskrivning) under IL 18 kap. 20.6% bolagsskatt is competitive among Western/Northern EU peers.",
     "5_ppa_enforceability_rating": "High",
     "5_ppa_legal_basis": "Avtalslagen; SCC Arbitration Stockholm; Nord Pool SE zone reference price; active Nordic PPA market",
     "6_political_risk_score": 92,

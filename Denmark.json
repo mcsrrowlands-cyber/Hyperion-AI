@@ -196,7 +196,7 @@
     "expropriation_risk": "Very Low",
     "currency_risk": "Very Low — DKK pegged to EUR via ERM II (±2.25% band; in practice within 0.5%). Peg has been maintained since 1982.",
     "dkk_peg_resilience": "Danmarks Nationalbank has significant FX reserves; peg is constitutionally prioritised. EUR entry would require referendum — DKK peg is the stable alternative.",
-    "score_rationale": "Denmark receives the highest political risk score in this knowledge base (93/100). Aaa/AAA sovereign; no retroactive incidents; offshore wind pioneer with 40+ years of consistent policy; quasi-fixed currency. Near-zero political risk for energy investment."
+    "score_rationale": "Denmark receives the joint-highest political risk score in this knowledge base (93/100, tied with Luxembourg). Aaa/AAA sovereign; no retroactive incidents; offshore wind pioneer with 40+ years of consistent policy; quasi-fixed currency. Near-zero political risk for energy investment."
   },
 
   "operational_drag": {
@@ -211,7 +211,7 @@
       "judicial_appeal_risk": { "score": 30, "assessment": "LOW-MEDIUM — Planklagenævnet process; Danish courts are fast; community opposition less litigious than France/Germany" }
     },
     "primary_bottleneck": "For onshore: municipal plan adoption timing. For offshore: nothing material — DEA pre-investigation model is best-in-class.",
-    "score_rationale": "Denmark has the second-lowest operational drag in this knowledge base (38/100) after Sweden. Mature regulatory environment; efficient administration; proactive grid management; Neighbour Scheme reduces opposition."
+    "score_rationale": "Denmark has the lowest operational drag in this knowledge base (38/100), ahead of Sweden (42/100). Mature regulatory environment; efficient administration; proactive grid management; Neighbour Scheme reduces opposition."
   },
 
   "fdi_restrictions": {

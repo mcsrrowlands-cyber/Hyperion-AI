@@ -549,6 +549,19 @@ function generateAlerts(jdata, profile, technology = null) {
     }
   }
 
+  // Rule 2 / Rule 3B — Gross revenue production tax with staleness warning (e.g. Spain IVPEE)
+  if (jdata.tax?.ivpee?.staleness_warning === true) {
+    const ivpeeRate = jdata.tax.ivpee.rate_pct ?? 7;
+    alerts.push(
+      `ALERT [Rule 2 / Rule 3B]: ${name} levies an IVPEE production tax at ${ivpeeRate}% of GROSS ` +
+      "electricity revenue (Impuesto sobre el Valor de la Producción de la Energía Eléctrica). " +
+      "This is NOT captured in the scoreTax() CIT figure. Current applicability is UNCERTAIN — " +
+      "IVPEE was temporarily suspended during 2021-2023 energy price crisis via Real Decreto-leyes. " +
+      "Verify current IVPEE status with AEAT/CNMC before modelling IRR, LCOE, or DSCR. " +
+      "(Source: Ley 15/2012, Art. 1)"
+    );
+  }
+
   // Rule 4C — EU State Aid clawback
   if (jdata.jurisdiction.eu_member) {
     const _risk = jdata.eu_state_aid?.retrospective_clawback_risk;
