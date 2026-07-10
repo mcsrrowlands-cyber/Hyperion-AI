@@ -401,13 +401,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
-      "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "permitting_p50_months": 15,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "APG (Austrian Power Grid) FCR (Frequency Containment Reserve), aFRR (automatic Frequency Restoration Reserve), and mFRR markets. Austria participates in MARI (Manually Activated Reserves Initiative — EU cross-border mFRR) and PICASSO (aFRR). Regulated ENTSO-E compliant markets.",
+      "revenue_floor_description": "No floor — FCR/aFRR auction clearing prices via APCS (Austrian Power Clearing and Settlement). Revenue from ancillary services + EPEX SPOT AT energy arbitrage.",
+      "source": "apg_austria",
+      "notes": "Austria has active BESS deployment in FCR and aFRR markets. EAG 2021 provides a legal basis for storage within the renewable energy framework. Speicherprojekte (storage projects) receive planning support under Austrian energy law."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

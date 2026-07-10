@@ -306,13 +306,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
-      "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "permitting_p50_months": 12,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "Svenska kraftnät (SvK) FCR (Frequency Containment Reserve), aFRR, and mFRR ancillary services markets. Active BESS procurement for FCR-D (downward) and FCR-N (normal) services. Sweden's four bidding zones (SE1-SE4) create price arbitrage opportunities.",
+      "revenue_floor_description": "No floor — FCR auction clearing prices by SvK. Revenue from ancillary services + Nord Pool SE zone energy arbitrage.",
+      "source": "svenska_kraftnat",
+      "notes": "Sweden has significant BESS deployment driven by SvK FCR procurement and the evolving electricity market structure. High renewable share and four-zone price differential create energy arbitrage revenue opportunities alongside ancillary services."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

@@ -349,13 +349,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
-      "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "capacity_market",
+      "primary_support_mechanism": "Belgian CRM (Mécanisme de Rémunération de la Capacité / Capaciteitsvergoedingsmechanisme) — run by Elia, EC-approved state aid. BESS has participated in CRM auctions since 2020 as a technology-neutral demand-response/storage resource.",
+      "revenue_floor_description": "CRM capacity payment (EUR/MW/year) set at clearing price; term 3 years for new assets. Ancillary services (FCR, aFRR) provide additional revenue via Elia markets.",
+      "source": "elia_crm",
+      "notes": "Belgium's CRM is EC-approved (State Aid SA.45852). BESS assets qualify as 'demand response' capacity providers. Elia FCR/aFRR markets provide ancillary service revenues alongside CRM capacity payments. High BESS deployment in Belgium 2021-2025 confirms market viability."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

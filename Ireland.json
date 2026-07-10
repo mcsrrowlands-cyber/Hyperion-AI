@@ -329,13 +329,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
-      "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "permitting_p50_months": 18,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "DS3 System Services (Eirgrid/SONI): regulated ancillary services for frequency response (POR, SOR, TOR1, TOR2, FFR) and synchronous inertia. High-renewable grid (70%+ penetration at times) creates strong demand for fast-response BESS products.",
+      "revenue_floor_description": "No guaranteed floor — DS3 rates set by CRU and Eirgrid; revenue from ancillary services + energy arbitrage on I-SEM (Irish Single Electricity Market).",
+      "source": "eirgrid_ds3",
+      "notes": "Ireland has one of Europe's highest renewable penetration rates (2GW+ wind on a ~5GW system), driving acute need for frequency response services. DS3 system services provide a structured ancillary services revenue stream for BESS. Grid capacity risk for new BESS connections is HIGH — EirGrid has flagged data centre and large load connection constraints in Dublin area."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

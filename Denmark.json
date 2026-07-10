@@ -299,13 +299,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
-      "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "permitting_p50_months": 12,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "Energinet.dk FCR (Frequency Containment Reserve) and FFR (Fast Frequency Reserve) ancillary services markets. Denmark operates two synchronous areas (DK1 West, DK2 East) with active FCR procurement. Regulated rates set by Energinet.",
+      "revenue_floor_description": "No floor — FCR/FFR auction clearing prices. Revenue from ancillary services + Nord Pool DK1/DK2 energy arbitrage.",
+      "source": "energinet_dk",
+      "notes": "Denmark has been a pioneer in BESS deployment driven by FCR and FFR ancillary services revenue. High wind penetration creates strong demand for fast-response frequency services. Permitting for grid-connected BESS is streamlined under Danish planning law."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,

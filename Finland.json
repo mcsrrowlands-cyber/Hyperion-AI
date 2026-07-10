@@ -402,13 +402,13 @@
 
   "new_technology_data": {
     "bess": {
-      "permitting_p50_months": null,
-      "permitting_confidence": "low",
-      "mechanism_type_code": "merchant",
-      "primary_support_mechanism": null,
-      "revenue_floor_description": null,
-      "source": null,
-      "notes": null
+      "permitting_p50_months": 12,
+      "permitting_confidence": "medium",
+      "mechanism_type_code": "ancillary_services",
+      "primary_support_mechanism": "Fingrid FCR-N (Frequency Containment Reserve Normal), FCR-D (Frequency Containment Reserve Disturbance), and aFRR markets. Finnish FCR markets are among the most active in Europe — high renewable penetration creates strong frequency regulation demand.",
+      "revenue_floor_description": "No floor — FCR auction clearing prices by Fingrid. Revenue from ancillary services + Nord Pool FI energy arbitrage.",
+      "source": "fingrid",
+      "notes": "Finland has some of Europe's highest BESS FCR penetration per MW of installed generation. Fingrid's market design encourages technology-neutral ancillary services provision. Co-location with industrial consumers (paper mills, chemical plants) enables demand-side integration. Battery permitting under national environmental legislation (YVA) is streamlined for grid-connected assets."
     },
     "green_hydrogen": {
       "permitting_p50_months": null,
