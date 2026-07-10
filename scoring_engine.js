@@ -216,6 +216,13 @@ function scoreMechanism(jdata, profile, technology) {
   const ntd = jdata.new_technology_data?.[technology];
   const isNewTech = TECHNOLOGY_WEIGHTS[technology] != null;
 
+  // Nuclear policy gate: prohibited or phase-out = no viable revenue mechanism
+  if (technology === "nuclear_smr" &&
+      (ntd?.constitutional_or_legislative_ban === true ||
+       /^(prohibited|phase_out)$/.test(ntd?.policy_status ?? ''))) {
+    return 0;
+  }
+
   const mechanism = isNewTech
     ? (ntd?.mechanism_type_code ?? "merchant")
     : (jdata.comparison_table["3_mechanism_type_code"] || "");
@@ -314,10 +321,19 @@ function scorePermitting(jdata, technology) {
       if (!isFinite(months)) months = 96; // no data → mid-to-high estimate (range [12,144])
       break;
     }
+    case "nuclear_smr": {
+      // Policy gate: prohibited or phase-out legislation = no viable development path
+      if (ntd?.constitutional_or_legislative_ban === true ||
+          /^(prohibited|phase_out)$/.test(ntd?.policy_status ?? '')) {
+        return 0;
+      }
+      months = ntd?.permitting_p50_months;
+      if (months == null) months = DEFAULTS[technology];
+      break;
+    }
     case "bess":
     case "green_hydrogen":
     case "floating_solar":
-    case "nuclear_smr":
     case "lng_gas":
     case "data_centre":
     case "natural_gas_lng":
@@ -508,6 +524,23 @@ function generateAlerts(jdata, profile, technology = null) {
       alerts.push(
         `ALERT [Rule 4C]: EU State Aid retrospective clawback risk rated '${saRisk}'. ` +
         "Scheme may lack formal EC notification clearance — material clawback exposure present."
+      );
+    }
+  }
+
+  // Nuclear SMR policy gate — flag if jurisdiction legally prohibits or is phasing out nuclear
+  if (technology === "nuclear_smr") {
+    const ntd = jdata.new_technology_data?.nuclear_smr;
+    if (ntd?.constitutional_or_legislative_ban === true ||
+        /^prohibited$/.test(ntd?.policy_status ?? '')) {
+      alerts.push(
+        `CRITICAL [Nuclear Policy]: ${name} has a statutory or constitutional prohibition on nuclear ` +
+        "power generation. Nuclear SMR deployment is not legally possible under the current framework."
+      );
+    } else if (/^phase_out$/.test(ntd?.policy_status ?? '')) {
+      alerts.push(
+        `ALERT [Nuclear Policy]: ${name} has active phase-out legislation prohibiting new nuclear ` +
+        "plant construction. Nuclear SMR scored zero — verify legislative position before engaging."
       );
     }
   }

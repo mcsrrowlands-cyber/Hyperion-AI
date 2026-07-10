@@ -341,7 +341,7 @@
     "5_ppa_legal_basis": "Kodeks cywilny; TGE as reference price; PLN denomination creates FX risk for EUR-base investors",
     "6_political_risk_score": 74,
     "6_political_risk_direction": "Higher = lower risk",
-    "7_operational_drag_score": 65,
+    "7_operational_drag_score": 70,
     "7_operational_drag_direction": "Higher = more drag / worse",
     "8_revenue_floor_native": "PLN ~360/MWh approx. (onshore wind, indicative 2024 range — verify with URE)",
     "8_revenue_floor_eur": "EUR ~84.6/MWh approx. at PLN 4.25 = EUR 1 — FX-SENSITIVE",

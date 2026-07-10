@@ -329,7 +329,7 @@
     "5_ppa_legal_basis": "Burgerlijk Wetboek; Dutch courts efficient; CertiQ GvO system; zero-subsidy offshore PPA market well-established",
     "6_political_risk_score": 91,
     "6_political_risk_direction": "Higher = lower risk",
-    "7_operational_drag_score": 62,
+    "7_operational_drag_score": 70,
     "7_operational_drag_direction": "Higher = more drag / worse",
     "8_revenue_floor_native": "EUR 55–75/MWh approx. (onshore wind SDE++ basisbedrag range — see staleness warning)",
     "8_revenue_floor_eur": "EUR 55–75/MWh",

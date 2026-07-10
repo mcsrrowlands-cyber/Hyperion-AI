@@ -360,16 +360,16 @@
       "notes": "Permitting estimated as ground-mounted solar P50 plus 9 months for water authority consent. Irradiance comparable to ground-mounted at same latitude per JRC PVGIS. Verify national tender eligibility before use."
     },
     "nuclear_smr": {
-      "policy_status": "no_policy",
+      "policy_status": "prohibited",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
       "mechanism_type_code": null,
       "primary_support_mechanism": null,
       "revenue_floor_description": null,
       "active_smr_programmes": [],
-      "constitutional_or_legislative_ban": false,
+      "constitutional_or_legislative_ban": true,
       "source": null,
-      "notes": "No nuclear energy policy in Ireland. The Electricity Regulation Act 1999 (s.18) contains a provision effectively prohibiting nuclear generation. Periodic political discussion has not resulted in policy change."
+      "notes": "Nuclear generation is prohibited in Ireland. The Electricity Regulation Act 1999 (s.18) explicitly prohibits the granting of any licence to generate electricity from nuclear energy. Periodic political discussion has not resulted in policy change."
     },
     "lng_gas": {
       "has_existing_lng_infrastructure": false,

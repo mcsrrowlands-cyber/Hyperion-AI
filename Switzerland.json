@@ -482,9 +482,9 @@
       "primary_support_mechanism": null,
       "revenue_floor_description": null,
       "active_smr_programmes": [],
-      "constitutional_or_legislative_ban": false,
+      "constitutional_or_legislative_ban": true,
       "source": null,
-      "notes": "Switzerland's Energy Act 2017 (Energiegesetz) prohibits construction of new nuclear power plants; existing plants (Beznau 1&2, Gösgen, Leibstadt) may continue operating indefinitely. A 2024 federal referendum on allowing new nuclear was narrowly defeated. No SMR programme. Reversal would require legislative change."
+      "notes": "Switzerland's Energy Act 2017 (Energiegesetz, SR 730.0) explicitly prohibits construction of new nuclear power plants (Art. 12a); existing plants (Beznau 1&2, Gösgen, Leibstadt) may continue operating indefinitely. A 2024 federal referendum on allowing new nuclear was narrowly defeated. No SMR programme. Reversal would require legislative change."
     },
     "lng_gas": {
       "has_existing_lng_infrastructure": false,

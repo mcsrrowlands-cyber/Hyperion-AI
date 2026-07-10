@@ -416,7 +416,7 @@
     "5_ppa_legal_basis": "English common law of contract; no bespoke statute required",
     "6_political_risk_score": 87,
     "6_political_risk_direction": "Higher = lower risk",
-    "7_operational_drag_score": 68,
+    "7_operational_drag_score": 82,
     "7_operational_drag_direction": "Higher = more drag / worse",
     "8_revenue_floor_native": "GBP 82.50/MWh (offshore wind fixed, 2012 real, AR6)",
     "8_revenue_floor_eur": "EUR 96.94/MWh",
