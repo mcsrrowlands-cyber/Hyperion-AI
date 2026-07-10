@@ -1676,7 +1676,7 @@ function buildComponentBarsHtml(components, weights) {
 function buildAlertsHtml(alerts) {
   if (!alerts || alerts.length === 0) return '';
   return `<div class="alert-list">${alerts.map(a => {
-    const isStop = a.startsWith('STOP');
+    const isStop = a.startsWith('STOP') || a.startsWith('CRITICAL');
     return `<div class="alert-item${isStop ? ' stop' : ''}">
       <span class="alert-icon">${isStop ? '🛑' : '⚠️'}</span>
       <span>${escHtml(a)}</span>
