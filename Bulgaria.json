@@ -381,10 +381,10 @@
     },
     "nuclear_smr": {
       "policy_status": "active",
-      "permitting_p50_months": null,
+      "permitting_p50_months": 180,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "government_contract",
+      "primary_support_mechanism": "State-backed procurement: National Assembly Resolution (8 June 2022) approved Kozloduy Unit 7 (Westinghouse AP1000); state-owned BEH/NEK as procuring entity. Revenue mechanism expected to be government-contracted given state ownership. Source: Bulgarian National Assembly Resolution 2022; IEA country review.",
       "revenue_floor_description": null,
       "active_smr_programmes": ["Kozloduy NPP Units 5 & 6 (VVER-1000) operational; new VVER-1200 Unit 7 proposed"],
       "constitutional_or_legislative_ban": false,

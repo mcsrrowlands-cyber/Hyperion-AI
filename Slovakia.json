@@ -334,15 +334,15 @@
     },
     "nuclear_smr": {
       "policy_status": "active",
-      "permitting_p50_months": null,
+      "permitting_p50_months": 180,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "government_contract",
+      "primary_support_mechanism": "State-owned SE (Slovenské elektrárne) as nuclear operator; Mochovce Units 3 & 4 completion funded via state-backed financing; government pro-nuclear energy strategy underpins contracted revenue framework. Source: Slovak Ministry of Economy; IEA country review.",
       "revenue_floor_description": null,
       "active_smr_programmes": [],
       "constitutional_or_legislative_ban": false,
       "source": "iea_country",
-      "notes": "Slovakia operates Bohunice V2 (2 units) and Mochovce (Units 1, 2, 3 — Unit 3 entered commercial operation 2023; Unit 4 completing). Nuclear provides ~55% of electricity. Government pro-nuclear. SMR exploration at early stage. Source: IEA country review."
+      "notes": "Slovakia operates Bohunice V2 (2 units) and Mochovce (Units 1, 2, 3 — Unit 3 entered commercial operation 2023; Unit 4 completing). Nuclear provides ~55% of electricity. Government pro-nuclear. SMR exploration at early stage. government_contract classification reflects state ownership of SE and government-backed nuclear expansion financing. Source: IEA country review."
     },
     "lng_gas": {
       "has_existing_lng_infrastructure": false,

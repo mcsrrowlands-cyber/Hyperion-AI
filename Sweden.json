@@ -338,15 +338,15 @@
     },
     "nuclear_smr": {
       "policy_status": "active",
-      "permitting_p50_months": null,
+      "permitting_p50_months": 180,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "government_contract",
+      "primary_support_mechanism": "2024 Energilag amendments providing state loan guarantees for new nuclear construction; government has committed to supporting new nuclear including SMRs via state-backed financing framework. Source: Swedish government nuclear policy 2024; IEA country review.",
       "revenue_floor_description": null,
       "active_smr_programmes": [],
       "constitutional_or_legislative_ban": false,
       "source": "iea_country",
-      "notes": "Sweden reversed its nuclear phase-out legislation in 2024 — the Riksdag repealed the ban on new nuclear construction. Ringhals 1 & 2 previously shut; Ringhals 3 & 4, Forsmark 1, 2 & 3, Oskarshamn 3 remain operational. Government actively supports new nuclear including potential SMR deployment. Regulatory framework being updated. Source: IEA country review."
+      "notes": "Sweden reversed its nuclear phase-out legislation in 2024 — the Riksdag repealed the ban on new nuclear construction (Lag 2024 om andring i miljöbalken). Ringhals 1 & 2 previously shut; Ringhals 3 & 4, Forsmark 1, 2 & 3, Oskarshamn 3 remain operational. Government actively supports new nuclear including potential SMR deployment with state loan guarantees. Regulatory framework being updated. government_contract classification reflects 2024 state-backed financing commitments. Source: IEA country review."
     },
     "lng_gas": {
       "has_existing_lng_infrastructure": false,

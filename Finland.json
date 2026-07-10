@@ -436,13 +436,13 @@
       "policy_status": "active",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
+      "mechanism_type_code": "merchant",
       "primary_support_mechanism": null,
       "revenue_floor_description": null,
       "active_smr_programmes": [],
       "constitutional_or_legislative_ban": false,
       "source": "iea_country",
-      "notes": "Finland has an established nuclear programme (Olkiluoto 1, 2, 3; Loviisa 1, 2). OL3 EPR achieved commercial operation 2023. SMR technology is being explored but no formal programme. Strong nuclear culture and regulatory competence (STUK). Source: IEA country review."
+      "notes": "Finland has an established nuclear programme (Olkiluoto 1, 2, 3; Loviisa 1, 2). OL3 EPR achieved commercial operation 2023. SMR technology is being explored but no formal programme. Fennovoima/Hanhikivi 1 was cancelled May 2022 after Russian sponsor excluded — no active large nuclear or SMR government contract exists. Policy status is 'active' (nuclear is legally permitted) but no committed state revenue mechanism. Merchant classification reflects absence of government contract. Strong nuclear culture and regulatory competence (STUK). Source: IEA country review."
     },
     "lng_gas": {
       "has_existing_lng_infrastructure": true,
