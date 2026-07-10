@@ -219,6 +219,7 @@
   "eu_state_aid": {
     "applicable": true,
     "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "retrospective_clawback_risk": "Very Low — no retroactive incident history; Luxembourg's very small RES market and EU-compliant tender design present negligible clawback risk",
     "premium_state_aid_status": {
       "instrument": "ILR competitive tender premium",
       "status": "Small-volume tender mechanism; CEEAG compliance. Verify EC clearance at competition.ec.europa.eu.",

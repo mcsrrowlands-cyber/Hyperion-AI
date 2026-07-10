@@ -220,6 +220,7 @@
   "eu_state_aid": {
     "applicable": true,
     "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "retrospective_clawback_risk": "Low — no retroactive modification history for RES support; very small market with limited historical intervention risk",
     "tender_state_aid_status": {
       "instrument": "MRA competitive tender premium",
       "status": "Limited-volume tender; CEEAG compliance. Verify EC clearance at competition.ec.europa.eu.",

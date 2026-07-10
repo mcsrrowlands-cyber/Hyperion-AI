@@ -228,6 +228,7 @@
   "eu_state_aid": {
     "applicable": true,
     "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "retrospective_clawback_risk": "Low — new SPRK competitive tender framework is designed under modern CEEAG standards; legacy KVT issues resolved separately",
     "tender_state_aid_status": {
       "instrument": "SPRK competitive tender premium",
       "status": "Competitive tender mechanism designed for CEEAG compliance. Verify EC clearance at competition.ec.europa.eu. Legacy KVT tariff has separate State Aid history — not applicable to new tender projects.",

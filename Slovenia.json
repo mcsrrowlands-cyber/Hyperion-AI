@@ -222,6 +222,7 @@
   "eu_state_aid": {
     "applicable": true,
     "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "retrospective_clawback_risk": "Very Low — no retroactive modification history; ZSROVE 2021 designed under modern CEEAG standards; Golob government strongly pro-RES",
     "tender_state_aid_status": {
       "instrument": "Borzen competitive tender (dražba) under ZSROVE",
       "status": "Competitive tender mechanism designed for CEEAG compliance. Verify EC clearance at competition.ec.europa.eu.",

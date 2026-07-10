@@ -230,6 +230,7 @@
   "eu_state_aid": {
     "applicable": true,
     "primary_framework": "CEEAG — Commission Notice 2022/C 80/01; GBER",
+    "retrospective_clawback_risk": "Medium — 2012 regulated sector levy precedent; Fico government appetite for energy sector intervention; competitive tender contract protections provide some shelter but cannot fully insulate against legislative action",
     "doplatky_state_aid_status": {
       "instrument": "ÚRSO doplatky (price supplement) / competitive tender",
       "status": "ÚRSO administrative price-setting has been adapted toward competitive tender elements for CEEAG compliance. Verify EC clearance at competition.ec.europa.eu. 2012 regulated sector levy history creates additional background context.",
