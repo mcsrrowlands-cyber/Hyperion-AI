@@ -260,7 +260,7 @@ function scorePermitting(jdata, technology) {
   const RANGES = {
     solar:           [6,   96],
     onshore_wind:    [6,   96],
-    offshore_wind:   [6,   96],
+    offshore_wind:   [12, 144],  // Widened: 11 markets at 96mo; Bulgaria/Cyprus at 144mo
     bess:            [6,   60],
     green_hydrogen:  [12,  120],
     floating_solar:  [6,   96],
@@ -305,7 +305,7 @@ function scorePermitting(jdata, technology) {
         /^N\/A|^Very limited/i.test(owp?.effective_status ?? '');
       if (ineligible) return 0;
       months = Number(owp?.timeline_p50_months);
-      if (!isFinite(months)) months = 96; // no data → worst-case in range
+      if (!isFinite(months)) months = 96; // no data → mid-to-high estimate (range [12,144])
       break;
     }
     case "bess":
