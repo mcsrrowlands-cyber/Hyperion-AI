@@ -321,7 +321,7 @@
     "floating_solar": {
       "permitting_p50_months": 27,
       "permitting_confidence": "low",
-      "mechanism_type_code": "one_way_price_supplement",
+      "mechanism_type_code": "one_way_market_premium",
       "eligible_under_existing_solar_auction": true,
       "water_body_consent_required": true,
       "primary_support_mechanism": "Price supplement (pristillæg) under Vedvarende Energi-loven (VE-loven), administered by Energistyrelsen.",

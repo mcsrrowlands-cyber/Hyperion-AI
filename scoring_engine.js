@@ -495,8 +495,10 @@ function generateAlerts(jdata, profile, technology = null) {
 
   // Rule 4C — EU State Aid clawback
   if (jdata.jurisdiction.eu_member) {
-    const saRisk = jdata.eu_state_aid?.retrospective_clawback_risk?.assessment;
-    if (saRisk === "High" || saRisk === "Very High") {
+    const _risk = jdata.eu_state_aid?.retrospective_clawback_risk;
+    const saRisk = (typeof _risk === 'string' ? _risk : _risk?.assessment) ?? '';
+    const saRiskBase = saRisk.split(/\s+[-—]|\s+for\b/i)[0].trim();
+    if (/^(high|very high)$/i.test(saRiskBase)) {
       alerts.push(
         `ALERT [Rule 4C]: EU State Aid retrospective clawback risk rated '${saRisk}'. ` +
         "Scheme may lack formal EC notification clearance — material clawback exposure present."
@@ -619,7 +621,7 @@ export function scoreJurisdiction(jdata, profile, technology) {
  * @param {string[]} [filterIsoCodes] — if provided, only score these codes
  * @returns {object[]}
  */
-function offshoreWindEligible(jdata) {
+export function offshoreWindEligible(jdata) {
   if (jdata.jurisdiction.landlocked === true) return false;
   const owp = jdata.permitting?.offshore_wind;
   if (owp?.applicable === false) return false;

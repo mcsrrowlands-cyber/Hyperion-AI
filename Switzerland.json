@@ -466,7 +466,7 @@
     "floating_solar": {
       "permitting_p50_months": 33,
       "permitting_confidence": "low",
-      "mechanism_type_code": "one_way_market_premium_or_one_time_grant",
+      "mechanism_type_code": "one_way_market_premium",
       "eligible_under_existing_solar_auction": true,
       "water_body_consent_required": true,
       "primary_support_mechanism": "Einmalvergütung (EIV one-time investment grant) or Einspeisevergütung tender (market premium) under Energiegesetz (EnG) / Mantelerlass 2023, administered by SFOE/Swissgrid.",

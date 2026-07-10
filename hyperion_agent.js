@@ -19,6 +19,7 @@ import {
   loadAllJurisdictions,
   rankJurisdictions,
   scoreJurisdiction,
+  offshoreWindEligible,
   compositeToRag,
   estimateLcoe,
   estimateSimplePayback,
@@ -127,6 +128,10 @@ export class HyperionAgent {
       (j) => j.jurisdiction.iso_code.toUpperCase() === isoCode.toUpperCase()
     );
     if (!jdata) throw new Error(`Jurisdiction not found: ${isoCode}`);
+
+    if (technology === 'offshore_wind' && !offshoreWindEligible(jdata)) {
+      throw new Error(`${jdata.jurisdiction.name} (${isoCode}) is not eligible for offshore wind assessment — landlocked or no viable coastal access.`);
+    }
 
     const result = scoreJurisdiction(jdata, profile, technology);
     return {
