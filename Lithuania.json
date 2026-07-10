@@ -278,7 +278,7 @@
     "2_grid_connection_timeline_months": "15–42",
     "3_primary_support_mechanism": "VERT competitive tender premium; Nord Pool LT market reference; one-way; approaching zero-subsidy for onshore wind",
     "3_mechanism_type_code": "one_way_market_premium",
-    "4_effective_corporation_tax_rate_pct": "15% CIT (annual conventional system); 5% for small companies (≤EUR 300k revenue, ≤10 employees)",
+    "4_effective_corporation_tax_rate_pct": 15,
     "4_effective_tax_rate_note": "Conventional annual CIT (not distributed profit model). Investment Project Incentive may eliminate CIT liability in qualifying investment years. NPV benefit material for large RES projects.",
     "4_key_incentive": "Investment Project Incentive (investicinis projektas) — up to 100% CIT offset on qualifying CapEx (PMĮ §17¹); 0% dividend WHT for EU parent",
     "5_ppa_enforceability_rating": "High",

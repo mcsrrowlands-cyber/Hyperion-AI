@@ -278,7 +278,7 @@
     "2_grid_connection_timeline_months": "18–48",
     "3_primary_support_mechanism": "SPRK competitive tender premium; Nord Pool LV market reference; one-way",
     "3_mechanism_type_code": "one_way_market_premium",
-    "4_effective_corporation_tax_rate_pct": "0% on retained profits; 20% on distributions (gross)",
+    "4_effective_corporation_tax_rate_pct": 20,
     "4_effective_tax_rate_note": "UNIQUE (shared with Estonia): 0% CIT on retained earnings (UIN likums 2017, effective 2018). 20% only on distributions. EU Parent-Subsidiary Directive: 0% WHT for EU parent.",
     "4_key_incentive": "0% CIT on retained profits — primary and unique incentive; material improvement to project DSCR and IRR vs. annual-CIT jurisdictions",
     "5_ppa_enforceability_rating": "High",

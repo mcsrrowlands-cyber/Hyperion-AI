@@ -274,7 +274,7 @@
     "2_grid_connection_timeline_months": "20–48",
     "3_primary_support_mechanism": "Borzen competitive tender (dražba) under ZSROVE 2021; one-way premium; HUPX-SI market reference",
     "3_mechanism_type_code": "one_way_market_premium",
-    "4_effective_corporation_tax_rate_pct": "19% CIT; 0% dividend WHT for EU parent (Parent-Subsidiary Directive)",
+    "4_effective_corporation_tax_rate_pct": 19,
     "4_effective_tax_rate_note": "19% CIT. Investment relief: 40% of qualifying CapEx deducted from taxable BASE in investment year → timing benefit vs. standard depreciation. Effective combined benefit: EUR 1–1.5m NPV on EUR 50m project at 7% WACC.",
     "4_key_incentive": "Investment Relief (investicijska olajšava — ZDDPO-2 §55): 40% of qualifying CapEx deducted from taxable base in investment year (with 5-year carry-forward for excess); 0% dividend WHT for EU parent under Parent-Subsidiary Directive",
     "5_ppa_enforceability_rating": "High",

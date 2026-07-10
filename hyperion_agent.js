@@ -101,7 +101,7 @@ export class HyperionAgent {
       ranked,
       // Precomputed formatted strings for UI rendering
       ragMatrix:       ranked.length === 1 ? formatRagMatrix(ranked[0]) : null,
-      comparisonTable: ranked.length > 1  ? formatComparisonTable(ranked) : null,
+      comparisonTable: ranked.length > 1  ? formatComparisonTable(ranked, technology) : null,
       rankedSummary:   formatRankedSummary(ranked, profile),
       financials:      includeFinancials ? formatFinancials(ranked, technology, this._jurisdictions) : null,
       disclaimer:      DISCLAIMER,
@@ -275,7 +275,7 @@ export function formatRagMatrix(result) {
  * @param {object[]} results — array of scored jurisdictions
  * @returns {object} comparisonTable
  */
-export function formatComparisonTable(results) {
+export function formatComparisonTable(results, technology = null) {
   const CATEGORIES = [
     { key: "1_permitting",     label: "1 | Permitting Window (P50)" },
     { key: "2_grid",           label: "2 | Grid Connection Cost & Timeline" },
@@ -295,7 +295,10 @@ export function formatComparisonTable(results) {
       rag:        r.ragOverall,
       composite:  r.compositeScore,
       cells: {
-        "1_permitting":    { wind: ct["1_permitting_window_months_p50"],  solar: ct["1_permitting_window_solar_p50_months"] },
+        "1_permitting":    {
+          wind:  technology === 'offshore_wind' ? r.offshorePermittingMonths : ct["1_permitting_window_months_p50"],
+          solar: ct["1_permitting_window_solar_p50_months"],
+        },
         "2_grid":          { cost: ct["2_grid_connection_cost_eur"],       timeline: ct["2_grid_connection_timeline_months"] },
         "3_mechanism":     { description: ct["3_primary_support_mechanism"], typeCode: ct["3_mechanism_type_code"] },
         "4_tax":           { rate: ct["4_effective_corporation_tax_rate_pct"], incentive: ct["4_key_incentive"] },

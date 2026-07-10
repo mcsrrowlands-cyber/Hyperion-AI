@@ -165,6 +165,16 @@ const JURISDICTION_ALIASES = {
   'HU': ['hungarian'],
   'RO': ['romanian'],
   'BG': ['bulgarian'],
+  'IE': ['irish', 'ireland'],
+  'SK': ['slovak', 'slovakian'],
+  'SI': ['slovenian', 'slovene'],
+  'HR': ['croatian'],
+  'CY': ['cypriot'],
+  'EE': ['estonian'],
+  'LV': ['latvian'],
+  'LT': ['lithuanian'],
+  'LU': ['luxembourgish', 'luxembourger', 'luxembourg'],
+  'MT': ['maltese'],
 };
 
 // Returns up to MAX_INJECT ISO codes mentioned in a text string.
@@ -276,6 +286,16 @@ function mechBadge(code) {
     one_way_market_premium:               'One-Way Premium',
     merchant:                             'Merchant',
     quota_certificate_with_minimum_price: 'Quota + Min Price',
+    feed_in_tariff:                       'Feed-In Tariff',
+    biowaste_auction_cfd:                 'Biowaste CfD Auction',
+    hydrogen_contract:                    'Hydrogen Contract',
+    ipcei_grant:                          'IPCEI Grant',
+    government_contract:                  "Gov't Contract",
+    capacity_market:                      'Capacity Market',
+    ancillary_services:                   'Ancillary Services',
+    tolling_arrangement:                  'Tolling Agreement',
+    corporate_ppa:                        'Corporate PPA',
+    captive_generation:                   'Captive Generation',
   };
   const label = labels[code] ?? code.replace(/_/g, ' ');
   return `<span class="mech-badge">${escHtml(label)}</span>`;
@@ -286,14 +306,17 @@ function buildMiniBar(score, colorClass) {
   return `<div class="mini-bar-track"><div class="mini-bar-fill ${colorClass}" style="width:${pct}%"></div></div>`;
 }
 
-function buildCellHtml(catKey, cell) {
+function buildCellHtml(catKey, cell, technology = null) {
   if (cell == null) return '—';
   switch (catKey) {
     case '1_permitting': {
       const wind  = cell.wind  ?? '—';
       const solar = cell.solar ?? null;
+      const windLabel = technology === 'offshore_wind' ? 'Offshore wind P50'
+                      : technology === 'solar'         ? 'Wind / generic P50'
+                      : 'Onshore wind P50';
       return `<div class="cell-primary">${wind}<span class="cell-unit"> mo</span></div>
-              <div class="cell-detail">Onshore wind P50</div>
+              <div class="cell-detail">${windLabel}</div>
               ${solar != null ? `<div class="cell-sub-row">☀️ ${solar} mo solar</div>` : ''}`;
     }
     case '2_grid':
@@ -931,10 +954,10 @@ async function callClaudeApi(messages, systemOverride = null) {
       body: JSON.stringify({ system: effectiveSystem, messages }),
     });
   } catch {
-    throw new Error('Cannot reach the Hyperion server. Run server.ps1 first, then open http://localhost:8000');
+    throw new Error('Unable to reach the Hyperion AI server. Please check your connection and try again.');
   }
   if (resp.status === 405) {
-    throw new Error('Server not running. Open a terminal and run:  powershell -ExecutionPolicy Bypass -File server.ps1  then open http://localhost:8000');
+    throw new Error('Unexpected server response. Please refresh the page and try again.');
   }
   if (!resp.ok) {
     const err = await resp.json().catch(() => ({}));
@@ -1401,7 +1424,7 @@ function renderCompare(queryResult) {
           ${categories.map((cat, idx) => `
             <tr${idx % 2 === 0 ? ' class="row-stripe"' : ''}>
               <td class="cat-td">${escHtml(cat.label)}</td>
-              ${columns.map(col => `<td class="data-cell">${buildCellHtml(cat.key, col.cells[cat.key])}</td>`).join('')}
+              ${columns.map(col => `<td class="data-cell">${buildCellHtml(cat.key, col.cells[cat.key], meta.technology)}</td>`).join('')}
             </tr>
           `).join('')}
         </tbody>

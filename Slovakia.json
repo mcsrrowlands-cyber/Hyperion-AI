@@ -281,7 +281,7 @@
     "2_grid_connection_timeline_months": "24–60",
     "3_primary_support_mechanism": "ÚRSO doplatky (price supplement); OKTE settlement; one-way; annual ÚRSO reference price setting",
     "3_mechanism_type_code": "one_way_market_premium",
-    "4_effective_corporation_tax_rate_pct": "21% CIT (taxable income ≥ EUR 100k); 15% for small companies (< EUR 100k taxable income)",
+    "4_effective_corporation_tax_rate_pct": 21,
     "4_effective_tax_rate_note": "Investment Aid tax credit (25–35% of qualifying CapEx, 10-year claim period) can significantly reduce effective CIT burden in early operational years. 7% dividend WHT (verify EU Parent-Subsidiary Directive conditions). VAT 23% from 2025.",
     "4_key_incentive": "Investment Aid tax credit (Act No. 57/2018) — 25–35% of qualifying CapEx reduces CIT liability over 10 years; applicable for investments in less-developed regions (majority of Slovakia)",
     "5_ppa_enforceability_rating": "Medium",

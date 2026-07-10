@@ -301,7 +301,7 @@
     "2_grid_connection_timeline_months": "15–42",
     "3_primary_support_mechanism": "Toetushind (Premium Tariff) — competitive tender via Konkurentsiamet; approaching zero-subsidy for onshore wind",
     "3_mechanism_type_code": "one_way_market_premium",
-    "4_effective_corporation_tax_rate_pct": "0% on retained profits; 20% on distributions (gross) / 25% of net dividend",
+    "4_effective_corporation_tax_rate_pct": 20,
     "4_effective_tax_rate_note": "UNIQUE Estonian system: 0% CIT on retained earnings. 20% rate applies only to distributed profits (dividends). Model 0% CIT during project operational period for retained profit scenarios. EU Parent-Subsidiary Directive: 0% dividend WHT for EU parent.",
     "4_key_incentive": "0% CIT on retained profits is the primary and unique incentive — material improvement to project-level DSCR and IRR vs. standard EU CIT regimes",
     "5_ppa_enforceability_rating": "High",

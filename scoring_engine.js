@@ -335,12 +335,11 @@ function scorePermitting(jdata, technology) {
 /**
  * Rule 3B: lower effective CIT → higher score.
  * Normalised: 0% CIT = 100, 40% CIT = 0.
- * Estonia/Latvia distributed-profit model (effective 0% retained) scores near 100.
+ * Estonia/Latvia DPT: JSON stores distribution rate (20%) as the applicable figure
+ * for CapEx investors who will ultimately distribute returns.
  */
 function scoreTax(jdata) {
   const raw = jdata.comparison_table["4_effective_corporation_tax_rate_pct"] ?? 25;
-  // Some JSON files store a descriptive string (e.g. "15% CIT …"); parseFloat
-  // extracts the leading number correctly whereas Number() returns NaN.
   let rate = typeof raw === 'number' ? raw : parseFloat(String(raw));
   if (isNaN(rate)) rate = 25;
   return Math.max(0, Math.min(100, 100 - (rate / 40) * 100));

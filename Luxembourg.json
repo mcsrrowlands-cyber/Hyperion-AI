@@ -270,7 +270,7 @@
     "2_grid_connection_timeline_months": "12–30",
     "3_primary_support_mechanism": "ILR competitive tender premium (prime d'injection); one-way; limited volume",
     "3_mechanism_type_code": "one_way_market_premium",
-    "4_effective_corporation_tax_rate_pct": "24.94% combined (CIT 17% × 1.07 solidarity + ICC 6.75% — Luxembourg City)",
+    "4_effective_corporation_tax_rate_pct": 24.94,
     "4_effective_tax_rate_note": "Project company CIT is middle-EU. Holding company: 100% participation exemption on qualifying dividends/gains (LIRC §166). Primary Luxembourg tax advantage is holding structure, not operating company CIT.",
     "4_key_incentive": "Participation exemption (LIRC §166): 100% Luxembourg CIT exemption on qualifying dividends and capital gains from project company subsidiaries — primary incentive for European RES holding structures",
     "5_ppa_enforceability_rating": "High",
