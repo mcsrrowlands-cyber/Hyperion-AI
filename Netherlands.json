@@ -239,7 +239,7 @@
 
   "operational_drag": {
     "_scoring_direction": "Higher score = more drag = worse",
-    "operational_drag_score_out_of_100": 62,
+    "operational_drag_score_out_of_100": 70,
     "component_scores": {
       "grid_connection_drag": { "score": 72, "assessment": "HIGH — net congestion (netcongestie) is acute and rapidly worsening; some areas effectively closed to new connections; transmission expansion 5–10 year timeline" },
       "permitting_drag_solar": { "score": 35, "assessment": "LOW-MEDIUM — Omgevingswet framework; land scarcity is primary constraint not process length; stikstof risk moderate for solar" },

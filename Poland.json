@@ -252,7 +252,7 @@
 
   "operational_drag": {
     "_scoring_direction": "Higher score = more drag = worse",
-    "operational_drag_score_out_of_100": 65,
+    "operational_drag_score_out_of_100": 70,
     "component_scores": {
       "grid_connection_drag": { "score": 75, "assessment": "HIGH — Poland faces a severe connection queue at distribution level; coal grid infrastructure requires transformation; PSE expansion plans are multi-year" },
       "permitting_drag_solar": { "score": 45, "assessment": "MEDIUM — MPZP requirement is the primary constraint; OOŚ process is manageable; administration improving" },
@@ -262,7 +262,7 @@
       "judicial_appeal_risk": { "score": 50, "assessment": "MEDIUM — Polish administrative courts (WSA/NSA) function; no particular pattern of organised renewable energy opposition litigation unlike France/Italy/Germany" }
     },
     "primary_bottleneck": "Grid connection queue at distribution level (for solar) and MPZP adoption timelines at gmina level (for onshore wind 700m reform implementation)",
-    "score_rationale": "Composite 65 reflects improving permitting landscape post-10H reform, but grid connection constraints are severe and will take years to resolve. PLN currency adds complexity vs. EUR-market peers."
+    "score_rationale": "Composite 70 reflects improving permitting landscape post-10H reform, but grid connection constraints are severe (PSE queue; DSO oversubscription at gmina level) and will take years to resolve. PLN currency adds complexity vs. EUR-market peers."
   },
 
   "fdi_restrictions": {
