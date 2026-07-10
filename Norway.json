@@ -353,6 +353,13 @@
     "3_mechanism_type_code": "merchant",
     "4_effective_corporation_tax_rate_pct": 22,
     "4_key_incentive": "CIT 22% (competitive) BUT Grunnrenteskatt 25% on excess returns above friinntekt for onshore wind (from 1 January 2024 — Lov om skatt av grunnrente for landbasert vindkraft). Combined effective marginal rate for high-return onshore projects: up to ~40–47%. Saldoavskrivning 20% declining balance for wind turbines (saldogruppe d).",
+    "technology_tax_overrides": {
+      "onshore_wind": {
+        "effective_rate_pct": 42,
+        "rationale": "CIT 22% + Grunnrenteskatt 25% on excess returns above friinntekt (Lov om skatt av grunnrente for landbasert vindkraft 2023, in force 1 January 2024). 42% is a conservative midpoint for a viable high-return onshore wind project where circa 80% of income constitutes resource rent above the friinntekt threshold. Source: Prop. 2 LS (2022-2023); Skatteetaten guidance.",
+        "staleness_warning": "Friinntekt rate is set by regulation — verify current rate with Skatteetaten before modelling. The grunnrenteskatt rate of 25% was confirmed for 2024 but may be subject to legislative revision."
+      }
+    },
     "5_ppa_enforceability_rating": "High",
     "5_ppa_legal_basis": "Norwegian law / English law by election; EFET Master Agreement; Nordic Master Agreement; Norsk Hydro, Yara, industrial offtakers",
     "6_political_risk_score": 83,

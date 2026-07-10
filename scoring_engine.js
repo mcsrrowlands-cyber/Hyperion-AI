@@ -375,9 +375,13 @@ function scorePermitting(jdata, technology) {
  * Normalised: 0% CIT = 100, 40% CIT = 0.
  * Estonia/Latvia DPT: JSON stores distribution rate (20%) as the applicable figure
  * for CapEx investors who will ultimately distribute returns.
+ * Technology-specific overrides (e.g. Norway onshore wind grunnrenteskatt) are read from
+ * comparison_table.technology_tax_overrides[technology].effective_rate_pct.
  */
-function scoreTax(jdata) {
-  const raw = jdata.comparison_table["4_effective_corporation_tax_rate_pct"] ?? 25;
+function scoreTax(jdata, technology) {
+  // Check for technology-specific effective rate override (e.g. Norway grunnrenteskatt on onshore wind)
+  const override = jdata.comparison_table?.technology_tax_overrides?.[technology]?.effective_rate_pct;
+  const raw = (override != null) ? override : (jdata.comparison_table["4_effective_corporation_tax_rate_pct"] ?? 25);
   let rate = typeof raw === 'number' ? raw : parseFloat(String(raw));
   if (isNaN(rate)) rate = 25;
   return Math.max(0, Math.min(100, 100 - (rate / 40) * 100));
@@ -531,6 +535,20 @@ function generateAlerts(jdata, profile, technology = null) {
     );
   }
 
+  // Rule 3B: Technology-specific tax rate override alert (e.g. Norway grunnrenteskatt on onshore wind)
+  const taxOverride = jdata.comparison_table?.technology_tax_overrides?.[technology];
+  if (taxOverride?.effective_rate_pct != null) {
+    const baseCIT = Number(jdata.comparison_table["4_effective_corporation_tax_rate_pct"] ?? 25);
+    const overrideRate = Number(taxOverride.effective_rate_pct);
+    if (overrideRate > baseCIT + 5) {
+      alerts.push(
+        `ALERT [Rule 3B]: ${name} ${technology} effective tax rate is ${overrideRate}% (vs base CIT ${baseCIT}%). ` +
+        (taxOverride.rationale ?? "Technology-specific levy applies — tax score adjusted accordingly.") +
+        (taxOverride.staleness_warning ? ` ${taxOverride.staleness_warning}` : "")
+      );
+    }
+  }
+
   // Rule 4C — EU State Aid clawback
   if (jdata.jurisdiction.eu_member) {
     const _risk = jdata.eu_state_aid?.retrospective_clawback_risk;
@@ -639,7 +657,7 @@ export function scoreJurisdiction(jdata, profile, technology) {
     operational:       scoreOperational(jdata),
     mechanism_quality: scoreMechanism(jdata, profile, technology),
     permitting:        scorePermitting(jdata, technology),
-    tax:               scoreTax(jdata),
+    tax:               scoreTax(jdata, technology),
     ppa:               scorePpa(jdata),
     state_aid:         scoreStateAid(jdata),
     esg_alignment:     scoreEsg(jdata, technology),
