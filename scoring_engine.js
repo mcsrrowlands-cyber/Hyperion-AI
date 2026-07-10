@@ -230,6 +230,11 @@ function scoreMechanism(jdata, profile, technology) {
     return 0;
   }
 
+  // LNG terminal gate: landlocked jurisdictions cannot receive LNG by sea — no viable terminal mechanism
+  if (technology === "lng_gas" && jdata.jurisdiction?.landlocked === true) {
+    return 0;
+  }
+
   const mechanism = isNewTech
     ? (ntd?.mechanism_type_code ?? "merchant")
     : (jdata.comparison_table["3_mechanism_type_code"] || "");
@@ -348,10 +353,16 @@ function scorePermitting(jdata, technology) {
       if (months == null) months = DEFAULTS[technology];
       break;
     }
+    case "lng_gas": {
+      // Landlocked jurisdictions have no sea access — LNG import terminals are physically impossible
+      if (jdata.jurisdiction?.landlocked === true) return 0;
+      months = ntd?.permitting_p50_months;
+      if (months == null) months = DEFAULTS[technology];
+      break;
+    }
     case "bess":
     case "green_hydrogen":
     case "floating_solar":
-    case "lng_gas":
     case "data_centre":
     case "natural_gas_lng":
     case "biowaste_energy":
@@ -617,6 +628,15 @@ function generateAlerts(jdata, profile, technology = null) {
         "No viable coal investment market exists in this jurisdiction."
       );
     }
+  }
+
+  // LNG terminal gate — flag landlocked jurisdictions where LNG import terminals are physically impossible
+  if (technology === "lng_gas" && jdata.jurisdiction?.landlocked === true) {
+    alerts.push(
+      `CRITICAL [LNG Gate]: ${name} is a landlocked jurisdiction — LNG import terminals require ` +
+      "seaport access and are physically impossible. Permitting and mechanism scores set to zero. " +
+      "Evaluate pipeline gas infrastructure (natural_gas_lng) instead."
+    );
   }
 
   // Rule 5A — RED overall stop/go
