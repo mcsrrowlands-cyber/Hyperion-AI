@@ -323,7 +323,11 @@ export function formatComparisonTable(results, technology = null) {
           description: (isNewTech && ntd?.primary_support_mechanism) ? ntd.primary_support_mechanism : ct["3_primary_support_mechanism"],
           typeCode:    (isNewTech && ntd?.mechanism_type_code)        ? ntd.mechanism_type_code        : ct["3_mechanism_type_code"],
         },
-        "4_tax":           { rate: ct["4_effective_corporation_tax_rate_pct"], incentive: ct["4_key_incentive"] },
+        "4_tax":           (() => {
+          const override = ct?.technology_tax_overrides?.[technology];
+          const rate = override?.effective_rate_pct ?? ct["4_effective_corporation_tax_rate_pct"];
+          return { rate, incentive: ct["4_key_incentive"] };
+        })(),
         "5_ppa":           { rating: ct["5_ppa_enforceability_rating"],    basis: ct["5_ppa_legal_basis"] },
         "6_sovereign":     { score: ct["6_political_risk_score"] },
         "7_drag":          { score: ct["7_operational_drag_score"] },
