@@ -384,14 +384,15 @@
       "notes": "No LNG terminal. Shannon LNG project (New Fortress Energy) has planning permission but faces regulatory and political opposition. Policy debate ongoing."
     },
     "data_centre": {
-      "permitting_p50_months": 24,
+      "permitting_p50_months": 36,
       "permitting_confidence": "medium",
       "mechanism_type_code": "corporate_ppa",
       "primary_support_mechanism": null,
-      "grid_capacity_risk": "high",
-      "renewable_ppa_market_depth": "medium",
+      "grid_capacity_risk": "very_high",
+      "effective_status": "CONSTRAINED — EirGrid issued de facto moratorium on new large data centre grid connections in the Greater Dublin Area (GDA) pending North-South interconnector reinforcement and DS3 programme completion (target c.2028). New data centre connections outside GDA may be available but at significantly longer timelines.",
+      "renewable_ppa_market_depth": "high",
       "source": "national_tso",
-      "notes": "EirGrid has flagged data centres as consuming 21% of national electricity. Grid constraint is a material risk. Planning permission via local authority. Source: national_tso."
+      "notes": "CRITICAL GRID CONSTRAINT: EirGrid has implemented an effective moratorium on new large data centre grid connections in the Greater Dublin Area due to grid saturation risk (data centres forecast to consume 70% of Irish electricity by 2030 per ESB without intervention — EirGrid 2023 Generation and Capacity Statement). Permitting p50 reflects extended timeline due to grid connection constraint — planning consent itself (24 months) is not the bottleneck. Corporate PPA market is Ireland's strongest in Europe by offtaker quality (Google, Meta, Amazon, Microsoft are primary consumers). Source: EirGrid Generation and Capacity Statement 2023; CRU consultation SD-23-024."
     },
     "natural_gas_lng": {
       "permitting_p50_months": 36,

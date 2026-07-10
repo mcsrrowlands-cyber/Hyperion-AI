@@ -228,8 +228,15 @@ export function formatRagMatrix(result) {
       score:     componentScores.tax,
       weight:    pct(weights.tax),
       rag:       thresholdRag(componentScores.tax, 72, 52),
-      rationale: `Effective CIT: ${result.comparisonTable["4_effective_corporation_tax_rate_pct"]}%. ` +
-                 result.comparisonTable["4_key_incentive"],
+      rationale: (() => {
+        const baseCIT  = result.comparisonTable["4_effective_corporation_tax_rate_pct"];
+        const override = result.comparisonTable?.technology_tax_overrides?.[result.technologyApplied];
+        const effRate  = override?.effective_rate_pct ?? baseCIT;
+        const rateStr  = override?.effective_rate_pct != null
+          ? `${effRate}% effective [base CIT: ${baseCIT}%]`
+          : `${effRate}%`;
+        return `Effective CIT: ${rateStr}. ` + result.comparisonTable["4_key_incentive"];
+      })(),
     },
     {
       category:  "PPA Enforceability",
