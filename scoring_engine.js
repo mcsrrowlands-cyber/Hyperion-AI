@@ -235,6 +235,25 @@ function scoreMechanism(jdata, profile, technology) {
     return 0;
   }
 
+  // Offshore wind gate: landlocked or explicitly ineligible jurisdictions have no viable offshore sector
+  if (technology === "offshore_wind") {
+    const owp = jdata.permitting?.offshore_wind;
+    if (jdata.jurisdiction?.landlocked === true ||
+        owp?.applicable === false ||
+        /^N\/A|^Very limited/i.test(owp?.effective_status ?? '')) {
+      return 0;
+    }
+  }
+
+  // Onshore wind gate: de facto or legislative moratorium = no viable revenue mechanism
+  if (technology === "onshore_wind") {
+    const owp = jdata.permitting?.onshore_wind;
+    if (owp?.applicable === false ||
+        /moratorium|unavailable/i.test(owp?.effective_status ?? '')) {
+      return 0;
+    }
+  }
+
   const mechanism = isNewTech
     ? (ntd?.mechanism_type_code ?? "merchant")
     : (jdata.comparison_table["3_mechanism_type_code"] || "");
@@ -637,6 +656,35 @@ function generateAlerts(jdata, profile, technology = null) {
       "seaport access and are physically impossible. Permitting and mechanism scores set to zero. " +
       "Evaluate pipeline gas infrastructure (natural_gas_lng) instead."
     );
+  }
+
+  // Offshore wind gate — flag landlocked or explicitly ineligible jurisdictions
+  if (technology === "offshore_wind") {
+    const owp = jdata.permitting?.offshore_wind;
+    if (jdata.jurisdiction?.landlocked === true) {
+      alerts.push(
+        `CRITICAL [Offshore Wind Gate]: ${name} is a landlocked jurisdiction — offshore wind development ` +
+        "requires sea access. Permitting and mechanism scores set to zero. " +
+        "Consider onshore wind, solar, or BESS technologies instead."
+      );
+    } else if (owp?.applicable === false || /^N\/A|^Very limited/i.test(owp?.effective_status ?? '')) {
+      alerts.push(
+        `CRITICAL [Offshore Wind Gate]: ${name} offshore wind is not a viable technology in this jurisdiction ` +
+        `(status: "${owp?.effective_status ?? 'not applicable'}"). Permitting and mechanism scores set to zero.`
+      );
+    }
+  }
+
+  // Onshore wind gate — flag jurisdictions with de facto or legislative moratorium
+  if (technology === "onshore_wind") {
+    const owp = jdata.permitting?.onshore_wind;
+    if (owp?.applicable === false || /moratorium|unavailable/i.test(owp?.effective_status ?? '')) {
+      alerts.push(
+        `CRITICAL [Onshore Wind Gate]: ${name} has an effective onshore wind moratorium or legislative ` +
+        `prohibition (status: "${owp?.effective_status ?? 'moratorium'}"). Permitting and mechanism scores ` +
+        "set to zero. Consider solar, BESS, or offshore wind (if coastal) as alternative technologies."
+      );
+    }
   }
 
   // Rule 5A — RED overall stop/go
