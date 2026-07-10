@@ -259,7 +259,7 @@
       "judicial_appeal_risk": { "score": 70, "assessment": "HIGH — TAR/CdS system is active; wind energy opposition is organised; Soprintendenza refusals frequently challenged in both directions" }
     },
     "primary_bottleneck": "South Italy grid saturation (Puglia, Sicilia, Sardegna) plus multi-authority permitting complexity — both operating simultaneously in the highest-resource regions",
-    "score_rationale": "Italy's composite score (72) is the highest operational drag in this knowledge base outside of the UK's grid and France's offshore. North-south grid constraint is systemic; permitting complexity is structural."
+    "score_rationale": "Italy's operational drag score (72/100) is among the highest for major continental EU renewable energy markets, and the highest among Southern European solar markets. Only Malta (88), UK (82), Cyprus (82), Romania (78), and Switzerland (75) score higher overall. North-south grid constraint is systemic; permitting complexity is structural."
   },
 
   "fdi_restrictions": {

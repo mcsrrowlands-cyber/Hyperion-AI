@@ -207,7 +207,7 @@
       "bureaucratic_friction": { "score": 55, "assessment": "MEDIUM — English-language administration; MRA and PA are accessible; small government size means direct access to decision-makers but also limited bandwidth" }
     },
     "primary_bottleneck": "Physical constraints are the binding limit — island size (316 km²) and single HVDC interconnector (200 MW) create hard limits on RES development that cannot be overcome through regulatory reform alone.",
-    "score_rationale": "Score 88 is the highest operational drag of all covered jurisdictions except Cyprus (island grid constraint 92). Both island jurisdictions face the same structural barrier: grid absorption is the binding constraint."
+    "score_rationale": "Score 88 is the highest operational drag in this knowledge base. Cyprus (82, driven by extreme island grid absorption) and UK (82) are the next highest. Both island jurisdictions face the same structural barrier — grid absorption is the binding constraint — but Malta's land scarcity compounds the constraint further."
   },
 
   "fdi_restrictions": {
