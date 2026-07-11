@@ -313,10 +313,10 @@ export function formatComparisonTable(results, technology = null) {
         "1_permitting":    {
           wind: technology === 'offshore_wind'
             ? r.offshorePermittingMonths
-            : (isNewTech && ntd?.permitting_p50_months != null)
-              ? ntd.permitting_p50_months
+            : isNewTech
+              ? (ntd?.permitting_p50_months ?? null)   // null → "—" rather than showing wind P50
               : ct["1_permitting_window_months_p50"],
-          solar: ct["1_permitting_window_solar_p50_months"],
+          solar: isNewTech ? null : ct["1_permitting_window_solar_p50_months"],
           isNewTech,
         },
         "2_grid":          { cost: ct["2_grid_connection_cost_eur"],       timeline: ct["2_grid_connection_timeline_months"] },
