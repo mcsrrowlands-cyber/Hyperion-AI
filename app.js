@@ -801,7 +801,9 @@ async function triggerAnalysis() {
 
   } catch (err) {
     typing.remove();
-    postBotHtml(`<p style="color:var(--red)">Analysis failed: ${escHtml(err.message)}. Check that the server is running and all JSON files are present.</p>`);
+    const isDataError = /not eligible|not found|not viable|landlocked/i.test(err.message);
+    const suffix = isDataError ? '' : ' Check that the server is running and all JSON files are present.';
+    postBotHtml(`<p style="color:var(--red)">Analysis failed: ${escHtml(err.message)}.${escHtml(suffix)}</p>`);
     if (runBtn) { runBtn.disabled = false; runBtn.textContent = '▶ Try Again'; }
   }
 }
@@ -1274,7 +1276,7 @@ tr:nth-child(even) td{background:#f8fafc}
 </table>
 
 <h2>2. Component Score Breakdown — All 8 Dimensions (Rule 4D)</h2>
-<p style="font-size:11px;color:#64748b">All scores 0–100 where 100 = best outcome. Political Risk and Operational Drag are never blended (Rule 4A). Revenue Floor reflects support mechanism quality (Rule 3A). Tax = NPV timing benefit (Rule 3B).</p>
+<p style="font-size:11px;color:#64748b">All scores 0–100 where 100 = best outcome. Political Risk and Operational Drag are shown independently — never masked within the composite (Rule 4A). Revenue Floor reflects support mechanism quality (Rule 3A). Tax = NPV timing benefit (Rule 3B).</p>
 <table>
   <thead><tr><th>Dimension</th>${compHeads}</tr></thead>
   <tbody>${compRows}</tbody>
