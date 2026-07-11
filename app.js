@@ -316,8 +316,13 @@ function buildCellHtml(catKey, cell, technology = null) {
     case '1_permitting': {
       const wind  = cell.wind  ?? '—';
       const solar = cell.solar ?? null;
+      // For solar queries: show solar P50 as primary, wind as sub-row
+      if (technology === 'solar' && solar != null) {
+        return `<div class="cell-primary">${solar}<span class="cell-unit"> mo</span></div>
+                <div class="cell-detail">Solar P50</div>
+                <div class="cell-sub-row">💨 ${wind} mo wind / generic</div>`;
+      }
       const windLabel = technology === 'offshore_wind' ? 'Offshore wind P50'
-                      : technology === 'solar'         ? 'Wind / generic P50'
                       : cell.isNewTech                 ? `${(TECH_LABELS[technology] ?? technology).replace(/^.*?\s/, '')} P50`
                       : 'Onshore wind P50';
       return `<div class="cell-primary">${wind}<span class="cell-unit"> mo</span></div>

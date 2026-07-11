@@ -193,7 +193,8 @@
     "expropriation_risk": "Low — EU member; constitutional property protections; ECHR",
     "currency_risk": "None — EUR domestic since 2008",
     "banking_system_note": "Maltese banking sector is well-capitalised (2012-2013 Cyprus-style crisis was not replicated in Malta). MFSA (Malta Financial Services Authority) is the integrated financial regulator.",
-    "score_rationale": "Deductions from 100: Rule-of-law concerns and FATF history (-10), small island state vulnerability (-7), very limited RES development opportunity (-5). Score 78 reflects solid sovereign fundamentals with governance caveats."
+    "score_rationale": "Deductions from 100: Rule-of-law concerns and FATF history (-10), small island state vulnerability (-7), very limited RES development opportunity (-5). Score 78 reflects solid sovereign fundamentals with governance caveats.",
+    "retroactive_policy_incidents": []
   },
 
   "operational_drag": {
