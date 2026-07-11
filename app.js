@@ -29,7 +29,7 @@ const ALL_JURISDICTIONS = [
 
 const COMPONENT_LABELS = {
   political:         'Political Risk',
-  operational:       'Operational Eff.',
+  operational:       'Operational Efficiency',
   mechanism_quality: 'Revenue Floor',
   permitting:        'Permitting Speed',
   tax:               'Tax Efficiency',
