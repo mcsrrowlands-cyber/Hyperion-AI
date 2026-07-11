@@ -493,8 +493,8 @@
     "natural_gas_lng": {
       "permitting_p50_months": 36,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
-      "primary_support_mechanism": null,
+      "mechanism_type_code": "merchant",
+      "primary_support_mechanism": "MERCHANT — energy-only market with no dedicated gas CfD, FiT, or auction regime. Revenue is fully market-referenced. Capacity remuneration mechanism (CRM) eligibility should be verified locally.",
       "eu_taxonomy_transition_eligible": true,
       "capacity_market_available": null,
       "ccgt_typical_capex_eur_mw": 900000,

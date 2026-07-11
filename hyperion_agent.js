@@ -189,21 +189,22 @@ export function formatRagMatrix(result) {
           ? (result.rawNewTechData?.mechanism_type_code ?? "merchant")
           : result.comparisonTable["3_mechanism_type_code"];
         const labels = {
-          two_way_cfd:             "Two-way CfD: maximum downside protection; upside capped (Rule 3A).",
-          one_way_market_premium:  "One-way premium: floor with uncapped merchant upside (Rule 3A).",
-          ancillary_services:      "Ancillary services revenue (FCR/aFRR): market-referenced, no state floor.",
-          capacity_market:         "Capacity market payment: revenue floor for availability, not generation.",
-          hydrogen_contract:       "Hydrogen offtake contract: state-backed price floor for green H₂.",
-          ipcei_grant:             "IPCEI grant / EU Hydrogen Bank: capital grant, not revenue contract.",
-          government_contract:     "Government-backed contract (RAB/CfD variant): strong revenue certainty.",
-          tolling_arrangement:     "Tolling arrangement: infrastructure fee; no commodity price exposure.",
-          corporate_ppa:           "Corporate PPA: long-term offtake from hyperscaler or colocation client; no state backstop.",
-          captive_generation:      "Captive generation: on-site power supply for data-centre campus; no merchant exposure.",
-          feed_in_tariff:          "Feed-in tariff: guaranteed floor price for biowaste energy output.",
-          biowaste_auction_cfd:    "Two-way CfD via bioenergy auction: downside protected, upside capped.",
-          coal_capacity_market:    "Capacity market participation: revenue for availability; no generation floor.",
+          two_way_cfd:                          "Two-way CfD: maximum downside protection; upside capped (Rule 3A).",
+          one_way_market_premium:               "One-way premium: floor with uncapped merchant upside (Rule 3A).",
+          quota_certificate_with_minimum_price: "Quota certificate with minimum price: state-mandated green certificate floor (Rule 3A).",
+          merchant:                             "MERCHANT: no state backstop. Revenue is fully market-referenced (Rule 3A).",
+          ancillary_services:                   "Ancillary services revenue (FCR/aFRR): market-referenced, no state floor.",
+          capacity_market:                      "Capacity market payment: revenue floor for availability, not generation.",
+          hydrogen_contract:                    "Hydrogen offtake contract: state-backed price floor for green H₂.",
+          ipcei_grant:                          "IPCEI grant / EU Hydrogen Bank: capital grant, not revenue contract.",
+          government_contract:                  "Government-backed contract (RAB/CfD variant): strong revenue certainty.",
+          tolling_arrangement:                  "Tolling arrangement: infrastructure fee; no commodity price exposure.",
+          corporate_ppa:                        "Corporate PPA: long-term offtake from hyperscaler or colocation client; no state backstop.",
+          captive_generation:                   "Captive generation: on-site power supply for data-centre campus; no merchant exposure.",
+          feed_in_tariff:                       "Feed-in tariff: guaranteed floor price for biowaste energy output.",
+          biowaste_auction_cfd:                 "Two-way CfD via bioenergy auction: downside protected, upside capped.",
         };
-        return labels[code] ?? "No state backstop identified — merchant exposure (Rule 3A: coal typically excluded from renewable support).";
+        return labels[code] ?? "No state backstop identified — mechanism type not recognised. Verify mechanism_type_code in jurisdiction data.";
       })(),
     },
     {
@@ -320,7 +321,7 @@ export function formatComparisonTable(results, technology = null) {
         },
         "2_grid":          { cost: ct["2_grid_connection_cost_eur"],       timeline: ct["2_grid_connection_timeline_months"] },
         "3_mechanism":     {
-          description: (isNewTech && ntd?.primary_support_mechanism) ? ntd.primary_support_mechanism : ct["3_primary_support_mechanism"],
+          description: isNewTech ? (ntd?.primary_support_mechanism ?? null) : ct["3_primary_support_mechanism"],
           typeCode:    (isNewTech && ntd?.mechanism_type_code)        ? ntd.mechanism_type_code        : ct["3_mechanism_type_code"],
         },
         "4_tax":           (() => {
@@ -332,7 +333,7 @@ export function formatComparisonTable(results, technology = null) {
         "6_sovereign":     { score: ct["6_political_risk_score"] },
         "7_drag":          { score: ct["7_operational_drag_score"] },
         "8_revenue_floor": {
-          native:    (isNewTech && ntd?.revenue_floor_description) ? ntd.revenue_floor_description : ct["8_revenue_floor_native"],
+          native:    isNewTech ? (ntd?.revenue_floor_description ?? null) : ct["8_revenue_floor_native"],
           mechanism: (isNewTech && ntd?.mechanism_type_code)       ? ntd.mechanism_type_code       : ct["8_revenue_floor_mechanism"],
         },
       },
