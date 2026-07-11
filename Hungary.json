@@ -364,7 +364,7 @@
       "policy_status": "exploring",
       "permitting_p50_months": null,
       "permitting_confidence": "low",
-      "mechanism_type_code": null,
+      "mechanism_type_code": "merchant",
       "primary_support_mechanism": null,
       "revenue_floor_description": null,
       "active_smr_programmes": [],

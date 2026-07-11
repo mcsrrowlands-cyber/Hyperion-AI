@@ -355,10 +355,10 @@ function buildCellHtml(catKey, cell, technology = null) {
               <div class="cell-detail">higher = lower risk</div>`;
     }
     case '7_drag': {
-      const s   = Number(cell.score);
-      const inv = 100 - (isNaN(s) ? 50 : s);
+      const s   = Number(cell.score);                          // raw drag: higher = more drag (worse)
+      const inv = 100 - (isNaN(s) ? 50 : s);                  // inverted quality: higher = better
       return `<div class="cell-primary">${isNaN(s) ? (cell.score ?? '—') : s}<span class="cell-unit">/100</span></div>
-              ${!isNaN(s) ? buildMiniBar(inv, barColorClass(inv)) : ''}
+              ${!isNaN(s) ? buildMiniBar(s, barColorClass(inv)) : ''}
               <div class="cell-detail">higher = more drag</div>`;
     }
     case '8_revenue_floor':
@@ -527,10 +527,10 @@ async function initScopeChat() {
     $resultsPanel.classList.remove('hidden');
     renderRanked(result);
 
-    // Update system prompt with full results context — inject top-5 jurisdiction data
-    const top5Isos = (result.rankedSummary ?? []).slice(0, MAX_INJECT).map(r => r.isoCode);
-    chatInScopeIsos  = new Set(top5Isos);
-    chatSystemPrompt = buildSystemPrompt(result, top5Isos);
+    // Update system prompt with full results context — inject top-3 jurisdiction data
+    const top3Isos = (result.rankedSummary ?? []).slice(0, MAX_INJECT).map(r => r.isoCode);
+    chatInScopeIsos  = new Set(top3Isos);
+    chatSystemPrompt = buildSystemPrompt(result, top3Isos);
 
     loadingDiv.remove();
 
@@ -1227,7 +1227,10 @@ function downloadReport(queryResult) {
     ? '<p>No alerts generated for this analysis.</p>'
     : allAlerts.map(r => `
         <p style="font-weight:700;margin:12px 0 4px">${escHtml(r.name)}</p>
-        ${r.alerts.map(a => `<div class="alert">${escHtml(a)}</div>`).join('')}
+        ${r.alerts.map(a => {
+          const isStop = a.startsWith('STOP') || a.startsWith('CRITICAL');
+          return `<div class="${isStop ? 'alert-stop' : 'alert'}">${escHtml(a)}</div>`;
+        }).join('')}
       `).join('');
 
   const html = `<!DOCTYPE html>
@@ -1249,6 +1252,7 @@ td{padding:7px 10px;border-bottom:1px solid #e2e8f0;vertical-align:middle}
 tr:nth-child(even) td{background:#f8fafc}
 .rg{color:#16a34a;font-weight:700}.ra{color:#b45309;font-weight:700}.rr{color:#b91c1c;font-weight:700}
 .alert{background:#fffbeb;border-left:3px solid #b45309;padding:5px 10px;margin:4px 0;font-size:11px;border-radius:0 4px 4px 0}
+.alert-stop{background:#fef2f2;border-left:3px solid #b91c1c;padding:5px 10px;margin:4px 0;font-size:11px;border-radius:0 4px 4px 0;color:#b91c1c;font-weight:600}
 .disc{font-size:11px;color:#64748b;border-top:1px solid #e2e8f0;margin-top:48px;padding-top:12px;font-style:italic;line-height:1.6}
 @media print{body{margin:0;padding:16px}}
 </style>

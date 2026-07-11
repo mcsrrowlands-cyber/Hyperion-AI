@@ -322,7 +322,7 @@ export function formatComparisonTable(results, technology = null) {
         "2_grid":          { cost: ct["2_grid_connection_cost_eur"],       timeline: ct["2_grid_connection_timeline_months"] },
         "3_mechanism":     {
           description: isNewTech ? (ntd?.primary_support_mechanism ?? null) : ct["3_primary_support_mechanism"],
-          typeCode:    (isNewTech && ntd?.mechanism_type_code)        ? ntd.mechanism_type_code        : ct["3_mechanism_type_code"],
+          typeCode:    isNewTech ? (ntd?.mechanism_type_code ?? null) : ct["3_mechanism_type_code"],
         },
         "4_tax":           (() => {
           const override = ct?.technology_tax_overrides?.[technology];
@@ -334,7 +334,7 @@ export function formatComparisonTable(results, technology = null) {
         "7_drag":          { score: ct["7_operational_drag_score"] },
         "8_revenue_floor": {
           native:    isNewTech ? (ntd?.revenue_floor_description ?? null) : ct["8_revenue_floor_native"],
-          mechanism: (isNewTech && ntd?.mechanism_type_code)       ? ntd.mechanism_type_code       : ct["8_revenue_floor_mechanism"],
+          mechanism: isNewTech ? (ntd?.mechanism_type_code ?? null) : ct["8_revenue_floor_mechanism"],
         },
       },
     };
